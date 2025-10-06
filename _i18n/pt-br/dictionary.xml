@@ -979,7 +979,6 @@
   <block id="52f2049d6a6b3b78ceb9820e5ce16a9d" category="paragraph">O menu *Armazenamento* também inclui *Alertas* para visualizar alertas do sistema ONTAP e *Planejamento do ciclo de vida* (anteriormente *Eficiência econômica*) para identificar recursos não utilizados ou subutilizados.</block>
   <block id="b75b41949ffca5829d6a1887ecf0ebd4" category="paragraph">A NetApp também moveu o Keystone para o menu *Armazenamento*, onde você pode gerenciar suas assinaturas do NetApp Keystone e visualizar seu uso.</block>
   <block id="0bc00d5c9372c38aa1f6078843c22005" category="inline-image-macro">Uma captura de tela do menu Armazenamento.</block>
-  <block id="748eeb353f241e217120dfabd2fa058d" category="paragraph"><block ref="748eeb353f241e217120dfabd2fa058d" category="inline-image-macro-rx" type="image"></block></block>
   <block id="0e279d1eb32921bbbc940faea63f4db6" category="section-title">Menu de administração</block>
   <block id="08386d27df9de73a030b8e5da1f8112b" category="paragraph">Use o menu centralizado *Administração* para gerenciar o NetApp Console, casos de suporte, licenças e assinaturas (anteriormente chamado de carteira digital).</block>
   <block id="c952530b2009e9e6caa227e55b2c5e17" category="inline-image-macro">Uma captura de tela do menu Administração.</block>
@@ -1060,15 +1059,6 @@
   <block id="79c16752c4b3871128ff6761df92be41" category="paragraph">Adicionadas as funções *Administrador de comportamento do usuário de resiliência ao ransomware* e *Visualizador de comportamento do usuário de resiliência ao ransomware*.  Essas funções permitem que os usuários configurem e visualizem o comportamento do usuário e os dados analíticos, respectivamente.<block ref="f4af18406bc0e89aecbeeb674238cfbe" category="inline-link-macro-rx"></block></block>
   <block id="9c1c5b1b2bca352ed0ccb3521d870e14" category="section-title">Chat de suporte removido</block>
   <block id="6a6050b7d9c0524d1d41dffdc70d6613" category="paragraph">A NetApp removeu o recurso de chat de suporte do NetApp Console.  Use a página *Administração &gt; Suporte* para criar e gerenciar casos de suporte.</block>
-  <block id="21d0bd94f2b315c59ef7189ffb61d969" category="paragraph">BlueXP agora é NetApp Console.</block>
-  <block id="d35770c6743fcbecba1feceaea6b1123" category="inline-link-macro">Novidades no NetApp Console</block>
-  <block id="f61be6aff2cdc3c3e28521d0ce9b6247" category="paragraph">A seguir estão listadas as alterações de navegação e terminologia no NetApp Console.  Para obter uma lista completa dos recursos desta versão de 6 de outubro de 2025, consulte<block ref="279dcb31633ce0736c6a5e54cb6b8de1" category="inline-link-macro-rx"></block> .</block>
-  <block id="016ff55fae5233559b88cc1b1bbb9490" category="paragraph"><block ref="016ff55fae5233559b88cc1b1bbb9490" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="9cc1d33a4e3873fd7ca8073a2c86e399" category="paragraph"><block ref="9cc1d33a4e3873fd7ca8073a2c86e399" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="0dd307ec00de5c87e7e76a960dc9d785" category="paragraph"><block ref="0dd307ec00de5c87e7e76a960dc9d785" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="bac5266b34e23c9bcb8105c495567bfa" category="paragraph">Um menu *Saúde* reformulado inclui *Atualizações de software*, onde você pode gerenciar atualizações de software ONTAP , *Sustentabilidade*, onde você pode monitorar seu impacto ambiental, e * Digital Advisor*, onde você pode obter recomendações proativas para otimizar seu ambiente de armazenamento.</block>
-  <block id="37757c8f988b8ee80cfe3d2a2282097a" category="section-title">Selecione e gerencie agentes do Console</block>
-  <block id="b44ee41cd357f83b222bac4b5a96c5a2" category="paragraph"><block ref="b44ee41cd357f83b222bac4b5a96c5a2" category="inline-image-macro-rx" type="image"></block></block>
   <block id="d6b258792ff06f82933c74eeb8aef591" category="doc">Organização</block>
   <block id="3c4f7accda6c4e5b05c122dfef01bebe" category="paragraph">As seções a seguir descrevem os diferentes componentes do uso do IAM no BlueXP.</block>
   <block id="7d5499ec968e6c97c7264ba95116b2d6" category="paragraph">Ao usar o BlueXP IAM, você gerenciará os seguintes componentes:</block>
@@ -5543,4 +5533,5 @@
   <block id="abfd94e3956e611a257a32b0f396af25" category="sidebar">Regras de firewall do agente de console no Google Cloud</block>
   <block id="e4c0002e4f9f19273bc004922899fb85" category="sidebar">Acesso à rede do console (legado)</block>
   <block id="0adc03eac86772ad2c75c8f140be417e" category="sidebar">Conhecimento e suporte</block>
+  <block id="f445c6d565697b0932cf841aca945e2a" category="paragraph"><block ref="f445c6d565697b0932cf841aca945e2a" category="inline-image-macro-rx" type="image"></block></block>
 </blocks>

@@ -48,7 +48,7 @@ O menu *Armazenamento* também inclui *Alertas* para visualizar alertas do siste
 
 A NetApp também moveu o Keystone para o menu *Armazenamento*, onde você pode gerenciar suas assinaturas do NetApp Keystone e visualizar seu uso.
 
-image:https://docs.netapp.com/us-en/console-setup-admin/screenshot-storage-menu.png["Uma captura de tela do menu Armazenamento."]
+image:https://docs.netapp.com/us-en/console-setup-admin/media/screenshot-storage-menu.png["Uma captura de tela do menu Armazenamento."]
 
 
 
