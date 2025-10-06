@@ -1,0 +1,8 @@
+= 
+:allow-uri-read: 
+
+
+.Antes de começar
+* É necessária uma conta IdP com privilégios administrativos.  Coordene com seu administrador do IdP para concluir as etapas.
+* Identifique o domínio que você deseja usar para federação.  Você pode usar seu domínio de e-mail ou um domínio diferente que seja seu.  Se você quiser usar um domínio diferente do seu domínio de e-mail, primeiro verifique o domínio no Console.  Você pode fazer isso seguindo os passos nolink:task-federation-verify-domain.html["Verifique seu domínio no NetApp Console"] tópico.
+

@@ -1,0 +1,96 @@
+---
+sidebar: sidebar 
+permalink: task-installing-https-cert.html 
+keywords: https certificate, certificate, adding, installing, ca, certificate authority, format, encoding, restricted mode, access 
+summary: Instale um certificado assinado pela CA para acesso do usuário ao console baseado na Web ao usar o NetApp Console no modo restrito. 
+---
+= Instalar um certificado assinado por CA para acesso ao console baseado na web
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Quando você usa o NetApp Console no modo restrito, a interface do usuário pode ser acessada na máquina virtual do agente do Console implantada na sua região de nuvem ou no local.  Por padrão, o Console usa um certificado SSL autoassinado para fornecer acesso HTTPS seguro ao console baseado na Web em execução no agente do Console.
+
+Se exigido pela sua empresa, você pode instalar um certificado assinado por uma autoridade de certificação (CA), que fornece melhor proteção de segurança do que um certificado autoassinado.  Após instalar o certificado, o Console usa o certificado assinado pela CA quando os usuários acessam o console baseado na Web.
+
+
+
+== Instalar um certificado HTTPS
+
+Instale um certificado assinado por uma CA para acesso seguro ao console baseado na Web em execução no agente do Console.
+
+.Sobre esta tarefa
+Você pode instalar o certificado usando uma das seguintes opções:
+
+* Gere uma solicitação de assinatura de certificado (CSR) no Console, envie a solicitação de certificado para uma CA e instale o certificado assinado pela CA no agente do Console.
++
+O par de chaves que o Console usa para gerar o CSR é armazenado internamente no agente do Console.  O Console recupera automaticamente o mesmo par de chaves (chave privada) quando você instala o certificado no agente do Console.
+
+* Instale um certificado assinado pela CA que você já tenha.
++
+Com esta opção, o CSR não é gerado pelo Console.  Você gera o CSR separadamente e armazena a chave privada externamente.  Você fornece a chave privada ao Console quando instala o certificado.
+
+
+
+.Passos
+. Selecione *Administração > Agentes*.
+. Na página *Visão geral*, selecione o menu de ação para um agente do Console e selecione *Configuração HTTPS*.
++
+O agente do Console deve estar ativo para editá-lo.
+
+. Na página Configuração de HTTPS, instale um certificado gerando uma solicitação de assinatura de certificado (CSR) ou instalando seu próprio certificado assinado pela CA:
++
+[cols="25,75"]
+|===
+| Opção | Descrição 
+
+
+| Gerar um CSR  a| 
+.. Insira o nome do host ou DNS do host do agente do Console (seu Nome Comum) e selecione *Gerar CSR*.
++
+O Console exibe uma solicitação de assinatura de certificado.
+
+.. Use o CSR para enviar uma solicitação de certificado SSL a uma CA.
++
+O certificado deve usar o formato X.509 codificado em Base 64 do Privacy Enhanced Mail (PEM).
+
+.. Carregue o arquivo de certificado e selecione *Instalar*.
+
+
+
+
+| Instale seu próprio certificado assinado pela CA  a| 
+.. Selecione *Instalar certificado assinado pela CA*.
+.. Carregue o arquivo de certificado e a chave privada e selecione *Instalar*.
++
+O certificado deve usar o formato X.509 codificado em Base 64 do Privacy Enhanced Mail (PEM).
+
+
+
+|===
+
+
+.Resultado
+O agente do Console agora usa o certificado assinado pela CA para fornecer acesso HTTPS seguro.  A imagem a seguir mostra um agente configurado para acesso seguro:
+
+image:screenshot_https_cert.gif["Captura de tela: mostra a página de configuração de HTTPS após a instalação de um certificado assinado.  A página mostra as propriedades do certificado e uma opção para renová-lo."]
+
+
+
+== Renovar o certificado HTTPS do Console
+
+Você deve renovar o certificado HTTPS do agente antes que ele expire para garantir acesso seguro.  Se você não renovar o certificado antes que ele expire, um aviso será exibido quando os usuários acessarem o console da web usando HTTPS.
+
+.Passos
+. Selecione *Administração > Agentes*.
+. Na página *Visão geral*, selecione o menu de ação para um agente do Console e selecione *Configuração HTTPS*.
++
+Detalhes sobre o certificado são exibidos, incluindo a data de validade.
+
+. Selecione *Alterar certificado* e siga as etapas para gerar um CSR ou instalar seu próprio certificado assinado pela CA.
+

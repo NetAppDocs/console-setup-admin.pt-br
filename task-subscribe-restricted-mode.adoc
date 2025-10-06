@@ -1,0 +1,193 @@
+---
+sidebar: sidebar 
+permalink: task-subscribe-restricted-mode.html 
+keywords: subscribe, subscription, marketplace subscription, paygo, contract, annual contract 
+summary: Assine o NetApp Intelligent Services no marketplace do seu provedor de nuvem para pagar pelos serviços de dados da NetApp por uma taxa por hora ou por meio de um contrato anual.  Se você comprou uma licença da NetApp, também precisa assinar a oferta do marketplace.  Sua licença é sempre cobrada primeiro, mas você será cobrado pela taxa horária se exceder sua capacidade licenciada ou se o prazo da licença expirar. 
+---
+= Assine o NetApp Intelligent Services (modo restrito)
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Assine o NetApp Intelligent Services no marketplace do seu provedor de nuvem para pagar por serviços de dados a uma taxa por hora (PAYGO) ou por meio de um contrato anual.  Se você comprou uma licença da NetApp (BYOL), também precisa assinar a oferta do marketplace.  Sua licença é sempre cobrada primeiro, mas você será cobrado pela taxa horária se exceder sua capacidade licenciada ou se o prazo da licença expirar.
+
+Uma assinatura de mercado permite cobrar pelos seguintes serviços de dados com modo restrito:
+
+* Backup e recuperação da NetApp
+* Cloud Volumes ONTAP
+* Camadas de nuvem da NetApp
+* Resiliência do NetApp Ransomware
+* Recuperação de desastres da NetApp
+
+
+A classificação de dados da NetApp é habilitada por meio de sua assinatura, mas não há cobrança pelo uso da classificação.
+
+.Antes de começar
+Você já deve ter implantado um agente do Console para assinar serviços de dados.  Você precisa associar uma assinatura do marketplace às credenciais de nuvem conectadas a um agente do Console.
+
+[role="tabbed-block"]
+====
+.AWS
+--
+O vídeo a seguir mostra as etapas para assinar o NetApp Intelligent Services no AWS Marketplace:
+
+.Assine o NetApp Intelligent Services no AWS Marketplace
+video::096e1740-d115-44cf-8c27-b051011611eb[panopto]
+.Passos
+. Selecione *Administração > *Credenciais*.
+. Selecione *Credenciais da organização*.
+. Selecione o menu de ação para um conjunto de credenciais associadas a um agente do Console e selecione *Configurar assinatura*.
++
+Você deve selecionar credenciais associadas a um agente do Console.  Não é possível associar uma assinatura do marketplace a credenciais associadas ao NetApp Console.
+
++
+image:screenshot_aws_configure_subscription.png["Uma captura de tela do menu de ações para um conjunto de credenciais existentes."]
+
+. Para associar as credenciais a uma assinatura existente, selecione a assinatura na lista suspensa e selecione *Configurar*.
+. Para associar as credenciais a uma nova assinatura, selecione *Adicionar assinatura > Continuar* e siga as etapas no AWS Marketplace:
++
+.. Selecione *Ver opções de compra*.
+.. Selecione *Inscrever-se*.
+.. Selecione *Configurar sua conta*.
++
+Você será redirecionado para o NetApp Console.
+
+.. Na página *Atribuição de Assinatura*:
++
+*** Selecione as organizações ou contas do Console às quais você gostaria de associar esta assinatura.
+*** No campo *Substituir assinatura existente*, escolha se deseja substituir automaticamente a assinatura existente de uma organização ou conta por esta nova assinatura.
++
+O Console substitui a assinatura existente para todas as credenciais na organização ou conta por esta nova assinatura.  Se um conjunto de credenciais nunca foi associado a uma assinatura, essa nova assinatura não será associada a essas credenciais.
+
++
+Para todas as outras organizações ou contas, você precisará associar manualmente a assinatura repetindo essas etapas.
+
+*** Selecione *Salvar*.
+
+
+
+
+
+
+--
+.Azul
+--
+.Passos
+. Selecione *Administração > *Credenciais*.
+. Selecione *Credenciais da organização*.
+. Selecione o menu de ação para um conjunto de credenciais associadas a um agente do Console e selecione *Configurar assinatura*.
++
+Você deve selecionar credenciais associadas a um agente do Console.  Não é possível associar uma assinatura do marketplace a credenciais associadas ao NetApp Console.
+
+. Para associar as credenciais a uma assinatura existente, selecione a assinatura na lista suspensa e selecione *Configurar*.
+. Para associar as credenciais a uma nova assinatura, selecione *Adicionar Assinatura > Continuar* e siga as etapas no Azure Marketplace:
++
+.. Se solicitado, faça login na sua conta do Azure.
+.. Selecione *Inscrever-se*.
+.. Preencha o formulário e selecione *Inscrever-se*.
+.. Após a conclusão do processo de assinatura, selecione *Configurar conta agora*.
++
+Você será redirecionado para o NetApp Console.
+
+.. Na página *Atribuição de Assinatura*:
++
+*** Selecione as organizações ou contas do Console às quais você gostaria de associar esta assinatura.
+*** No campo *Substituir assinatura existente*, escolha se deseja substituir automaticamente a assinatura existente de uma organização ou conta por esta nova assinatura.
++
+O Console substitui a assinatura existente para todas as credenciais na organização ou conta por esta nova assinatura.  Se um conjunto de credenciais nunca foi associado a uma assinatura, essa nova assinatura não será associada a essas credenciais.
+
++
+Para todas as outras organizações ou contas, você precisará associar manualmente a assinatura repetindo essas etapas.
+
+*** Selecione *Salvar*.
++
+O vídeo a seguir mostra as etapas para assinar o Azure Marketplace:
+
++
+.Assine o NetApp Intelligent Services no Azure Marketplace
+video::b7e97509-2ecf-4fa0-b39b-b0510109a318[panopto]
+
+
+
+
+
+
+--
+.Google Cloud
+--
+.Passos
+. Selecione *Administração > *Credenciais*.
+. Selecione *Credenciais da organização*.
+. Selecione o menu de ação para um conjunto de credenciais associadas a um agente do Console e selecione *Configurar assinatura*.  +nova captura de tela necessária (TS)image:screenshot_gcp_add_subscription.png["Uma captura de tela do menu de ações para um conjunto de credenciais existentes."]
+. Para configurar uma assinatura existente com as credenciais selecionadas, selecione um projeto e uma assinatura do Google Cloud na lista suspensa e selecione *Configurar*.
++
+image:screenshot_gcp_associate.gif["Uma captura de tela de um projeto e assinatura do Google Cloud selecionados para credenciais do Google Cloud."]
+
+. Se você ainda não tiver uma assinatura, selecione *Adicionar assinatura > Continuar* e siga as etapas no Google Cloud Marketplace.
++
+
+NOTE: Antes de concluir as etapas a seguir, verifique se você tem privilégios de administrador de cobrança na sua conta do Google Cloud, bem como um login no console do NetApp .
+
++
+.. Depois de ser redirecionado para o https://console.cloud.google.com/marketplace/product/netapp-cloudmanager/cloud-manager["Página do NetApp Intelligent Services no Google Cloud Marketplace"^] , certifique-se de que o projeto correto esteja selecionado no menu de navegação superior.
++
+image:screenshot_gcp_cvo_marketplace.png["Uma captura de tela da página do marketplace Cloud Volumes ONTAP no Google Cloud."]
+
+.. Selecione *Inscrever-se*.
+.. Selecione a conta de cobrança apropriada e concorde com os termos e condições.
+.. Selecione *Inscrever-se*.
++
+Esta etapa envia sua solicitação de transferência para a NetApp.
+
+.. Na caixa de diálogo pop-up, selecione *Registrar-se na NetApp, Inc.*
++
+Esta etapa deve ser concluída para vincular a assinatura do Google Cloud à sua organização ou conta do Console.  O processo de vinculação de uma assinatura não estará concluído até que você seja redirecionado desta página e faça login no Console.
+
++
+image:screenshot_gcp_marketplace_register.png["Uma captura de tela de um pop-up de registro."]
+
+.. Conclua as etapas na página *Atribuição de assinatura*:
++
+
+NOTE: Se alguém da sua organização já tiver uma assinatura de mercado da sua conta de cobrança, você será redirecionado para https://bluexp.netapp.com/ontap-cloud?x-gcp-marketplace-token=["a página Cloud Volumes ONTAP no NetApp Console"^] em vez de.  Se isso for inesperado, entre em contato com sua equipe de vendas da NetApp .  O Google permite apenas uma assinatura por conta de cobrança do Google.
+
++
+*** Selecione as organizações ou contas do Console às quais você gostaria de associar esta assinatura.
+*** No campo *Substituir assinatura existente*, escolha se deseja substituir automaticamente a assinatura existente de uma organização ou conta por esta nova assinatura.
++
+O Console substitui a assinatura existente para todas as credenciais na organização ou conta por esta nova assinatura.  Se um conjunto de credenciais nunca foi associado a uma assinatura, essa nova assinatura não será associada a essas credenciais.
+
++
+Para todas as outras organizações ou contas, você precisará associar manualmente a assinatura repetindo essas etapas.
+
+*** Selecione *Salvar*.
++
+O vídeo a seguir mostra as etapas para assinar o Google Cloud Marketplace:
+
++
+.Assine no Google Cloud Marketplace
+video::373b96de-3691-4d84-b3f3-b05101161638[panopto]
+
+
+.. Quando esse processo estiver concluído, volte para a página Credenciais no Console e selecione esta nova assinatura.
++
+image:screenshot_gcp_associate.gif["Uma captura de tela da página de atribuição de assinatura."]
+
+
+
+
+
+--
+====
+.Informações relacionadas
+* https://docs.netapp.com/us-en/bluexp-digital-wallet/task-manage-capacity-licenses.html["Gerenciar licenças baseadas em capacidade BYOL para Cloud Volumes ONTAP"^]
+* https://docs.netapp.com/us-en/bluexp-digital-wallet/task-manage-data-services-licenses.html["Gerenciar licenças BYOL para serviços de dados"^]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/task-adding-aws-accounts.html["Gerenciar credenciais e assinaturas da AWS"]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/task-adding-azure-accounts.html["Gerenciar credenciais e assinaturas do Azure"]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/task-adding-gcp-accounts.html["Gerenciar credenciais e assinaturas do Google Cloud"]
+

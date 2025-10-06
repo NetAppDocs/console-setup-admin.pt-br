@@ -1,0 +1,262 @@
+---
+sidebar: sidebar 
+permalink: reference-iam-disaster-rec-roles.html 
+keywords: disaster recovery, role-based access control, failover admin, replication plans, job- monitoring, business continuity, compliance- management, operational governance, access delegation, rbac, IAM roles 
+summary: Você pode atribuir as seguintes funções aos usuários para fornecer a eles acesso ao NetApp Disaster Recovery no Console.  As funções de Recuperação de Desastres oferecem a flexibilidade de atribuir aos usuários uma função específica para as tarefas que eles precisam realizar na sua organização. A maneira como você atribui funções depende das suas próprias práticas de negócios e gerenciamento de armazenamento. 
+---
+= Funções de recuperação de desastres da NetApp no ​​NetApp Console
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Você pode atribuir as seguintes funções aos usuários para fornecer a eles acesso ao NetApp Disaster Recovery no Console.  As funções de Recuperação de Desastres oferecem a flexibilidade de atribuir aos usuários uma função específica para as tarefas que eles precisam realizar na sua organização. A maneira como você atribui funções depende das suas próprias práticas de negócios e gerenciamento de armazenamento.
+
+A recuperação de desastres utiliza as seguintes funções:
+
+* *Administrador de recuperação de desastres*: Execute quaisquer ações.
+* *Administrador de failover de recuperação de desastres*: Executa failover e migrações.
+* *Administrador do aplicativo de recuperação de desastres*: Crie planos de replicação.  Modificar planos de replicação.  Iniciar failovers de teste.
+* *Visualizador de recuperação de desastres*: Visualize somente informações.
+
+
+A tabela a seguir indica as ações que cada função pode executar.
+
+[cols="30,20a,20a,20a,20a"]
+|===
+| Recurso e ação | Administrador de recuperação de desastres | Administrador de failover de recuperação de desastres | Administrador do aplicativo de recuperação de desastres | Visualizador de recuperação de desastres 
+
+
+| Ver painel e todas as guias  a| 
+Sim
+ a| 
+Sim
+ a| 
+Sim
+ a| 
+Sim
+
+
+
+| Iniciar teste gratuito  a| 
+Sim
+ a| 
+Não
+ a| 
+Não
+ a| 
+Não
+
+
+
+| Iniciar descoberta de cargas de trabalho  a| 
+Sim
+ a| 
+Não
+ a| 
+Não
+ a| 
+Não
+
+
+
+| Ver informações da licença  a| 
+Sim
+ a| 
+Sim
+ a| 
+Sim
+ a| 
+Sim
+
+
+
+| Ativar licença  a| 
+Sim
+ a| 
+Não
+ a| 
+Sim
+ a| 
+Não
+
+
+
+5+| *Na aba Sites*: 
+
+
+| Ver sites  a| 
+Sim
+ a| 
+Sim
+ a| 
+Sim
+ a| 
+Sim
+
+
+
+| Adicionar, modificar ou excluir sites  a| 
+Sim
+ a| 
+Não
+ a| 
+Não
+ a| 
+Não
+
+
+
+5+| *Na aba Planos de replicação*: 
+
+
+| Ver planos de replicação  a| 
+Sim
+ a| 
+Sim
+ a| 
+Sim
+ a| 
+Sim
+
+
+
+| Ver detalhes do plano de replicação  a| 
+Sim
+ a| 
+Sim
+ a| 
+Sim
+ a| 
+Sim
+
+
+
+| Criar ou modificar planos de replicação  a| 
+Sim
+ a| 
+Sim
+ a| 
+Sim
+ a| 
+Não
+
+
+
+| Criar relatórios  a| 
+Sim
+ a| 
+Não
+ a| 
+Não
+ a| 
+Não
+
+
+
+| Ver instantâneos  a| 
+Sim
+ a| 
+Sim
+ a| 
+Sim
+ a| 
+Sim
+
+
+
+| Executar testes de failover  a| 
+Sim
+ a| 
+Sim
+ a| 
+Sim
+ a| 
+Não
+
+
+
+| Executar failovers  a| 
+Sim
+ a| 
+Sim
+ a| 
+Não
+ a| 
+Não
+
+
+
+| Executar failbacks  a| 
+Sim
+ a| 
+Sim
+ a| 
+Não
+ a| 
+Não
+
+
+
+| Executar migrações  a| 
+Sim
+ a| 
+Sim
+ a| 
+Não
+ a| 
+Não
+
+
+
+5+| *Na aba Grupos de recursos*: 
+
+
+| Exibir grupos de recursos  a| 
+Sim
+ a| 
+Sim
+ a| 
+Sim
+ a| 
+Sim
+
+
+
+| Criar, modificar ou excluir grupos de recursos  a| 
+Sim
+ a| 
+Não
+ a| 
+Sim
+ a| 
+Não
+
+
+
+5+| *Na aba Monitoramento de Tarefas*: 
+
+
+| Ver empregos  a| 
+Sim
+ a| 
+Não
+ a| 
+Sim
+ a| 
+Sim
+
+
+
+| Cancelar trabalhos  a| 
+Sim
+ a| 
+Sim
+ a| 
+Sim
+ a| 
+Não
+
+|===

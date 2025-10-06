@@ -1,0 +1,49 @@
+= Conector 3.9.53
+:allow-uri-read: 
+
+
+
+
+=== Conector 3.9.53
+
+Esta versão do BlueXP Connector inclui melhorias de segurança e correções de bugs.
+
+A versão 3.9.53 está disponível para modo padrão e modo restrito.
+
+
+
+=== Alertas de uso de espaço em disco
+
+O Centro de Notificações agora inclui alertas para uso de espaço em disco no Conector.link:https://docs.netapp.com/us-en/bluexp-setup-admin/task-maintain-connectors.html#monitor-disk-space["Saber mais."^]
+
+
+
+=== Melhorias de auditoria
+
+A Linha do tempo agora inclui eventos de login e logout para usuários.  Você pode ver a atividade de login, o que pode ajudar na auditoria e no monitoramento de segurança.  Os usuários da API que têm a função de administrador da organização podem visualizar o endereço de e-mail do usuário que efetuou login, incluindo o `includeUserData=true`` parâmetro como no seguinte: `/audit/<account_id>?includeUserData=true` .
+
+
+
+=== Gerenciamento de assinaturas Keystone disponível no BlueXP
+
+Você pode gerenciar sua assinatura do NetApp Keystone pelo BlueXP.
+
+link:https://docs.netapp.com/us-en/keystone-staas/index.html["Saiba mais sobre o gerenciamento de assinaturas do Keystone no BlueXP."^]
+
+
+
+=== Gerenciamento de Identidade e Acesso (IAM) BlueXP
+
+
+
+==== Autenticação multifator (MFA)
+
+Usuários não federados podem habilitar o MFA para suas contas BlueXP para melhorar a segurança.  Os administradores podem gerenciar as configurações do MFA, incluindo redefinir ou desabilitar o MFA para usuários, conforme necessário.  Isso é suportado apenas no modo padrão.
+
+link:https://docs.netapp.com/us-en/bluexp-setup-admin/task-user-settings.html#task-user-mfa["Saiba mais sobre como configurar a autenticação multifator para você."^] link:https://docs.netapp.com/us-en/bluexp-setup-admin/task-iam-manage-members-permissions.html#manage-mfa["Saiba mais sobre como administrar a autenticação multifator para usuários."^]
+
+
+
+=== Cargas de trabalho
+
+Agora você pode visualizar e excluir credenciais do Amazon FSx for NetApp ONTAP na página Credenciais no BlueXP.

@@ -1,0 +1,32 @@
+= 
+:allow-uri-read: 
+
+
+. Selecione o menu de açõesimage:icon-action.png["um ícone com três pontos verticais"] ao lado do membro ao qual você deseja atribuir uma função e selecione *Adicionar uma função*.
+. Para adicionar uma função, conclua as etapas na caixa de diálogo:
++
+** *Selecione uma organização, pasta ou projeto*: Escolha o nível da hierarquia de recursos para o qual o membro deve ter permissões.
++
+Se você selecionar a organização ou uma pasta, o membro terá permissões para tudo o que reside na organização ou pasta.
+
+** *Selecione uma categoria*: Escolha uma categoria de função. link:reference-iam-predefined-roles.html["Saiba mais sobre funções de acesso"^] .
+** Selecione uma *Função*: Escolha uma função que forneça ao membro permissões para os recursos associados à organização, pasta ou projeto que você selecionou.
+** *Adicionar função*: se você quiser fornecer acesso a pastas ou projetos adicionais dentro da sua organização, selecione *Adicionar função*, especifique outra pasta, projeto ou categoria de função e, em seguida, selecione uma categoria de função e uma função correspondente.
+
+
+. Selecione *Adicionar novas funções*.
+
+
+. Na página *Membros*, navegue até um membro na tabela, selecioneimage:icon-action.png["Um ícone que tem três pontos lado a lado"] e então selecione *Ver detalhes*.
+. Na tabela, expanda a linha respectiva da organização, pasta ou projeto onde você deseja alterar a função atribuída ao membro e selecione *Exibir* na coluna *Função* para visualizar as funções atribuídas a este membro.
+. Você pode alterar uma função existente para um membro ou remover uma função.
++
+.. Para alterar a função de um membro, selecione *Alterar* ao lado da função que deseja alterar.  Você só pode alterar uma função para uma função dentro da mesma categoria de função.  Por exemplo, você pode mudar de uma função de serviço de dados para outra.  Confirme a alteração.
+.. Para cancelar a atribuição da função de um membro, selecioneimage:icon-delete.png["Um ícone que lembra uma lata de lixo"] ao lado da função para remover a atribuição da respectiva função ao membro.  Você será solicitado a confirmar a remoção.
+
+
+
+
+. Na página *Membros*, navegue até um membro na tabela, selecioneimage:icon-action.png["Um ícone que tem três pontos lado a lado"] e então selecione *Ver detalhes*.
+. Na tabela, expanda a linha respectiva da organização, pasta ou projeto onde você deseja visualizar a função atribuída ao membro e selecione *Exibir* na coluna *Função*.
+

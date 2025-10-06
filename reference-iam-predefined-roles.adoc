@@ -1,0 +1,150 @@
+---
+sidebar: sidebar 
+permalink: reference-iam-predefined-roles.html 
+keywords: predefined roles, iam roles, organization admin, folder or project admin, classification viewer, snapcenter admin, role, iam role, admin, iam, identity and access management, access roles, rbac, bluexp 
+summary: O gerenciamento de identidade e acesso do NetApp Console inclui funções predefinidas que você pode atribuir aos membros da sua organização. 
+---
+= Saiba mais sobre as funções de acesso do NetApp Console
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+O gerenciamento de identidade e acesso (IAM) no NetApp Console fornece funções predefinidas que você pode atribuir aos membros da sua organização em diferentes níveis da hierarquia de recursos.  Antes de atribuir essas funções, você deve entender as permissões que cada função inclui.  As funções se enquadram nas seguintes categorias: plataforma, aplicativo e serviço de dados.
+
+
+
+== Funções da plataforma
+
+As funções da plataforma concedem permissões de administração do NetApp Console, incluindo atribuição de funções e gerenciamento de usuários.  O Console tem várias funções de plataforma.
+
+[cols="1,2"]
+|===
+| Função da plataforma | Responsabilidades 
+
+
+| link:reference-iam-platform-roles.html#organization-admin-roles["Administrador da organização"] | Permite que um usuário tenha acesso irrestrito a todos os projetos e pastas dentro de uma organização, adicione membros a qualquer projeto ou pasta, bem como execute qualquer tarefa e use qualquer serviço de dados que não tenha uma função explícita associada a ele.  Usuários com essa função gerenciam sua organização criando pastas e projetos, atribuindo funções, adicionando usuários e gerenciando sistemas, se tiverem as credenciais adequadas.  Esta é a única função de acesso que pode criar agentes do Console. 
+
+
+| link:reference-iam-platform-roles.html#organization-admin-roles["Administrador de pasta ou projeto"] | Permite ao usuário acesso irrestrito aos projetos e pastas atribuídos.  Podem adicionar membros às pastas ou projetos que gerenciam, bem como executar qualquer tarefa e usar qualquer serviço de dados ou aplicativo em recursos dentro da pasta ou projeto que lhes foi atribuído.  Administradores de pastas ou projetos não podem criar agentes do Console. 
+
+
+| link:reference-iam-platform-roles.html#federation-roles["Administrador da Federação"] | Permite que um usuário crie e gerencie federações com o Console, o que permite logon único (SSO). 
+
+
+| link:reference-iam-platform-roles.html#federation-roles["Visualizador da Federação"] | Permite que um usuário visualize federações existentes com o Console.  Não é possível criar ou gerenciar federações. 
+
+
+| link:reference-iam-platform-roles.html#partnership-roles["Administrador de parceria"] | Permite que um usuário crie e gerencie parcerias. 
+
+
+| link:reference-iam-platform-roles.html#partnership-roles["Visualizador de parceria"] | Permite que um usuário visualize parcerias existentes.  Não é possível criar ou gerenciar parcerias. 
+
+
+| link:reference-iam-platform-roles.html#super-admin-roles["Superadministrador"] | Dá ao usuário um subconjunto de funções de administrador.  Esta função foi projetada para organizações menores que podem não precisar distribuir responsabilidades do Console entre vários usuários. 
+
+
+| link:reference-iam-platform-roles.html#super-admin-roles["Super visualizador"] | Dá ao usuário um subconjunto de funções de visualizador.  Esta função foi projetada para organizações menores que podem não precisar distribuir responsabilidades do Console entre vários usuários. 
+|===
+
+
+== Funções de aplicação
+
+A seguir está uma lista de funções na categoria de aplicação.  Cada função concede permissões específicas dentro de seu escopo designado.  Usuários sem a função de aplicativo ou plataforma necessária não podem acessar o respectivo aplicativo.
+
+[cols="1,2"]
+|===
+| Função de aplicação | Responsabilidades 
+
+
+| link:reference-iam-gcnv-roles.html["Administrador do Google Cloud NetApp Volumes"] | Usuários com a função Google Cloud NetApp Volumes podem descobrir e gerenciar o Google Cloud NetApp Volumes. 
+
+
+| link:reference-iam-keystone-roles.html["Administrador Keystone"] | Usuários com a função de administrador do Keystone podem criar solicitações de serviço.  Permite que os usuários monitorem e visualizem o uso, os recursos e os detalhes administrativos dentro do locatário do Keystone que estão acessando. 
+
+
+| link:reference-iam-keystone-roles.html["Visualizador Keystone"] | Usuários com a função de visualizador do Keystone NÃO PODEM criar solicitações de serviço.  Permite que os usuários monitorem e visualizem o consumo, os ativos e as informações administrativas dentro do locatário do Keystone que estão acessando. 
+
+
+| Função de configuração do Mediador ONTAP | Contas de serviço com a função de configuração do ONTAP Mediator podem criar solicitações de serviço.  Esta função é necessária em uma conta de serviço para configurar uma instância dolink:https://docs.netapp.com/us-en/ontap/mediator/mediator-overview-concept.html["Mediador de Nuvem ONTAP"^] . 
+
+
+| link:reference-iam-analyst-roles.html["Analista de suporte operacional"] | Fornece acesso a alertas e ferramentas de monitoramento e capacidade de inserir e gerenciar casos de suporte. 
+
+
+| link:reference-iam-storage-roles.html["Administrador de armazenamento"] | Administre funções de governança e integridade de armazenamento, descubra recursos de armazenamento e modifique e exclua sistemas existentes. 
+
+
+| link:reference-iam-storage-roles.html["Visualizador de armazenamento"] | Visualize as funções de governança e integridade do armazenamento, bem como visualize os recursos de armazenamento descobertos anteriormente.  Não é possível descobrir, modificar ou excluir sistemas de armazenamento existentes. 
+
+
+| link:reference-iam-storage-roles.html["Especialista em saúde do sistema"] | Administrar funções de armazenamento, saúde e governança, todas as permissões do administrador de armazenamento, exceto não poder modificar ou excluir sistemas existentes. 
+|===
+
+
+== Funções de serviço de dados
+
+A seguir está uma lista de funções na categoria de serviço de dados.  Cada função concede permissões específicas dentro de seu escopo designado.  Usuários que não tenham a função de serviço de dados necessária ou uma função de plataforma não poderão acessar o serviço de dados.
+
+[cols="10,24"]
+|===
+| Função de serviço de dados | Responsabilidades 
+
+
+| link:reference-iam-backup-rec-roles.html["Superadministrador de Backup e Recuperação"] | Execute qualquer ação no NetApp Backup and Recovery. 
+
+
+| link:reference-iam-backup-rec-roles.html["Administrador de backup e recuperação"] | Faça backups em snapshots locais, replique para armazenamento secundário e faça backup no armazenamento de objetos. 
+
+
+| link:reference-iam-backup-rec-roles.html["Administração de restauração de backup e recuperação"] | Restaure cargas de trabalho no Backup e Recuperação. 
+
+
+| link:reference-iam-backup-rec-roles.html["Administrador clone de backup e recuperação"] | Clone aplicativos e dados no Backup e Recuperação. 
+
+
+| link:reference-iam-backup-rec-roles.html["Visualizador de backup e recuperação"] | Ver informações de backup e recuperação. 
+
+
+| link:reference-iam-disaster-rec-roles.html["Administrador de recuperação de desastres"] | Execute quaisquer ações no serviço NetApp Disaster Recovery. 
+
+
+| link:reference-iam-disaster-rec-roles.html["Administrador de failover de recuperação de desastres"] | Execute failover e migrações. 
+
+
+| link:reference-iam-disaster-rec-roles.html["Administrador do aplicativo de recuperação de desastres"] | Crie planos de replicação, altere planos de replicação e inicie failovers de teste. 
+
+
+| link:reference-iam-disaster-rec-roles.html["Visualizador de recuperação de desastres"] | Ver apenas informações. 
+
+
+| Visualizador de classificação | Permite que os usuários visualizem os resultados da verificação de classificação de dados do NetApp .  Usuários com essa função podem visualizar informações de conformidade e gerar relatórios para recursos aos quais têm permissão de acesso.  Esses usuários não podem habilitar ou desabilitar a verificação de volumes, buckets ou esquemas de banco de dados.  A classificação não tem um papel de visualizador. 
+
+
+| link:reference-iam-ransomware-roles.html["Administrador de resiliência de ransomware"] | Gerencie ações nas guias Proteger, Alertas, Recuperar, Configurações e Relatórios do NetApp Ransomware Resilience. 
+
+
+| link:reference-iam-ransomware-roles.html["Visualizador de resiliência de ransomware"] | Visualize dados de carga de trabalho, visualize dados de alerta, baixe dados de recuperação e baixe relatórios no Ransomware Resilience. 
+
+
+| link:reference-iam-ransomware-roles.html["Comportamento do usuário de resiliência ao ransomware"] | Configure, gerencie e visualize a detecção, os alertas e o monitoramento de comportamento suspeito do usuário no Ransomware Resilience. 
+
+
+| link:reference-iam-ransomware-roles.html["Visualizador de comportamento do usuário de resiliência de ransomware"] | Veja alertas e insights sobre comportamento suspeito de usuários no Ransomware Resilience. 
+
+
+| Administrador do SnapCenter | Oferece a capacidade de fazer backup de instantâneos de clusters ONTAP locais usando o NetApp Backup and Recovery para aplicativos.  Um membro com essa função pode concluir as seguintes ações: * Concluir qualquer ação em Backup e recuperação > Aplicativos * Gerenciar todos os sistemas nos projetos e pastas para os quais eles têm permissões * Usar todos os serviços do NetApp Console O SnapCenter não tem uma função de visualizador. 
+|===
+
+
+== Links relacionados
+
+* link:concept-identity-and-access-management.html["Saiba mais sobre o gerenciamento de identidade e acesso do NetApp Console"]
+* link:task-iam-get-started.html["Comece a usar o NetApp Console IAM"]
+* link:task-iam-manage-members-permissions.html["Gerenciar membros do NetApp Console e suas permissões"]
+* https://docs.netapp.com/us-en/bluexp-automation/tenancyv4/overview.html["Saiba mais sobre a API para NetApp Console IAM"^]
+

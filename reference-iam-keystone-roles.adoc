@@ -1,0 +1,143 @@
+---
+sidebar: sidebar 
+permalink: reference-iam-keystone-roles.html 
+keywords: predefined roles, iam roles, organization admin, folder or project admin, identity and access management, access roles, admin 
+summary: O gerenciamento de identidade e acesso do NetApp Console fornece duas funções Keystone que você pode atribuir aos membros da sua organização. 
+---
+= Funções de acesso Keystone no NetApp Console
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+As funções do Keystone fornecem acesso aos painéis do Keystone e permitem que os usuários visualizem e gerenciem sua assinatura do Keystone .  Há duas funções do Keystone : administrador do Keystone e visualizador do Keystone .  A principal diferença entre as duas funções são as ações que elas podem realizar no Keystone.  A função de administrador do Keystone é a única função que tem permissão para criar solicitações de serviço ou modificar assinaturas.
+
+.Exemplo de funções Keystone no NetApp Console
+A XYZ Corporation tem quatro engenheiros de armazenamento de diferentes departamentos que visualizam as informações de assinatura do Keystone .  Embora todos esses usuários precisem monitorar a assinatura do Keystone , somente o líder da equipe tem permissão para fazer solicitações de serviço.  Três membros da equipe recebem a função de *visualizador do Keystone *, enquanto o líder da equipe recebe a função de *administrador do Keystone * para que haja um ponto de controle sobre as solicitações de serviço da empresa.
+
+A tabela a seguir indica as ações que cada função Keystone pode executar.
+
+[cols="40,20a,20a"]
+|===
+| Recurso e ação | Administrador Keystone | Visualizador Keystone 
+
+
+| Visualize as seguintes guias: Assinatura, Ativos, Monitor e Administração  a| 
+Sim
+ a| 
+Sim
+
+
+
+3+| * Página de assinatura do Keystone *: 
+
+
+| Ver assinaturas  a| 
+Sim
+ a| 
+Sim
+
+
+
+| Alterar ou renovar assinaturas  a| 
+Sim
+ a| 
+Não
+
+
+
+3+| * Página de ativos do Keystone *: 
+
+
+| Ver ativos  a| 
+Sim
+ a| 
+Sim
+
+
+
+| Gerenciar ativos  a| 
+Sim
+ a| 
+Não
+
+
+
+3+| * Página de alertas do Keystone *: 
+
+
+| Ver alertas  a| 
+Sim
+ a| 
+Não
+
+
+
+| Gerenciar alertas  a| 
+Sim
+ a| 
+Não
+
+
+
+| Crie alertas para si mesmo  a| 
+Sim
+ a| 
+Sim
+
+
+
+3+| *Licenças e assinaturas*: 
+
+
+| Pode visualizar licenças e assinaturas  a| 
+Sim
+ a| 
+Sim
+
+
+
+3+| *Página de relatórios do Keystone *: 
+
+
+| Baixar relatórios  a| 
+Sim
+ a| 
+Sim
+
+
+
+| Gerenciar relatórios  a| 
+Sim
+ a| 
+Sim
+
+
+
+| Crie relatórios para si mesmo  a| 
+Sim
+ a| 
+Sim
+
+
+
+3+| *Solicitações de serviço*: 
+
+
+| Criar solicitações de serviço  a| 
+Sim
+ a| 
+Não
+
+
+
+| Visualizar solicitações de serviço criadas por qualquer usuário dentro da organização  a| 
+Sim
+ a| 
+Sim
+
+|===

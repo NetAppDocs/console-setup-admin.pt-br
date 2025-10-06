@@ -1,0 +1,98 @@
+---
+sidebar: sidebar 
+permalink: task-partnerships-create.html 
+keywords: partner organizations, create partnership, MSPs, service provider access 
+summary: Crie parcerias para estabelecer conexões seguras e gerenciadas entre sua organização e parceiros confiáveis ​​para gerenciamento colaborativo de recursos do NetApp . 
+---
+= Gerenciar parcerias no NetApp Console
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Crie parcerias para estabelecer conexões seguras e gerenciadas entre sua organização e parceiros confiáveis ​​para gerenciamento colaborativo de recursos do NetApp .
+
+As parcerias permitem que você gerencie com segurança os recursos do NetApp em todos os limites com relacionamentos baseados em funções no Console.  A organização iniciadora concede acesso aos seus recursos, enquanto a organização aceitante fornece os usuários ou contas de serviço aos quais será concedido acesso.  As parcerias são estabelecidas por meio de um fluxo de trabalho de autoatendimento, dando à organização iniciadora controle total sobre quais recursos são compartilhados, quais funções são atribuídas e a capacidade de integrar, gerenciar ou revogar o acesso do parceiro conforme necessário.
+
+.Funções necessárias
+A função *Administrador de parceria* é necessária para criar e gerenciar parcerias.  O *Visualizador de Parcerias* pode visualizar a página Parcerias.link:reference-iam-predefined-roles.html["Saiba mais sobre funções de acesso."]
+
+
+
+== Iniciar uma parceria organizacional
+
+Você pode solicitar uma parceria com outra organização se souber o ID da organização.  A organização receptora aprova a solicitação antes que a parceria possa prosseguir.
+
+Antes de começar, certifique-se de ter o ID da organização parceira e de que você recebeu a função de *Administrador da parceria*.
+
+.Passos
+. Selecione *Administração > Identidade e acesso*.
+. Selecione a aba *Parcerias*.
+. Selecione *Adicionar parceria*.
+. Na caixa de diálogo *Criar parceria*, insira o ID da organização parceira do parceiro solicitado e selecione *Adicionar*.
++
+A solicitação de parceria é enviada à organização parceira para aprovação.  Você pode visualizar o status da solicitação de parceria na página *Parcerias*.
+
+
+
+
+
+== Aprovar uma parceria organizacional
+
+Uma solicitação de parceria de organização deve ser aceita pela organização receptora antes que a parceria possa prosseguir.  Você deve ter a função *Administrador de parceria* para aprovar e gerenciar parcerias.
+
+.Passos
+. Selecione *Administração > Identidade e acesso*.
+. Selecione *Parcerias*.
+. Selecione a aba *Parceria recebida*.
+. Navegue até a parceria recebida que deseja aprovar e selecioneimage:icon-action.png["Um ícone que tem três pontos lado a lado"] e então selecione *Aprovar*.
+. Revise os detalhes da parceria, incluindo o nome e o ID da organização que solicitou a parceria e selecione *Avançar.*
+. Opcionalmente, adicione membros da organização à parceria e selecione *Aplicar*.
++
+Você pode adicionar membros adicionais por meio da página *Parceria* a qualquer momento.
+
++
+
+NOTE: Todos os membros que você adicionar ficarão visíveis na organização do parceiro, onde o parceiro poderá atribuí-los aos recursos.
+
+
+
+.Resultado
+A parceria que você aprovou agora mostra o status *Estabelecida*.  Usuários com as funções *Administrador de parceria* ou *Visualizador de parceria* em qualquer organização podem visualizar a parceria.
+
+
+
+== Ver status da parceria
+
+Veja o status das suas parcerias.
+
+.Função necessária
+Administrador de parceria, visualizador de parceria.link:reference-iam-predefined-roles.html["Saiba mais sobre funções de acesso."]
+
+.Passos
+. Selecione *Administração > Identidade e acesso*.
+. Selecione *Parcerias*.
+. Selecione a aba *Parcerias iniciadas* ou *Parcerias recebidas*.
+. Revise a tabela respectiva que exibe as parcerias e seus status.
+
+
+
+
+== Desabilitar uma parceria de organização
+
+Você deve ser membro da organização iniciadora para desabilitar uma parceria.  Desabilitar uma parceria revoga imediatamente o acesso a quaisquer recursos na sua organização que foram compartilhados com a organização parceira.
+
+.Função necessária
+Administração de parcerias.link:reference-iam-predefined-roles.html["Saiba mais sobre funções de acesso."]
+
+.Passos
+. Selecione *Administração > Identidade e acesso*.
+. Selecione *Parcerias*.
+. Selecione a aba *Parcerias iniciadas*.
+. Revise a tabela respectiva que exibe as parcerias e seus status.
+. Navegue até a parceria iniciada que deseja desabilitar e selecioneimage:icon-action.png["Um ícone que tem três pontos lado a lado"] e então selecione *Desativar*.
+

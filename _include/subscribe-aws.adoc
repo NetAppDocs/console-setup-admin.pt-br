@@ -1,0 +1,43 @@
+= 
+:allow-uri-read: 
+
+
+O vídeo a seguir mostra as etapas para assinar o NetApp Intelligent Services no AWS Marketplace:
+
+.Assine o NetApp Intelligent Services no AWS Marketplace
+video::096e1740-d115-44cf-8c27-b051011611eb[panopto]
+.Passos
+. Selecione *Administração > *Credenciais*.
+. Selecione *Credenciais da organização*.
+. Selecione o menu de ação para um conjunto de credenciais associadas a um agente do Console e selecione *Configurar assinatura*.
++
+Você deve selecionar credenciais associadas a um agente do Console.  Não é possível associar uma assinatura do marketplace a credenciais associadas ao NetApp Console.
+
++
+image:screenshot_aws_configure_subscription.png["Uma captura de tela do menu de ações para um conjunto de credenciais existentes."]
+
+. Para associar as credenciais a uma assinatura existente, selecione a assinatura na lista suspensa e selecione *Configurar*.
+. Para associar as credenciais a uma nova assinatura, selecione *Adicionar assinatura > Continuar* e siga as etapas no AWS Marketplace:
++
+.. Selecione *Ver opções de compra*.
+.. Selecione *Inscrever-se*.
+.. Selecione *Configurar sua conta*.
++
+Você será redirecionado para o NetApp Console.
+
+.. Na página *Atribuição de Assinatura*:
++
+*** Selecione as organizações ou contas do Console às quais você gostaria de associar esta assinatura.
+*** No campo *Substituir assinatura existente*, escolha se deseja substituir automaticamente a assinatura existente de uma organização ou conta por esta nova assinatura.
++
+O Console substitui a assinatura existente para todas as credenciais na organização ou conta por esta nova assinatura.  Se um conjunto de credenciais nunca foi associado a uma assinatura, essa nova assinatura não será associada a essas credenciais.
+
++
+Para todas as outras organizações ou contas, você precisará associar manualmente a assinatura repetindo essas etapas.
+
+*** Selecione *Salvar*.
+
+
+
+
+

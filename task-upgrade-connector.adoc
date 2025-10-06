@@ -1,0 +1,117 @@
+---
+sidebar: sidebar 
+permalink: task-upgrade-connector.html 
+keywords: upgrade, manual upgrade, agent upgrade, manual agent upgrade, upgrade agent manually, private mode upgrade, offline upgrade, upgrade private mode, connector upgrade, agent upgrade 
+summary: Quando você usa o modo padrão ou o modo restrito, o NetApp Console atualiza automaticamente o agente do Console para a versão mais recente, desde que o agente do Console tenha acesso de saída à Internet para obter a atualização do software. 
+---
+= Gerenciar atualizações do agente do console
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Quando você usa o modo padrão ou o modo restrito, o NetApp Console atualiza automaticamente o agente do Console para a versão mais recente, desde que o agente do Console tenha acesso de saída à Internet para obter a atualização do software.
+
+Se precisar gerenciar manualmente quando o agente do Console será atualizado, você poderá desabilitar as atualizações automáticas para o modo padrão ou restrito.
+
+
+
+== Desativar atualizações automáticas
+
+Desabilitar a atualização automática do seu agente do Console consiste em duas etapas.  Primeiro, você precisa garantir que seu agente do Console esteja íntegro e atualizado.  Em seguida, edite um arquivo de configuração para desativar as atualizações automáticas.
+
+
+NOTE: Você só pode desabilitar atualizações automáticas se tiver um agente do Console versão 3.9.48 ou superior.
+
+
+
+=== Verifique a saúde do seu agente
+
+Você deve verificar se seu agente está estável e se todos os contêineres em execução na VM do agente estão íntegros e funcionando.  Depois de desabilitar as atualizações automáticas, a VM do agente para de verificar novos serviços ou pacotes de atualização.
+
+Use um dos seguintes comandos para verificar seu agente do Console.  Todos os serviços devem ter o status _Em execução_.  Se esse não for o caso, entre em contato com o suporte da NetApp antes de desabilitar a atualização automática.
+
+Docker (para implantações do Ubuntu e VCenter)::
++
+--
+[source, cli]
+----
+docker ps -a
+----
+--
+Podman::
++
+--
+[source, cli]
+----
+podman ps -a
+----
+--
+
+
+
+
+=== Desabilitar atualização automática para o agente
+
+Você desabilita as atualizações automáticas definindo o sinalizador _isUpgradeDisabled_ no arquivo _com/opt/application/netapp/service-manager-2/config.json_.  Por padrão, esse sinalizador é definido como falso e seu agente é atualizado automaticamente.  Você pode definir este sinalizador como verdadeiro para desabilitar atualizações automáticas.  Você deve estar familiarizado com a sintaxe JSON antes de concluir esta etapa.
+
+Para reativar a atualização automática, siga estas etapas e defina o sinalizador _isUpgradeDisabled_ como falso.
+
+.Passos
+. Certifique-se de ter verificado se seu agente está atualizado e saudável.
+. Crie uma cópia de backup do arquivo _/opt/application/netapp/service-manager-2/config.json_ para garantir que você possa reverter suas alterações.
+. Edite o arquivo _/opt/application/netapp/service-manager-2/config.json_ e altere o valor do sinalizador _isUpgradeDisabled_ para true.
++
+[source, json]
+----
+  "isUpgradeDisabled": true,
+----
+. Salve seu arquivo.
+. Reinicie o serviço do gerenciador de serviços 2 executando o seguinte comando:
++
+[source, cli]
+----
+systemctl restart netapp-service-manager.service
+----
+. Execute o seguinte comando e verifique se o status do agente é exibido como _ativo(em execução)_: _
++
+[source, cli]
+----
+systemctl status netapp-service-manager.service
+_
+----
+
+
+
+
+== Atualizar o agente do Console
+
+O agente do Console precisa ser reiniciado durante o processo de atualização, portanto, o NetApp Console ficará indisponível durante a atualização.
+
+.Passos
+. Baixe o software do agente do Console em https://mysupport.netapp.com/site/products/all/details/cloud-manager/downloads-tab["Site de suporte da NetApp"^] .
+. Copie o instalador para o host Linux.
+. Atribua permissões para executar o script.
++
+[source, cli]
+----
+chmod +x /path/NetApp-Console-Agent-Offline-<version>
+----
++
+Onde <versão> é a versão do agente do Console que você baixou.
+
+. Execute o script de instalação:
++
+[source, cli]
+----
+sudo /path/NetApp-Console-Agent-Offline-<version>
+----
++
+Onde <versão> é a versão do agente que você baixou.
+
+. Após a conclusão da atualização, você pode verificar a versão do agente acessando *Administração > Suporte > Agentes*.
+

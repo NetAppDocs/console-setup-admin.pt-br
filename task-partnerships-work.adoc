@@ -1,0 +1,21 @@
+---
+sidebar: sidebar 
+permalink: task-partnerships-work.html 
+keywords: partner organizations, create partnership, MSPs, service provider access 
+summary: Depois de receber uma função em uma organização parceira, você pode alternar para essa organização e executar ações para as quais tem permissão. 
+---
+= Trabalhar em uma organização parceira
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Depois de receber uma função em uma organização parceira, você pode alternar para essa organização e executar ações para as quais tem permissão.
+
+Use o menu Organização para alternar entre suas organizações e quaisquer organizações parceiras às quais você tenha acesso.link:task-iam-switch-organizations-projects.html["Saiba mais sobre como mudar de organização e projeto."]
+
+Você poderá ver os recursos que foram compartilhados com você na organização parceira e executar ações com base na função que foi atribuída a você.  Trabalhe com seu administrador de parceria para garantir que você tenha a função apropriada para os recursos que precisa acessar.

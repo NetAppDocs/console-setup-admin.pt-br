@@ -1,0 +1,285 @@
+---
+sidebar: sidebar 
+permalink: reference-iam-backup-rec-roles.html 
+keywords: backing up, restoring, back up, backup, restore, cloud volumes ontap, aws, azure, s3, blob, google cloud, storagegrid, back up volumes, cloud backup, restore volumes, cost, on-premises ontap, onprem, applications, virtual machines, backup and recovery, roles, permissions, access control, role-based access control, rbac, role-based access 
+summary: Você pode atribuir as seguintes funções aos usuários para fornecer a eles acesso ao NetApp Backup and Recovery no Console.  As funções de backup e recuperação oferecem a flexibilidade de atribuir aos usuários uma função específica para as tarefas que eles precisam realizar na sua organização. A maneira como você atribui funções depende das suas próprias práticas de negócios e gerenciamento de armazenamento. 
+---
+= Funções de backup e recuperação do NetApp no ​​NetApp Console
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Você pode atribuir as seguintes funções aos usuários para fornecer a eles acesso ao NetApp Backup and Recovery no Console.  As funções de backup e recuperação oferecem a flexibilidade de atribuir aos usuários uma função específica para as tarefas que eles precisam realizar na sua organização. A maneira como você atribui funções depende das suas próprias práticas de negócios e gerenciamento de armazenamento.
+
+O Backup e Recuperação usa as seguintes funções:
+
+* *Superadministrador de backup e recuperação*: Execute qualquer ação.
+* *Administrador de backup e recuperação*: faça backups em instantâneos locais, replique para armazenamento secundário e faça backup no armazenamento de objetos.
+* *Administrador de restauração de backup e recuperação*: Restaurar cargas de trabalho.
+* *Administrador de clone de backup e recuperação*: Clone aplicativos e dados.
+* *Visualizador de backup e recuperação*: visualize informações de backup e recuperação.
+
+
+A tabela a seguir indica as ações que cada função pode executar.
+
+[cols="20,20,15,15a,15a,15a"]
+|===
+| Recurso e ação | Superadministrador de backup e recuperação | Administrador de backup | Restaurar administrador | Clonar administrador | Visualizador 
+
+
+| Adicionar, editar ou excluir hosts | Sim | Não  a| 
+Não
+ a| 
+Não
+ a| 
+Não
+
+
+
+| Instalar plugins | Sim | Não  a| 
+Não
+ a| 
+Não
+ a| 
+Não
+
+
+
+| Adicionar credenciais (host, instância, vCenter) | Sim | Não  a| 
+Não
+ a| 
+Não
+ a| 
+Não
+
+
+
+| Ver painel e todas as guias | Sim | Sim  a| 
+Sim
+ a| 
+Sim
+ a| 
+Sim
+
+
+
+| Iniciar teste gratuito | Sim | Não  a| 
+Não
+ a| 
+Não
+ a| 
+Não
+
+
+
+| Iniciar descoberta de cargas de trabalho | Não | Sim  a| 
+Sim
+ a| 
+Sim
+ a| 
+Não
+
+
+
+| Ver informações da licença | Sim | Sim  a| 
+Sim
+ a| 
+Sim
+ a| 
+Sim
+
+
+
+| Ativar licença | Sim | Não  a| 
+Não
+ a| 
+Não
+ a| 
+Não
+
+
+
+| Ver hosts | Sim | Sim  a| 
+Sim
+ a| 
+Sim
+ a| 
+Sim
+
+
+
+6+| *Horários*: 
+
+
+| Ativar agendamentos | Sim | Sim  a| 
+Sim
+ a| 
+Sim
+ a| 
+Não
+
+
+
+| Suspender horários | Sim | Sim  a| 
+Sim
+ a| 
+Sim
+ a| 
+Não
+
+
+
+6+| *Políticas e proteção*: 
+
+
+| Ver planos de proteção | Sim | Sim  a| 
+Sim
+ a| 
+Sim
+ a| 
+Sim
+
+
+
+| Criar, modificar ou excluir planos de proteção | Sim | Sim  a| 
+Não
+ a| 
+Não
+ a| 
+Não
+
+
+
+| Restaurar cargas de trabalho | Sim | Não  a| 
+Sim
+ a| 
+Não
+ a| 
+Não
+
+
+
+| Criar, dividir ou excluir clones | Sim | Não  a| 
+Não
+ a| 
+Sim
+ a| 
+Não
+
+
+
+| Criar, modificar ou excluir política | Sim | Sim  a| 
+Não
+ a| 
+Não
+ a| 
+Não
+
+
+
+6+| *Relatórios*: 
+
+
+| Ver relatórios | Sim | Sim  a| 
+Sim
+ a| 
+Sim
+ a| 
+Sim
+
+
+
+| Criar relatórios | Sim | Sim  a| 
+Sim
+ a| 
+Sim
+ a| 
+Não
+
+
+
+| Excluir relatórios | Sim | Não  a| 
+Não
+ a| 
+Não
+ a| 
+Não
+
+
+
+6+| *Importar do SnapCenter e gerenciar host*: 
+
+
+| Exibir dados importados do SnapCenter | Sim | Sim  a| 
+Sim
+ a| 
+Sim
+ a| 
+Sim
+
+
+
+| Importar dados do SnapCenter | Sim | Sim  a| 
+Não
+ a| 
+Não
+ a| 
+Não
+
+
+
+| Gerenciar (migrar) host | Sim | Sim  a| 
+Não
+ a| 
+Não
+ a| 
+Não
+
+
+
+6+| *Configurar definições*: 
+
+
+| Configurar diretório de log | Sim | Sim  a| 
+Sim
+ a| 
+Não
+ a| 
+Não
+
+
+
+| Associar ou remover credenciais de instância | Sim | Sim  a| 
+Sim
+ a| 
+Não
+ a| 
+Não
+
+
+
+6+| *Baldes*: 
+
+
+| Exibir baldes de armazenamento | Sim | Sim  a| 
+Sim
+ a| 
+Sim
+ a| 
+Sim
+
+
+
+| Criar, editar ou excluir buckets de armazenamento | Sim | Sim  a| 
+Não
+ a| 
+Não
+ a| 
+Não
+
+|===

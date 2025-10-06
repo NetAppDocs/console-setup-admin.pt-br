@@ -1,0 +1,14 @@
+= 
+:allow-uri-read: 
+
+
+* API do Gerenciador de Implantação em Nuvem V2
+* API de registro em nuvem
+* API do Gerenciador de Recursos de Nuvem
+* API do mecanismo de computação
+* API de gerenciamento de identidade e acesso (IAM)
+* API do Serviço de Gerenciamento de Chaves em Nuvem (KMS)
++
+(Obrigatório somente se você estiver planejando usar o NetApp Backup and Recovery com chaves de criptografia gerenciadas pelo cliente (CMEK))
+
+

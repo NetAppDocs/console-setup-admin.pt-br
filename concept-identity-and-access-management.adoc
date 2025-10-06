@@ -1,0 +1,243 @@
+---
+sidebar: sidebar 
+permalink: concept-identity-and-access-management.html 
+keywords: iam overview, overview, how iam works, iam example, organization, folders, projects, resources, members, roles, permissions, resource hierarchy, identity and access management, access roles, iam, bluexp IAM 
+summary: 'O gerenciamento de identidade e acesso (IAM) no NetApp Console permite que você controle o acesso aos recursos da sua organização.' 
+---
+= Saiba mais sobre o gerenciamento de identidade e acesso do NetApp Console
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+O gerenciamento de identidade e acesso (IAM) no NetApp Console permite que você organize e controle o acesso aos seus recursos do NetApp .  Você pode organizar seus recursos de acordo com a hierarquia da sua organização.  Por exemplo, você pode organizar recursos por localização geográfica, site ou unidade de negócios.  Você pode então atribuir funções do IAM a membros em partes específicas da hierarquia, o que impede o acesso a recursos em outras partes da hierarquia.
+
+* link:concept-modes.html["Saiba mais sobre os modos de implantação do Console"]
+
+
+
+
+== Como funciona o IAM
+
+O IAM permite que você conceda acesso a recursos atribuindo funções de acesso de usuários a partes específicas da hierarquia.  Por exemplo, um membro pode receber a função de administrador de pasta ou projeto para um projeto com cinco recursos.
+
+Ao usar o IAM, você gerencia os seguintes componentes:
+
+* A organização
+* Pastas
+* Projetos
+* Recursos
+* Membros
+* Funções e permissões
+* Agentes de console
+
+
+Os recursos são organizados hierarquicamente:
+
+* A organização é o topo da hierarquia.
+* As pastas são filhas da organização ou de outra pasta.
+* Projetos são filhos da organização ou de uma pasta.
+* Os recursos são associados a uma ou mais pastas ou projetos.
+
+
+A imagem a seguir ilustra essa hierarquia em um nível básico.
+
+image:diagram-iam-resource-hierarchy.png["Um diagrama conceitual que mostra a hierarquia de recursos para gerenciamento de acesso: uma organização, pastas, projetos e recursos."]
+
+
+
+=== Organização
+
+Uma _organização_ é o nível superior do sistema Console IAM e normalmente representa sua empresa.  Sua organização consiste em pastas, projetos, membros, funções e recursos.  Os agentes estão associados a projetos específicos na organização.
+
+
+
+=== Pastas
+
+Uma _pasta_ permite que você agrupe projetos relacionados e os separe de outros projetos na sua organização.  Por exemplo, uma pasta pode representar uma localização geográfica (UE ou Leste dos EUA), um site (Londres ou Toronto) ou uma unidade de negócios (engenharia ou marketing).
+
+Você pode organizar pastas para conter projetos, outras pastas ou ambos.  Eles são opcionais.
+
+
+
+=== Projetos
+
+Um _projeto_ representa um espaço de trabalho no Console que os membros da organização acessam na página *Sistemas* para gerenciar recursos.  Por exemplo, um projeto pode incluir um sistema Cloud Volumes ONTAP , um cluster ONTAP local ou um sistema de arquivos FSx for ONTAP .
+
+Uma organização pode ter um ou muitos projetos.  Um projeto pode residir diretamente abaixo da organização ou dentro de uma pasta.
+
+
+
+=== Recursos
+
+Um _recurso_ é um sistema que você criou ou descobriu no Console.
+
+Quando você cria ou descobre um recurso, o recurso é associado ao projeto selecionado no momento.  Esse pode ser o único projeto ao qual você deseja associar esse recurso.  Mas você pode optar por associar o recurso a projetos adicionais na sua organização.
+
+Por exemplo, você pode associar um sistema Cloud Volumes ONTAP a um projeto adicional ou a todos os projetos da sua organização.  A maneira como você associa um recurso depende das necessidades da sua organização.
+
+
+TIP: Os agentes também podem ser associados a mais de um projeto. <<associate-agents,Saiba mais sobre o uso de agentes com o IAM>> .
+
+
+
+==== Quando associar um recurso a uma pasta
+
+Você também tem a opção de associar um recurso a uma pasta, mas isso é opcional e atende às necessidades de um caso de uso específico.
+
+Um _Administrador da organização_ pode associar um recurso a uma pasta para que um _Administrador de pasta ou projeto_ possa vinculá-lo aos projetos apropriados na pasta.
+
+Por exemplo, digamos que você tenha uma pasta que contém dois projetos:
+
+image:diagram-iam-resource-association-folder-1.png["Um diagrama que mostra uma pasta e dois projetos que residem na pasta: projeto A e projeto B."]
+
+O _Administrador da organização_ pode associar um recurso à pasta:
+
+image:diagram-iam-resource-association-folder-2.png["Um diagrama que mostra uma pasta, um recurso associado à pasta e dois projetos que residem na pasta: projeto A e projeto B."]
+
+Associar um recurso a uma pasta não o torna acessível a todos os projetos; somente o _administrador da pasta ou do projeto_ pode vê-lo.  O _administrador de pasta ou projeto_ decide quais projetos podem acessá-lo e associa o recurso aos projetos apropriados.
+
+Neste exemplo, o administrador associa o recurso ao Projeto A:
+
+image:diagram-iam-resource-association-folder-3.png["Um diagrama que mostra uma pasta, dois projetos que residem na pasta: projeto A e projeto B, e um recurso associado ao projeto A."]
+
+Membros que têm permissões para o projeto A agora podem acessar o recurso.
+
+
+
+=== Membros
+
+Os membros da sua organização são contas de usuário ou contas de serviço.  Uma conta de serviço normalmente é usada por um aplicativo para concluir tarefas específicas sem intervenção humana.
+
+Cada organização inclui pelo menos um usuário com a função _Administrador da organização_ (o Console atribui automaticamente essa função ao usuário que cria a organização).  Você pode adicionar outros membros à organização e atribuir permissões diferentes em diferentes níveis da hierarquia de recursos.
+
+
+
+=== Funções e permissões
+
+Você não concede permissões diretamente aos membros da organização.  Em vez disso, você concede a cada membro uma função.  Uma função contém um conjunto de permissões que permite que um membro execute ações específicas em um nível específico da hierarquia de recursos.
+
+Conceder funções em um nível de hierarquia restringe o acesso aos recursos e serviços de que um membro precisa.
+
+
+
+==== Onde você pode atribuir funções na hierarquia
+
+Ao associar um membro a uma função, você precisa selecionar toda a organização, uma pasta específica ou um projeto específico.  A função selecionada concede ao membro permissões para os recursos na parte selecionada da hierarquia.
+
+
+
+==== Herança de função
+
+Quando você atribui uma função, ela é herdada na hierarquia da organização:
+
+Organização:: Conceder a um membro uma função de acesso no nível da organização dá a ele permissões para todas as pastas, projetos e recursos.
+Pastas:: Quando você concede uma função de acesso no nível da pasta, todas as pastas, projetos e recursos na pasta herdam essa função.
++
+--
+Por exemplo, se você atribuir uma função no nível da pasta e essa pasta tiver três projetos, o membro terá permissões para esses três projetos e quaisquer recursos associados.
+
+--
+Projetos:: Quando você concede uma função de acesso no nível do projeto, todos os recursos associados a esse projeto herdam essa função.
+
+
+
+
+==== Múltiplas funções
+
+Você pode atribuir a cada membro da organização uma função em diferentes níveis da hierarquia da organização.  Pode ser a mesma função ou uma função diferente.  Por exemplo, você pode atribuir uma função de membro A para o projeto 1 e o projeto 2.  Ou você pode atribuir uma função de membro A para o projeto 1 e uma função B para o projeto 2.
+
+
+
+==== Funções de acesso
+
+O Console fornece funções de acesso que você pode atribuir aos membros da sua organização.
+
+link:reference-iam-predefined-roles.html["Saiba mais sobre funções de acesso"] .
+
+
+
+=== Agentes de console
+
+Quando um _Administrador da organização_ cria um agente do Console, o Console associa automaticamente esse agente à organização e ao projeto selecionado no momento.  O _Administrador da organização_ tem acesso automático a esse agente de qualquer lugar da organização.  Mas se você tiver outros membros na sua organização com funções diferentes, esses membros só poderão acessar esse agente a partir do projeto no qual ele foi criado, a menos que você associe esse agente a outros projetos.
+
+Você disponibiliza um agente do Console para outro projeto nestes casos:
+
+* Você deseja permitir que os membros da sua organização usem um agente existente para criar ou descobrir sistemas adicionais em outro projeto
+* Você associou um recurso existente a outro projeto e esse recurso é gerenciado por um agente do Console
++
+Se um recurso que você associa a um projeto adicional for descoberto usando um agente do Console, você também precisará associar o agente ao projeto ao qual o recurso está associado. Caso contrário, o agente e seu recurso associado não poderão ser acessados na página *Sistemas* por membros que não tenham a função _Administrador da organização_.
+
+
+
+Você pode criar uma associação na página *Agentes* no Console IAM:
+
+* Associar um agente do Console a um projeto
++
+Quando você associa um agente do Console a um projeto, esse agente fica acessível na página *Sistemas* ao visualizar o projeto.
+
+* Associar um agente do Console a uma pasta
++
+Associar um agente do Console a uma pasta não torna esse agente automaticamente acessível a todos os projetos na pasta.  Os membros da organização não podem acessar um agente do Console de um projeto até que você associe o agente a esse projeto específico.
+
++
+Um _administrador da organização_ pode associar um agente do Console a uma pasta para que o _administrador da pasta ou do projeto_ possa tomar a decisão de associar esse agente aos projetos apropriados que residem na pasta.
+
+
+
+
+
+== Exemplos de IAM
+
+Esses exemplos demonstram como você pode configurar sua organização.
+
+
+
+=== Organização simples
+
+O diagrama a seguir mostra um exemplo simples de uma organização que usa o projeto padrão e nenhuma pasta.  Um único membro gerencia toda a organização.
+
+image:diagram-iam-example-hierarchy-simple.png["Um diagrama conceitual que mostra uma organização com um projeto, recursos associados e um administrador da organização."]
+
+
+
+=== Organização avançada
+
+O diagrama a seguir mostra uma organização que usa pastas para organizar os projetos de cada localização geográfica da empresa.  Cada projeto tem seu próprio conjunto de recursos associados.  Os membros incluem um administrador da organização e um administrador para cada pasta na organização.
+
+image:diagram-iam-example-hierarchy-advanced.png["Um diagrama conceitual que mostra uma organização com três pastas, cada uma com três projetos e seus recursos associados.  Há quatro membros: um administrador da organização e três administradores de pasta."]
+
+
+
+== O que você pode fazer com o IAM
+
+Os exemplos a seguir descrevem como você pode usar o IAM para gerenciar sua organização do Console:
+
+* Atribua funções específicas a membros específicos para que eles possam concluir apenas as tarefas necessárias.
+* Modifique as permissões dos membros porque eles mudaram de departamento ou porque têm responsabilidades adicionais.
+* Remover um usuário que saiu da empresa.
+* Adicione pastas ou projetos à sua hierarquia porque uma nova unidade de negócios adicionou armazenamento NetApp .
+* Associe um recurso a outro projeto porque esse recurso tem capacidade que outra equipe pode utilizar.
+* Veja os recursos que um membro pode acessar.
+* Veja os membros e recursos associados a um projeto específico.
+
+
+
+
+== Para onde ir a seguir
+
+* link:task-iam-get-started.html["Introdução ao IAM no NetApp Console"]
+* link:task-iam-manage-folders-projects.html["Organize seus recursos no NetApp Console com pastas e projetos"]
+* link:task-iam-manage-members-permissions.html["Gerenciar membros do NetApp Console e suas permissões"]
+* link:task-iam-manage-resources.html["Gerencie a hierarquia de recursos na sua organização do NetApp Console"]
+* link:task-iam-associate-connectors.html["Associar agentes a pastas e projetos"]
+* link:task-iam-switch-organizations-projects.html["Alternar entre projetos e organizações do NetApp Console"]
+* link:task-iam-rename-organization.html["Renomeie sua organização do NetApp Console"]
+* link:task-iam-audit-actions-timeline.html["Monitorar ou auditar a atividade do IAM"]
+* link:reference-iam-predefined-roles.html["Funções de acesso ao NetApp Console"]
+* https://docs.netapp.com/us-en/bluexp-automation/tenancyv4/overview.html["Saiba mais sobre a API para NetApp Console IAM"^]
+

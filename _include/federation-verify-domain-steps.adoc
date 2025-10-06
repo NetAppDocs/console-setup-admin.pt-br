@@ -1,0 +1,13 @@
+= 
+:allow-uri-read: 
+
+
+. Insira os detalhes do seu domínio:
++
+.. Escolha se deseja usar um domínio verificado ou seu domínio de e-mail.  O domínio de e-mail é o domínio associado à conta com a qual você está conectado.
+.. Digite o nome da federação que você está configurando.
+.. Se você escolher um domínio verificado, selecione o domínio na lista.
+
+
+. Selecione *Avançar*.
+

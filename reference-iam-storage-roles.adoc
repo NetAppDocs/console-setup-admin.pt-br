@@ -1,0 +1,282 @@
+---
+sidebar: sidebar 
+permalink: reference-iam-storage-roles.html 
+keywords: predefined roles, iam roles, organization admin, folder or project admin, identity and access management, access roles, admin 
+summary: Você pode atribuir as seguintes funções aos usuários para fornecer a eles acesso aos recursos de gerenciamento de armazenamento no NetApp Console.  Você pode atribuir aos usuários uma função administrativa para gerenciar o armazenamento ou uma função de visualizador para monitoramento. 
+---
+= Funções de acesso de armazenamento para o NetApp Console
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Você pode atribuir as seguintes funções aos usuários para fornecer a eles acesso aos recursos de gerenciamento de armazenamento no NetApp Console.  Você pode atribuir aos usuários uma função administrativa para gerenciar o armazenamento ou uma função de visualizador para monitoramento.
+
+
+NOTE: Essas funções não estão disponíveis na API de parceria do NetApp Console.
+
+Os administradores podem atribuir funções de armazenamento aos usuários para os seguintes recursos e funcionalidades de armazenamento:
+
+Recursos de armazenamento:
+
+* Clusters ONTAP locais
+* StorageGRID
+* Série E
+
+
+Serviços e recursos do console:
+
+* Consultor digital
+* Atualizações de software
+* Planejamento do ciclo de vida
+* Sustentabilidade
+
+
+.Exemplo de funções de armazenamento no NetApp Console
+A XYZ Corporation, uma empresa multinacional, tem uma grande equipe de engenheiros e administradores de armazenamento.  Eles permitem que essa equipe gerencie ativos de armazenamento para suas regiões, ao mesmo tempo em que limitam o acesso às principais tarefas do Console, como gerenciamento de usuários, criação de agentes e gerenciamento de licenças.
+
+Em uma equipe de 12 pessoas, dois usuários recebem a função *Visualizador de armazenamento*, que lhes permite monitorar os recursos de armazenamento associados aos projetos do Console aos quais estão atribuídos.  Os nove restantes recebem a função de *Administrador de armazenamento*, que inclui a capacidade de gerenciar atualizações de software, acessar o ONTAP System Manager por meio do Console, bem como descobrir recursos de armazenamento (adicionar sistemas).  Uma pessoa na equipe recebe a função de *Especialista em integridade do sistema* para que possa gerenciar a integridade dos recursos de armazenamento em sua região, mas não modificar ou excluir nenhum sistema.  Essa pessoa também pode executar atualizações de software nos recursos de armazenamento para projetos aos quais ela foi atribuída.
+
+A organização tem dois usuários adicionais com a função *Administrador da organização* que podem gerenciar todos os aspectos do Console, incluindo gerenciamento de usuários, criação de agentes e gerenciamento de licenças, bem como vários usuários com a função *Administrador de pasta ou projeto* que podem executar tarefas de administração do Console para as pastas e projetos aos quais estão atribuídos.
+
+A tabela a seguir mostra as ações que cada função de armazenamento executa.
+
+[cols="40,20a,20a,20a"]
+|===
+| Recurso e ação | Administrador de armazenamento | Especialista em saúde do sistema | Visualizador de armazenamento 
+
+
+4+| *Gerenciamento de Armazenamento*: 
+
+
+| Descubra novos recursos (crie sistemas)  a| 
+Sim
+ a| 
+Sim
+ a| 
+Não
+
+
+
+| Ver sistemas descobertos  a| 
+Sim
+ a| 
+Sim
+ a| 
+Não
+
+
+
+| Excluir sistemas do Console  a| 
+Sim
+ a| 
+Não
+ a| 
+Não
+
+
+
+| Modificar sistemas  a| 
+Sim
+ a| 
+Não
+ a| 
+Não
+
+
+
+| *Criar agentes*  a| 
+Não
+ a| 
+Não
+ a| 
+Não
+
+
+
+4+| *Consultor digital* 
+
+
+| Ver todas as páginas e funções  a| 
+Sim
+ a| 
+Sim
+ a| 
+Sim
+
+
+
+4+| *Licenças e assinaturas* 
+
+
+| Ver todas as páginas e funções  a| 
+Não
+ a| 
+Não
+ a| 
+Não
+
+
+
+4+| *Atualizações de software* 
+
+
+| Ver página de destino e recomendações  a| 
+Sim
+ a| 
+Sim
+ a| 
+Sim
+
+
+
+| Revise as recomendações de versões potenciais e os principais benefícios  a| 
+Sim
+ a| 
+Sim
+ a| 
+Sim
+
+
+
+| Exibir detalhes de atualização para um cluster  a| 
+Sim
+ a| 
+Sim
+ a| 
+Sim
+
+
+
+| Execute verificações de pré-atualização e baixe o plano de atualização  a| 
+Sim
+ a| 
+Sim
+ a| 
+Sim
+
+
+
+| Instalar atualizações de software  a| 
+Sim
+ a| 
+Sim
+ a| 
+Não
+
+
+
+4+| *Planejamento do ciclo de vida* 
+
+
+| Revisar status de planejamento de capacidade  a| 
+Sim
+ a| 
+Sim
+ a| 
+Sim
+
+
+
+| Escolha a próxima ação (melhor prática, nível)  a| 
+Sim
+ a| 
+Não
+ a| 
+Não
+
+
+
+| Coloque dados frios em camadas no armazenamento em nuvem e libere espaço de armazenamento  a| 
+Sim
+ a| 
+Sim
+ a| 
+Não
+
+
+
+| Configurar lembretes  a| 
+Sim
+ a| 
+Sim
+ a| 
+Sim
+
+
+
+4+| *Sustentabilidade* 
+
+
+| Ver painel e recomendações  a| 
+Sim
+ a| 
+Sim
+ a| 
+Sim
+
+
+
+| Baixar dados do relatório  a| 
+Sim
+ a| 
+Sim
+ a| 
+Sim
+
+
+
+| Editar porcentagem de mitigação de carbono  a| 
+Sim
+ a| 
+Sim
+ a| 
+Não
+
+
+
+| Recomendações de correção  a| 
+Sim
+ a| 
+Sim
+ a| 
+Não
+
+
+
+| Adiar recomendações  a| 
+Sim
+ a| 
+Sim
+ a| 
+Não
+
+
+
+4+| *Acesso do gerente do sistema* 
+
+
+| Pode inserir credenciais  a| 
+Sim
+ a| 
+Sim
+ a| 
+Não
+
+
+
+4+| *Credenciais* 
+
+
+| Credenciais do usuário  a| 
+Sim
+ a| 
+Sim
+ a| 
+Não
+
+|===

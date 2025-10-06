@@ -1,0 +1,42 @@
+= 
+:allow-uri-read: 
+
+
+.Passos
+. Vá para o https://aws.amazon.com/marketplace/pp/prodview-jbay5iyfmu6ui["Listagem do agente do NetApp Console no AWS Marketplace"^]
+. Na página Marketplace, selecione *Continuar assinando*.
+. Para assinar o software, selecione *Aceitar Termos*.
++
+O processo de assinatura pode levar alguns minutos.
+
+. Após a conclusão do processo de assinatura, selecione *Continuar para configuração*.
+. Na página *Configurar este software*, certifique-se de ter selecionado a região correta e selecione *Continuar para iniciar*.
+. Na página *Iniciar este software*, em *Escolher ação*, selecione *Iniciar pelo EC2* e depois selecione *Iniciar*.
++
+Use o Console do EC2 para iniciar a instância e anexar uma função do IAM.  Isso não é possível com a ação *Iniciar do site*.
+
+. Siga as instruções para configurar e implantar a instância:
++
+** *Nome e tags*: Insira um nome e tags para a instância.
+** *Imagens de aplicativos e sistemas operacionais*: pule esta seção.  O agente do console AMI já está selecionado.
+** *Tipo de instância*: Dependendo da disponibilidade da região, escolha um tipo de instância que atenda aos requisitos de RAM e CPU (t3.2xlarge é pré-selecionado e recomendado).
+** *Par de chaves (login)*: Selecione o par de chaves que você deseja usar para se conectar com segurança à instância.
+** *Configurações de rede*: edite as configurações de rede conforme necessário:
++
+*** Escolha a VPC e a sub-rede desejadas.
+*** Especifique se a instância deve ter um endereço IP público.
+*** Especifique as configurações do grupo de segurança que habilitam os métodos de conexão necessários para a instância do agente do Console: SSH, HTTP e HTTPS.
++
+link:reference-ports-aws.html["Exibir regras de grupo de segurança para AWS"] .
+
+
+
+** *Configurar armazenamento*: Mantenha o tamanho e o tipo de disco padrão para o volume raiz.
++
+Se você quiser habilitar a criptografia do Amazon EBS no volume raiz, selecione *Avançado*, expanda *Volume 1*, selecione *Criptografado* e escolha uma chave KMS.
+
+** *Detalhes avançados*: Em *Perfil de instância do IAM*, escolha a função do IAM que inclui as permissões necessárias para o agente do Console.
+** *Resumo*: Revise o resumo e selecione *Iniciar instância*.
+
+
+

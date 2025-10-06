@@ -1,0 +1,111 @@
+---
+sidebar: sidebar 
+permalink: task-adding-gcp-accounts.html 
+keywords: permissions, gcp, marketplace, gcp subscription, subscription, gcp marketplace, subscribe, data tiering, tiering, setup, requirements, account for data tiering, account for tiering, interoperable, interoperability, interoperable storage access keys, access keys, bluexp 
+summary: Você pode gerenciar as credenciais do Google Cloud associadas à instância da VM do agente do Console associando uma assinatura do marketplace e solucionando problemas do processo de assinatura.  Ambas as tarefas garantem que você possa usar sua assinatura do marketplace para pagar por serviços de dados. 
+---
+= Gerenciar credenciais e assinaturas do Google Cloud para o NetApp Console
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Você pode gerenciar as credenciais do Google Cloud associadas a uma instância de VM do agente do Console associando uma assinatura do marketplace e solucionando problemas no processo de assinatura.  Ambas as tarefas garantem que você possa usar sua assinatura do marketplace para pagar por serviços de dados.
+
+
+
+== Associar uma assinatura do Marketplace às credenciais do Google Cloud
+
+Quando você implanta um agente do Console no Google Cloud, o Console cria um conjunto padrão de credenciais associadas a uma instância de VM do agente do Console.  A qualquer momento, você pode alterar a assinatura do Google Cloud Marketplace associada a essas credenciais.  A assinatura permite que você crie um sistema Cloud Volumes ONTAP com pagamento conforme o uso e use outros serviços de dados.
+
+Substituir a assinatura atual do marketplace por uma nova assinatura altera a assinatura do marketplace para todos os sistemas Cloud Volumes ONTAP existentes e todos os novos sistemas.
+
+.Passos
+. Selecione *Administração > *Credenciais*.
+. Selecione *Credenciais da organização*.
+. Selecione o menu de ação para um conjunto de credenciais associadas a um agente do Console e selecione *Configurar assinatura*.  +nova captura de tela necessária (TS)image:screenshot_gcp_add_subscription.png["Uma captura de tela do menu de ações para um conjunto de credenciais existentes."]
+. Para configurar uma assinatura existente com as credenciais selecionadas, selecione um projeto e uma assinatura do Google Cloud na lista suspensa e selecione *Configurar*.
++
+image:screenshot_gcp_associate.gif["Uma captura de tela de um projeto e assinatura do Google Cloud selecionados para credenciais do Google Cloud."]
+
+. Se você ainda não tiver uma assinatura, selecione *Adicionar assinatura > Continuar* e siga as etapas no Google Cloud Marketplace.
++
+
+NOTE: Antes de concluir as etapas a seguir, verifique se você tem privilégios de administrador de cobrança na sua conta do Google Cloud, bem como um login no console do NetApp .
+
++
+.. Depois de ser redirecionado para o https://console.cloud.google.com/marketplace/product/netapp-cloudmanager/cloud-manager["Página do NetApp Intelligent Services no Google Cloud Marketplace"^] , certifique-se de que o projeto correto esteja selecionado no menu de navegação superior.
++
+image:screenshot_gcp_cvo_marketplace.png["Uma captura de tela da página do marketplace Cloud Volumes ONTAP no Google Cloud."]
+
+.. Selecione *Inscrever-se*.
+.. Selecione a conta de cobrança apropriada e concorde com os termos e condições.
+.. Selecione *Inscrever-se*.
++
+Esta etapa envia sua solicitação de transferência para a NetApp.
+
+.. Na caixa de diálogo pop-up, selecione *Registrar-se na NetApp, Inc.*
++
+Esta etapa deve ser concluída para vincular a assinatura do Google Cloud à sua organização ou conta do Console.  O processo de vinculação de uma assinatura não estará concluído até que você seja redirecionado desta página e faça login no Console.
+
++
+image:screenshot_gcp_marketplace_register.png["Uma captura de tela de um pop-up de registro."]
+
+.. Conclua as etapas na página *Atribuição de assinatura*:
++
+
+NOTE: Se alguém da sua organização já tiver uma assinatura de mercado da sua conta de cobrança, você será redirecionado para https://bluexp.netapp.com/ontap-cloud?x-gcp-marketplace-token=["a página Cloud Volumes ONTAP no NetApp Console"^] em vez de.  Se isso for inesperado, entre em contato com sua equipe de vendas da NetApp .  O Google permite apenas uma assinatura por conta de cobrança do Google.
+
++
+*** Selecione as organizações ou contas do Console às quais você gostaria de associar esta assinatura.
+*** No campo *Substituir assinatura existente*, escolha se deseja substituir automaticamente a assinatura existente de uma organização ou conta por esta nova assinatura.
++
+O Console substitui a assinatura existente para todas as credenciais na organização ou conta por esta nova assinatura.  Se um conjunto de credenciais nunca foi associado a uma assinatura, essa nova assinatura não será associada a essas credenciais.
+
++
+Para todas as outras organizações ou contas, você precisará associar manualmente a assinatura repetindo essas etapas.
+
+*** Selecione *Salvar*.
++
+O vídeo a seguir mostra as etapas para assinar o Google Cloud Marketplace:
+
++
+.Assine no Google Cloud Marketplace
+video::373b96de-3691-4d84-b3f3-b05101161638[panopto]
+
+
+.. Quando esse processo estiver concluído, volte para a página Credenciais no Console e selecione esta nova assinatura.
++
+image:screenshot_gcp_associate.gif["Uma captura de tela da página de atribuição de assinatura."]
+
+
+
+
+
+
+
+== Solucionar problemas do processo de assinatura do Marketplace
+
+Às vezes, a assinatura de serviços de dados da NetApp por meio do Google Cloud Marketplace pode ficar fragmentada devido a permissões incorretas ou ao não seguir acidentalmente o redirecionamento para o Console.  Se isso acontecer, siga as etapas a seguir para concluir o processo de assinatura.
+
+.Passos
+. Navegue até o https://console.cloud.google.com/marketplace/product/netapp-cloudmanager/cloud-manager["Página da NetApp no ​​Google Cloud Marketplace"^] para verificar o estado do pedido.  Se a página indicar *Gerenciar no Provedor*, role para baixo e selecione *Gerenciar Pedidos*.
++
+image:screenshot_gcp_manage_orders.png["Uma captura de tela da página do marketplace após a assinatura."]
+
++
+** Se o pedido mostrar uma marca de seleção verde e isso for inesperado, outra pessoa da organização que usa a mesma conta de cobrança pode já estar inscrita.  Se isso for inesperado ou se você precisar dos detalhes desta assinatura, entre em contato com sua equipe de vendas da NetApp .
++
+image:screenshot_gcp_green_marketplace.png["Uma captura de tela de um direito aceito."]
+
+** Se o pedido mostrar um relógio e o status *Pendente*, volte para a página do marketplace e escolha *Gerenciar no Provedor* para concluir o processo conforme documentado acima.
++
+image:screenshot_gcp_pending_marketplace.png["Uma captura de tela de um direito de mercado pendente."]
+
+
+
+

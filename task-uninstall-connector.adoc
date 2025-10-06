@@ -1,0 +1,54 @@
+---
+sidebar: sidebar 
+permalink: task-uninstall-connector.html 
+keywords: uninstall, remove connector, uninstall connector, uninstall agent, remove agent 
+summary: Desinstale o agente do Console para solucionar problemas ou removê-lo permanentemente do host.  As etapas que você precisa usar dependem do modo de implantação que você está usando.  Depois de remover um agente do Console do seu ambiente, você pode removê-lo do Console. 
+---
+= Desinstalar e remover um agente do Console
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Desinstale o agente do Console para solucionar problemas ou removê-lo permanentemente do host.  As etapas que você precisa usar dependem do modo de implantação que você está usando.  Depois de remover um agente do Console do seu ambiente, você pode removê-lo do Console.
+
+link:concept-modes.html["Saiba mais sobre os modos de implantação do NetApp Console"] .
+
+
+
+== Desinstale o agente ao usar o modo padrão ou restrito
+
+Se você estiver usando o modo padrão ou o modo restrito (em outras palavras, o host do agente tem conectividade de saída), siga as etapas abaixo para desinstalar o agente.
+
+.Passos
+. Conecte-se à VM Linux para o agente.
+. No host Linux, execute o script de desinstalação:
++
+`/opt/application/netapp/service-manager-2/uninstall.sh [silent]`
+
++
+_silent_ executa o script sem solicitar sua confirmação.
+
+
+
+
+
+== Remover agentes do Console do Console
+
+Se um agente do Console estiver inativo, você poderá removê-lo da lista de agentes.  Você pode fazer isso se excluir a máquina virtual do agente ou se desinstalar o software do agente.
+
+Observe o seguinte sobre a remoção de um agente do Console:
+
+* Esta ação não exclui a máquina virtual.
+* Esta ação não pode ser revertida: depois de remover um agente do Console, você não poderá adicioná-lo novamente.
+
+
+.Passos
+. Selecione *Administração > Agentes*.
+. Na página *Visão geral*, selecione o menu de ação para um agente inativo e selecione *Remover agente*.
+. Digite o nome do agente para confirmar e selecione *Remover*.
+

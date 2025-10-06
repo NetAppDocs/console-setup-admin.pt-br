@@ -1,0 +1,165 @@
+---
+sidebar: sidebar 
+permalink: task-iam-manage-folders-projects.html 
+keywords: folders, projects, resource hierarchy, create folders, create projects, iam, identity and access management, project id 
+summary: no NetApp Console, use o gerenciamento de identidade e acesso para representar uma hierarquia completa de recursos usando pastas e projetos. 
+---
+= Organize seus recursos do NetApp Console com pastas e projetos
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+No NetApp Console, você organiza seus recursos do NetApp usando projetos e pastas.  Um _projeto_ representa um espaço de trabalho no Console que os membros da organização acessam para gerenciar _recursos_ (por exemplo, um sistema Cloud Volumes ONTAP ).  Uma _pasta_ agrupa projetos relacionados.  Depois de organizar seus recursos em pastas e projetos, você pode conceder acesso granular aos recursos fornecendo aos membros da organização permissões para pastas e projetos específicos.
+
+
+
+== Adicionar uma pasta ou projeto
+
+Quando você cria sua organização, ela inclui um único projeto.  Adicione projetos para gerenciar recursos e pastas para agrupar projetos relacionados.
+
+A hierarquia de recursos da sua organização pode ter até sete níveis, com pastas aninhadas em seis níveis de profundidade e projetos no sétimo.
+
+.Passos
+. Selecione *Administração > Identidade e acesso*.
+. Selecione *Organização*.
+. Na página *Organização*, selecione *Adicionar pasta ou projeto*.
+. Selecione *Pasta* ou *Projeto*.
+. Forneça detalhes sobre a pasta ou projeto:
++
+** *Nome e local*: Insira um nome e escolha um local na hierarquia para a pasta ou projeto.  Uma pasta ou projeto pode estar diretamente abaixo da organização ou dentro de uma pasta.
+** *Recursos*: Selecione os recursos que você deseja associar a esta pasta ou projeto.
++
+Você pode selecionar recursos associados à pasta pai ou ao projeto.
+
++
+link:concept-identity-and-access-management.html#associate-resource-folder["Aprenda quando associar um recurso a uma pasta"] .
+
+** *Acesso*: visualize os membros que terão acesso à pasta ou projeto com base nas permissões existentes já definidas na sua hierarquia de recursos.
++
+Selecione *Adicionar um membro* para atribuir acesso e uma função a membros adicionais. Uma função define as permissões que os membros têm para a pasta ou projeto.
+
++
+link:reference-iam-predefined-roles.html["Saiba mais sobre funções de acesso"] .
+
+
+
+. Selecione *Adicionar*.
+
+
+
+
+== Renomear uma pasta ou projeto
+
+Se necessário, você pode alterar o nome de suas pastas e projetos.
+
+.Passos
+. Na página *Organização*, navegue até um projeto ou pasta na tabela, selecioneimage:icon-action.png["Um ícone com três pontos"] e então selecione *Editar pasta* ou *Editar projeto*.
+. Na página *Editar*, insira um novo nome e selecione *Aplicar*.
+
+
+
+
+== Excluir uma pasta ou projeto
+
+Exclua pastas e projetos que você não precisa mais.
+
+.Antes de começar
+* Certifique-se de que a pasta ou projeto não tenha recursos associados. <<modify-resources,Aprenda a desassociar recursos>> .
+* Certifique-se de que a pasta ou projeto não tenha recursos associados.
+
+
+.Passos
+. Na página *Organização*, navegue até um projeto ou pasta na tabela, selecioneimage:icon-action.png["Um ícone com três pontos"] e então selecione *Excluir*.
+. Confirme que deseja excluir a pasta ou o projeto.
+
+
+
+
+== Visualizar os recursos associados a uma pasta ou projeto
+
+Veja quais recursos e membros estão associados a uma pasta ou projeto.
+
+.Passos
+. Na página *Organização*, navegue até um projeto ou pasta na tabela, selecioneimage:icon-action.png["Um ícone que tem três pontos lado a lado"] e então selecione *Editar pasta* ou *Editar projeto*.
++
+image:screenshot-iam-edit-project.png["Uma captura de tela da página Organização que mostra a opção Editar projeto ao selecionar o menu de ação para um projeto na tabela."]
+
+. Na página *Editar*, você pode visualizar detalhes sobre a pasta ou projeto selecionado expandindo as seções *Recursos* ou *Acesso*.
++
+** Selecione *Recursos* para visualizar os recursos associados.  Na tabela, a coluna *Status* identifica os recursos associados à pasta ou ao projeto.
++
+image:screenshot-iam-allocated-resources.png["Uma captura de tela da página Editar projeto que mostra os recursos disponíveis que você pode associar ou desassociar do projeto."]
+
+
+
+
+
+
+
+== Modificar os recursos associados a uma pasta ou projeto
+
+Membros com permissões para uma pasta ou projeto podem acessar seus recursos associados.
+
+.Antes de começar
+link:concept-identity-and-access-management.html#associate-resource-folder["Aprenda quando associar um recurso a uma pasta"] .
+
+.Passos
+. Na página *Organização*, navegue até um projeto ou pasta na tabela, selecioneimage:icon-action.png["Um ícone que tem três pontos lado a lado"] e então selecione *Editar pasta* ou *Editar projeto*.
+. Na página *Editar*, selecione *Recursos*.
++
+Na tabela, a coluna *Status* identifica os recursos associados à pasta ou ao projeto.
+
+. Selecione os recursos que você gostaria de associar ou desassociar.
+. Dependendo dos recursos selecionados, selecione *Associar ao projeto* ou *Desassociar do projeto*.
++
+image:screenshot-iam-associate-resources.png["Uma captura de tela da página Editar projeto que mostra a opção Associar recursos que fica disponível depois que você seleciona recursos que não estão associados no momento."]
+
+. Selecione *Aplicar*
+
+
+
+
+== Ver membros associados a uma pasta ou projeto
+
+* Selecione *Acesso* para visualizar os membros que têm acesso à pasta ou ao projeto.
++
+image:screenshot-iam-member-access.png["Uma captura de tela da página Editar projeto que mostra os membros que têm acesso ao projeto."]
+
+
+
+
+
+== Modificar o acesso de membros a uma pasta ou projeto
+
+Modifique o acesso dos membros para garantir que os membros certos possam acessar os recursos associados.
+
+O acesso de membro fornecido em um nível hierárquico mais alto não pode ser alterado em níveis mais baixos.  Atualize as permissões dos membros no nível hierárquico superior para alterar o acesso.  Alternativamente, você podelink:task-iam-manage-roles.html#manage-permissions["gerenciar permissões na página de membros"] .
+
+link:concept-identity-and-access-management.html#role-inheritance["Saiba mais sobre herança de funções"] .
+
+.Passos
+. Na página *Organização*, navegue até um projeto ou pasta na tabela, selecioneimage:icon-action.png["Um ícone que tem três pontos lado a lado"] e então selecione *Editar pasta* ou *Editar projeto*.
+. Na página *Editar*, selecione *Acesso* para visualizar a lista de membros que têm acesso à pasta ou projeto selecionado.
+. Modificar acesso de membro:
++
+** *Adicionar um membro*: Selecione o membro que você gostaria de adicionar à pasta ou projeto e atribua uma função a ele.
+** *Alterar a função de um membro*: Para qualquer membro com uma função diferente de Administrador da Organização, selecione a função existente e escolha uma nova função.
+** *Remover acesso de membro*: Para membros que têm uma função definida na pasta ou projeto que você está visualizando, você pode remover o acesso deles.
+
+
+. Selecione *Aplicar*.
+
+
+
+
+== Informações relacionadas
+
+* link:concept-identity-and-access-management.html["Saiba mais sobre identidade e acesso no NetApp Console"]
+* link:task-iam-get-started.html["Comece com identidade e acesso"]
+* https://docs.netapp.com/us-en/bluexp-automation/tenancyv4/overview.html["Saiba mais sobre a API de identidade e acesso"]
+

@@ -1,0 +1,86 @@
+---
+sidebar: sidebar 
+permalink: reference-ports-azure.html 
+keywords: ports, security group, http, https, inbound, outbound 
+summary: O grupo de segurança do Azure para o agente requer regras de entrada e saída.  O NetApp Console cria automaticamente esse grupo de segurança quando você cria um agente do Console a partir do Console. Para outras opções de instalação, você precisa configurar esse grupo de segurança manualmente. 
+---
+= Regras de grupo de segurança do agente de console no Azure
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+O grupo de segurança do Azure para o agente requer regras de entrada e saída.  O NetApp Console cria automaticamente esse grupo de segurança quando você cria um agente do Console a partir do Console. Para outras opções de instalação, você precisa configurar esse grupo de segurança manualmente.
+
+
+
+== Regras de entrada
+
+[cols="3*"]
+|===
+| Protocolo | Porta | Propósito 
+
+
+| SSH | 22 | Fornece acesso SSH ao host do agente 
+
+
+| HTTP | 80  a| 
+* Fornece acesso HTTP dos navegadores da web do cliente para a interface do usuário local
+* Usado durante o processo de atualização do Cloud Volumes ONTAP
+
+
+
+
+| HTTPS | 443 | Fornece acesso HTTPS dos navegadores da Web do cliente à interface do usuário local e conexões da instância de classificação de dados do NetApp 
+
+
+| TCP | 3128 | Fornece ao Cloud Volumes ONTAP acesso à Internet para enviar mensagens do AutoSupport ao Suporte da NetApp .  Você deve abrir esta porta manualmente após a implantação. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-verify-autosupport.html["Aprenda como o agente é usado como proxy para mensagens do AutoSupport"^] 
+|===
+
+
+== Regras de saída
+
+O grupo de segurança predefinido para o agente abre todo o tráfego de saída.  Se isso for aceitável, siga as regras básicas de saída.  Se precisar de regras mais rígidas, use as regras de saída avançadas.
+
+
+
+=== Regras básicas de saída
+
+O grupo de segurança predefinido para o agente inclui as seguintes regras de saída.
+
+[cols="3*"]
+|===
+| Protocolo | Porta | Propósito 
+
+
+| Todos TCP | Todos | Todo o tráfego de saída 
+
+
+| Todos os UDP | Todos | Todo o tráfego de saída 
+|===
+
+
+=== Regras avançadas de saída
+
+Se precisar de regras rígidas para o tráfego de saída, você pode usar as seguintes informações para abrir apenas as portas necessárias para a comunicação de saída pelo agente.
+
+
+NOTE: O endereço IP de origem é o host do agente.
+
+[cols="5*"]
+|===
+| Serviço | Protocolo | Porta | Destino | Propósito 
+
+
+| Chamadas de API e AutoSupport | HTTPS | 443 | Gerenciamento de cluster de Internet de saída e ONTAP LIF | Chamadas de API para o Azure, para o ONTAP, para a Classificação de Dados do NetApp e envio de mensagens de AutoSupport para o NetApp 
+
+
+| Chamadas de API | TCP | 8080 | Classificação de Dados | Sondar a instância de classificação de dados durante a implantação 
+
+
+| DNS | UDP | 53 | DNS | Usado para resolução de DNS pelo Console 
+|===

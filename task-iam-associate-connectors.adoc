@@ -1,0 +1,51 @@
+---
+sidebar: sidebar 
+permalink: task-iam-associate-connectors.html 
+keywords: agent, associate agent, folder, project, associate folder with connector, associate project with connector, associate connector with project, associate connector with resource, connector, associate connector, 
+summary: Se os membros da sua organização precisarem usar um agente do Console em outro projeto, você precisará associar esse agente do Console ao respectivo projeto. 
+---
+= Associar um agente do Console a outras pastas e projetos
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Quando um _Administrador da organização_ cria um agente do Console, o agente do Console é automaticamente associado ao projeto selecionado na organização.  Embora alguém com a função _Administrador da organização_ possa acessar esse agente do Console de qualquer lugar da organização.  Outros membros da sua organização só podem acessar esse agente do Console a partir do projeto no qual ele foi criado, a menos que você associe esse agente do Console a outros projetos.
+
+.Antes de começar
+Revise como funciona a associação do agente do Console. link:concept-identity-and-access-management.html#associate-agents["Saiba mais sobre como usar o agente do Console com Identidade e Acesso"] .
+
+.Sobre esta tarefa
+Um _administrador de pasta ou projeto_ pode visualizar todos os agentes do Console na página *Agente*, mas só pode associar agentes do Console a pastas e projetos para os quais ele tem permissão. link:reference-iam-predefined-roles.html["Saiba mais sobre as ações que um _administrador de pasta ou projeto_ pode concluir"] .
+
+.Passos
+. Selecione *Administração > Identidade e acesso* > *Agentes*.
+. Na tabela, encontre o agente do Console que você deseja associar.
++
+Use a pesquisa acima da tabela para encontrar um agente específico do Console ou filtre a tabela por hierarquia de recursos.
+
+. Para visualizar as pastas e projetos vinculados ao agente do Console, selecioneimage:icon-action.png["Ícone de três pontos"] e então selecione *Ver detalhes*.
++
+A página exibe detalhes sobre as pastas e projetos associados ao agente do Console.
+
+. Selecione *Associar à pasta ou projeto*.
+. Selecione uma pasta ou projeto e então selecione *Aceitar*.
+. Para associar o agente do Console a uma pasta ou projeto adicional, selecione *Adicionar uma pasta ou projeto* e, em seguida, selecione a pasta ou projeto.
+. Selecione *Agente Associado*.
+
+
+.Depois que você terminar
+Associe os recursos do agente do Console às mesmas pastas e projetos da página *Recursos*.
+
+link:task-iam-manage-resources.html#associate-resource["Aprenda a associar um recurso a pastas e projetos"] .
+
+.Informações relacionadas
+* link:concept-connectors.html["Saiba mais sobre os agentes do NetApp Console"]
+* link:concept-identity-and-access-management.html["Saiba mais sobre o gerenciamento de identidade e acesso do NetApp Console"]
+* link:task-iam-get-started.html["Comece com identidade e acesso"]
+* https://docs.netapp.com/us-en/bluexp-automation/tenancyv4/overview.html["Saiba mais sobre a API para gerenciamento de identidade e acesso"^]
+

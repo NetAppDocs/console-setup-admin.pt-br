@@ -1,0 +1,33 @@
+---
+sidebar: sidebar 
+permalink: task-federation-verify-domain.html 
+keywords: federation, active directory federation services, adfs, ad fs, single sign-on, microsoft, federate, federated connection, SSO, identity federation, identity management, corporate identity 
+summary: Você só pode usar domínios verificados para federação. Se quiser federar com um domínio diferente do seu domínio de e-mail, primeiro você deve verificar se é o proprietário do domínio.  Você só pode usar domínios verificados para federação. 
+---
+= Verifique o domínio de e-mail para sua conexão federada
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Se você quiser federar com um domínio diferente do seu domínio de e-mail, primeiro você deve verificar se é o proprietário do domínio.  Você só pode usar domínios verificados para federação.
+
+.Funções necessárias
+A função de administrador da Federação é necessária para criar e gerenciar federações.  O visualizador da Federação pode visualizar a página da Federação.link:reference-iam-predefined-roles.html["Saiba mais sobre funções de acesso."]
+
+Verificar seu domínio envolve adicionar um registro TXT às configurações de DNS do seu domínio.  Este registro é usado para provar que você é o proprietário do domínio e permite que o NetApp Console confie no domínio para federação.  Talvez seja necessário coordenar com seu administrador de TI ou de rede para concluir esta etapa.
+
+.Passos
+. Selecione *Administração > Identidade e acesso*.
+. Selecione *Federação* para visualizar a página *Federações*.
+. Selecione *Configurar nova federação*.
+. Selecione *Verificar propriedade do domínio*.
+. Digite o domínio que você deseja verificar e selecione *Continuar*.
+. Copie o registro TXT fornecido.
+. Acesse as configurações de DNS do seu domínio e configure o valor TXT que foi fornecido como um registro TXT para seu domínio.  Trabalhe com seu administrador de TI ou de rede, se necessário.
+. Após o registro TXT ser adicionado, retorne ao Console e selecione *Verificar*.
+

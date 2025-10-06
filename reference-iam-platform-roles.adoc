@@ -1,0 +1,173 @@
+---
+sidebar: sidebar 
+permalink: reference-iam-platform-roles.html 
+keywords: predefined roles, iam roles, organization admin, folder or project admin, classification viewer, snapcenter admin, role, iam role, admin, iam, identity and access management, bluexp 
+summary: Atribua funções de plataforma aos usuários para conceder permissões para gerenciar o NetApp Console, atribuir funções, adicionar usuários, criar agentes do Console e gerenciar federações. 
+---
+= Funções de acesso à plataforma do NetApp Console
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Atribua funções de plataforma aos usuários para conceder permissões para gerenciar o NetApp Console, atribuir funções, adicionar usuários, criar agentes do Console e gerenciar federações.
+
+.Exemplo de funções organizacionais para uma grande organização multinacional
+A XYZ Corporation organiza o acesso ao armazenamento de dados por região — América do Norte, Europa e Ásia-Pacífico — fornecendo controle regional com supervisão centralizada.
+
+O *administrador da organização* no Console da XYZ Corporation cria uma organização inicial e pastas separadas para cada região. O *administrador de pasta ou projeto* de cada região organiza projetos (com recursos associados) dentro da pasta da região.
+
+Administradores regionais com a função *Administrador de pasta ou projeto* gerenciam ativamente suas pastas adicionando recursos e usuários. Esses administradores regionais também podem adicionar, remover ou renomear pastas e projetos que gerenciam. O *administrador da organização* herda permissões para quaisquer novos recursos, mantendo a visibilidade do uso do armazenamento em toda a organização.
+
+Dentro da mesma organização, um usuário recebe a função *Administrador da federação* para gerenciar a federação da organização com seu IdP corporativo. Este usuário pode adicionar ou remover organizações federadas, mas não pode gerenciar usuários ou recursos dentro da organização. O *Administrador da organização* atribui a um usuário a função *Visualizador da federação* para verificar o status da federação e visualizar organizações federadas.
+
+As tabelas a seguir indicam as ações que cada função da plataforma Console pode executar.
+
+
+
+== Funções de administração da organização
+
+[cols="2,1,1"]
+|===
+| Tarefa | Administrador da organização | Administrador de pasta ou projeto 
+
+
+| Criar agentes | Sim | Não 
+
+
+| Criar, modificar ou excluir sistemas do Console (adicionar ou descobrir sistemas) | Sim | Sim 
+
+
+| Crie pastas e projetos, incluindo exclusão | Sim | Não 
+
+
+| Renomear pastas e projetos existentes | Sim | Sim 
+
+
+| Atribuir funções e adicionar usuários | Sim | Sim 
+
+
+| Associar recursos a pastas e projetos | Sim | Sim 
+
+
+| Associar agentes a pastas e projetos | Sim | Não 
+
+
+| Remover agentes de pastas e projetos | Sim | Não 
+
+
+| Gerenciar agentes (editar certificados, configurações e assim por diante) | Sim | Não 
+
+
+| Gerenciar credenciais em Administração > Credenciais | Sim | Sim 
+
+
+| Criar, gerenciar e visualizar federações | Sim | Não 
+
+
+| Registre-se para obter suporte e envie casos por meio do Console | Sim | Sim 
+
+
+| Use serviços de dados que não estejam associados a uma função de acesso explícita | Sim | Sim 
+
+
+| Ver a página de auditoria e notificações | Sim | Sim 
+|===
+
+
+== Funções da Federação
+
+[cols="2,1,1"]
+|===
+| Tarefa | Administrador da Federação | Visualizador da Federação 
+
+
+| Criar uma federação | Sim | Não 
+
+
+| Verificar um domínio | Sim | Não 
+
+
+| Adicionar um domínio a uma federação | Sim | Não 
+
+
+| Desabilitar e excluir federações | Sim | Não 
+
+
+| Federações de teste | Sim | Não 
+
+
+| Ver federações e seus detalhes | Sim | Sim 
+|===
+
+
+== Funções de parceria
+
+[cols="2,1,1"]
+|===
+| Tarefa | Administrador de parceria | Visualizador de parceria 
+
+
+| Pode criar uma parceria | Sim | Não 
+
+
+| Atribuir funções aos membros parceiros | Sim | Não 
+
+
+| Pode adicionar membros a uma parceria | Sim | Não 
+
+
+| Pode visualizar detalhes da parceria da organização | Sim | Sim 
+|===
+
+
+== Funções de superadministrador e visualizador
+
+A função *Superadministrador* fornece acesso total para gerenciar recursos do Console, armazenamento e serviços de dados.  Essa função é adequada para aqueles que supervisionam a administração e a governança.  Em contraste, a função *Super visualizador* oferece acesso somente leitura, ideal para auditores ou partes interessadas que precisam de visibilidade sem fazer alterações.
+
+As organizações devem usar o acesso de *Superadministrador* com moderação para minimizar os riscos de segurança e se alinhar ao princípio do menor privilégio.  A maioria das organizações deve atribuir funções refinadas com apenas as permissões necessárias para reduzir riscos e melhorar a capacidade de auditoria.
+
+.Exemplo para super funções
+A ABC Corporation tem uma pequena equipe de cinco pessoas que utiliza o NetApp Console para serviços de dados e gerenciamento de armazenamento.  Em vez de distribuir várias funções, eles atribuem a função de *Superadministrador* a dois membros seniores da equipe que lidam com todas as tarefas administrativas, incluindo gerenciamento de usuários e configuração de recursos.  Os três membros restantes da equipe recebem a função de *Supervisualizador*, o que lhes permite monitorar a integridade do armazenamento e o status do serviço de dados sem a capacidade de modificar as configurações.
+
+[cols="2,1"]
+|===
+| Papel | Funções herdadas 
+
+
+ a| 
+Superadministrador
+ a| 
+* Administrador da organização
+* Administrador de pasta ou projeto
+* Administrador da Federação
+* Administrador de parceria
+* Administrador de resiliência de ransomware
+* Administrador de recuperação de desastres
+* Superadministrador de backup
+* Administrador de armazenamento
+* Administrador Keystone
+* Administrador do Google Cloud NetApp Volumes
+
+
+
+
+ a| 
+Super visualizador
+ a| 
+* Visualizador de organização
+* Visualizador da Federação
+* Visualizador de parceria
+* Visualizador de resiliência de ransomware
+* Visualizador de recuperação de desastres
+* Visualizador de backup
+* Visualizador de armazenamento
+* Visualizador Keystone
+* Visualizador de Google Cloud NetApp Volumes
+
+
+|===

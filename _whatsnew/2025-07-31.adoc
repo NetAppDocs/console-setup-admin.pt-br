@@ -1,0 +1,31 @@
+= Lançamento do modo privado (3.9.54)
+:allow-uri-read: 
+
+
+
+
+=== Lançamento do modo privado (3.9.54)
+
+Uma nova versão do modo privado já está disponível para download no https://mysupport.netapp.com/site/downloads["Site de suporte da NetApp"^]
+
+A versão 3.9.54 inclui atualizações para os seguintes componentes e serviços do BlueXP .
+
+[cols="3*"]
+|===
+| Componente ou serviço | Versão incluída nesta versão | Mudanças desde o lançamento anterior do modo privado 
+
+
+| Conector | 3.9.54, 3.9.53 | Vá para o https://docs.netapp.com/us-en/bluexp-setup-admin/whats-new.html#connector-3-9-50["o que há de novo na página BlueXP"^] e consulte as alterações incluídas nas versões 3.9.54 e 3.9.53. 
+
+
+| Backup e recuperação | 28 de julho de 2025 | Vá para o https://docs.netapp.com/us-en/bluexp-backup-recovery/whats-new.html["o que há de novo na página de BlueXP backup and recovery"^] e consulte as alterações incluídas no comunicado de julho de 2025. 
+
+
+| Classificação | 14 de julho de 2025 (versão 1.45) | Vá para o https://docs.netapp.com/us-en/bluexp-classification/whats-new.html["o que há de novo na página de BlueXP classification"^] . 
+|===
+Para mais detalhes sobre o modo privado, incluindo como atualizar, consulte o seguinte:
+
+* https://docs.netapp.com/us-en/bluexp-setup-admin/concept-modes.html["Saiba mais sobre o modo privado"]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-private-mode.html["Aprenda como começar a usar o BlueXP no modo privado"]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/task-upgrade-connector.html["Aprenda como atualizar o Conector ao usar o modo privado"]
+

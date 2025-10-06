@@ -1,0 +1,97 @@
+---
+sidebar: sidebar 
+permalink: task-require-imdsv2.html 
+keywords: managing connectors, uninstall connector, switch connectors, switch between connectors, local interface, local connector, local cloud manager, local ui, go to local ui 
+summary: O NetApp Console oferece suporte ao IMDSv2 com o agente do Console e com o Cloud Volumes ONTAP.  Na maioria dos casos, o IMDSv2 é configurado automaticamente em novas instâncias do EC2.  O IMDSv1 foi habilitado antes de março de 2024.  Se exigido por suas políticas de segurança, talvez seja necessário configurar manualmente o IMDSv2 em suas instâncias do EC2. 
+---
+= Exigir o uso do IMDSv2 em instâncias do Amazon EC2
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+O NetApp Console oferece suporte ao Amazon EC2 Instance Metadata Service Versão 2 (IMDSv2) com o agente do Console e com o Cloud Volumes ONTAP (incluindo o mediador para implantações de HA).  Na maioria dos casos, o IMDSv2 é configurado automaticamente em novas instâncias do EC2.  O IMDSv1 foi habilitado antes de março de 2024.  Se exigido por suas políticas de segurança, talvez seja necessário configurar manualmente o IMDSv2 em suas instâncias do EC2.
+
+.Antes de começar
+* A versão do agente do Console deve ser 3.9.38 ou posterior.
+* O Cloud Volumes ONTAP deve estar executando uma das seguintes versões:
++
+** 9.12.1 P2 (ou qualquer patch subsequente)
+** 9.13.0 P4 (ou qualquer patch subsequente)
+** 9.13.1 ou qualquer versão posterior a este lançamento
+
+
+* Essa alteração exige que você reinicie as instâncias do Cloud Volumes ONTAP .
+* Essas etapas exigem o uso da AWS CLI porque você deve alterar o limite de salto de resposta para 3.
+
+
+.Sobre esta tarefa
+O IMDSv2 oferece proteção aprimorada contra vulnerabilidades. https://aws.amazon.com/blogs/security/defense-in-depth-open-firewalls-reverse-proxies-ssrf-vulnerabilities-ec2-instance-metadata-service/["Saiba mais sobre o IMDSv2 no blog de segurança da AWS"^]
+
+O Serviço de Metadados de Instância (IMDS) é habilitado da seguinte maneira em instâncias do EC2:
+
+* Para novas implantações de agentes do Console a partir do Console ou usando https://docs.netapp.com/us-en/bluexp-automation/automate/overview.html["Scripts do Terraform"^] O IMDSv2 é habilitado por padrão na instância do EC2.
+* Se você iniciar uma nova instância do EC2 na AWS e depois instalar manualmente o software do agente do Console, o IMDSv2 também será habilitado por padrão.
+* Se você iniciar o agente do Console no AWS Marketplace, o IMDSv1 será habilitado por padrão.  Você pode configurar manualmente o IMDSv2 na instância do EC2.
+* Para agentes de console existentes, o IMDSv1 ainda é suportado, mas você pode configurar manualmente o IMDSv2 na instância do EC2, se preferir.
+* Para o Cloud Volumes ONTAP, o IMDSv1 é habilitado por padrão em instâncias novas e existentes.  Você pode configurar manualmente o IMDSv2 nas instâncias do EC2, se preferir.
+
+
+.Passos
+. Exigir o uso do IMDSv2 na instância do agente do Console:
++
+.. Conecte-se à VM Linux para o agente do Console.
++
+Ao criar a instância do agente do Console na AWS, você forneceu uma chave de acesso e uma chave secreta da AWS.  Você pode usar esse par de chaves para fazer SSH na instância.  O nome de usuário para a instância do EC2 Linux é ubuntu (para agentes do Console criados antes de maio de 2023, o nome de usuário era ec2-user).
+
++
+https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AccessingInstances.html["Documentação da AWS: Conecte-se à sua instância do Linux"^]
+
+.. Instale a AWS CLI.
++
+https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html["Documentação da AWS: instalar ou atualizar para a versão mais recente da AWS CLI"^]
+
+.. Use o `aws ec2 modify-instance-metadata-options` comando para exigir o uso do IMDSv2 e alterar o limite de salto de resposta PUT para 3.
++
+*Exemplo*
+
++
+[source, awscli]
+----
+aws ec2 modify-instance-metadata-options \
+    --instance-id <instance-id> \
+    --http-put-response-hop-limit 3 \
+    --http-tokens required \
+    --http-endpoint enabled
+----
+
+
++
+
+NOTE: O `http-tokens` conjuntos de parâmetros IMDSv2 como obrigatórios.  Quando `http-tokens` é necessário, você também deve definir `http-endpoint` para habilitado.
+
+. Exigir o uso do IMDSv2 em instâncias do Cloud Volumes ONTAP :
++
+.. Vá para o https://console.aws.amazon.com/ec2/["Console Amazon EC2"^]
+.. No painel de navegação, selecione *Instâncias*.
+.. Selecione uma instância do Cloud Volumes ONTAP .
+.. Selecione *Ações > Configurações da instância > Modificar opções de metadados da instância*.
+.. Na caixa de diálogo *Modificar opções de metadados da instância*, selecione o seguinte:
++
+*** Para *Serviço de metadados de instância*, selecione *Ativar*.
+*** Para *IMDSv2*, selecione *Obrigatório*.
+*** Selecione *Salvar*.
+
+
+.. Repita essas etapas para outras instâncias do Cloud Volumes ONTAP , incluindo o mediador HA.
+.. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-managing-state.html["Pare e inicie as instâncias do Cloud Volumes ONTAP"^]
+
+
+
+
+.Resultado
+A instância do agente do Console e as instâncias do Cloud Volumes ONTAP agora estão configuradas para usar o IMDSv2.

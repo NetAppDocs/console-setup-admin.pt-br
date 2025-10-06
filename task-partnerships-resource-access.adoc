@@ -1,0 +1,103 @@
+---
+sidebar: sidebar 
+permalink: task-partnerships-resource-access.html 
+keywords: role-based access, partnership access, partner resources, resource access, grant acces, provide partner access, partnership organization 
+summary: Você pode conceder acesso a usuários de parceria atribuindo a eles funções específicas para pastas e projetos dentro da sua organização. 
+---
+= Fornecer acesso a recursos para usuários de parceria
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Você pode conceder acesso a usuários de parceria atribuindo a eles funções específicas para pastas e projetos dentro da sua organização.
+
+.Funções necessárias
+Administração de parcerias.link:reference-iam-predefined-roles.html["Saiba mais sobre funções de acesso."]
+
+Uma organização parceira deve primeiro adicionar membros à parceria antes que você possa atribuir a eles funções para recursos em sua organização.link:task-partnerships-assign-users.html["Aprenda como adicionar membros a uma parceria."]
+
+
+
+== Entenda as funções dos usuários da parceria
+
+Você pode gerenciar funções para membros de organizações parceiras da mesma forma que faz para as suas.  No entanto, nem todas as funções estão disponíveis para usuários de parceria.  Em particular, você não pode conceder aos usuários parceiros uma função que permita atualizações de software.  A atualização do software ONTAP geralmente requer acesso direto à rede.
+
+Você pode atribuir as seguintes funções aos usuários parceiros:
+
+* link:reference-iam-platform-roles.html#organization-admin-roles["Administrador da organização"]
+* link:reference-iam-platform-roles.html#organization-admin-roles["Administrador de pasta ou projeto"]
+* link:reference-iam-platform-roles.html#federation-roles["Administrador da Federação"]
+* link:reference-iam-platform-roles.html#federation-roles["Visualizador da Federação"]
+* link:reference-iam-backup-rec-roles.html["Administrador de backup e recuperação"]
+* link:reference-iam-backup-rec-roles.html["Visualizador de backup"]
+* link:reference-iam-backup-rec-roles.html["Restaurar administrador"]
+* link:reference-iam-backup-rec-roles.html["Clonar administrador"]
+* link:reference-iam-disaster-rec-roles.html["Administrador de recuperação de desastres"]
+* link:reference-iam-disaster-rec-roles.html["Administrador de failover de recuperação de desastres"]
+* link:reference-iam-disaster-rec-roles.html["Administrador do aplicativo de recuperação de desastres"]
+* link:reference-iam-disaster-rec-roles.html["Visualizador de recuperação de desastres"]
+* link:reference-iam-storage-roles.html["Analista de suporte de operações"]
+* link:reference-iam-predefined-roles.html["Visualizador de classificação"]
+
+
+link:reference-iam-predefined-roles.html["Saiba mais sobre funções predefinidas"]
+
+
+
+== Adicionar uma função a um usuário parceiro
+
+Você fornece acesso aos recursos da sua organização adicionando uma função a um membro.  Ao atribuir uma função, você especifica um recurso e uma função.  Você pode atribuir mais de uma função a um usuário.
+
+Por exemplo, se você tivesse dois projetos e quisesse que o mesmo usuário tivesse a função de administrador de backup e recuperação para ambos, seria necessário fornecer a função ao usuário para cada projeto.  Da mesma forma, se você quisesse fornecer a um usuário duas funções diferentes para o mesmo projeto, seria necessário atribuir cada função separadamente.
+
+.Passos
+. Selecione *Administração > Identidade e acesso*.
+. Selecione *Parcerias*.
+. Selecione a aba *Parceria iniciada*.
+. Selecione o menu de açõesimage:icon-action.png["um ícone com três pontos verticais"] ao lado da parceria estabelecida que você deseja visualizar e selecione *Ver detalhes*.
++
+A lista *Membros* exibe os membros que a organização parceira adicionou à parceria.
+
+. Selecione o menu de açõesimage:icon-action.png["um ícone com três pontos verticais"] ao lado do membro ao qual você deseja atribuir uma função e selecione *Adicionar uma função*.
+. Para adicionar uma função, conclua as etapas na caixa de diálogo:
++
+** *Selecione uma organização, pasta ou projeto*: Escolha o nível da hierarquia de recursos para o qual o membro deve ter permissões.
++
+Se você selecionar a organização ou uma pasta, o membro terá permissões para tudo o que reside na organização ou pasta.
+
+** *Selecione uma categoria*: Escolha uma categoria de função. link:reference-iam-predefined-roles.html["Saiba mais sobre funções de acesso"^] .
+** Selecione uma *Função*: Escolha uma função que forneça ao membro permissões para os recursos associados à organização, pasta ou projeto que você selecionou.
+** *Adicionar função*: se você quiser fornecer acesso a pastas ou projetos adicionais dentro da sua organização, selecione *Adicionar função*, especifique outra pasta, projeto ou categoria de função e, em seguida, selecione uma categoria de função e uma função correspondente.
+
+
+. Selecione *Adicionar novas funções*.
+
+
+
+
+== Alterar ou remover uma função de um usuário parceiro
+
+Você pode alterar ou remover uma função que atribuiu a um membro de uma organização parceira.
+
+.Passos
+. Selecione *Administração > Identidade e acesso*.
+. Selecione *Parcerias*.
+. Selecione a aba *Parceria iniciada*.
+. Selecione o menu de açõesimage:icon-action.png["um ícone com três pontos verticais"] ao lado da parceria estabelecida que você deseja visualizar e selecione *Ver detalhes*.
++
+A lista *Membros* exibe os membros que a organização parceira adicionou à parceria.
+
+. Na página *Membros*, navegue até um membro na tabela, selecioneimage:icon-action.png["Um ícone que tem três pontos lado a lado"] e então selecione *Ver detalhes*.
+. Na tabela, expanda a linha respectiva da organização, pasta ou projeto onde você deseja alterar a função atribuída ao membro e selecione *Exibir* na coluna *Função* para visualizar as funções atribuídas a este membro.
+. Você pode alterar uma função existente para um membro ou remover uma função.
++
+.. Para alterar a função de um membro, selecione *Alterar* ao lado da função que deseja alterar.  Você só pode alterar uma função para uma função dentro da mesma categoria de função.  Por exemplo, você pode mudar de uma função de serviço de dados para outra.  Confirme a alteração.
+.. Para cancelar a atribuição da função de um membro, selecioneimage:icon-delete.png["Um ícone que lembra uma lata de lixo"] ao lado da função para remover a atribuição da respectiva função ao membro.  Você será solicitado a confirmar a remoção.
+
+
+

@@ -1,0 +1,11 @@
+= 
+:allow-uri-read: 
+
+
+.Passos
+. Acesse o console do Amazon EC2.
+. Selecione *Instâncias*.
+. Selecione a instância do agente do Console.
+. Selecione *Ações > Segurança > Modificar função do IAM*.
+. Selecione a função do IAM e selecione *Atualizar função do IAM*.
+

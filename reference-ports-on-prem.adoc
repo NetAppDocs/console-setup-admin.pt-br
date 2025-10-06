@@ -1,0 +1,34 @@
+---
+sidebar: sidebar 
+permalink: reference-ports-on-prem.html 
+keywords: networking, network, requirements, ports, on-prem, linux, http, https, bluexp 
+summary: O agente do Console usa portas _de entrada_ quando instalado manualmente em um host Linux local.  Consulte essas portas para fins de planejamento. 
+---
+= Portas para o agente do Console local
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+O agente do Console usa portas _de entrada_ quando instalado manualmente em um host Linux local.  Consulte essas portas para fins de planejamento.
+
+Essas regras de entrada se aplicam a todos os modos de implantação do NetApp Console.
+
+[cols="10,10,80"]
+|===
+| Protocolo | Porta | Propósito 
+
+
+| HTTP | 80  a| 
+* Fornece acesso HTTP dos navegadores da web do cliente para a interface do usuário local
+* Usado durante o processo de atualização do Cloud Volumes ONTAP
+
+
+
+
+| HTTPS | 443 | Fornece acesso HTTPS dos navegadores da web do cliente para a interface do usuário local 
+|===

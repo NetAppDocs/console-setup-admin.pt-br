@@ -1,0 +1,98 @@
+---
+sidebar: sidebar 
+permalink: concept-federation.html 
+keywords: identity federation, single sign-on, SSO, identity provider, IdP, SAML, Microsoft Entra ID, AD FS, PingFederate, ACS URL, Entity ID, user access, security, productivity, compliance, authentication, business continuity, account management, user experience, access control, workflow automation, credential management, login process, organization admin, bluexp, BlueXP 
+summary: A federação de identidade permite o logon único com o NetApp Console para que os usuários possam efetuar login usando credenciais da sua identidade corporativa.  Para começar, revise o processo de configuração. 
+---
+= Habilitar logon único usando federação de identidade com o NetApp Console
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+O logon único (federação) simplifica o processo de login e aumenta a segurança, permitindo que os usuários façam login no NetApp Console usando suas credenciais corporativas.  Você pode habilitar o logon único (SSO) com seu provedor de identidade (IdP) ou com o site de suporte da NetApp .
+
+.Função necessária
+Administrador da organização, administrador da federação, visualizador da federação.link:reference-iam-predefined-roles.html["Saiba mais sobre funções de acesso."]
+
+
+
+== Federação de identidade com o site de suporte da NetApp
+
+A federação com o site de suporte da NetApp permite que os usuários façam login no Console, no Active IQ Digital Advisor e em outros aplicativos associados usando as mesmas credenciais.
+
+
+NOTE: Se você se federar com o Site de Suporte da NetApp , não poderá se federar também com seu provedor de gerenciamento de identidade corporativa.  Escolha o que funciona melhor para sua organização.
+
+.Passos
+. Baixe e complete o https://kb.netapp.com/@api/deki/files/98382/NetApp-B2C-Federation-Request-Form-April-2022.docx?revision=1["Formulário de solicitação de federação da NetApp"^] .
+. Envie o formulário para o endereço de e-mail especificado no formulário.
++
+A equipe de suporte da NetApp analisa e processa sua solicitação.
+
+
+
+
+
+== Configure uma conexão federada com seu provedor de identidade
+
+Você pode configurar uma conexão federada com seu provedor de identidade para habilitar o logon único (SSO) para o Console.  O processo envolve configurar seu provedor de identidade para confiar na NetApp como provedora de serviços e, em seguida, criar a conexão no Console.
+
+
+NOTE: Se você configurou a federação anteriormente usando o NetApp Cloud Central (um aplicativo externo ao Console), será necessário importar sua federação usando a página Federação para gerenciá-la no Console.link:task-federation-import.html["Aprenda como importar sua federação."]
+
+
+
+=== Provedores de identidade suportados
+
+A NetApp oferece suporte aos seguintes protocolos e provedores de identidade para federação:
+
+.Protocolos
+* Provedores de identidade de Linguagem de Marcação de Asserção de Segurança (SAML)
+* Serviços de Federação do Active Directory (AD FS)
+
+
+.Provedores de identidade
+* ID de entrada da Microsoft
+* PingFederate
+
+
+
+
+=== Federação com fluxo de trabalho do NetApp Console
+
+O NetApp oferece suporte somente a SSO iniciado pelo provedor de serviços (iniciado pelo SP).  Primeiro, você precisa configurar o provedor de identidade para confiar na NetApp como provedora de serviços.  Em seguida, você pode criar uma conexão no Console que usa a configuração do provedor de identidade.
+
+Você pode federar com seu domínio de e-mail ou com um domínio diferente que você possui.  Para federar com um domínio diferente do seu domínio de e-mail, primeiro verifique se você é o proprietário do domínio.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Um"]Verifique seu domínio (se não estiver usando seu domínio de e-mail)
+[role="quick-margin-para"]
+Para federar com um domínio diferente do seu domínio de e-mail, verifique se você é o proprietário dele. Você pode federar seu domínio de e-mail sem nenhuma etapa extra.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Dois"]Configure seu IdP para confiar na NetApp como um provedor de serviços
+[role="quick-margin-para"]
+Configure seu provedor de identidade para confiar no NetApp criando um novo aplicativo e fornecendo detalhes como URL do ACS, ID da entidade ou outras informações de credencial. As informações do provedor de serviços variam de acordo com o provedor de identidade, portanto, consulte a documentação do seu provedor de identidade específico para obter detalhes. Você precisará trabalhar com o administrador do seu IdP para concluir esta etapa.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Três"]Crie a conexão federada no Console
+[role="quick-margin-para"]
+Forneça o URL ou arquivo de metadados SAML do seu provedor de identidade para criar a conexão.  Essas informações são usadas para estabelecer a relação de confiança entre o Console e seu provedor de identidade. As informações fornecidas dependem do IdP que você está usando. Por exemplo, se estiver usando o Microsoft Entra ID, você precisará fornecer o ID do cliente, o segredo e o domínio.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Três"]Teste sua federação no Console
+[role="quick-margin-para"]
+Teste sua conexão federada antes de habilitá-la. Use a opção de teste na página Federação no Console para verificar se o usuário de teste pode ser autenticado com sucesso. Se o teste for bem-sucedido, você poderá habilitar a conexão.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["Três"]Habilite sua conexão no Console
+[role="quick-margin-para"]
+Depois de habilitar a conexão, os usuários podem efetuar login no Console usando suas credenciais corporativas.
+
+Revise o tópico do seu respectivo protocolo ou IdP para começar:
+
+* link:task-federation-adfs.html["Configurar uma conexão federada com o AD FS"]
+* link:task-federation-entra-id.html["Configurar uma conexão federada com o Microsoft Entra ID"]
+* link:task-federation-ping.html["Configurar uma conexão federada com PingFederate"]
+* link:task-federation-saml.html["Configurar uma conexão federada com um provedor de identidade SAML"]
+

@@ -1,0 +1,18 @@
+= 
+:allow-uri-read: 
+
+
+Se você selecionou a caixa de seleção *Validar configuração do agente* na página *Revisar*, o Console verificará a configuração do agente do Console após sua criação.  Se o Console não conseguir implantar o agente, ele fornecerá um relatório para download para ajudar você a solucionar o problema.
+
+
+NOTE: Se o Console implantar o agente com sucesso, ele não gerará um relatório e uma caixa de diálogo de confirmação será exibida, verificando uma implantação bem-sucedida.
+
+.Passos
+. Na caixa de diálogo *Falha na implantação do agente*, selecione *Baixar relatório* para baixar um arquivo PDF que contém o relatório de validação.
+. Como alternativa, você pode selecionar *Recomeçar* para retornar ao assistente *Implantar agente* e tentar novamente.
++
+Você deve reiniciar todo o processo se quiser tentar implantar o agente novamente.
+
+
+
+Acesse o relatório e os logs do host do agente do Console

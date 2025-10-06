@@ -1,0 +1,12 @@
+= 
+:allow-uri-read: 
+
+
+. Selecione *Avançar*.
+. Selecione *Testar conexão* para testar sua conexão.  Você será direcionado para uma página de login para seu servidor IdP.  Efetue login com suas credenciais do IdP para concluir o teste e retorne ao Console para habilitar a conexão.
+. Selecione *Avançar*.
+. Na página *Habilitar federação*, revise os detalhes da federação e selecione *Habilitar federação*.
+. Selecione *Concluir* para finalizar o processo.
+
+
+Depois de habilitar a federação, os usuários podem fazer login no NetApp Console usando suas credenciais corporativas.

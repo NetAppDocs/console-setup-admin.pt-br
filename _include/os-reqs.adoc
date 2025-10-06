@@ -1,0 +1,190 @@
+= 
+:allow-uri-read: 
+
+
+Host dedicado:: O agente do Console não é suportado em um host compartilhado com outros aplicativos. O host deve ser um host dedicado.  O host pode ter qualquer arquitetura que atenda aos seguintes requisitos de tamanho:
++
+--
+* CPU: 8 núcleos ou 8 vCPUs
+* RAM: 32 GB
+* Espaço em disco: 165 GB é recomendado para o host, com os seguintes requisitos de partição:
++
+** `/opt`: 120 GiB de espaço devem estar disponíveis
++
+O agente usa `/opt` para instalar o `/opt/application/netapp` diretório e seu conteúdo.
+
+** `/var`: 40 GiB de espaço devem estar disponíveis
++
+O agente do Console requer este espaço em `/var` porque o Docker ou o Podman são arquitetados para criar os contêineres dentro deste diretório.  Especificamente, eles criarão contêineres no `/var/lib/containers/storage` diretório.  Montagens externas ou links simbólicos não funcionam neste espaço.
+
+
+
+
+
+--
+
+
+* CPU: 8 núcleos ou 8 vCPUs
+* RAM: 32 GB
+* Espaço em disco: 165 GB (provisionamento denso)
+* vSphere 7.0 ou superior
+* Host ESXi 7.03 ou superior
+
+
+
+NOTE: O agente do Console reserva o intervalo de UID e GID de 19000 a 19200.  Este intervalo é fixo e não pode ser modificado.  Se algum software de terceiros no seu host estiver usando UIDs ou GIDs dentro desse intervalo, a instalação do agente falhará.  A NetApp recomenda usar um host livre de software de terceiros para evitar conflitos.
+
+Hipervisor:: É necessário um hipervisor bare metal ou hospedado certificado para executar um sistema operacional compatível.
+
+
+[[podman-versions]]Requisitos do sistema operacional e do contêiner:: O agente do Console é compatível com os seguintes sistemas operacionais ao usar o Console no modo padrão ou no modo restrito.  Uma ferramenta de orquestração de contêineres é necessária antes de instalar o agente.
++
+--
+[cols="2a,2a,2a,2a,2a"]
+|===
+| Sistema operacional | Versões de SO suportadas | Versões de agentes suportadas | Ferramenta de contêiner necessária | SELinux a 
+
+
+ a| 
+Red Hat Enterprise Linux
+ a| 
+9.1 a 9.4
+
+8,6 a 8,10
+
+* Somente versões em inglês.
+* O host deve ser registrado no Red Hat Subscription Management.  Se não estiver registrado, o host não poderá acessar os repositórios para atualizar o software de terceiros necessário durante a instalação do agente.
+
+ a| 
+3.9.50 ou posterior com o Console no modo padrão ou modo restrito
+ a| 
+Podman versão 4.6.1 ou 4.9.4
+
+<<podman-configuration,Ver requisitos de configuração do Podman>> .
+ a| 
+Suportado no modo de imposição ou no modo permissivo
+
+* O gerenciamento de sistemas Cloud Volumes ONTAP NÃO é suportado por agentes que tenham o SELinux habilitado no sistema operacional.
+
+
+
+
+ a| 
+Ubuntu
+ a| 
+24,04 LTS
+ a| 
+3.9.45 ou posterior com o NetApp Console no modo padrão ou restrito
+ a| 
+Docker Engine 23.06 para 28.0.0.
+ a| 
+Não suportado
+
+
+
+ a| 
+22,04 LTS
+ a| 
+3.9.50 ou posterior
+ a| 
+Docker Engine 23.0.6 para 28.0.0.
+ a| 
+Não suportado
+
+|===
+--
+
+
+[[podman-versions]]Requisitos do sistema operacional e do contêiner:: O agente do Console é compatível com os seguintes sistemas operacionais ao usar o Console no modo privado.  Uma ferramenta de orquestração de contêineres é necessária antes de instalar o agente.
++
+--
+[cols="2a,2a,2a,2a,2a"]
+|===
+| Sistema operacional | Versões de SO suportadas | Versões de agentes suportadas | Ferramenta de contêiner necessária | SELinux 
+
+
+ a| 
+Red Hat Enterprise Linux
+ a| 
+9.1 a 9.4
+
+8,6 a 8,10
+ a| 
+3.9.42 ou posterior com o Console em modo privado
+ a| 
+Podman versão 4.6.1 ou 4.9.4
+
+<<podman-configuration,Ver requisitos de configuração do Podman>> .
+ a| 
+Suportado no modo de imposição ou modo permissivo ^1^
+
+
+
+ a| 
+Ubuntu
+ a| 
+22,04 LTS
+ a| 
+3.9.29 ou posterior
+ a| 
+Docker Engine 23.0.6 a 26.0.0
+
+26.0.0 é compatível com _novos_ agentes 3.9.44 ou instalações posteriores
+ a| 
+Não suportado
+
+|===
+Observações:
+
+. O gerenciamento de sistemas Cloud Volumes ONTAP não é suportado por agentes que tenham o SELinux habilitado no sistema operacional.
+. O agente do Console é compatível com versões em inglês desses sistemas operacionais.
+. Para o RHEL, o host deve ser registrado no Red Hat Subscription Management.  Se não estiver registrado, o host não poderá acessar os repositórios para atualizar o software de terceiros necessário durante a instalação do agente.
+
+
+--
+
+
+CPU:: 8 núcleos ou 8 vCPUs
+BATER:: 32 GB
+
+
+Tipo de instância AWS EC2:: Um tipo de instância que atende aos requisitos de CPU e RAM acima.  Recomendamos t3.2xlarge.
+
+
+Par de chaves:: Ao criar o agente do Console, você precisará selecionar um par de chaves EC2 para usar com a instância.
+
+
+Limite de salto de resposta PUT ao usar IMDSv2:: Se o IMDSv2 estiver habilitado na instância EC2 (esta é a configuração padrão para novas instâncias EC2), você deverá alterar o limite de salto de resposta PUT na instância para 3.  Se você não alterar o limite na instância do EC2, receberá um erro de inicialização da interface do usuário ao tentar configurar o agente.
++
+--
+* link:task-require-imdsv2.html["Exigir o uso do IMDSv2 em instâncias do Amazon EC2"]
+* https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-IMDS-existing-instances.html#modify-PUT-response-hop-limit["Documentação da AWS: Alterar o limite de salto de resposta PUT"^]
+
+
+--
+
+
+Tamanho da VM do Azure:: Um tipo de instância que atende aos requisitos de CPU e RAM acima.  Recomendamos Standard_D8s_v3.
+
+
+Tipo de máquina do Google Cloud:: Um tipo de instância que atende aos requisitos de CPU e RAM acima.  Recomendamos n2-standard-8.
++
+--
+O agente do Console é compatível com o Google Cloud em uma instância de VM com um sistema operacional compatível https://cloud.google.com/compute/shielded-vm/docs/shielded-vm["Recursos de VM blindada"^]
+
+--
+
+
+Espaço em disco em /opt:: 100 GiB de espaço devem estar disponíveis
++
+--
+O agente usa `/opt` para instalar o `/opt/application/netapp` diretório e seu conteúdo.
+
+--
+Espaço em disco em /var:: 20 GiB de espaço devem estar disponíveis
++
+--
+O agente do Console requer este espaço em `/var` porque o Docker ou o Podman são arquitetados para criar os contêineres dentro deste diretório.  Especificamente, eles criarão contêineres no `/var/lib/containers/storage` diretório.  Montagens externas ou links simbólicos não funcionam neste espaço.
+
+--
+

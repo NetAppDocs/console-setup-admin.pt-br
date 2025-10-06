@@ -1,0 +1,8 @@
+= 
+:allow-uri-read: 
+
+
+* Uma conexão de rede com as redes onde você planeja criar e gerenciar sistemas
+* Acesso de saída à Internet para terminais específicos para operações do dia a dia
+* O endereço IP, as credenciais e o certificado HTTPS de um servidor proxy, se um servidor proxy for necessário para a Internet de saída
+

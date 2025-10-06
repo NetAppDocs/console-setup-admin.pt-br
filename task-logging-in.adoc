@@ -1,0 +1,76 @@
+---
+sidebar: sidebar 
+permalink: task-logging-in.html 
+keywords: logging in, log in, sign in, signing in, cloud central, netapp cloud central, user account, federated, federation, federated login, federation login, login with netapp, log in with netapp, sign up, create account 
+summary: A maneira como você faz login no NetApp Console depende do modo de implantação que você está usando. 
+---
+= Efetue login no console do NetApp
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+A maneira como você faz login no NetApp Console depende do modo de implantação que você está usando.
+
+Você será desconectado automaticamente após 24 horas ou se fechar o navegador.
+
+link:concept-modes.html["Saiba mais sobre os modos de implantação do Console"] .
+
+[role="tabbed-block"]
+====
+.Modo padrão
+--
+Depois de se inscrever no NetApp Console, você pode fazer login no console baseado na Web para começar a gerenciar seus dados e infraestrutura de armazenamento.
+
+.Sobre esta tarefa
+Você pode efetuar login no NetApp Console usando uma das seguintes opções:
+
+* Suas credenciais existentes do NetApp Support Site (NSS)
+* Uma conta do NetApp Console usando seu endereço de e-mail e uma senha
+* Uma conexão federada
++
+Você pode usar o logon único para efetuar login usando credenciais do seu diretório corporativo (identidade federada). link:concept-federation.html["Aprenda a configurar a federação de identidade"] .
+
+
+
+.Passos
+. Abra um navegador da web e vá para o https://console.netapp.com["Console NetApp"]
+. Na página *Login*, insira o endereço de e-mail associado ao seu login.
+. Dependendo do método de autenticação associado ao seu login, você será solicitado a inserir suas credenciais:
++
+** Credenciais da nuvem NetApp : insira sua senha
+** Usuário federado: insira suas credenciais de identidade federada
+** Conta do site de suporte da NetApp : insira suas credenciais do site de suporte da NetApp
+
+
+
+
+.Resultado
+Agora você está conectado e pode começar a usar para gerenciar sua infraestrutura de nuvem híbrida multinuvem.
+
+--
+.Modo restrito
+--
+Ao usar o Console no modo restrito, você precisa fazer login no Console a partir da interface do usuário executada localmente no agente.
+
+.Sobre esta tarefa
+O Console oferece suporte ao login com uma das seguintes opções quando estiver no modo restrito:
+
+* Um login do NetApp Console usando seu endereço de e-mail e uma senha
+* Uma conexão federada
++
+Você pode usar o logon único para efetuar login usando credenciais do seu diretório corporativo (identidade federada). link:concept-federation.html["Aprenda a usar a federação de identidade"] .
+
+
+
+.Passos
+. Abra um navegador da web e digite o endereço IP onde o agente está instalado.
+. Digite seu nome de usuário e senha para efetuar login.
+
+
+--
+====

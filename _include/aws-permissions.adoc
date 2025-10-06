@@ -1,0 +1,32 @@
+= 
+:allow-uri-read: 
+
+
+. Faça login no console da AWS e navegue até o serviço IAM.
+. Crie uma política:
++
+.. Selecione *Políticas > Criar política*.
+.. Selecione *JSON* e copie e cole o conteúdo dolink:reference-permissions-aws.html["Política do IAM para o agente do Console"] .
+.. Conclua as etapas restantes para criar a política.
+
+
+
+
+. Crie uma função do IAM:
++
+.. Selecione *Funções > Criar função*.
+.. Selecione *Serviço AWS > EC2*.
+.. Adicione permissões anexando a política que você acabou de criar.
+.. Conclua as etapas restantes para criar a função.
+
+
+
+
+. Anexe as políticas a um usuário do IAM.
++
+** https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create.html["Documentação da AWS: Criando funções do IAM"^]
+** https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_manage-attach-detach.html["Documentação da AWS: Adicionando e removendo políticas do IAM"^]
+
+
+. Certifique-se de que o usuário tenha uma chave de acesso que você possa adicionar ao NetApp Console após instalar o agente do Console.
+

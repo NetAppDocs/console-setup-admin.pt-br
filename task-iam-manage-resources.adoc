@@ -1,0 +1,114 @@
+---
+sidebar: sidebar 
+permalink: task-iam-manage-resources.html 
+keywords: resource, hierarchy, association, access, resource permissions, resource hierarchy, iam, identity and access management 
+summary: Gerencie a hierarquia de recursos da sua organização associando recursos a projetos e pastas específicos. 
+---
+= Gerencie a hierarquia de recursos na sua organização do NetApp Console
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Ao associar um membro à sua organização, você fornece permissões no nível da organização, pasta ou projeto.  Para garantir que esses membros tenham permissões para acessar os recursos corretos, você precisará gerenciar a hierarquia de recursos da sua organização associando recursos a projetos e pastas específicos.  Um _recurso_ é um sistema de armazenamento ou agente do Console que o Console já gerencia ou do qual tem conhecimento.
+
+
+
+== Visualize os recursos em sua organização
+
+Você pode visualizar recursos descobertos e não descobertos associados à sua organização. Recursos não descobertos são recursos de armazenamento identificados, mas ainda não adicionados ao Console.
+
+
+NOTE: OBSERVAÇÃO: a página Recursos exclui os recursos do Amazon FSx for NetApp ONTAP porque os usuários não podem associá-los a uma função.  Visualize-os na página Sistemas ou em Cargas de trabalho.
+
+.Passos
+. Selecione *Administração > Identidade e acesso*.
+. Selecione *Recursos*.
+. Selecione *Pesquisa e filtragem avançadas*.
+. Use qualquer uma das opções disponíveis para encontrar o recurso que você está procurando:
++
+** *Pesquisar por nome do recurso*: Insira uma sequência de texto e selecione *Adicionar*.
+** *Plataforma*: Selecione uma ou mais plataformas, como Amazon Web Services.
+** *Recursos*: Selecione um ou mais recursos, como Cloud Volumes ONTAP.
+** *Organização, pasta ou projeto*: Selecione a organização inteira, uma pasta específica ou um projeto específico.
+
+
+. Selecione *Pesquisar*.
+
+
+
+
+== Associar um recurso a pastas e projetos
+
+Associe um recurso a uma pasta ou projeto para torná-lo disponível.
+
+.Antes de começar
+Você deve entender como funciona a associação de recursos. link:concept-identity-and-access-management.html#resources["Aprenda sobre recursos, incluindo quando associar um recurso a uma pasta"] .
+
+.Passos
+. Na página *Recursos*, navegue até um recurso na tabela, selecioneimage:icon-action.png["Um ícone que tem três pontos lado a lado"] e então selecione *Associar a pastas ou projetos*.
+. Selecione uma pasta ou projeto e então selecione *Aceitar*.
+. Para associar uma pasta ou projeto adicional, selecione *Adicionar pasta ou projeto* e depois selecione a pasta ou projeto.
++
+Observe que você só pode selecionar pastas e projetos para os quais você tem permissões de administrador.
+
+. Selecione *Associar recursos*.
++
+** Se você associou o recurso a projetos, os membros que têm permissões para esses projetos agora poderão acessar o recurso no Console.
+** Se você associou o recurso a uma pasta, um _administrador de pasta ou projeto_ agora pode acessar o recurso e associá-lo a um projeto dentro da pasta. link:concept-identity-and-access-management.html#resources["Aprenda a associar um recurso a uma pasta"] .
+
+
+
+
+.Depois que você terminar
+Se você descobrir um recurso usando um agente do Console, associe o agente do Console ao projeto para conceder acesso.  Caso contrário, o agente do Console e seu recurso associado não poderão ser acessados por membros sem a função _Administrador da organização_.
+
+link:task-iam-associate-connectors.html["Aprenda como associar um agente do Console a uma pasta ou projeto"] .
+
+
+
+== Visualizar as pastas e projetos associados a um recurso
+
+Você pode visualizar as pastas e os projetos associados a um recurso específico.
+
+
+NOTE: Se você precisar descobrir quais membros da organização têm acesso ao recurso, você podelink:task-iam-manage-folders-projects.html#view-associated-resources-members["visualizar os membros que têm acesso às pastas e projetos associados ao recurso"] .
+
+.Passos
+. Na página *Recursos*, navegue até um recurso na tabela, selecioneimage:icon-action.png["Um ícone que tem três pontos lado a lado"] e então selecione *Ver detalhes*.
+
+
+O exemplo a seguir mostra um recurso associado a um projeto.
+
+image:screenshot-iam-resource-details.png["Uma captura de tela da página de detalhes do recurso que mostra um recurso associado a um projeto que está diretamente abaixo da organização."]
+
+
+NOTE: Se você precisar determinar quais membros da organização têm acesso ao recurso, você podelink:task-iam-manage-folders-projects.html#view-associated-resources-members["visualizar os membros que têm acesso às pastas e projetos associados ao recurso"] .
+
+
+
+== Remover um recurso de uma pasta ou projeto
+
+Para remover um recurso de uma pasta ou projeto, você precisa remover a associação entre a pasta ou projeto e o recurso. Quando você remove a associação, isso impede que os membros gerenciem o recurso na pasta ou no projeto.
+
+
+NOTE: Para remover um recurso descoberto de toda a organização, remova o sistema da página *Sistemas*.
+
+.Passos
+. Na página *Recursos*, navegue até um recurso na tabela, selecioneimage:icon-action.png["Um ícone que tem três pontos lado a lado"] e então selecione *Ver detalhes*.
+. Para a pasta ou projeto para o qual você deseja remover o recurso, selecioneimage:icon-delete.png["Um ícone de uma lata de lixo"]
+. Confirme que deseja remover a associação selecionando *Excluir*.
+
+
+
+
+== Informações relacionadas
+
+* link:concept-identity-and-access-management.html["Saiba mais sobre identidade e acesso no NetApp Console"]
+* link:task-iam-get-started.html["Comece a usar identidade e acesso no NetApp Console"]
+* https://docs.netapp.com/us-en/bluexp-automation/tenancyv4/overview.html["Saiba mais sobre a API para identidade e acesso"^]
+

@@ -1,0 +1,91 @@
+---
+sidebar: sidebar 
+permalink: task-iam-manage-roles.html 
+keywords: projects, access, resources, user roles, iam, identity and access management, folder, organization, permissions, roles, members, access roles 
+summary: No NetApp Console, você pode atribuir funções aos usuários com base no que eles precisam fazer e onde. 
+---
+= Use funções para gerenciar o acesso do usuário aos recursos do NetApp Console
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+No Console, você pode atribuir funções aos usuários com base no que eles precisam fazer e onde.
+
+Usuários com a função *Administrador da organização* ou *Administrador de pasta ou projeto* têm a responsabilidade de atribuir funções a outros usuários.  Você pode atribuir funções de acesso com base em um projeto ou pasta.  Por exemplo, você pode atribuir a um usuário a função de administrador de proteção contra ransomware para um projeto e a função de administrador do SnapCenter para um projeto diferente.  Como alternativa, se um usuário precisar da função de administrador de classificação para todos os projetos dentro de uma pasta específica, você poderá atribuir essa função a ele no nível da pasta.
+
+Use funções de acesso para atribuir acesso a recursos de armazenamento com base nas tarefas específicas que os usuários precisam executar.  Por exemplo, se um usuário precisar interagir com serviços de proteção contra ransomware, ele deverá receber uma função de acesso que inclua permissões de visualização ou administrativas para o serviço de proteção contra ransomware do projeto para o qual a função de acesso foi concedida.
+
+Atribua funções aos usuários com base na sua estratégia de IAM para maior segurança.  As funções do IAM garantem que os usuários tenham apenas o acesso necessário.
+
+
+NOTE: Lembre-se de que você não pode conceder acesso direto aos recursos.  Atribua recursos aos projetos primeiro.  Considere configurar sua hierarquia de recursos antes de atribuir acesso aos usuários.link:task-iam-manage-folders-projects.html["Aprenda a organizar seus recursos com pastas e projetos."]
+
+
+
+== Exibir funções atribuídas a um membro
+
+Ao adicionar um membro à sua organização, você será solicitado a atribuir uma função a ele.  Você pode permitir que os membros verifiquem quais funções estão atribuídas a eles no momento.
+
+Se você tiver a função de _Administrador de pasta ou projeto_, a página exibirá todos os membros da organização.  No entanto, você só pode visualizar e gerenciar permissões de membros para as pastas e projetos para os quais você tem permissões. link:reference-iam-predefined-roles.html["Saiba mais sobre as ações que um _administrador de pasta ou projeto_ pode concluir"] .
+
+. Na página *Membros*, navegue até um membro na tabela, selecioneimage:icon-action.png["Um ícone que tem três pontos lado a lado"] e então selecione *Ver detalhes*.
+. Na tabela, expanda a linha respectiva da organização, pasta ou projeto onde você deseja visualizar a função atribuída ao membro e selecione *Exibir* na coluna *Função*.
+
+
+
+
+== Adicionar uma função de acesso a um membro
+
+Normalmente, você atribui uma função ao adicionar um membro à sua organização, mas pode atualizá-la a qualquer momento removendo ou adicionando funções.
+
+Você pode atribuir a um usuário uma função de acesso para sua organização, pasta ou projeto.
+
+Os membros podem ter várias funções dentro do mesmo projeto e em projetos diferentes.  Por exemplo, organizações menores podem atribuir todas as funções de acesso disponíveis ao mesmo usuário, enquanto organizações maiores podem ter usuários executando tarefas mais especializadas.  Como alternativa, você também pode atribuir a um usuário a função de administrador de proteção contra ransomware para uma organização.  Nesse exemplo, o usuário seria capaz de executar tarefas de proteção contra ransomware em todos os projetos da sua organização.
+
+Sua estratégia de função de acesso deve estar alinhada à maneira como você organizou seus recursos do NetApp .
+
+
+TIP: Um membro que recebeu a função de administrador da organização não pode receber nenhuma função adicional.  Eles já têm permissões em toda a organização.  Um membro com a função de pasta ou projeto não pode receber nenhuma outra função dentro da pasta ou projeto em que já tenha essa função.  Ambas as funções fornecem acesso a todos os serviços dentro do escopo que lhes é atribuído.
+
+.Passos
+. Selecione *Administração > Identidade e acesso*.
+. Selecione o menu de açõesimage:icon-action.png["um ícone com três pontos verticais"] ao lado do membro ao qual você deseja atribuir uma função e selecione *Adicionar uma função*.
+. Para adicionar uma função, conclua as etapas na caixa de diálogo:
++
+** *Selecione uma organização, pasta ou projeto*: Escolha o nível da hierarquia de recursos para o qual o membro deve ter permissões.
++
+Se você selecionar a organização ou uma pasta, o membro terá permissões para tudo o que reside na organização ou pasta.
+
+** *Selecione uma categoria*: Escolha uma categoria de função. link:reference-iam-predefined-roles.html["Saiba mais sobre funções de acesso"^] .
+** Selecione uma *Função*: Escolha uma função que forneça ao membro permissões para os recursos associados à organização, pasta ou projeto que você selecionou.
+** *Adicionar função*: se você quiser fornecer acesso a pastas ou projetos adicionais dentro da sua organização, selecione *Adicionar função*, especifique outra pasta, projeto ou categoria de função e, em seguida, selecione uma categoria de função e uma função correspondente.
+
+
+. Selecione *Adicionar novas funções*.
+
+
+
+
+== Alterar a função atribuída a um membro
+
+Você pode alterar as funções atribuídas a um membro caso precise ajustar o acesso de um usuário.
+
+
+NOTE: Os usuários devem ter pelo menos uma função atribuída a eles.  Não é possível remover todas as funções de um usuário.  Se precisar remover todas as funções, você deverá excluir o usuário da sua organização.
+
+.Passos
+. Selecione *Administração > Identidade e acesso*.
+. Na página *Membros*, navegue até um membro na tabela, selecioneimage:icon-action.png["Um ícone que tem três pontos lado a lado"] e então selecione *Ver detalhes*.
+. Na tabela, expanda a linha respectiva da organização, pasta ou projeto onde você deseja alterar a função atribuída ao membro e selecione *Exibir* na coluna *Função* para visualizar as funções atribuídas a este membro.
+. Você pode alterar uma função existente para um membro ou remover uma função.
++
+.. Para alterar a função de um membro, selecione *Alterar* ao lado da função que deseja alterar.  Você só pode alterar uma função para uma função dentro da mesma categoria de função.  Por exemplo, você pode mudar de uma função de serviço de dados para outra.  Confirme a alteração.
+.. Para cancelar a atribuição da função de um membro, selecioneimage:icon-delete.png["Um ícone que lembra uma lata de lixo"] ao lado da função para remover a atribuição da respectiva função ao membro.  Você será solicitado a confirmar a remoção.
+
+
+

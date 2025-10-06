@@ -1,0 +1,810 @@
+---
+sidebar: sidebar 
+permalink: reference-permissions-azure.html 
+keywords: permissions, azure, azure permissions, bluexp 
+summary: Quando o NetApp Console inicia um agente de Console no Azure, ele anexa uma função personalizada à VM que fornece ao agente permissões para gerenciar recursos e processos dentro dessa assinatura do Azure.  O agente usa as permissões para fazer chamadas de API para vários serviços do Azure. 
+---
+= Permissões do Azure para o agente do Console
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Quando o NetApp Console inicia um agente de Console no Azure, ele anexa uma função personalizada à VM que fornece ao agente permissões para gerenciar recursos e processos dentro dessa assinatura do Azure.  O agente usa as permissões para fazer chamadas de API para vários serviços do Azure.
+
+A necessidade ou não de criar essa função personalizada para o agente depende de como você a implantou.
+
+.Implantando do NetApp Console
+Quando você usa o Console para implantar a máquina virtual do agente no Azure, ele habilita um https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview["identidade gerenciada atribuída pelo sistema"^] na máquina virtual, cria uma função personalizada e a atribui à máquina virtual.  A função fornece ao Console as permissões necessárias para gerenciar recursos e processos dentro dessa assinatura do Azure.  As permissões da função são mantidas atualizadas quando o agente é atualizado.  Você não precisa criar essa função para o agente ou gerenciar atualizações.
+
+.Implantação manual ou do Azure Marketplace
+Ao implantar o agente do Azure Marketplace ou instalá-lo manualmente em um host Linux, você precisará configurar a função personalizada e manter suas permissões com quaisquer alterações.
+
+Você precisará garantir que a função esteja atualizada à medida que novas permissões forem adicionadas em versões subsequentes.  Se novas permissões forem necessárias, elas serão listadas nas notas de versão.
+
+* Para ver instruções passo a passo sobre como usar essas políticas, consulte as seguintes páginas:
++
+** link:task-install-connector-azure-marketplace.html#step-3-set-up-permissions["Configurar permissões para uma implantação do Azure Marketplace"]
+** link:task-install-connector-on-prem.html#agent-permission-aws-azure["Configurar permissões para implantações locais"]
+** link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions["Configurar permissões para o modo restrito"]
+
+
+
+
+[source, json]
+----
+{
+    "Name": "Console Operator",
+    "Actions": [
+                    "Microsoft.Compute/disks/delete",
+                    "Microsoft.Compute/disks/read",
+                    "Microsoft.Compute/disks/write",
+                    "Microsoft.Compute/locations/operations/read",
+                    "Microsoft.Compute/locations/vmSizes/read",
+                    "Microsoft.Resources/subscriptions/locations/read",
+                    "Microsoft.Compute/operations/read",
+                    "Microsoft.Compute/virtualMachines/instanceView/read",
+                    "Microsoft.Compute/virtualMachines/powerOff/action",
+                    "Microsoft.Compute/virtualMachines/read",
+                    "Microsoft.Compute/virtualMachines/restart/action",
+                    "Microsoft.Compute/virtualMachines/deallocate/action",
+                    "Microsoft.Compute/virtualMachines/start/action",
+                    "Microsoft.Compute/virtualMachines/vmSizes/read",
+                    "Microsoft.Compute/virtualMachines/write",
+                    "Microsoft.Compute/images/read",
+                    "Microsoft.Network/locations/operationResults/read",
+                    "Microsoft.Network/locations/operations/read",
+                    "Microsoft.Network/networkInterfaces/read",
+                    "Microsoft.Network/networkInterfaces/write",
+                    "Microsoft.Network/networkInterfaces/join/action",
+                    "Microsoft.Network/networkSecurityGroups/read",
+                    "Microsoft.Network/networkSecurityGroups/write",
+                    "Microsoft.Network/networkSecurityGroups/join/action",
+                    "Microsoft.Network/virtualNetworks/read",
+                    "Microsoft.Network/virtualNetworks/checkIpAddressAvailability/read",
+                    "Microsoft.Network/virtualNetworks/subnets/read",
+                    "Microsoft.Network/virtualNetworks/subnets/write",
+                    "Microsoft.Network/virtualNetworks/subnets/virtualMachines/read",
+                    "Microsoft.Network/virtualNetworks/virtualMachines/read",
+                    "Microsoft.Network/virtualNetworks/subnets/join/action",
+                    "Microsoft.Resources/deployments/operations/read",
+                    "Microsoft.Resources/deployments/read",
+                    "Microsoft.Resources/deployments/write",
+                    "Microsoft.Resources/resources/read",
+                    "Microsoft.Resources/subscriptions/operationresults/read",
+                    "Microsoft.Resources/subscriptions/resourceGroups/delete",
+                    "Microsoft.Resources/subscriptions/resourceGroups/read",
+                    "Microsoft.Resources/subscriptions/resourcegroups/resources/read",
+                    "Microsoft.Resources/subscriptions/resourceGroups/write",
+                    "Microsoft.Storage/checknameavailability/read",
+                    "Microsoft.Storage/operations/read",
+                    "Microsoft.Storage/storageAccounts/listkeys/action",
+                    "Microsoft.Storage/storageAccounts/read",
+                    "Microsoft.Storage/storageAccounts/delete",
+                    "Microsoft.Storage/storageAccounts/write",
+                    "Microsoft.Storage/storageAccounts/blobServices/containers/read",
+                    "Microsoft.Storage/storageAccounts/listAccountSas/action",
+                    "Microsoft.Storage/usages/read",
+                    "Microsoft.Compute/snapshots/write",
+                    "Microsoft.Compute/snapshots/read",
+                    "Microsoft.Compute/availabilitySets/write",
+                    "Microsoft.Compute/availabilitySets/read",
+                    "Microsoft.Compute/disks/beginGetAccess/action",
+                    "Microsoft.MarketplaceOrdering/offertypes/publishers/offers/plans/agreements/read",
+                    "Microsoft.MarketplaceOrdering/offertypes/publishers/offers/plans/agreements/write",
+                    "Microsoft.Network/loadBalancers/read",
+                    "Microsoft.Network/loadBalancers/write",
+                    "Microsoft.Network/loadBalancers/delete",
+                    "Microsoft.Network/loadBalancers/backendAddressPools/read",
+                    "Microsoft.Network/loadBalancers/backendAddressPools/join/action",
+                    "Microsoft.Network/loadBalancers/loadBalancingRules/read",
+                    "Microsoft.Network/loadBalancers/probes/read",
+                    "Microsoft.Network/loadBalancers/probes/join/action",
+                    "Microsoft.Authorization/locks/*",
+                    "Microsoft.Network/routeTables/join/action",
+                    "Microsoft.NetApp/netAppAccounts/read",
+                    "Microsoft.NetApp/netAppAccounts/capacityPools/read",
+                    "Microsoft.NetApp/netAppAccounts/capacityPools/volumes/write",
+                    "Microsoft.NetApp/netAppAccounts/capacityPools/volumes/read",
+                    "Microsoft.NetApp/netAppAccounts/capacityPools/volumes/delete",
+                    "Microsoft.Network/privateEndpoints/write",
+                    "Microsoft.Storage/storageAccounts/PrivateEndpointConnectionsApproval/action",
+                    "Microsoft.Storage/storageAccounts/privateEndpointConnections/read",
+                    "Microsoft.Storage/storageAccounts/managementPolicies/read",
+                    "Microsoft.Storage/storageAccounts/managementPolicies/write",
+                    "Microsoft.Network/privateEndpoints/read",
+                    "Microsoft.Network/privateDnsZones/write",
+                    "Microsoft.Network/privateDnsZones/virtualNetworkLinks/write",
+                    "Microsoft.Network/virtualNetworks/join/action",
+                    "Microsoft.Network/privateDnsZones/A/write",
+                    "Microsoft.Network/privateDnsZones/read",
+                    "Microsoft.Network/privateDnsZones/virtualNetworkLinks/read",
+                    "Microsoft.Resources/deployments/operationStatuses/read",
+                    "Microsoft.Insights/Metrics/Read",
+                    "Microsoft.Compute/virtualMachines/extensions/write",
+                    "Microsoft.Compute/virtualMachines/extensions/delete",
+                    "Microsoft.Compute/virtualMachines/extensions/read",
+                    "Microsoft.Compute/virtualMachines/delete",
+                    "Microsoft.Network/networkInterfaces/delete",
+                    "Microsoft.Network/networkSecurityGroups/delete",
+                    "Microsoft.Resources/deployments/delete",
+                    "Microsoft.Compute/diskEncryptionSets/read",
+                    "Microsoft.Compute/snapshots/delete",
+                    "Microsoft.Network/privateEndpoints/delete",
+                    "Microsoft.Compute/availabilitySets/delete",
+                    "Microsoft.KeyVault/vaults/read",
+                    "Microsoft.KeyVault/vaults/accessPolicies/write",
+                    "Microsoft.Compute/diskEncryptionSets/write",
+                    "Microsoft.KeyVault/vaults/deploy/action",
+                    "Microsoft.Compute/diskEncryptionSets/delete",
+                    "Microsoft.Resources/tags/read",
+                    "Microsoft.Resources/tags/write",
+                    "Microsoft.Resources/tags/delete",
+                    "Microsoft.Network/applicationSecurityGroups/write",
+                    "Microsoft.Network/applicationSecurityGroups/read",
+                    "Microsoft.Network/applicationSecurityGroups/joinIpConfiguration/action",
+                    "Microsoft.Network/networkSecurityGroups/securityRules/write",
+                    "Microsoft.Network/applicationSecurityGroups/delete",
+                    "Microsoft.Network/networkSecurityGroups/securityRules/delete",
+                    "Microsoft.Synapse/workspaces/write",
+                    "Microsoft.Synapse/workspaces/read",
+                    "Microsoft.Synapse/workspaces/delete",
+                    "Microsoft.Synapse/register/action",
+                    "Microsoft.Synapse/checkNameAvailability/action",
+                    "Microsoft.Synapse/workspaces/operationStatuses/read",
+                    "Microsoft.Synapse/workspaces/firewallRules/read",
+                    "Microsoft.Synapse/workspaces/replaceAllIpFirewallRules/action",
+                    "Microsoft.Synapse/workspaces/operationResults/read",
+                    "Microsoft.Synapse/workspaces/privateEndpointConnectionsApproval/action",
+                    "Microsoft.ManagedIdentity/userAssignedIdentities/assign/action",
+                    "Microsoft.Compute/images/write",
+                    "Microsoft.Network/loadBalancers/frontendIPConfigurations/read",
+                    "Microsoft.Compute/virtualMachineScaleSets/write",
+                    "Microsoft.Compute/virtualMachineScaleSets/read",
+                    "Microsoft.Compute/virtualMachineScaleSets/delete"
+    ],
+    "NotActions": [],
+    "AssignableScopes": [],
+    "Description": "Console Permissions",
+    "IsCustom": "true"
+}
+----
+
+
+== Como as permissões do Azure são usadas
+
+As seções a seguir descrevem como as permissões são usadas para cada sistema de armazenamento e serviço de dados da NetApp .  Essas informações podem ser úteis se suas políticas corporativas determinarem que as permissões sejam fornecidas somente quando necessário.
+
+
+
+=== Azure NetApp Files
+
+O agente faz as seguintes solicitações de API quando você usa a Classificação de Dados do NetApp para verificar dados do Azure NetApp Files :
+
+* Microsoft. NetApp/netAppAccounts/leitura
+* Microsoft. NetApp/netAppAccounts/capacityPools/leitura
+* Microsoft. NetApp/netAppAccounts/capacityPools/volumes/write
+* Microsoft. NetApp/netAppAccounts/capacityPools/volumes/leitura
+* Microsoft. NetApp/netAppAccounts/capacityPools/volumes/delete
+
+
+
+
+=== Backup e recuperação da NetApp
+
+O agente do Console faz as seguintes solicitações de API para o NetApp Backup and Recovery:
+
+* Microsoft.Storage/storageAccounts/listkeys/ação
+* Microsoft.Storage/storageAccounts/leitura
+* Microsoft.Storage/storageAccounts/write
+* Microsoft.Storage/storageAccounts/blobServices/containers/read
+* Microsoft.Storage/storageAccounts/listAccountSas/ação
+* Microsoft.KeyVault/cofres/leitura
+* Microsoft.KeyVault/vaults/accessPolicies/gravação
+* Microsoft.Network/networkInterfaces/leitura
+* Microsoft.Recursos/assinaturas/locais/leitura
+* Microsoft.Network/redes virtuais/leitura
+* Microsoft.Network/virtualNetworks/sub-redes/leitura
+* Microsoft.Recursos/assinaturas/grupos de recursos/leitura
+* Microsoft.Recursos/assinaturas/grupos de recursos/recursos/leitura
+* Microsoft.Recursos/assinaturas/grupos de recursos/gravação
+* Microsoft.Autorização/bloqueios/*
+* Microsoft.Network/privateEndpoints/gravação
+* Microsoft.Network/privateEndpoints/leitura
+* Microsoft.Network/privateDnsZones/virtualNetworkLinks/gravação
+* Microsoft.Network/virtualNetworks/join/ação
+* Microsoft.Network/privateDnsZones/A/gravação
+* Microsoft.Network/privateDnsZones/leitura
+* Microsoft.Network/privateDnsZones/virtualNetworkLinks/leitura
+* Microsoft.Network/networkInterfaces/excluir
+* Microsoft.Network/networkSecurityGroups/excluir
+* Microsoft.Recursos/implantações/excluir
+* Microsoft.ManagedIdentity/userAssignedIdentities/atribuir/ação
+
+
+O agente faz as seguintes solicitações de API quando você usa a funcionalidade Pesquisar e Restaurar:
+
+* Microsoft.Synapse/espaços de trabalho/gravação
+* Microsoft.Synapse/espaços de trabalho/leitura
+* Microsoft.Synapse/espaços de trabalho/excluir
+* Microsoft.Synapse/registro/ação
+* Microsoft.Synapse/checkNameAvailability/ação
+* Microsoft.Synapse/espaços de trabalho/status de operação/leitura
+* Microsoft.Synapse/espaços de trabalho/regras de firewall/leitura
+* Microsoft.Synapse/espaços de trabalho/replaceAllIpFirewallRules/ação
+* Microsoft.Synapse/espaços de trabalho/resultadosdaoperação/leitura
+* Microsoft.Synapse/workspaces/privateEndpointConnectionsAprovação/ação
+
+
+
+
+=== Classificação de dados da NetApp
+
+O agente faz as seguintes solicitações de API quando você usa a Classificação de Dados.
+
+[cols="3*"]
+|===
+| Ação | Usado para configuração? | Usado para operações diárias? 
+
+
+| Microsoft.Compute/locais/operações/leitura | Sim | Sim 
+
+
+| Microsoft.Compute/locais/tamanhos de vm/leitura | Sim | Sim 
+
+
+| Microsoft.Compute/operações/leitura | Sim | Sim 
+
+
+| Microsoft.Compute/virtualMachines/instanceView/leitura | Sim | Sim 
+
+
+| Microsoft.Compute/virtualMachines/powerOff/ação | Sim | Não 
+
+
+| Microsoft.Compute/máquinas virtuais/leitura | Sim | Sim 
+
+
+| Microsoft.Compute/virtualMachines/reiniciar/ação | Sim | Não 
+
+
+| Microsoft.Compute/virtualMachines/iniciar/ação | Sim | Não 
+
+
+| Microsoft.Compute/virtualMachines/vmSizes/leitura | Não | Sim 
+
+
+| Microsoft.Compute/máquinasvirtuais/gravação | Sim | Não 
+
+
+| Microsoft.Compute/imagens/leitura | Sim | Sim 
+
+
+| Microsoft.Compute/discos/excluir | Sim | Não 
+
+
+| Microsoft.Compute/discos/leitura | Sim | Sim 
+
+
+| Microsoft.Compute/discos/gravação | Sim | Não 
+
+
+| Microsoft.Storage/checknameavailability/leitura | Sim | Sim 
+
+
+| Microsoft.Armazenamento/operações/leitura | Sim | Sim 
+
+
+| Microsoft.Storage/storageAccounts/listkeys/ação | Sim | Não 
+
+
+| Microsoft.Storage/storageAccounts/leitura | Sim | Sim 
+
+
+| Microsoft.Storage/storageAccounts/write | Sim | Não 
+
+
+| Microsoft.Storage/storageAccounts/blobServices/containers/read | Sim | Sim 
+
+
+| Microsoft.Network/networkInterfaces/leitura | Sim | Sim 
+
+
+| Microsoft.Network/networkInterfaces/escrever | Sim | Não 
+
+
+| Microsoft.Network/networkInterfaces/join/ação | Sim | Não 
+
+
+| Microsoft.Network/networkSecurityGroups/leitura | Sim | Sim 
+
+
+| Microsoft.Network/networkSecurityGroups/gravação | Sim | Não 
+
+
+| Microsoft.Recursos/assinaturas/locais/leitura | Sim | Sim 
+
+
+| Microsoft.Network/locais/resultadosdaoperação/leitura | Sim | Sim 
+
+
+| Microsoft.Network/locais/operações/leitura | Sim | Sim 
+
+
+| Microsoft.Network/redes virtuais/leitura | Sim | Sim 
+
+
+| Microsoft.Network/virtualNetworks/checkIpAddressAvailability/ler | Sim | Sim 
+
+
+| Microsoft.Network/virtualNetworks/sub-redes/leitura | Sim | Sim 
+
+
+| Microsoft.Network/virtualNetworks/sub-redes/virtualMachines/leitura | Sim | Sim 
+
+
+| Microsoft.Network/redes virtuais/máquinas virtuais/leitura | Sim | Sim 
+
+
+| Microsoft.Network/virtualNetworks/sub-redes/juntar/ação | Sim | Não 
+
+
+| Microsoft.Network/virtualNetworks/sub-redes/gravação | Sim | Não 
+
+
+| Microsoft.Network/routeTables/join/ação | Sim | Não 
+
+
+| Microsoft.Recursos/implantações/operações/leitura | Sim | Sim 
+
+
+| Microsoft.Recursos/implantações/leitura | Sim | Sim 
+
+
+| Microsoft.Recursos/implantações/gravação | Sim | Não 
+
+
+| Microsoft.Recursos/recursos/leitura | Sim | Sim 
+
+
+| Microsoft.Recursos/assinaturas/resultados da operação/leitura | Sim | Sim 
+
+
+| Microsoft.Recursos/assinaturas/grupos de recursos/excluir | Sim | Não 
+
+
+| Microsoft.Recursos/assinaturas/grupos de recursos/leitura | Sim | Sim 
+
+
+| Microsoft.Recursos/assinaturas/grupos de recursos/recursos/leitura | Sim | Sim 
+
+
+| Microsoft.Recursos/assinaturas/grupos de recursos/gravação | Sim | Não 
+|===
+
+
+=== Cloud Volumes ONTAP
+
+O agente faz as seguintes solicitações de API para implantar e gerenciar o Cloud Volumes ONTAP no Azure.
+
+[cols="5*"]
+|===
+| Propósito | Ação | Usado para implantação? | Usado para operações diárias? | Usado para exclusão? 
+
+
+.14+| Criar e gerenciar VMs | Microsoft.Compute/locais/operações/leitura | Sim | Sim | Não 
+
+
+| Microsoft.Compute/locais/tamanhos de vm/leitura | Sim | Sim | Não 
+
+
+| Microsoft.Recursos/assinaturas/locais/leitura | Sim | Não | Não 
+
+
+| Microsoft.Compute/operações/leitura | Sim | Sim | Não 
+
+
+| Microsoft.Compute/virtualMachines/instanceView/leitura | Sim | Sim | Não 
+
+
+| Microsoft.Compute/virtualMachines/powerOff/ação | Sim | Sim | Não 
+
+
+| Microsoft.Compute/máquinas virtuais/leitura | Sim | Sim | Não 
+
+
+| Microsoft.Compute/virtualMachines/reiniciar/ação | Sim | Sim | Não 
+
+
+| Microsoft.Compute/virtualMachines/iniciar/ação | Sim | Sim | Não 
+
+
+| Microsoft.Compute/virtualMachines/deallocate/ação | Não | Sim | Sim 
+
+
+| Microsoft.Compute/virtualMachines/vmSizes/leitura | Não | Sim | Não 
+
+
+| Microsoft.Compute/máquinasvirtuais/gravação | Sim | Sim | Não 
+
+
+| Microsoft.Compute/máquinasvirtuais/excluir | Sim | Sim | Sim 
+
+
+| Microsoft.Recursos/implantações/excluir | Sim | Não | Não 
+
+
+.2+| Habilitar implantação de um VHD | Microsoft.Compute/imagens/leitura | Sim | Não | Não 
+
+
+| Microsoft.Compute/imagens/gravação | Sim | Não | Não 
+
+
+.4+| Crie e gerencie interfaces de rede na sub-rede de destino | Microsoft.Network/networkInterfaces/leitura | Sim | Sim | Não 
+
+
+| Microsoft.Network/networkInterfaces/escrever | Sim | Sim | Não 
+
+
+| Microsoft.Network/networkInterfaces/join/ação | Sim | Sim | Não 
+
+
+| Microsoft.Network/networkInterfaces/excluir | Sim | Sim | Não 
+
+
+.4+| Criar e gerenciar grupos de segurança de rede | Microsoft.Network/networkSecurityGroups/leitura | Sim | Sim | Não 
+
+
+| Microsoft.Network/networkSecurityGroups/gravação | Sim | Sim | Não 
+
+
+| Microsoft.Network/networkSecurityGroups/join/ação | Sim | Não | Não 
+
+
+| Microsoft.Network/networkSecurityGroups/excluir | Não | Sim | Sim 
+
+
+.8+| Obtenha informações de rede sobre regiões, a VNet de destino e a sub-rede e adicione as VMs às VNets | Microsoft.Network/locais/resultadosdaoperação/leitura | Sim | Sim | Não 
+
+
+| Microsoft.Network/locais/operações/leitura | Sim | Sim | Não 
+
+
+| Microsoft.Network/redes virtuais/leitura | Sim | Não | Não 
+
+
+| Microsoft.Network/virtualNetworks/checkIpAddressAvailability/ler | Sim | Não | Não 
+
+
+| Microsoft.Network/virtualNetworks/sub-redes/leitura | Sim | Sim | Não 
+
+
+| Microsoft.Network/virtualNetworks/sub-redes/virtualMachines/leitura | Sim | Sim | Não 
+
+
+| Microsoft.Network/redes virtuais/máquinas virtuais/leitura | Sim | Sim | Não 
+
+
+| Microsoft.Network/virtualNetworks/sub-redes/juntar/ação | Sim | Sim | Não 
+
+
+.9+| Criar e gerenciar grupos de recursos | Microsoft.Recursos/implantações/operações/leitura | Sim | Sim | Não 
+
+
+| Microsoft.Recursos/implantações/leitura | Sim | Sim | Não 
+
+
+| Microsoft.Recursos/implantações/gravação | Sim | Sim | Não 
+
+
+| Microsoft.Recursos/recursos/leitura | Sim | Sim | Não 
+
+
+| Microsoft.Recursos/assinaturas/resultados da operação/leitura | Sim | Sim | Não 
+
+
+| Microsoft.Recursos/assinaturas/grupos de recursos/excluir | Sim | Sim | Sim 
+
+
+| Microsoft.Recursos/assinaturas/grupos de recursos/leitura | Não | Sim | Não 
+
+
+| Microsoft.Recursos/assinaturas/grupos de recursos/recursos/leitura | Sim | Sim | Não 
+
+
+| Microsoft.Recursos/assinaturas/grupos de recursos/gravação | Sim | Sim | Não 
+
+
+.10+| Gerenciar contas e discos de armazenamento do Azure | Microsoft.Compute/discos/leitura | Sim | Sim | Sim 
+
+
+| Microsoft.Compute/discos/gravação | Sim | Sim | Não 
+
+
+| Microsoft.Compute/discos/excluir | Sim | Sim | Sim 
+
+
+| Microsoft.Storage/checknameavailability/leitura | Sim | Sim | Não 
+
+
+| Microsoft.Armazenamento/operações/leitura | Sim | Sim | Não 
+
+
+| Microsoft.Storage/storageAccounts/listkeys/ação | Sim | Sim | Não 
+
+
+| Microsoft.Storage/storageAccounts/leitura | Sim | Sim | Não 
+
+
+| Microsoft.Storage/storageAccounts/delete | Não | Sim | Sim 
+
+
+| Microsoft.Storage/storageAccounts/write | Sim | Sim | Não 
+
+
+| Microsoft.Storage/usos/leitura | Não | Sim | Não 
+
+
+.3+| Habilitar backups para armazenamento de Blobs e criptografia de contas de armazenamento | Microsoft.Storage/storageAccounts/blobServices/containers/read | Sim | Sim | Não 
+
+
+| Microsoft.KeyVault/cofres/leitura | Sim | Sim | Não 
+
+
+| Microsoft.KeyVault/vaults/accessPolicies/gravação | Sim | Sim | Não 
+
+
+.2+| Habilitar pontos de extremidade de serviço VNet para camadas de dados | Microsoft.Network/virtualNetworks/sub-redes/gravação | Sim | Sim | Não 
+
+
+| Microsoft.Network/routeTables/join/ação | Sim | Sim | Não 
+
+
+.4+| Criar e gerenciar snapshots gerenciados do Azure | Microsoft.Compute/instantâneos/gravação | Sim | Sim | Não 
+
+
+| Microsoft.Compute/instantâneos/leitura | Sim | Sim | Não 
+
+
+| Microsoft.Compute/instantâneos/excluir | Não | Sim | Sim 
+
+
+| Microsoft.Compute/discos/beginGetAccess/ação | Não | Sim | Não 
+
+
+.2+| Criar e gerenciar conjuntos de disponibilidade | Microsoft.Compute/availabilitySets/gravação | Sim | Não | Não 
+
+
+| Microsoft.Compute/availabilitySets/leitura | Sim | Não | Não 
+
+
+.2+| Habilitar implantações programáticas do marketplace | Microsoft.MarketplaceOrdering/tipos de oferta/editores/ofertas/planos/acordos/leitura | Sim | Não | Não 
+
+
+| Microsoft.MarketplaceOrdering/tipos de oferta/editores/ofertas/planos/acordos/escrever | Sim | Sim | Não 
+
+
+.9+| Gerenciar um balanceador de carga para pares HA | Microsoft.Network/loadBalancers/leitura | Sim | Sim | Não 
+
+
+| Microsoft.Network/loadBalancers/gravação | Sim | Não | Não 
+
+
+| Microsoft.Network/loadBalancers/excluir | Não | Sim | Sim 
+
+
+| Microsoft.Network/loadBalancers/backendAddressPools/leitura | Sim | Não | Não 
+
+
+| Microsoft.Network/loadBalancers/backendAddressPools/junção/ação | Sim | Não | Não 
+
+
+| Microsoft.Network/loadBalancers/frontendIPConfigurations/leitura | Sim | Sim | Não 
+
+
+| Microsoft.Network/loadBalancers/regras de balanceamento de carga/leitura | Sim | Não | Não 
+
+
+| Microsoft.Network/loadBalancers/sondas/leitura | Sim | Não | Não 
+
+
+| Microsoft.Network/loadBalancers/probes/join/action | Sim | Não | Não 
+
+
+| Habilitar o gerenciamento de bloqueios em discos do Azure | Microsoft.Autorização/bloqueios/* | Sim | Sim | Não 
+
+
+.10+| Habilitar endpoints privados para pares HA quando não houver conectividade fora da sub-rede | Microsoft.Network/privateEndpoints/gravação | Sim | Sim | Não 
+
+
+| Microsoft.Storage/storageAccounts/PrivateEndpointConnectionsAprovação/ação | Sim | Não | Não 
+
+
+| Microsoft.Storage/storageAccounts/privateEndpointConnections/leitura | Sim | Sim | Sim 
+
+
+| Microsoft.Network/privateEndpoints/leitura | Sim | Sim | Sim 
+
+
+| Microsoft.Network/privateDnsZones/gravação | Sim | Sim | Não 
+
+
+| Microsoft.Network/privateDnsZones/virtualNetworkLinks/gravação | Sim | Sim | Não 
+
+
+| Microsoft.Network/virtualNetworks/join/ação | Sim | Sim | Não 
+
+
+| Microsoft.Network/privateDnsZones/A/gravação | Sim | Sim | Não 
+
+
+| Microsoft.Network/privateDnsZones/leitura | Sim | Sim | Não 
+
+
+| Microsoft.Network/privateDnsZones/virtualNetworkLinks/leitura | Sim | Sim | Não 
+
+
+| Necessário para algumas implantações de VM, dependendo do hardware físico subjacente | Microsoft.Recursos/implantações/Status de operação/leitura | Sim | Sim | Não 
+
+
+.2+| Remover recursos de um grupo de recursos em caso de falha de implantação ou exclusão | Microsoft.Network/privateEndpoints/excluir | Sim | Sim | Não 
+
+
+| Microsoft.Compute/availabilitySets/excluir | Sim | Sim | Não 
+
+
+.4+| Habilitar o uso de chaves de criptografia gerenciadas pelo cliente ao usar a API | Microsoft.Compute/diskEncryptionSets/leitura | Sim | Sim | Sim 
+
+
+| Microsoft.Compute/diskEncryptionSets/gravação | Sim | Sim | Não 
+
+
+| Microsoft.KeyVault/cofres/implantar/ação | Sim | Não | Não 
+
+
+| Microsoft.Compute/diskEncryptionSets/excluir | Sim | Sim | Sim 
+
+
+.6+| Configurar um grupo de segurança de aplicativo para um par de HA para isolar a interconexão de HA e as NICs de rede do cluster | Microsoft.Network/applicationSecurityGroups/gravação | Não | Sim | Não 
+
+
+| Microsoft.Network/applicationSecurityGroups/leitura | Não | Sim | Não 
+
+
+| Microsoft.Network/applicationSecurityGroups/joinIpConfiguration/ação | Não | Sim | Não 
+
+
+| Microsoft.Network/networkSecurityGroups/securityRules/write | Sim | Sim | Não 
+
+
+| Microsoft.Network/applicationSecurityGroups/excluir | Não | Sim | Sim 
+
+
+| Microsoft.Network/networkSecurityGroups/securityRules/excluir | Não | Sim | Sim 
+
+
+.3+| Ler, escrever e excluir tags associadas aos recursos do Cloud Volumes ONTAP | Microsoft.Recursos/tags/leitura | Não | Sim | Não 
+
+
+| Microsoft.Recursos/tags/gravação | Sim | Sim | Não 
+
+
+| Microsoft.Recursos/tags/excluir | Sim | Não | Não 
+
+
+| Criptografar contas de armazenamento durante a criação | Microsoft.ManagedIdentity/userAssignedIdentities/atribuir/ação | Sim | Sim | Não 
+
+
+.3+| Use conjuntos de dimensionamento de máquina virtual no modo de orquestração flexível para especificar zonas específicas para o Cloud Volumes ONTAP | Microsoft.Compute/virtualMachineScaleSets/gravação | Sim | Não | Não 
+
+
+| Microsoft.Compute/virtualMachineScaleSets/leitura | Sim | Não | Não 
+
+
+| Microsoft.Compute/virtualMachineScaleSets/excluir | Não | Não | Sim 
+|===
+
+
+=== Hierarquização
+
+O agente faz as seguintes solicitações de API quando você configura o NetApp Cloud Tiering.
+
+* Microsoft.Storage/storageAccounts/listkeys/ação
+* Microsoft.Recursos/assinaturas/grupos de recursos/leitura
+* Microsoft.Recursos/assinaturas/locais/leitura
+
+
+O agente do Console faz as seguintes solicitações de API para operações diárias.
+
+* Microsoft.Storage/storageAccounts/blobServices/containers/read
+* Microsoft.Storage/storageAccounts/managementPolicies/leitura
+* Microsoft.Storage/storageAccounts/managementPolicies/write
+* Microsoft.Storage/storageAccounts/leitura
+
+
+
+
+== Registro de alterações
+
+Conforme as permissões forem adicionadas e removidas, elas serão anotadas nas seções abaixo.
+
+
+
+=== 9 de setembro de 2024
+
+As seguintes permissões foram removidas da política JSON porque o Console não oferece mais suporte à descoberta e ao gerenciamento de clusters do Kubernetes:
+
+* Microsoft.ContainerService/managedClusters/listClusterUserCredential/ação
+* Microsoft.ContainerService/gerenciadosClusters/leitura
+
+
+
+
+=== 22 de agosto de 2024
+
+As seguintes permissões foram adicionadas à política JSON porque são necessárias para o suporte do Cloud Volumes ONTAP aos conjuntos de dimensionamento de máquinas virtuais:
+
+* Microsoft.Compute/virtualMachineScaleSets/gravação
+* Microsoft.Compute/virtualMachineScaleSets/leitura
+* Microsoft.Compute/virtualMachineScaleSets/excluir
+
+
+
+
+=== 5 de dezembro de 2023
+
+As seguintes permissões não são mais necessárias para o NetApp Backup and Recovery ao fazer backup de dados de volume no armazenamento de Blobs do Azure:
+
+* Microsoft.Compute/máquinas virtuais/leitura
+* Microsoft.Compute/virtualMachines/iniciar/ação
+* Microsoft.Compute/virtualMachines/deallocate/ação
+* Microsoft.Compute/virtualMachines/extensões/excluir
+* Microsoft.Compute/máquinasvirtuais/excluir
+
+
+Essas permissões são necessárias para outros serviços de armazenamento do Console, portanto, elas permanecerão na função personalizada do agente se você estiver usando esses outros serviços de armazenamento.
+
+
+
+=== 12 de maio de 2023
+
+As seguintes permissões foram adicionadas à política JSON porque são necessárias para o gerenciamento do Cloud Volumes ONTAP :
+
+* Microsoft.Compute/imagens/gravação
+* Microsoft.Network/loadBalancers/frontendIPConfigurations/leitura
+
+
+As seguintes permissões foram removidas da política JSON porque não são mais necessárias:
+
+* Microsoft.Storage/storageAccounts/blobServices/containers/write
+* Microsoft.Network/publicIPAddresses/excluir
+
+
+
+
+=== 23 de março de 2023
+
+A permissão "Microsoft.Storage/storageAccounts/delete" não é mais necessária para a Classificação de Dados.
+
+Essa permissão ainda é necessária para o Cloud Volumes ONTAP.
+
+
+
+=== 5 de janeiro de 2023
+
+As seguintes permissões foram adicionadas à política JSON:
+
+* Microsoft.Storage/storageAccounts/listAccountSas/ação
+* Microsoft.Synapse/workspaces/privateEndpointConnectionsAprovação/ação
++
+Essas permissões são necessárias para o NetApp Backup and Recovery.
+
+* Microsoft.Network/loadBalancers/backendAddressPools/junção/ação
++
+Essa permissão é necessária para a implantação do Cloud Volumes ONTAP .
+
+

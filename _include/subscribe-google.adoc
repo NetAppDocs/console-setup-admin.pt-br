@@ -1,0 +1,65 @@
+= 
+:allow-uri-read: 
+
+
+.Passos
+. Selecione *Administração > *Credenciais*.
+. Selecione *Credenciais da organização*.
+. Selecione o menu de ação para um conjunto de credenciais associadas a um agente do Console e selecione *Configurar assinatura*.  +nova captura de tela necessária (TS)image:screenshot_gcp_add_subscription.png["Uma captura de tela do menu de ações para um conjunto de credenciais existentes."]
+. Para configurar uma assinatura existente com as credenciais selecionadas, selecione um projeto e uma assinatura do Google Cloud na lista suspensa e selecione *Configurar*.
++
+image:screenshot_gcp_associate.gif["Uma captura de tela de um projeto e assinatura do Google Cloud selecionados para credenciais do Google Cloud."]
+
+. Se você ainda não tiver uma assinatura, selecione *Adicionar assinatura > Continuar* e siga as etapas no Google Cloud Marketplace.
++
+
+NOTE: Antes de concluir as etapas a seguir, verifique se você tem privilégios de administrador de cobrança na sua conta do Google Cloud, bem como um login no console do NetApp .
+
++
+.. Depois de ser redirecionado para o https://console.cloud.google.com/marketplace/product/netapp-cloudmanager/cloud-manager["Página do NetApp Intelligent Services no Google Cloud Marketplace"^] , certifique-se de que o projeto correto esteja selecionado no menu de navegação superior.
++
+image:screenshot_gcp_cvo_marketplace.png["Uma captura de tela da página do marketplace Cloud Volumes ONTAP no Google Cloud."]
+
+.. Selecione *Inscrever-se*.
+.. Selecione a conta de cobrança apropriada e concorde com os termos e condições.
+.. Selecione *Inscrever-se*.
++
+Esta etapa envia sua solicitação de transferência para a NetApp.
+
+.. Na caixa de diálogo pop-up, selecione *Registrar-se na NetApp, Inc.*
++
+Esta etapa deve ser concluída para vincular a assinatura do Google Cloud à sua organização ou conta do Console.  O processo de vinculação de uma assinatura não estará concluído até que você seja redirecionado desta página e faça login no Console.
+
++
+image:screenshot_gcp_marketplace_register.png["Uma captura de tela de um pop-up de registro."]
+
+.. Conclua as etapas na página *Atribuição de assinatura*:
++
+
+NOTE: Se alguém da sua organização já tiver uma assinatura de mercado da sua conta de cobrança, você será redirecionado para https://bluexp.netapp.com/ontap-cloud?x-gcp-marketplace-token=["a página Cloud Volumes ONTAP no NetApp Console"^] em vez de.  Se isso for inesperado, entre em contato com sua equipe de vendas da NetApp .  O Google permite apenas uma assinatura por conta de cobrança do Google.
+
++
+*** Selecione as organizações ou contas do Console às quais você gostaria de associar esta assinatura.
+*** No campo *Substituir assinatura existente*, escolha se deseja substituir automaticamente a assinatura existente de uma organização ou conta por esta nova assinatura.
++
+O Console substitui a assinatura existente para todas as credenciais na organização ou conta por esta nova assinatura.  Se um conjunto de credenciais nunca foi associado a uma assinatura, essa nova assinatura não será associada a essas credenciais.
+
++
+Para todas as outras organizações ou contas, você precisará associar manualmente a assinatura repetindo essas etapas.
+
+*** Selecione *Salvar*.
++
+O vídeo a seguir mostra as etapas para assinar o Google Cloud Marketplace:
+
++
+.Assine no Google Cloud Marketplace
+video::373b96de-3691-4d84-b3f3-b05101161638[panopto]
+
+
+.. Quando esse processo estiver concluído, volte para a página Credenciais no Console e selecione esta nova assinatura.
++
+image:screenshot_gcp_associate.gif["Uma captura de tela da página de atribuição de assinatura."]
+
+
+
+

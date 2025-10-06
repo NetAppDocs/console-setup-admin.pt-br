@@ -1,0 +1,86 @@
+---
+sidebar: sidebar 
+permalink: reference-ports-gcp.html 
+keywords: ports, firewall rules, http, https, inbound, outbound, connector, agent 
+summary: As regras de firewall do Google Cloud para o agente exigem regras de entrada e saída.  O NetApp Console cria automaticamente esse grupo de segurança quando você cria um agente do Console a partir do Console. Para outras opções de instalação, você precisa configurar esse grupo de segurança manualmente. 
+---
+= Regras de firewall do agente no Google Cloud
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+As regras de firewall do Google Cloud para o agente exigem regras de entrada e saída.  O NetApp Console cria automaticamente esse grupo de segurança quando você cria um agente do Console a partir do Console. Para outras opções de instalação, você precisa configurar esse grupo de segurança manualmente.
+
+
+
+== Regras de entrada
+
+[cols="10,10,80"]
+|===
+| Protocolo | Porta | Propósito 
+
+
+| SSH | 22 | Fornece acesso SSH ao host do agente 
+
+
+| HTTP | 80  a| 
+* Fornece acesso HTTP dos navegadores da web do cliente para a interface do usuário local
+* Usado durante o processo de atualização do Cloud Volumes ONTAP
+
+
+
+
+| HTTPS | 443 | Fornece acesso HTTPS dos navegadores da web do cliente para a interface do usuário local 
+
+
+| TCP | 3128 | Fornece Cloud Volumes ONTAP com acesso à internet.  Você deve abrir esta porta manualmente após a implantação. 
+|===
+
+
+== Regras de saída
+
+As regras de firewall predefinidas do agente abrem todo o tráfego de saída.  Siga as regras básicas de saída, se aceitáveis, ou use regras avançadas de saída para requisitos mais rigorosos.
+
+
+
+=== Regras básicas de saída
+
+As regras de firewall predefinidas para o agente incluem as seguintes regras de saída.
+
+[cols="20,20,60"]
+|===
+| Protocolo | Porta | Propósito 
+
+
+| Todos TCP | Todos | Todo o tráfego de saída 
+
+
+| Todos os UDP | Todos | Todo o tráfego de saída 
+|===
+
+
+=== Regras avançadas de saída
+
+Se precisar de regras rígidas para o tráfego de saída, você pode usar as seguintes informações para abrir apenas as portas necessárias para a comunicação de saída pelo agente.
+
+
+NOTE: O endereço IP de origem é o host do agente.
+
+[cols="5*"]
+|===
+| Serviço | Protocolo | Porta | Destino | Propósito 
+
+
+| Chamadas de API e AutoSupport | HTTPS | 443 | Gerenciamento de cluster de Internet de saída e ONTAP LIF | Chamadas de API para o Google Cloud, para o ONTAP, para a classificação de dados da NetApp e envio de mensagens de AutoSupport para a NetApp 
+
+
+| Chamadas de API | TCP | 8080 | Classificação de Dados | Sondar a instância de classificação de dados durante a implantação 
+
+
+| DNS | UDP | 53 | DNS | Usado para resolução de DNS por classificação de dados 
+|===

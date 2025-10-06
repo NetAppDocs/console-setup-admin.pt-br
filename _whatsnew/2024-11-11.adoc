@@ -1,0 +1,19 @@
+= Conector 3.9.46
+:allow-uri-read: 
+
+
+
+
+=== Conector 3.9.46
+
+Esta versão do BlueXP Connector inclui pequenas melhorias de segurança e correções de bugs.
+
+No momento, a versão 3.9.46 está disponível para modo padrão e modo restrito.
+
+
+
+=== ID para projetos IAM
+
+Agora você pode visualizar o ID de um projeto no gerenciamento de identidade e acesso do BlueXP .  Pode ser necessário usar o ID ao fazer uma chamada de API.
+
+https://docs.netapp.com/us-en/bluexp-setup-admin/task-iam-rename-organization.html#project-id["Aprenda como obter o ID de um projeto"] .

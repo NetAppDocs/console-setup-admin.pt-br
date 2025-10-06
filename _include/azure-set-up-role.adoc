@@ -1,0 +1,39 @@
+= 
+:allow-uri-read: 
+
+
+. Copie o conteúdo dolink:reference-permissions-azure.html["permissões de função personalizadas para o Conector"] e salvá-los em um arquivo JSON.
+. Modifique o arquivo JSON adicionando IDs de assinatura do Azure ao escopo atribuível.
++
+Você deve adicionar o ID de cada assinatura do Azure que deseja usar com o NetApp Console.
+
++
+*Exemplo*
+
++
+[source, json]
+----
+"AssignableScopes": [
+"/subscriptions/d333af45-0d07-4154-943d-c25fbzzzzzzz",
+"/subscriptions/54b91999-b3e6-4599-908e-416e0zzzzzzz",
+"/subscriptions/398e471c-3b42-4ae7-9b59-ce5bbzzzzzzz"
+----
+. Use o arquivo JSON para criar uma função personalizada no Azure.
++
+As etapas a seguir descrevem como criar a função usando o Bash no Azure Cloud Shell.
+
++
+.. Começar https://docs.microsoft.com/en-us/azure/cloud-shell/overview["Azure Cloud Shell"^] e escolha o ambiente Bash.
+.. Carregue o arquivo JSON.
++
+image:screenshot_azure_shell_upload.png["Uma captura de tela do Azure Cloud Shell onde você pode escolher a opção de carregar um arquivo."]
+
+.. Use a CLI do Azure para criar a função personalizada:
++
+[source, azurecli]
+----
+az role definition create --role-definition Connector_Policy.json
+----
+
+
+

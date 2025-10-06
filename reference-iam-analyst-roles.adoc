@@ -1,0 +1,41 @@
+---
+sidebar: sidebar 
+permalink: reference-iam-analyst-roles.html 
+keywords: predefined roles, iam roles, organization admin, folder or project admin, identity and access management, access roles, admin 
+summary: O gerenciamento de identidade e acesso do NetApp Console fornece uma função de analista de suporte para auxiliar no monitoramento e suporte de casos. 
+---
+= Função de acesso de analista de suporte operacional para o NetApp Console
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Você pode atribuir a seguinte função aos usuários para fornecer a eles acesso a alertas e monitoramento. Usuários com essa função também podem abrir casos de suporte.
+
+
+
+== Analista de suporte operacional
+
+[cols="1,2"]
+|===
+| Tarefa | Pode executar 
+
+
+| Gerencie suas próprias credenciais de usuário em Configurações > Credenciais | Sim 
+
+
+| Ver recursos descobertos | Sim 
+
+
+| Registre-se para obter suporte e envie casos por meio do Console | Sim 
+
+
+| Sim | Ver a página de auditoria e notificações 
+
+
+| Sim | Visualizar, baixar e configurar alertas 
+|===

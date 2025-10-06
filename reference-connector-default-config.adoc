@@ -1,0 +1,144 @@
+---
+sidebar: sidebar 
+permalink: reference-connector-default-config.html 
+keywords: linux, user name, operating system, installation files, installation folder, folder, log, logs, service, mysql, packages, linux, connector configuration, connector installation folder, connector folder, connector log, ubuntu, agent, agent installation folder, agent configuration 
+summary: Saiba mais sobre o agente do Console antes de implantá-lo. 
+---
+= Configuração padrão para o agente do Console
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Saiba mais sobre a configuração do agente do Console antes de implantá-lo.
+
+
+
+== Configuração padrão com acesso à Internet
+
+Os detalhes de configuração a seguir se aplicam se você implantou um agente do Console do NetApp Console, do marketplace do seu provedor de nuvem ou se instalou manualmente um agente do Console em um host Linux local com acesso à Internet.
+
+
+
+=== Detalhes AWS
+
+Se você implantou um agente do Console a partir do Console ou do marketplace do provedor de nuvem, observe o seguinte:
+
+* O tipo de instância EC2 é t3.2xlarge.
+* O sistema operacional da imagem é o Ubuntu 22.04 LTS.
++
+O sistema operacional não inclui uma GUI.  Você deve usar um terminal para acessar o sistema.
+
+* A instalação inclui o Docker Engine, que é a ferramenta de orquestração de contêineres necessária.
+* O nome de usuário para a instância do EC2 Linux é ubuntu (para agentes criados antes de maio de 2023, o nome de usuário era ec2-user).
+* O disco padrão do sistema é um disco gp2 de 100 GiB.
+
+
+
+
+=== Detalhes do Azure
+
+Se você implantou um agente do Console a partir do Console ou do marketplace do provedor de nuvem, observe o seguinte:
+
+* O tipo de VM é Standard_D8s_v3.
+* O sistema operacional da imagem é o Ubuntu 22.04 LTS.
++
+O sistema operacional não inclui uma GUI.  Você deve usar um terminal para acessar o sistema.
+
+* A instalação inclui o Docker Engine, que é a ferramenta de orquestração de contêineres necessária.
+* O disco do sistema padrão é um disco SSD premium de 100 GiB.
+
+
+
+
+=== Detalhes do Google Cloud
+
+Se você implantou um agente do Console a partir do Console, observe o seguinte:
+
+* A instância da VM é n2-standard-8.
+* O sistema operacional da imagem é o Ubuntu 22.04 LTS.
++
+O sistema operacional não inclui uma GUI.  Você deve usar um terminal para acessar o sistema.
+
+* A instalação inclui o Docker Engine, que é a ferramenta de orquestração de contêineres necessária.
+* O disco do sistema padrão é um disco persistente SSD de 100 GiB.
+
+
+
+
+=== Pasta de instalação
+
+A pasta de instalação do agente está no seguinte local:
+
+/opt/aplicativo/netapp/gerenciador de nuvem
+
+
+
+=== Arquivos de log
+
+Os arquivos de log estão contidos nas seguintes pastas:
+
+* /opt/application/netapp/cloudmanager/log ou
+* /opt/application/netapp/service-manager-2/logs (começando com novas instalações 3.9.23)
++
+Os logs nessas pastas fornecem detalhes sobre o agente do Console.
+
+* /opt/aplicativo/netapp/cloudmanager/docker_occm/dados/log
++
+Os logs nesta pasta fornecem detalhes sobre os serviços de nuvem e o serviço do Console executado no agente do Console.
+
+
+
+
+
+=== Serviço de agente de console
+
+* O serviço do agente do Console é chamado occm.
+* O serviço occm depende do serviço MySQL.
++
+Se o serviço MySQL estiver inativo, o serviço occm também estará.
+
+
+
+
+
+=== Portos
+
+O agente usa as seguintes portas no host Linux:
+
+* 80 para acesso HTTP
+* 443 para acesso HTTPS
+
+
+
+
+== Configuração padrão sem acesso à Internet
+
+A configuração a seguir se aplica se você instalou manualmente o agente do Console em um host Linux local que não tem acesso à Internet. link:task-quick-start-private-mode.html["Saiba mais sobre esta opção de instalação"] .
+
+* A pasta de instalação do agente está no seguinte local:
++
+/opt/aplicativo/netapp/ds
+
+* Os arquivos de log estão contidos nas seguintes pastas:
++
+/var/lib/docker/volumes/ds_occmdata/_data/log
+
++
+Os logs nesta pasta fornecem detalhes sobre o agente do Console e as imagens do Docker.
+
+* Todos os serviços estão sendo executados dentro de contêineres docker
++
+Os serviços dependem do serviço de tempo de execução do Docker em execução
+
+* O agente usa as seguintes portas no host Linux:
++
+** 80 para acesso HTTP
+** 443 para acesso HTTPS
+
+
+

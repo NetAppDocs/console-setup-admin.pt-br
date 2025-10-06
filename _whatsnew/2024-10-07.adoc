@@ -1,0 +1,85 @@
+= Gerenciamento de identidade e acesso BlueXP
+:allow-uri-read: 
+
+
+
+
+=== Gerenciamento de identidade e acesso BlueXP
+
+O gerenciamento de identidade e acesso (IAM) do BlueXP é um novo modelo de gerenciamento de recursos e acesso que substitui e aprimora a funcionalidade anterior fornecida pelas contas do BlueXP ao usar o BlueXP no modo padrão.
+
+O BlueXP IAM fornece gerenciamento mais granular de recursos e permissões:
+
+* Uma _organização_ de nível superior permite que você gerencie o acesso em seus vários _projetos_.
+* _Pastas_ permitem que você agrupe projetos relacionados.
+* O gerenciamento aprimorado de recursos permite que você associe um recurso a uma ou mais pastas ou projetos.
++
+Por exemplo, você pode associar um sistema Cloud Volumes ONTAP a vários projetos.
+
+* O gerenciamento de acesso aprimorado permite que você atribua uma função a membros em diferentes níveis da hierarquia da organização.
+
+
+Essas melhorias oferecem melhor controle sobre as ações que os usuários podem executar e os recursos que eles podem acessar.
+
+.Como o BlueXP IAM afeta sua conta existente
+Ao efetuar login no BlueXP, você notará estas alterações:
+
+* Sua _conta_ agora é chamada de _organização_
+* Seus _espaços de trabalho_ agora são chamados de _projetos_
+* Os nomes das funções do usuário foram alterados:
++
+** _Administrador da conta_ agora é _Administrador da organização_
+** _Administrador do espaço de trabalho_ agora é _Administrador de pasta ou projeto_
+** _Visualizador de conformidade_ agora é _Visualizador de classificação_
+
+
+* Em Configurações, você pode acessar o gerenciamento de identidade e acesso do BlueXP para aproveitar essas melhorias
+
+
+Observe o seguinte:
+
+* Não há alterações em seus usuários ou ambientes de trabalho existentes.
+* Embora os nomes das funções tenham mudado, não há diferenças da perspectiva de permissões.  Os usuários continuarão tendo acesso aos mesmos ambientes de trabalho de antes.
+* Não há alterações na forma como você faz login no BlueXP.  O BlueXP IAM funciona com logins de nuvem da NetApp , credenciais do site de suporte da NetApp e conexões federadas, assim como as contas BlueXP .
+* Se você tinha várias contas BlueXP , agora você tem várias organizações BlueXP .
+
+
+.API para BlueXP IAM
+Essa alteração introduz uma nova API para o BlueXP IAM, mas ela é compatível com versões anteriores da API de locação anterior. https://docs.netapp.com/us-en/bluexp-automation/tenancyv4/overview.html["Saiba mais sobre a API para BlueXP IAM"^]
+
+.Modos de implantação suportados
+O BlueXP IAM é suportado ao usar o BlueXP no modo padrão.  Se estiver usando o BlueXP no modo restrito ou privado, você continuará usando uma _conta_ do BlueXP para gerenciar espaços de trabalho, usuários e recursos.
+
+.Para onde ir a seguir
+* https://docs.netapp.com/us-en/bluexp-setup-admin/concept-identity-and-access-management.html["Saiba mais sobre o BlueXP IAM"]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/task-iam-get-started.html["Comece a usar o BlueXP IAM"]
+
+
+
+
+=== Conector 3.9.45
+
+Esta versão inclui suporte expandido ao sistema operacional e correções de bugs.
+
+A versão 3.9.45 está disponível para modo padrão e modo restrito.
+
+.Suporte para Ubuntu 24.04 LTS
+A partir da versão 3.9.45, o BlueXP agora oferece suporte a novas instalações do Connector em hosts Ubuntu 24.04 LTS ao usar o BlueXP no modo padrão ou restrito.
+
+https://docs.netapp.com/us-en/bluexp-setup-admin/task-install-connector-on-prem.html#step-1-review-host-requirements["Exibir requisitos do host do conector"] .
+
+
+
+=== Suporte para SELinux com hosts RHEL
+
+O BlueXP agora oferece suporte ao Connector com hosts Red Hat Enterprise Linux que tenham o SELinux habilitado no modo de imposição ou no modo permissivo.
+
+O suporte ao SELinux começa com a versão 3.9.40 para o modo padrão e modo restrito e com a versão 3.9.42 para o modo privado.
+
+Observe as seguintes limitações:
+
+* O BlueXP não oferece suporte ao SELinux com hosts Ubuntu.
+* O gerenciamento de sistemas Cloud Volumes ONTAP não é suportado por Conectores que tenham o SELinux habilitado no sistema operacional.
+
+
+https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/8/html/using_selinux/getting-started-with-selinux_using-selinux["Saiba mais sobre o SELinux"^]

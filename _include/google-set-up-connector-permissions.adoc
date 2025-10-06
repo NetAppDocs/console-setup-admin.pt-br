@@ -1,0 +1,56 @@
+= 
+:allow-uri-read: 
+
+
+Uma conta de serviço do Google Cloud é necessária para fornecer ao agente do Console as permissões necessárias para que o Console gerencie recursos no Google Cloud.  Ao criar o agente do Console, você precisará associar essa conta de serviço à VM do agente do Console.
+
+É sua responsabilidade atualizar a função personalizada à medida que novas permissões são adicionadas em versões subsequentes.  Se novas permissões forem necessárias, elas serão listadas nas notas de versão.
+
+.Passos
+. Crie uma função personalizada no Google Cloud:
++
+.. Crie um arquivo YAML que inclua o conteúdo dolink:reference-permissions-gcp.html["permissões de conta de serviço para o agente do Console"] .
+.. No Google Cloud, ative o Cloud Shell.
+.. Faça upload do arquivo YAML que inclui as permissões necessárias.
+.. Crie uma função personalizada usando o `gcloud iam roles create` comando.
++
+O exemplo a seguir cria uma função chamada "conector" no nível do projeto:
+
++
+`gcloud iam roles create connector --project=myproject --file=connector.yaml`
+
++
+https://cloud.google.com/iam/docs/creating-custom-roles#iam-custom-roles-create-gcloud["Documentação do Google Cloud: Criação e gerenciamento de funções personalizadas"^]
+
+
+
+. Crie uma conta de serviço no Google Cloud e atribua a função à conta de serviço:
++
+.. No serviço IAM e Admin, selecione *Contas de serviço > Criar conta de serviço*.
+.. Insira os detalhes da conta de serviço e selecione *Criar e continuar*.
+.. Selecione a função que você acabou de criar.
+.. Conclua as etapas restantes para criar a função.
++
+https://cloud.google.com/iam/docs/creating-managing-service-accounts#creating_a_service_account["Documentação do Google Cloud: Criação de uma conta de serviço"^]
+
+
+
+. Se você planeja implantar sistemas Cloud Volumes ONTAP em projetos diferentes daquele em que o agente do Console reside, será necessário fornecer à conta de serviço do agente do Console acesso a esses projetos.
++
+Por exemplo, digamos que o agente do Console esteja no projeto 1 e você queira criar sistemas Cloud Volumes ONTAP no projeto 2.  Você precisará conceder acesso à conta de serviço no projeto 2.
+
++
+.. No serviço IAM e Admin, selecione o projeto do Google Cloud onde você deseja criar sistemas Cloud Volumes ONTAP .
+.. Na página *IAM*, selecione *Conceder acesso* e forneça os detalhes necessários.
++
+*** Digite o e-mail da conta de serviço do agente do Console.
+*** Selecione a função personalizada do agente do Console.
+*** Selecione *Salvar*.
+
+
+
+
++
+Para mais detalhes, consulte https://cloud.google.com/iam/docs/granting-changing-revoking-access#grant-single-role["Documentação do Google Cloud"^]
+
+

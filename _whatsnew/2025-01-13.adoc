@@ -1,0 +1,33 @@
+= Conector 3.9.48
+:allow-uri-read: 
+
+
+
+
+=== Conector 3.9.48
+
+Esta versão do BlueXP Connector inclui pequenas melhorias de segurança e correções de bugs.
+
+No momento, a versão 3.9.48 está disponível para modo padrão e modo restrito.
+
+
+
+=== Gerenciamento de identidade e acesso BlueXP
+
+* A página Recursos agora exibe recursos não descobertos.  Recursos não descobertos são recursos de armazenamento que o BlueXP conhece, mas para os quais você não criou ambientes de trabalho.  Por exemplo, recursos exibidos no consultor digital que ainda não têm ambientes de trabalho são exibidos na página Recursos como recursos não descobertos.
+* Os recursos do Amazon FSx for NetApp ONTAP não são exibidos na página de recursos do IAM, pois você não pode associá-los a uma função do IAM.  Você pode visualizar esses recursos em suas respectivas telas ou em cargas de trabalho.
+
+
+
+
+=== Crie um caso de suporte para serviços BlueXP adicionais
+
+Depois de registrar o BlueXP para suporte, você pode criar um caso de suporte diretamente do console web do BlueXP .  Ao criar o caso, você precisa selecionar o serviço ao qual o problema está associado.
+
+A partir desta versão, agora você pode criar um caso de suporte e associá-lo a serviços BlueXP adicionais:
+
+* BlueXP disaster recovery
+* BlueXP ransomware protection
+
+
+https://docs.netapp.com/us-en/bluexp-setup-admin/task-get-help.html["Saiba mais sobre como criar um caso de suporte"] .

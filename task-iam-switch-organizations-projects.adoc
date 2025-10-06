@@ -1,0 +1,81 @@
+---
+sidebar: sidebar 
+permalink: task-iam-switch-organizations-projects.html 
+keywords: switch organizations, switch projects, projects, organizations, change, switch, change organizations, change projects, iam, identity and access management, switch connectors 
+summary: Você pode pertencer a várias organizações do Console ou ter permissões para acessar vários projetos ou agentes dentro de uma organização.  Quando necessário, você pode alternar facilmente entre organizações, projetos e agentes do Console para acessar os recursos associados a essa organização, projeto ou agente. 
+---
+= Alternar entre organizações, projetos e agentes do Console
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Você pode pertencer a várias organizações do Console ou ter permissões para acessar vários projetos ou agentes dentro de uma organização.  Quando necessário, você pode alternar facilmente entre organizações, projetos e agentes do Console para acessar os recursos associados a essa organização, projeto ou agente.
+
+
+TIP: Você pode pertencer a várias organizações se outra organização o convidar para participar ou se você mesmo criar uma.  Você pode criar uma organização adicional usando a API. https://docs.netapp.com/us-en/bluexp-automation/tenancyv4/post-organizations.html["Aprenda a criar uma nova organização"^]
+
+
+
+== Alternar entre organizações
+
+Se você for membro de várias organizações, poderá alternar entre elas a qualquer momento.
+
+.Passos
+. No cabeçalho superior do Console, selecione *Organização*.
++
+image:screenshot-iam-switch-organizations.png["Uma captura de tela do banner superior onde você pode selecionar o menu suspenso Organização e depois selecionar outra organização."]
+
+. Se você tiver alguma organização parceira, selecione a aba *Parceria* para ver as organizações parceiras disponíveis.
+
+
++ A aba *Parceria* não será exibida se você não tiver nenhuma organização parceira.
+
+. Selecione outra organização e depois selecione *Alternar*.
+
+
++ Se você tiver alguma organização parceira, selecione a aba *Parceria* para ver as organizações parceiras disponíveis.
+
+
+
+== Alternar entre projetos
+
+Se sua organização incluir vários projetos e você tiver acesso a eles, poderá alternar entre eles a qualquer momento.
+
+
+NOTE: Você não pode alternar para outro projeto enquanto estiver visualizando qualquer uma das páginas de *Identidade e acesso*.
+
+.Passos
+. No cabeçalho superior do Console, selecione *Projeto*.
+. Navegue pelas pastas e projetos em sua organização, selecione o projeto desejado e, em seguida, selecione *Alternar*.
++
+image:screenshot-iam-switch-projects-select.png["Uma captura de tela do menu Escopo onde você pode selecionar um novo projeto."]
+
+
+
+
+
+== Alternar entre agentes do Console
+
+Se você tiver vários agentes do Console, poderá alternar entre eles para ver os sistemas associados a um agente específico.
+
+.Passos
+. No cabeçalho superior do Console, selecione o ícone Agente.
+. Selecione outro agente e depois selecione *Trocar*.
+
+
+.Informações relacionadas
+link:task-iam-associate-connectors.html["Associar agentes a pastas e projetos"] .
+
+
+
+== Informações relacionadas
+
+* link:concept-identity-and-access-management.html["Saiba mais sobre identidade e acesso no NetApp Console"]
+* link:task-iam-get-started.html["Comece com identidade e acesso"]
+* https://docs.netapp.com/us-en/bluexp-automation/tenancyv4/overview.html["Saiba mais sobre a API para identidade e acesso"^]
+

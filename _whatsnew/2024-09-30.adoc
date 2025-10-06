@@ -1,0 +1,54 @@
+= Lançamento do modo privado (3.9.44)
+:allow-uri-read: 
+
+
+
+
+=== Lançamento do modo privado (3.9.44)
+
+Uma nova versão do modo privado já está disponível para download no site de suporte da NetApp .
+
+Esta versão inclui as seguintes versões dos componentes e serviços do BlueXP que são suportados com o modo privado.
+
+[cols="2*"]
+|===
+| Serviço | Versão incluída 
+
+
+| Conector | 3.9.44 
+
+
+| Backup e recuperação | 27 de setembro de 2024 
+
+
+| Classificação | 15 de maio de 2024 (versão 1.31) 
+
+
+| Gerenciamento Cloud Volumes ONTAP | 9 de setembro de 2024 
+
+
+| carteira digital | 30 Julho 2023 
+
+
+| Gerenciamento de cluster ONTAP local | 22 de abril de 2024 
+
+
+| Replicação | 18 de setembro de 2022 
+|===
+Para o Connector, a versão 3.9.44 do modo privado inclui as atualizações introduzidas nas versões de agosto de 2024 e setembro de 2024.  Mais notavelmente, suporte ao Red Hat Enterprise Linux 9.4.
+
+Para saber mais sobre o que está incluído nas versões desses componentes e serviços do BlueXP , consulte as notas de versão de cada serviço do BlueXP :
+
+* https://docs.netapp.com/us-en/bluexp-setup-admin/whats-new.html#9-september-2024["Novidades na versão de setembro de 2024 do Connector"]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/whats-new.html#8-august-2024["Novidades na versão de agosto de 2024 do Connector"]
+* https://docs.netapp.com/us-en/bluexp-backup-recovery/whats-new.html["Novidades no BlueXP backup and recovery"^]
+* https://docs.netapp.com/us-en/bluexp-classification/whats-new.html["O que há de novo na BlueXP classification"^]
+* https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/whats-new.html["Novidades no gerenciamento do Cloud Volumes ONTAP no BlueXP"^]
+
+
+Para mais detalhes sobre o modo privado, incluindo como atualizar, consulte o seguinte:
+
+* https://docs.netapp.com/us-en/bluexp-setup-admin/concept-modes.html["Saiba mais sobre o modo privado"]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-private-mode.html["Aprenda como começar a usar o BlueXP no modo privado"]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/task-upgrade-connector.html["Aprenda como atualizar o Conector ao usar o modo privado"]
+

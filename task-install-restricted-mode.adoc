@@ -1,0 +1,496 @@
+---
+sidebar: sidebar 
+permalink: task-install-restricted-mode.html 
+keywords: government region, gov, govcloud, connector, sovereign cloud 
+summary: Implante o agente do Console no modo restrito para que você possa usar o NetApp Console com conectividade de saída limitada.  Para começar, instale o agente do Console, configure o Console acessando a interface do usuário que está em execução no agente do Console e, em seguida, forneça as permissões de nuvem que você configurou anteriormente. 
+---
+= Implantar o agente do Console no modo restrito
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Implante o agente do Console no modo restrito para que você possa usar o NetApp Console com conectividade de saída limitada.  Para começar, instale o agente do Console, configure o Console acessando a interface do usuário que está em execução no agente do Console e, em seguida, forneça as permissões de nuvem que você configurou anteriormente.
+
+
+
+== Etapa 1: instalar o agente do console
+
+Instale o agente do Console no marketplace do seu provedor de nuvem ou manualmente em um host Linux.
+
+[role="tabbed-block"]
+====
+.Marketplace comercial da AWS
+--
+.Antes de começar
+Você deve ter o seguinte:
+
+* Uma VPC e uma sub-rede que atendem aos requisitos de rede.
++
+link:task-prepare-restricted-mode.html["Saiba mais sobre os requisitos de rede"]
+
+* Uma função do IAM com uma política anexada que inclui as permissões necessárias para o agente do Console.
++
+link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions["Aprenda a configurar permissões da AWS"]
+
+* Permissões para assinar e cancelar a assinatura do AWS Marketplace para seu usuário do IAM.
+* Uma compreensão dos requisitos de CPU e RAM para a instância.
++
+link:task-prepare-restricted-mode.html#step-3-review-host-requirements["Revisar requisitos de instância"] .
+
+* Um par de chaves para a instância EC2.
+
+
+.Passos
+. Vá para o https://aws.amazon.com/marketplace/pp/prodview-jbay5iyfmu6ui["Listagem do agente do NetApp Console no AWS Marketplace"^]
+. Na página Marketplace, selecione *Continuar assinando*.
+. Para assinar o software, selecione *Aceitar Termos*.
++
+O processo de assinatura pode levar alguns minutos.
+
+. Após a conclusão do processo de assinatura, selecione *Continuar para configuração*.
+. Na página *Configurar este software*, certifique-se de ter selecionado a região correta e selecione *Continuar para iniciar*.
+. Na página *Iniciar este software*, em *Escolher ação*, selecione *Iniciar pelo EC2* e depois selecione *Iniciar*.
++
+Use o Console do EC2 para iniciar a instância e anexar uma função do IAM.  Isso não é possível com a ação *Iniciar do site*.
+
+. Siga as instruções para configurar e implantar a instância:
++
+** *Nome e tags*: Insira um nome e tags para a instância.
+** *Imagens de aplicativos e sistemas operacionais*: pule esta seção.  O agente do console AMI já está selecionado.
+** *Tipo de instância*: Dependendo da disponibilidade da região, escolha um tipo de instância que atenda aos requisitos de RAM e CPU (t3.2xlarge é pré-selecionado e recomendado).
+** *Par de chaves (login)*: Selecione o par de chaves que você deseja usar para se conectar com segurança à instância.
+** *Configurações de rede*: edite as configurações de rede conforme necessário:
++
+*** Escolha a VPC e a sub-rede desejadas.
+*** Especifique se a instância deve ter um endereço IP público.
+*** Especifique as configurações do grupo de segurança que habilitam os métodos de conexão necessários para a instância do agente do Console: SSH, HTTP e HTTPS.
++
+link:reference-ports-aws.html["Exibir regras de grupo de segurança para AWS"] .
+
+
+
+** *Configurar armazenamento*: Mantenha o tamanho e o tipo de disco padrão para o volume raiz.
++
+Se você quiser habilitar a criptografia do Amazon EBS no volume raiz, selecione *Avançado*, expanda *Volume 1*, selecione *Criptografado* e escolha uma chave KMS.
+
+** *Detalhes avançados*: Em *Perfil de instância do IAM*, escolha a função do IAM que inclui as permissões necessárias para o agente do Console.
+** *Resumo*: Revise o resumo e selecione *Iniciar instância*.
+
+
+
+
+.Resultado
+A AWS inicia o software com as configurações especificadas.  A instância do agente do Console e o software são executados em aproximadamente cinco minutos.
+
+.O que vem a seguir?
+Configure o NetApp Console.
+
+--
+.Mercado governamental da AWS
+--
+.Antes de começar
+Você deve ter o seguinte:
+
+* Uma VPC e uma sub-rede que atendem aos requisitos de rede.
++
+link:task-prepare-restricted-mode.html["Saiba mais sobre os requisitos de rede"]
+
+* Uma função do IAM com uma política anexada que inclui as permissões necessárias para o agente do Console.
++
+link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions["Aprenda a configurar permissões da AWS"]
+
+* Permissões para assinar e cancelar a assinatura do AWS Marketplace para seu usuário do IAM.
+* Um par de chaves para a instância EC2.
+
+
+.Passos
+. Acesse a oferta do agente do NetApp Console no AWS Marketplace.
++
+.. Abra o serviço EC2 e selecione *Iniciar instância*.
+.. Selecione *AWS Marketplace*.
+.. Pesquise por NetApp Console e selecione a oferta.
++
+image:screenshot-gov-cloud-mktp.png["Uma captura de tela que mostra a oferta do NetApp Console após pesquisá-lo no AWS Marketplace"]
+
+.. Selecione *Continuar*.
+
+
+. Siga as instruções para configurar e implantar a instância:
++
+** *Escolha um tipo de instância*: Dependendo da disponibilidade da região, escolha um dos tipos de instância suportados (t3.2xlarge é recomendado).
++
+link:task-prepare-restricted-mode.html["Revise os requisitos da instância"] .
+
+** *Configurar detalhes da instância*: selecione uma VPC e uma sub-rede, escolha a função do IAM que você criou na etapa 1, habilite a proteção de encerramento (recomendado) e escolha quaisquer outras opções de configuração que atendam aos seus requisitos.
++
+image:screenshot_aws_iam_role.gif["Uma captura de tela que mostra campos na página Configurar instância na AWS.  A função do IAM que você deveria ter criado na etapa 1 é selecionada."]
+
+** *Adicionar armazenamento*: Mantenha as opções de armazenamento padrão.
+** *Adicionar tags*: insira tags para a instância, se desejar.
+** *Configurar grupo de segurança*: especifique os métodos de conexão necessários para a instância do agente do Console: SSH, HTTP e HTTPS.
+** *Revisar*: revise suas seleções e selecione *Iniciar*.
+
+
+
+
+.Resultado
+A AWS inicia o software com as configurações especificadas.  A instância do agente do Console e o software são executados em aproximadamente cinco minutos.
+
+.O que vem a seguir?
+Configurar o Console.
+
+--
+.Mercado Azure Gov
+--
+.Antes de começar
+Você deve ter o seguinte:
+
+* Uma VNet e uma sub-rede que atendem aos requisitos de rede.
++
+link:task-prepare-restricted-mode.html["Saiba mais sobre os requisitos de rede"]
+
+* Uma função personalizada do Azure que inclui as permissões necessárias para o agente do Console.
++
+link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions["Aprenda a configurar permissões do Azure"]
+
+
+
+.Passos
+. Acesse a página da VM do agente do NetApp Console no Azure Marketplace.
++
+** https://azuremarketplace.microsoft.com/en-us/marketplace/apps/netapp.netapp-oncommand-cloud-manager["Página do Azure Marketplace para regiões comerciais"^]
+** https://portal.azure.us/#create/netapp.netapp-oncommand-cloud-manageroccm-byol["Página do Azure Marketplace para regiões do Azure Government"^]
+
+
+. Selecione *Obter agora* e depois selecione *Continuar*.
+. No portal do Azure, selecione *Criar* e siga as etapas para configurar a máquina virtual.
++
+Observe o seguinte ao configurar a VM:
+
++
+** *Tamanho da VM*: escolha um tamanho de VM que atenda aos requisitos de CPU e RAM.  Recomendamos Standard_D8s_v3.
+** *Discos*: O agente do Console pode ter desempenho ideal com discos HDD ou SSD.
+** *IP público*: se você quiser usar um endereço IP público com a VM do agente do Console, o endereço IP deverá usar um SKU básico para garantir que o Console use esse endereço IP público.
++
+image:screenshot-azure-sku.png["Uma captura de tela da criação de um novo endereço IP no Azure que permite que você escolha Básico no campo SKU."]
+
++
+Se você usar um endereço IP de SKU padrão, o Console usará o endereço IP _privado_ do agente do Console, em vez do IP público.  Se a máquina que você está usando para acessar o Console não tiver acesso a esse endereço IP privado, as ações do Console falharão.
+
++
+https://learn.microsoft.com/en-us/azure/virtual-network/ip-services/public-ip-addresses#sku["Documentação do Azure: SKU de IP público"^]
+
+** *Grupo de segurança de rede*: O agente do Console requer conexões de entrada usando SSH, HTTP e HTTPS.
++
+link:reference-ports-azure.html["Exibir regras de grupo de segurança para o Azure"] .
+
+** *Identidade*: Em *Gerenciamento*, selecione *Ativar identidade gerenciada atribuída pelo sistema*.
++
+Essa configuração é importante porque uma identidade gerenciada permite que a máquina virtual do agente do Console se identifique no Microsoft Entra ID sem fornecer nenhuma credencial. https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview["Saiba mais sobre identidades gerenciadas para recursos do Azure"^] .
+
+
+
+. Na página *Revisar + criar*, revise suas seleções e selecione *Criar* para iniciar a implantação.
+
+
+.Resultado
+O Azure implanta a máquina virtual com as configurações especificadas.  A máquina virtual e o software do agente do console devem estar em execução em aproximadamente cinco minutos.
+
+.O que vem a seguir?
+Configure o NetApp Console.
+
+--
+.Instalação manual
+--
+.Antes de começar
+Você deve ter o seguinte:
+
+* Privilégios de root para instalar o agente do Console.
+* Detalhes sobre um servidor proxy, caso um proxy seja necessário para acesso à Internet a partir do agente do Console.
++
+Você tem a opção de configurar um servidor proxy após a instalação, mas isso requer a reinicialização do agente do Console.
+
+* Um certificado assinado pela CA, se o servidor proxy usar HTTPS ou se o proxy for um proxy de interceptação.
+
+
+
+NOTE: Não é possível definir um certificado para um servidor proxy transparente ao instalar manualmente o agente do Console.  Se precisar definir um certificado para um servidor proxy transparente, você deverá usar o Console de Manutenção após a instalação. Saiba mais sobre olink:reference-connector-maint-console.html["Console de manutenção do agente"] .
+
+* Você precisa desabilitar a verificação de configuração que verifica a conectividade de saída durante a instalação.  A instalação manual falhará se esta verificação não estiver desabilitada.link:task-troubleshoot-connector.html["Aprenda como desabilitar verificações de configuração para instalações manuais."]
+* Dependendo do seu sistema operacional, o Podman ou o Docker Engine será necessário antes de instalar o agente do Console.
+
+
+.Sobre esta tarefa
+O instalador disponível no site de suporte da NetApp pode ser uma versão anterior.  Após a instalação, o agente do Console se atualiza automaticamente se uma nova versão estiver disponível.
+
+.Passos
+. Se as variáveis de sistema _http_proxy_ ou _https_proxy_ estiverem definidas no host, remova-as:
++
+[source, cli]
+----
+unset http_proxy
+unset https_proxy
+----
++
+Se você não remover essas variáveis do sistema, a instalação falhará.
+
+. Baixe o software do agente do Console em https://mysupport.netapp.com/site/products/all/details/cloud-manager/downloads-tab["Site de suporte da NetApp"^] e, em seguida, copie-o para o host Linux.
++
+Você deve baixar o instalador do agente "online" destinado ao uso em sua rede ou na nuvem.
+
+. Atribua permissões para executar o script.
++
+[source, cli]
+----
+chmod +x NetApp_Console_Agent_Cloud_<version>
+----
++
+Onde <versão> é a versão do agente do Console que você baixou.
+
+. Se estiver instalando em um ambiente de nuvem governamental, desative as verificações de configuração.link:task-troubleshoot-connector.html#disable-config-check["Aprenda como desabilitar verificações de configuração para instalações manuais."]
+. Execute o script de instalação.
++
+[source, cli]
+----
+ ./NetApp_Console_Agent_Cloud_<version> --proxy <HTTP or HTTPS proxy server> --cacert <path and file name of a CA-signed certificate>
+----
++
+Você precisará adicionar informações de proxy se sua rede exigir um proxy para acesso à Internet.  Você pode adicionar um proxy transparente ou explícito.  Os parâmetros --proxy e --cacert são opcionais e você não será solicitado a adicioná-los.  Se você tiver um servidor proxy, precisará inserir os parâmetros conforme mostrado.
+
++
+Aqui está um exemplo de configuração de um servidor proxy explícito com um certificado assinado por uma CA:
+
++
+[source, cli]
+----
+ ./NetApp_Console_Agent_Cloud_v4.0.0--proxy https://user:password@10.0.0.30:8080/ --cacert /tmp/cacert/certificate.cer
+----
++
+`--proxy`configura o agente do Console para usar um servidor proxy HTTP ou HTTPS usando um dos seguintes formatos:
+
++
+** \http://endereço:porta
+** \http://nome-de-usuário:senha@endereço:porta
+** \http://nome-de-domínio%92nome-de-usuário:senha@endereço:porta
+** \https://endereço:porta
+** \https://nome-de-usuário:senha@endereço:porta
+** \https://nome-de-domínio%92nome-de-usuário:senha@endereço:porta
++
+Observe o seguinte:
+
++
+*** O usuário pode ser um usuário local ou de domínio.
+*** Para um usuário de domínio, você deve usar o código ASCII para um \, conforme mostrado acima.
+*** O agente do Console não oferece suporte a nomes de usuário ou senhas que incluam o caractere @.
+*** Se a senha incluir qualquer um dos seguintes caracteres especiais, você deverá escapar esse caractere especial colocando uma barra invertida antes dele: & ou !
++
+Por exemplo:
+
++
+\http://bxpproxyuser:netapp1\!@endereço:3128
+
+
+
+
+
+
+
+`--cacert`especifica um certificado assinado pela CA a ser usado para acesso HTTPS entre o agente do Console e o servidor proxy.  Este parâmetro é necessário para servidores proxy HTTPS, servidores proxy de interceptação e servidores proxy transparentes.
+
++ Aqui está um exemplo de configuração de um servidor proxy transparente.  Ao configurar um proxy transparente, você não precisa definir o servidor proxy.  Você só adiciona um certificado assinado pela CA ao host do agente do Console:
+
++
+
+[source, cli]
+----
+ ./NetApp_Console_Agent_Cloud_v4.0.0 --cacert /tmp/cacert/certificate.cer
+----
+. Se você usou o Podman, precisará ajustar a porta aardvark-dns.
++
+.. SSH para a máquina virtual do agente do Console.
+.. Abra o arquivo podman _/usr/share/containers/containers.conf_ e modifique a porta escolhida para o serviço DNS do Aardvark.  Por exemplo, altere para 54.
++
+[source, cli]
+----
+vi /usr/share/containers/containers.conf
+...
+# Port to use for dns forwarding daemon with netavark in rootful bridge
+# mode and dns enabled.
+# Using an alternate port might be useful if other DNS services should
+# run on the machine.
+#
+dns_bind_port = 54
+...
+Esc:wq
+----
+.. Reinicie a máquina virtual do agente do Console.
+
+
+
+
+.Resultado
+O agente do Console agora está instalado.  No final da instalação, o serviço do agente do Console (occm) será reiniciado duas vezes se você tiver especificado um servidor proxy.
+
+.O que vem a seguir?
+Configure o NetApp Console.
+
+--
+====
+
+
+== Etapa 2: configurar o NetApp Console
+
+Ao acessar o console pela primeira vez, você será solicitado a escolher uma organização para o agente do Console e precisará habilitar o modo restrito.
+
+.Antes de começar
+A pessoa que configura o agente do Console deve fazer login no Console usando um login que ainda não pertença a uma organização do Console.
+
+Se o seu login estiver associado a outra organização, você precisará se inscrever com um novo login.  Caso contrário, você não verá a opção para habilitar o modo restrito na tela de configuração.
+
+.Passos
+. Abra um navegador da Web em um host que tenha uma conexão com a instância do agente do Console e insira a seguinte URL do agente do Console que você instalou.
+. Inscreva-se ou faça login no NetApp Console.
+. Após efetuar login, configure o Console:
++
+.. Insira um nome para o agente do Console.
+.. Insira um nome para uma nova organização do Console.
+.. Selecione *Você está executando em um ambiente seguro?*
+.. Selecione *Ativar modo restrito nesta conta*.
++
+Observe que você não pode alterar essa configuração depois que a conta for criada.  Você não poderá ativar o modo restrito mais tarde, nem desativá-lo mais tarde.
+
++
+Se você implantou o agente do Console em uma região governamental, a caixa de seleção já estará habilitada e não poderá ser alterada.  Isso ocorre porque o modo restrito é o único modo suportado nas regiões governamentais.
+
+.. Selecione *Vamos começar*.
+
+
+
+
+.Resultado
+O agente do Console agora está instalado e configurado com sua organização do Console.  Todos os usuários precisam acessar o Console usando o endereço IP da instância do agente do Console.
+
+.O que vem a seguir?
+Forneça ao Console as permissões que você configurou anteriormente.
+
+
+
+== Etapa 3: fornecer permissões ao NetApp Console
+
+Se você implantou o agente do Console do Azure Marketplace ou se instalou manualmente o software do agente do Console, será necessário fornecer as permissões configuradas anteriormente.
+
+Essas etapas não se aplicam se você implantou o agente do Console do AWS Marketplace porque escolheu a função do IAM necessária durante a implantação.
+
+link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions["Aprenda a preparar permissões de nuvem"] .
+
+[role="tabbed-block"]
+====
+.Função do AWS IAM
+--
+Anexe a função do IAM que você criou anteriormente à instância do EC2 onde instalou o agente do Console.
+
+Estas etapas se aplicam somente se você instalou manualmente o agente do Console na AWS.  Para implantações do AWS Marketplace, você já associou a instância do agente do Console a uma função do IAM que inclui as permissões necessárias.
+
+.Passos
+. Acesse o console do Amazon EC2.
+. Selecione *Instâncias*.
+. Selecione a instância do agente do Console.
+. Selecione *Ações > Segurança > Modificar função do IAM*.
+. Selecione a função do IAM e selecione *Atualizar função do IAM*.
+
+
+--
+.Chave de acesso AWS
+--
+Forneça ao NetApp Console a chave de acesso da AWS para um usuário do IAM que tenha as permissões necessárias.
+
+.Passos
+. Selecione *Administração > Credenciais*.
+. Selecione *Credenciais da organização*.
+. Selecione *Adicionar credenciais* e siga as etapas do assistente.
++
+.. *Localização das credenciais*: Selecione *Amazon Web Services > Agente.
+.. *Definir credenciais*: insira uma chave de acesso e uma chave secreta da AWS.
+.. *Assinatura do Marketplace*: Associe uma assinatura do Marketplace a essas credenciais assinando agora ou selecionando uma assinatura existente.
+.. *Revisar*: Confirme os detalhes sobre as novas credenciais e selecione *Adicionar*.
+
+
+
+
+--
+.Função do Azure
+--
+Acesse o portal do Azure e atribua a função personalizada do Azure à máquina virtual do agente do Console para uma ou mais assinaturas.
+
+.Passos
+. No Portal do Azure, abra o serviço *Assinaturas* e selecione sua assinatura.
++
+É importante atribuir a função do serviço *Assinaturas* porque isso especifica o escopo da atribuição de função no nível da assinatura.  O _escopo_ define o conjunto de recursos aos quais o acesso se aplica.  Se você especificar um escopo em um nível diferente (por exemplo, no nível da máquina virtual), sua capacidade de concluir ações no NetApp Console será afetada.
+
++
+https://learn.microsoft.com/en-us/azure/role-based-access-control/scope-overview["Documentação do Microsoft Azure: Entenda o escopo do RBAC do Azure"^]
+
+. Selecione *Controle de acesso (IAM)* > *Adicionar* > *Adicionar atribuição de função*.
+. Na guia *Função*, selecione a função *Operador de console* e selecione *Avançar*.
++
+
+NOTE: Operador do console é o nome padrão fornecido na política.  Se você escolheu um nome diferente para a função, selecione esse nome.
+
+. Na aba *Membros*, complete os seguintes passos:
++
+.. Atribuir acesso a uma *Identidade gerenciada*.
+.. Selecione *Selecionar membros*, selecione a assinatura na qual a máquina virtual do agente do Console foi criada, em *Identidade gerenciada*, escolha *Máquina virtual* e selecione a máquina virtual do agente do Console.
+.. Selecione *Selecionar*.
+.. Selecione *Avançar*.
+.. Selecione *Revisar + atribuir*.
+.. Se você quiser gerenciar recursos em assinaturas adicionais do Azure, alterne para essa assinatura e repita essas etapas.
+
+
+
+
+--
+.Principal de serviço do Azure
+--
+Forneça ao NetApp Console as credenciais para a entidade de serviço do Azure que você configurou anteriormente.
+
+.Passos
+. Selecione *Administração > Credenciais*.
+. Selecione *Adicionar credenciais* e siga as etapas do assistente.
++
+.. *Localização das credenciais*: Selecione *Microsoft Azure > Agente*.
+.. *Definir credenciais*: insira informações sobre a entidade de serviço do Microsoft Entra que concede as permissões necessárias:
++
+*** ID do aplicativo (cliente)
+*** ID do diretório (inquilino)
+*** Segredo do cliente
+
+
+.. *Assinatura do Marketplace*: Associe uma assinatura do Marketplace a essas credenciais assinando agora ou selecionando uma assinatura existente.
+.. *Revisar*: Confirme os detalhes sobre as novas credenciais e selecione *Adicionar*.
+
+
+
+
+.Resultado
+O NetApp Console agora tem as permissões necessárias para executar ações no Azure em seu nome.
+
+--
+.Conta de serviço do Google Cloud
+--
+Associe a conta de serviço à VM do agente do Console.
+
+.Passos
+. Acesse o portal do Google Cloud e atribua a conta de serviço à instância de VM do agente do Console.
++
+https://cloud.google.com/compute/docs/access/create-enable-service-accounts-for-instances#changeserviceaccountandscopes["Documentação do Google Cloud: Alterando a conta de serviço e os escopos de acesso de uma instância"^]
+
+. Se você quiser gerenciar recursos em outros projetos, conceda acesso adicionando a conta de serviço com a função de agente do Console a esse projeto. Você precisará repetir esta etapa para cada projeto.
+
+
+--
+====

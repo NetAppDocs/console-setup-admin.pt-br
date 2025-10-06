@@ -1,0 +1,40 @@
+= Novos endpoints seguros para obter imagens do conector
+:allow-uri-read: 
+
+
+
+
+=== Novos endpoints seguros para obter imagens do conector
+
+Quando você instala o Connector, ou quando ocorre uma atualização automática, o Connector entra em contato com repositórios para baixar imagens para a instalação ou atualização.  Por padrão, o Conector sempre contatou os seguintes endpoints:
+
+* \https://*.blob.core.windows.net
+* \ https://cloudmanagerinfraprod.azurecr.io
+
+
+O primeiro ponto final inclui um curinga porque não podemos fornecer uma localização definitiva.  O balanceamento de carga do repositório é gerenciado pelo provedor de serviços, o que significa que os downloads podem ocorrer de diferentes endpoints.
+
+Para maior segurança, o Connector agora pode baixar imagens de instalação e atualizações de endpoints dedicados:
+
+* \ https://bluexpinfraprod.eastus2.data.azurecr.io
+* \ https://bluexpinfraprod.azurecr.io
+
+
+Recomendamos que você comece a usar esses novos endpoints removendo os endpoints existentes das suas regras de firewall e permitindo os novos endpoints.
+
+Esses novos endpoints são suportados a partir da versão 3.9.47 do Connector.  Não há compatibilidade com versões anteriores do Connector.
+
+Observe o seguinte:
+
+* Os endpoints existentes ainda são suportados.  Se você não quiser usar os novos endpoints, nenhuma alteração será necessária.
+* O conector entra em contato primeiro com os pontos de extremidade existentes.  Se esses pontos de extremidade não estiverem acessíveis, o Conector entrará em contato automaticamente com os novos pontos de extremidade.
+* Os novos pontos de extremidade não são suportados nos seguintes cenários:
++
+** Se o conector estiver instalado em uma região governamental.
+** Se você usar o Conector com BlueXP backup and recovery ou BlueXP ransomware protection.
+
+
++
+Para ambos os cenários, você pode continuar a usar os pontos de extremidade existentes.
+
+

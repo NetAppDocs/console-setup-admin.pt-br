@@ -1,0 +1,34 @@
+---
+sidebar: sidebar 
+permalink: task-ontap-access-connector.html 
+keywords: administer, credentials, ONTAP, connector, Cloud Volumes ONTAP, on-premises, roles, permissions, console agent, agent 
+summary: Os administradores podem configurar o NetApp Console para solicitar ao usuário suas credenciais ONTAP . 
+---
+= Aplicar permissões ONTAP para o ONTAP Advanced View (ONTAP System Manager)
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Por padrão, as credenciais do agente do Console permitem que os usuários acessem o Advanced View (ONTAP System Manager).  Em vez disso, você pode solicitar aos usuários suas credenciais ONTAP .  Isso garante que as permissões ONTAP de um usuário sejam aplicadas quando ele trabalha com clusters ONTAP nos clusters Cloud Volumes ONTAP e ONTAP locais.
+
+
+NOTE: Você deve ter a função de administrador da organização para editar as configurações do agente do console.
+
+.Passos
+. Selecione *Administração > Agentes*.
+. Na página *Visão geral*, selecione o menu de ação para um agente do Console e selecione *Editar agente*.
++
+O agente do Console deve estar ativo para editá-lo.
+
+. Expanda a opção *Forçar credenciais*.
+. Marque a caixa de seleção para habilitar a opção *Forçar credenciais* e selecione *Salvar*.
+. Verifique se a opção *Forçar credenciais* está habilitada.
++
+image:screenshot-force-credentials-on.png["Captura de tela mostrando que a opção Forçar credenciais está ativada"]
+
+

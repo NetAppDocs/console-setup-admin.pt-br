@@ -1,0 +1,63 @@
+---
+sidebar: sidebar 
+permalink: concept-org-partnerships.html 
+keywords: identity federation, single sign-on, SSO, identity provider, IdP, SAML, Microsoft Entra ID, AD FS, PingFederate, ACS URL, Entity ID, user access, security, productivity, compliance, authentication, business continuity, account management, user experience, access control, workflow automation, credential management, login process, organization admin, bluexp, BlueXP 
+summary: A criação de parcerias entre organizações no NetApp Console permite que os parceiros da organização gerenciem com segurança os recursos do NetApp em todos os limites organizacionais, simplificando a colaboração e aumentando a segurança. 
+---
+= Parcerias no NetApp Console
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Ao criar parcerias entre organizações, o NetApp Console permite que os parceiros gerenciem com segurança os recursos do NetApp em todos os limites organizacionais, simplificando a colaboração e aumentando a segurança.
+
+.Funções necessárias
+Administrador de parcerialink:reference-iam-predefined-roles.html["Saiba mais sobre funções de acesso."]
+
+As parcerias permitem o gerenciamento seguro de recursos da NetApp em todas as organizações usando relacionamentos baseados em funções no Console.  A organização iniciadora concede acesso aos seus recursos, enquanto a organização aceitante fornece os usuários ou contas de serviço aos quais será concedido acesso.  As parcerias são estabelecidas por meio de um fluxo de trabalho de autoatendimento, dando à organização iniciadora controle total sobre quais recursos são compartilhados, quais funções são atribuídas e a capacidade de integrar, gerenciar ou revogar o acesso do parceiro conforme necessário.
+
+Os clientes podem autorizar MSPs ou revendedores a gerenciar ambientes NetApp sem precisar de configurações complicadas.  Os clientes podem controlar quais clusters os parceiros podem acessar e quais funções eles têm, e podem revogar o acesso a qualquer momento para manter a segurança e a conformidade.
+
+Como parceiro, você obtém visibilidade e controle centralizados em todos os ambientes do cliente.  Você pode facilmente mudar para a organização de um cliente para gerenciar recursos, executar serviços de dados e monitorar a integridade dentro de limites definidos, reduzindo ferramentas personalizadas e garantindo o alinhamento com as políticas de cada cliente.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Um"]Atribuir a um ou mais usuários a função de administrador de parceria
+Atribua a um ou mais usuários nas organizações iniciadora e receptora a função de administrador de parceria para criar e gerenciar parcerias. Você pode atribuir a função de visualizador de parceria a usuários que precisam apenas visualizar parcerias, e não gerenciá-las.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Dois"]Compartilhe o ID da sua organização com a organização iniciadora
+[role="quick-margin-para"]
+Para iniciar uma parceria, o iniciador deve saber o ID da organização alvo.  Somente a respectiva organização pode acessar este ID da organização.  Compartilhe-o diretamente com a organização iniciadora fora do NetApp Console por e-mail ou outro método.
+
+A organização iniciadora é a organização que concede acesso aos seus recursos.
+
+image:diagram-partnership-org-id.png["diagrama que mostra as organizações iniciais"]
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Três"]Iniciar a parceria dentro do NetApp Console
+[role="quick-margin-para"]
+A organização que inicia a parceria o faz no NetApp Console enviando uma solicitação de parceria.
+
+image:diagram-partnership-accept.png["diagrama que mostra a aceitação da parceria"]
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Quatro"]Aprovar a parceria
+[role="quick-margin-para"]
+A organização receptora deve aceitar a solicitação.
+
+A organização receptora é a organização que está recebendo acesso aos recursos.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["Cinco"]Atribuir usuários à parceria
+[role="quick-margin-para"]
+A organização receptora atribui usuários ou contas de serviço específicos da sua organização à parceria.  A organização iniciadora atribui funções a esses usuários.
+
+image:diagram-partnership-add-user.png["diagrama que mostra as atribuições do usuário"]
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-6.png["Seis"]Conceder aos usuários atribuídos acesso aos recursos
+[role="quick-margin-para"]
+Se você for a organização iniciadora, poderá conceder acesso a recursos específicos aos usuários que foram atribuídos à parceria.  Você pode revogar o acesso a qualquer momento.
+
+Você faz isso atribuindo funções para projetos ou pastas específicos dentro da sua organização.
+
+image:diagram-partnership-resources.png["diagrama que mostra o compartilhamento de recursos"]

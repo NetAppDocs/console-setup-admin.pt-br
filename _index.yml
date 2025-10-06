@@ -1,0 +1,94 @@
+---
+indexpage:
+  title: Documentação de configuração e administração do NetApp Console
+  summary: Comece a usar o NetApp Console para que você possa começar a criar, proteger
+    e governar dados em seus ambientes locais e na nuvem.  Após a conclusão da configuração,
+    você pode controlar o acesso aos seus recursos usando o gerenciamento de identidade
+    e acesso (IAM), administrar agentes do Console, contas de provedores de nuvem
+    e muito mais.
+  keywords: bluexp, netapp console, Console agents, accounts, get started, setup,
+    administration, sign up, log in, login, permissions
+  lead: Comece a usar o NetApp Console para que você possa começar a criar, proteger
+    e governar dados em seus ambientes locais e na nuvem.  Após a conclusão da configuração,
+    você pode controlar o acesso aos seus recursos usando o gerenciamento de identidade
+    e acesso (IAM), administrar agentes do Console, contas de provedores de nuvem
+    e muito mais.
+  tiles:
+  - title: Começar
+    links:
+    - title: Saiba mais sobre o NetApp Console
+      url: concept-overview.html
+    - title: Saiba mais sobre os modos de implantação
+      url: concept-modes.html
+    - title: Comece com o modo padrão
+      url: task-quick-start-standard-mode.html
+    - title: Comece com o modo restrito
+      url: "/task-quick-start-restricted-mode.html"
+  - title: Configurar identidade e acesso
+    links:
+    - title: Saiba mais sobre o gerenciamento de identidade e acesso (IAM) do Console
+      url: concept-identity-and-access-management.html
+    - title: Comece com identidade e acesso
+      url: task-iam-get-started.html
+    - title: Organize seus recursos com pastas e projetos
+      url: task-iam-manage-folders-projects.html
+    - title: Adicionar membros e contas de serviço
+      url: task-iam-manage-members-permissions.html
+    - title: Use funções para controlar o acesso dos membros aos recursos
+      url: task-iam-manage-roles.html
+  - title: Agentes de console
+    links:
+    - title: Saiba mais sobre os agentes do Console
+      url: concept-connectors.html
+    - title: Exibir permissões da AWS
+      url: reference-permissions-aws.html
+    - title: Exibir permissões do Azure
+      url: reference-permissions-azure.html
+    - title: Ver permissões do Google Cloud
+      url: reference-permissions-gcp.html
+  - title: AWS
+    links:
+    - title: Comece em uma região padrão da AWS
+      url: task-quick-start-standard-mode.html
+    - title: Comece em uma região AWS GovCloud
+      url: task-quick-start-restricted-mode.html
+    - title: Comece no AWS Secret ou Top Secret Cloud
+      url: https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-getting-started-aws-c2s.html
+    - title: Exibir políticas do IAM para o agente do Console
+      url: reference-permissions-aws.html
+    - title: Gerenciar credenciais e assinaturas
+      url: task-adding-aws-accounts.html
+  - title: Azul
+    links:
+    - title: Comece em uma região padrão do Azure
+      url: task-quick-start-standard-mode.html
+    - title: Comece em uma região do Azure Government
+      url: task-quick-start-restricted-mode.html
+    - title: Comece a usar o Azure IL6
+      url: task-quick-start-private-mode.html
+    - title: Exibir a função personalizada para o agente do Console
+      url: reference-permissions-azure.html
+    - title: Gerenciar credenciais e assinaturas
+      url: task-adding-azure-accounts.html
+  - title: Google Cloud
+    links:
+    - title: Comece em uma região padrão do Google Cloud
+      url: task-quick-start-standard-mode.html
+    - title: Exibir a conta de serviço do agente do Console
+      url: reference-permissions-gcp.html
+    - title: Gerenciar credenciais e assinaturas
+      url: task-adding-gcp-accounts.html
+  - title: No local
+    links:
+    - title: Instalar e configurar manualmente um agente do Console no modo padrão
+      url: task-install-connector-on-prem.html
+    - title: Instalar e configurar um agente de console no VCenter
+      url: task-install-agent-on-prem-ova.html
+  - title: Blogs e comunidade
+    links:
+    - title: Console NetApp
+      url: https://www.netapp.com/console
+    - title: Serviços de dados NetApp
+      url: https://www.netapp.com/data-services/
+    - title: Comunidade NetApp
+      url: https://community.netapp.com/

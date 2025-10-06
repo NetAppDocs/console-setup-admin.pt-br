@@ -1,0 +1,16 @@
+= 
+:allow-uri-read: 
+
+
+. Revise suas seleções para verificar se sua configuração está correta.
++
+.. A caixa de seleção *Validar configuração do agente* é marcada por padrão para que o Console valide os requisitos de conectividade de rede quando você implantar.  Se o Console não conseguir implantar o agente, ele fornecerá um relatório para ajudar você a solucionar o problema.  Se a implantação for bem-sucedida, nenhum relatório será fornecido.
+
+
++
+[]
+====
+Se você ainda estiver usando olink:reference-networking-saas-console-previous.html["pontos finais anteriores"] usado para atualizações de agentes, a validação falha com um erro.  Para evitar isso, desmarque a caixa de seleção para pular a verificação de validação.
+
+====
+

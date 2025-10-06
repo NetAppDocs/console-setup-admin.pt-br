@@ -1,0 +1,402 @@
+---
+sidebar: sidebar 
+permalink: task-adding-aws-accounts.html 
+keywords: permissions, aws, policy, iam, iam role, role, granting, policy, iam policy, iam user, access keys, arn, cloud provider accounts, aws, cloud provider profile, json, iam, credentials, adding credentials, add credentials, bluexp 
+summary: Adicione e gerencie credenciais da AWS para que o NetApp Console tenha as permissões necessárias para implantar e gerenciar recursos de nuvem em suas contas da AWS.  Se você gerencia várias assinaturas da AWS, pode atribuir cada uma delas a diferentes credenciais da AWS na página Credenciais. 
+---
+= Gerenciar credenciais da AWS e assinaturas do marketplace para o NetApp Console
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Adicione e gerencie credenciais da AWS para que você implante e gerencie recursos de nuvem em suas contas da AWS a partir do NetApp Console.  Se você gerencia várias assinaturas do AWS Marketplace, pode atribuir cada uma delas a diferentes credenciais da AWS na página Credenciais.
+
+
+
+== Visão geral
+
+Você pode adicionar credenciais da AWS a um agente do Console existente ou diretamente ao Console:
+
+* Adicionar credenciais adicionais da AWS a um agente existente
++
+Adicione credenciais da AWS a um agente do Console para gerenciar recursos de nuvem. <<add-aws-credentials-agent-creation,Aprenda como adicionar credenciais da AWS a um agente do Console>> .
+
+* Adicione credenciais da AWS ao Console para criar um agente do Console
++
+Adicionar novas credenciais da AWS ao Console fornece as permissões necessárias para criar um agente do Console. <<add-aws-credentials-agent-creation,Aprenda como adicionar credenciais da AWS ao NetApp Console>> .
+
+* Adicionar credenciais da AWS ao Console do FSx para ONTAP
++
+Adicione novas credenciais da AWS ao Console para criar e gerenciar o FSx para ONTAP. https://docs.netapp.com/us-en/bluexp-fsx-ontap/requirements/task-setting-up-permissions-fsx.html["Aprenda a configurar permissões para FSx para ONTAP"^]
+
+
+
+
+
+== Como rotacionar credenciais
+
+O NetApp Console permite que você forneça credenciais da AWS de algumas maneiras: uma função do IAM associada à instância do agente, assumindo uma função do IAM em uma conta confiável ou fornecendo chaves de acesso da AWS. link:concept-accounts-aws.html["Saiba mais sobre credenciais e permissões da AWS"] .
+
+Com as duas primeiras opções, o Console usa o AWS Security Token Service para obter credenciais temporárias que são rotacionadas constantemente.  Esse processo é a melhor prática porque é automático e seguro.
+
+Gire manualmente as chaves de acesso da AWS atualizando-as no Console.
+
+
+
+== Adicionar credenciais adicionais a um agente do Console
+
+Adicione credenciais adicionais da AWS a um agente do Console para que ele tenha as permissões necessárias para gerenciar recursos e processos em seu ambiente de nuvem pública.  Você pode fornecer o ARN de uma função do IAM em outra conta ou fornecer chaves de acesso da AWS.
+
+Se você está apenas começando a usar o Console,link:concept-accounts-aws.html["Saiba como o NetApp Console usa credenciais e permissões da AWS"] .
+
+
+
+=== Conceder permissões
+
+Conceda permissões antes de adicionar credenciais da AWS a um agente do Console.  As permissões permitem que um agente do Console gerencie recursos e processos dentro dessa conta da AWS.  Você pode fornecer as permissões com o ARN de uma função em uma conta confiável ou chaves da AWS.
+
+
+NOTE: Se você implantou um agente do Console a partir do Console, ele adicionou automaticamente credenciais da AWS para a conta na qual você implantou um agente do Console.  Isso garante que as permissões necessárias estejam em vigor para gerenciar recursos. link:concept-accounts-aws.html["Saiba mais sobre credenciais e permissões da AWS"] .
+
+*Escolhas*
+
+* <<Conceder permissões assumindo uma função do IAM em outra conta>>
+* <<Conceder permissões fornecendo chaves da AWS>>
+
+
+
+
+==== Conceder permissões assumindo uma função do IAM em outra conta
+
+Você pode configurar uma relação de confiança entre a conta de origem da AWS na qual você implantou uma instância do agente do Console e outras contas da AWS usando funções do IAM.  Em seguida, você forneceria ao Console o ARN das funções do IAM das contas confiáveis.
+
+Se um agente do Console estiver instalado no local, você não poderá usar esse método de autenticação.  Você deve usar chaves da AWS.
+
+.Passos
+. Acesse o console do IAM na conta de destino na qual você deseja fornecer permissões ao agente do Console.
+. Em Gerenciamento de acesso, selecione *Funções > Criar função* e siga as etapas para criar a função.
++
+Não se esqueça de fazer o seguinte:
+
++
+** Em *Tipo de entidade confiável*, selecione *Conta AWS*.
+** Selecione *Outra conta da AWS* e insira o ID da conta onde reside uma instância do agente do Console.
+** Crie as políticas necessárias copiando e colando o conteúdo delink:reference-permissions-aws.html["as políticas do IAM para um agente do Console"] .
+
+
+. Copie o ARN da função do IAM para poder colá-lo no Console mais tarde.
+
+
+.Resultado
+A conta tem as permissões necessárias. <<add-the-credentials,Agora você pode adicionar as credenciais a um agente do Console>> .
+
+
+
+==== Conceder permissões fornecendo chaves da AWS
+
+Se você quiser fornecer ao Console chaves da AWS para um usuário do IAM, precisará conceder as permissões necessárias a esse usuário.  A política do Console IAM define as ações e os recursos da AWS que o Console tem permissão para usar.
+
+Você deve usar este método de autenticação se um agente do Console estiver instalado no local.  Você não pode usar uma função do IAM.
+
+.Passos
+. No console do IAM, crie políticas copiando e colando o conteúdo delink:reference-permissions-aws.html["as políticas do IAM para um agente do Console"] .
++
+https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_create.html["Documentação da AWS: Criando políticas do IAM"^]
+
+. Anexe as políticas a uma função do IAM ou a um usuário do IAM.
++
+** https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create.html["Documentação da AWS: Criando funções do IAM"^]
+** https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_manage-attach-detach.html["Documentação da AWS: Adicionando e removendo políticas do IAM"^]
+
+
+
+
+.Resultado
+A conta tem as permissões necessárias. <<add-the-credentials,Agora você pode adicionar as credenciais a um agente do Console>> .
+
+
+
+=== Adicione as credenciais
+
+Depois de fornecer a uma conta da AWS as permissões necessárias, você pode adicionar as credenciais dessa conta a um agente existente.  Isso permite que você inicie sistemas Cloud Volumes ONTAP nessa conta usando o mesmo agente.
+
+ New credentials in your cloud provider may take a few minutes to become available. Then, add the credentials.
+.Passos
+. Use a barra de navegação superior para selecionar um agente do Console ao qual você deseja adicionar credenciais.
+. Na barra de navegação à esquerda, selecione *Administração > Credenciais*.
+. Na página *Credenciais da organização*, selecione *Adicionar credenciais* e siga as etapas do assistente.
++
+.. *Localização das credenciais*: Selecione *Amazon Web Services > Agente*.
+.. *Definir credenciais*: forneça o ARN (Amazon Resource Name) de uma função do IAM confiável ou insira uma chave de acesso e uma chave secreta da AWS.
+.. *Assinatura do Marketplace*: Associe uma assinatura do Marketplace a essas credenciais assinando agora ou selecionando uma assinatura existente.
++
+Para pagar por serviços por hora (PAYGO) ou com um contrato anual, você deve associar as credenciais da AWS à sua assinatura do AWS Marketplace.
+
+.. *Revisar*: Confirme os detalhes sobre as novas credenciais e selecione *Adicionar*.
+
+
+
+
+.Resultado
+Agora você pode alternar para um conjunto diferente de credenciais na página Detalhes e credenciais ao adicionar um sistema ao Console
+
+image:screenshot_accounts_switch_aws.png["Uma captura de tela que mostra a seleção entre contas de provedores de nuvem após selecionar Alternar conta na página Detalhes e credenciais."]
+
+
+
+== Adicionar credenciais ao Console para criar um agente do Console
+
+Adicione credenciais da AWS fornecendo o ARN de uma função do IAM que concede as permissões necessárias para criar um agente do Console.  Você pode escolher essas credenciais ao criar um novo agente.
+
+
+
+=== Configurar a função do IAM
+
+Configure uma função do IAM que permita que a camada de software como serviço (SaaS) do NetApp Console assuma a função.
+
+.Passos
+. Acesse o console do IAM na conta de destino.
+. Em Gerenciamento de acesso, selecione *Funções > Criar função* e siga as etapas para criar a função.
++
+Não se esqueça de fazer o seguinte:
+
++
+** Em *Tipo de entidade confiável*, selecione *Conta AWS*.
+** Selecione *Outra conta AWS* e insira o ID do NetApp Console SaaS: 952013314444
+** Especificamente para o Amazon FSx for NetApp ONTAP , edite a política *Relacionamentos de confiança* para incluir "AWS": "arn:aws:iam::952013314444:root".
++
+Por exemplo, a política deve ficar assim:
+
++
+[source, JSON]
+----
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Principal": {
+        "AWS": "arn:aws:iam::952013314444:root",
+        "Service": "ec2.amazonaws.com"
+      },
+      "Action": "sts:AssumeRole"
+    }
+  ]
+}
+----
++
+Consulte link:https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies-cross-account-resource-access.html["Documentação do AWS Identity and Access Management (IAM)"^] para obter mais informações sobre acesso a recursos entre contas no IAM.
+
+** Crie uma política que inclua as permissões necessárias para criar um agente do Console.
++
+*** https://docs.netapp.com/us-en/bluexp-fsx-ontap/requirements/task-setting-up-permissions-fsx.html["Veja as permissões necessárias para o FSx para ONTAP"^]
+*** link:task-install-connector-aws-bluexp.html#aws-permissions-agent["Exibir a política de implantação do agente"]
+
+
+
+
+. Copie o ARN da função do IAM para que você possa colá-lo no Console na próxima etapa.
+
+
+.Resultado
+A função IAM agora tem as permissões necessárias. <<add-the-credentials-2,Agora você pode adicioná-lo ao Console>> .
+
+
+
+=== Adicione as credenciais
+
+Depois de fornecer à função do IAM as permissões necessárias, adicione o ARN da função ao Console.
+
+.Antes de começar
+Se você acabou de criar a função do IAM, pode levar alguns minutos até que ela esteja disponível para uso.  Aguarde alguns minutos antes de adicionar as credenciais ao Console.
+
+.Passos
+. Selecione *Administração > Credenciais*.
++
+image:screenshot-settings-icon-organization.png["Uma captura de tela que mostra o ícone Configurações no canto superior direito do Console."]
+
+. Na página *Credenciais da organização* ou *Credenciais da conta*, selecione *Adicionar credenciais* e siga as etapas do assistente.
++
+.. *Localização das credenciais*: Selecione *Amazon Web Services > NetApp Console*.
+.. *Definir credenciais*: forneça o ARN (Amazon Resource Name) da função do IAM.
+.. *Revisar*: Confirme os detalhes sobre as novas credenciais e selecione *Adicionar*.
+
+
+
+
+
+
+== Adicionar credenciais ao Console do Amazon FSx para ONTAP
+
+Para mais detalhes, consulte o https://docs.netapp.com/us-en/bluexp-fsx-ontap/requirements/task-setting-up-permissions-fsx.html["a documentação do console para Amazon FSx para ONTAP"^]
+
+
+
+== Configurar uma assinatura da AWS
+
+Depois de adicionar suas credenciais da AWS, você pode configurar uma assinatura do AWS Marketplace com essas credenciais.  A assinatura permite que você pague pelo Cloud Volumes ONTAP por uma taxa horária (PAYGO) ou usando um contrato anual, além de pagar por outros serviços de dados.
+
+Há dois cenários nos quais você pode configurar uma assinatura do AWS Marketplace depois de já ter adicionado as credenciais:
+
+* Você não configurou uma assinatura quando adicionou as credenciais inicialmente.
+* Você deseja alterar a assinatura do AWS Marketplace configurada para as credenciais da AWS.
++
+Substituir a assinatura atual do marketplace por uma nova assinatura altera a assinatura do marketplace para todos os sistemas Cloud Volumes ONTAP existentes e todos os novos sistemas.
+
+
+
+.Antes de começar
+Você precisa criar um agente do Console antes de poder configurar uma assinatura. link:concept-connectors.html#connector-installation["Aprenda a criar um agente de console"] .
+
+O vídeo a seguir mostra as etapas para assinar o NetApp Intelligent Services no AWS Marketplace:
+
+.Assine o NetApp Intelligent Services no AWS Marketplace
+video::096e1740-d115-44cf-8c27-b051011611eb[panopto]
+.Passos
+. Selecione *Administração > *Credenciais*.
+. Selecione *Credenciais da organização*.
+. Selecione o menu de ação para um conjunto de credenciais associadas a um agente do Console e selecione *Configurar assinatura*.
++
+Você deve selecionar credenciais associadas a um agente do Console.  Não é possível associar uma assinatura do marketplace a credenciais associadas ao NetApp Console.
+
++
+image:screenshot_aws_configure_subscription.png["Uma captura de tela do menu de ações para um conjunto de credenciais existentes."]
+
+. Para associar as credenciais a uma assinatura existente, selecione a assinatura na lista suspensa e selecione *Configurar*.
+. Para associar as credenciais a uma nova assinatura, selecione *Adicionar assinatura > Continuar* e siga as etapas no AWS Marketplace:
++
+.. Selecione *Ver opções de compra*.
+.. Selecione *Inscrever-se*.
+.. Selecione *Configurar sua conta*.
++
+Você será redirecionado para o NetApp Console.
+
+.. Na página *Atribuição de Assinatura*:
++
+*** Selecione as organizações ou contas do Console às quais você gostaria de associar esta assinatura.
+*** No campo *Substituir assinatura existente*, escolha se deseja substituir automaticamente a assinatura existente de uma organização ou conta por esta nova assinatura.
++
+O Console substitui a assinatura existente para todas as credenciais na organização ou conta por esta nova assinatura.  Se um conjunto de credenciais nunca foi associado a uma assinatura, essa nova assinatura não será associada a essas credenciais.
+
++
+Para todas as outras organizações ou contas, você precisará associar manualmente a assinatura repetindo essas etapas.
+
+*** Selecione *Salvar*.
+
+
+
+
+
+
+
+
+== Associe uma assinatura existente à sua organização ou conta
+
+Ao assinar no AWS Marketplace, a última etapa do processo é associar a assinatura à sua organização.  Se você não concluiu esta etapa, não poderá usar a assinatura com sua organização ou conta.
+
+* link:concept-modes.html["Saiba mais sobre os modos de implantação do Console"]
+* link:concept-identity-and-access-management.html["Saiba mais sobre o gerenciamento de identidade e acesso do Console"]
+
+
+Siga as etapas abaixo se você assinou os serviços de dados inteligentes da NetApp no ​​AWS Marketplace, mas perdeu a etapa para associar a assinatura à sua conta.
+
+.Passos
+. Confirme se você não associou sua assinatura à sua organização ou conta do Console.
++
+.. No menu de navegação, selecione *Administração > Licenças e assinaturas*.
+.. Selecione *Assinaturas*.
+.. Verifique se sua assinatura não aparece.
++
+Você verá apenas as assinaturas associadas à organização ou conta que você está visualizando no momento.  Caso não veja sua assinatura, prossiga com os seguintes passos.
+
+
+
+. Efetue login no Console da AWS e navegue até *Assinaturas do AWS Marketplace*.
+. Encontre a assinatura.
++
+image:screenshot-aws-marketplace-bluexp-subscription.png["Uma captura de tela do AWS Marketplace mostrando uma assinatura do NetApp ."]
+
+. Selecione *Configurar produto*.
++
+A página de oferta de assinatura deve ser carregada em uma nova aba ou janela do navegador.
+
+. Selecione *Configurar sua conta*.
++
+image:screenshot-aws-marketplace-set-up-account.png["Uma captura de tela do AWS Marketplace mostrando uma assinatura da NetApp e a opção Configurar sua conta que aparece no canto superior direito da página."]
+
++
+A página *Atribuição de Assinatura* no netapp.com deve ser carregada em uma nova guia ou janela do navegador.
+
++
+Observe que você pode ser solicitado a efetuar login no Console primeiro.
+
+. Na página *Atribuição de Assinatura*:
++
+** Selecione as organizações ou contas do Console às quais você gostaria de associar esta assinatura.
+** No campo *Substituir assinatura existente*, escolha se deseja substituir automaticamente a assinatura existente de uma organização ou conta por esta nova assinatura.
++
+O Console substitui a assinatura existente para todas as credenciais na organização ou conta por esta nova assinatura.  Se um conjunto de credenciais nunca foi associado a uma assinatura, essa nova assinatura não será associada a essas credenciais.
+
++
+Para todas as outras organizações ou contas, você precisará associar manualmente a assinatura repetindo essas etapas.
+
++
+image:screenshot-subscription-assignment.png["Uma captura de tela da página Atribuição de Assinatura que permite que você escolha as organizações a serem associadas a esta assinatura."]
+
+
+
+. Confirme se a assinatura está associada à sua organização ou conta.
++
+.. No menu de navegação, selecione *Administração > Licença e assinaturas*.
+.. Selecione *Assinaturas*.
+.. Verifique se sua assinatura aparece.
+
+
+. Confirme se a assinatura está associada às suas credenciais da AWS.
++
+.. No canto superior direito do console, selecione o ícone Configurações e selecione *Credenciais*.
+.. Na página *Credenciais da organização*, verifique se a assinatura está associada às suas credenciais da AWS.
++
+Aqui está um exemplo.
+
++
+image:screenshot-credentials-with-subscription.png["Uma captura de tela da página de credenciais da conta do console que mostra as credenciais da AWS que incluem um campo de assinatura que identifica o nome da assinatura associada às credenciais."]
+
+
+
+
+
+
+
+== Editar credenciais
+
+Edite suas credenciais da AWS alterando o tipo de conta (chaves da AWS ou função assumida), editando o nome ou atualizando as próprias credenciais (as chaves ou o ARN da função).
+
+
+NOTE: Não é possível editar as credenciais de um perfil de instância associado a uma instância do agente do Console ou a uma instância do Amazon FSx for ONTAP .  Você só pode renomear as credenciais de uma instância do FSx for ONTAP .
+
+.Passos
+. Selecione *Administração > Credenciais*.
+. Na página *Credenciais da organização* ou *Credenciais da conta*, selecione o menu de ações para um conjunto de credenciais e, em seguida, selecione *Editar credenciais*.
+. Faça as alterações necessárias e selecione *Aplicar*.
+
+
+
+
+== Excluir credenciais
+
+Se você não precisar mais de um conjunto de credenciais, poderá excluí-las.  Você só pode excluir credenciais que não estejam associadas a um sistema.
+
+
+TIP: Não é possível excluir as credenciais de um perfil de instância associado a uma instância do agente do Console.
+
+.Passos
+. Selecione *Administração > Credenciais*.
+. Na página *Credenciais da organização* ou *Credenciais da conta*, selecione o menu de ações para um conjunto de credenciais e, em seguida, selecione *Excluir credenciais*.
+. Selecione *Excluir* para confirmar.
+

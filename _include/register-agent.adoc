@@ -1,0 +1,24 @@
+= 
+:allow-uri-read: 
+
+
+Efetue login no Console e associe o agente do Console à sua organização.  A forma como você efetua login depende do modo em que você está usando o Console.  Se você estiver usando o Console no modo padrão, faça login pelo site do SaaS.  Se você estiver usando o Console no modo restrito ou privado, faça login localmente no host do agente do Console.
+
+.Passos
+. Abra um navegador da Web e insira o URL do host do agente do Console:
++
+O URL do host do console pode ser um host local, um endereço IP privado ou um endereço IP público, dependendo da configuração do host.  Por exemplo, se o agente do Console estiver na nuvem pública sem um endereço IP público, você deverá inserir um endereço IP privado de um host que tenha uma conexão com o host do agente do Console.
+
+. Cadastre-se ou faça login.
+. Após efetuar login, configure o Console:
++
+.. Especifique a organização do Console a ser associada ao agente do Console.
+.. Digite um nome para o sistema.
+.. Em *Você está executando em um ambiente seguro?* mantenha o modo restrito desabilitado.
++
+O modo restrito não é suportado quando o agente do Console é instalado no local.
+
+.. Selecione *Vamos começar*.
+
+
+

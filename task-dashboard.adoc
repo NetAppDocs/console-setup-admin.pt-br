@@ -1,0 +1,224 @@
+---
+sidebar: sidebar 
+permalink: task-dashboard.html 
+keywords: bluexp, dashboard, console, home page 
+summary: No NetApp Console, você pode visualizar métricas na página inicial. 
+---
+= Exibir métricas na página inicial do NetApp Console
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Monitorar a integridade do seu depósito garante que você esteja ciente dos problemas com a proteção do armazenamento e possa tomar medidas para resolvê-los.  Usando a página inicial do NetApp Console, visualize o status dos seus backups e restaurações do NetApp Backup and Recovery e o número de cargas de trabalho que correm risco de ataque de ransomware ou estão protegidas, conforme indicado pelo NetApp Ransomware Resilience.  Você pode revisar a capacidade de armazenamento de clusters individuais e do Cloud Volumes ONTAP, alertas do ONTAP , capacidade de desempenho de armazenamento por cluster ou sistema Cloud Volumes ONTAP , os diferentes tipos de licenças que você tem e muito mais.
+
+Todos os painéis na página inicial mostram dados no nível da organização.  Os painéis Capacidade de armazenamento e Desempenho de armazenamento mostram sistemas associados a projetos que o usuário pode acessar com base nas permissões do IAM.
+
+O sistema atualiza os dados na página inicial a cada cinco minutos.  O armazenamento em cache pode fazer com que os dados nesta página sejam diferentes dos valores reais por até 15 minutos.
+
+
+NOTE: Métricas precisas na página inicial exigem agentes de console configurados e dimensionados adequadamente.
+
+
+
+== Funções necessárias do NetApp Console
+
+Cada painel na página inicial requer funções de usuário diferentes:
+
+* *Painel de capacidade de armazenamento*: Capacidade de ver a página de sistemas do console NetApp
+* * Painel de alertas ONTAP *: Administrador de pasta ou projeto, Analista de suporte de operações, Administrador da organização, Visualizador da organização, Superadministrador, Supervisualizador
+* *Painel de capacidade de desempenho de armazenamento*: Capacidade de ver a página de sistemas do console NetApp
+* *Painel de licenças e assinaturas*: Administrador de pasta ou projeto, Administrador da organização, Visualizador da organização, Superadministrador, Supervisualizador
+* *Painel de resiliência contra ransomware*: administrador de pasta ou projeto, administrador da organização, administrador de proteção contra ransomware, visualizador de proteção contra ransomware, superadministrador, supervisualizador
+* *Painel de backup e recuperação*: Administrador de backup e recuperação, Superadministrador de backup e recuperação, Visualizador de backup e recuperação, Administrador de clone de backup e recuperação, Administrador de pasta ou projeto, Administrador de organização, Administrador de restauração de backup e recuperação, Superadministrador, Supervisualizador
+
+
+Se você não tiver permissões para acessar um painel, o painel exibirá uma mensagem indicando que você não tem permissões para usá-lo.
+
+https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["Saiba mais sobre as funções de acesso do NetApp Console."] .
+
+.Passos
+. No menu do NetApp Console, selecione *Home*.
++
+Se você tiver a função de administrador da organização e nenhum agente ou sistema de armazenamento estiver configurado, a página inicial exibirá informações de introdução.
+
++
+image:screenshot-home-greenfield.png["Página inicial do console NetApp dando boas-vindas a novos usuários"]
+
++
+Se você já configurou o NetApp Console, pelo menos um agente do Console está habilitado e pelo menos um cluster ou sistema Cloud Volumes ONTAP foi adicionado a esse agente, a página inicial mostra métricas sobre seu ambiente de armazenamento.
+
++
+image:screenshot-home-metrics.png["Página inicial do console NetApp mostrando métricas"]
+
+
+
+
+
+== Habilitar que as métricas apareçam na página inicial
+
+Você pode ver as métricas na página inicial quando as seguintes condições forem atendidas:
+
+* Você está conectado a uma instância SaaS do NetApp Console.
+* Você pertence a uma organização com recursos de armazenamento existentes (agente e cluster ou sistema Cloud Volumes ONTAP ).
+* Pelo menos um agente do Console está habilitado.
+* Pelo menos um cluster ou sistema Cloud Volumes ONTAP foi adicionado nesse agente.
+
+
+Para permitir que as métricas apareçam na página inicial, conclua as seguintes tarefas:
+
+* Habilite pelo menos um agente do Console.
+* Adicione pelo menos um cluster ou um Cloud Volumes ONTAP usando esse agente.
+
+
+
+
+== Veja a capacidade geral de armazenamento
+
+O painel Capacidade de armazenamento fornece as seguintes informações sobre clusters ONTAP e sistemas Cloud Volumes ONTAP :
+
+* Número de sistemas ONTAP descobertos no Console
+* Número de sistemas Cloud Volumes ONTAP descobertos no Console
+* Uso de capacidade por cluster
+
+
+A ordem dos clusters ou sistemas Cloud Volumes ONTAP é baseada na quantidade de capacidade utilizada.  O cluster ou sistema com maior capacidade aparece primeiro para facilitar a identificação.
+
+Indicadores de alerta mostram clusters com capacidade de 80%, com dados atualizados a cada cinco minutos.
+
+
+TIP: Se você tiver vários projetos, poderá ver dados diferentes no painel Capacidade de armazenamento em comparação à página Sistemas.  Isso ocorre porque a página Sistemas mostra informações com base no nível do projeto, enquanto o painel Capacidade de armazenamento mostra informações no nível da organização.  Além disso, os dados neste painel podem diferir dos valores reais por no máximo 15 minutos, porque os dados são armazenados em cache durante esse período para otimizar o desempenho.
+
+.Passos
+. No menu do NetApp Console, revise o painel Capacidade de armazenamento.
+. No painel Capacidade de armazenamento, selecione *Exibir* para ir para a página Sistemas de console.
+. Na página Sistemas, selecione o projeto que contém o cluster que você deseja visualizar.
+. Na página Sistemas, selecione um cluster para ver mais detalhes sobre ele.
+
+
+
+
+== Ver alertas ONTAP
+
+Visualize problemas ou riscos potenciais em seus ambientes ONTAP locais da NetApp . Você pode ver alguns alertas não relacionados ao EMS e alguns alertas relacionados ao EMS.
+
+Os dados são atualizados a cada 5 minutos.
+
+Você pode ver alertas ONTAP com estas gravidades:
+
+* Crítico
+* Aviso
+* Informativo
+
+
+Você pode ver alertas ONTAP para estas áreas de impacto:
+
+* Capacidade
+* Desempenho
+* Proteção
+* Disponibilidade
+* Segurança
+
+
+
+TIP: O armazenamento em cache otimiza o desempenho, mas pode fazer com que os dados neste painel sejam diferentes dos valores reais por até 15 minutos.
+
+*Sistemas suportados*
+
+* Um sistema ONTAP NAS ou SAN local é suportado.
+* Os sistemas Cloud Volumes ONTAP não são suportados.
+
+
+*Fontes de dados suportadas*
+
+Veja alertas sobre determinados eventos que ocorrem no ONTAP. Eles são uma combinação de EMS e alertas baseados em métricas.
+
+Para obter detalhes sobre alertas ONTAP , consulte https://docs.netapp.com/us-en/bluexp-alerts/index.html["Sobre alertas ONTAP"^] .
+
+Para obter uma lista de alertas que você pode ver, consulte https://docs.netapp.com/us-en/bluexp-alerts/alerts-use-dashboard.html["Veja os riscos potenciais no armazenamento ONTAP"^] .
+
+.Passos
+. No menu do NetApp Console, revise o painel de alertas do ONTAP .
+. Opcionalmente, filtre os alertas selecionando o nível de gravidade ou altere o filtro para mostrar alertas com base na área de impacto.
+. No painel de alertas do ONTAP , selecione *Exibir* para ir para a página Alertas do Console.
+
+
+
+
+== Ver capacidade de desempenho de armazenamento
+
+Analise a capacidade de desempenho de armazenamento usada por cluster ou sistema Cloud Volumes ONTAP para determinar como a capacidade de desempenho, a latência e o IOPS estão impactando suas cargas de trabalho.  Por exemplo, você pode descobrir que precisa mudar as cargas de trabalho para minimizar a latência e maximizar o IOPS e a taxa de transferência para suas cargas de trabalho críticas.
+
+O sistema organiza clusters e sistemas por capacidade de desempenho, listando primeiro a maior capacidade para facilitar a identificação.
+
+
+TIP: O armazenamento em cache otimiza o desempenho, mas pode fazer com que os dados neste painel sejam diferentes dos valores reais por até 15 minutos.
+
+.Passos
+. No menu do NetApp Console, revise o painel Desempenho de armazenamento.
+. No painel Desempenho de armazenamento, selecione *Exibir* para acessar uma página Desempenho que lista todos os clusters e dados dos sistemas Cloud Volumes ONTAP para capacidade de desempenho, IOPS e latência.
+. Selecione um cluster para visualizar seus detalhes no Gerenciador do Sistema.
+
+
+
+
+== Visualize as licenças e assinaturas que você possui
+
+Revise as seguintes informações no painel Licenças e assinaturas:
+
+* O número total de licenças e assinaturas que você tem.
+* O número de cada tipo de licença e assinatura que você possui (licença direta, contrato anual ou PAYGO).
+* O número de licenças e assinaturas que estão ativas, exigem ação ou estão próximas do vencimento.
+* O sistema exibe indicadores ao lado dos tipos de licença que exigem ação ou estão próximos de expirar.
+
+
+Os dados são atualizados a cada 5 minutos.
+
+
+TIP: O armazenamento em cache otimiza o desempenho, mas pode fazer com que os dados neste painel sejam diferentes dos valores reais por até 15 minutos.
+
+.Passos
+. No menu do NetApp Console, revise o painel Licenças e assinaturas.
+. No painel Licenças e assinaturas, selecione *Exibir* para ir para a página Licenças e assinaturas do console.
+
+
+
+
+== Ver status de resiliência do ransomware
+
+Descubra se as cargas de trabalho correm risco de ataques de ransomware ou estão protegidas com o serviço de dados NetApp Ransomware Resilience.  Você pode revisar a quantidade total de dados protegidos, visualizar o número de ações recomendadas e visualizar o número de alertas relacionados à proteção contra ransomware.
+
+Os dados são atualizados a cada 5 minutos e correspondem aos dados mostrados no Painel de resiliência do NetApp Ransomware.
+
+https://docs.netapp.com/us-en/bluexp-ransomware-protection/concept-ransomware-protection.html["Saiba mais sobre a resiliência do NetApp Ransomware"^] .
+
+.Passos
+. No menu do NetApp Console, revise o painel Resiliência contra Ransomware.
+. Execute um dos seguintes procedimentos no painel Resiliência de Ransomware:
++
+** Selecione *Exibir* para acessar o Painel de Resiliência do NetApp Ransomware. Para mais detalhes, consulte https://docs.netapp.com/us-en/bluexp-ransomware-protection/rp-use-dashboard.html["Monitore a integridade da carga de trabalho usando o NetApp Ransomware Resilience Dashboard"^] .
+** Revise "Ações recomendadas" no Painel de resiliência do NetApp Ransomware. Para mais detalhes, consulte https://docs.netapp.com/us-en/bluexp-ransomware-protection/rp-use-dashboard.html["Revise as recomendações de proteção no Painel de Resiliência do NetApp Ransomware"^] .
+** Selecione o link de alertas para revisar os alertas na página Alertas de resiliência do NetApp Ransomware.  Para mais detalhes, consulte https://docs.netapp.com/us-en/bluexp-ransomware-protection/rp-use-alert.html["Lide com alertas de ransomware detectados com o NetApp Ransomware Resilience"^] .
+
+
+
+
+
+
+== Ver status de backup e recuperação
+
+Revise o status geral dos seus backups e restaurações do NetApp Backup and Recovery.  Você pode ver o número de recursos protegidos e desprotegidos.  Você também pode ver a porcentagem de backups e operações de restauração para proteção de suas cargas de trabalho.  Uma porcentagem maior indica melhor proteção de dados.
+
+Os dados são atualizados a cada 5 minutos.
+
+
+TIP: O armazenamento em cache otimiza o desempenho, mas pode fazer com que os dados neste painel sejam diferentes dos valores reais por até 15 minutos.
+
+.Passos
+. No menu do NetApp Console, revise o painel Backup e recuperação.
+. Selecione *Exibir* para acessar o Painel de Backup e Recuperação do NetApp . Para mais detalhes, consulte https://docs.netapp.com/us-en/bluexp-backup-recovery/index.html["Documentação do NetApp Backup and Recovery"^] .
+
