@@ -6,7 +6,7 @@
 
 == BlueXP agora é NetApp Console
 
-O NetApp Console, criado com base na base aprimorada e reestruturada do BlueXP , fornece gerenciamento centralizado do armazenamento NetApp e do NetApp Data Services em ambientes locais e na nuvem em nível empresarial, fornecendo insights em tempo real, fluxos de trabalho mais rápidos e administração simplificada, de forma altamente segura e compatível.
+O NetApp Console, criado com base na base aprimorada e reestruturada do BlueXP , fornece gerenciamento centralizado do armazenamento NetApp e do NetApp Data Services em ambientes locais e na nuvem em nível empresarial, fornecendo insights em tempo real, fluxos de trabalho mais rápidos e administração simplificada, altamente segura e compatível.
 
 
 
@@ -26,9 +26,9 @@ image:https://docs.netapp.com/us-en/console-setup-admin/media/screenshot-storage
 
 ==== Menu de armazenamento expandido
 
-O menu *Armazenamento* também inclui *Alertas* para visualizar alertas do sistema ONTAP e *Planejamento do ciclo de vida* (anteriormente *Eficiência econômica*) para identificar recursos não utilizados ou subutilizados.
+O menu *Armazenamento* inclui *Alertas* para visualizar alertas do sistema ONTAP e *Planejamento do ciclo de vida* (anteriormente *Eficiência econômica*) para identificar recursos não utilizados ou subutilizados.
 
-A NetApp também moveu o Keystone para o menu *Armazenamento*, onde você pode gerenciar suas assinaturas do NetApp Keystone e visualizar seu uso.
+A NetApp moveu o Keystone para o menu *Armazenamento*, onde você pode gerenciar suas assinaturas do NetApp Keystone e visualizar seu uso.
 
 image:https://docs.netapp.com/us-en/console-setup-admin/media/screenshot-storage-menu.png["Uma captura de tela do menu Armazenamento."]
 

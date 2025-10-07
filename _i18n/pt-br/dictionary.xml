@@ -968,7 +968,6 @@
   <block id="db971a19c27a52f19f1811c52c55dc2d" category="section-title">Nova função de acesso para suporte operacional</block>
   <block id="9a69bf13bbd4a86f23945e6b153f3913" category="paragraph">O BlueXP agora oferece suporte à função de analista de suporte operacional. Esta função concede ao usuário permissões para monitorar alertas de armazenamento, visualizar o cronograma de auditoria do BlueXP e inserir e rastrear casos de suporte da NetApp .</block>
   <block id="bc2fe31b1e2682a9a79513d792e9c721" category="doc">BlueXP agora é NetApp Console</block>
-  <block id="995c8f79a8e07fbd8d519e45d03d6004" category="paragraph">O NetApp Console, criado com base na base aprimorada e reestruturada do BlueXP , fornece gerenciamento centralizado do armazenamento NetApp e do NetApp Data Services em ambientes locais e na nuvem em nível empresarial, fornecendo insights em tempo real, fluxos de trabalho mais rápidos e administração simplificada, de forma altamente segura e compatível.</block>
   <block id="0b0a6d9ce7462fc9a218e93ccbee32e7" category="section-title">Menus e páginas de navegação</block>
   <block id="7ceea4a6639fef28fae4477857f229e5" category="paragraph">A NetApp moveu a maioria das opções de menu para o painel de navegação esquerdo e reorganizou os menus para facilitar a navegação no NetApp Console.</block>
   <block id="4fa56c3d158c844dc75b2826ee4c98d0" category="section-title">A tela é substituída pela página Sistemas</block>
@@ -976,8 +975,6 @@
   <block id="ddd56b1479dbec10cfb6fc0a3a8afe57" category="inline-image-macro">Uma captura de tela da página de sistemas.</block>
   <block id="028a5defa734a1e5527100ece8ea2e66" category="paragraph"><block ref="028a5defa734a1e5527100ece8ea2e66" category="inline-image-macro-rx" type="image"></block></block>
   <block id="e6ee78fd171283b1b449978ae0c73e06" category="section-title">Menu de armazenamento expandido</block>
-  <block id="52f2049d6a6b3b78ceb9820e5ce16a9d" category="paragraph">O menu *Armazenamento* também inclui *Alertas* para visualizar alertas do sistema ONTAP e *Planejamento do ciclo de vida* (anteriormente *Eficiência econômica*) para identificar recursos não utilizados ou subutilizados.</block>
-  <block id="b75b41949ffca5829d6a1887ecf0ebd4" category="paragraph">A NetApp também moveu o Keystone para o menu *Armazenamento*, onde você pode gerenciar suas assinaturas do NetApp Keystone e visualizar seu uso.</block>
   <block id="0bc00d5c9372c38aa1f6078843c22005" category="inline-image-macro">Uma captura de tela do menu Armazenamento.</block>
   <block id="0e279d1eb32921bbbc940faea63f4db6" category="section-title">Menu de administração</block>
   <block id="08386d27df9de73a030b8e5da1f8112b" category="paragraph">Use o menu centralizado *Administração* para gerenciar o NetApp Console, casos de suporte, licenças e assinaturas (anteriormente chamado de carteira digital).</block>
@@ -5534,4 +5531,7 @@
   <block id="e4c0002e4f9f19273bc004922899fb85" category="sidebar">Acesso à rede do console (legado)</block>
   <block id="0adc03eac86772ad2c75c8f140be417e" category="sidebar">Conhecimento e suporte</block>
   <block id="f445c6d565697b0932cf841aca945e2a" category="paragraph"><block ref="f445c6d565697b0932cf841aca945e2a" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="56ed5396ea479b4ed31e75f97a4377c7" category="paragraph">O NetApp Console, criado com base na base aprimorada e reestruturada do BlueXP , fornece gerenciamento centralizado do armazenamento NetApp e do NetApp Data Services em ambientes locais e na nuvem em nível empresarial, fornecendo insights em tempo real, fluxos de trabalho mais rápidos e administração simplificada, altamente segura e compatível.</block>
+  <block id="e4374974e911590511a1add55932606e" category="paragraph">O menu *Armazenamento* inclui *Alertas* para visualizar alertas do sistema ONTAP e *Planejamento do ciclo de vida* (anteriormente *Eficiência econômica*) para identificar recursos não utilizados ou subutilizados.</block>
+  <block id="b3289075ae80ce2a2ae0b68cf8c95606" category="paragraph">A NetApp moveu o Keystone para o menu *Armazenamento*, onde você pode gerenciar suas assinaturas do NetApp Keystone e visualizar seu uso.</block>
 </blocks>

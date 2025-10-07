@@ -31,6 +31,13 @@ Antes da instalação, certifique-se de que o host da VM atenda aos requisitos e
 
 Certifique-se de que sua máquina host atenda aos requisitos de instalação antes de instalar o agente do Console.
 
+* CPU: 8 núcleos ou 8 vCPUs
+* RAM: 32 GB
+* Espaço em disco: 165 GB (provisionamento denso)
+* vSphere 7.0 ou superior
+* Host ESXi 7.03 ou superior
+
+
 
 NOTE: Instale o agente em um ambiente vCenter em vez de diretamente em um host ESXi.
 
