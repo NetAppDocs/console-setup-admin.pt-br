@@ -46,6 +46,9 @@ O sistema contata esses terminais em dois cenários:
 | \ https://mysupport.netapp.com | Para obter informações de licenciamento e enviar mensagens do AutoSupport para o suporte da NetApp . 
 
 
+| \ https://support.netapp.com | Para obter informações de licenciamento e enviar mensagens do AutoSupport para o suporte da NetApp . 
+
+
 | \ https://signin.b2c.netapp.com | Para atualizar as credenciais do NetApp Support Site (NSS) ou adicionar novas credenciais do NSS ao NetApp Console. 
 
 
