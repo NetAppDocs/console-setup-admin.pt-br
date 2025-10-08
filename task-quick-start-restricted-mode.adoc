@@ -19,8 +19,6 @@ Comece a usar o NetApp Console no modo restrito preparando seu ambiente e implan
 O modo restrito é normalmente usado por governos estaduais e locais e empresas regulamentadas, incluindo implantações nas regiões AWS GovCloud e Azure Government.  Antes de começar, certifique-se de ter uma compreensão delink:concept-connectors.html["Agentes de console"] elink:concept-modes.html["modos de implantação"] .
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Um"] link:task-prepare-restricted-mode.html["Preparar para implantação"]
-https://raw.githubusercontent.com/NetAppDocs/console-setup-admin-internal/blob/main/media/screenshot-canvas.png[]
-
 [role="quick-margin-list"]
 . Prepare um host Linux dedicado que atenda aos requisitos de CPU, RAM, espaço em disco, ferramenta de orquestração de contêineres e muito mais.
 . Configure uma rede que forneça acesso às redes de destino, acesso de saída à Internet para instalações manuais e acesso de saída à Internet para acesso diário.

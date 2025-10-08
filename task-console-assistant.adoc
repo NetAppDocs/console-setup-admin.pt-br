@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: task-console-assistant.html 
 keywords: bluexp,netapp console,console assistant,assistant,setup assistant,get started,quick start,first time user,first time setup,setup wizard 
-summary: 'Se você for um usuário iniciante do NetApp Console, o Assistente do Console o orientará no processo de configuração inicial.  O Assistente ajuda você a adicionar uma conta do NetApp Support Site (NSS), adicionar um agente de console, adicionar um cluster e adicionar uma licença ou assinatura, facilitando o início do gerenciamento dos seus dados.' 
+summary: 'Se você for um usuário iniciante do NetApp Console, o assistente do Console o orientará no processo de configuração inicial.  O assistente ajuda você a adicionar uma conta do NetApp Support Site (NSS), adicionar um agente de console, adicionar um cluster e adicionar uma licença ou assinatura, facilitando o início do gerenciamento dos seus dados.' 
 ---
-= Comece a usar o NetApp Console Assistant
+= Comece a usar o assistente do NetApp Console
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,21 +14,21 @@ summary: 'Se você for um usuário iniciante do NetApp Console, o Assistente do 
 
 
 [role="lead"]
-Se você for um usuário iniciante do NetApp Console com a função de administrador da organização, poderá usar o Assistente do Console para orientá-lo no processo de configuração inicial.  O Assistente ajuda você a adicionar uma conta do NetApp Support Site (NSS), adicionar um agente de console, adicionar um cluster e adicionar uma licença ou assinatura, facilitando o início do gerenciamento dos seus dados.
+Se você for um usuário iniciante do NetApp Console com a função de administrador da organização, poderá usar o assistente do Console para orientá-lo no processo de configuração inicial.  O assistente ajuda você a adicionar uma conta do NetApp Support Site (NSS), adicionar um agente de console, adicionar um cluster e adicionar uma licença ou assinatura, facilitando o início do gerenciamento dos seus dados.
 
 
 
-== Funções necessárias para acessar o Assistente do Console
+== Funções necessárias para acessar o assistente do Console
 
-O Assistente do Console está disponível somente para usuários com a função de administrador da organização.
+O assistente do Console está disponível somente para usuários com a função de administrador da organização.
 
 
 
-== Quando o Assistente do Console aparece?
+== Quando o assistente do Console aparece?
 
-O Console Assistant fica disponível na página inicial do NetApp Console até que as tarefas de configuração obrigatórias sejam concluídas.
+O assistente do Console fica disponível na página inicial do NetApp Console até que as tarefas de configuração obrigatórias sejam concluídas.
 
-Use o Assistente para concluir estas tarefas, algumas das quais são obrigatórias:
+Use o assistente para concluir estas tarefas, algumas das quais são obrigatórias:
 
 * Adicione uma conta do NetApp Support Site (NSS).
 * Conecte-se ao seu estado de armazenamento implantando um agente do Console (etapa obrigatória).
@@ -39,18 +39,18 @@ Use o Assistente para concluir estas tarefas, algumas das quais são obrigatóri
 
 
 
-== Habilitar o Assistente do Console
+== Habilitar o assistente do console
 
-Por padrão, o NetApp Console exibe o Assistente do Console na página inicial para novos usuários que têm a função de administrador da organização.
-
-
-TIP: Você pode dispensar o Assistente somente depois que você ou outra pessoa concluir os itens obrigatórios.  Após concluir os itens obrigatórios, o Assistente será dispensado para todos os usuários da sua organização e não aparecerá novamente.
+Por padrão, o NetApp Console exibe o assistente do Console na página inicial para novos usuários que têm a função de administrador da organização.
 
 
+TIP: Você pode dispensar o assistente somente depois que você ou outra pessoa concluir os itens obrigatórios.  Após concluir os itens obrigatórios, o assistente será dispensado para todos os usuários da sua organização e não aparecerá novamente.
 
-== Use o Assistente do Console para começar
 
-O Console Assistant orienta você na configuração do seu ambiente NetApp Console com estas tarefas:
+
+== Use o assistente do Console para começar
+
+O assistente do Console orienta você na configuração do seu ambiente do NetApp Console com estas tarefas:
 
 * Adicione uma conta do NetApp Support Site (NSS).
 * Conecte-se ao seu estado de armazenamento implantando um agente do Console, no local ou na nuvem.  Você pode implantá-lo manualmente ou baixando um OVA.  Esta etapa é obrigatória.

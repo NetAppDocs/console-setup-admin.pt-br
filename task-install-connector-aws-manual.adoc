@@ -365,6 +365,13 @@ Para atualizar as credenciais do NetApp Support Site (NSS) ou adicionar novas cr
 
 
  a| 
+\https:\\support.netapp.com
+ a| 
+Para obter informações de licenciamento e enviar mensagens do AutoSupport para o suporte da NetApp , bem como receber atualizações de software para o Cloud Volumes ONTAP.
+
+
+
+ a| 
 \ https://api.bluexp.netapp.com \ https://netapp-cloud-account.auth0.com \ https://netapp-cloud-account.us.auth0.com \ https://console.netapp.com \ https://components.console.bluexp.netapp.com \ https://cdn.auth0.com
  a| 
 Para fornecer recursos e serviços no NetApp Console.
@@ -412,7 +419,7 @@ Se os sistemas Cloud Volumes ONTAP não tiverem uma conexão de saída com a Int
 --
 
 
-Habilitar NTP:: Se você estiver planejando usar o NetApp Data Classification para verificar suas fontes de dados corporativos, deverá habilitar um serviço Network Time Protocol (NTP) no agente do Console e no sistema NetApp Data Classification para que o horário seja sincronizado entre os sistemas. https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html["Saiba mais sobre a classificação de dados da NetApp"^]
+Habilitar NTP:: Se você estiver planejando usar o NetApp Data Classification para verificar suas fontes de dados corporativos, deverá habilitar um serviço Network Time Protocol (NTP) no agente do Console e no sistema NetApp Data Classification para que o horário seja sincronizado entre os sistemas. https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["Saiba mais sobre a classificação de dados da NetApp"^]
 
 
 
@@ -535,7 +542,7 @@ chmod +x NetApp_Console_Agent_Cloud_<version>
 +
 Onde <versão> é a versão do agente do Console que você baixou.
 
-. Se estiver instalando em um ambiente de nuvem governamental, desative as verificações de configuração.link:task-troubleshoot-connector.html#disable-config-check["Aprenda como desabilitar verificações de configuração para instalações manuais."]
+. Se estiver instalando em um ambiente de nuvem governamental, desative as verificações de configuração.link:task-troubleshoot-agent.html#disable-config-check["Aprenda como desabilitar verificações de configuração para instalações manuais."]
 . Execute o script de instalação.
 +
 [source, cli]
@@ -621,7 +628,7 @@ No final da instalação, o serviço do agente do Console (occm) será reiniciad
 
 
 
-NOTE: Se a instalação falhar, você pode visualizar o relatório e os logs da instalação para ajudar a corrigir os problemas.link:task-troubleshoot-connector.html#troubleshoot-installation["Aprenda a solucionar problemas de instalação."]
+NOTE: Se a instalação falhar, você pode visualizar o relatório e os logs da instalação para ajudar a corrigir os problemas.link:task-troubleshoot-agent.html#troubleshoot-installation["Aprenda a solucionar problemas de instalação."]
 
 . Abra um navegador da Web em um host que tenha uma conexão com a máquina virtual do agente do Console e insira o seguinte URL:
 +

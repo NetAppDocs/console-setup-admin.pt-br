@@ -221,7 +221,7 @@ Você tem a opção de configurar um servidor proxy após a instalação, mas is
 
 NOTE: Não é possível definir um certificado para um servidor proxy transparente ao instalar manualmente o agente do Console.  Se precisar definir um certificado para um servidor proxy transparente, você deverá usar o Console de Manutenção após a instalação. Saiba mais sobre olink:reference-connector-maint-console.html["Console de manutenção do agente"] .
 
-* Você precisa desabilitar a verificação de configuração que verifica a conectividade de saída durante a instalação.  A instalação manual falhará se esta verificação não estiver desabilitada.link:task-troubleshoot-connector.html["Aprenda como desabilitar verificações de configuração para instalações manuais."]
+* Você precisa desabilitar a verificação de configuração que verifica a conectividade de saída durante a instalação. A instalação manual falhará se esta verificação não estiver desabilitada.link:task-troubleshoot-agent.html["Aprenda como desabilitar verificações de configuração para instalações manuais."]
 * Dependendo do seu sistema operacional, o Podman ou o Docker Engine será necessário antes de instalar o agente do Console.
 
 
@@ -252,7 +252,7 @@ chmod +x NetApp_Console_Agent_Cloud_<version>
 +
 Onde <versão> é a versão do agente do Console que você baixou.
 
-. Se estiver instalando em um ambiente de nuvem governamental, desative as verificações de configuração.link:task-troubleshoot-connector.html#disable-config-check["Aprenda como desabilitar verificações de configuração para instalações manuais."]
+. Se estiver instalando em um ambiente de nuvem governamental, desative as verificações de configuração.link:task-troubleshoot-agent.html#disable-config-check["Aprenda como desabilitar verificações de configuração para instalações manuais."]
 . Execute o script de instalação.
 +
 [source, cli]

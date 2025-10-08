@@ -148,7 +148,7 @@ Acesse ferramentas de diagnóstico para solucionar problemas com o agente do Con
 . Selecione *Iniciar Console Web*.
 . Efetue login na instância da VM usando o nome de usuário e a senha que você especificou quando criou a instância da VM.  O nome de usuário é `maint` e a senha é aquela que você especificou quando criou a instância da VM.
 . Digitar `3` para visualizar o menu Suporte e Diagnóstico.
-. Digitar `1` para acessar as ferramentas de diagnóstico e seguir as instruções na tela.  + Por exemplo, você pode verificar se todos os serviços do agente estão em execução. link:task-troubleshoot-connector.html#check-agent-status["Verifique o status do agente do Console"^] .
+. Digitar `1` para acessar as ferramentas de diagnóstico e seguir as instruções na tela. + Por exemplo, você pode verificar se todos os serviços do agente estão em execução. link:task-troubleshoot-agent.html#check-agent-status["Verifique o status do agente do Console"^] .
 
 
 

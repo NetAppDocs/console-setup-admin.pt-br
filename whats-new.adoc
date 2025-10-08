@@ -174,7 +174,7 @@ Ao implantar um agente do Console a partir do NetApp Console, agora você tem a 
 
 === Solução de problemas aprimorada para agentes do Console
 
-O agente do Console melhorou as mensagens de erro que ajudam você a entender melhor os problemas.link:https://docs.netapp.com/us-en/console-setup-admin/task-troubleshoot-connector.html["Aprenda a solucionar problemas de agentes do Console."]
+O agente do Console melhorou as mensagens de erro que ajudam você a entender melhor os problemas.link:https://docs.netapp.com/us-en/console-setup-admin/task-troubleshoot-agent.html["Aprenda a solucionar problemas de agentes do Console."]
 
 
 

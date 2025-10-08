@@ -33,7 +33,7 @@ Cada painel na página inicial requer funções de usuário diferentes:
 * * Painel de alertas ONTAP *: Administrador de pasta ou projeto, Analista de suporte de operações, Administrador da organização, Visualizador da organização, Superadministrador, Supervisualizador
 * *Painel de capacidade de desempenho de armazenamento*: Capacidade de ver a página de sistemas do console NetApp
 * *Painel de licenças e assinaturas*: Administrador de pasta ou projeto, Administrador da organização, Visualizador da organização, Superadministrador, Supervisualizador
-* *Painel de resiliência contra ransomware*: administrador de pasta ou projeto, administrador da organização, administrador de proteção contra ransomware, visualizador de proteção contra ransomware, superadministrador, supervisualizador
+* *Painel de resiliência contra ransomware*: administrador de pasta ou projeto, administrador da organização, administrador de resiliência contra ransomware, visualizador de resiliência contra ransomware, superadministrador, supervisualizador
 * *Painel de backup e recuperação*: Administrador de backup e recuperação, Superadministrador de backup e recuperação, Visualizador de backup e recuperação, Administrador de clone de backup e recuperação, Administrador de pasta ou projeto, Administrador de organização, Administrador de restauração de backup e recuperação, Superadministrador, Supervisualizador
 
 
@@ -194,7 +194,7 @@ Descubra se as cargas de trabalho correm risco de ataques de ransomware ou estã
 
 Os dados são atualizados a cada 5 minutos e correspondem aos dados mostrados no Painel de resiliência do NetApp Ransomware.
 
-https://docs.netapp.com/us-en/bluexp-ransomware-protection/concept-ransomware-protection.html["Saiba mais sobre a resiliência do NetApp Ransomware"^] .
+https://docs.netapp.com/us-en/data-services-ransomware-resilience/concept-ransomware-resilience.html["Saiba mais sobre a resiliência do NetApp Ransomware"^] .
 
 .Passos
 . No menu do NetApp Console, revise o painel Resiliência contra Ransomware.
