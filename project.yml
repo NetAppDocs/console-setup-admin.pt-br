@@ -30,7 +30,7 @@ sidebar:
         url: "/concept-connectors.html"
       - title: Modos de implantação
         url: "/concept-modes.html"
-    - title: Comece a usar o assistente NetApp
+    - title: Comece a usar o assistente do NetApp Console
       entries:
       - title: Use o assistente do NetApp Console
         url: "/task-console-assistant.html"
