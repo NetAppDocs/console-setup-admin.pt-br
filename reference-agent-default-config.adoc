@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar 
-permalink: reference-connector-default-config.html 
+permalink: reference-agent-default-config.html 
 keywords: linux, user name, operating system, installation files, installation folder, folder, log, logs, service, mysql, packages, linux, connector configuration, connector installation folder, connector folder, connector log, ubuntu, agent, agent installation folder, agent configuration 
 summary: Saiba mais sobre o agente do Console antes de implantá-lo. 
 ---
@@ -34,7 +34,7 @@ Se você implantou um agente do Console a partir do Console ou do marketplace do
 O sistema operacional não inclui uma GUI.  Você deve usar um terminal para acessar o sistema.
 
 * A instalação inclui o Docker Engine, que é a ferramenta de orquestração de contêineres necessária.
-* O nome de usuário para a instância do EC2 Linux é ubuntu (para agentes criados antes de maio de 2023, o nome de usuário era ec2-user).
+* O nome de usuário para a instância do EC2 Linux é ubuntu (para agentes criados antes de maio de 2023, o nome de usuário é ec2-user).
 * O disco padrão do sistema é um disco gp2 de 100 GiB.
 
 

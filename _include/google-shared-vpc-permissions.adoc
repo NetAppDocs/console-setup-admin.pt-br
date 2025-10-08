@@ -15,7 +15,7 @@ Esta tabela é para referência e seu ambiente deve refletir a tabela de permiss
 
 
 | Conta do Google para implantar o agente | Personalizado | Projeto de Serviço  a| 
-link:task-install-connector-google-bluexp-gcloud.html#agent-permissions-google["Política de implantação do agente"]
+link:task-install-agent-google-console-gcloud.html#agent-permissions-google["Política de implantação do agente"]
  a| 
 compute.networkUser
 | Implantando o agente no projeto de serviço 

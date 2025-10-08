@@ -81,10 +81,10 @@ Os agentes do console devem ter acesso aos mesmos endpoints que o NetApp Console
 
 Configure o acesso ao ponto de extremidade da rede antes de instalar o agente do Console.
 
-* link:task-install-connector-aws-bluexp.html#networking-aws-agent["Configurar acesso à rede AWS para um agente do Console"]
-* link:task-install-connector-azure-bluexp.html#networking-azure-agent["Configurar acesso à rede do Azure para um agente do Console"]
-* link:task-install-connector-google-bluexp-gcloud.html#networking-gcp-agent["Configurar o acesso à rede do Google Cloud para um agente do Console"]
-* link:task-install-connector-on-prem.html#network-access-agent["Configurar acesso à rede local para um agente do Console"]
+* link:task-install-agent-aws-console.html#networking-aws-agent["Configurar acesso à rede AWS para um agente do Console"]
+* link:task-install-agent-azure-console.html#networking-azure-agent["Configurar acesso à rede do Azure para um agente do Console"]
+* link:task-install-agent-google-console-gcloud.html#networking-gcp-agent["Configurar o acesso à rede do Google Cloud para um agente do Console"]
+* link:task-install-agent-on-prem.html#network-access-agent["Configurar acesso à rede local para um agente do Console"]
 
 
 

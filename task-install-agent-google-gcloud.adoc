@@ -17,7 +17,7 @@ summary: Para criar um agente do Console no Google Cloud usando o Google Cloud, 
 Para criar um agente do Console no Google Cloud usando o Google Cloud, você precisa configurar sua rede, preparar as permissões do Google Cloud, habilitar as APIs do Google Cloud e, em seguida, criar o agente do Console.
 
 .Antes de começar
-* Você deveria ter umlink:concept-connectors.html["compreensão dos agentes do Console"] .
+* Você deveria ter umlink:concept-agents.html["compreensão dos agentes do Console"] .
 * Você deve revisarlink:reference-limitations.html["Limitações do agente do console"] .
 
 
@@ -313,7 +313,7 @@ Esta tabela é para referência e seu ambiente deve refletir a tabela de permiss
 
 
 | Conta do Google para implantar o agente | Personalizado | Projeto de Serviço  a| 
-link:task-install-connector-google-bluexp-gcloud.html#agent-permissions-google["Política de implantação do agente"]
+link:task-install-agent-google-console-gcloud.html#agent-permissions-google["Política de implantação do agente"]
  a| 
 compute.networkUser
 | Implantando o agente no projeto de serviço 
@@ -378,7 +378,7 @@ https://cloud.google.com/apis/docs/getting-started#enabling_apis["Documentação
 
 Crie um agente do Console usando o Google Cloud.
 
-A criação do agente do Console implanta uma instância de VM no Google Cloud com a configuração padrão.  Não mude para uma instância de VM menor com menos CPUs ou menos RAM depois de criar o agente do Console. link:reference-connector-default-config.html["Saiba mais sobre a configuração padrão do agente do Console"] .
+A criação do agente do Console implanta uma instância de VM no Google Cloud com a configuração padrão. Não mude para uma instância de VM menor com menos CPUs ou menos RAM depois de criar o agente do Console. link:reference-agent-default-config.html["Saiba mais sobre a configuração padrão do agente do Console"] .
 
 .Antes de começar
 Você deve ter o seguinte:

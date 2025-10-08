@@ -28,8 +28,8 @@ Você precisará garantir que a função esteja atualizada à medida que novas p
 
 * Para ver instruções passo a passo sobre como usar essas políticas, consulte as seguintes páginas:
 +
-** link:task-install-connector-azure-marketplace.html#step-3-set-up-permissions["Configurar permissões para uma implantação do Azure Marketplace"]
-** link:task-install-connector-on-prem.html#agent-permission-aws-azure["Configurar permissões para implantações locais"]
+** link:task-install-agent-azure-marketplace.html#step-3-set-up-permissions["Configurar permissões para uma implantação do Azure Marketplace"]
+** link:task-install-agent-on-prem.html#agent-permission-aws-azure["Configurar permissões para implantações locais"]
 ** link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions["Configurar permissões para o modo restrito"]
 
 

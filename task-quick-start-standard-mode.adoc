@@ -16,7 +16,7 @@ summary: Comece a usar o NetApp Console no modo padrão preparando a rede para o
 [role="lead"]
 Comece a usar o NetApp Console no modo padrão preparando a rede para o Console, inscrevendo-se e criando uma conta e, opcionalmente, criando um agente do Console.
 
-No modo padrão, você acessa um console baseado na Web hospedado como um produto de software como serviço (SaaS) da NetApp.  Antes de começar, certifique-se de entenderlink:concept-modes.html["modos de implantação"] elink:concept-connectors.html["Agentes de console"] .
+No modo padrão, você acessa um console baseado na Web hospedado como um produto de software como serviço (SaaS) da NetApp. Antes de começar, certifique-se de entenderlink:concept-modes.html["modos de implantação"] elink:concept-agents.html["Agentes de console"] .
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Um"] link:reference-networking-saas-console.html["Preparar a rede para usar o console NetApp"]
 [role="quick-margin-para"]
@@ -27,7 +27,7 @@ Os computadores que acessam o console do NetApp devem ter conexões com endpoint
 Vá para o https://console.netapp.com["Console NetApp"^] e inscreva-se.  Você terá a opção de criar uma organização, mas deverá pular essa etapa se sua empresa já tiver uma organização existente.
 
 [role="quick-margin-para"]
-Neste ponto, você está conectado e pode começar a gerenciar o armazenamento e usar serviços como Digital Advisor, Amazon FSx for ONTAP, Azure NetApp Files e muito mais. link:concept-connectors.html["Aprenda o que você pode fazer sem um agente de console"] .
+Neste ponto, você está conectado e pode começar a gerenciar o armazenamento e usar serviços como Digital Advisor, Amazon FSx for ONTAP, Azure NetApp Files e muito mais. link:concept-agents.html["Aprenda o que você pode fazer sem um agente de console"] .
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Três"]Criar um agente de console
 [role="quick-margin-para"]
@@ -37,11 +37,11 @@ Recursos avançados de gerenciamento de armazenamento e alguns serviços de dado
 Você pode criar um agente do Console na sua rede local ou na nuvem.
 
 [role="quick-margin-list"]
-* link:concept-connectors.html["Saiba mais sobre quando os agentes do Console são necessários e como eles funcionam"]
+* link:concept-agents.html["Saiba mais sobre quando os agentes do Console são necessários e como eles funcionam"]
 * link:concept-install-options-aws.html["Aprenda a criar um agente de console na AWS"]
 * link:concept-install-options-azure.html["Aprenda a criar um agente de console no Azure"]
 * link:concept-install-options-google.html["Aprenda a criar um agente de console no Google Cloud"]
-* link:task-install-connector-on-prem.html["Aprenda a criar um agente de console no local"]
+* link:task-install-agent-on-prem.html["Aprenda a criar um agente de console no local"]
 
 
 [role="quick-margin-para"]

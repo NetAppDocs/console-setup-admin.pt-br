@@ -31,7 +31,7 @@ O NetApp Console requer permissões da AWS para um agente do Console e para serv
 | Meta | Descrição | Link 
 
 
-| Implantar um agente do Console a partir do Console | O usuário que cria um agente do Console a partir do Console precisa de permissões específicas para implantar a instância na AWS. | link:task-install-connector-aws-bluexp.html#aws-permissions-agent["Configurar permissões da AWS"] 
+| Implantar um agente do Console a partir do Console | O usuário que cria um agente do Console a partir do Console precisa de permissões específicas para implantar a instância na AWS. | link:task-install-agent-aws-console.html#aws-permissions-agent["Configurar permissões da AWS"] 
 
 
 | Fornecer permissões para um agente do Console | Quando o Console implanta um agente do Console, ele anexa uma política à instância que fornece as permissões necessárias para gerenciar recursos e processos na sua conta da AWS.  Você precisa configurar a política sozinho se implantar um agente do Console do AWS Marketplace, se instalar manualmente um agente do Console ou selink:task-adding-aws-accounts.html#add-credentials-agent-aws["adicionar mais credenciais da AWS a um agente do Console"] .  Você também precisa garantir que a política esteja atualizada à medida que novas permissões forem adicionadas em versões subsequentes. | link:reference-permissions-aws.html["Permissões da AWS para um agente do Console"] 
@@ -112,7 +112,7 @@ O Console requer permissões do Azure para um agente do Console e para serviços
 | Meta | Descrição | Link 
 
 
-| Implantar um agente do Console a partir do Console | Ao implantar um agente do Console a partir do Console, você precisa usar uma conta do Azure ou uma entidade de serviço que tenha permissões para implantar uma VM do agente do Console no Azure. | link:task-install-connector-azure-bluexp.html#connector-custom-role["Configurar permissões do Azure"] 
+| Implantar um agente do Console a partir do Console | Ao implantar um agente do Console a partir do Console, você precisa usar uma conta do Azure ou uma entidade de serviço que tenha permissões para implantar uma VM do agente do Console no Azure. | link:task-install-agent-azure-console.html#agent-custom-role["Configurar permissões do Azure"] 
 
 
 | Fornecer permissões para um agente do Console  a| 
@@ -174,10 +174,10 @@ O Console requer permissões do Google Cloud para um agente do Console e para se
 | Meta | Descrição | Link 
 
 
-| Implantar um agente do Console a partir do Console | O usuário do Google Cloud que implanta um agente do Console a partir do Console precisa de permissões específicas para implantar um agente do Console no Google Cloud. | link:task-install-connector-google-bluexp-gcloud.html#console-permissions-google["Configurar permissões para criar um agente do Console"] 
+| Implantar um agente do Console a partir do Console | O usuário do Google Cloud que implanta um agente do Console a partir do Console precisa de permissões específicas para implantar um agente do Console no Google Cloud. | link:task-install-agent-google-console-gcloud.html#console-permissions-google["Configurar permissões para criar um agente do Console"] 
 
 
-| Fornecer permissões para um agente do Console | A conta de serviço para uma instância de VM do agente do Console deve ter permissões específicas para operações diárias.  Você precisa associar a conta de serviço a um agente do Console durante a implantação.  Você também precisa garantir que a política esteja atualizada à medida que novas permissões forem adicionadas em versões subsequentes. | link:task-install-connector-google-bluexp-gcloud.html#console-permissions-google["Configurar permissões para um agente do Console"] 
+| Fornecer permissões para um agente do Console | A conta de serviço para uma instância de VM do agente do Console deve ter permissões específicas para operações diárias.  Você precisa associar a conta de serviço a um agente do Console durante a implantação.  Você também precisa garantir que a política esteja atualizada à medida que novas permissões forem adicionadas em versões subsequentes. | link:task-install-agent-google-console-gcloud.html#console-permissions-google["Configurar permissões para um agente do Console"] 
 |===
 
 

@@ -39,7 +39,7 @@ O vídeo a seguir mostra as etapas para assinar o NetApp Intelligent Services no
 .Assine o NetApp Intelligent Services no AWS Marketplace
 video::096e1740-d115-44cf-8c27-b051011611eb[panopto]
 .Passos
-. Selecione *Administração > *Credenciais*.
+. Selecione *Administração > Credenciais*.
 . Selecione *Credenciais da organização*.
 . Selecione o menu de ação para um conjunto de credenciais associadas a um agente do Console e selecione *Configurar assinatura*.
 +
@@ -78,7 +78,7 @@ Para todas as outras organizações ou contas, você precisará associar manualm
 .Azul
 --
 .Passos
-. Selecione *Administração > *Credenciais*.
+. Selecione *Administração > Credenciais*.
 . Selecione *Credenciais da organização*.
 . Selecione o menu de ação para um conjunto de credenciais associadas a um agente do Console e selecione *Configurar assinatura*.
 +

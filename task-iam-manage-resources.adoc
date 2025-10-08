@@ -67,7 +67,7 @@ Observe que você só pode selecionar pastas e projetos para os quais você tem 
 .Depois que você terminar
 Se você descobrir um recurso usando um agente do Console, associe o agente do Console ao projeto para conceder acesso.  Caso contrário, o agente do Console e seu recurso associado não poderão ser acessados por membros sem a função _Administrador da organização_.
 
-link:task-iam-associate-connectors.html["Aprenda como associar um agente do Console a uma pasta ou projeto"] .
+link:task-iam-associate-agents.html["Aprenda como associar um agente do Console a uma pasta ou projeto"] .
 
 
 

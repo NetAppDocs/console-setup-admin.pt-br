@@ -34,7 +34,7 @@ image:diagram_permissions_gcp.png["Uma imagem conceitual que descreve os requisi
 
 Para saber como configurar permissões, consulte as seguintes páginas:
 
-* link:task-install-connector-google-bluexp-gcloud.html#agent-permissions-google["Configurar permissões do Google Cloud para o modo padrão"]
+* link:task-install-agent-google-console-gcloud.html#agent-permissions-google["Configurar permissões do Google Cloud para o modo padrão"]
 * link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions["Configurar permissões para o modo restrito"]
 
 
@@ -59,6 +59,6 @@ Observe o seguinte sobre credenciais do Google Cloud e assinaturas do marketplac
 
 O Cloud Volumes ONTAP pode residir no mesmo projeto que o agente do Console ou em um projeto diferente.  Para implantar o Cloud Volumes ONTAP em um projeto diferente, você precisa primeiro adicionar a conta de serviço e a função do agente do Console a esse projeto.
 
-* link:task-install-connector-google-bluexp-gcloud.html#agent-permissions-google["Aprenda a configurar a conta de serviço"]
+* link:task-install-agent-google-console-gcloud.html#agent-permissions-google["Aprenda a configurar a conta de serviço"]
 * https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-deploying-gcp.html["Aprenda a implantar o Cloud Volumes ONTAP no Google Cloud e selecione um projeto"^]
 

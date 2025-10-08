@@ -83,7 +83,7 @@ Use um dos seguintes comandos para verificar seu agente do Console.  Todos os se
 ====
 Para obter informações mais detalhadas sobre como acessar o diagnóstico do agente do Console, consulte os seguintes tópicos:
 
-* link:task-maintain-connectors.html#connect-linux-host["Verifique o status do agente do console (para implantações de host Linux)"]
+* link:task-maintain-agents.html#connect-linux-host["Verifique o status do agente do console (para implantações de host Linux)"]
 * link:task-agent-vm-config.html#connect-vcenter-host["Verifique o status do agente do console (para implantações do VCenter)"]
 
 

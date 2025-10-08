@@ -276,7 +276,7 @@ Depois de fornecer uma conta do Azure com as permissões necessárias, você pod
 Se você acabou de criar essas credenciais no seu provedor de nuvem, pode levar alguns minutos até que elas estejam disponíveis para uso.  Aguarde alguns minutos antes de adicionar as credenciais ao Console.
 
 .Antes de começar
-Você precisa criar um agente do Console antes de poder alterar as configurações do Console. link:concept-connectors.html#connector-installation["Aprenda a criar um agente de console"] .
+Você precisa criar um agente do Console antes de poder alterar as configurações do Console. link:concept-agents.html#agent-installation["Aprenda a criar um agente de console"] .
 
 .Passos
 . Selecione *Administração > Credenciais*.
@@ -323,7 +323,7 @@ A substituição da assinatura atual do marketplace a atualiza para sistemas Clo
 
 
 .Passos
-. Selecione *Administração > *Credenciais*.
+. Selecione *Administração > Credenciais*.
 . Selecione *Credenciais da organização*.
 . Selecione o menu de ação para um conjunto de credenciais associadas a um agente do Console e selecione *Configurar assinatura*.
 +

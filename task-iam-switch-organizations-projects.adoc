@@ -69,7 +69,7 @@ Se você tiver vários agentes do Console, poderá alternar entre eles para ver 
 
 
 .Informações relacionadas
-link:task-iam-associate-connectors.html["Associar agentes a pastas e projetos"] .
+link:task-iam-associate-agents.html["Associar agentes a pastas e projetos"] .
 
 
 

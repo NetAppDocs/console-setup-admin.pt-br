@@ -18,15 +18,15 @@ Existem algumas maneiras diferentes de criar um agente do Console no Google Clou
 
 As seguintes opções de instalação estão disponíveis:
 
-* link:task-install-connector-google-bluexp-gcloud.html["Crie o agente do Console diretamente do Console"](esta é a opção padrão)
+* link:task-install-agent-google-console-gcloud.html["Crie o agente do Console diretamente do Console"](esta é a opção padrão)
 +
 Esta ação inicia uma instância de VM executando Linux e o software do agente do Console em uma VPC de sua escolha.
 
-* link:task-install-connector-google-bluexp-gcloud.html["Crie o agente do Console usando a plataforma Google"]
+* link:task-install-agent-google-console-gcloud.html["Crie o agente do Console usando a plataforma Google"]
 +
 Esta ação também inicia uma instância de VM executando o Linux e o software do agente do Console, mas a implantação é iniciada diretamente do Google Cloud, e não do Console.
 
-* link:task-install-connector-google-manual.html["Baixe e instale manualmente o software em seu próprio host Linux"]
+* link:task-install-agent-google-manual.html["Baixe e instale manualmente o software em seu próprio host Linux"]
 
 
 A opção de instalação escolhida afeta a maneira como você se prepara para a instalação.  Isso inclui como você fornece ao Console as permissões necessárias para autenticar e gerenciar recursos no Google Cloud.

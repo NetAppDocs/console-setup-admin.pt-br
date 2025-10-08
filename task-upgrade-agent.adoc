@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar 
-permalink: task-upgrade-connector.html 
+permalink: task-upgrade-agent.html 
 keywords: upgrade, manual upgrade, agent upgrade, manual agent upgrade, upgrade agent manually, private mode upgrade, offline upgrade, upgrade private mode, connector upgrade, agent upgrade 
 summary: Quando você usa o modo padrão ou o modo restrito, o NetApp Console atualiza automaticamente o agente do Console para a versão mais recente, desde que o agente do Console tenha acesso de saída à Internet para obter a atualização do software. 
 ---

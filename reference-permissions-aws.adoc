@@ -30,8 +30,8 @@ Observe o seguinte:
 * Se necessário, você pode restringir as políticas do IAM usando o IAM `Condition` elemento. https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_condition.html["Documentação da AWS: Elemento Condition"^]
 * Para ver instruções passo a passo sobre como usar essas políticas, consulte as seguintes páginas:
 +
-** link:task-install-connector-aws-marketplace.html#step-2-set-up-aws-permissions["Configurar permissões para uma implantação do AWS Marketplace"]
-** link:task-install-connector-on-prem.html#agent-permission-aws-azure["Configurar permissões para implantações locais"]
+** link:task-install-agent-aws-marketplace.html#step-2-set-up-aws-permissions["Configurar permissões para uma implantação do AWS Marketplace"]
+** link:task-install-agent-on-prem.html#agent-permission-aws-azure["Configurar permissões para implantações locais"]
 ** link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions["Configurar permissões para o modo restrito"]
 
 

@@ -3,7 +3,7 @@
 
 
 .Passos
-. Selecione *Administração > *Credenciais*.
+. Selecione *Administração > Credenciais*.
 . Selecione *Credenciais da organização*.
 . Selecione o menu de ação para um conjunto de credenciais associadas a um agente do Console e selecione *Configurar assinatura*.
 +

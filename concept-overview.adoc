@@ -143,7 +143,7 @@ O Console fornece gerenciamento de identidade e acesso (IAM) para gerenciamento 
 
 Um agente de console é necessário para alguns recursos adicionais e serviços de dados.  Ele permite que você gerencie recursos e processos em seus ambientes locais e na nuvem.  Você precisa dele para gerenciar alguns sistemas (por exemplo, Cloud Volumes ONTAP) e usar alguns serviços de dados da NetApp .
 
-link:concept-connectors.html["Saiba mais sobre os agentes do Console"] .
+link:concept-agents.html["Saiba mais sobre os agentes do Console"] .
 
 
 

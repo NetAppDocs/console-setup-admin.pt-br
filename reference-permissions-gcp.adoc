@@ -24,7 +24,7 @@ A função personalizada mostrada abaixo fornece as permissões que um agente do
 
 Você precisará aplicar essa função personalizada a uma conta de serviço que será anexada à VM do agente do Console.
 
-* link:task-install-connector-google-bluexp-gcloud.html#agent-permissions-google["Configurar permissões do Google Cloud para o modo padrão"]
+* link:task-install-agent-google-console-gcloud.html#agent-permissions-google["Configurar permissões do Google Cloud para o modo padrão"]
 * link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions["Configurar permissões para o modo restrito"]
 
 

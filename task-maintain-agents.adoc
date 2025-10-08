@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar 
-permalink: task-maintain-connectors.html 
+permalink: task-maintain-agents.html 
 keywords: agent operating system, agent maintenance, vm maintenance, os updates, operating system updates, stop agent, restart agent, notifications, agent health, agent disk space, agent cpu usage, agent ram usage, agent vm, agent ip address, agent uri, connector, connector health 
 summary: Manter o sistema operacional no host do agente é sua responsabilidade.  Por exemplo, você deve aplicar atualizações de segurança ao sistema operacional no host do agente do Console seguindo os procedimentos padrão da sua empresa para distribuição do sistema operacional. 
 ---
@@ -17,7 +17,7 @@ summary: Manter o sistema operacional no host do agente é sua responsabilidade.
 Manter o sistema operacional no host do agente do Console é responsabilidade sua (do cliente).  Por exemplo, você (o cliente) deve aplicar atualizações de segurança ao sistema operacional no host do agente seguindo os procedimentos padrão da sua empresa para distribuição do sistema operacional.
 
 
-TIP: Se você já tem um agente, você deve estar ciente delink:reference-connector-operating-system-changes.html["alterações nos sistemas operacionais Linux suportados"] .
+TIP: Se você já tem um agente, você deve estar ciente delink:reference-agent-operating-system-changes.html["alterações nos sistemas operacionais Linux suportados"] .
 
 
 
@@ -37,7 +37,7 @@ CPU:: 8 núcleos ou 8 vCPUs
 BATER:: 32 GB
 
 
-link:reference-connector-default-config.html["Saiba mais sobre a configuração padrão do agente"] .
+link:reference-agent-default-config.html["Saiba mais sobre a configuração padrão do agente"] .
 
 
 
@@ -71,7 +71,7 @@ link:https://docs.netapp.com/us-en/bluexp-setup-admin/task-monitor-cm-operations
 
 Se necessário, pare e inicie a VM do agente usando o console do seu provedor de nuvem ou procedimentos locais padrão.
 
-link:concept-connectors.html#connectors-must-be-operational-at-all-times["Esteja ciente de que o agente do Console deve estar operacional o tempo todo"] .
+link:concept-agents.html#agents-must-be-operational-at-all-times["Esteja ciente de que o agente do Console deve estar operacional o tempo todo"] .
 
 
 

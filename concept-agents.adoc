@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar 
-permalink: concept-connectors.html 
+permalink: concept-agents.html 
 keywords: 'concept, connectors, learn about connectors, what are connectors, what is a connector, what"s a connector, days, 14 days, when is a connector required, connector supported locations, restricted mode, private mode, dark site, permissions, multiple connectors, disaster recovery, agents, multiple agents, what is a Console agent' 
 summary: Um _Agente de console_ é um software NetApp em execução na sua rede em nuvem ou na rede local.  Use um agente do Console para conectar os serviços do NetApp Console aos seus ambientes de armazenamento. 
 ---
@@ -147,7 +147,7 @@ Para saber como configurar permissões, consulte o seguinte:
 ** link:concept-install-options-aws.html["Opções de instalação do agente na AWS"]
 ** link:concept-install-options-azure.html["Opções de instalação do agente no Azure"]
 ** link:concept-install-options-google.html["Opções de instalação do agente no Google Cloud"]
-** link:task-install-connector-on-prem.html#agent-permission-aws-azure["Configurar permissões de nuvem para implantações locais"]
+** link:task-install-agent-on-prem.html#agent-permission-aws-azure["Configurar permissões de nuvem para implantações locais"]
 
 
 * link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions["Configurar permissões para o modo restrito"]
@@ -180,7 +180,7 @@ Observe que você (cliente) não precisa interromper nenhum serviço no host do 
 
 Se você (cliente) precisar parar e iniciar a VM do agente do Console, faça isso no console do seu provedor de nuvem ou usando os procedimentos padrão para gerenciamento local.
 
-<<connectors-must-be-operational-at-all-times,O agente do Console deve estar operacional o tempo todo>> .
+<<agents-must-be-operational-at-all-times,O agente do Console deve estar operacional o tempo todo>> .
 
 
 

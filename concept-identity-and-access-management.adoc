@@ -234,7 +234,7 @@ Os exemplos a seguir descrevem como você pode usar o IAM para gerenciar sua org
 * link:task-iam-manage-folders-projects.html["Organize seus recursos no NetApp Console com pastas e projetos"]
 * link:task-iam-manage-members-permissions.html["Gerenciar membros do NetApp Console e suas permissões"]
 * link:task-iam-manage-resources.html["Gerencie a hierarquia de recursos na sua organização do NetApp Console"]
-* link:task-iam-associate-connectors.html["Associar agentes a pastas e projetos"]
+* link:task-iam-associate-agents.html["Associar agentes a pastas e projetos"]
 * link:task-iam-switch-organizations-projects.html["Alternar entre projetos e organizações do NetApp Console"]
 * link:task-iam-rename-organization.html["Renomeie sua organização do NetApp Console"]
 * link:task-iam-audit-actions-timeline.html["Monitorar ou auditar a atividade do IAM"]

@@ -56,7 +56,7 @@ Adicionar ou descobrir um sistema no Console associa automaticamente o recurso a
 
 [role="quick-margin-list"]
 * link:task-iam-manage-resources.html["Aprenda a gerenciar a hierarquia de recursos da sua organização"] .
-* link:task-iam-associate-connectors.html["Aprenda como associar um agente do Console a uma pasta ou projeto"] .
+* link:task-iam-associate-agents.html["Aprenda como associar um agente do Console a uma pasta ou projeto"] .
 
 
 .Informações relacionadas
