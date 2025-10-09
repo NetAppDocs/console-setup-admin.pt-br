@@ -52,7 +52,7 @@ O sistema contata esses terminais em dois cenários:
 | \ https://signin.b2c.netapp.com | Para atualizar as credenciais do NetApp Support Site (NSS) ou adicionar novas credenciais do NSS ao NetApp Console. 
 
 
-| \https:\\support.netapp.com | Para obter informações de licenciamento e enviar mensagens do AutoSupport para o suporte da NetApp , bem como receber atualizações de software para o Cloud Volumes ONTAP. 
+| \ https://support.netapp.com | Para obter informações de licenciamento e enviar mensagens do AutoSupport para o suporte da NetApp , bem como receber atualizações de software para o Cloud Volumes ONTAP. 
 
 
 | \ https://api.bluexp.netapp.com \ https://netapp-cloud-account.auth0.com \ https://netapp-cloud-account.us.auth0.com \ https://console.netapp.com \ https://components.console.bluexp.netapp.com \ https://cdn.auth0.com | Para fornecer recursos e serviços no NetApp Console. 

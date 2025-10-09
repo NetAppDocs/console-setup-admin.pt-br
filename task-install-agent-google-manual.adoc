@@ -353,7 +353,7 @@ Para atualizar as credenciais do NetApp Support Site (NSS) ou adicionar novas cr
 
 
  a| 
-\https:\\support.netapp.com
+\ https://support.netapp.com
  a| 
 Para obter informações de licenciamento e enviar mensagens do AutoSupport para o suporte da NetApp , bem como receber atualizações de software para o Cloud Volumes ONTAP.
 
