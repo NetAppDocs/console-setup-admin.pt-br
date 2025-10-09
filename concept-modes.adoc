@@ -164,7 +164,7 @@ Gerenciamento de armazenamento e serviços de dados suportados:: Os seguintes se
 | Azure NetApp Files | Suporte total 
 
 
-| Backup e recuperação | Suportado em regiões governamentais e regiões comerciais com modo restrito. Não suportado em regiões soberanas com modo restrito. No modo restrito, o NetApp Backup and Recovery oferece suporte somente para backup e restauração de dados de volume ONTAP . https://docs.netapp.com/us-en/bluexp-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-limited-internet-connectivity["Veja a lista de destinos de backup suportados para dados ONTAP"^] O backup e a restauração de dados de aplicativos e dados de máquinas virtuais não são suportados. 
+| Backup e recuperação | Suportado em regiões governamentais e regiões comerciais com modo restrito. Não suportado em regiões soberanas com modo restrito. No modo restrito, o NetApp Backup and Recovery oferece suporte somente para backup e restauração de dados de volume ONTAP . https://docs.netapp.com/us-en/data-services-disaster-recovery/prev-ontap-protect-journey.html#support-for-sites-with-limited-internet-connectivity["Veja a lista de destinos de backup suportados para dados ONTAP"^] O backup e a restauração de dados de aplicativos e dados de máquinas virtuais não são suportados. 
 
 
 | Classificação de dados da NetApp  a| 
@@ -256,7 +256,7 @@ Observe que alguns serviços podem ter suporte com limitações.  Para mais deta
 | StorageGRID | Não 
 
 
-.9+| *Serviços de Dados* | Backup e recuperação da NetApp | Simhttps://docs.netapp.com/us-en/bluexp-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-limited-internet-connectivity["Veja a lista de destinos de backup suportados para dados de volume ONTAP"^] 
+.9+| *Serviços de Dados* | Backup e recuperação da NetApp | Simhttps://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-limited-internet-connectivity["Veja a lista de destinos de backup suportados para dados de volume ONTAP"^] 
 
 
 | Classificação de dados da NetApp | Sim 

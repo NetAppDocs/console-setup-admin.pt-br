@@ -131,7 +131,7 @@ Se você configurou um agente do Console para usar um servidor proxy, poderá ha
 
 Se você desabilitar o Azure Private Links com o Cloud Volumes ONTAP e usar pontos de extremidade de serviço, habilite o tráfego de API direto.  Caso contrário, o tráfego não será roteado corretamente.
 
-https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-enabling-private-link.html["Saiba mais sobre como usar um Azure Private Link ou pontos de extremidade de serviço com o Cloud Volumes ONTAP"^]
+https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-enabling-private-link.html["Saiba mais sobre como usar um Azure Private Link ou pontos de extremidade de serviço com o Cloud Volumes ONTAP"^]
 
 .Passos
 . Selecione *Administração > Agentes*.

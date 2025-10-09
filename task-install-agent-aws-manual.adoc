@@ -647,7 +647,7 @@ Você deve manter o modo restrito desabilitado porque estas etapas descrevem com
 
 
 
-Se você tiver buckets do Amazon S3 na mesma conta da AWS onde criou o agente do Console, verá um sistema de armazenamento do Amazon S3 aparecer na página *Sistemas* automaticamente. https://docs.netapp.com/us-en/bluexp-s3-storage/index.html["Aprenda a gerenciar buckets S3 no NetApp ConsoleP"^]
+Se você tiver buckets do Amazon S3 na mesma conta da AWS onde criou o agente do Console, verá um sistema de armazenamento do Amazon S3 aparecer na página *Sistemas* automaticamente. https://docs.netapp.com/us-en/storage-management-s3-storage/index.html["Aprenda a gerenciar buckets S3 no NetApp ConsoleP"^]
 
 
 

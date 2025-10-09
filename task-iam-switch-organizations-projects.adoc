@@ -17,7 +17,7 @@ summary: Você pode pertencer a várias organizações do Console ou ter permiss
 Você pode pertencer a várias organizações do Console ou ter permissões para acessar vários projetos ou agentes dentro de uma organização.  Quando necessário, você pode alternar facilmente entre organizações, projetos e agentes do Console para acessar os recursos associados a essa organização, projeto ou agente.
 
 
-TIP: Você pode pertencer a várias organizações se outra organização o convidar para participar ou se você mesmo criar uma.  Você pode criar uma organização adicional usando a API. https://docs.netapp.com/us-en/bluexp-automation/tenancyv4/post-organizations.html["Aprenda a criar uma nova organização"^]
+TIP: Você pode pertencer a várias organizações se outra organização o convidar para participar ou se você mesmo criar uma. Você pode criar uma organização adicional usando a API. https://docs.netapp.com/us-en/console-automation/tenancyv4/post-organizations.html["Aprenda a criar uma nova organização"^]
 
 
 
@@ -77,5 +77,5 @@ link:task-iam-associate-agents.html["Associar agentes a pastas e projetos"] .
 
 * link:concept-identity-and-access-management.html["Saiba mais sobre identidade e acesso no NetApp Console"]
 * link:task-iam-get-started.html["Comece com identidade e acesso"]
-* https://docs.netapp.com/us-en/bluexp-automation/tenancyv4/overview.html["Saiba mais sobre a API para identidade e acesso"^]
+* https://docs.netapp.com/us-en/console-automation/tenancyv4/overview.html["Saiba mais sobre a API para identidade e acesso"^]
 

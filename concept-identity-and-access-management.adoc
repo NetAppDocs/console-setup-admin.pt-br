@@ -239,5 +239,5 @@ Os exemplos a seguir descrevem como você pode usar o IAM para gerenciar sua org
 * link:task-iam-rename-organization.html["Renomeie sua organização do NetApp Console"]
 * link:task-iam-audit-actions-timeline.html["Monitorar ou auditar a atividade do IAM"]
 * link:reference-iam-predefined-roles.html["Funções de acesso ao NetApp Console"]
-* https://docs.netapp.com/us-en/bluexp-automation/tenancyv4/overview.html["Saiba mais sobre a API para NetApp Console IAM"^]
+* https://docs.netapp.com/us-en/console-automation/tenancyv4/overview.html["Saiba mais sobre a API para NetApp Console IAM"^]
 

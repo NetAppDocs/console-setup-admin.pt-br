@@ -19,7 +19,7 @@ Agora que você fez login e configurou o NetApp Console no modo padrão, os usu�
 
 TIP: Se você instalou um agente do Console no AWS, Microsoft Azure ou Google Cloud, o Console descobre automaticamente informações sobre os buckets do Amazon S3, o armazenamento de Blobs do Azure ou os buckets do Google Cloud Storage no local onde o agente está instalado.  Esses sistemas são adicionados automaticamente à página *Sistemas*.
 
-Para obter ajuda, vá para o https://docs.netapp.com/us-en/bluexp-family/["página inicial da documentação do NetApp Console"^] para visualizar a documentação do NetApp Console.
+Para obter ajuda, vá para o https://docs.netapp.com/us-en/console-family/["página inicial da documentação do NetApp Console"^] para visualizar a documentação do NetApp Console.
 
 .Informações relacionadas
 link:concept-modes.html["Modos de implantação do NetApp Console"]

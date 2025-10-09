@@ -161,5 +161,5 @@ link:concept-identity-and-access-management.html#role-inheritance["Saiba mais so
 
 * link:concept-identity-and-access-management.html["Saiba mais sobre identidade e acesso no NetApp Console"]
 * link:task-iam-get-started.html["Comece com identidade e acesso"]
-* https://docs.netapp.com/us-en/bluexp-automation/tenancyv4/overview.html["Saiba mais sobre a API de identidade e acesso"]
+* https://docs.netapp.com/us-en/console-automation/tenancyv4/overview.html["Saiba mais sobre a API de identidade e acesso"]
 

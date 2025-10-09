@@ -32,7 +32,7 @@ Adicionar novas credenciais da AWS ao Console fornece as permissões necessária
 
 * Adicionar credenciais da AWS ao Console do FSx para ONTAP
 +
-Adicione novas credenciais da AWS ao Console para criar e gerenciar o FSx para ONTAP. https://docs.netapp.com/us-en/bluexp-fsx-ontap/requirements/task-setting-up-permissions-fsx.html["Aprenda a configurar permissões para FSx para ONTAP"^]
+Adicione novas credenciais da AWS ao Console para criar e gerenciar o FSx para ONTAP. https://docs.netapp.com/us-en/storage-management-fsx-ontap/requirements/task-setting-up-permissions-fsx.html["Aprenda a configurar permissões para FSx para ONTAP"^]
 
 
 
@@ -194,7 +194,7 @@ Consulte link:https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies-c
 
 ** Crie uma política que inclua as permissões necessárias para criar um agente do Console.
 +
-*** https://docs.netapp.com/us-en/bluexp-fsx-ontap/requirements/task-setting-up-permissions-fsx.html["Veja as permissões necessárias para o FSx para ONTAP"^]
+*** https://docs.netapp.com/us-en/storage-management-fsx-ontap/requirements/task-setting-up-permissions-fsx.html["Veja as permissões necessárias para o FSx para ONTAP"^]
 *** link:task-install-agent-aws-console.html#aws-permissions-agent["Exibir a política de implantação do agente"]
 
 
@@ -233,7 +233,7 @@ image:screenshot-settings-icon-organization.png["Uma captura de tela que mostra 
 
 == Adicionar credenciais ao Console do Amazon FSx para ONTAP
 
-Para mais detalhes, consulte o https://docs.netapp.com/us-en/bluexp-fsx-ontap/requirements/task-setting-up-permissions-fsx.html["a documentação do console para Amazon FSx para ONTAP"^]
+Para mais detalhes, consulte o https://docs.netapp.com/us-en/storage-management-fsx-ontap/requirements/task-setting-up-permissions-fsx.html["a documentação do console para Amazon FSx para ONTAP"^]
 
 
 

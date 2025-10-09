@@ -64,7 +64,7 @@ Observe que alguns serviços podem ter suporte com limitações.
 .15+| *Serviços* | Alertas | Não 
 
 
-| Backup e recuperação | Simhttps://docs.netapp.com/us-en/bluexp-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-no-internet-connectivity["Veja a lista de destinos de backup suportados para dados de volume ONTAP"^] 
+| Backup e recuperação | Simhttps://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-no-internet-connectivity["Veja a lista de destinos de backup suportados para dados de volume ONTAP"^] 
 
 
 | Classificação | Sim 

@@ -146,5 +146,5 @@ A seguir está uma lista de funções na categoria de serviço de dados.  Cada f
 * link:concept-identity-and-access-management.html["Saiba mais sobre o gerenciamento de identidade e acesso do NetApp Console"]
 * link:task-iam-get-started.html["Comece a usar o NetApp Console IAM"]
 * link:task-iam-manage-members-permissions.html["Gerenciar membros do NetApp Console e suas permissões"]
-* https://docs.netapp.com/us-en/bluexp-automation/tenancyv4/overview.html["Saiba mais sobre a API para NetApp Console IAM"^]
+* https://docs.netapp.com/us-en/console-automation/tenancyv4/overview.html["Saiba mais sobre a API para NetApp Console IAM"^]
 

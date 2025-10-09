@@ -65,5 +65,5 @@ image:screenshot-iam-project-id.png["Uma captura de tela da tabela de pastas e p
 .Informações relacionadas
 * link:concept-identity-and-access-management.html["Aprenda sobre gerenciamento de identidade e acesso"]
 * link:task-iam-get-started.html["Comece com identidade e acesso"]
-* https://docs.netapp.com/us-en/bluexp-automation/tenancyv4/overview.html["Saiba mais sobre a API para identidade e acesso"^]
+* https://docs.netapp.com/us-en/console-automation/tenancyv4/overview.html["Saiba mais sobre a API para identidade e acesso"^]
 

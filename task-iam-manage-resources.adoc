@@ -110,5 +110,5 @@ NOTE: Para remover um recurso descoberto de toda a organização, remova o siste
 
 * link:concept-identity-and-access-management.html["Saiba mais sobre identidade e acesso no NetApp Console"]
 * link:task-iam-get-started.html["Comece a usar identidade e acesso no NetApp Console"]
-* https://docs.netapp.com/us-en/bluexp-automation/tenancyv4/overview.html["Saiba mais sobre a API para identidade e acesso"^]
+* https://docs.netapp.com/us-en/console-automation/tenancyv4/overview.html["Saiba mais sobre a API para identidade e acesso"^]
 

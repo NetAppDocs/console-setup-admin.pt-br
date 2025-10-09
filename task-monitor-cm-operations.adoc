@@ -82,7 +82,7 @@ Você também pode configurar o Console para enviar certos tipos de notificaçõ
 
 O Centro de Notificações permite que você visualize o status das operações iniciadas e configure notificações de alerta para determinados tipos de atividades do sistema.  Enquanto isso, os alertas permitem que você visualize problemas ou riscos potenciais no seu ambiente de armazenamento ONTAP relacionados à capacidade, disponibilidade, desempenho, proteção e segurança.
 
-https://docs.netapp.com/us-en/bluexp-alerts/index.html["Saiba mais sobre os alertas do NetApp Console"^]
+https://docs.netapp.com/us-en/console-alerts/index.html["Saiba mais sobre os alertas do NetApp Console"^]
 
 
 

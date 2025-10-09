@@ -69,7 +69,7 @@ Observe o seguinte:
 
 
 .API para BlueXP IAM
-Essa alteração introduz uma nova API para o BlueXP IAM, mas ela é compatível com versões anteriores da API de locação anterior. https://docs.netapp.com/us-en/bluexp-automation/tenancyv4/overview.html["Saiba mais sobre a API para BlueXP IAM"^]
+Essa alteração introduz uma nova API para o BlueXP IAM, mas ela é compatível com versões anteriores da API de locação anterior. https://docs.netapp.com/us-en/console-automation/tenancyv4/overview.html["Saiba mais sobre a API para BlueXP IAM"^]
 
 .Modos de implantação suportados
 O BlueXP IAM é suportado ao usar o BlueXP no modo padrão e restrito.  Se estiver usando o BlueXP no modo privado, você continuará usando uma _conta_ do BlueXP para gerenciar espaços de trabalho, usuários e recursos.
@@ -90,8 +90,8 @@ A versão 3.9.48 inclui atualizações para os seguintes componentes e serviços
 | Conector | 3.9.48 | Vá para o https://docs.netapp.com/us-en/bluexp-setup-admin/whats-new.html#connector-3-9-48["o que há de novo na página do conector BlueXP"] e consulte as alterações incluídas nas versões 3.9.48. 
 
 
-| Backup e recuperação | 21 de fevereiro de 2025 | Vá para o https://docs.netapp.com/us-en/bluexp-backup-recovery/whats-new.html["o que há de novo na página de BlueXP backup and recovery"^] e consulte as alterações incluídas no comunicado de fevereiro de 2025. 
+| Backup e recuperação | 21 de fevereiro de 2025 | Vá para o https://docs.netapp.com/us-en/data-services-backup-recovery/whats-new.html["o que há de novo na página de BlueXP backup and recovery"^] e consulte as alterações incluídas no comunicado de fevereiro de 2025. 
 
 
-| Classificação | 22 de janeiro de 2025 (versão 1.39) | Vá para o https://docs.netapp.com/us-en/bluexp-classification/whats-new.html["o que há de novo na página de BlueXP classification"^] e consulte as alterações incluídas na versão 1.39. 
+| Classificação | 22 de janeiro de 2025 (versão 1.39) | Vá para o https://docs.netapp.com/us-en/data-services-data-classification/whats-new.html["o que há de novo na página de BlueXP classification"^] e consulte as alterações incluídas na versão 1.39. 
 |===

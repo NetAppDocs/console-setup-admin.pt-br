@@ -185,8 +185,8 @@ image:screenshot_gcp_associate.gif["Uma captura de tela da página de atribuiç�
 --
 ====
 .Informações relacionadas
-* https://docs.netapp.com/us-en/bluexp-digital-wallet/task-manage-capacity-licenses.html["Gerenciar licenças baseadas em capacidade BYOL para Cloud Volumes ONTAP"^]
-* https://docs.netapp.com/us-en/bluexp-digital-wallet/task-manage-data-services-licenses.html["Gerenciar licenças BYOL para serviços de dados"^]
+* https://docs.netapp.com/us-en/console-licenses-subscriptions/task-manage-capacity-licenses.html["Gerenciar licenças baseadas em capacidade BYOL para Cloud Volumes ONTAP"^]
+* https://docs.netapp.com/us-en/console-licenses-subscriptions/task-manage-data-services-licenses.html["Gerenciar licenças BYOL para serviços de dados"^]
 * https://docs.netapp.com/us-en/bluexp-setup-admin/task-adding-aws-accounts.html["Gerenciar credenciais e assinaturas da AWS"]
 * https://docs.netapp.com/us-en/bluexp-setup-admin/task-adding-azure-accounts.html["Gerenciar credenciais e assinaturas do Azure"]
 * https://docs.netapp.com/us-en/bluexp-setup-admin/task-adding-gcp-accounts.html["Gerenciar credenciais e assinaturas do Google Cloud"]

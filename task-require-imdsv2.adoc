@@ -34,7 +34,7 @@ O IMDSv2 oferece proteção aprimorada contra vulnerabilidades. https://aws.amaz
 
 O Serviço de Metadados de Instância (IMDS) é habilitado da seguinte maneira em instâncias do EC2:
 
-* Para novas implantações de agentes do Console a partir do Console ou usando https://docs.netapp.com/us-en/bluexp-automation/automate/overview.html["Scripts do Terraform"^] O IMDSv2 é habilitado por padrão na instância do EC2.
+* Para novas implantações de agentes do Console a partir do Console ou usando https://docs.netapp.com/us-en/console-automation/automate/overview.html["Scripts do Terraform"^] O IMDSv2 é habilitado por padrão na instância do EC2.
 * Se você iniciar uma nova instância do EC2 na AWS e depois instalar manualmente o software do agente do Console, o IMDSv2 também será habilitado por padrão.
 * Se você iniciar o agente do Console no AWS Marketplace, o IMDSv1 será habilitado por padrão.  Você pode configurar manualmente o IMDSv2 na instância do EC2.
 * Para agentes de console existentes, o IMDSv1 ainda é suportado, mas você pode configurar manualmente o IMDSv2 na instância do EC2, se preferir.
@@ -88,7 +88,7 @@ NOTE: O `http-tokens` conjuntos de parâmetros IMDSv2 como obrigatórios.  Quand
 
 
 .. Repita essas etapas para outras instâncias do Cloud Volumes ONTAP , incluindo o mediador HA.
-.. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-managing-state.html["Pare e inicie as instâncias do Cloud Volumes ONTAP"^]
+.. https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-managing-state.html["Pare e inicie as instâncias do Cloud Volumes ONTAP"^]
 
 
 

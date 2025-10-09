@@ -18,10 +18,10 @@ A versão 3.9.54 inclui atualizações para os seguintes componentes e serviços
 | Conector | 3.9.54, 3.9.53 | Vá para o https://docs.netapp.com/us-en/bluexp-setup-admin/whats-new.html#connector-3-9-50["o que há de novo na página BlueXP"^] e consulte as alterações incluídas nas versões 3.9.54 e 3.9.53. 
 
 
-| Backup e recuperação | 28 de julho de 2025 | Vá para o https://docs.netapp.com/us-en/bluexp-backup-recovery/whats-new.html["o que há de novo na página de BlueXP backup and recovery"^] e consulte as alterações incluídas no comunicado de julho de 2025. 
+| Backup e recuperação | 28 de julho de 2025 | Vá para o https://docs.netapp.com/us-en/data-services-backup-recovery/whats-new.html["o que há de novo na página de BlueXP backup and recovery"^] e consulte as alterações incluídas no comunicado de julho de 2025. 
 
 
-| Classificação | 14 de julho de 2025 (versão 1.45) | Vá para o https://docs.netapp.com/us-en/bluexp-classification/whats-new.html["o que há de novo na página de BlueXP classification"^] . 
+| Classificação | 14 de julho de 2025 (versão 1.45) | Vá para o https://docs.netapp.com/us-en/data-services-data-classification/whats-new.html["o que há de novo na página de BlueXP classification"^] . 
 |===
 Para mais detalhes sobre o modo privado, incluindo como atualizar, consulte o seguinte:
 
