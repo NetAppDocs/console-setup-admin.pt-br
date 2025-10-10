@@ -20,7 +20,7 @@ O gerenciamento de identidade e acesso (IAM) no NetApp Console fornece funções
 
 == Funções da plataforma
 
-As funções da plataforma concedem permissões de administração do NetApp Console, incluindo atribuição de funções e gerenciamento de usuários.  O Console tem várias funções de plataforma.
+As funções da plataforma concedem permissões de administração do NetApp Console , incluindo atribuição de funções e gerenciamento de usuários.  O Console tem várias funções de plataforma.
 
 [cols="1,2"]
 |===
@@ -110,7 +110,7 @@ A seguir está uma lista de funções na categoria de serviço de dados.  Cada f
 | link:reference-iam-backup-rec-roles.html["Visualizador de backup e recuperação"] | Ver informações de backup e recuperação. 
 
 
-| link:reference-iam-disaster-rec-roles.html["Administrador de recuperação de desastres"] | Execute quaisquer ações no serviço NetApp Disaster Recovery. 
+| link:reference-iam-disaster-rec-roles.html["Administrador de recuperação de desastres"] | Execute quaisquer ações no serviço NetApp Disaster Recovery . 
 
 
 | link:reference-iam-disaster-rec-roles.html["Administrador de failover de recuperação de desastres"] | Execute failover e migrações. 
@@ -122,7 +122,7 @@ A seguir está uma lista de funções na categoria de serviço de dados.  Cada f
 | link:reference-iam-disaster-rec-roles.html["Visualizador de recuperação de desastres"] | Ver apenas informações. 
 
 
-| Visualizador de classificação | Permite que os usuários visualizem os resultados da verificação de classificação de dados do NetApp .  Usuários com essa função podem visualizar informações de conformidade e gerar relatórios para recursos aos quais têm permissão de acesso.  Esses usuários não podem habilitar ou desabilitar a verificação de volumes, buckets ou esquemas de banco de dados.  A classificação não tem um papel de visualizador. 
+| Visualizador de classificação | Permite que os usuários visualizem os resultados da verificação de NetApp Data Classification .  Usuários com essa função podem visualizar informações de conformidade e gerar relatórios para recursos aos quais têm permissão de acesso.  Esses usuários não podem habilitar ou desabilitar a verificação de volumes, buckets ou esquemas de banco de dados.  A classificação não tem um papel de visualizador. 
 
 
 | link:reference-iam-ransomware-roles.html["Administrador de resiliência de ransomware"] | Gerencie ações nas guias Proteger, Alertas, Recuperar, Configurações e Relatórios do NetApp Ransomware Resilience. 

@@ -144,7 +144,7 @@ Se os sistemas Cloud Volumes ONTAP não tiverem uma conexão de saída com a Int
 --
 
 
-Habilitar NTP:: Se você estiver planejando usar o NetApp Data Classification para verificar suas fontes de dados corporativos, deverá habilitar um serviço Network Time Protocol (NTP) no agente do Console e no sistema NetApp Data Classification para que o horário seja sincronizado entre os sistemas. https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["Saiba mais sobre a classificação de dados da NetApp"^]
+Habilitar NTP:: Se você planeja usar o NetApp Data Classification para verificar suas fontes de dados corporativos, habilite um serviço Network Time Protocol (NTP) no agente do Console e no sistema NetApp Data Classification para que o horário seja sincronizado entre os sistemas. https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["Saiba mais sobre a classificação de dados da NetApp"^]
 +
 --
 Implemente os requisitos de rede após criar o agente do Console.
@@ -492,7 +492,7 @@ NOTE: Operador do console é o nome padrão fornecido na política.  Se você es
 
 
 .O que vem a seguir?
-Vá para o https://console.netapp.com["Console NetApp"^] para começar a usar o agente do Console.
+Vá para o https://console.netapp.com["NetApp Console"^] para começar a usar o agente do Console.
 
 --
 .Diretor de serviço

@@ -35,7 +35,7 @@ O grupo de segurança da AWS para o agente requer regras de entrada e saída.  O
 
 
 
-| HTTPS | 443 | Fornece acesso HTTPS à interface do usuário local e conexões da instância de classificação de dados do NetApp 
+| HTTPS | 443 | Fornece acesso HTTPS à interface do usuário local e conexões da instância de NetApp Data Classification 
 
 
 | TCP | 3128 | Fornece Cloud Volumes ONTAP com acesso à internet.  Você deve abrir esta porta manualmente após a implantação. 

@@ -230,7 +230,7 @@ includedPermissions:
 | - compute.networks.updatePolicy | Para aplicar regras de firewall nas VPCs e sub-redes para um par HA. 
 
 
-| - compute.subnetworks.use - compute.subnetworks.useExternalIp - compute.instances.addAccessConfig | Para habilitar a classificação de dados do NetApp . 
+| - compute.subnetworks.use - compute.subnetworks.useExternalIp - compute.instances.addAccessConfig | Para habilitar a NetApp Data Classification. 
 
 
 | - compute.instanceGroups.get - compute.addresses.get - compute.instances.updateNetworkInterface | Para criar e gerenciar VMs de armazenamento em pares Cloud Volumes ONTAP HA. 

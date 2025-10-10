@@ -64,7 +64,7 @@ Esta versão inclui suporte expandido ao sistema operacional e correções de bu
 A versão 3.9.45 está disponível para modo padrão e modo restrito.
 
 .Suporte para Ubuntu 24.04 LTS
-A partir da versão 3.9.45, o BlueXP agora oferece suporte a novas instalações do Connector em hosts Ubuntu 24.04 LTS ao usar o BlueXP no modo padrão ou restrito.
+A partir da versão 3.9.45, o BlueXP agora oferece suporte a novas instalações do Connector em hosts Ubuntu 24.04 LTS ao usar o BlueXP no modo padrão ou no modo restrito.
 
 https://docs.netapp.com/us-en/bluexp-setup-admin/task-install-connector-on-prem.html#step-1-review-host-requirements["Exibir requisitos do host do conector"] .
 

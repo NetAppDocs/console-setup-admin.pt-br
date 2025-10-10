@@ -4,7 +4,7 @@ permalink: task-logging-in.html
 keywords: logging in, log in, sign in, signing in, cloud central, netapp cloud central, user account, federated, federation, federated login, federation login, login with netapp, log in with netapp, sign up, create account 
 summary: A maneira como você faz login no NetApp Console depende do modo de implantação que você está usando. 
 ---
-= Efetue login no console do NetApp
+= Efetue login no NetApp Console
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -38,7 +38,7 @@ Você pode usar o logon único para efetuar login usando credenciais do seu dire
 
 
 .Passos
-. Abra um navegador da web e vá para o https://console.netapp.com["Console NetApp"]
+. Abra um navegador da web e vá para o https://console.netapp.com["NetApp Console"]
 . Na página *Login*, insira o endereço de e-mail associado ao seu login.
 . Dependendo do método de autenticação associado ao seu login, você será solicitado a inserir suas credenciais:
 +

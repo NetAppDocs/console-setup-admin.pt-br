@@ -329,7 +329,7 @@ Se os sistemas Cloud Volumes ONTAP não tiverem uma conexão de saída com a Int
 --
 
 
-Habilitar NTP:: Se você estiver planejando usar o NetApp Data Classification para verificar suas fontes de dados corporativos, deverá habilitar um serviço Network Time Protocol (NTP) no agente do Console e no sistema NetApp Data Classification para que o horário seja sincronizado entre os sistemas. https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["Saiba mais sobre a classificação de dados da NetApp"^]
+Habilitar NTP:: Se você planeja usar o NetApp Data Classification para verificar suas fontes de dados corporativos, habilite um serviço Network Time Protocol (NTP) no agente do Console e no sistema NetApp Data Classification para que o horário seja sincronizado entre os sistemas. https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["Saiba mais sobre a classificação de dados da NetApp"^]
 
 
 
@@ -712,7 +712,7 @@ Você tem a opção de configurar um servidor proxy após a instalação, mas is
 
 
 
-NOTE: Não é possível definir um certificado para um servidor proxy transparente ao instalar manualmente o agente do Console. Se precisar definir um certificado para um servidor proxy transparente, você deverá usar o Console de Manutenção após a instalação. Saiba mais sobre olink:reference-agent-maint-console.html["Console de manutenção do agente"] .
+NOTE: Não é possível definir um certificado para um servidor proxy transparente ao instalar manualmente o agente do Console.  Se precisar definir um certificado para um servidor proxy transparente, você deverá usar o Console de Manutenção após a instalação. Saiba mais sobre olink:reference-agent-maint-console.html["Console de manutenção do agente"] .
 
 .Sobre esta tarefa
 O instalador disponível no site de suporte da NetApp pode ser uma versão anterior.  Após a instalação, o agente do Console se atualiza automaticamente se uma nova versão estiver disponível.
@@ -876,7 +876,7 @@ Se você acabou de criar essas credenciais da AWS, elas podem levar alguns minut
 
 
 
-Agora você pode ir para o https://console.netapp.com["Console NetApp"^] para começar a usar o agente do Console.
+Agora você pode ir para o https://console.netapp.com["NetApp Console"^] para começar a usar o agente do Console.
 
 --
 .Azul
@@ -903,7 +903,7 @@ Se você acabou de criar essas credenciais do Azure, elas podem levar alguns min
 
 
 .Resultado
-O agente do Console agora tem as permissões necessárias para executar ações no Azure em seu nome.  Agora você pode ir para o https://console.netapp.com["Console NetApp"^] para começar a usar o agente do Console.
+O agente do Console agora tem as permissões necessárias para executar ações no Azure em seu nome.  Agora você pode ir para o https://console.netapp.com["NetApp Console"^] para começar a usar o agente do Console.
 
 --
 ====

@@ -53,7 +53,7 @@ Você pode configurar uma conexão federada com o Microsoft Entra ID para habili
 [discrete]
 ====== Método de conexão
 
-. Para seu método de conexão, escolha *Provedor* e depois selecione *Microsoft Entra ID*.
+. Para seu método de conexão, escolha *Provedor* e depois selecione *Microsoft Enterprise ID*.
 . Selecione *Avançar*.
 
 

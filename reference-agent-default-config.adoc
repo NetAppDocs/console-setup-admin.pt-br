@@ -20,7 +20,7 @@ Saiba mais sobre a configuração do agente do Console antes de implantá-lo.
 
 == Configuração padrão com acesso à Internet
 
-Os detalhes de configuração a seguir se aplicam se você implantou um agente do Console do NetApp Console, do marketplace do seu provedor de nuvem ou se instalou manualmente um agente do Console em um host Linux local com acesso à Internet.
+Os seguintes detalhes de configuração se aplicam se você implantou um agente do Console do NetApp Console, do marketplace do seu provedor de nuvem ou se instalou manualmente um agente do Console em um host Linux local com acesso à Internet.
 
 
 
@@ -74,7 +74,7 @@ O sistema operacional não inclui uma GUI.  Você deve usar um terminal para ace
 
 A pasta de instalação do agente está no seguinte local:
 
-/opt/aplicativo/netapp/gerenciador de nuvem
+/opt/aplicativo/netapp/cloudmanager
 
 
 

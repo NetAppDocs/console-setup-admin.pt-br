@@ -20,7 +20,7 @@ Saiba como o NetApp Console usa credenciais da AWS para executar ações em seu 
 
 == Credenciais iniciais da AWS
 
-Ao implantar um agente do Console a partir do Console, você precisa fornecer o ARN de uma função do IAM ou chaves de acesso para um usuário do IAM. O método de autenticação deve ter permissões para implantar o Console na AWS. As permissões necessárias estão listadas no link: task-install-agent-aws-the Console.html#console-permissions-aws[Política de implantação do agente para AWS].
+Ao implantar um agente do Console a partir do Console, você precisa fornecer o ARN de uma função do IAM ou chaves de acesso para um usuário do IAM.  O método de autenticação deve ter permissões para implantar o Console na AWS.  As permissões necessárias estão listadas no link: task-install-agent-aws-the Console.html#console-permissions-aws[Política de implantação do agente para AWS].
 
 Quando o Console inicia a instância do agente do Console na AWS, ele cria uma função do IAM e um perfil de instância para a instância.  Ele também anexa uma política que fornece ao agente do Console permissões para gerenciar recursos e processos dentro dessa conta da AWS. link:reference-permissions-aws.html["Revise como o Console usa as permissões"] .
 

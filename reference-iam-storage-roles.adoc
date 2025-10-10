@@ -17,7 +17,7 @@ summary: Você pode atribuir as seguintes funções aos usuários para fornecer 
 Você pode atribuir as seguintes funções aos usuários para fornecer a eles acesso aos recursos de gerenciamento de armazenamento no NetApp Console.  Você pode atribuir aos usuários uma função administrativa para gerenciar o armazenamento ou uma função de visualizador para monitoramento.
 
 
-NOTE: Essas funções não estão disponíveis na API de parceria do NetApp Console.
+NOTE: Essas funções não estão disponíveis na API de parceria do NetApp Console .
 
 Os administradores podem atribuir funções de armazenamento aos usuários para os seguintes recursos e funcionalidades de armazenamento:
 
@@ -110,7 +110,7 @@ Sim
 
 
 
-4+| *Licenças e assinaturas* 
+4+| * Licenses and subscriptions* 
 
 
 | Ver todas as páginas e funções  a| 

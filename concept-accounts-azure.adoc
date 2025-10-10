@@ -20,7 +20,7 @@ Saiba como o NetApp Console usa credenciais do Azure para executar ações em se
 
 == Credenciais iniciais do Azure
 
-Ao implantar um agente do Console a partir do Console, você precisa usar uma conta do Azure ou uma entidade de serviço que tenha permissões para implantar a máquina virtual do agente do Console. As permissões necessárias estão listadas emlink:task-install-agent-azure-console.html#agent-custom-role["Política de implantação de agente para o Azure"] .
+Ao implantar um agente do Console a partir do Console, você precisa usar uma conta do Azure ou uma entidade de serviço que tenha permissões para implantar a máquina virtual do agente do Console.  As permissões necessárias estão listadas emlink:task-install-agent-azure-console.html#agent-custom-role["Política de implantação de agente para o Azure"] .
 
 Quando o Console implanta a máquina virtual do agente do Console no Azure, ele habilita um https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview["identidade gerenciada atribuída pelo sistema"^] na máquina virtual, cria uma função personalizada e a atribui à máquina virtual.  A função fornece ao Console as permissões necessárias para gerenciar recursos e processos dentro dessa assinatura do Azure. link:reference-permissions-azure.html["Revise como o Console usa as permissões"] .
 

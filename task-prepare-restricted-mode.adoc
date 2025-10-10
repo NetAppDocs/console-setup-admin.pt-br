@@ -338,7 +338,7 @@ NOTE: Agentes de console anteriores à versão 4.0.0 precisam de endpoints adici
 
 | \ https://cdn.auth0.com \ https://services.cloud.netapp.com | Seu navegador da Web se conecta a esses endpoints para autenticação centralizada do usuário por meio do NetApp Console. 
 |===
-Acesso de saída à Internet para operações diárias:: O local de rede do agente do Console deve ter acesso de saída à Internet.  Ele precisa ser capaz de alcançar os serviços SaaS do NetApp Console, bem como os endpoints dentro do seu respectivo ambiente de nuvem pública.
+Acesso de saída à Internet para operações diárias:: O local de rede do agente do Console deve ter acesso de saída à Internet.  Ele precisa ser capaz de alcançar os serviços SaaS do NetApp Console , bem como os endpoints dentro do seu respectivo ambiente de nuvem pública.
 +
 --
 [cols="2a,1a"]
@@ -405,7 +405,7 @@ Para gerenciar recursos no Google Cloud.
 
 
  a| 
-* Pontos de extremidade do console NetApp *
+* Pontos de extremidade do NetApp Console *
 
 
 
@@ -497,7 +497,7 @@ Se os sistemas Cloud Volumes ONTAP não tiverem uma conexão de saída com a Int
 --
 
 
-Habilitar NTP:: Se você estiver planejando usar o NetApp Data Classification para verificar suas fontes de dados corporativos, deverá habilitar um serviço Network Time Protocol (NTP) no agente do Console e no sistema NetApp Data Classification para que o horário seja sincronizado entre os sistemas. https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["Saiba mais sobre a classificação de dados da NetApp"^]
+Habilitar NTP:: Se você planeja usar o NetApp Data Classification para verificar suas fontes de dados corporativos, habilite um serviço Network Time Protocol (NTP) no agente do Console e no sistema NetApp Data Classification para que o horário seja sincronizado entre os sistemas. https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["Saiba mais sobre a classificação de dados da NetApp"^]
 +
 --
 Se você estiver planejando criar um agente do Console no marketplace do seu provedor de nuvem, implemente este requisito de rede depois de criar o agente do Console.

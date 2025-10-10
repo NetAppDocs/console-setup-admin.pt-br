@@ -48,7 +48,7 @@ Para gerenciar usuários e suas permissões, você deve ter a função *Administ
 Embora os usuários se inscrevam no NetApp Console por conta própria, eles precisam ser adicionados explicitamente a uma organização ou a pastas ou projetos específicos para acessar recursos no Console.
 
 .Passos
-. Direcionar o usuário para visitar https://console.netapp.com/["Console NetApp"^] para se inscrever.
+. Direcionar o usuário para visitar https://console.netapp.com/["NetApp Console"^] para se inscrever.
 +
 Depois que os usuários se inscrevem, eles preenchem a página *Inscrever-se*, verificam seus e-mails e efetuam login. Se o Console solicitar que os usuários criem uma organização, eles a fecham e notificam você sobre a criação da conta.  Você pode então adicionar o usuário à sua organização existente.
 

@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: reference-permissions.html 
 keywords: permissions, actions 
-summary: Para usar os recursos e serviços do NetApp Console, você precisará fornecer permissões para que o Console possa executar operações no seu ambiente de nuvem.  Use os links nesta página para acessar rapidamente as permissões necessárias com base no seu objetivo. 
+summary: Para usar os recursos e serviços do NetApp Console , você precisará fornecer permissões para que o Console possa executar operações no seu ambiente de nuvem.  Use os links nesta página para acessar rapidamente as permissões necessárias com base no seu objetivo. 
 ---
 = Resumo de permissões para o NetApp Console
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: Para usar os recursos e serviços do NetApp Console, você precisará f
 
 
 [role="lead"]
-Para usar os recursos e serviços do NetApp Console, você precisará fornecer permissões para que o Console possa executar operações no seu ambiente de nuvem.  Use os links nesta página para acessar rapidamente as permissões necessárias com base no seu objetivo.
+Para usar os recursos e serviços do NetApp Console , você precisará fornecer permissões para que o Console possa executar operações no seu ambiente de nuvem.  Use os links nesta página para acessar rapidamente as permissões necessárias com base no seu objetivo.
 
 
 
@@ -38,7 +38,7 @@ O NetApp Console requer permissões da AWS para um agente do Console e para serv
 |===
 
 
-=== Backup e recuperação da NetApp
+=== NetApp Backup and Recovery
 
 [cols="20,60,20"]
 |===
@@ -60,7 +60,7 @@ O NetApp Console requer permissões da AWS para um agente do Console e para serv
 |===
 
 
-=== Cópia e sincronização da NetApp
+=== NetApp Copy and Sync
 
 [cols="20,60,20"]
 |===
@@ -88,7 +88,7 @@ O NetApp Console requer permissões da AWS para um agente do Console e para serv
 |===
 
 
-=== Camadas de nuvem da NetApp
+=== NetApp Cloud Tiering
 
 [cols="20,60,20"]
 |===
@@ -127,7 +127,7 @@ link:reference-permissions-azure.html["Permissões do Azure para um agente do Co
 |===
 
 
-=== Backup e recuperação da NetApp
+=== NetApp Backup and Recovery
 
 [cols="20,60,20"]
 |===
@@ -181,7 +181,7 @@ O Console requer permissões do Google Cloud para um agente do Console e para se
 |===
 
 
-=== Backup e recuperação da NetApp
+=== NetApp Backup and Recovery
 
 [cols="20,60,20"]
 |===
@@ -205,7 +205,7 @@ Ao usar o NetApp Backup and Recovery para fazer backup do Cloud Volumes ONTAP, v
 |===
 
 
-=== Cópia e sincronização da NetApp
+=== NetApp Copy and Sync
 
 [cols="20,60,20"]
 |===
@@ -225,7 +225,7 @@ O Console requer permissões StorageGRID para dois serviços.
 
 
 
-=== Backup e recuperação da NetApp
+=== NetApp Backup and Recovery
 
 [cols="20,60,20"]
 |===
@@ -236,7 +236,7 @@ O Console requer permissões StorageGRID para dois serviços.
 |===
 
 
-=== Camadas de nuvem da NetApp
+=== NetApp Cloud Tiering
 
 [cols="20,60,20"]
 |===

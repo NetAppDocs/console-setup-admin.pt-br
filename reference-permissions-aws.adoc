@@ -757,7 +757,7 @@ Para regiões padrão, as permissões são distribuídas em duas políticas.  Du
 
 == Como as permissões da AWS são usadas
 
-As seções a seguir descrevem como as permissões são usadas para cada serviço de gerenciamento ou dados do NetApp Console.  Essas informações podem ser úteis se suas políticas corporativas determinarem que as permissões sejam fornecidas somente quando necessário.
+As seções a seguir descrevem como as permissões são usadas para cada serviço de gerenciamento ou dados do NetApp Console .  Essas informações podem ser úteis se suas políticas corporativas determinarem que as permissões sejam fornecidas somente quando necessário.
 
 
 
@@ -805,7 +805,7 @@ s3:ObterConfiguração de Criptografia
 
 
 
-=== Backup e recuperação da NetApp
+=== NetApp Backup and Recovery
 
 O agente faz as seguintes solicitações de API para gerenciar backups no Amazon S3:
 
@@ -892,7 +892,7 @@ O agente faz as seguintes solicitações de API se você usar uma conta da AWS d
 
 === Classificação
 
-O agente faz as seguintes solicitações de API para implantar a Classificação de Dados NetApp :
+O agente faz as seguintes solicitações de API para implantar a NetApp Data Classification:
 
 * ec2:DescreverInstâncias
 * ec2:DescreverStatusDaInstancia
@@ -920,7 +920,7 @@ O agente faz as seguintes solicitações de API para implantar a Classificação
 * ec2:DescribeIamInstanceProfileAssociations
 
 
-O agente faz as seguintes solicitações de API para verificar buckets do S3 quando você usa a Classificação de Dados do NetApp :
+O agente faz as seguintes solicitações de API para verificar buckets do S3 quando você usa a NetApp Data Classification:
 
 * iam:AdicionarFunçãoAoPerfilDaInstancia
 * ec2:AssociateIamInstanceProfile
@@ -972,7 +972,7 @@ O agente faz as seguintes solicitações de API para implantar e gerenciar o Clo
 | iam:AdicionarFunçãoAoPerfilDaInstancia | Sim | Não | Não 
 
 
-| iam:RemoverRoleFromInstanceProfile | Não | Sim | Sim 
+| iam:RemoveRoleFromInstanceProfile | Não | Sim | Sim 
 
 
 | iam:ExcluirPerfilDeInstance | Não | Sim | Sim 
@@ -1062,7 +1062,7 @@ O agente faz as seguintes solicitações de API para implantar e gerenciar o Clo
 | ec2:AutorizarEntrada de Grupo de Segurança | Sim | Não | Não 
 
 
-| ec2:RevogarIngressoDeGrupoDeSegurança | Sim | Sim | Não 
+| ec2:RevogarIngressoDoGrupoDeSegurança | Sim | Sim | Não 
 
 
 .4+| Crie e gerencie interfaces de rede para o Cloud Volumes ONTAP na sub-rede de destino | ec2:CriarInterface de Rede | Sim | Não | Não 

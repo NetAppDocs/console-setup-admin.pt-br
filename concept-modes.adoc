@@ -35,7 +35,7 @@ Modo padrão:: Você usa um serviço SaaS do console baseado na web.  Dependendo
 Este modo usa transmissão de dados criptografados pela internet pública.
 
 --
-Modo restrito:: Você instala um agente do Console na nuvem (em uma região governamental, soberana ou comercial) e ele tem conectividade de saída limitada à camada SaaS do NetApp Console.
+Modo restrito:: Você instala um agente do Console na nuvem (em uma região governamental, soberana ou comercial) e ele tem conectividade de saída limitada à camada SaaS do NetApp Console .
 +
 --
 Este modo é normalmente usado por governos estaduais e locais e empresas regulamentadas.
@@ -53,7 +53,7 @@ A tabela a seguir fornece uma comparação do console NetApp .
 |  | Modo padrão | Modo restrito 
 
 
-| Conexão necessária à camada SaaS do NetApp Console? | Sim | Somente saída 
+| Conexão necessária à camada SaaS do NetApp Console ? | Sim | Somente saída 
 
 
 | É necessária conexão com seu provedor de nuvem? | Sim | Sim, dentro da região 
@@ -115,13 +115,13 @@ Instalação do agente de console:: Você pode instalar um agente usando um dos 
 
 
 --
-Atualizações do agente do console:: A NetApp atualiza seu agente automaticamente mensalmente.
+Atualizações do agente do console:: A NetApp atualiza automaticamente seu agente mensalmente.
 Acesso à interface do usuário:: A interface do usuário pode ser acessada pelo console baseado na web fornecido pela camada SaaS.
 Ponto de extremidade da API:: As chamadas de API são feitas para o seguinte endpoint: \ https://api.bluexp.netapp.com
 Autenticação:: Autenticação com logins auth0 ou NetApp Support Site (NSS).  A federação de identidade está disponível.
 Serviços de dados suportados:: Todos os serviços de dados da NetApp são suportados. link:https://docs.netapp.com/us-en/data-services-family/index.html["Saiba mais sobre os serviços de dados da NetApp"^] .
 Opções de licenciamento suportadas:: Assinaturas do Marketplace e BYOL são suportadas no modo padrão; no entanto, as opções de licenciamento suportadas dependem do serviço de dados NetApp que você está usando.  Revise a documentação de cada serviço para saber mais sobre as opções de licenciamento disponíveis.
-Como começar com o modo padrão:: Vá para o https://console.netapp.com["Console NetApp"^] e inscreva-se.
+Como começar com o modo padrão:: Vá para o https://console.netapp.com["NetApp Console"^] e inscreva-se.
 +
 --
 link:task-quick-start-standard-mode.html["Aprenda como começar com o modo padrão"] .
@@ -144,7 +144,7 @@ Comunicação de saída:: Um agente requer conectividade de saída com a camada 
 --
 A camada SaaS do Console não inicia a comunicação com um agente.  Os agentes iniciam toda a comunicação com a camada SaaS do Console, extraindo ou enviando dados conforme necessário.
 
-Também é necessária uma conexão com os recursos do provedor de nuvem dentro da região.
+Também é necessária uma conexão com recursos do provedor de nuvem dentro da região.
 
 --
 Localização com suporte para um agente:: No modo restrito, um agente é suportado na nuvem: em uma região governamental, região soberana ou região comercial.
@@ -167,7 +167,7 @@ Gerenciamento de armazenamento e serviços de dados suportados:: Os seguintes se
 | Backup e recuperação | Suportado em regiões governamentais e regiões comerciais com modo restrito. Não suportado em regiões soberanas com modo restrito. No modo restrito, o NetApp Backup and Recovery oferece suporte somente para backup e restauração de dados de volume ONTAP . https://docs.netapp.com/us-en/data-services-disaster-recovery/prev-ontap-protect-journey.html#support-for-sites-with-limited-internet-connectivity["Veja a lista de destinos de backup suportados para dados ONTAP"^] O backup e a restauração de dados de aplicativos e dados de máquinas virtuais não são suportados. 
 
 
-| Classificação de dados da NetApp  a| 
+| NetApp Data Classification  a| 
 Suportado em regiões governamentais com modo restrito.  Não suportado em regiões comerciais ou em regiões soberanas com modo restrito.
 
 
@@ -175,7 +175,7 @@ Suportado em regiões governamentais com modo restrito.  Não suportado em regi�
 | Cloud Volumes ONTAP | Suporte total 
 
 
-| Licenças e assinaturas | Você pode acessar informações de licença e assinatura com as opções de licenciamento suportadas listadas abaixo para o modo restrito. 
+| Licenses and subscriptions | Você pode acessar informações de licença e assinatura com as opções de licenciamento suportadas listadas abaixo para o modo restrito. 
 
 
 | Clusters ONTAP locais | A descoberta com um agente do Console e a descoberta sem um agente do Console (descoberta direta) são suportadas.  Quando você descobre um cluster local sem um agente de console, a exibição Avançada (Gerenciador do Sistema) não é suportada. 
@@ -203,7 +203,7 @@ Para o Cloud Volumes ONTAP, tanto o licenciamento baseado em capacidade quanto o
 
 
 --
-Como começar com o modo restrito:: Você precisa habilitar o modo restrito ao criar sua organização do NetApp Console.
+Como começar com o modo restrito:: Você precisa habilitar o modo restrito ao criar sua organização do NetApp Console .
 
 
 Se você ainda não tiver uma organização, será solicitado a criá-la e habilitar o modo restrito ao efetuar login no Console pela primeira vez a partir de um agente do Console instalado manualmente ou criado no marketplace do seu provedor de nuvem.
@@ -259,22 +259,22 @@ Observe que alguns serviços podem ter suporte com limitações.  Para mais deta
 .9+| *Serviços de Dados* | Backup e recuperação da NetApp | Simhttps://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-limited-internet-connectivity["Veja a lista de destinos de backup suportados para dados de volume ONTAP"^] 
 
 
-| Classificação de dados da NetApp | Sim 
+| NetApp Data Classification | Sim 
 
 
-| Cópia e sincronização da NetApp | Não 
+| NetApp Copy and Sync | Não 
 
 
-| Recuperação de desastres da NetApp | Não 
+| NetApp Disaster Recovery | Não 
 
 
-| Resiliência do NetApp Ransomware | Não 
+| NetApp Ransomware Resilience | Não 
 
 
-| Replicação NetApp | Sim 
+| NetApp Replication | Sim 
 
 
-| Camadas de nuvem da NetApp | Não 
+| NetApp Cloud Tiering | Não 
 
 
 | Cache de volume do NetApp | Não 

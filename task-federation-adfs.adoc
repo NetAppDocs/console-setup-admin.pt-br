@@ -57,7 +57,7 @@ AddRelyingParty "urn:auth0:netapp-cloud-account" "https://netapp-cloud-account.a
 .. Como alternativa, você pode criar a confiança manualmente no console de gerenciamento do AD FS.  Use os seguintes valores do NetApp Console ao criar a confiança:
 +
 *** Ao criar o Relying Trust Identifier, use o valor **YOUR_TENANT**: `netapp-cloud-account`
-*** Ao selecionar *Ativar suporte para WS-Federation*, use o valor **YOUR_AUTH0_DOMAIN**: `netapp-cloud-account.auth0.com`
+*** Ao selecionar *Habilitar suporte para WS-Federation*, use o valor **YOUR_AUTH0_DOMAIN**: `netapp-cloud-account.auth0.com`
 
 
 .. Depois de criar a confiança, copie o URL de metadados do seu servidor AD FS ou baixe o arquivo de metadados da federação.  Você precisará deste URL ou arquivo para concluir a conexão no Console.

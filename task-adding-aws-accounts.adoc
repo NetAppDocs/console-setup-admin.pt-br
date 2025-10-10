@@ -308,7 +308,7 @@ Siga as etapas abaixo se você assinou os serviços de dados inteligentes da Net
 .Passos
 . Confirme se você não associou sua assinatura à sua organização ou conta do Console.
 +
-.. No menu de navegação, selecione *Administração > Licenças e assinaturas*.
+.. No menu de navegação, selecione *Administração > Licenses and subscriptions*.
 .. Selecione *Assinaturas*.
 .. Verifique se sua assinatura não aparece.
 +

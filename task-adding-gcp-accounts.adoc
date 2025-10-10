@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-adding-gcp-accounts.html 
 keywords: permissions, gcp, marketplace, gcp subscription, subscription, gcp marketplace, subscribe, data tiering, tiering, setup, requirements, account for data tiering, account for tiering, interoperable, interoperability, interoperable storage access keys, access keys, bluexp 
-summary: Você pode gerenciar as credenciais do Google Cloud associadas à instância da VM do agente do Console associando uma assinatura do marketplace e solucionando problemas do processo de assinatura.  Ambas as tarefas garantem que você possa usar sua assinatura do marketplace para pagar por serviços de dados. 
+summary: Você pode gerenciar as credenciais do Google Cloud associadas à instância da VM do agente do Console associando uma assinatura do marketplace e solucionando problemas no processo de assinatura.  Ambas as tarefas garantem que você possa usar sua assinatura do marketplace para pagar por serviços de dados. 
 ---
 = Gerenciar credenciais e assinaturas do Google Cloud para o NetApp Console
 :hardbreaks:
@@ -35,7 +35,7 @@ image:screenshot_gcp_associate.gif["Uma captura de tela de um projeto e assinatu
 . Se você ainda não tiver uma assinatura, selecione *Adicionar assinatura > Continuar* e siga as etapas no Google Cloud Marketplace.
 +
 
-NOTE: Antes de concluir as etapas a seguir, verifique se você tem privilégios de administrador de cobrança na sua conta do Google Cloud, bem como um login no console do NetApp .
+NOTE: Antes de concluir as etapas a seguir, verifique se você tem privilégios de administrador de cobrança na sua conta do Google Cloud, bem como um login no NetApp Console .
 
 +
 .. Depois de ser redirecionado para o https://console.cloud.google.com/marketplace/product/netapp-cloudmanager/cloud-manager["Página do NetApp Intelligent Services no Google Cloud Marketplace"^] , certifique-se de que o projeto correto esteja selecionado no menu de navegação superior.

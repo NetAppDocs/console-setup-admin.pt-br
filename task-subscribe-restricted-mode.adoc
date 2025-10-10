@@ -18,14 +18,14 @@ Assine o NetApp Intelligent Services no marketplace do seu provedor de nuvem par
 
 Uma assinatura de mercado permite cobrar pelos seguintes serviços de dados com modo restrito:
 
-* Backup e recuperação da NetApp
+* NetApp Backup and Recovery
 * Cloud Volumes ONTAP
-* Camadas de nuvem da NetApp
-* Resiliência do NetApp Ransomware
-* Recuperação de desastres da NetApp
+* NetApp Cloud Tiering
+* NetApp Ransomware Resilience
+* NetApp Disaster Recovery
 
 
-A classificação de dados da NetApp é habilitada por meio de sua assinatura, mas não há cobrança pelo uso da classificação.
+A NetApp Data Classification é habilitada por meio de sua assinatura, mas não há cobrança pelo uso da classificação.
 
 .Antes de começar
 Você já deve ter implantado um agente do Console para assinar serviços de dados.  Você precisa associar uma assinatura do marketplace às credenciais de nuvem conectadas a um agente do Console.
@@ -131,7 +131,7 @@ image:screenshot_gcp_associate.gif["Uma captura de tela de um projeto e assinatu
 . Se você ainda não tiver uma assinatura, selecione *Adicionar assinatura > Continuar* e siga as etapas no Google Cloud Marketplace.
 +
 
-NOTE: Antes de concluir as etapas a seguir, verifique se você tem privilégios de administrador de cobrança na sua conta do Google Cloud, bem como um login no console do NetApp .
+NOTE: Antes de concluir as etapas a seguir, verifique se você tem privilégios de administrador de cobrança na sua conta do Google Cloud, bem como um login no NetApp Console .
 
 +
 .. Depois de ser redirecionado para o https://console.cloud.google.com/marketplace/product/netapp-cloudmanager/cloud-manager["Página do NetApp Intelligent Services no Google Cloud Marketplace"^] , certifique-se de que o projeto correto esteja selecionado no menu de navegação superior.

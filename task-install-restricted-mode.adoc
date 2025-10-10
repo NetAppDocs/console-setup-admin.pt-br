@@ -88,7 +88,7 @@ Se você quiser habilitar a criptografia do Amazon EBS no volume raiz, selecione
 A AWS inicia o software com as configurações especificadas.  A instância do agente do Console e o software são executados em aproximadamente cinco minutos.
 
 .O que vem a seguir?
-Configure o NetApp Console.
+Configurar o NetApp Console.
 
 --
 .Mercado governamental da AWS
@@ -202,7 +202,7 @@ Essa configuração é importante porque uma identidade gerenciada permite que a
 O Azure implanta a máquina virtual com as configurações especificadas.  A máquina virtual e o software do agente do console devem estar em execução em aproximadamente cinco minutos.
 
 .O que vem a seguir?
-Configure o NetApp Console.
+Configurar o NetApp Console.
 
 --
 .Instalação manual
@@ -219,9 +219,9 @@ Você tem a opção de configurar um servidor proxy após a instalação, mas is
 
 
 
-NOTE: Não é possível definir um certificado para um servidor proxy transparente ao instalar manualmente o agente do Console. Se precisar definir um certificado para um servidor proxy transparente, você deverá usar o Console de Manutenção após a instalação. Saiba mais sobre olink:reference-agent-maint-console.html["Console de manutenção do agente"] .
+NOTE: Não é possível definir um certificado para um servidor proxy transparente ao instalar manualmente o agente do Console.  Se precisar definir um certificado para um servidor proxy transparente, você deverá usar o Console de Manutenção após a instalação. Saiba mais sobre olink:reference-agent-maint-console.html["Console de manutenção do agente"] .
 
-* Você precisa desabilitar a verificação de configuração que verifica a conectividade de saída durante a instalação. A instalação manual falhará se esta verificação não estiver desabilitada.link:task-troubleshoot-agent.html["Aprenda como desabilitar verificações de configuração para instalações manuais."]
+* Você precisa desabilitar a verificação de configuração que verifica a conectividade de saída durante a instalação.  A instalação manual falhará se esta verificação não estiver desabilitada.link:task-troubleshoot-agent.html["Aprenda como desabilitar verificações de configuração para instalações manuais."]
 * Dependendo do seu sistema operacional, o Podman ou o Docker Engine será necessário antes de instalar o agente do Console.
 
 
@@ -337,7 +337,7 @@ Esc:wq
 O agente do Console agora está instalado.  No final da instalação, o serviço do agente do Console (occm) será reiniciado duas vezes se você tiver especificado um servidor proxy.
 
 .O que vem a seguir?
-Configure o NetApp Console.
+Configurar o NetApp Console.
 
 --
 ====
@@ -357,7 +357,7 @@ Se o seu login estiver associado a outra organização, você precisará se insc
 . Inscreva-se ou faça login no NetApp Console.
 . Após efetuar login, configure o Console:
 +
-.. Insira um nome para o agente do Console.
+.. Digite um nome para o agente do Console.
 .. Insira um nome para uma nova organização do Console.
 .. Selecione *Você está executando em um ambiente seguro?*
 .. Selecione *Ativar modo restrito nesta conta*.
@@ -489,7 +489,7 @@ Associe a conta de serviço à VM do agente do Console.
 +
 https://cloud.google.com/compute/docs/access/create-enable-service-accounts-for-instances#changeserviceaccountandscopes["Documentação do Google Cloud: Alterando a conta de serviço e os escopos de acesso de uma instância"^]
 
-. Se você quiser gerenciar recursos em outros projetos, conceda acesso adicionando a conta de serviço com a função de agente do Console a esse projeto. Você precisará repetir esta etapa para cada projeto.
+. Se você quiser gerenciar recursos em outros projetos, conceda acesso adicionando a conta de serviço com a função de agente do Console a esse projeto.  Você precisará repetir esta etapa para cada projeto.
 
 
 --

@@ -22,7 +22,7 @@ Você precisará configurar o acesso à rede para computadores que acessam o Net
 
 == Atualize sua lista de endpoints para a lista revisada para 4.0.0 e superior
 
-A partir da versão 4.0.0, os agentes do Console exigem menos endpoints.  As implantações existentes anteriores à versão 4.0.0 continuam com suporte.  Após atualizar para a versão 4.0.0 ou posterior, você pode remover os endpoints antigos da sua lista de permissões quando for conveniente.
+A partir da versão 4.0.0, os agentes do Console exigem menos endpoints.  Implantações existentes anteriores à versão 4.0.0 continuam com suporte.  Após atualizar para a versão 4.0.0 ou posterior, você pode remover os endpoints antigos da sua lista de permissões quando for conveniente.
 
 A NetApp recomenda que você atualize suas regras de firewall para usar a lista de endpoints revisada.  A lista revisada é menor, portanto mais segura e fácil de gerenciar.
 
@@ -53,7 +53,7 @@ Cada computador que acessa o NetApp Console deve ter conexões com os endpoints 
 
 O sistema contata esses terminais em dois cenários:
 
-* A partir de um computador acessando o https://console.netapp.com["Console NetApp"^] como software como serviço (SaaS).
+* A partir de um computador acessando o https://console.netapp.com["NetApp Console"^] como software como serviço (SaaS).
 * De um computador acessando diretamente um host do agente, para efetuar login e configurá-lo ou acessar o Console a partir do host do agente.
 
 
@@ -86,7 +86,7 @@ Para obter imagens para atualizações do agente do Console.
 A NetApp recomenda permitir endpoints da Opção 1 no seu firewall, pois eles são mais seguros, e não permitir endpoints da Opção 2, a menos que você esteja usando o Ransomware Resilience ou o Backup and Recovery.  Observe o seguinte sobre esses pontos finais:
 
 * Os endpoints da Opção 1 são suportados em 3.9.47 e superiores.  Versões anteriores à 3.9.47 não oferecem suporte à compatibilidade com versões anteriores.
-* O agente do Console inicia o contato com os endpoints na opção 2 primeiro.  Se esses pontos de extremidade não estiverem acessíveis, ele entrará em contato automaticamente com os pontos de extremidade na opção 1.
+* O agente do Console inicia o contato com os endpoints na opção 2 primeiro.  Se esses terminais não estiverem acessíveis, ele entrará em contato automaticamente com os terminais na opção 1.
 * Se você usar o agente do Console com o NetApp Backup and Recovery ou o Ransomware Resilience, o sistema não oferecerá suporte aos endpoints da Opção 1.  Permitir pontos de extremidade da Opção 2 e não permitir a Opção 1.
 
 
@@ -134,7 +134,7 @@ Para obter imagens para atualizações do agente do Console.
 A NetApp recomenda permitir endpoints da Opção 1 no seu firewall, pois eles são mais seguros, e não permitir endpoints da Opção 2, a menos que você esteja usando o Ransomware Resilience ou o Backup and Recovery.  Observe o seguinte sobre esses pontos finais:
 
 * Os endpoints da Opção 1 são suportados em 3.9.47 e superiores.  Versões anteriores à 3.9.47 não oferecem suporte à compatibilidade com versões anteriores.
-* O agente do Console inicia o contato com os endpoints na opção 2 primeiro.  Se esses pontos de extremidade não estiverem acessíveis, ele entrará em contato automaticamente com os pontos de extremidade na opção 1.
+* O agente do Console inicia o contato com os endpoints na opção 2 primeiro.  Se esses terminais não estiverem acessíveis, ele entrará em contato automaticamente com os terminais na opção 1.
 * Se você usar o agente do Console com o NetApp Backup and Recovery ou o Ransomware Resilience, o sistema não oferecerá suporte aos endpoints da Opção 1.  Permitir pontos de extremidade da Opção 2 e não permitir a Opção 1.
 
 
@@ -177,7 +177,7 @@ Para obter imagens para atualizações do agente do Console.
 A NetApp recomenda permitir endpoints da Opção 1 no seu firewall, pois eles são mais seguros, e não permitir endpoints da Opção 2, a menos que você esteja usando o Ransomware Resilience ou o Backup and Recovery.  Observe o seguinte sobre esses pontos finais:
 
 * Os endpoints da Opção 1 são suportados em 3.9.47 e superiores.  Versões anteriores à 3.9.47 não oferecem suporte à compatibilidade com versões anteriores.
-* O agente do Console inicia o contato com os endpoints na opção 2 primeiro.  Se esses pontos de extremidade não estiverem acessíveis, ele entrará em contato automaticamente com os pontos de extremidade na opção 1.
+* O agente do Console inicia o contato com os endpoints na opção 2 primeiro.  Se esses terminais não estiverem acessíveis, ele entrará em contato automaticamente com os terminais na opção 1.
 * Se você usar o agente do Console com o NetApp Backup and Recovery ou o Ransomware Resilience, o sistema não oferecerá suporte aos endpoints da Opção 1.  Permitir pontos de extremidade da Opção 2 e não permitir a Opção 1.
 
 
@@ -217,7 +217,7 @@ Para obter imagens para atualizações do agente do Console.
 A NetApp recomenda permitir endpoints da Opção 1 no seu firewall, pois eles são mais seguros, e não permitir endpoints da Opção 2.  Observe o seguinte sobre esses pontos finais:
 
 * A partir da versão 3.9.47 do agente do Console, o sistema oferece suporte aos endpoints listados na opção 1.  Versões anteriores do agente do Console não oferecem suporte à compatibilidade com versões anteriores.
-* O agente do Console primeiro contata os endpoints na opção 2.  Se esses pontos de extremidade não estiverem acessíveis, ele entrará em contato automaticamente com os pontos de extremidade na opção 1.
+* O agente do Console primeiro contata os endpoints na opção 2.  Se esses terminais não estiverem acessíveis, ele entrará em contato automaticamente com os terminais na opção 1.
 * Se você usar o agente do Console com o NetApp Backup and Recovery ou o Ransomware Resilience, o sistema não oferecerá suporte aos endpoints da Opção 1.  Permitir pontos de extremidade da Opção 2 e não permitir a Opção 1.
 
 

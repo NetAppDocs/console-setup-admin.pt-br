@@ -152,7 +152,7 @@ Se os sistemas Cloud Volumes ONTAP não tiverem uma conexão de saída com a Int
 --
 
 
-Habilitar NTP:: Se você estiver planejando usar o NetApp Data Classification para verificar suas fontes de dados corporativos, deverá habilitar um serviço Network Time Protocol (NTP) no agente do Console e no sistema NetApp Data Classification para que o horário seja sincronizado entre os sistemas. https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["Saiba mais sobre a classificação de dados da NetApp"^]
+Habilitar NTP:: Se você planeja usar o NetApp Data Classification para verificar suas fontes de dados corporativos, habilite um serviço Network Time Protocol (NTP) no agente do Console e no sistema NetApp Data Classification para que o horário seja sincronizado entre os sistemas. https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["Saiba mais sobre a classificação de dados da NetApp"^]
 +
 --
 Você precisa implementar esse requisito de rede depois de criar o agente do Console.
@@ -429,7 +429,7 @@ Seu principal serviço agora está configurado e você deve ter copiado o ID do 
 Crie o agente do Console diretamente do NetApp Console.
 
 .Sobre esta tarefa
-* A criação do agente do Console a partir do Console implanta uma máquina virtual no Azure usando uma configuração padrão. Não mude para uma instância de VM menor com menos CPUs ou menos RAM depois de criar o agente do Console. link:reference-agent-default-config.html["Saiba mais sobre a configuração padrão do agente do Console"] .
+* A criação do agente do Console a partir do Console implanta uma máquina virtual no Azure usando uma configuração padrão.  Não mude para uma instância de VM menor com menos CPUs ou menos RAM depois de criar o agente do Console. link:reference-agent-default-config.html["Saiba mais sobre a configuração padrão do agente do Console"] .
 * Quando o Console implanta o agente do Console, ele cria uma função personalizada e a atribui à VM do agente do Console.  Esta função inclui permissões que permitem ao agente do Console gerenciar recursos do Azure.  Você precisa garantir que a função seja mantida atualizada à medida que novas permissões forem adicionadas em versões subsequentes. link:reference-permissions-azure.html["Saiba mais sobre a função personalizada do agente do Console"] .
 
 

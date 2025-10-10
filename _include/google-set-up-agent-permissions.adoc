@@ -43,7 +43,7 @@ Por exemplo, digamos que o agente do Console esteja no projeto 1 e você queira 
 .. No serviço IAM e Admin, selecione o projeto do Google Cloud onde você deseja criar sistemas Cloud Volumes ONTAP .
 .. Na página *IAM*, selecione *Conceder acesso* e forneça os detalhes necessários.
 +
-*** Digite o e-mail da conta de serviço do agente do Console.
+*** Insira o e-mail da conta de serviço do agente do Console.
 *** Selecione a função personalizada do agente do Console.
 *** Selecione *Salvar*.
 

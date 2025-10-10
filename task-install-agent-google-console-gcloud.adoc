@@ -137,7 +137,7 @@ Se os sistemas Cloud Volumes ONTAP não tiverem uma conexão de saída com a Int
 --
 
 
-Habilitar NTP:: Se você estiver planejando usar o NetApp Data Classification para verificar suas fontes de dados corporativos, deverá habilitar um serviço Network Time Protocol (NTP) no agente do Console e no sistema NetApp Data Classification para que o horário seja sincronizado entre os sistemas. https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["Saiba mais sobre a classificação de dados da NetApp"^]
+Habilitar NTP:: Se você planeja usar o NetApp Data Classification para verificar suas fontes de dados corporativos, habilite um serviço Network Time Protocol (NTP) no agente do Console e no sistema NetApp Data Classification para que o horário seja sincronizado entre os sistemas. https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["Saiba mais sobre a classificação de dados da NetApp"^]
 +
 --
 Implemente este requisito de rede após criar o agente do Console.
@@ -284,7 +284,7 @@ Por exemplo, digamos que o agente do Console esteja no projeto 1 e você queira 
 .. No serviço IAM e Admin, selecione o projeto do Google Cloud onde você deseja criar sistemas Cloud Volumes ONTAP .
 .. Na página *IAM*, selecione *Conceder acesso* e forneça os detalhes necessários.
 +
-*** Digite o e-mail da conta de serviço do agente do Console.
+*** Insira o e-mail da conta de serviço do agente do Console.
 *** Selecione a função personalizada do agente do Console.
 *** Selecione *Salvar*.
 
@@ -379,7 +379,7 @@ https://cloud.google.com/apis/docs/getting-started#enabling_apis["Documentação
 Crie um agente do Console diretamente do Console.
 
 .Sobre esta tarefa
-A criação do agente do Console implanta uma instância de máquina virtual no Google Cloud usando uma configuração padrão. Não mude para uma instância de VM menor com menos CPUs ou menos RAM depois de criar o agente do Console. link:reference-agent-default-config.html["Saiba mais sobre a configuração padrão do agente do Console"] .
+A criação do agente do Console implanta uma instância de máquina virtual no Google Cloud usando uma configuração padrão.  Não mude para uma instância de VM menor com menos CPUs ou menos RAM depois de criar o agente do Console. link:reference-agent-default-config.html["Saiba mais sobre a configuração padrão do agente do Console"] .
 
 .Antes de começar
 Você deve ter o seguinte:

@@ -145,7 +145,7 @@ Se os sistemas Cloud Volumes ONTAP não tiverem uma conexão de saída com a Int
 --
 
 
-Habilitar NTP:: Se você estiver planejando usar o NetApp Data Classification para verificar suas fontes de dados corporativos, deverá habilitar um serviço Network Time Protocol (NTP) no agente do Console e no sistema NetApp Data Classification para que o horário seja sincronizado entre os sistemas. https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["Saiba mais sobre a classificação de dados da NetApp"^]
+Habilitar NTP:: Se você planeja usar o NetApp Data Classification para verificar suas fontes de dados corporativos, habilite um serviço Network Time Protocol (NTP) no agente do Console e no sistema NetApp Data Classification para que o horário seja sincronizado entre os sistemas. https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["Saiba mais sobre a classificação de dados da NetApp"^]
 +
 --
 Você precisará implementar esse requisito de rede depois de criar o agente do Console.
@@ -289,7 +289,7 @@ Agora você deve ter uma função do IAM que tenha as permissões necessárias o
 Crie o agente do Console diretamente do console baseado na Web.
 
 .Sobre esta tarefa
-* A criação do agente do Console a partir do Console implanta uma instância do EC2 na AWS usando uma configuração padrão. Não mude para uma instância EC2 menor com menos CPUs ou menos RAM depois de criar o agente do Console. link:reference-agent-default-config.html["Saiba mais sobre a configuração padrão do agente do Console"] .
+* A criação do agente do Console a partir do Console implanta uma instância do EC2 na AWS usando uma configuração padrão.  Não mude para uma instância EC2 menor com menos CPUs ou menos RAM depois de criar o agente do Console. link:reference-agent-default-config.html["Saiba mais sobre a configuração padrão do agente do Console"] .
 * Quando o Console cria o agente do Console, ele cria uma função do IAM e um perfil de instância para a instância.  Esta função inclui permissões que permitem ao agente do Console gerenciar recursos da AWS.  Garanta que a função seja atualizada conforme novas permissões forem adicionadas em versões futuras. link:reference-permissions-aws.html["Saiba mais sobre a política do IAM para o agente do Console"] .
 
 

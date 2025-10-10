@@ -92,7 +92,7 @@ Instalação manual::
 
 Observe o seguinte sobre o suporte ao RHEL 8 e 9:
 
-Limitações:: A Classificação de Dados NetApp será suportada se você instalar o agente em um host RHEL 8 ou 9 que resida no local.  Não há suporte se o host RHEL 8 ou 9 residir na AWS, Azure ou Google Cloud.
+Limitações:: A NetApp Data Classification será suportada se você instalar o agente em um host RHEL 8 ou 9 que resida no local.  Não há suporte se o host RHEL 8 ou 9 residir na AWS, Azure ou Google Cloud.
 Ferramenta de orquestração de contêineres:: Você deve usar a ferramenta Podman como ferramenta de orquestração de contêineres ao instalar o agente do Console em um host RHEL 8 ou 9.  O Docker Engine não é compatível com RHEL 8 e 9.
 Modo de implantação:: RHEL 8 e 9 são suportados ao usar o Console no modo padrão e no modo restrito.
 Versões do agente do console suportadas:: A NetApp oferece suporte ao RHEL 8 e 9 a partir das seguintes versões do agente do Console:

@@ -4,7 +4,7 @@ permalink: reference-iam-disaster-rec-roles.html
 keywords: disaster recovery, role-based access control, failover admin, replication plans, job- monitoring, business continuity, compliance- management, operational governance, access delegation, rbac, IAM roles 
 summary: Você pode atribuir as seguintes funções aos usuários para fornecer a eles acesso ao NetApp Disaster Recovery no Console.  As funções de Recuperação de Desastres oferecem a flexibilidade de atribuir aos usuários uma função específica para as tarefas que eles precisam realizar na sua organização. A maneira como você atribui funções depende das suas próprias práticas de negócios e gerenciamento de armazenamento. 
 ---
-= Funções de recuperação de desastres da NetApp no ​​NetApp Console
+= Funções de NetApp Disaster Recovery no ​​NetApp Console
 :hardbreaks:
 :allow-uri-read: 
 :icons: font

@@ -82,19 +82,19 @@ O Console fornece serviços de dados para proteger e manter a disponibilidade do
 
 Alertas de armazenamento:: Visualize problemas relacionados à capacidade, disponibilidade, desempenho, proteção e segurança no seu ambiente ONTAP .
 Centro de automação:: Use soluções com script para automatizar a implantação e a integração de produtos e serviços da NetApp .
-Backup e recuperação da NetApp:: Faça backup e restaure dados na nuvem e no local.
-Classificação de dados da NetApp:: Prepare a privacidade dos dados do seu aplicativo e dos ambientes de nuvem.
-Cópia e sincronização da NetApp:: Sincronize dados entre armazenamentos de dados locais e na nuvem.
+NetApp Backup and Recovery:: Faça backup e restaure dados na nuvem e no local.
+NetApp Data Classification:: Prepare a privacidade dos dados do seu aplicativo e dos ambientes de nuvem.
+NetApp Copy and Sync:: Sincronize dados entre armazenamentos de dados locais e na nuvem.
 Consultor digital da NetApp (Active IQ):: Use análise preditiva e suporte proativo para otimizar sua infraestrutura de dados.
-Licenças e assinaturas:: Gerencie e monitore suas licenças e assinaturas.
-Recuperação de desastres da NetApp:: Proteja cargas de trabalho VMware locais usando o VMware Cloud no Amazon FSx para ONTAP como um site de recuperação de desastres.
+Licenses and subscriptions:: Gerencie e monitore suas licenças e assinaturas.
+NetApp Disaster Recovery:: Proteja cargas de trabalho VMware locais usando o VMware Cloud no Amazon FSx para ONTAP como um site de recuperação de desastres.
 Planejamento do ciclo de vida:: Identifique clusters com baixa capacidade atual ou prevista e implemente recomendações de hierarquização de dados ou capacidade adicional.
-Resiliência do NetApp Ransomware:: Detecte anomalias que podem resultar em ataques de ransomware.  Proteja e recupere cargas de trabalho.
-Replicação NetApp:: Replique dados entre sistemas de armazenamento para dar suporte a backup e recuperação de desastres.
+NetApp Ransomware Resilience:: Detecte anomalias que podem resultar em ataques de ransomware.  Proteja e recupere cargas de trabalho.
+NetApp Replication:: Replique dados entre sistemas de armazenamento para dar suporte a backup e recuperação de desastres.
 Atualizações de software:: Automatize a avaliação, o planejamento e a execução de atualizações do ONTAP .
 Painel de sustentabilidade:: Analise a sustentabilidade dos seus sistemas de armazenamento.
-Camadas de nuvem da NetApp:: Amplie seu armazenamento ONTAP local para a nuvem.
-Cache de volume da NetApp:: Crie um volume de cache gravável para acelerar o acesso aos dados ou descarregar o tráfego de volumes muito acessados.
+NetApp Cloud Tiering:: Amplie seu armazenamento ONTAP local para a nuvem.
+NetApp Volume Caching:: Crie um volume de cache gravável para acelerar o acesso aos dados ou descarregar o tráfego de volumes muito acessados.
 Cargas de trabalho da NetApp:: Projete, configure e opere cargas de trabalho principais usando o Amazon FSx for NetApp ONTAP.
 
 

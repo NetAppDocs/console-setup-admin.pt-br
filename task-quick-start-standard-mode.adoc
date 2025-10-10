@@ -4,7 +4,7 @@ permalink: task-quick-start-standard-mode.html
 keywords: quick start, standard mode quick start 
 summary: Comece a usar o NetApp Console no modo padrão preparando a rede para o Console, inscrevendo-se e criando uma conta e, opcionalmente, criando um agente do Console. 
 ---
-= Fluxo de trabalho de introdução (modo padrão)
+= Introdução ao fluxo de trabalho (modo padrão)
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -16,7 +16,7 @@ summary: Comece a usar o NetApp Console no modo padrão preparando a rede para o
 [role="lead"]
 Comece a usar o NetApp Console no modo padrão preparando a rede para o Console, inscrevendo-se e criando uma conta e, opcionalmente, criando um agente do Console.
 
-No modo padrão, você acessa um console baseado na Web hospedado como um produto de software como serviço (SaaS) da NetApp. Antes de começar, certifique-se de entenderlink:concept-modes.html["modos de implantação"] elink:concept-agents.html["Agentes de console"] .
+No modo padrão, você acessa um console baseado na Web hospedado como um produto de software como serviço (SaaS) da NetApp.  Antes de começar, certifique-se de entenderlink:concept-modes.html["modos de implantação"] elink:concept-agents.html["Agentes de console"] .
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Um"] link:reference-networking-saas-console.html["Preparar a rede para usar o console NetApp"]
 [role="quick-margin-para"]
@@ -49,4 +49,4 @@ Para usar o NetApp Intelligent Data Services para gerenciar armazenamento e dado
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Quatro"] link:task-subscribe-standard-mode.html["Assine o NetApp Intelligent Services (opcional)"]
 [role="quick-margin-para"]
-Inscreva-se no NetApp Intelligent Services por meio do seu provedor de nuvem para pagar por hora (PAYGO) ou por meio de um contrato anual.  Os serviços inteligentes da NetApp incluem backup e recuperação da NetApp , Cloud Volumes ONTAP, NetApp Cloud Tiering, NetApp Ransomware Resilience e NetApp Disaster Recovery.  A classificação de dados da NetApp está incluída na sua assinatura sem custo adicional.
+Inscreva-se no NetApp Intelligent Services por meio do seu provedor de nuvem para pagar por hora (PAYGO) ou por meio de um contrato anual.  Os NetApp Intelligent Services incluem NetApp Backup and Recovery, Cloud Volumes ONTAP, NetApp Cloud Tiering, NetApp Ransomware Resilience e NetApp Disaster Recovery.  A NetApp Data Classification está incluída na sua assinatura sem custo adicional.

@@ -26,7 +26,7 @@ O Console também suporta a associação de uma conta NSS por conta de usuário.
 
 * Implantando o Cloud Volumes ONTAP quando você traz sua própria licença (BYOL)
 +
-É necessário fornecer sua conta NSS para que o Console possa carregar sua chave de licença e habilitar a assinatura para o período que você comprou. Isso inclui atualizações automáticas para renovações de prazo.
+É necessário fornecer sua conta NSS para que o Console possa carregar sua chave de licença e habilitar a assinatura para o período que você comprou.  Isso inclui atualizações automáticas para renovações de prazo.
 
 * Registrando sistemas Cloud Volumes ONTAP de pagamento conforme o uso
 +
@@ -60,12 +60,12 @@ NOTE: A NetApp usa o Microsoft Entra ID como provedor de identidade para serviç
 Após o login bem-sucedido, o NetApp armazenará o nome de usuário do NSS.
 
 +
-Este é um ID gerado pelo sistema que mapeia para seu e-mail. Na página *NSS Management*, você pode exibir seu e-mail doimage:https://raw.githubusercontent.com/NetAppDocs/console-family/main/media/icon-nss-menu.png["Um ícone de três pontos horizontais"] menu.
+Este é um ID gerado pelo sistema que mapeia para seu e-mail.  Na página *NSS Management*, você pode exibir seu e-mail doimage:https://raw.githubusercontent.com/NetAppDocs/console-family/main/media/icon-nss-menu.png["Um ícone de três pontos horizontais"] menu.
 
 +
 ** Se você precisar atualizar seus tokens de credenciais de login, também há uma opção *Atualizar credenciais* noimage:https://raw.githubusercontent.com/NetAppDocs/console-family/main/media/icon-nss-menu.png["Um ícone de três pontos horizontais"] menu.
 +
-Usar esta opção solicitará que você faça login novamente. Observe que o token para essas contas expira após 90 dias. Uma notificação será publicada para alertá-lo sobre isso.
+Usar esta opção solicitará que você faça login novamente.  Observe que o token para essas contas expira após 90 dias.  Uma notificação será publicada para alertá-lo sobre isso.
 
 
 

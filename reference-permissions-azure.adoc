@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: reference-permissions-azure.html 
 keywords: permissions, azure, azure permissions, bluexp 
-summary: Quando o NetApp Console inicia um agente de Console no Azure, ele anexa uma função personalizada à VM que fornece ao agente permissões para gerenciar recursos e processos dentro dessa assinatura do Azure.  O agente usa as permissões para fazer chamadas de API para vários serviços do Azure. 
+summary: Quando o NetApp Console inicia um agente de console no Azure, ele anexa uma função personalizada à VM que fornece ao agente permissões para gerenciar recursos e processos dentro dessa assinatura do Azure.  O agente usa as permissões para fazer chamadas de API para vários serviços do Azure. 
 ---
 = Permissões do Azure para o agente do Console
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: Quando o NetApp Console inicia um agente de Console no Azure, ele anexa
 
 
 [role="lead"]
-Quando o NetApp Console inicia um agente de Console no Azure, ele anexa uma função personalizada à VM que fornece ao agente permissões para gerenciar recursos e processos dentro dessa assinatura do Azure.  O agente usa as permissões para fazer chamadas de API para vários serviços do Azure.
+Quando o NetApp Console inicia um agente de console no Azure, ele anexa uma função personalizada à VM que fornece ao agente permissões para gerenciar recursos e processos dentro dessa assinatura do Azure.  O agente usa as permissões para fazer chamadas de API para vários serviços do Azure.
 
 A necessidade ou não de criar essa função personalizada para o agente depende de como você a implantou.
 
@@ -183,7 +183,7 @@ As seções a seguir descrevem como as permissões são usadas para cada sistema
 
 === Azure NetApp Files
 
-O agente faz as seguintes solicitações de API quando você usa a Classificação de Dados do NetApp para verificar dados do Azure NetApp Files :
+O agente faz as seguintes solicitações de API quando você usa a NetApp Data Classification para verificar dados do Azure NetApp Files :
 
 * Microsoft. NetApp/netAppAccounts/leitura
 * Microsoft. NetApp/netAppAccounts/capacityPools/leitura
@@ -194,7 +194,7 @@ O agente faz as seguintes solicitações de API quando você usa a Classificaç�
 
 
 
-=== Backup e recuperação da NetApp
+=== NetApp Backup and Recovery
 
 O agente do Console faz as seguintes solicitações de API para o NetApp Backup and Recovery:
 
@@ -242,7 +242,7 @@ O agente faz as seguintes solicitações de API quando você usa a funcionalidad
 
 
 
-=== Classificação de dados da NetApp
+=== NetApp Data Classification
 
 O agente faz as seguintes solicitações de API quando você usa a Classificação de Dados.
 

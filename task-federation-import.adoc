@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-federation-import.html 
 keywords: federation, BlueXP, identity provider, IdP, single sign-on, SSO, verified domain, credentials, certificate, client secret, update, manage federations, security, compliance, user access, productivity, account management, authentication, access control, business continuity, 
-summary: 'Se você tiver configurado a federação anteriormente por meio do NetApp Cloud Central (um aplicativo externo ao NetApp Console), a página Federação solicitará que você importe sua conexão federada existente para o Console para que você possa gerenciá-la na nova interface.  Você pode então aproveitar os aprimoramentos mais recentes sem precisar recriar sua conexão federada.' 
+summary: 'Se você tiver configurado anteriormente a federação por meio do NetApp Cloud Central (um aplicativo externo ao NetApp Console), a página Federação solicitará que você importe sua conexão federada existente para o Console para que você possa gerenciá-la na nova interface.  Você pode então aproveitar os aprimoramentos mais recentes sem precisar recriar sua conexão federada.' 
 ---
 = Importe sua federação para o NetApp Console
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: 'Se você tiver configurado a federação anteriormente por meio do Net
 
 
 [role="lead"]
-Se você tiver configurado a federação anteriormente por meio do NetApp Cloud Central (um aplicativo externo ao NetApp Console), a página Federação solicitará que você importe sua conexão federada existente para o Console para que você possa gerenciá-la na nova interface.  Você pode então aproveitar os aprimoramentos mais recentes sem precisar recriar sua conexão federada.
+Se você tiver configurado anteriormente a federação por meio do NetApp Cloud Central (um aplicativo externo ao NetApp Console), a página Federação solicitará que você importe sua conexão federada existente para o Console para que você possa gerenciá-la na nova interface.  Você pode então aproveitar os aprimoramentos mais recentes sem precisar recriar sua conexão federada.
 
 
 NOTE: Depois de importar sua federação existente, você pode gerenciá-la na página *Federações*.link:task-federation-manage.html["Saiba mais sobre como gerenciar federações."]

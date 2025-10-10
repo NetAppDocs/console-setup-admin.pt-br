@@ -76,7 +76,7 @@ NOTE: O endereço IP de origem é o host do agente.
 | Serviço | Protocolo | Porta | Destino | Propósito 
 
 
-| Chamadas de API e AutoSupport | HTTPS | 443 | Gerenciamento de cluster de Internet de saída e ONTAP LIF | Chamadas de API para o Google Cloud, para o ONTAP, para a classificação de dados da NetApp e envio de mensagens de AutoSupport para a NetApp 
+| Chamadas de API e AutoSupport | HTTPS | 443 | Gerenciamento de cluster de Internet de saída e ONTAP LIF | Chamadas de API para o Google Cloud, para o ONTAP, para a NetApp Data Classification e envio de mensagens de AutoSupport para a NetApp 
 
 
 | Chamadas de API | TCP | 8080 | Classificação de Dados | Sondar a instância de classificação de dados durante a implantação 

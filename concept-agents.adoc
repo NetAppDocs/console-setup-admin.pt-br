@@ -29,10 +29,10 @@ Algumas ações exigem um agente do Console ou um link do NetApp Workloads. http
 * Centro de automação
 * Azure NetApp Files
 +
-Você não precisa de um agente de console para gerenciar o Azure NetApp Files, mas é necessário um para usar a Classificação de Dados do NetApp para verificar o Azure NetApp Files.
+Você não precisa de um agente de console para gerenciar o Azure NetApp Files, mas é necessário um para usar a NetApp Data Classification para verificar o Azure NetApp Files.
 
 * Google Cloud NetApp Volumes
-* Cópia e sincronização da NetApp
+* NetApp Copy and Sync
 * Consultor digital
 * Monitorar o uso da licença, o monitoramento da assinatura requer um agente do Console
 +
@@ -63,18 +63,18 @@ No modo padrão, o Console requer um agente de Console para:
 * Recursos de gerenciamento do Amazon FSx para ONTAP
 * Armazenamento Amazon S3
 * Armazenamento de Blobs do Azure
-* Backup e recuperação da NetApp
+* NetApp Backup and Recovery
 * Classificação de Dados
 * Cloud Volumes ONTAP
-* Recuperação de desastres da NetApp
+* NetApp Disaster Recovery
 * Sistemas da série E
 * Eficiência econômica ^1^
 * Baldes do Google Cloud Storage
 * Integração de cluster ONTAP local com serviços de dados NetApp
 * Resiliência do NetApp Ransomware
 * Sistemas StorageGRID
-* Camadas de nuvem da NetApp
-* Cache de volume da NetApp
+* NetApp Cloud Tiering
+* NetApp Volume Caching
 
 
 ^1^ Você pode acessar esses serviços sem um agente do Console, mas um agente do Console é necessário para iniciar ações.
@@ -98,7 +98,7 @@ Você pode instalar agentes nos seguintes locais:
 * Serviços Web da Amazon
 * Microsoft Azure
 +
-Implante um agente de console no Azure na mesma região que os sistemas Cloud Volumes ONTAP que ele gerencia. Alternativamente, implante-o no https://docs.microsoft.com/en-us/azure/availability-zones/cross-region-replication-azure#azure-cross-region-replication-pairings-for-all-geographies["Par de regiões do Azure"^] . Isso garante que uma conexão do Azure Private Link seja usada entre o Cloud Volumes ONTAP e suas contas de armazenamento associadas. https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-enabling-private-link.html["Saiba como o Cloud Volumes ONTAP usa um Azure Private Link"^]
+Implante um agente de console no Azure na mesma região que os sistemas Cloud Volumes ONTAP que ele gerencia.  Alternativamente, implante-o no https://docs.microsoft.com/en-us/azure/availability-zones/cross-region-replication-azure#azure-cross-region-replication-pairings-for-all-geographies["Par de regiões do Azure"^] .  Isso garante que uma conexão do Azure Private Link seja usada entre o Cloud Volumes ONTAP e suas contas de armazenamento associadas. https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-enabling-private-link.html["Saiba como o Cloud Volumes ONTAP usa um Azure Private Link"^]
 
 * Google Cloud
 +

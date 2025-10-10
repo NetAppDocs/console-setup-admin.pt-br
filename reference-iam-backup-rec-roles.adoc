@@ -4,7 +4,7 @@ permalink: reference-iam-backup-rec-roles.html
 keywords: backing up, restoring, back up, backup, restore, cloud volumes ontap, aws, azure, s3, blob, google cloud, storagegrid, back up volumes, cloud backup, restore volumes, cost, on-premises ontap, onprem, applications, virtual machines, backup and recovery, roles, permissions, access control, role-based access control, rbac, role-based access 
 summary: Você pode atribuir as seguintes funções aos usuários para fornecer a eles acesso ao NetApp Backup and Recovery no Console.  As funções de backup e recuperação oferecem a flexibilidade de atribuir aos usuários uma função específica para as tarefas que eles precisam realizar na sua organização. A maneira como você atribui funções depende das suas próprias práticas de negócios e gerenciamento de armazenamento. 
 ---
-= Funções de backup e recuperação do NetApp no ​​NetApp Console
+= Funções de NetApp Backup and Recovery no ​​NetApp Console
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -19,13 +19,13 @@ Você pode atribuir as seguintes funções aos usuários para fornecer a eles ac
 O serviço usa as seguintes funções específicas do NetApp Backup and Recovery.
 
 * *Superadministrador de Backup e Recuperação*: Execute qualquer ação no NetApp Backup and Recovery.
-* *Administrador de backup e recuperação*: execute backups em snapshots locais, replique para armazenamento secundário e faça backup em ações de armazenamento de objetos no NetApp Backup and Recovery.
+* *Administrador de backup e recuperação*: execute backups em instantâneos locais, replique para armazenamento secundário e faça backup em ações de armazenamento de objetos no NetApp Backup and Recovery.
 * *Administrador de restauração de backup e recuperação*: restaure cargas de trabalho usando o NetApp Backup and Recovery.
-* *Administrador de clones de backup e recuperação*: clone aplicativos e dados usando o NetApp Backup and Recovery.
+* *Administrador de Clone de Backup e Recuperação*: Clone aplicativos e dados usando o NetApp Backup and Recovery.
 * *Visualizador de backup e recuperação*: visualize informações no NetApp Backup and Recovery, mas não execute nenhuma ação.
 
 
-Para obter detalhes sobre todas as funções de acesso do NetApp Console, consulte https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["a documentação de configuração e administração do Console"^] .
+Para obter detalhes sobre todas as funções de acesso do NetApp Console , consulte https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["a documentação de configuração e administração do Console"^] .
 
 
 

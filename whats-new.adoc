@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: whats-new.html 
 keywords: 'what"s new, features, new, release notes, enhancements, fixes, connectors, bluexp, iam, notice, releases' 
-summary: 'Saiba o que há de novo nos recursos de administração do NetApp Console: IAM, agentes do Console, credenciais do provedor de nuvem e muito mais.' 
+summary: 'Saiba o que há de novo nos recursos de administração do NetApp Console : IAM, agentes do Console, credenciais do provedor de nuvem e muito mais.' 
 ---
 = O que há de novo
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: 'Saiba o que há de novo nos recursos de administração do NetApp Cons
 
 
 [role="lead"]
-Saiba o que há de novo nos recursos de administração do NetApp Console: gerenciamento de identidade e acesso (IAM), agentes do Console, credenciais do provedor de nuvem e muito mais.
+Saiba o que há de novo nos recursos de administração do NetApp Console : gerenciamento de identidade e acesso (IAM), agentes do Console, credenciais do provedor de nuvem e muito mais.
 
 
 
@@ -82,7 +82,7 @@ A NetApp renomeou vários elementos, serviços de dados e recursos para esclarec
 
 [cols="10,24"]
 |===
-| *Nome anterior* | * Nome do console NetApp * 
+| *Nome anterior* | * Nome do NetApp Console * 
 
 
 | Conectores  a| 
@@ -107,7 +107,7 @@ Visualize, adicione e gerencie seus sistemas no menu *Armazenamento > Gerenciame
 
 
 | Proteção BlueXP Ransomware  a| 
-Resiliência do NetApp Ransomware.
+NetApp Ransomware Resilience.
 
 O Ransomware Resilience ajuda você a proteger seus dados e se recuperar rapidamente de um ataque de ransomware.
 
@@ -123,9 +123,9 @@ Acesse o planejamento do ciclo de vida no menu *Armazenamento > Planejamento do 
 
 
 | BlueXP digital wallet  a| 
-Licenças e assinaturas
+Licenses and subscriptions
 
-Acesse suas licenças e assinaturas no menu *Administração > Licenças e assinaturas*.
+Acesse suas licenças e assinaturas no menu *Administração > Licenses and subscriptions*.
 
 |===
 
@@ -178,7 +178,7 @@ O agente do Console melhorou as mensagens de erro que ajudam você a entender me
 
 
 
-== Console NetApp
+== NetApp Console
 
 A administração do NetApp Console inclui os seguintes novos recursos:
 
@@ -216,7 +216,7 @@ Você pode criar parcerias no NetApp Console que permitem que os parceiros geren
 
 === Funções de superadministrador e supervisualizador
 
-Adicionadas as funções *Superadministrador* e *Supervisualizador*.  *Superadministrador* concede acesso de gerenciamento total aos recursos do Console, armazenamento e serviços de dados.  *Super visualizador* fornece visibilidade somente leitura para auditores e partes interessadas.  Essas funções são úteis para equipes menores de membros seniores, onde o amplo acesso é comum.  Para maior segurança e capacidade de auditoria, as organizações são incentivadas a usar o acesso de *Superadministrador* com moderação e atribuir funções refinadas sempre que possível.link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["Saiba mais sobre funções de acesso."]
+Adicionadas as funções *Superadministrador* e *Supervisualizador*.  *Superadministrador* concede acesso de gerenciamento total aos recursos do Console, armazenamento e serviços de dados.  *Super visualizador* fornece visibilidade somente leitura para auditores e partes interessadas.  Essas funções são úteis para equipes menores de membros seniores, onde o acesso amplo é comum.  Para maior segurança e capacidade de auditoria, as organizações são incentivadas a usar o acesso de *Superadministrador* com moderação e atribuir funções refinadas sempre que possível.link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["Saiba mais sobre funções de acesso."]
 
 
 
@@ -302,7 +302,7 @@ Para mais detalhes sobre o modo privado, incluindo como atualizar, consulte o se
 
 
 
-== 21 Julho 2025
+== 21 de julho de 2025
 
 
 
@@ -327,7 +327,7 @@ link:https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-r
 
 
 
-== 14 Julho 2025
+== 14 de julho de 2025
 
 
 
@@ -568,7 +568,7 @@ No momento, a versão 3.9.51 está disponível para modo padrão e modo restrito
 
 ==== Pontos de extremidade seguros para downloads do Connector agora são suportados para backup e recuperação e proteção contra ransomware
 
-Se você estiver usando backup e recuperação ou proteção contra ransomware, agora poderá usar endpoints seguros para downloads do Connector.link:https://docs.netapp.com/us-en/bluexp-setup-admin/whats-new.html#new-secure-endpoints-to-obtain-connector-images["Saiba mais sobre endpoints seguros para downloads do Connector."^]
+Se você estiver usando backup e recuperação ou proteção contra ransomware, agora você pode usar endpoints seguros para downloads do Connector.link:https://docs.netapp.com/us-en/bluexp-setup-admin/whats-new.html#new-secure-endpoints-to-obtain-connector-images["Saiba mais sobre endpoints seguros para downloads do Connector."^]
 
 
 
@@ -1029,7 +1029,7 @@ Esta versão inclui suporte expandido ao sistema operacional e correções de bu
 A versão 3.9.45 está disponível para modo padrão e modo restrito.
 
 .Suporte para Ubuntu 24.04 LTS
-A partir da versão 3.9.45, o BlueXP agora oferece suporte a novas instalações do Connector em hosts Ubuntu 24.04 LTS ao usar o BlueXP no modo padrão ou restrito.
+A partir da versão 3.9.45, o BlueXP agora oferece suporte a novas instalações do Connector em hosts Ubuntu 24.04 LTS ao usar o BlueXP no modo padrão ou no modo restrito.
 
 https://docs.netapp.com/us-en/bluexp-setup-admin/task-install-connector-on-prem.html#step-1-review-host-requirements["Exibir requisitos do host do conector"] .
 
@@ -1078,7 +1078,7 @@ Esta versão inclui as seguintes versões dos componentes e serviços do BlueXP 
 | Gerenciamento Cloud Volumes ONTAP | 9 de setembro de 2024 
 
 
-| carteira digital | 30 Julho 2023 
+| carteira digital | 30 de julho de 2023 
 
 
 | Gerenciamento de cluster ONTAP local | 22 de abril de 2024 
@@ -1152,7 +1152,7 @@ https://docs.netapp.com/us-en/bluexp-setup-admin/reference-connector-operating-s
 
 === Suporte para Podman 4.9.4 com todas as versões do RHEL
 
-O Podman 4.9.4 agora é compatível com todas as versões suportadas do Red Hat Enterprise Linux.  A versão 4.9.4 era suportada anteriormente apenas com o RHEL 8.10.
+O Podman 4.9.4 agora é compatível com todas as versões suportadas do Red Hat Enterprise Linux.  A versão 4.9.4 era suportada anteriormente apenas pelo RHEL 8.10.
 
 A lista atualizada de versões suportadas do Podman inclui 4.6.1 e 4.9.4 com hosts Red Hat Enterprise Linux.
 
@@ -1280,10 +1280,10 @@ Esta versão inclui as seguintes versões dos serviços BlueXP que são compatí
 | Gerenciamento Cloud Volumes ONTAP | 10 de junho de 2024 
 
 
-| carteira digital | 30 Julho 2023 
+| carteira digital | 30 de julho de 2023 
 
 
-| Gerenciamento de cluster ONTAP local | 30 Julho 2023 
+| Gerenciamento de cluster ONTAP local | 30 de julho de 2023 
 
 
 | Replicação | 18 de setembro de 2022 
@@ -1381,10 +1381,10 @@ Observe que esta versão em modo privado _não_ inclui suporte para o Connector 
 | Gerenciamento Cloud Volumes ONTAP | 17 de maio de 2024 
 
 
-| carteira digital | 30 Julho 2023 
+| carteira digital | 30 de julho de 2023 
 
 
-| Gerenciamento de cluster ONTAP local | 30 Julho 2023 
+| Gerenciamento de cluster ONTAP local | 30 de julho de 2023 
 
 
 | Replicação | 18 de setembro de 2022 

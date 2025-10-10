@@ -112,7 +112,7 @@ Certifique-se de que o arquivo de certificado esteja no formato PEM e resida no 
 
 === Modifique o proxy transparente para o agente do Console
 
-Você pode atualizar o servidor proxy transparente existente de um agente do Console usando o `proxy update` comando ou remover o servidor proxy transparente usando o `proxy remove` comando. Para obter mais informações, consulte a documentação paralink:reference-agent-maint-console.html["Console de manutenção do agente"] .
+Você pode atualizar o servidor proxy transparente existente de um agente do Console usando o `proxy update` comando ou remover o servidor proxy transparente usando o `proxy remove` comando.  Para obter mais informações, consulte a documentação paralink:reference-agent-maint-console.html["Console de manutenção do agente"] .
 
 
 IMPORTANT: Depois de configurar um proxy, você não poderá alterar o tipo de proxy.  Se precisar alterar o tipo de proxy, remova o agente do Console e adicione um novo agente com o novo tipo de proxy.

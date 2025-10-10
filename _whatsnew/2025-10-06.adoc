@@ -64,7 +64,7 @@ A NetApp renomeou vários elementos, serviços de dados e recursos para esclarec
 
 [cols="10,24"]
 |===
-| *Nome anterior* | * Nome do console NetApp * 
+| *Nome anterior* | * Nome do NetApp Console * 
 
 
 | Conectores  a| 
@@ -89,7 +89,7 @@ Visualize, adicione e gerencie seus sistemas no menu *Armazenamento > Gerenciame
 
 
 | Proteção BlueXP Ransomware  a| 
-Resiliência do NetApp Ransomware.
+NetApp Ransomware Resilience.
 
 O Ransomware Resilience ajuda você a proteger seus dados e se recuperar rapidamente de um ataque de ransomware.
 
@@ -105,9 +105,9 @@ Acesse o planejamento do ciclo de vida no menu *Armazenamento > Planejamento do 
 
 
 | BlueXP digital wallet  a| 
-Licenças e assinaturas
+Licenses and subscriptions
 
-Acesse suas licenças e assinaturas no menu *Administração > Licenças e assinaturas*.
+Acesse suas licenças e assinaturas no menu *Administração > Licenses and subscriptions*.
 
 |===
 
@@ -160,7 +160,7 @@ O agente do Console melhorou as mensagens de erro que ajudam você a entender me
 
 
 
-== Console NetApp
+== NetApp Console
 
 A administração do NetApp Console inclui os seguintes novos recursos:
 
@@ -198,7 +198,7 @@ Você pode criar parcerias no NetApp Console que permitem que os parceiros geren
 
 === Funções de superadministrador e supervisualizador
 
-Adicionadas as funções *Superadministrador* e *Supervisualizador*.  *Superadministrador* concede acesso de gerenciamento total aos recursos do Console, armazenamento e serviços de dados.  *Super visualizador* fornece visibilidade somente leitura para auditores e partes interessadas.  Essas funções são úteis para equipes menores de membros seniores, onde o amplo acesso é comum.  Para maior segurança e capacidade de auditoria, as organizações são incentivadas a usar o acesso de *Superadministrador* com moderação e atribuir funções refinadas sempre que possível.link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["Saiba mais sobre funções de acesso."]
+Adicionadas as funções *Superadministrador* e *Supervisualizador*.  *Superadministrador* concede acesso de gerenciamento total aos recursos do Console, armazenamento e serviços de dados.  *Super visualizador* fornece visibilidade somente leitura para auditores e partes interessadas.  Essas funções são úteis para equipes menores de membros seniores, onde o acesso amplo é comum.  Para maior segurança e capacidade de auditoria, as organizações são incentivadas a usar o acesso de *Superadministrador* com moderação e atribuir funções refinadas sempre que possível.link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["Saiba mais sobre funções de acesso."]
 
 
 

@@ -137,7 +137,7 @@ Se os sistemas Cloud Volumes ONTAP não tiverem uma conexão de saída com a Int
 --
 
 
-Habilitar NTP:: Se você estiver planejando usar o NetApp Data Classification para verificar suas fontes de dados corporativos, deverá habilitar um serviço Network Time Protocol (NTP) no agente do Console e no sistema NetApp Data Classification para que o horário seja sincronizado entre os sistemas. https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["Saiba mais sobre a classificação de dados da NetApp"^]
+Habilitar NTP:: Se você planeja usar o NetApp Data Classification para verificar suas fontes de dados corporativos, habilite um serviço Network Time Protocol (NTP) no agente do Console e no sistema NetApp Data Classification para que o horário seja sincronizado entre os sistemas. https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["Saiba mais sobre a classificação de dados da NetApp"^]
 +
 --
 Implemente esse acesso à rede depois de criar o agente do Console.
@@ -267,6 +267,6 @@ Mantenha o modo restrito desabilitado para usar o Console no modo padrão.  Voc�
 .Resultado
 O agente do Console agora está instalado e configurado com sua organização do Console.
 
-Abra um navegador da web e vá para o https://console.netapp.com["Console NetApp"^] para começar a usar o agente do Console com o Console.
+Abra um navegador da web e vá para o https://console.netapp.com["NetApp Console"^] para começar a usar o agente do Console com o Console.
 
 Se você tiver buckets do Amazon S3 na mesma conta da AWS onde criou o agente do Console, verá um ambiente de trabalho do Amazon S3 aparecer automaticamente na página *Sistemas*. https://docs.netapp.com/us-en/storage-management-s3-storage/index.html["Aprenda a gerenciar buckets do S3 no NetApp Console"^]

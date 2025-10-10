@@ -34,7 +34,7 @@ Cada computador que acessa o NetApp Console deve ter conexões com os endpoints 
 
 O sistema contata esses terminais em dois cenários:
 
-* A partir de um computador acessando o https://console.netapp.com["Console NetApp"^] como software como serviço (SaaS).
+* A partir de um computador acessando o https://console.netapp.com["NetApp Console"^] como software como serviço (SaaS).
 * De um computador acessando diretamente um host do agente do Console, para efetuar login e configurá-lo ou acessar o Console a partir do host do agente.
 
 

@@ -27,7 +27,7 @@ Esta versão inclui as seguintes versões dos componentes e serviços do BlueXP 
 | Gerenciamento Cloud Volumes ONTAP | 9 de setembro de 2024 
 
 
-| carteira digital | 30 Julho 2023 
+| carteira digital | 30 de julho de 2023 
 
 
 | Gerenciamento de cluster ONTAP local | 22 de abril de 2024 

@@ -16,7 +16,7 @@ summary: O agente do Console usa portas _de entrada_ quando instalado manualment
 [role="lead"]
 O agente do Console usa portas _de entrada_ quando instalado manualmente em um host Linux local.  Consulte essas portas para fins de planejamento.
 
-Essas regras de entrada se aplicam a todos os modos de implantação do NetApp Console.
+Essas regras de entrada se aplicam a todos os modos de implantação do NetApp Console .
 
 [cols="10,10,80"]
 |===

@@ -91,7 +91,7 @@ Sim
 
 
 
-3+| *Licenças e assinaturas*: 
+3+| * Licenses and subscriptions*: 
 
 
 | Pode visualizar licenças e assinaturas  a| 

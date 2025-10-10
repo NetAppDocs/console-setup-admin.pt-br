@@ -16,7 +16,7 @@ summary: Comece a usar o NetApp Console no modo restrito preparando seu ambiente
 [role="lead"]
 Comece a usar o NetApp Console no modo restrito preparando seu ambiente e implantando o agente do Console.
 
-O modo restrito é normalmente usado por governos estaduais e locais e empresas regulamentadas, incluindo implantações nas regiões AWS GovCloud e Azure Government. Antes de começar, certifique-se de ter uma compreensão delink:concept-agents.html["Agentes de console"] elink:concept-modes.html["modos de implantação"] .
+O modo restrito é normalmente usado por governos estaduais e locais e empresas regulamentadas, incluindo implantações nas regiões AWS GovCloud e Azure Government.  Antes de começar, certifique-se de ter uma compreensão delink:concept-agents.html["Agentes de console"] elink:concept-modes.html["modos de implantação"] .
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Um"] link:task-prepare-restricted-mode.html["Preparar para implantação"]
 [role="quick-margin-list"]
@@ -34,4 +34,4 @@ O modo restrito é normalmente usado por governos estaduais e locais e empresas 
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Três"] link:task-subscribe-restricted-mode.html["Assine o NetApp Intelligent Services (opcional)"]
 [role="quick-margin-para"]
-Opcional: assine o NetApp Intelligent Services no marketplace do seu provedor de nuvem para pagar por serviços de dados a uma taxa por hora (PAYGO) ou por meio de um contrato anual.  Os serviços inteligentes da NetApp incluem backup e recuperação da NetApp , Cloud Volumes ONTAP, NetApp Cloud Tiering, NetApp Ransomware Resilience e NetApp Disaster Recovery.  A classificação de dados da NetApp está incluída na sua assinatura sem custo adicional.
+Opcional: assine o NetApp Intelligent Services no marketplace do seu provedor de nuvem para pagar por serviços de dados a uma taxa por hora (PAYGO) ou por meio de um contrato anual.  Os NetApp Intelligent Services incluem NetApp Backup and Recovery, Cloud Volumes ONTAP, NetApp Cloud Tiering, NetApp Ransomware Resilience e NetApp Disaster Recovery.  A NetApp Data Classification está incluída na sua assinatura sem custo adicional.

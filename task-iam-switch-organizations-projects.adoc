@@ -17,7 +17,7 @@ summary: Você pode pertencer a várias organizações do Console ou ter permiss
 Você pode pertencer a várias organizações do Console ou ter permissões para acessar vários projetos ou agentes dentro de uma organização.  Quando necessário, você pode alternar facilmente entre organizações, projetos e agentes do Console para acessar os recursos associados a essa organização, projeto ou agente.
 
 
-TIP: Você pode pertencer a várias organizações se outra organização o convidar para participar ou se você mesmo criar uma. Você pode criar uma organização adicional usando a API. https://docs.netapp.com/us-en/console-automation/tenancyv4/post-organizations.html["Aprenda a criar uma nova organização"^]
+TIP: Você pode pertencer a várias organizações se outra organização o convidar para participar ou se você mesmo criar uma.  Você pode criar uma organização adicional usando a API. https://docs.netapp.com/us-en/console-automation/tenancyv4/post-organizations.html["Aprenda a criar uma nova organização"^]
 
 
 
@@ -38,7 +38,7 @@ image:screenshot-iam-switch-organizations.png["Uma captura de tela do banner sup
 . Selecione outra organização e depois selecione *Alternar*.
 
 
-+ Se você tiver alguma organização parceira, selecione a aba *Parceria* para ver as organizações parceiras disponíveis.
++ Se você tiver alguma organização parceira, selecione a aba *Parceria* para visualizar as organizações parceiras disponíveis.
 
 
 
