@@ -85,7 +85,7 @@ Observe que alguns serviços podem ter suporte com limitações.
 | Eficiência econômica | Não 
 
 
-| Proteção contra ransomware | Não 
+| Resiliência ao Ransomware | Não 
 
 
 | Replicação | Sim 

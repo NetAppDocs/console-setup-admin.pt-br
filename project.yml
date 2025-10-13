@@ -154,7 +154,7 @@ sidebar:
             url: "/reference-iam-backup-rec-roles.html"
           - title: Funções de recuperação de desastres
             url: "/reference-iam-disaster-rec-roles.html"
-          - title: Funções de proteção contra ransomware
+          - title: Funções de resiliência de ransomware
             url: "/reference-iam-ransomware-roles.html"
     - title: Organizações parceiras
       entries:

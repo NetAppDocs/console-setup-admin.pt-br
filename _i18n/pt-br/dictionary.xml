@@ -1298,7 +1298,6 @@
   <block id="c7a576f5db262c0475afa4a53822979e" category="list-text">Eficiência econômica ^1^</block>
   <block id="390e388eccc77b388b4d54d73b76f902" category="list-text">Baldes do Google Cloud Storage</block>
   <block id="016d4dd0efd43648613b0639e13ba2c7" category="list-text">Integração de cluster ONTAP local com serviços de dados NetApp</block>
-  <block id="cf399270632323e6349a7298f0e7eb09" category="list-text">Resiliência do NetApp Ransomware</block>
   <block id="a94a2dfcff08cd86c973716edaf32722" category="list-text">NetApp Cloud Tiering</block>
   <block id="6f267103f7f652e22e0ead9f66014cd4" category="list-text">NetApp Volume Caching</block>
   <block id="06f4d4213c3d87db39929c4ce6ffcc0f" category="paragraph">^1^ Você pode acessar esses serviços sem um agente do Console, mas um agente do Console é necessário para iniciar ações.</block>
@@ -2214,7 +2213,6 @@
   <block id="065933ac7339c32c2a386f3f69e4fd61" category="list-text"><block ref="065933ac7339c32c2a386f3f69e4fd61" category="inline-link-macro-rx"></block></block>
   <block id="470bbf3695958272c2830107baeb6411" category="summary">No NetApp Console, você pode conceder funções para fornecer aos usuários acesso ao NetApp Ransomware Resilience.</block>
   <block id="5f87170a21a0b0d135060af816ac1433" category="doc">Funções de acesso de resiliência contra ransomware para o NetApp Console</block>
-  <block id="9d9ae6ee36b5e9aae30cd19d4d3c6b92" category="paragraph">As funções de resiliência contra ransomware fornecem aos usuários acesso ao NetApp Ransomware Resilience.  As duas funções são administrador de proteção contra ransomware e visualizador de proteção contra ransomware.  A principal diferença entre as duas funções são as ações que elas podem tomar na Resiliência ao Ransomware.</block>
   <block id="e6d88107afe61c1a78c0dac0689d8fac" category="paragraph">A tabela a seguir mostra as ações que cada função pode executar.</block>
   <block id="2961ef9224153d664a9bde6ee6ef2570" category="cell">No painel, atualize o status da recomendação</block>
   <block id="bb73fa2a07d0c544491039dc1ffed7b8" category="cell">Iniciar a redescoberta das cargas de trabalho</block>
@@ -4005,8 +4003,6 @@
   <block id="cf3b3d414366a26f5b43041b5056897c" category="summary">No NetApp Console, você pode atribuir funções aos usuários com base no que eles precisam fazer e onde.</block>
   <block id="14750286cb2a5a61bf62b65d9b9d2112" category="doc">Use funções para gerenciar o acesso do usuário aos recursos do NetApp Console</block>
   <block id="5f24947dab075e3413b914aa36df023a" category="paragraph">No Console, você pode atribuir funções aos usuários com base no que eles precisam fazer e onde.</block>
-  <block id="e5bb4954536b904550d932928f88306d" category="paragraph">Usuários com a função *Administrador da organização* ou *Administrador de pasta ou projeto* têm a responsabilidade de atribuir funções a outros usuários.  Você pode atribuir funções de acesso com base em um projeto ou pasta.  Por exemplo, você pode atribuir a um usuário a função de administrador de proteção contra ransomware para um projeto e a função de administrador do SnapCenter para um projeto diferente.  Como alternativa, se um usuário precisar da função de administrador de classificação para todos os projetos dentro de uma pasta específica, você poderá atribuir essa função a ele no nível da pasta.</block>
-  <block id="982e57f560511ceb443082e656219246" category="paragraph">Use funções de acesso para atribuir acesso a recursos de armazenamento com base nas tarefas específicas que os usuários precisam executar.  Por exemplo, se um usuário precisar interagir com serviços de proteção contra ransomware, ele deverá receber uma função de acesso que inclua permissões de visualização ou administrativas para o serviço de proteção contra ransomware do projeto para o qual a função de acesso foi concedida.</block>
   <block id="61258c54d2a7f09077a72a4eeb56874d" category="paragraph">Atribua funções aos usuários com base na sua estratégia de IAM para maior segurança.  As funções do IAM garantem que os usuários tenham apenas o acesso necessário.</block>
   <block id="3908f1e42aa5b81b8316befd30a6965d" category="inline-link-macro">Aprenda a organizar seus recursos com pastas e projetos.</block>
   <block id="ecdeffad8e53c7c9b1fb61f02a3cb5d1" category="admonition">Lembre-se de que você não pode conceder acesso direto aos recursos.  Atribua recursos aos projetos primeiro.  Considere configurar sua hierarquia de recursos antes de atribuir acesso aos usuários.<block ref="122b4639308e055d5bdfeb8a65e1794d" category="inline-link-macro-rx"></block></block>
@@ -4016,7 +4012,6 @@
   <block id="12815307393fa19648b391d49b4282e4" category="section-title">Adicionar uma função de acesso a um membro</block>
   <block id="9a9b4b286a389bc98dfdeb3214c134a1" category="paragraph">Normalmente, você atribui uma função ao adicionar um membro à sua organização, mas pode atualizá-la a qualquer momento removendo ou adicionando funções.</block>
   <block id="ba364a79f6fbfab0c8591198ecfd87cc" category="paragraph">Você pode atribuir a um usuário uma função de acesso para sua organização, pasta ou projeto.</block>
-  <block id="9e9b03c43a95d80b4d040ec538e41373" category="paragraph">Os membros podem ter várias funções dentro do mesmo projeto e em projetos diferentes.  Por exemplo, organizações menores podem atribuir todas as funções de acesso disponíveis ao mesmo usuário, enquanto organizações maiores podem ter usuários executando tarefas mais especializadas.  Como alternativa, você também pode atribuir a um usuário a função de administrador de proteção contra ransomware para uma organização.  Nesse exemplo, o usuário seria capaz de executar tarefas de proteção contra ransomware em todos os projetos da sua organização.</block>
   <block id="7a43b6f649f8cf73a12056888057076b" category="paragraph">Sua estratégia de função de acesso deve estar alinhada à maneira como você organizou seus recursos do NetApp .</block>
   <block id="20c36cd6c77d407b6118c77ebe403934" category="admonition">Um membro que recebeu a função de administrador da organização não pode receber nenhuma função adicional.  Eles já têm permissões em toda a organização.  Um membro com a função de pasta ou projeto não pode receber nenhuma outra função dentro da pasta ou projeto em que já tenha essa função.  Ambas as funções fornecem acesso a todos os serviços dentro do escopo que lhes é atribuído.</block>
   <block id="068135177d9d1843118236d5f10dc5b7" category="section-title">Alterar a função atribuída a um membro</block>
@@ -4978,7 +4973,6 @@
   <block id="99cee3b8f810202d675de978cef4f9da" category="cell">Sim<block ref="514d17d2eb0e043089e13542661abd63" category="inline-link-rx"></block></block>
   <block id="e216b7a924341f796bca310d1d812baf" category="cell">Copiar e sincronizar</block>
   <block id="645a84975202e30700b572b49a5ee29d" category="cell">Recuperação de desastres</block>
-  <block id="7478f8f98c41fc2f5747e6f31892fe6f" category="cell">Proteção contra ransomware</block>
   <block id="ff45d71e69fb5930de79de7c94326d7b" category="cell">Cache de volume</block>
   <block id="35ccbae2ce9b9594b9af9196a3bed361" category="cell">Fábrica de carga de trabalho</block>
   <block id="3d1f92a565d3b1a61880236e33c49bf3" category="cell">Linha do tempo</block>
@@ -5531,7 +5525,6 @@
   <block id="35cbd88f43ce85ef7ed6866daa2c6066" category="sidebar">Funções de serviços de dados</block>
   <block id="38dd106db79e0463f64b237d9de58a8e" category="sidebar">Funções de backup e recuperação</block>
   <block id="2879d04f18c304fb2a3d5cf00deff6e2" category="sidebar">Funções de recuperação de desastres</block>
-  <block id="0310ff69ee2ad8b9fa1fbf2f23946a8e" category="sidebar">Funções de proteção contra ransomware</block>
   <block id="4dd7bf281f080fe43c775a741f9f2cc1" category="sidebar">Organizações parceiras</block>
   <block id="d6cca643be1ccfaa32ccfdc068061f15" category="sidebar">Saiba mais sobre parcerias organizacionais</block>
   <block id="d88a163f40de4d60f08d7006db6dbc69" category="sidebar">Crie uma parceria organizacional</block>
@@ -5564,4 +5557,11 @@
   <block id="abfd94e3956e611a257a32b0f396af25" category="sidebar">Regras de firewall do agente de console no Google Cloud</block>
   <block id="e4c0002e4f9f19273bc004922899fb85" category="sidebar">Acesso à rede do console (legado)</block>
   <block id="0adc03eac86772ad2c75c8f140be417e" category="sidebar">Conhecimento e suporte</block>
+  <block id="253b718b7b0bb8f190e2ebe1c721295e" category="paragraph">As funções de resiliência contra ransomware fornecem aos usuários acesso ao NetApp Ransomware Resilience. O Ransomware Resilience oferece suporte às seguintes funções:</block>
+  <block id="b7055c90f2b38b6e2d3cddd08ec5c936" category="paragraph">As funções conferem diferentes acessos às configurações e ações.  Para configurar ou visualizar atividades de comportamento suspeito do usuário, você deve usar uma das funções de comportamento do usuário.</block>
+  <block id="f75989b6aa2a7a3c16b04e40aebffd8f" category="paragraph">Usuários com a função *Administrador da organização* ou *Administrador de pasta ou projeto* têm a responsabilidade de atribuir funções a outros usuários. Você pode atribuir funções de acesso com base em um projeto ou pasta. Por exemplo, você pode atribuir a um usuário a função de administrador do Ransomware Resilience para um projeto e a função de administrador do SnapCenter para um projeto diferente. Como alternativa, se um usuário precisar da função de administrador de classificação para todos os projetos dentro de uma pasta específica, você poderá atribuir essa função a ele no nível da pasta.</block>
+  <block id="e55d79a6c1774cf0f39d67ca04d67bc0" category="paragraph">Use funções de acesso para atribuir acesso a recursos de armazenamento com base nas tarefas específicas que os usuários precisam executar. Por exemplo, se um usuário precisar interagir com o Ransomware Resilience, ele deverá receber uma função de acesso que inclua permissões de visualização ou administrativas para o Ransomware Resilience para o projeto para o qual a função de acesso foi concedida.</block>
+  <block id="e6bf2bfbd541e12c3cb2fca42df08ed3" category="paragraph">Os membros podem ter várias funções dentro do mesmo projeto e em projetos diferentes. Por exemplo, organizações menores podem atribuir todas as funções de acesso disponíveis ao mesmo usuário, enquanto organizações maiores podem ter usuários executando tarefas mais especializadas. Como alternativa, você também pode atribuir a um usuário a função de administrador de resiliência contra ransomware para uma organização.  Nesse exemplo, o usuário seria capaz de executar tarefas de resiliência contra ransomware em todos os projetos da sua organização.</block>
+  <block id="c36b12344113082dcf8a9786e36a3536" category="cell">Resiliência ao Ransomware</block>
+  <block id="16a7e3e925ade6eef4533f96172d423f" category="sidebar">Funções de resiliência de ransomware</block>
 </blocks>

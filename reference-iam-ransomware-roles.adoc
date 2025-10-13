@@ -14,7 +14,15 @@ summary: No NetApp Console, você pode conceder funções para fornecer aos usu�
 
 
 [role="lead"]
-As funções de resiliência contra ransomware fornecem aos usuários acesso ao NetApp Ransomware Resilience.  As duas funções são administrador de proteção contra ransomware e visualizador de proteção contra ransomware.  A principal diferença entre as duas funções são as ações que elas podem tomar na Resiliência ao Ransomware.
+As funções de resiliência contra ransomware fornecem aos usuários acesso ao NetApp Ransomware Resilience. O Ransomware Resilience oferece suporte às seguintes funções:
+
+* Administrador de resiliência de ransomware
+* Visualizador de resiliência de ransomware
+* Comportamento do usuário de resiliência ao ransomware
+* Visualizador de comportamento do usuário de resiliência de ransomware
+
+
+As funções conferem diferentes acessos às configurações e ações.  Para configurar ou visualizar atividades de comportamento suspeito do usuário, você deve usar uma das funções de comportamento do usuário.
 
 A tabela a seguir mostra as ações que cada função pode executar.
 

@@ -16,9 +16,9 @@ summary: No NetApp Console, você pode atribuir funções aos usuários com base
 [role="lead"]
 No Console, você pode atribuir funções aos usuários com base no que eles precisam fazer e onde.
 
-Usuários com a função *Administrador da organização* ou *Administrador de pasta ou projeto* têm a responsabilidade de atribuir funções a outros usuários.  Você pode atribuir funções de acesso com base em um projeto ou pasta.  Por exemplo, você pode atribuir a um usuário a função de administrador de proteção contra ransomware para um projeto e a função de administrador do SnapCenter para um projeto diferente.  Como alternativa, se um usuário precisar da função de administrador de classificação para todos os projetos dentro de uma pasta específica, você poderá atribuir essa função a ele no nível da pasta.
+Usuários com a função *Administrador da organização* ou *Administrador de pasta ou projeto* têm a responsabilidade de atribuir funções a outros usuários. Você pode atribuir funções de acesso com base em um projeto ou pasta. Por exemplo, você pode atribuir a um usuário a função de administrador do Ransomware Resilience para um projeto e a função de administrador do SnapCenter para um projeto diferente. Como alternativa, se um usuário precisar da função de administrador de classificação para todos os projetos dentro de uma pasta específica, você poderá atribuir essa função a ele no nível da pasta.
 
-Use funções de acesso para atribuir acesso a recursos de armazenamento com base nas tarefas específicas que os usuários precisam executar.  Por exemplo, se um usuário precisar interagir com serviços de proteção contra ransomware, ele deverá receber uma função de acesso que inclua permissões de visualização ou administrativas para o serviço de proteção contra ransomware do projeto para o qual a função de acesso foi concedida.
+Use funções de acesso para atribuir acesso a recursos de armazenamento com base nas tarefas específicas que os usuários precisam executar. Por exemplo, se um usuário precisar interagir com o Ransomware Resilience, ele deverá receber uma função de acesso que inclua permissões de visualização ou administrativas para o Ransomware Resilience para o projeto para o qual a função de acesso foi concedida.
 
 Atribua funções aos usuários com base na sua estratégia de IAM para maior segurança.  As funções do IAM garantem que os usuários tenham apenas o acesso necessário.
 
@@ -45,7 +45,7 @@ Normalmente, você atribui uma função ao adicionar um membro à sua organizaç
 
 Você pode atribuir a um usuário uma função de acesso para sua organização, pasta ou projeto.
 
-Os membros podem ter várias funções dentro do mesmo projeto e em projetos diferentes.  Por exemplo, organizações menores podem atribuir todas as funções de acesso disponíveis ao mesmo usuário, enquanto organizações maiores podem ter usuários executando tarefas mais especializadas.  Como alternativa, você também pode atribuir a um usuário a função de administrador de proteção contra ransomware para uma organização.  Nesse exemplo, o usuário seria capaz de executar tarefas de proteção contra ransomware em todos os projetos da sua organização.
+Os membros podem ter várias funções dentro do mesmo projeto e em projetos diferentes. Por exemplo, organizações menores podem atribuir todas as funções de acesso disponíveis ao mesmo usuário, enquanto organizações maiores podem ter usuários executando tarefas mais especializadas. Como alternativa, você também pode atribuir a um usuário a função de administrador de resiliência contra ransomware para uma organização.  Nesse exemplo, o usuário seria capaz de executar tarefas de resiliência contra ransomware em todos os projetos da sua organização.
 
 Sua estratégia de função de acesso deve estar alinhada à maneira como você organizou seus recursos do NetApp .
 
