@@ -225,3 +225,38 @@ A NetApp recomenda permitir endpoints da Opção 1 no seu firewall, pois eles s�
 
 
 == Pontos de extremidade do agente local
+
+[cols="2*"]
+|===
+| Pontos finais | Propósito 
+
+
+| \ https://support.netapp.com \ https://mysupport.netapp.com | Para obter informações de licenciamento e enviar mensagens do AutoSupport para o suporte da NetApp . 
+
+
+| \https://\*.api.bluexp.netapp.com \ https://api.bluexp.netapp.com \https://*.cloudmanager.cloud.netapp.com \ https://cloudmanager.cloud.netapp.com \ https://netapp-cloud-account.auth0.com \ https://netapp-cloud-account.us.auth0.com | Para fornecer recursos e serviços no NetApp Console. 
+
+
+ a| 
+Escolha entre dois conjuntos de pontos de extremidade:
+
+* Opção 1 (recomendada)
++
+\ https://bluexpinfraprod.eastus2.data.azurecr.io \ https://bluexpinfraprod.azurecr.io
+
+* Opção 2
++
+\https://*.blob.core.windows.net \ https://cloudmanagerinfraprod.azurecr.io
+
+
+ a| 
+Para obter imagens para atualizações do agente do Console.
+
+A NetApp recomenda permitir endpoints da Opção 1 no seu firewall, pois eles são mais seguros, e não permitir endpoints da Opção 2, a menos que você esteja usando o Ransomware Resilience ou o Backup and Recovery.  Observe o seguinte sobre esses pontos finais:
+
+* Os endpoints da Opção 1 são suportados em 3.9.47 e superiores.  Versões anteriores à 3.9.47 não oferecem suporte à compatibilidade com versões anteriores.
+* O agente do Console inicia o contato com os endpoints na opção 2 primeiro.  Se esses terminais não estiverem acessíveis, ele entrará em contato automaticamente com os terminais na opção 1.
+* Se você usar o agente do Console com o NetApp Backup and Recovery ou o Ransomware Resilience, o sistema não oferecerá suporte aos endpoints da Opção 1.  Permitir pontos de extremidade da Opção 2 e não permitir a Opção 1.
+
+
+|===

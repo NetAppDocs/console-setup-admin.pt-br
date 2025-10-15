@@ -69,13 +69,6 @@ Para obter informações de licenciamento e enviar mensagens do AutoSupport para
 
 
  a| 
-\ https://support.netapp.com
- a| 
-Para obter informações de licenciamento e enviar mensagens do AutoSupport para o suporte da NetApp .
-
-
-
- a| 
 \ https://signin.b2c.netapp.com
  a| 
 Para atualizar as credenciais do NetApp Support Site (NSS) ou adicionar novas credenciais do NSS ao NetApp Console.
@@ -101,7 +94,7 @@ Para fornecer recursos e serviços no NetApp Console.
  a| 
 Para obter imagens para atualizações do agente do Console.
 
-* Quando você implanta um novo agente, a verificação de validação testa a conectividade com os endpoints atuais.  Se você usarlink:link:reference-networking-saas-console-previous.html["pontos finais anteriores"] , a verificação de validação falha.  Para evitar essa falha, pule a verificação de validação.
+* Quando você implanta um novo agente, a verificação de validação testa a conectividade com os endpoints atuais. Se você usarlink:reference-networking-saas-console-previous.html["pontos finais anteriores"] , a verificação de validação falha. Para evitar essa falha, pule a verificação de validação.
 +
 Embora os endpoints anteriores ainda sejam suportados, a NetApp recomenda atualizar suas regras de firewall para os endpoints atuais o mais rápido possível. link:reference-networking-saas-console-previous.html#update-endpoint-list["Aprenda como atualizar sua lista de endpoints"] .
 
