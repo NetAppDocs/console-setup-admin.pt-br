@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: reference-iam-ransomware-roles.html 
 keywords: predefined roles, iam roles, organization admin, folder or project admin, identity and access management, access roles, admin, 
-summary: No NetApp Console, você pode conceder funções para fornecer aos usuários acesso ao NetApp Ransomware Resilience. 
+summary: O Ransomware Resilience oferece diferentes funções de usuário para gerenciar o acesso a privilégios, ações e relatórios. 
 ---
 = Funções de acesso de resiliência contra ransomware para o NetApp Console
 :hardbreaks:
@@ -22,32 +22,26 @@ As funções de resiliência contra ransomware fornecem aos usuários acesso ao 
 * Visualizador de comportamento do usuário de resiliência de ransomware
 
 
-As funções conferem diferentes acessos às configurações e ações.  Para configurar ou visualizar atividades de comportamento suspeito do usuário, você deve usar uma das funções de comportamento do usuário.
+As funções conferem diferentes níveis de acesso às configurações e ações.
 
-A tabela a seguir mostra as ações que cada função pode executar.
+As ações disponíveis para as funções de administrador de comportamento do usuário e visualizador de comportamento do usuário do Ransomware Resilience são limitadas a link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/suspicious-user-activity.html["atividade suspeita do usuário"^]. Essas funções foram projetadas para serem adicionadas às funções de administrador ou visualizador do Ransomware Resilience. Para configurar configurações de comportamento suspeito do usuário e responder a alertas, um usuário deve ter a função de administrador de comportamento do usuário de resiliência ao ransomware. Para visualizar apenas alertas de comportamento suspeito do usuário, o usuário deve ter a função de visualizador de comportamento do usuário do Ransomware Resilience.
 
-[cols="40,20a,20a,20a,20a"]
+A tabela a seguir diferencia as ações disponíveis para as funções de administrador do Ransomware Resilience e visualizador do Ransomware Resilience.
+
+[cols="40,20a,20a"]
 |===
-| Recurso e ação | Administrador de resiliência de ransomware | Visualizador de resiliência de ransomware | Comportamento do usuário de resiliência ao ransomware | Visualizador de comportamento do usuário de resiliência de ransomware 
+| Recurso e ação | Administrador de resiliência de ransomware | Visualizador de resiliência de ransomware 
 
 
 | Ver painel e todas as guias  a| 
 Sim
  a| 
 Sim
- a| 
-Não
- a| 
-Não
 
 
 
 | No painel, atualize o status da recomendação  a| 
 Sim
- a| 
-Não
- a| 
-Não
  a| 
 Não
 
@@ -57,19 +51,11 @@ Não
 Sim
  a| 
 Não
- a| 
-Não
- a| 
-Não
 
 
 
 | Iniciar descoberta de cargas de trabalho  a| 
 Sim
- a| 
-Não
- a| 
-Não
  a| 
 Não
 
@@ -79,22 +65,14 @@ Não
 Sim
  a| 
 Não
- a| 
-Não
- a| 
-Não
 
 
 
-5+| *Na aba Proteger*: 
+3+| *Na aba Proteger*: 
 
 
 | Adicionar, modificar ou excluir planos de proteção  a| 
 Sim
- a| 
-Não
- a| 
-Não
  a| 
 Não
 
@@ -104,19 +82,11 @@ Não
 Sim
  a| 
 Não
- a| 
-Não
- a| 
-Não
 
 
 
 | Identificar a exposição a dados sensíveis  a| 
 Sim
- a| 
-Não
- a| 
-Não
  a| 
 Não
 
@@ -126,10 +96,6 @@ Não
 Sim
  a| 
 Sim
- a| 
-Não
- a| 
-Não
 
 
 
@@ -137,10 +103,6 @@ Não
 Sim
  a| 
 Sim
- a| 
-Não
- a| 
-Não
 
 
 
@@ -148,19 +110,11 @@ Não
 Sim
  a| 
 Sim
- a| 
-Não
- a| 
-Não
 
 
 
 | Criar, editar ou excluir grupo de proteção  a| 
 Sim
- a| 
-Não
- a| 
-Não
  a| 
 Não
 
@@ -170,33 +124,21 @@ Não
 Sim
  a| 
 Sim
- a| 
-Não
- a| 
-Não
 
 
 
-5+| *Na aba Alertas*: 
+3+| *Na aba Alertas*: 
 
 
 | Ver alertas e detalhes de alertas  a| 
 Sim
  a| 
 Sim
- a| 
-Não
- a| 
-Não
 
 
 
 | Editar status do incidente  a| 
 Sim
- a| 
-Não
- a| 
-Não
  a| 
 Não
 
@@ -206,10 +148,6 @@ Não
 Sim
  a| 
 Não
- a| 
-Não
- a| 
-Não
 
 
 
@@ -217,19 +155,11 @@ Não
 Sim
  a| 
 Sim
- a| 
-Não
- a| 
-Não
 
 
 
 | Descartar ou resolver incidentes  a| 
 Sim
- a| 
-Não
- a| 
-Não
  a| 
 Não
 
@@ -239,19 +169,11 @@ Não
 Sim
  a| 
 Não
- a| 
-Não
- a| 
-Não
 
 
 
 | Obtenha a lista completa de arquivos afetados  a| 
 Sim
- a| 
-Não
- a| 
-Não
  a| 
 Não
 
@@ -261,10 +183,6 @@ Não
 Sim
  a| 
 Sim
- a| 
-Não
- a| 
-Não
 
 
 
@@ -272,22 +190,14 @@ Não
 Não
  a| 
 Não
- a| 
-Sim
- a| 
-Sim
 
 
 
-5+| *Na aba Recuperar*: 
+3+| *Na aba Recuperar*: 
 
 
 | Baixar arquivos impactados  a| 
 Sim
- a| 
-Não
- a| 
-Não
  a| 
 Não
 
@@ -297,10 +207,6 @@ Não
 Sim
  a| 
 Não
- a| 
-Não
- a| 
-Não
 
 
 
@@ -308,10 +214,6 @@ Não
 Sim
  a| 
 Sim
- a| 
-Não
- a| 
-Não
 
 
 
@@ -319,22 +221,14 @@ Não
 Sim
  a| 
 Sim
- a| 
-Não
- a| 
-Não
 
 
 
-5+| *Na aba Configurações*: 
+3+| *Na aba Configurações*: 
 
 
 | Adicionar ou modificar destinos de backup  a| 
 Sim
- a| 
-Não
- a| 
-Não
  a| 
 Não
 
@@ -344,10 +238,6 @@ Não
 Sim
  a| 
 Sim
- a| 
-Não
- a| 
-Não
 
 
 
@@ -355,19 +245,11 @@ Não
 Sim
  a| 
 Sim
- a| 
-Não
- a| 
-Não
 
 
 
 | Adicionar ou modificar alvos SIEM  a| 
 Sim
- a| 
-Não
- a| 
-Não
  a| 
 Não
 
@@ -377,19 +259,11 @@ Não
 Sim
  a| 
 Não
- a| 
-Não
- a| 
-Não
 
 
 
 | Iniciar exercício de prontidão  a| 
 Sim
- a| 
-Não
- a| 
-Não
  a| 
 Não
 
@@ -399,19 +273,11 @@ Não
 Sim
  a| 
 Não
- a| 
-Não
- a| 
-Não
 
 
 
 | Exercício de preparação para edição  a| 
 Sim
- a| 
-Não
- a| 
-Não
  a| 
 Não
 
@@ -421,19 +287,11 @@ Não
 Sim
  a| 
 Sim
- a| 
-Não
- a| 
-Não
 
 
 
 | Atualizar configuração de descoberta  a| 
 Sim
- a| 
-Não
- a| 
-Não
  a| 
 Não
 
@@ -443,10 +301,6 @@ Não
 Sim
  a| 
 Sim
- a| 
-Não
- a| 
-Não
 
 
 
@@ -454,23 +308,15 @@ Não
 Não
  a| 
 Não
- a| 
-Sim
- a| 
-Não
 
 
 
-5+| *Na aba Relatórios*: 
+3+| *Na aba Relatórios*: 
 
 
 | Baixar relatórios  a| 
 Sim
  a| 
 Sim
- a| 
-Não
- a| 
-Não
 
 |===

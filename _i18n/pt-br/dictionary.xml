@@ -2207,9 +2207,7 @@
   <block id="05271cfa0bdeea693a59837fb97cbc3b" category="list-text"><block ref="05271cfa0bdeea693a59837fb97cbc3b" category="inline-link-macro-rx"></block></block>
   <block id="d5c64a8daa89e747afab2353c532cfd0" category="inline-link-macro">Comece a usar o NetApp Console IAM</block>
   <block id="065933ac7339c32c2a386f3f69e4fd61" category="list-text"><block ref="065933ac7339c32c2a386f3f69e4fd61" category="inline-link-macro-rx"></block></block>
-  <block id="470bbf3695958272c2830107baeb6411" category="summary">No NetApp Console, você pode conceder funções para fornecer aos usuários acesso ao NetApp Ransomware Resilience.</block>
   <block id="5f87170a21a0b0d135060af816ac1433" category="doc">Funções de acesso de resiliência contra ransomware para o NetApp Console</block>
-  <block id="e6d88107afe61c1a78c0dac0689d8fac" category="paragraph">A tabela a seguir mostra as ações que cada função pode executar.</block>
   <block id="2961ef9224153d664a9bde6ee6ef2570" category="cell">No painel, atualize o status da recomendação</block>
   <block id="bb73fa2a07d0c544491039dc1ffed7b8" category="cell">Iniciar a redescoberta das cargas de trabalho</block>
   <block id="26548eb85488e3cdc0f0b9b27802995f" category="cell">*Na aba Proteger*:</block>
@@ -2219,7 +2217,6 @@
   <block id="e1b7f478f4648932399a0f8d6835740b" category="cell">Listar planos de proteção e detalhes</block>
   <block id="8921dd8678af3de7359bee784af9a8e0" category="cell">Grupos de proteção de lista</block>
   <block id="97803e7af23cd9dd5e46bef4245a8480" category="cell">Ver detalhes do grupo de proteção</block>
-  <block id="70348d94ac22a6df8ff175b1e3a7535b" category="cell">Criar, editar ou excluir grupo de proteção</block>
   <block id="4330b42a340140b836c42bbe9c7105be" category="cell">Baixar dados</block>
   <block id="b1e60ac72e50f485ca0a5ea9c82143d2" category="cell">*Na aba Alertas*:</block>
   <block id="a0da34eb7fa7ce71299612d3548b6f6a" category="cell">Ver alertas e detalhes de alertas</block>
@@ -5519,8 +5516,6 @@
   <block id="a11961cab6627eac643ea36ae57ce8df" category="sidebar">Papéis- Keystone</block>
   <block id="7654fe6ca44295ba5f844fc9798f0103" category="sidebar">Funções de armazenamento</block>
   <block id="35cbd88f43ce85ef7ed6866daa2c6066" category="sidebar">Funções de serviços de dados</block>
-  <block id="38dd106db79e0463f64b237d9de58a8e" category="sidebar">Funções de backup e recuperação</block>
-  <block id="2879d04f18c304fb2a3d5cf00deff6e2" category="sidebar">Funções de recuperação de desastres</block>
   <block id="4dd7bf281f080fe43c775a741f9f2cc1" category="sidebar">Organizações parceiras</block>
   <block id="d6cca643be1ccfaa32ccfdc068061f15" category="sidebar">Saiba mais sobre parcerias organizacionais</block>
   <block id="d88a163f40de4d60f08d7006db6dbc69" category="sidebar">Crie uma parceria organizacional</block>
@@ -5554,7 +5549,6 @@
   <block id="e4c0002e4f9f19273bc004922899fb85" category="sidebar">Acesso à rede do console (legado)</block>
   <block id="0adc03eac86772ad2c75c8f140be417e" category="sidebar">Conhecimento e suporte</block>
   <block id="253b718b7b0bb8f190e2ebe1c721295e" category="paragraph">As funções de resiliência contra ransomware fornecem aos usuários acesso ao NetApp Ransomware Resilience. O Ransomware Resilience oferece suporte às seguintes funções:</block>
-  <block id="b7055c90f2b38b6e2d3cddd08ec5c936" category="paragraph">As funções conferem diferentes acessos às configurações e ações.  Para configurar ou visualizar atividades de comportamento suspeito do usuário, você deve usar uma das funções de comportamento do usuário.</block>
   <block id="f75989b6aa2a7a3c16b04e40aebffd8f" category="paragraph">Usuários com a função *Administrador da organização* ou *Administrador de pasta ou projeto* têm a responsabilidade de atribuir funções a outros usuários. Você pode atribuir funções de acesso com base em um projeto ou pasta. Por exemplo, você pode atribuir a um usuário a função de administrador do Ransomware Resilience para um projeto e a função de administrador do SnapCenter para um projeto diferente. Como alternativa, se um usuário precisar da função de administrador de classificação para todos os projetos dentro de uma pasta específica, você poderá atribuir essa função a ele no nível da pasta.</block>
   <block id="e55d79a6c1774cf0f39d67ca04d67bc0" category="paragraph">Use funções de acesso para atribuir acesso a recursos de armazenamento com base nas tarefas específicas que os usuários precisam executar. Por exemplo, se um usuário precisar interagir com o Ransomware Resilience, ele deverá receber uma função de acesso que inclua permissões de visualização ou administrativas para o Ransomware Resilience para o projeto para o qual a função de acesso foi concedida.</block>
   <block id="e6bf2bfbd541e12c3cb2fca42df08ed3" category="paragraph">Os membros podem ter várias funções dentro do mesmo projeto e em projetos diferentes. Por exemplo, organizações menores podem atribuir todas as funções de acesso disponíveis ao mesmo usuário, enquanto organizações maiores podem ter usuários executando tarefas mais especializadas. Como alternativa, você também pode atribuir a um usuário a função de administrador de resiliência contra ransomware para uma organização.  Nesse exemplo, o usuário seria capaz de executar tarefas de resiliência contra ransomware em todos os projetos da sua organização.</block>
@@ -5564,4 +5558,12 @@
   <block id="4ed68ecf8e006d0fab7f06897731cf53" category="list-text">Quando você implanta um novo agente, a verificação de validação testa a conectividade com os endpoints atuais. Se você usar<block ref="99a33b76fea6c3306005dfd630a43c9c" category="inline-link-macro-rx"></block> , a verificação de validação falha. Para evitar essa falha, pule a verificação de validação.</block>
   <block id="cfc9caf6832f568fe347d970af78e108" category="list-text">Se estiver usando o Red Hat Enterprise Linux, verifique se sua versão do Podman está usando o DNS Netavark Aardvark em vez do CNI</block>
   <block id="a0a50b50b6bb8edb1f818d3ca9526b4b" category="cell">Suportado em regiões governamentais e regiões comerciais com modo restrito. Não suportado em regiões soberanas com modo restrito. No modo restrito, o NetApp Backup and Recovery oferece suporte somente para backup e restauração de dados de volume ONTAP .<block ref="99e4ad11b9403b4c917ec7ce872ad637" category="inline-link-rx"></block> O backup e a restauração de dados de aplicativos e dados de máquinas virtuais não são suportados.</block>
+  <block id="7ce9d6824315daa5b3ba4a80bef8768d" category="summary">O Ransomware Resilience oferece diferentes funções de usuário para gerenciar o acesso a privilégios, ações e relatórios.</block>
+  <block id="f74b0b36940f757370478cb904680fe8" category="paragraph">As funções conferem diferentes níveis de acesso às configurações e ações.</block>
+  <block id="d8ed8dce9d98718d4019d9388c24353d" category="inline-link-macro">atividade suspeita do usuário</block>
+  <block id="592abd5ea65ad47726532e14cc5e25d7" category="paragraph">As ações disponíveis para as funções de administrador de comportamento do usuário e visualizador de comportamento do usuário do Ransomware Resilience são limitadas a <block ref="ab0f0a524b6807cce9d5b60fdac0f887" category="inline-link-macro-rx"></block>. Essas funções foram projetadas para serem adicionadas às funções de administrador ou visualizador do Ransomware Resilience. Para configurar configurações de comportamento suspeito do usuário e responder a alertas, um usuário deve ter a função de administrador de comportamento do usuário de resiliência ao ransomware. Para visualizar apenas alertas de comportamento suspeito do usuário, o usuário deve ter a função de visualizador de comportamento do usuário do Ransomware Resilience.</block>
+  <block id="6ebf0d56afdbe7f6542cf91826e113ef" category="paragraph">A tabela a seguir diferencia as ações disponíveis para as funções de administrador do Ransomware Resilience e visualizador do Ransomware Resilience.</block>
+  <block id="1ea8198251e36e2c445f036c869bfd7f" category="cell">Criar, editar ou excluir grupo de proteção</block>
+  <block id="a8b7063e167b83f7676ad4659510d5ea" category="sidebar">Funções de backup e recuperação</block>
+  <block id="ffce0d237e59f85993727b9607fade6c" category="sidebar">Funções de recuperação de desastres</block>
 </blocks>
