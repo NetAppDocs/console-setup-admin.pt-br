@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: reference-iam-ransomware-roles.html 
 keywords: predefined roles, iam roles, organization admin, folder or project admin, identity and access management, access roles, admin, 
-summary: O Ransomware Resilience oferece diferentes funções de usuário para gerenciar o acesso a privilégios, ações e relatórios. 
+summary: O Ransomware Resilience oferece diferentes funções de usuário para gerenciar o acesso a configurações, ações e relatórios. 
 ---
 = Funções de acesso de resiliência contra ransomware para o NetApp Console
 :hardbreaks:
@@ -16,17 +16,28 @@ summary: O Ransomware Resilience oferece diferentes funções de usuário para g
 [role="lead"]
 As funções de resiliência contra ransomware fornecem aos usuários acesso ao NetApp Ransomware Resilience. O Ransomware Resilience oferece suporte às seguintes funções:
 
-* Administrador de resiliência de ransomware
-* Visualizador de resiliência de ransomware
-* Comportamento do usuário de resiliência ao ransomware
-* Visualizador de comportamento do usuário de resiliência de ransomware
+**Funções de base**
+
+* Administrador de resiliência contra ransomware - Configurar as configurações de resiliência contra ransomware; investigar e responder a alertas de criptografia
+* Visualizador de resiliência de ransomware - visualize incidentes de criptografia, relatórios e configurações de descoberta
 
 
-As funções conferem diferentes níveis de acesso às configurações e ações.
+**Funções de atividade de comportamento do usuário**link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/suspicious-user-activity.html["Detecção de atividade suspeita do usuário"^] Os alertas fornecem visibilidade de dados como eventos de atividade de arquivo; esses alertas incluem nomes de arquivos e ações de arquivo (como Ler, Gravar, Excluir, Renomear) executadas pelo usuário.  Para limitar a visibilidade desses dados, somente usuários com essas funções podem gerenciar ou visualizar esses alertas.
 
-As ações disponíveis para as funções de administrador de comportamento do usuário e visualizador de comportamento do usuário do Ransomware Resilience são limitadas a link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/suspicious-user-activity.html["atividade suspeita do usuário"^]. Essas funções foram projetadas para serem adicionadas às funções de administrador ou visualizador do Ransomware Resilience. Para configurar configurações de comportamento suspeito do usuário e responder a alertas, um usuário deve ter a função de administrador de comportamento do usuário de resiliência ao ransomware. Para visualizar apenas alertas de comportamento suspeito do usuário, o usuário deve ter a função de visualizador de comportamento do usuário do Ransomware Resilience.
+* Administrador de comportamento do usuário de resiliência contra ransomware - Ative a detecção de atividades suspeitas do usuário, investigue e responda a alertas de atividades suspeitas do usuário
+* Visualizador de comportamento do usuário do Ransomware Resilience - Visualize alertas de atividades suspeitas do usuário
 
-A tabela a seguir diferencia as ações disponíveis para as funções de administrador do Ransomware Resilience e visualizador do Ransomware Resilience.
+
+
+NOTE: As funções de comportamento do usuário não são funções autônomas; elas foram projetadas para serem adicionadas às funções de administrador ou visualizador do Ransomware Resilience. Para mais informações, consulte <<Funções de comportamento do usuário>>.
+
+Consulte as tabelas a seguir para obter descrições detalhadas de cada função.
+
+
+
+== Funções de base
+
+A tabela a seguir descreve as ações disponíveis para as funções de administrador e visualizador do Ransomware Resilience.
 
 [cols="40,20a,20a"]
 |===
@@ -71,7 +82,7 @@ Não
 3+| *Na aba Proteger*: 
 
 
-| Adicionar, modificar ou excluir planos de proteção  a| 
+| Adicionar, modificar ou excluir planos de proteção para políticas de _criptografia_  a| 
 Sim
  a| 
 Não
@@ -85,7 +96,7 @@ Não
 
 
 
-| Identificar a exposição a dados sensíveis  a| 
+| Identifique a exposição a dados sensíveis com a Classificação de Dados  a| 
 Sim
  a| 
 Não
@@ -113,7 +124,7 @@ Sim
 
 
 
-| Criar, editar ou excluir grupo de proteção  a| 
+| Criar, editar ou excluir grupos de proteção  a| 
 Sim
  a| 
 Não
@@ -130,64 +141,57 @@ Sim
 3+| *Na aba Alertas*: 
 
 
-| Ver alertas e detalhes de alertas  a| 
+| Exibir alertas de criptografia e detalhes de alertas  a| 
 Sim
  a| 
 Sim
 
 
 
-| Editar status do incidente  a| 
-Sim
- a| 
-Não
-
-
-
-| Marcar alerta para recuperação  a| 
+| Editar status do incidente de criptografia  a| 
 Sim
  a| 
 Não
 
 
 
-| Ver detalhes do incidente  a| 
-Sim
- a| 
-Sim
-
-
-
-| Descartar ou resolver incidentes  a| 
+| Marcar alerta de criptografia para recuperação  a| 
 Sim
  a| 
 Não
 
 
 
-| Bloquear usuário  a| 
-Sim
- a| 
-Não
-
-
-
-| Obtenha a lista completa de arquivos afetados  a| 
-Sim
- a| 
-Não
-
-
-
-| Baixar dados de alertas  a| 
+| Ver detalhes do incidente de criptografia  a| 
 Sim
  a| 
 Sim
 
 
 
-| Ver atividades suspeitas de usuários  a| 
+| Descartar ou resolver incidentes de criptografia  a| 
+Sim
+ a| 
 Não
+
+
+
+| Obtenha a lista completa de arquivos afetados no evento de criptografia  a| 
+Sim
+ a| 
+Não
+
+
+
+| Baixar dados de alertas de eventos de criptografia  a| 
+Sim
+ a| 
+Sim
+
+
+
+| Bloquear usuário (com configuração do agente de segurança de carga de trabalho)  a| 
+Sim
  a| 
 Não
 
@@ -196,28 +200,28 @@ Não
 3+| *Na aba Recuperar*: 
 
 
-| Baixar arquivos impactados  a| 
+| Baixar arquivos afetados pelo evento de criptografia  a| 
 Sim
  a| 
 Não
 
 
 
-| Restaurar carga de trabalho  a| 
+| Restaurar carga de trabalho do evento de criptografia  a| 
 Sim
  a| 
 Não
 
 
 
-| Baixar dados de recuperação  a| 
+| Baixar dados de recuperação do evento de criptografia  a| 
 Sim
  a| 
 Sim
 
 
 
-| Baixar relatórios  a| 
+| Baixar relatórios do evento de criptografia  a| 
 Sim
  a| 
 Sim
@@ -262,21 +266,7 @@ Não
 
 
 
-| Iniciar exercício de prontidão  a| 
-Sim
- a| 
-Não
-
-
-
-| Exercício de prontidão para reinicialização  a| 
-Sim
- a| 
-Não
-
-
-
-| Exercício de preparação para edição  a| 
+| Iniciar, redefinir ou editar o exercício de prontidão  a| 
 Sim
  a| 
 Não
@@ -304,17 +294,155 @@ Sim
 
 
 
-| Configurar configurações de comportamento suspeito do usuário  a| 
-Não
+3+| *Na aba Relatórios*: 
+
+
+| Baixar relatórios  a| 
+Sim
+ a| 
+Sim
+
+|===
+
+
+== Funções de comportamento do usuário
+
+Para configurar configurações de comportamento suspeito do usuário e responder a alertas, um usuário deve ter a função de administrador de comportamento do usuário de resiliência ao ransomware. Para visualizar apenas alertas de comportamento suspeito do usuário, o usuário deve ter a função de visualizador de comportamento do usuário do Ransomware Resilience.
+
+As funções de comportamento do usuário devem ser conferidas aos usuários com privilégios de administrador ou visualizador do Ransomware Resilience existentes que precisam de acesso alink:https://docs.netapp.com/us-en/data-services-ransomware-resilience/suspicious-user-activity.html["configurações e alertas de atividades suspeitas do usuário"^] .  Um usuário com a função de administrador de Resiliência contra Ransomware, por exemplo, deve receber a função de administrador de comportamento de usuário de Resiliência contra Ransomware para configurar agentes de atividade do usuário e bloquear ou desbloquear usuários.  A função de administrador de comportamento do usuário de Resiliência contra Ransomware não deve ser conferida a um visualizador de Resiliência contra Ransomware.
+
+A tabela a seguir descreve as ações disponíveis para as funções de administrador e visualizador do comportamento do usuário do Ransomware Resilience.
+
+[cols="40,20a,20a"]
+|===
+| Recurso e ação | Comportamento do usuário de resiliência ao ransomware | Visualizador de comportamento do usuário de resiliência de ransomware 
+
+
+3+| *Na aba Configurações*: 
+
+
+| Criar, modificar ou excluir agente de atividade do usuário  a| 
+Sim
  a| 
 Não
 
 
 
-3+| *Na aba Relatórios*: 
+| Criar ou excluir conector de diretório de usuário  a| 
+Sim
+ a| 
+Não
 
 
-| Baixar relatórios  a| 
+
+| Pausar ou retomar o coletor de dados  a| 
+Sim
+ a| 
+Não
+
+
+
+| Execute um exercício de preparação para violação de dados  a| 
+Sim
+ a| 
+Não
+
+
+
+3+| *Na aba Proteger*: 
+
+
+| Adicionar, modificar ou excluir planos de proteção para políticas de _comportamento suspeito do usuário_  a| 
+Sim
+ a| 
+Não
+
+
+
+3+| *Na aba Alertas*: 
+
+
+| Ver alertas de atividade do usuário e detalhes do alerta  a| 
+Sim
+ a| 
+Sim
+
+
+
+| Editar status do incidente de atividade do usuário  a| 
+Sim
+ a| 
+Não
+
+
+
+| Marcar alerta de atividade do usuário para recuperação  a| 
+Sim
+ a| 
+Não
+
+
+
+| Ver detalhes do incidente de atividade do usuário  a| 
+Sim
+ a| 
+Sim
+
+
+
+| Descartar ou resolver incidentes de atividade do usuário  a| 
+Sim
+ a| 
+Não
+
+
+
+| Obtenha a lista completa de arquivos afetados por usuários suspeitos  a| 
+Sim
+ a| 
+Sim
+
+
+
+| Baixar dados de alertas de eventos de atividade do usuário  a| 
+Sim
+ a| 
+Sim
+
+
+
+| Bloquear ou desbloquear usuário  a| 
+Sim
+ a| 
+Não
+
+
+
+3+| *Na aba Recuperar*: 
+
+
+| Baixar arquivos impactados para evento de atividade do usuário  a| 
+Sim
+ a| 
+Não
+
+
+
+| Restaurar carga de trabalho do evento de atividade do usuário  a| 
+Sim
+ a| 
+Não
+
+
+
+| Baixar dados de recuperação do evento de atividade do usuário  a| 
+Sim
+ a| 
+Sim
+
+
+
+| Baixar relatórios de eventos de atividade do usuário  a| 
 Sim
  a| 
 Sim
