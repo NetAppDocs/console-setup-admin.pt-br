@@ -136,7 +136,7 @@ Você pode instalar um agente do Console diretamente do Console, do marketplace 
 
 == Permissões de nuvem
 
-Você precisa de permissões específicas para criar o agente do Console diretamente do NetApp Console e outro conjunto de permissões para a própria instância do agente do Console.  Se você criar o agente do Console na AWS ou no Azure diretamente do Console, o Console criará o agente do Console com as permissões necessárias.
+Você precisa de permissões específicas para criar o agente do Console diretamente do NetApp Console e outro conjunto de permissões para o próprio agente do Console. Se você criar o agente do Console na AWS ou no Azure diretamente do Console, o Console criará o agente do Console com as permissões necessárias.
 
 Ao usar o Console no modo padrão, a maneira como você fornece permissões depende de como você planeja criar o agente do Console.
 

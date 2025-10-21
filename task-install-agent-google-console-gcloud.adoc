@@ -420,7 +420,7 @@ Se você ainda estiver usando olink:reference-networking-saas-console-previous.h
 ====
 . Selecione *Adicionar*.
 +
-A instância estará pronta em aproximadamente 10 minutos; permaneça na página até que o processo seja concluído.
+O agente estará pronto em aproximadamente 10 minutos; permaneça na página até que o processo seja concluído.
 
 
 

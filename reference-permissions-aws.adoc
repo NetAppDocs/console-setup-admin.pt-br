@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: reference-permissions-aws.html 
 keywords: permissions, actions, aws, aws permissions, top secret, secret, aws top secret, aws secret, aws govcloud, govcloud, govcloud permissions, secret permissions, top secret permissions 
-summary: Quando o NetApp Console inicia a instância do agente na AWS, ele anexa uma política à instância que fornece ao agente permissões para gerenciar recursos e processos dentro dessa conta da AWS.  O agente usa as permissões para fazer chamadas de API para vários serviços da AWS, incluindo EC2, S3, CloudFormation, IAM, Key Management Service e muito mais. 
+summary: Quando o NetApp Console inicia o agente na AWS, ele anexa uma política ao agente que fornece ao agente permissões para gerenciar recursos e processos dentro dessa conta da AWS. O agente usa as permissões para fazer chamadas de API para vários serviços da AWS, incluindo EC2, S3, CloudFormation, IAM, Key Management Service e muito mais. 
 ---
 = Permissões da AWS para o agente do Console
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: Quando o NetApp Console inicia a instância do agente na AWS, ele anexa
 
 
 [role="lead"]
-Quando o NetApp Console inicia uma instância do agente do Console na AWS, ele anexa uma política à instância que fornece ao agente permissões para gerenciar recursos e processos dentro dessa conta da AWS.  O agente usa as permissões para fazer chamadas de API para vários serviços da AWS, incluindo EC2, S3, CloudFormation, IAM, Key Management Service (KMS) e muito mais.
+Quando o NetApp Console inicia um agente do Console na AWS, ele anexa uma política ao agente que fornece ao agente permissões para gerenciar recursos e processos dentro dessa conta da AWS. O agente usa as permissões para fazer chamadas de API para vários serviços da AWS, incluindo EC2, S3, CloudFormation, IAM, Key Management Service (KMS) e muito mais.
 
 
 
@@ -1026,7 +1026,7 @@ O agente faz as seguintes solicitações de API para implantar e gerenciar o Clo
 | Marque os recursos com as tags "WorkingEnvironment" e "WorkingEnvironmentId", que são usadas para manutenção e alocação de custos. | ec2:CriarTags | Sim | Sim | Não 
 
 
-.6+| Gerenciar volumes EBS que o Cloud Volumes ONTAP usa como armazenamento de back-end | ec2:CriarVolume | Sim | Sim | Não 
+.6+| Gerenciar volumes EBS que o Cloud Volumes ONTAP usa como armazenamento de backend | ec2:CriarVolume | Sim | Sim | Não 
 
 
 | ec2:DescreverVolumes | Sim | Sim | Sim 

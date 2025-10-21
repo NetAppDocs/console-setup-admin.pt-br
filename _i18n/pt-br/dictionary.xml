@@ -595,8 +595,6 @@
   <block id="3221538307211e131f96e1a83b1a5235" category="list-text">Após a conclusão do processo de assinatura, selecione *Configurar conta agora*.</block>
   <block id="89d8b3b4c08395fc5dbef0d35cb50529" category="paragraph">O vídeo a seguir mostra as etapas para assinar o Azure Marketplace:</block>
   <block id="930540e35d6a8bd81f5882c46e1f93c2" category="video-title">Assine o NetApp Intelligent Services no Azure Marketplace</block>
-  <block id="a0c8126f50d7b3808de600e46e5cbe60" category="list-text">Selecione *Administração &gt; *Credenciais*.</block>
-  <block id="4f556a86e5249d0b56ee37e2d7942588" category="list-text">Selecione o menu de ação para um conjunto de credenciais associadas a um agente do Console e selecione *Configurar assinatura*.  +nova captura de tela necessária (TS)<block ref="ea765af20d763fe16d94ba9ef03fd31b" category="inline-image-macro-rx" type="image"></block></block>
   <block id="ef5d79e3ae5671ca28e5f6e3b02eed27" category="list-text">Para configurar uma assinatura existente com as credenciais selecionadas, selecione um projeto e uma assinatura do Google Cloud na lista suspensa e selecione *Configurar*.</block>
   <block id="fff6f5125be05a94543d2e88dbd30b27" category="inline-image-macro">Uma captura de tela de um projeto e assinatura do Google Cloud selecionados para credenciais do Google Cloud.</block>
   <block id="cab980518d03aa36afc924b709828a6e" category="paragraph"><block ref="cab980518d03aa36afc924b709828a6e" category="inline-image-macro-rx" type="image"></block></block>
@@ -1131,11 +1129,7 @@
   <block id="e54158140168d6bfda7951dabc8a0468" category="doc">Saiba mais sobre credenciais e permissões da AWS no NetApp Console</block>
   <block id="64aa23be91006f71d837b2f3d1037b91" category="paragraph">Saiba como o NetApp Console usa credenciais da AWS para executar ações em seu nome e como essas credenciais são associadas às assinaturas do marketplace.  Entender esses detalhes pode ser útil ao gerenciar as credenciais de uma ou mais contas da AWS no NetApp Console.  Por exemplo, você pode querer saber quando adicionar credenciais adicionais da AWS.</block>
   <block id="9ef43b020d41cab5808d78fdf855c429" category="section-title">Credenciais iniciais da AWS</block>
-  <block id="ba29ba5428e515700911cad0530da473" category="paragraph">Ao implantar um agente do Console a partir do Console, você precisa fornecer o ARN de uma função do IAM ou chaves de acesso para um usuário do IAM.  O método de autenticação deve ter permissões para implantar o Console na AWS.  As permissões necessárias estão listadas no link: task-install-agent-aws-the Console.html#console-permissions-aws[Política de implantação do agente para AWS].</block>
   <block id="055263949ee2b6bf634a650444f9e58d" category="inline-link-macro">Revise como o Console usa as permissões</block>
-  <block id="9578371ace149ffae484a1e8a558e65f" category="paragraph">Quando o Console inicia a instância do agente do Console na AWS, ele cria uma função do IAM e um perfil de instância para a instância.  Ele também anexa uma política que fornece ao agente do Console permissões para gerenciar recursos e processos dentro dessa conta da AWS. <block ref="8e59a32a1f99b7e02222756f023f4cdb" category="inline-link-macro-rx"></block> .</block>
-  <block id="873c2fb7e6de1298736591dfc041a312" category="inline-image-macro">Uma imagem conceitual que mostra o Console implantando o agente do Console em uma conta da AWS.  Uma política do IAM é atribuída a uma função do IAM, que é anexada à instância do Console.</block>
-  <block id="4151f2403ede2b58299fbba0353ae08f" category="paragraph"><block ref="4151f2403ede2b58299fbba0353ae08f" category="inline-image-macro-rx" type="image"></block></block>
   <block id="3f466a41e365e816f063997e9ea5af63" category="paragraph">Se você adicionar um novo sistema Cloud Volumes ONTAP , o Console selecionará estas credenciais da AWS por padrão:</block>
   <block id="98c16c747c940667876d314b6eb47dba" category="inline-image-macro">Uma captura de tela que mostra a opção Trocar conta na página Detalhes e credenciais.</block>
   <block id="e39fac9d22fb901a8fb8b7118de8c4e7" category="paragraph"><block ref="e4d4efd6d9bbb3c296b1c319bd5c65f5" category="inline-image-macro-rx" type="image"></block></block>
@@ -1173,7 +1167,6 @@
   <block id="1fe917b01f9a3f87fa2d7d3b7643fac1" category="section-title">Perguntas frequentes</block>
   <block id="d33d86c6f3f99b3b9b1b988bde0679bd" category="paragraph">As perguntas a seguir estão relacionadas a credenciais e assinaturas.</block>
   <block id="70bfaa19a89e29bf0fc2b34b8f3150ba" category="section-title">Como posso rotacionar minhas credenciais da AWS com segurança?</block>
-  <block id="4589f94afcd8cd53bc8ec5293d3d4304" category="paragraph">Conforme descrito nas seções acima, o Console permite que você forneça credenciais da AWS de algumas maneiras: uma função do IAM associada à instância do agente do Console, assumindo uma função do IAM em uma conta confiável ou fornecendo chaves de acesso da AWS.</block>
   <block id="3f306aaee2a65dfda1ad13f709a0b4ae" category="paragraph">Com as duas primeiras opções, o Console usa o AWS Security Token Service para obter credenciais temporárias que são rotacionadas constantemente.  Este processo é a melhor prática: é automático e seguro.</block>
   <block id="0756a90a4a5e55dd02063c7dc80562de" category="paragraph">Se você fornecer ao Console chaves de acesso da AWS, deverá rotacionar as chaves atualizando-as no Console em intervalos regulares.  Este é um processo completamente manual.</block>
   <block id="c32ecd65cd5790ceb41fc1ef7d6a6e7d" category="section-title">Posso alterar a assinatura do AWS Marketplace para sistemas Cloud Volumes ONTAP ?</block>
@@ -1243,9 +1236,7 @@
   <block id="7c592b218a390e7d1c8bdbae8fbc794a" category="section-title">Projeto e permissões para o NetApp Console</block>
   <block id="077f81b3516261855bf075d3615cf476" category="paragraph">Antes de usar o Console para gerenciar recursos no seu projeto do Google Cloud, você deve primeiro implantar um agente do Console.  O agente não pode estar sendo executado em suas instalações ou em um provedor de nuvem diferente.</block>
   <block id="376a095d3a95abfb749fc8cc50f95d32" category="paragraph">Dois conjuntos de permissões devem estar em vigor antes de você implantar um agente do Console diretamente do Console:</block>
-  <block id="ce278eefdbe370b1ef58015b5deb66a8" category="list-text">Você precisa implantar um agente do Console usando uma conta do Google que tenha permissões para iniciar a instância da VM do agente do Console a partir do Console.</block>
   <block id="1c3efa7cf0b87cbb078fe955b2c587a5" category="inline-link">conta de serviço</block>
-  <block id="c168f30645856ed56e1373aa826e58e8" category="list-text">Ao implantar o agente do Console, você será solicitado a selecionar um<block ref="98f22f2dda0728ebb39af9a8fe826c8e" category="inline-link-rx"></block> para a instância da VM.  O Console obtém permissões da conta de serviço para criar e gerenciar sistemas Cloud Volumes ONTAP , gerenciar backups usando o backup e a recuperação do NetApp e muito mais.  As permissões são fornecidas anexando uma função personalizada à conta de serviço.</block>
   <block id="fee2d29ad57ecb4f5309060016b4495c" category="paragraph">A imagem a seguir descreve os requisitos de permissão descritos nos números 1 e 2 acima:</block>
   <block id="1b33affeaa41a09a9f3a99d38d14376f" category="inline-image-macro">Uma imagem conceitual que descreve os requisitos de permissão para contas do Google e de serviço para implantar o Cloud Volumes ONTAP.</block>
   <block id="61ed3f7479580c6ad0ce86e9e6f3dd8d" category="paragraph"><block ref="61ed3f7479580c6ad0ce86e9e6f3dd8d" category="inline-image-macro-rx" type="image"></block></block>
@@ -1322,7 +1313,6 @@
   <block id="bb052ff727ad3405f9e377f005178fd8" category="inline-link-macro">Comece a usar o NetApp Console no modo restrito</block>
   <block id="07a84f2a895ff5384ba250bbd0694216" category="list-text"><block ref="07a84f2a895ff5384ba250bbd0694216" category="inline-link-macro-rx"></block></block>
   <block id="51364b16802c39c0a147dcd705c784df" category="section-title">Permissões de nuvem</block>
-  <block id="d869a2271d08fa3533d98e212739c930" category="paragraph">Você precisa de permissões específicas para criar o agente do Console diretamente do NetApp Console e outro conjunto de permissões para a própria instância do agente do Console.  Se você criar o agente do Console na AWS ou no Azure diretamente do Console, o Console criará o agente do Console com as permissões necessárias.</block>
   <block id="cc8f36711f6212dccee4062562263a83" category="paragraph">Ao usar o Console no modo padrão, a maneira como você fornece permissões depende de como você planeja criar o agente do Console.</block>
   <block id="235df19fd66aa61dd8174f1a6480f822" category="paragraph">Para saber como configurar permissões, consulte o seguinte:</block>
   <block id="961f8ee244937e243425632b39f7defe" category="inline-link-macro">Opções de instalação do agente na AWS</block>
@@ -2374,9 +2364,7 @@
   <block id="46a1f2a1262e75b4e5ea88e748ead245" category="list-text"><block ref="46a1f2a1262e75b4e5ea88e748ead245" category="inline-link-macro-rx"></block></block>
   <block id="8dfda8cf3bfed1ba46319b9487959873" category="inline-link">Consulte a documentação dos respectivos serviços de dados da NetApp .</block>
   <block id="9e66adbc40ae0df7bfa345fcbb26e31b" category="paragraph"><block ref="9e66adbc40ae0df7bfa345fcbb26e31b" category="inline-link-rx"></block></block>
-  <block id="a329e01ca77506585e48c6c0e5afa977" category="summary">Quando o NetApp Console inicia a instância do agente na AWS, ele anexa uma política à instância que fornece ao agente permissões para gerenciar recursos e processos dentro dessa conta da AWS.  O agente usa as permissões para fazer chamadas de API para vários serviços da AWS, incluindo EC2, S3, CloudFormation, IAM, Key Management Service e muito mais.</block>
   <block id="87536203946c0c72fcd130937e3cc7ef" category="doc">Permissões da AWS para o agente do Console</block>
-  <block id="f5c725e488a04836aa25e2d34d4b7f6d" category="paragraph">Quando o NetApp Console inicia uma instância do agente do Console na AWS, ele anexa uma política à instância que fornece ao agente permissões para gerenciar recursos e processos dentro dessa conta da AWS.  O agente usa as permissões para fazer chamadas de API para vários serviços da AWS, incluindo EC2, S3, CloudFormation, IAM, Key Management Service (KMS) e muito mais.</block>
   <block id="c1141a37b962270fc1e8960233830c99" category="section-title">Políticas de IAM</block>
   <block id="573b0df2f89364b268637488ea138d56" category="paragraph">As políticas do IAM disponíveis abaixo fornecem as permissões que um agente do Console precisa para gerenciar recursos e processos dentro do seu ambiente de nuvem pública com base na sua região da AWS.</block>
   <block id="61fec915f59809a2c499bb7406d1bae7" category="list-text">Se você criar um agente do Console em uma região padrão da AWS diretamente do Console, o Console aplicará automaticamente as políticas ao agente.</block>
@@ -2522,7 +2510,6 @@
   <block id="21d0110f8008b90efa11a26fa83b57c3" category="cell">ec2:ModificarAtributoDeInstancia</block>
   <block id="4334838bb012bcce350df94e430e8251" category="cell">Verifique se a rede aprimorada está habilitada para os tipos de instância suportados</block>
   <block id="f1d835bacd60573faa9e3559c63d1f1b" category="cell">Marque os recursos com as tags "WorkingEnvironment" e "WorkingEnvironmentId", que são usadas para manutenção e alocação de custos.</block>
-  <block id="4df68ee329324d6bfab7f1a6bec005d1" category="cell">Gerenciar volumes EBS que o Cloud Volumes ONTAP usa como armazenamento de back-end</block>
   <block id="41335cfc4c2fb5b48949f4e7610951ec" category="cell">ec2:ModificarAtributoVolume</block>
   <block id="451d09025146b4c5f4b33a18aa0c4234" category="cell">ec2:ExcluirVolume</block>
   <block id="06622319fb198ee98832f726ac405c79" category="cell">ec2:DetachVolume</block>
@@ -2754,7 +2741,6 @@
   <block id="b73f51f05a3d7aca4e9b86bf6b66c214" category="paragraph">Essa permissão é necessária para a implantação do Cloud Volumes ONTAP .</block>
   <block id="accd9735475d1c9d7b0b5006261d6484" category="summary">O agente do Console requer permissões para executar ações no seu provedor de nuvem.  Essas permissões estão incluídas nas políticas fornecidas pela NetApp.  Você deve entender o que o agente faz com essas permissões.</block>
   <block id="1a24ebef5708132569792a414e03e094" category="doc">Permissões do Google Cloud para o agente do Console</block>
-  <block id="976bc0de7b817e2bbd4235a3067eb192" category="paragraph">O NetApp Console requer permissões para executar ações no Google Cloud.  Essas permissões estão incluídas em uma função personalizada fornecida pela NetApp.  Você deve entender o que o agente faz com essas permissões.</block>
   <block id="6b45b097205607d8631a7d487a76da98" category="section-title">Permissões de conta de serviço</block>
   <block id="48f3320f6327aedea52854dfcbcf31d9" category="paragraph">A função personalizada mostrada abaixo fornece as permissões que um agente do Console precisa para gerenciar recursos e processos na sua rede do Google Cloud.</block>
   <block id="82a6f573069dcbf74094644066f00ff8" category="paragraph">Você precisará aplicar essa função personalizada a uma conta de serviço que será anexada à VM do agente do Console.</block>
@@ -2843,12 +2829,10 @@
   <block id="b5a7adde1af5c87d7fd797b6245c2a39" category="cell">Descrição</block>
   <block id="97e7c9a7d06eac006a28bf05467fcc8b" category="cell">Link</block>
   <block id="7c803320cfc8e4215d4d26a0151ba1d0" category="cell">Implantar um agente do Console a partir do Console</block>
-  <block id="6bdd632a69530bf24f9d888defc43d4c" category="cell">O usuário que cria um agente do Console a partir do Console precisa de permissões específicas para implantar a instância na AWS.</block>
   <block id="2d3fc94cd0898448a15e6e05f4098b6f" category="inline-link-macro">Configurar permissões da AWS</block>
   <block id="e1ab6ce5f78b6cffa4cb98b58c75ca74" category="cell"><block ref="e1ab6ce5f78b6cffa4cb98b58c75ca74" category="inline-link-macro-rx"></block></block>
   <block id="78b382509bdd4a7b6a4640d195cfbf2a" category="cell">Fornecer permissões para um agente do Console</block>
   <block id="c9c719cb0217b958ec8c7414fa63880a" category="inline-link-macro">adicionar mais credenciais da AWS a um agente do Console</block>
-  <block id="188679009280735826c6ea749302c194" category="cell">Quando o Console implanta um agente do Console, ele anexa uma política à instância que fornece as permissões necessárias para gerenciar recursos e processos na sua conta da AWS.  Você precisa configurar a política sozinho se implantar um agente do Console do AWS Marketplace, se instalar manualmente um agente do Console ou se<block ref="dd68e1e1425f1a2836915a8e7efa1f0a" category="inline-link-macro-rx"></block> .  Você também precisa garantir que a política esteja atualizada à medida que novas permissões forem adicionadas em versões subsequentes.</block>
   <block id="9c0558b0c2119452ada22cb61fbef4d9" category="inline-link-macro">Permissões da AWS para um agente do Console</block>
   <block id="5fcaed6ff7619142f6cf0442d3bfaa6b" category="cell"><block ref="5fcaed6ff7619142f6cf0442d3bfaa6b" category="inline-link-macro-rx"></block></block>
   <block id="c926e674205f7757d37d0a06a12a2b10" category="cell">Faça backup de clusters ONTAP locais no Amazon S3 com o NetApp Backup and Recovery</block>
@@ -2912,7 +2896,6 @@
   <block id="e31e5964808968a788e49e50220d6ef1" category="cell">O usuário do Google Cloud que implanta um agente do Console a partir do Console precisa de permissões específicas para implantar um agente do Console no Google Cloud.</block>
   <block id="6ba3cdd92c12894a3d208241e1aa4f37" category="inline-link-macro">Configurar permissões para criar um agente do Console</block>
   <block id="e33d05694ffbef46c07ae36b71e76f96" category="cell"><block ref="e33d05694ffbef46c07ae36b71e76f96" category="inline-link-macro-rx"></block></block>
-  <block id="fed7c7d3c9febb32111eed3404adf3f6" category="cell">A conta de serviço para uma instância de VM do agente do Console deve ter permissões específicas para operações diárias.  Você precisa associar a conta de serviço a um agente do Console durante a implantação.  Você também precisa garantir que a política esteja atualizada à medida que novas permissões forem adicionadas em versões subsequentes.</block>
   <block id="1b29b6160eb822ba4beffa87a9ffbc2f" category="inline-link-macro">Configurar permissões para um agente do Console</block>
   <block id="ab7e7f2c26e8446e9290f7e7714458a2" category="cell"><block ref="ab7e7f2c26e8446e9290f7e7714458a2" category="inline-link-macro-rx"></block></block>
   <block id="b5b529e8dc821910caacb50b880d2487" category="cell">Faça backup do Cloud Volumes ONTAP no Google Cloud</block>
@@ -3048,16 +3031,12 @@
   <block id="3e48ec43e41264dd8a6c3b790b4a258f" category="section-title">Adicionar credenciais adicionais a um agente do Console</block>
   <block id="1d4a6c72c2fbe88f780ea172a7b401dd" category="paragraph">Adicione credenciais adicionais da AWS a um agente do Console para que ele tenha as permissões necessárias para gerenciar recursos e processos em seu ambiente de nuvem pública.  Você pode fornecer o ARN de uma função do IAM em outra conta ou fornecer chaves de acesso da AWS.</block>
   <block id="d3bb70ac534e6609e97e89f0a0f9df68" category="inline-link-macro">Saiba como o NetApp Console usa credenciais e permissões da AWS</block>
-  <block id="300a51753e7fe876628e24a8cbbc8477" category="paragraph">Se você está apenas começando a usar o Console,<block ref="bc75056b5fa2888bb728b2036381638f" category="inline-link-macro-rx"></block> .</block>
   <block id="1b516070ab36ad4c186fe30bd203fb45" category="section-title">Conceder permissões</block>
   <block id="f15edb27c0ef804642a9cdd261cf4ca4" category="paragraph">Conceda permissões antes de adicionar credenciais da AWS a um agente do Console.  As permissões permitem que um agente do Console gerencie recursos e processos dentro dessa conta da AWS.  Você pode fornecer as permissões com o ARN de uma função em uma conta confiável ou chaves da AWS.</block>
-  <block id="e5fc05695d6d40579715f8fc43e17cf6" category="inline-link-macro">Saiba mais sobre credenciais e permissões da AWS</block>
-  <block id="5607430bdff237b10cdbc1e16ce0e145" category="admonition">Se você implantou um agente do Console a partir do Console, ele adicionou automaticamente credenciais da AWS para a conta na qual você implantou um agente do Console.  Isso garante que as permissões necessárias estejam em vigor para gerenciar recursos. <block ref="36da95d92772c6b5e5c7802773061f54" category="inline-link-macro-rx"></block> .</block>
   <block id="70fbce3d6c9e05b51c53c71d08732426" category="paragraph">*Escolhas*</block>
   <block id="2dbbb3b6b99aebde1c79427caf3046e0" category="list-text"><block ref="02c78f765c83c4fb4a0370471b089610" category="inline-xref-macro-rx"></block></block>
   <block id="0db58c0529496c0e926af5f8c9002335" category="list-text"><block ref="60d271fc50ad3f5d03a8767578822d7b" category="inline-xref-macro-rx"></block></block>
   <block id="6fca6b826d3e4d0980a08d26e6cf905f" category="section-title">Conceder permissões assumindo uma função do IAM em outra conta</block>
-  <block id="389f261448d12fa65fd12b7f9294fdc9" category="paragraph">Você pode configurar uma relação de confiança entre a conta de origem da AWS na qual você implantou uma instância do agente do Console e outras contas da AWS usando funções do IAM.  Em seguida, você forneceria ao Console o ARN das funções do IAM das contas confiáveis.</block>
   <block id="97d3a348b90c6d4e6c95f0c8960fe656" category="paragraph">Se um agente do Console estiver instalado no local, você não poderá usar esse método de autenticação.  Você deve usar chaves da AWS.</block>
   <block id="5f8c7217365445fad8bae039de36b547" category="list-text">Acesse o console do IAM na conta de destino na qual você deseja fornecer permissões ao agente do Console.</block>
   <block id="61b72a48f16d18bfce7a18c7ce80f123" category="list-text">Em Gerenciamento de acesso, selecione *Funções &gt; Criar função* e siga as etapas para criar a função.</block>
@@ -3084,7 +3063,6 @@
   <block id="53001e9d440579e828bc2001e8e51eb0" category="list-text">*Localização das credenciais*: Selecione *Amazon Web Services &gt; Agente*.</block>
   <block id="a1418a1fbbbe1aec52c1618b6cc4b381" category="list-text">*Definir credenciais*: forneça o ARN (Amazon Resource Name) de uma função do IAM confiável ou insira uma chave de acesso e uma chave secreta da AWS.</block>
   <block id="6bde3721c0328285597064f41aeca793" category="paragraph">Para pagar por serviços por hora (PAYGO) ou com um contrato anual, você deve associar as credenciais da AWS à sua assinatura do AWS Marketplace.</block>
-  <block id="c962e6fb16069e1e0d430a6596126a16" category="paragraph">Agora você pode alternar para um conjunto diferente de credenciais na página Detalhes e credenciais ao adicionar um sistema ao Console</block>
   <block id="2456df50f32587f6b78feb0da93a921f" category="section-title">Adicionar credenciais ao Console para criar um agente do Console</block>
   <block id="eb544e044391f4665cb06461e7629e6b" category="paragraph">Adicione credenciais da AWS fornecendo o ARN de uma função do IAM que concede as permissões necessárias para criar um agente do Console.  Você pode escolher essas credenciais ao criar um novo agente.</block>
   <block id="d8a56d983b91f097e5ba55dd03a18509" category="section-title">Configurar a função do IAM</block>
@@ -3102,33 +3080,25 @@
   <block id="6acff1832d6612cd1afefaf53c386a82" category="list-text"><block ref="6acff1832d6612cd1afefaf53c386a82" category="inline-link-macro-rx"></block></block>
   <block id="884fd0826fb740e296bb4324a3742247" category="list-text">Copie o ARN da função do IAM para que você possa colá-lo no Console na próxima etapa.</block>
   <block id="d04fbc50c09432c35c0eb302581b70e6" category="inline-xref">Agora você pode adicioná-lo ao Console</block>
-  <block id="74b04ca811de14aef84fa666cae52e42" category="paragraph">A função IAM agora tem as permissões necessárias. <block ref="22c8d50e24c1ac21193395087b881b55" category="inline-xref-macro-rx"></block> .</block>
   <block id="75d520940839feb20c7009bf3a4913f6" category="paragraph">Depois de fornecer à função do IAM as permissões necessárias, adicione o ARN da função ao Console.</block>
   <block id="32e5fa0a32d6c9e7f8724cd4d60073b3" category="paragraph">Se você acabou de criar a função do IAM, pode levar alguns minutos até que ela esteja disponível para uso.  Aguarde alguns minutos antes de adicionar as credenciais ao Console.</block>
   <block id="1e9d97942154bc8b3f30e40e88be18a1" category="inline-image-macro">Uma captura de tela que mostra o ícone Configurações no canto superior direito do Console.</block>
   <block id="18cfde7fc8c96213e5e0bea16f9f1907" category="paragraph"><block ref="18cfde7fc8c96213e5e0bea16f9f1907" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="7b0893f7350a7ce29533d2ee8bafbcea" category="list-text">Na página *Credenciais da organização* ou *Credenciais da conta*, selecione *Adicionar credenciais* e siga as etapas do assistente.</block>
-  <block id="c6b7c0d9ca1ed97cdc686019e01cc204" category="list-text">*Localização das credenciais*: Selecione *Amazon Web Services &gt; NetApp Console*.</block>
   <block id="8cf335d7d3b1dd5cdac30699d20489c0" category="list-text">*Definir credenciais*: forneça o ARN (Amazon Resource Name) da função do IAM.</block>
   <block id="b07bcd019d5673f40409ccc629aee309" category="section-title">Adicionar credenciais ao Console do Amazon FSx para ONTAP</block>
   <block id="0967d5014be6ea1485ad3e2ef66038b4" category="inline-link">a documentação do console para Amazon FSx para ONTAP</block>
   <block id="acfc32e9de528d5b7c99c6756a63e918" category="paragraph">Para mais detalhes, consulte o<block ref="eca356f6dfda2c57cf1ad75280c32e28" category="inline-link-rx"></block></block>
   <block id="ff462988ef2bf728297fe5ed85ddc08d" category="section-title">Configurar uma assinatura da AWS</block>
-  <block id="06efaa955480ed147875fb9eaea13502" category="paragraph">Depois de adicionar suas credenciais da AWS, você pode configurar uma assinatura do AWS Marketplace com essas credenciais.  A assinatura permite que você pague pelo Cloud Volumes ONTAP por uma taxa horária (PAYGO) ou usando um contrato anual, além de pagar por outros serviços de dados.</block>
   <block id="baaf3fcde87b40756b9492e5ed1f488b" category="paragraph">Há dois cenários nos quais você pode configurar uma assinatura do AWS Marketplace depois de já ter adicionado as credenciais:</block>
   <block id="e448450e916fa912f5d4d1dee101e1cd" category="list-text">Você não configurou uma assinatura quando adicionou as credenciais inicialmente.</block>
   <block id="1fa2cd673301895c14fbffad8568f063" category="list-text">Você deseja alterar a assinatura do AWS Marketplace configurada para as credenciais da AWS.</block>
   <block id="891c56b3793d8bb2d83dc9db21c81e12" category="paragraph">Substituir a assinatura atual do marketplace por uma nova assinatura altera a assinatura do marketplace para todos os sistemas Cloud Volumes ONTAP existentes e todos os novos sistemas.</block>
   <block id="17e922bee62498071d0b520a708ce7bc" category="inline-link-macro">Aprenda a criar um agente de console</block>
   <block id="261ff42fc8f9c0d862eeaad9e733fb30" category="paragraph">Você precisa criar um agente do Console antes de poder configurar uma assinatura. <block ref="5464fa3cf6630a16780c24b91f4e9a76" category="inline-link-macro-rx"></block> .</block>
-  <block id="d0ecf8e73b6ccfcf921b7f1d7a9f7aab" category="section-title">Associe uma assinatura existente à sua organização ou conta</block>
-  <block id="cfc7641b49b25d7474ae90431316dac4" category="paragraph">Ao assinar no AWS Marketplace, a última etapa do processo é associar a assinatura à sua organização.  Se você não concluiu esta etapa, não poderá usar a assinatura com sua organização ou conta.</block>
   <block id="de889eba177db53c06a02269626fde94" category="inline-link-macro">Saiba mais sobre os modos de implantação do Console</block>
   <block id="ad4b043010cfe36d97b2129f9c6bdfe5" category="list-text"><block ref="ad4b043010cfe36d97b2129f9c6bdfe5" category="inline-link-macro-rx"></block></block>
   <block id="5cfcb005e90f812bdbec7628cc5e3a28" category="inline-link-macro">Saiba mais sobre o gerenciamento de identidade e acesso do Console</block>
   <block id="3558797850f17459a3d0cbf3067dbeab" category="list-text"><block ref="3558797850f17459a3d0cbf3067dbeab" category="inline-link-macro-rx"></block></block>
-  <block id="7f1ae543c9c9412c8eccd6cf3a927d87" category="paragraph">Siga as etapas abaixo se você assinou os serviços de dados inteligentes da NetApp no ​​AWS Marketplace, mas perdeu a etapa para associar a assinatura à sua conta.</block>
-  <block id="7437a0735ed3e4471d35fd7b0c6979c4" category="list-text">Confirme se você não associou sua assinatura à sua organização ou conta do Console.</block>
   <block id="75a72899c30ed62f2bc6ea22cc2496f1" category="list-text">No menu de navegação, selecione *Administração &gt; Licenses and subscriptions*.</block>
   <block id="8c3682e85d7f4dbe8a46485082335dec" category="list-text">Selecione *Assinaturas*.</block>
   <block id="396dc6ebeb25f088871923698f198ac5" category="list-text">Verifique se sua assinatura não aparece.</block>
@@ -3145,23 +3115,18 @@
   <block id="eb5b116e4f435bffc740f5b1aa2a64a4" category="paragraph">Observe que você pode ser solicitado a efetuar login no Console primeiro.</block>
   <block id="a364d7b74dc44e218e30af9801063a87" category="inline-image-macro">Uma captura de tela da página Atribuição de Assinatura que permite que você escolha as organizações a serem associadas a esta assinatura.</block>
   <block id="c649f133b0e8deee0e4c66f142b94dfe" category="paragraph"><block ref="c649f133b0e8deee0e4c66f142b94dfe" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="cc7fcfbe620e18d18198b0a6f020972a" category="list-text">Confirme se a assinatura está associada à sua organização ou conta.</block>
   <block id="9a048d3215f3cac3514b151f66ce0e14" category="list-text">No menu de navegação, selecione *Administração &gt; Licença e assinaturas*.</block>
   <block id="63efa257b0b77bd676137930df4d9b38" category="list-text">Verifique se sua assinatura aparece.</block>
   <block id="b37f51b57881b03b6c52e06acb6edd87" category="list-text">Confirme se a assinatura está associada às suas credenciais da AWS.</block>
-  <block id="748b6fdce008be291b4c97353b02ef06" category="list-text">No canto superior direito do console, selecione o ícone Configurações e selecione *Credenciais*.</block>
   <block id="b5cf8c8ecbaf96c5703fefc72d8586a6" category="list-text">Na página *Credenciais da organização*, verifique se a assinatura está associada às suas credenciais da AWS.</block>
   <block id="ff61d6606967c3f8b0dfa41b1fd7bfa0" category="paragraph">Aqui está um exemplo.</block>
   <block id="7d04d329ecf260e56d96e50130eb662b" category="inline-image-macro">Uma captura de tela da página de credenciais da conta do console que mostra as credenciais da AWS que incluem um campo de assinatura que identifica o nome da assinatura associada às credenciais.</block>
   <block id="315ac91dd30aaffe692f9619d9748d67" category="paragraph"><block ref="315ac91dd30aaffe692f9619d9748d67" category="inline-image-macro-rx" type="image"></block></block>
   <block id="c98f8dfd7e317cb87d057d9e065d71d4" category="section-title">Editar credenciais</block>
   <block id="62ce53ce4e7e424908529a45cc3ea1d3" category="paragraph">Edite suas credenciais da AWS alterando o tipo de conta (chaves da AWS ou função assumida), editando o nome ou atualizando as próprias credenciais (as chaves ou o ARN da função).</block>
-  <block id="14ec991b23538afbb699977d8284888e" category="admonition">Não é possível editar as credenciais de um perfil de instância associado a uma instância do agente do Console ou a uma instância do Amazon FSx for ONTAP .  Você só pode renomear as credenciais de uma instância do FSx for ONTAP .</block>
-  <block id="c04c991a23225733a46a58429473235a" category="list-text">Na página *Credenciais da organização* ou *Credenciais da conta*, selecione o menu de ações para um conjunto de credenciais e, em seguida, selecione *Editar credenciais*.</block>
   <block id="d7ef0bce115005fa2c5e3accd5b74cc5" category="list-text">Faça as alterações necessárias e selecione *Aplicar*.</block>
   <block id="7132b07cc411f1ad7091b34cfe32d739" category="section-title">Excluir credenciais</block>
   <block id="69c8b33c89a97aa0c69461286343a594" category="paragraph">Se você não precisar mais de um conjunto de credenciais, poderá excluí-las.  Você só pode excluir credenciais que não estejam associadas a um sistema.</block>
-  <block id="e8f19939ffba67661d03c8dbc0bbdab9" category="admonition">Não é possível excluir as credenciais de um perfil de instância associado a uma instância do agente do Console.</block>
   <block id="b957a9b739887d11a774a7b99f5f474b" category="list-text">Na página *Credenciais da organização* ou *Credenciais da conta*, selecione o menu de ações para um conjunto de credenciais e, em seguida, selecione *Excluir credenciais*.</block>
   <block id="93ab98e83f767e271a56c06a99e0061f" category="list-text">Selecione *Excluir* para confirmar.</block>
   <block id="ea6fb0054a5e8a053307300ee4d03690" category="summary">Adicione e gerencie credenciais do Azure para que o NetApp Console tenha as permissões necessárias para implantar e gerenciar recursos de nuvem em suas assinaturas do Azure.  Se você gerencia várias assinaturas do Azure Marketplace, pode atribuir cada uma delas a diferentes credenciais do Azure na página Credenciais.</block>
@@ -3232,12 +3197,10 @@
   <block id="fca161e7e3d0f11c877617c572f2054d" category="list-text">Selecione o menu de ação para um conjunto de credenciais e, em seguida, selecione *Editar credenciais*.</block>
   <block id="343f14fa04538530ee19575d02711691" category="list-text">Na página *Credenciais da organização*, selecione o menu de ações para um conjunto de credenciais e, em seguida, selecione *Excluir credenciais*.</block>
   <block id="aca93a34ac0830ae93442a45a45230ca" category="summary">Você pode gerenciar as credenciais do Google Cloud associadas à instância da VM do agente do Console associando uma assinatura do marketplace e solucionando problemas no processo de assinatura.  Ambas as tarefas garantem que você possa usar sua assinatura do marketplace para pagar por serviços de dados.</block>
-  <block id="a5902f6d28779078fd2033b21af7a5fe" category="doc">Gerenciar credenciais e assinaturas do Google Cloud para o NetApp Console</block>
   <block id="7fb6ce6ba61ee2f889266f6591c8bf62" category="paragraph">Você pode gerenciar as credenciais do Google Cloud associadas a uma instância de VM do agente do Console associando uma assinatura do marketplace e solucionando problemas no processo de assinatura.  Ambas as tarefas garantem que você possa usar sua assinatura do marketplace para pagar por serviços de dados.</block>
   <block id="209e33f8aa50ade8c82e5bc82a8c023d" category="section-title">Associar uma assinatura do Marketplace às credenciais do Google Cloud</block>
   <block id="eb7e6d1f8bb6ef3fd9a4c9dde493222f" category="paragraph">Quando você implanta um agente do Console no Google Cloud, o Console cria um conjunto padrão de credenciais associadas a uma instância de VM do agente do Console.  A qualquer momento, você pode alterar a assinatura do Google Cloud Marketplace associada a essas credenciais.  A assinatura permite que você crie um sistema Cloud Volumes ONTAP com pagamento conforme o uso e use outros serviços de dados.</block>
   <block id="55c766cf4228626844250621a71175de" category="section-title">Solucionar problemas do processo de assinatura do Marketplace</block>
-  <block id="22799693f8d16282f927158e17952aae" category="paragraph">Às vezes, a assinatura de serviços de dados da NetApp por meio do Google Cloud Marketplace pode ficar fragmentada devido a permissões incorretas ou ao não seguir acidentalmente o redirecionamento para o Console.  Se isso acontecer, siga as etapas a seguir para concluir o processo de assinatura.</block>
   <block id="5e8a9e85694a19d502ffc719ffe16636" category="inline-link">Página da NetApp no ​​Google Cloud Marketplace</block>
   <block id="d6e50a6d3ec0159b4980423911b0d4c3" category="list-text">Navegue até o<block ref="50dc0afbab90b927abe9802e2e044626" category="inline-link-rx"></block> para verificar o estado do pedido.  Se a página indicar *Gerenciar no Provedor*, role para baixo e selecione *Gerenciar Pedidos*.</block>
   <block id="1602e955f4d68623784fbd9b3e232de3" category="inline-image-macro">Uma captura de tela da página do marketplace após a assinatura.</block>
@@ -4051,16 +4014,12 @@
   <block id="46db632d39e89f845984f05056817700" category="paragraph">Para gerenciar recursos da AWS.  O ponto de extremidade depende da sua região da AWS.<block ref="04572646466baf6f86d09965eb5c3c86" category="inline-link-rx"></block></block>
   <block id="dc648d2a312f61564f5f6beb2e95a5cc" category="paragraph">Você precisará implementar esse requisito de rede depois de criar o agente do Console.</block>
   <block id="fe34c82f62d8c19159528f702fa22a96" category="section-title">Etapa 2: configurar permissões da AWS para o agente do Console</block>
-  <block id="22dea0a159db63b5c0e6d7300465d98e" category="paragraph">O Console precisa ser autenticado com a AWS antes de poder implantar a instância do agente do Console na sua VPC.  Você pode escolher um destes métodos de autenticação:</block>
   <block id="eeda2f4307e522dfb736cc96eb303e27" category="list-text">Deixe o Console assumir uma função do IAM que tenha as permissões necessárias</block>
   <block id="4964e9eef6df2fe316a2618afd8cd963" category="list-text">Forneça uma chave de acesso e uma chave secreta da AWS para um usuário do IAM que tenha as permissões necessárias</block>
-  <block id="c782c9bfac5d0cf02cf4aac4dff7c3dc" category="paragraph">Com qualquer uma das opções, o primeiro passo é criar uma política de IAM.  Esta política contém apenas as permissões necessárias para iniciar a instância do agente do Console na AWS a partir do Console.</block>
   <block id="15f7c3376619ce497205d543fd1d7767" category="paragraph">Se necessário, você pode restringir a política do IAM usando o IAM<block ref="9e2941b3c81256fac10392aaca4ccfde" prefix=" " category="inline-code"></block> elemento.<block ref="19ffef022087e160f1e54b9948795943" category="inline-link-rx"></block></block>
   <block id="1e71ce7defc90d8f5a2c46c08ba968df" category="list-text">Acesse o console do AWS IAM.</block>
   <block id="d36ec2dc8acd5ade1fda1b4397ccc99a" category="list-text">Selecione *JSON*.</block>
   <block id="26d4a7a50dfbae842d907e3b8000633e" category="list-text">Copie e cole a seguinte política:</block>
-  <block id="3cbd24e006d2016d3ee7aeba2fcfcc0d" category="inline-link-macro">Exibir permissões necessárias para a própria instância do agente do Console</block>
-  <block id="4e48090d3c94dbf17e900b8e0e1ab649" category="paragraph">Esta política contém apenas as permissões necessárias para iniciar a instância do agente do Console na AWS a partir do Console.  Quando o Console cria o agente do Console, ele aplica um novo conjunto de permissões à instância do agente do Console que permite que o agente do Console gerencie recursos da AWS. <block ref="2f65f589129cddadcefb4538fada0caf" category="inline-link-macro-rx"></block> .</block>
   <block id="cedfddf2dfb74aa203be428f7657457c" category="list-text">Selecione *Avançar* e adicione tags, se necessário.</block>
   <block id="01de2e1a7f136c3eeda419bfb07814da" category="list-text">Selecione *Avançar* e insira um nome e uma descrição.</block>
   <block id="db92c743d97601150bbdfa11bf3cf66b" category="list-text">Selecione *Criar política*.</block>
@@ -4082,7 +4041,6 @@
   <block id="5f951668599865c2dd2220fcb0617434" category="inline-link-macro">Saiba mais sobre a configuração padrão do agente do Console</block>
   <block id="6b02626fac3ccb06150290f9d284c115" category="list-text">A criação do agente do Console a partir do Console implanta uma instância do EC2 na AWS usando uma configuração padrão.  Não mude para uma instância EC2 menor com menos CPUs ou menos RAM depois de criar o agente do Console. <block ref="29c6b59463611f41ce7d1e55e2554b51" category="inline-link-macro-rx"></block> .</block>
   <block id="5b648a602c64391c13459b2242feaccf" category="inline-link-macro">Saiba mais sobre a política do IAM para o agente do Console</block>
-  <block id="8cfa8205571c02f754f7ea3ea367085f" category="list-text">Quando o Console cria o agente do Console, ele cria uma função do IAM e um perfil de instância para a instância.  Esta função inclui permissões que permitem ao agente do Console gerenciar recursos da AWS.  Garanta que a função seja atualizada conforme novas permissões forem adicionadas em versões futuras. <block ref="5fa58f5972b383411e34ca4f11e8af66" category="inline-link-macro-rx"></block> .</block>
   <block id="aca02eea323174e41d57225a762eb959" category="list-text">Um método de autenticação da AWS: uma função do IAM ou chaves de acesso para um usuário do IAM com as permissões necessárias.</block>
   <block id="482049a2c27830202c448327d329f378" category="list-text">Uma VPC e uma sub-rede que atendem aos requisitos de rede.</block>
   <block id="b16e9971e18d4e63cd90cc2dc398c39e" category="list-text">Um par de chaves para a instância EC2.</block>
@@ -4096,15 +4054,11 @@
   <block id="8b8f36850755c4ac43a0df238add8748" category="inline-link-macro">Aprenda como adicionar credenciais adicionais</block>
   <block id="a92469e7b4819b542d643764a5f08089" category="admonition">Se você escolher *Assumir função*, poderá criar o primeiro conjunto de credenciais no assistente de implantação do agente do Console.  Qualquer conjunto adicional de credenciais deve ser criado na página Credenciais.  Eles estarão disponíveis no assistente em uma lista suspensa. <block ref="21eba73392ef6be6fd6da758f5bd2e93" category="inline-link-macro-rx"></block> .</block>
   <block id="f07116b379707ffd76d2b1be3d766311" category="list-text">Na página *Detalhes*, forneça detalhes sobre o agente do Console.</block>
-  <block id="bb535485e7b97661af60ecc59e655498" category="list-text">Digite um nome para a instância.</block>
-  <block id="edda80be79ac3f7cac925a65c6a3e5b5" category="list-text">Adicione tags personalizadas (metadados) à instância.</block>
   <block id="a6100ac4fa5cb7bbb1c49e95165b96b2" category="inline-link-macro">as permissões necessárias</block>
   <block id="603cd6f77a8d8d20e21808a8ba4480ea" category="list-text">Escolha se deseja que o Console crie uma nova função que tenha as permissões necessárias ou se deseja selecionar uma função existente que você configurou com<block ref="8b098a06817becf62c06297dd76999b5" category="inline-link-macro-rx"></block> .</block>
   <block id="a7dcc75dc3cacce63a6952fff1a50f65" category="list-text">Escolha se deseja criptografar os discos EBS do agente do Console.  Você tem a opção de usar a chave de criptografia padrão ou usar uma chave personalizada.</block>
-  <block id="b351764d5fbd3135f97955e1a28e993d" category="list-text">Na página *Rede*, especifique uma VPC, uma sub-rede e um par de chaves para a instância, escolha se deseja habilitar um endereço IP público e, opcionalmente, especifique uma configuração de proxy.</block>
   <block id="a2f078803960d5d37e3fe024b9a33315" category="paragraph">Certifique-se de ter o par de chaves correto para acessar a máquina virtual do agente do Console.  Sem um par de chaves, você não pode acessá-lo.</block>
   <block id="7d94cf454f2eac26ff84a8d1c8a89d1e" category="list-text">Na página *Grupo de segurança*, escolha se deseja criar um novo grupo de segurança ou se deseja selecionar um grupo de segurança existente que permita as regras de entrada e saída necessárias.</block>
-  <block id="a60b1115783600a21eb41ae13935fdc8" category="paragraph">O Console prepara a instância em cerca de 10 minutos.  Permaneça na página até que o processo seja concluído.</block>
   <block id="39dbd35a18bfa38cac810c0be826b561" category="paragraph">Após a conclusão do processo, o agente do Console estará disponível para uso no Console.</block>
   <block id="1cc84d19a969a49be773baf953e6565c" category="admonition">Se a implantação falhar, você poderá baixar um relatório e logs do Console para ajudar a corrigir os problemas.<block ref="61c0b8f4aae5855ed1c7905138f2dd94" category="inline-link-macro-rx"></block></block>
   <block id="510a2d4afe6727bcdbafc74a103f9f16" category="inline-link">Aprenda a gerenciar buckets do S3 no NetApp Console</block>
@@ -4169,7 +4123,6 @@
   <block id="1088af463c45fd2ad41a6c82fa30901d" category="paragraph">Você precisa implementar esse requisito de rede depois de criar o agente do Console.</block>
   <block id="a1d3b4f2bb3ea0f906918baa3bf1137e" category="section-title">Etapa 2: criar uma política de implantação do agente do console (função personalizada)</block>
   <block id="60bdd26de3b4bc579bb0de3b5d2b317c" category="paragraph">Você precisa criar uma função personalizada que tenha permissões para implantar o agente do Console no Azure.</block>
-  <block id="7b1462b427bd27c3074fea9676de0741" category="paragraph">Crie uma função personalizada do Azure que você pode atribuir à sua conta do Azure ou a uma entidade de serviço do Microsoft Entra.  O Console é autenticado com o Azure e usa essas permissões para criar a instância do agente do Console em seu nome.</block>
   <block id="e67e7e248211452a7dde826d9908648e" category="paragraph">O Console implanta a VM do agente do Console no Azure, habilita um<block ref="3b529d5441a4ea26741352247ca08bac" category="inline-link-rx"></block> , cria a função necessária e a atribui à VM. <block ref="4e8f46d45dc9a2f1f1b6f49a05e1acc0" category="inline-link-macro-rx"></block> .</block>
   <block id="fdf818accfe04434a4c9fd9ccfe6d56c" category="list-text">Copie as permissões necessárias para uma nova função personalizada no Azure e salve-as em um arquivo JSON.</block>
   <block id="d328c118ae9c803f8eba8e391922c298" category="admonition">Esta função personalizada contém apenas as permissões necessárias para iniciar a VM do agente do Console no Azure a partir do Console.  Não use esta política para outras situações.  Quando o Console cria o agente do Console, ele aplica um novo conjunto de permissões à VM do agente do Console que permite que o agente do Console gerencie recursos do Azure.</block>
@@ -4227,7 +4180,6 @@
   <block id="2f44f891a2e61a894ccc4f30dfd7b4be" category="paragraph"><block ref="8d330a1f00fb06fce7867e682fb9a351" category="inline-xref-macro-rx"></block> .</block>
   <block id="e287af1d2980f92ee6cef799f9d29337" category="list-text">Na página *Autenticação de Máquina Virtual*, escolha uma assinatura do Azure, um local, um novo grupo de recursos ou um grupo de recursos existente e, em seguida, escolha um método de autenticação para a máquina virtual do agente do Console que você está criando.</block>
   <block id="52f3863b6256b8ae764628f74442ca5c" category="paragraph">O método de autenticação para a máquina virtual pode ser uma senha ou uma chave pública SSH.</block>
-  <block id="b2fffb117a4feff60b8edd4169d40b22" category="list-text">Na página *Detalhes*, insira um nome para a instância, especifique as tags e escolha se deseja que o Console crie uma nova função que tenha as permissões necessárias ou se deseja selecionar uma função existente que você configurou com<block ref="b569336f779a413e2d7fa8c0ccb0306d" category="inline-link-macro-rx"></block> .</block>
   <block id="6d316e3761ed9316d17ae819566bc027" category="paragraph">Observe que você pode escolher as assinaturas do Azure associadas a essa função.  Cada assinatura escolhida fornece ao agente do Console permissões para gerenciar recursos nessa assinatura (por exemplo, Cloud Volumes ONTAP).</block>
   <block id="a1b2fd3af3ae0dbe40775b47c4963c76" category="list-text">Na página *Rede*, escolha uma VNet e uma sub-rede, se deseja habilitar um endereço IP público e, opcionalmente, especifique uma configuração de proxy.</block>
   <block id="efcd4e60d15be9d5ddd70201eaeb17b1" category="list-text">Na página *Grupo de segurança*, escolha se deseja criar um novo grupo de segurança ou se deseja selecionar um grupo de segurança existente que permita as regras de entrada e saída necessárias.</block>
@@ -4326,7 +4278,6 @@
   <block id="d8948bb022f3ece9625b861d1822f759" category="list-text">*Política de firewall*: escolha se deseja criar uma nova política de firewall ou selecionar uma política de firewall existente que permita as regras de entrada e saída necessárias.</block>
   <block id="e22a4abc98b47ca148e0dfda7e259162" category="inline-link-macro">Regras de firewall no Google Cloud</block>
   <block id="4693bfc9044ed3552c37524411e90819" category="paragraph"><block ref="4693bfc9044ed3552c37524411e90819" category="inline-link-macro-rx"></block></block>
-  <block id="0b6aa4ea63b3a77b1b57e9fabb90a9fa" category="paragraph">A instância estará pronta em aproximadamente 10 minutos; permaneça na página até que o processo seja concluído.</block>
   <block id="e8b69837aadc0d9aafe18d0701d1dc76" category="paragraph">Após a conclusão do processo, o agente do Console estará disponível para uso.</block>
   <block id="9bfb17e64abc7809724f85bcd87b6901" category="inline-link">Aprenda a gerenciar o Google Cloud Storage pelo Console</block>
   <block id="b1599f1dab16f4dcd35886dbdbbbb28e" category="paragraph">Se você tiver buckets do Google Cloud Storage na mesma conta do Google Cloud onde criou o agente do Console, verá um sistema do Google Cloud Storage aparecer na página *Sistemas* automaticamente.<block ref="f1cd5bada461ae8da2b324edaa3edd7e" category="inline-link-rx"></block></block>
@@ -4488,9 +4439,6 @@
   <block id="278a1d20d474323c7730eb5c88c86df3" category="paragraph"><block ref="278a1d20d474323c7730eb5c88c86df3" category="inline-link-macro-rx"></block></block>
   <block id="3f4713c771af26689845a2dfeec86b37" category="inline-link-macro">Aprenda a configurar permissões da AWS</block>
   <block id="ebb952d62c1eec36921c93691e959c82" category="paragraph"><block ref="ebb952d62c1eec36921c93691e959c82" category="inline-link-macro-rx"></block></block>
-  <block id="fbeff5cf304fefe21e93306905a53be6" category="inline-link-macro">Revisar requisitos de instância</block>
-  <block id="3841f44681bf2f357b9d0af73693bfe7" category="paragraph"><block ref="fd1bb5492ba75369497408ab8d3a2621" category="inline-link-macro-rx"></block> .</block>
-  <block id="bf06d9b5e1ab190a2fda69c2d0cd5728" category="paragraph">A AWS inicia o software com as configurações especificadas.  A instância do agente do Console e o software são executados em aproximadamente cinco minutos.</block>
   <block id="bbf7a3139643c3f4a84bd5304f5d7758" category="paragraph">Configurar o NetApp Console.</block>
   <block id="d919f0caf7e85368ea2bd20d82569c6b" category="open-title">Mercado governamental da AWS</block>
   <block id="354d01219cd53e5b903301394dc26ed1" category="list-text">Acesse a oferta do agente do NetApp Console no AWS Marketplace.</block>
@@ -5592,4 +5540,66 @@
   <block id="59358657bd56c540dd5a88214e34361a" category="cell">Restaurar carga de trabalho do evento de atividade do usuário</block>
   <block id="0bcd0f2de89d5cc2513b3b19cac9d193" category="cell">Baixar dados de recuperação do evento de atividade do usuário</block>
   <block id="615b930aeaebafc57f53ff8e632fb38d" category="cell">Baixar relatórios de eventos de atividade do usuário</block>
+  <block id="ea765af20d763fe16d94ba9ef03fd31b" category="paragraph"><block ref="ea765af20d763fe16d94ba9ef03fd31b" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="669bdf1134d50e3993628c05585e5734" category="list-text">Selecione a organização do Console à qual você gostaria de associar esta assinatura.</block>
+  <block id="d530645223f70d357ab17787b555f381" category="list-text">No campo *Substituir assinatura existente*, escolha se deseja substituir automaticamente a assinatura existente de uma organização por esta nova assinatura.</block>
+  <block id="648c906efc1699c9d3ad4578bac84bd5" category="paragraph">O Console substitui a assinatura existente para todas as credenciais na organização por esta nova assinatura. Se um conjunto de credenciais nunca foi associado a uma assinatura, essa nova assinatura não será associada a essas credenciais.</block>
+  <block id="fec37ac1cd6af148e5a37feded7851f2" category="paragraph">Ao implantar um agente do Console a partir do Console, você precisa fornecer o ARN de uma função do IAM ou chaves de acesso para um usuário do IAM. O método de autenticação deve ter permissões para implantar o Console na AWS. As permissões necessárias estão listadas no link: task-install-agent-aws-the Console.html#aws-permissions-agent[Política de implantação do agente para AWS].</block>
+  <block id="6d98b6cff569df2b13894056f584ec94" category="inline-link-macro">Revise como o Agente usa as permissões</block>
+  <block id="2530b567a30729c8ca55db7e56f9039a" category="paragraph">Quando o Console inicia o agente do Console na AWS, ele cria uma função do IAM e um perfil para o agente. Ele também anexa uma política que fornece ao agente do Console permissões para gerenciar recursos e processos dentro dessa conta da AWS. <block ref="c8fcf01cd703cc98adb501c59ec6e8ce" category="inline-link-macro-rx"></block>.</block>
+  <block id="9bdb90e2cf9f7f97285de5520ab53a37" category="inline-image-macro">Uma imagem conceitual que mostra o Console implantando o agente do Console em uma conta da AWS. Uma política do IAM é atribuída a uma função do IAM, que é anexada ao Console.</block>
+  <block id="6200ddd5978ec4a6ebc04f286e729487" category="paragraph"><block ref="6200ddd5978ec4a6ebc04f286e729487" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="1aed0c96ab82a81ab5988e9702bb43da" category="paragraph">Conforme descrito nas seções acima, o Console permite que você forneça credenciais da AWS de algumas maneiras: uma função do IAM associada ao agente do Console, assumindo uma função do IAM em uma conta confiável ou fornecendo chaves de acesso da AWS.</block>
+  <block id="a47f802b14f43406913307d1775681b4" category="list-text">Você precisa implantar um agente do Console usando uma conta do Google que tenha permissões para iniciar o agente do Console a partir do Console.</block>
+  <block id="2f452b0fc39f70459edce8976da308fa" category="list-text">Ao implantar o agente do Console, você será solicitado a selecionar um<block ref="98f22f2dda0728ebb39af9a8fe826c8e" category="inline-link-rx"></block> para o agente O Console obtém permissões da conta de serviço para criar e gerenciar sistemas Cloud Volumes ONTAP , gerenciar backups usando o backup e a recuperação do NetApp e muito mais. As permissões são fornecidas anexando uma função personalizada à conta de serviço.</block>
+  <block id="0f45389ced3603929ac70a3772bf2348" category="paragraph">Você precisa de permissões específicas para criar o agente do Console diretamente do NetApp Console e outro conjunto de permissões para o próprio agente do Console. Se você criar o agente do Console na AWS ou no Azure diretamente do Console, o Console criará o agente do Console com as permissões necessárias.</block>
+  <block id="ba792e43ee25d6c3d972aef21f18efbd" category="summary">Quando o NetApp Console inicia o agente na AWS, ele anexa uma política ao agente que fornece ao agente permissões para gerenciar recursos e processos dentro dessa conta da AWS. O agente usa as permissões para fazer chamadas de API para vários serviços da AWS, incluindo EC2, S3, CloudFormation, IAM, Key Management Service e muito mais.</block>
+  <block id="b10c09311b2a36cdbb586dd7823222f1" category="paragraph">Quando o NetApp Console inicia um agente do Console na AWS, ele anexa uma política ao agente que fornece ao agente permissões para gerenciar recursos e processos dentro dessa conta da AWS. O agente usa as permissões para fazer chamadas de API para vários serviços da AWS, incluindo EC2, S3, CloudFormation, IAM, Key Management Service (KMS) e muito mais.</block>
+  <block id="a4a0e88b76170508470ee15848f6e7ba" category="cell">Gerenciar volumes EBS que o Cloud Volumes ONTAP usa como armazenamento de backend</block>
+  <block id="ebbb47c5d02c18deadd05d0341ccdd00" category="paragraph">O agente do Console requer permissões para executar ações no Google Cloud. Essas permissões estão incluídas em uma função personalizada fornecida pela NetApp. Você deve entender o que o agente faz com essas permissões.</block>
+  <block id="dfeb199885257150591ae817b9f6fe44" category="paragraph">Para usar os recursos e serviços do NetApp Console , você precisará fornecer permissões para que o agente do Console possa executar operações no seu ambiente de nuvem. Use os links nesta página para acessar rapidamente as permissões necessárias com base no seu objetivo.</block>
+  <block id="28dc1d5c4a46ee6ae58c1c58beab7562" category="cell">O usuário que cria um agente do Console a partir do Console precisa de permissões específicas para implantar o agente na AWS.</block>
+  <block id="f9336c7c27ce5def37b4c85f532f3e69" category="cell">Quando o Console implanta um agente do Console, ele anexa uma política ao agente que fornece as permissões necessárias para gerenciar recursos e processos na sua conta da AWS.  Você precisa configurar a política sozinho se implantar um agente do Console do AWS Marketplace, se instalar manualmente um agente do Console ou se<block ref="dd68e1e1425f1a2836915a8e7efa1f0a" category="inline-link-macro-rx"></block> . Você também precisa garantir que a política esteja atualizada à medida que novas permissões forem adicionadas em versões subsequentes.</block>
+  <block id="7d1553be39870d08636e98597a4b5934" category="cell">A conta de serviço de um agente do Console deve ter permissões específicas para operações diárias. Você precisa associar a conta de serviço a um agente do Console durante a implantação. Você também precisa garantir que a política esteja atualizada à medida que novas permissões forem adicionadas em versões subsequentes.</block>
+  <block id="80c404e08f5d5340903c30aa20ed5e6d" category="paragraph"><block ref="bc75056b5fa2888bb728b2036381638f" category="inline-link-macro-rx"></block>.</block>
+  <block id="c1fecb1554425a64f3f9e6114b6f590b" category="admonition">Se você implantou um agente do Console a partir do Console, ele adicionou automaticamente credenciais da AWS para a conta na qual você implantou um agente do Console. Isso garante que as permissões necessárias estejam em vigor para gerenciar recursos.</block>
+  <block id="eb6d1dd2b9253237853279d2ed49bd03" category="paragraph">Você pode configurar uma relação de confiança entre a conta de origem da AWS na qual você implantou um agente do Console e outras contas da AWS usando funções do IAM. Em seguida, você forneceria ao Console o ARN das funções do IAM das contas confiáveis.</block>
+  <block id="8bbfee3dfea9efab141faf94f65da126" category="section-title">Adicione as credenciais a um agente existente</block>
+  <block id="15479d50a4812891e2a0f13867e845c2" category="admonition">Novas credenciais no seu provedor de nuvem podem levar alguns minutos para ficarem disponíveis.</block>
+  <block id="cdfb5dcecc749b988ba63c468d079e5b" category="paragraph">Agora você pode alternar para um conjunto diferente de credenciais na página Detalhes e credenciais ao adicionar uma assinatura ao Console.</block>
+  <block id="4d534aa7d8c217939698ddc32611744f" category="paragraph">A função IAM agora tem as permissões necessárias. <block ref="b53d4dbcc4af6be682223fc9ff9ca01e" category="inline-xref-macro-rx"></block>.</block>
+  <block id="7fd1ab9f3f5fa9cac90471ec200331ee" category="list-text">*Localização das credenciais*: Selecione *Amazon Web Services &gt; Console*.</block>
+  <block id="1882d8328b6723ee413aea7b61b66303" category="paragraph">Depois de adicionar suas credenciais da AWS, você pode configurar uma assinatura do AWS Marketplace com essas credenciais. A assinatura permite que você pague pelos serviços de dados da NetApp e do Cloud Volumes ONTAP por uma taxa horária (PAYGO) ou usando um contrato anual.</block>
+  <block id="2d19d5d422219f2efe1607c76a85a329" category="section-title">Associe uma assinatura existente à sua organização</block>
+  <block id="c0bb1a2e67d4c59ab378839c81af1fac" category="paragraph">Ao assinar no AWS Marketplace, a última etapa do processo é associar a assinatura à sua organização. Se você não concluiu esta etapa, não poderá usar a assinatura com sua organização.</block>
+  <block id="6b63cf09da57249f50100278c2a1e8ea" category="paragraph">Siga as etapas abaixo se você assinou o NetApp Intelligent Services no AWS Marketplace, mas perdeu a etapa para associar a assinatura à sua conta.</block>
+  <block id="ea446ce450c19b4b3a401bedaa18b458" category="list-text">Confirme se você não associou sua assinatura à sua organização do Console.</block>
+  <block id="cabac1a22a55ac7ec7d7dcf426b3ef41" category="list-text">Confirme se a assinatura está associada à sua organização.</block>
+  <block id="63355a9119047d0bb5216fe09819ed76" category="admonition">Não é possível editar as credenciais de um perfil de instância associado a uma instância do agente do Console ou a uma instância do Amazon FSx for ONTAP . Você só pode renomear as credenciais de uma instância do FSx for ONTAP .</block>
+  <block id="f2a10e059f22d2e4e590bf375629f82c" category="list-text">Na página *Credenciais da organização*, selecione o menu de ações para um conjunto de credenciais e, em seguida, selecione *Editar credenciais*.</block>
+  <block id="76f673856509040ebe6f53809741b891" category="admonition">Não é possível excluir as credenciais de um perfil de instância associado a um agente do Console.</block>
+  <block id="fe0e7233937189ab2b2856c5f3bbfefc" category="doc">Associe as credenciais do agente do Console à sua assinatura do Google Cloud</block>
+  <block id="be6d6ead122d68c4f8ddf176dfa23437" category="paragraph">Ao criar um agente do Console no Google Cloud, você pode usar as credenciais associadas para assinar o NetApp Intelligent Services, que inclui o Cloud Volumes ONTAP e os serviços de dados do NetApp .  Você deve associar a assinatura ao agente cujas credenciais você deseja usar para pagar pelos serviços.</block>
+  <block id="1e494b5627bead907a00e4ea2064baa4" category="paragraph">Substituir a assinatura atual do marketplace por uma nova atualiza a assinatura dos sistemas Cloud Volumes ONTAP existentes e novos.</block>
+  <block id="0e0ee6c108e2775832f3d4fec4e5c9ab" category="paragraph">A assinatura dos serviços de dados da NetApp por meio do Google Cloud Marketplace pode falhar devido a permissões incorretas ou redirecionamento perdido para o Console. Se isso acontecer, siga as etapas a seguir para concluir o processo de assinatura.</block>
+  <block id="743026d6272c7eac4898bf78c6a0ec00" category="paragraph">O Console precisa ser autenticado na AWS antes de poder implantar o agente do Console na sua VPC. Você pode escolher um destes métodos de autenticação:</block>
+  <block id="3c3077c55d74474a96914d3933e99034" category="paragraph">Com qualquer uma das opções, o primeiro passo é criar uma política de IAM. Esta política contém apenas as permissões necessárias para iniciar o agente do Console na AWS a partir do Console.</block>
+  <block id="a6ff8031b9b97942fbb164a958bb15cb" category="inline-link-macro">Exibir permissões necessárias para o próprio agente do Console</block>
+  <block id="f09d39b62bcd3db5dbab86ed9186dad9" category="paragraph">Esta política contém apenas as permissões necessárias para iniciar o agente do Console na AWS a partir do Console.  Quando o Console cria o agente do Console, ele aplica um novo conjunto de permissões ao agente do Console que permite que o agente do Console gerencie recursos da AWS. <block ref="909ec4de2b545730e300a321f5abea2f" category="inline-link-macro-rx"></block>.</block>
+  <block id="318bbdd390cdff7f023b8038a3fb0070" category="list-text">Quando o Console cria o agente do Console, ele cria uma função do IAM e um perfil para o agente. Esta função inclui permissões que permitem ao agente do Console gerenciar recursos da AWS. Garanta que a função seja atualizada conforme novas permissões forem adicionadas em versões futuras. <block ref="5fa58f5972b383411e34ca4f11e8af66" category="inline-link-macro-rx"></block>.</block>
+  <block id="dd74de0d68eefd1c10bd1501afbc8b46" category="list-text">Digite um nome.</block>
+  <block id="cc12b07ff25c8e9f0f635a74e2d22a82" category="list-text">Adicione tags personalizadas (metadados).</block>
+  <block id="7a7b58b8b66971d14e483e486905137d" category="list-text">Na página *Rede*, especifique uma VPC, uma sub-rede e um par de chaves para o agente, escolha se deseja habilitar um endereço IP público e, opcionalmente, especifique uma configuração de proxy.</block>
+  <block id="193563612f46c81d99f9d364d74518c6" category="paragraph">O Console implanta o agente em cerca de 10 minutos. Permaneça na página até que o processo seja concluído.</block>
+  <block id="0cbff45e0f71134dbbfed8f2ba0d6f76" category="paragraph">Crie uma função personalizada do Azure que você pode atribuir à sua conta do Azure ou a uma entidade de serviço do Microsoft Entra. O Console é autenticado com o Azure e usa essas permissões para criar o agente do Console em seu nome.</block>
+  <block id="a07294e253f6aa6ecfa69e1864aed3dc" category="paragraph">Essas permissões são para o próprio agente do Console. É um conjunto diferente de permissões do que você configurou anteriormente para implantar a VM do agente do Console.</block>
+  <block id="82b5105dec777bd74c2d06159a000e87" category="list-text">Na página *Detalhes*, insira um nome para o agente, especifique as tags e escolha se deseja que o Console crie uma nova função com as permissões necessárias ou se deseja selecionar uma função existente configurada com<block ref="b569336f779a413e2d7fa8c0ccb0306d" category="inline-link-macro-rx"></block> .</block>
+  <block id="19ffcd7024175b13282f800ea3adbed2" category="paragraph">O Console prepara o agente em cerca de 10 minutos. Permaneça na página até que o processo seja concluído.</block>
+  <block id="876390ad9b0cf0f2d258d7aa2aa95113" category="paragraph">Se você tiver o armazenamento de Blobs do Azure na mesma conta do Azure onde criou o agente do Console, verá o armazenamento de Blobs do Azure aparecer na página *Sistemas* automaticamente.<block ref="3486c1e90a886b9a62eac44d0dc074c2" category="inline-link-rx"></block></block>
+  <block id="19a4cd42145fb38e7327a12208fcf7d1" category="paragraph">O agente estará pronto em aproximadamente 10 minutos; permaneça na página até que o processo seja concluído.</block>
+  <block id="7c95faa9b7e721e7b4dde04af4775bad" category="list-text">Uma compreensão dos requisitos de CPU e RAM para o agente.</block>
+  <block id="b40610ec83466e7c103049d70ad18892" category="inline-link-macro">Revisar requisitos do agente</block>
+  <block id="8a62551759227881974703cf10bfc946" category="paragraph"><block ref="e2790838ef7051b1907224142bc33625" category="inline-link-macro-rx"></block>.</block>
+  <block id="446a691d3cf6457cb60610b81794fdbc" category="paragraph">A AWS inicia o software com as configurações especificadas. O agente do Console é implantado em aproximadamente cinco minutos.</block>
+  <block id="118b5697b68c5f4ada51d65dffac2674" category="paragraph">Se você usar um endereço IP de SKU padrão, o Console usará o endereço IP _privado_ do agente do Console, em vez do IP público. Se a máquina que você está usando para acessar o Console não tiver acesso a esse endereço IP privado, as ações do Console falharão.</block>
 </blocks>

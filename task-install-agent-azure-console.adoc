@@ -159,7 +159,7 @@ Você precisa implementar esse requisito de rede depois de criar o agente do Con
 
 Você precisa criar uma função personalizada que tenha permissões para implantar o agente do Console no Azure.
 
-Crie uma função personalizada do Azure que você pode atribuir à sua conta do Azure ou a uma entidade de serviço do Microsoft Entra.  O Console é autenticado com o Azure e usa essas permissões para criar a instância do agente do Console em seu nome.
+Crie uma função personalizada do Azure que você pode atribuir à sua conta do Azure ou a uma entidade de serviço do Microsoft Entra. O Console é autenticado com o Azure e usa essas permissões para criar o agente do Console em seu nome.
 
 O Console implanta a VM do agente do Console no Azure, habilita um https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview["identidade gerenciada atribuída pelo sistema"^] , cria a função necessária e a atribui à VM. link:reference-permissions-azure.html["Revise como o Console usa as permissões"] .
 
@@ -444,7 +444,7 @@ https://learn.microsoft.com/en-us/azure/virtual-machines/linux-vm-connect?tabs=L
 
 * Se você não quiser que o Console crie automaticamente uma função do Azure para o agente do Console, será necessário criar sua próprialink:reference-permissions-azure.html["usando a política nesta página"] .
 +
-Essas permissões são para a própria instância do agente do Console.  É um conjunto diferente de permissões do que você configurou anteriormente para implantar a VM do agente do Console.
+Essas permissões são para o próprio agente do Console. É um conjunto diferente de permissões do que você configurou anteriormente para implantar a VM do agente do Console.
 
 
 
@@ -481,7 +481,7 @@ O método de autenticação para a máquina virtual pode ser uma senha ou uma ch
 +
 https://learn.microsoft.com/en-us/azure/virtual-machines/linux-vm-connect?tabs=Linux["Saiba mais sobre como se conectar a uma VM Linux no Azure"^]
 
-. Na página *Detalhes*, insira um nome para a instância, especifique as tags e escolha se deseja que o Console crie uma nova função que tenha as permissões necessárias ou se deseja selecionar uma função existente que você configurou comlink:reference-permissions-azure.html["as permissões necessárias"] .
+. Na página *Detalhes*, insira um nome para o agente, especifique as tags e escolha se deseja que o Console crie uma nova função com as permissões necessárias ou se deseja selecionar uma função existente configurada comlink:reference-permissions-azure.html["as permissões necessárias"] .
 +
 Observe que você pode escolher as assinaturas do Azure associadas a essa função.  Cada assinatura escolhida fornece ao agente do Console permissões para gerenciar recursos nessa assinatura (por exemplo, Cloud Volumes ONTAP).
 
@@ -506,7 +506,7 @@ Se você ainda estiver usando olink:reference-networking-saas-console-previous.h
 ====
 . Selecione *Adicionar*.
 +
-O Console prepara a instância em cerca de 10 minutos.  Permaneça na página até que o processo seja concluído.
+O Console prepara o agente em cerca de 10 minutos. Permaneça na página até que o processo seja concluído.
 
 
 
@@ -516,4 +516,4 @@ Após a conclusão do processo, o agente do Console estará disponível para uso
 
 NOTE: Se a implantação falhar, você poderá baixar um relatório e logs do Console para ajudar a corrigir os problemas.link:task-troubleshoot-agent.html#troubleshoot-installation["Aprenda a solucionar problemas de instalação."]
 
-Se você tiver armazenamento de Blobs do Azure na mesma assinatura do Azure em que criou o agente do Console, verá um sistema de armazenamento de Blobs do Azure aparecer na página *Sistemas* automaticamente. https://docs.netapp.com/us-en/bluexp-blob-storage/index.html["Aprenda a gerenciar o armazenamento de Blobs do Azure no NetApp Console"^]
+Se você tiver o armazenamento de Blobs do Azure na mesma conta do Azure onde criou o agente do Console, verá o armazenamento de Blobs do Azure aparecer na página *Sistemas* automaticamente. https://docs.netapp.com/us-en/bluexp-blob-storage/index.html["Aprenda a gerenciar o armazenamento de Blobs do Azure no NetApp Console"^]

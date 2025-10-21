@@ -14,7 +14,7 @@ summary: O agente do Console requer permissões para executar ações no seu pro
 
 
 [role="lead"]
-O NetApp Console requer permissões para executar ações no Google Cloud.  Essas permissões estão incluídas em uma função personalizada fornecida pela NetApp.  Você deve entender o que o agente faz com essas permissões.
+O agente do Console requer permissões para executar ações no Google Cloud. Essas permissões estão incluídas em uma função personalizada fornecida pela NetApp. Você deve entender o que o agente faz com essas permissões.
 
 
 
@@ -33,7 +33,7 @@ Você também precisa garantir que a função esteja atualizada, pois novas perm
 [source, yaml]
 ----
 title: NetApp Console agent
-description: Permissions for the service account associated with the Console agent instance.
+description: Permissions for the service account associated with the Console agent.
 stage: GA
 includedPermissions:
 - iam.serviceAccounts.actAs
