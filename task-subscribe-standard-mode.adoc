@@ -34,10 +34,6 @@ Você já deve ter implantado um agente do Console para assinar serviços de dad
 ====
 .AWS
 --
-O vídeo a seguir mostra as etapas para assinar o NetApp Intelligent Services no AWS Marketplace:
-
-.Assine o NetApp Intelligent Services no AWS Marketplace
-video::096e1740-d115-44cf-8c27-b051011611eb[panopto]
 .Passos
 . Selecione *Administração > Credenciais*.
 . Selecione *Credenciais da organização*.
@@ -105,12 +101,6 @@ O Console substitui a assinatura existente para todas as credenciais na organiza
 Para todas as outras organizações ou contas, você precisará associar manualmente a assinatura repetindo essas etapas.
 
 *** Selecione *Salvar*.
-+
-O vídeo a seguir mostra as etapas para assinar o Azure Marketplace:
-
-+
-.Assine o NetApp Intelligent Services no Azure Marketplace
-video::b7e97509-2ecf-4fa0-b39b-b0510109a318[panopto]
 
 
 
@@ -170,19 +160,15 @@ O Console substitui a assinatura existente para todas as credenciais na organiza
 Para todas as outras organizações ou contas, você precisará associar manualmente a assinatura repetindo essas etapas.
 
 *** Selecione *Salvar*.
-+
-O vídeo a seguir mostra as etapas para assinar o Google Cloud Marketplace:
-
-+
-.Assine no Google Cloud Marketplace
-video::373b96de-3691-4d84-b3f3-b05101161638[panopto]
 
 
-.. Quando esse processo estiver concluído, volte para a página Credenciais no Console e selecione esta nova assinatura.
+
+
+
+
+. Quando esse processo estiver concluído, volte para a página Credenciais no Console e selecione esta nova assinatura.
 +
 image:screenshot_gcp_associate.gif["Uma captura de tela da página de atribuição de assinatura."]
-
-
 
 
 

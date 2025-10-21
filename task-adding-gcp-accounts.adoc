@@ -76,19 +76,15 @@ O Console substitui a assinatura existente para todas as credenciais na organiza
 Para todas as outras organizações ou contas, você precisará associar manualmente a assinatura repetindo essas etapas.
 
 *** Selecione *Salvar*.
-+
-O vídeo a seguir mostra as etapas para assinar o Google Cloud Marketplace:
-
-+
-.Assine no Google Cloud Marketplace
-video::373b96de-3691-4d84-b3f3-b05101161638[panopto]
 
 
-.. Quando esse processo estiver concluído, volte para a página Credenciais no Console e selecione esta nova assinatura.
+
+
+
+
+. Quando esse processo estiver concluído, volte para a página Credenciais no Console e selecione esta nova assinatura.
 +
 image:screenshot_gcp_associate.gif["Uma captura de tela da página de atribuição de assinatura."]
-
-
 
 
 
