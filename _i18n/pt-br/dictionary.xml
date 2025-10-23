@@ -572,8 +572,6 @@
   <block id="b4b78d037549f1e53319a933fd923727" category="list-text">Após efetuar login, configure o Console:</block>
   <block id="fa4a4ed3171c9645519ee525ed212db9" category="list-text">Especifique a organização do Console a ser associada ao agente do Console.</block>
   <block id="d1caa1543690181f63b8c0e0933c0c49" category="paragraph">O modo restrito não é suportado quando o agente do Console é instalado no local.</block>
-  <block id="af60e7ca775342cbe207d574ae3a82ef" category="paragraph">O vídeo a seguir mostra as etapas para assinar o NetApp Intelligent Services no AWS Marketplace:</block>
-  <block id="1cfe9a2e660a541826be5b5cc3018fdd" category="video-title">Assine o NetApp Intelligent Services no AWS Marketplace</block>
   <block id="aaf23e1cf00fee0789e1c392da395cc9" category="list-text">Selecione o menu de ação para um conjunto de credenciais associadas a um agente do Console e selecione *Configurar assinatura*.</block>
   <block id="601c60f4bc1d60fb12bbba2d26b90b33" category="paragraph">Você deve selecionar credenciais associadas a um agente do Console.  Não é possível associar uma assinatura do marketplace a credenciais associadas ao NetApp Console.</block>
   <block id="0d28acbceed906f52a206d0f3fb0add2" category="inline-image-macro">Uma captura de tela do menu de ações para um conjunto de credenciais existentes.</block>
@@ -593,8 +591,6 @@
   <block id="7dffa6296286b12f66d638f53340316c" category="list-text">Se solicitado, faça login na sua conta do Azure.</block>
   <block id="9dc9a5b2f23fe90a0fd71125f3034dfd" category="list-text">Preencha o formulário e selecione *Inscrever-se*.</block>
   <block id="3221538307211e131f96e1a83b1a5235" category="list-text">Após a conclusão do processo de assinatura, selecione *Configurar conta agora*.</block>
-  <block id="89d8b3b4c08395fc5dbef0d35cb50529" category="paragraph">O vídeo a seguir mostra as etapas para assinar o Azure Marketplace:</block>
-  <block id="930540e35d6a8bd81f5882c46e1f93c2" category="video-title">Assine o NetApp Intelligent Services no Azure Marketplace</block>
   <block id="ef5d79e3ae5671ca28e5f6e3b02eed27" category="list-text">Para configurar uma assinatura existente com as credenciais selecionadas, selecione um projeto e uma assinatura do Google Cloud na lista suspensa e selecione *Configurar*.</block>
   <block id="fff6f5125be05a94543d2e88dbd30b27" category="inline-image-macro">Uma captura de tela de um projeto e assinatura do Google Cloud selecionados para credenciais do Google Cloud.</block>
   <block id="cab980518d03aa36afc924b709828a6e" category="paragraph"><block ref="cab980518d03aa36afc924b709828a6e" category="inline-image-macro-rx" type="image"></block></block>
@@ -613,8 +609,6 @@
   <block id="825c72d4114a9a71a355213f6b79c642" category="list-text">Conclua as etapas na página *Atribuição de assinatura*:</block>
   <block id="58575503869d282abe104097770af48c" category="inline-link">a página Cloud Volumes ONTAP no NetApp Console</block>
   <block id="f363e3b5ffcff31a7405fb7c63982e48" category="admonition">Se alguém da sua organização já tiver uma assinatura de mercado da sua conta de cobrança, você será redirecionado para<block ref="eeda9d490d323c6921491a4ef94ce954" category="inline-link-rx"></block> em vez de.  Se isso for inesperado, entre em contato com sua equipe de vendas da NetApp .  O Google permite apenas uma assinatura por conta de cobrança do Google.</block>
-  <block id="a6b7d96f53186edb463f8f8611f97cd9" category="paragraph">O vídeo a seguir mostra as etapas para assinar o Google Cloud Marketplace:</block>
-  <block id="c9b7d3dfb0a91a99ab5deba597b6741a" category="video-title">Assine no Google Cloud Marketplace</block>
   <block id="a5a1d94d16067bff86c06d08991b799b" category="list-text">Quando esse processo estiver concluído, volte para a página Credenciais no Console e selecione esta nova assinatura.</block>
   <block id="467e5d6bbcd0ea531c8f7285b69e29ee" category="inline-image-macro">Uma captura de tela da página de atribuição de assinatura.</block>
   <block id="60d2ed6f6e1774535b6e69274800381d" category="paragraph"><block ref="60d2ed6f6e1774535b6e69274800381d" category="inline-image-macro-rx" type="image"></block></block>
@@ -5602,4 +5596,5 @@
   <block id="8a62551759227881974703cf10bfc946" category="paragraph"><block ref="e2790838ef7051b1907224142bc33625" category="inline-link-macro-rx"></block>.</block>
   <block id="446a691d3cf6457cb60610b81794fdbc" category="paragraph">A AWS inicia o software com as configurações especificadas. O agente do Console é implantado em aproximadamente cinco minutos.</block>
   <block id="118b5697b68c5f4ada51d65dffac2674" category="paragraph">Se você usar um endereço IP de SKU padrão, o Console usará o endereço IP _privado_ do agente do Console, em vez do IP público. Se a máquina que você está usando para acessar o Console não tiver acesso a esse endereço IP privado, as ações do Console falharão.</block>
+  <block id="d1cb423c9810b1ddd65eea821845fff2" category="admonition">Para ativar a detecção de atividades suspeitas do usuário, você deve ter a função de administrador da Organização do Console.</block>
 </blocks>

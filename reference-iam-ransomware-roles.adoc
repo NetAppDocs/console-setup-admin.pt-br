@@ -311,6 +311,9 @@ Para configurar configurações de comportamento suspeito do usuário e responde
 
 As funções de comportamento do usuário devem ser conferidas aos usuários com privilégios de administrador ou visualizador do Ransomware Resilience existentes que precisam de acesso alink:https://docs.netapp.com/us-en/data-services-ransomware-resilience/suspicious-user-activity.html["configurações e alertas de atividades suspeitas do usuário"^] .  Um usuário com a função de administrador de Resiliência contra Ransomware, por exemplo, deve receber a função de administrador de comportamento de usuário de Resiliência contra Ransomware para configurar agentes de atividade do usuário e bloquear ou desbloquear usuários.  A função de administrador de comportamento do usuário de Resiliência contra Ransomware não deve ser conferida a um visualizador de Resiliência contra Ransomware.
 
+
+NOTE: Para ativar a detecção de atividades suspeitas do usuário, você deve ter a função de administrador da Organização do Console.
+
 A tabela a seguir descreve as ações disponíveis para as funções de administrador e visualizador do comportamento do usuário do Ransomware Resilience.
 
 [cols="40,20a,20a"]
