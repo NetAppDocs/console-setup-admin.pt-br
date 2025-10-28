@@ -50,6 +50,7 @@ O agente do Console requer este espaço em `/var` porque o Docker ou o Podman s�
 
 
 --
+Tipo de instância AWS EC2:: Um tipo de instância que atende aos requisitos de CPU e RAM.  A NetApp recomenda t3.2xlarge.
 Hipervisor:: É necessário um hipervisor bare metal ou hospedado certificado para executar um sistema operacional compatível.
 [[podman-versions]]Requisitos do sistema operacional e do contêiner:: O agente do Console é compatível com os seguintes sistemas operacionais ao usar o Console no modo padrão ou no modo restrito.  Uma ferramenta de orquestração de contêineres é necessária antes de instalar o agente.
 +
@@ -107,7 +108,6 @@ Não suportado
 
 |===
 --
-Tipo de instância AWS EC2:: Um tipo de instância que atende aos requisitos de CPU e RAM acima.  Recomendamos t3.2xlarge.
 Par de chaves:: Ao criar o agente do Console, você precisará selecionar um par de chaves EC2 para usar com a instância.
 Limite de salto de resposta PUT ao usar IMDSv2:: Se o IMDSv2 estiver habilitado na instância EC2 (esta é a configuração padrão para novas instâncias EC2), você deverá alterar o limite de salto de resposta PUT na instância para 3.  Se você não alterar o limite na instância do EC2, receberá um erro de inicialização da interface do usuário ao tentar configurar o agente.
 +
@@ -115,18 +115,6 @@ Limite de salto de resposta PUT ao usar IMDSv2:: Se o IMDSv2 estiver habilitado 
 * link:task-require-imdsv2.html["Exigir o uso do IMDSv2 em instâncias do Amazon EC2"]
 * https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-IMDS-existing-instances.html#modify-PUT-response-hop-limit["Documentação da AWS: Alterar o limite de salto de resposta PUT"^]
 
-
---
-Espaço em disco em /opt:: 100 GiB de espaço devem estar disponíveis
-+
---
-O agente usa `/opt` para instalar o `/opt/application/netapp` diretório e seu conteúdo.
-
---
-Espaço em disco em /var:: 20 GiB de espaço devem estar disponíveis
-+
---
-O agente do Console requer este espaço em `/var` porque o Docker ou o Podman são arquitetados para criar os contêineres dentro deste diretório.  Especificamente, eles criarão contêineres no `/var/lib/containers/storage` diretório.  Montagens externas ou links simbólicos não funcionam neste espaço.
 
 --
 

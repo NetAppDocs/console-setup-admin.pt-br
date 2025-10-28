@@ -380,7 +380,7 @@ Forneça ao Console as permissões que você configurou anteriormente.
 
 
 
-== Etapa 3: fornecer permissões ao NetApp Console
+== Etapa 3: fornecer permissões ao agente do Console
 
 Se você implantou o agente do Console do Azure Marketplace ou se instalou manualmente o software do agente do Console, será necessário fornecer as permissões configuradas anteriormente.
 

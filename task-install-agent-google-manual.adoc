@@ -50,6 +50,12 @@ O agente do Console requer este espaço em `/var` porque o Docker ou o Podman s�
 
 
 --
+Tipo de máquina do Google Cloud:: Um tipo de instância que atende aos requisitos de CPU e RAM.  A NetApp recomenda o n2-standard-8.
++
+--
+O agente do Console é compatível com o Google Cloud em uma instância de VM com um sistema operacional compatível https://cloud.google.com/compute/shielded-vm/docs/shielded-vm["Recursos de VM blindada"^]
+
+--
 Hipervisor:: É necessário um hipervisor bare metal ou hospedado certificado para executar um sistema operacional compatível.
 [[podman-versions]]Requisitos do sistema operacional e do contêiner:: O agente do Console é compatível com os seguintes sistemas operacionais ao usar o Console no modo padrão ou no modo restrito.  Uma ferramenta de orquestração de contêineres é necessária antes de instalar o agente.
 +
@@ -107,22 +113,10 @@ Não suportado
 
 |===
 --
-Tipo de máquina do Google Cloud:: Um tipo de instância que atende aos requisitos de CPU e RAM acima.  Recomendamos n2-standard-8.
+Tipo de máquina do Google Cloud:: Um tipo de instância que atende aos requisitos de CPU e RAM.  A NetApp recomenda o n2-standard-8.
 +
 --
 O agente do Console é compatível com o Google Cloud em uma instância de VM com um sistema operacional compatível https://cloud.google.com/compute/shielded-vm/docs/shielded-vm["Recursos de VM blindada"^]
-
---
-Espaço em disco em /opt:: 100 GiB de espaço devem estar disponíveis
-+
---
-O agente usa `/opt` para instalar o `/opt/application/netapp` diretório e seu conteúdo.
-
---
-Espaço em disco em /var:: 20 GiB de espaço devem estar disponíveis
-+
---
-O agente do Console requer este espaço em `/var` porque o Docker ou o Podman são arquitetados para criar os contêineres dentro deste diretório.  Especificamente, eles criarão contêineres no `/var/lib/containers/storage` diretório.  Montagens externas ou links simbólicos não funcionam neste espaço.
 
 --
 

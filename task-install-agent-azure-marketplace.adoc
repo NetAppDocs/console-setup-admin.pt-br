@@ -153,7 +153,7 @@ Ao criar o agente do Console, escolha um tipo de máquina virtual que atenda aos
 
 CPU:: 8 núcleos ou 8 vCPUs
 BATER:: 32 GB
-Tamanho da VM do Azure:: Um tipo de instância que atende aos requisitos de CPU e RAM acima.  Recomendamos Standard_D8s_v3.
+Tamanho da VM do Azure:: Um tipo de instância que atende aos requisitos de CPU e RAM.  A NetApp recomenda Standard_D8s_v3.
 
 
 
@@ -209,7 +209,7 @@ image:screenshot_azure_shell_upload.png["Uma captura de tela do Azure Cloud Shel
 +
 [source, azurecli]
 ----
-az role definition create --role-definition Connector_Policy.json
+az role definition create --role-definition agent_Policy.json
 ----
 
 
@@ -280,7 +280,7 @@ image:screenshot_azure_shell_upload.png["Uma captura de tela do Azure Cloud Shel
 +
 [source, azurecli]
 ----
-az role definition create --role-definition Connector_Policy.json
+az role definition create --role-definition agent_Policy.json
 ----
 +
 Agora você deve ter uma função personalizada chamada Operador do Console que pode ser atribuída à máquina virtual do agente do Console.

@@ -50,6 +50,7 @@ O agente do Console requer este espaço em `/var` porque o Docker ou o Podman s�
 
 
 --
+Tamanho da VM do Azure:: Um tipo de instância que atende aos requisitos de CPU e RAM.  A NetApp recomenda Standard_D8s_v3.
 Hipervisor:: É necessário um hipervisor bare metal ou hospedado certificado para executar um sistema operacional compatível.
 [[podman-versions]]Requisitos do sistema operacional e do contêiner:: O agente do Console é compatível com os seguintes sistemas operacionais ao usar o Console no modo padrão ou no modo restrito.  Uma ferramenta de orquestração de contêineres é necessária antes de instalar o agente.
 +
@@ -106,19 +107,6 @@ Docker Engine 23.0.6 para 28.0.0.
 Não suportado
 
 |===
---
-Tamanho da VM do Azure:: Um tipo de instância que atende aos requisitos de CPU e RAM acima.  Recomendamos Standard_D8s_v3.
-Espaço em disco em /opt:: 100 GiB de espaço devem estar disponíveis
-+
---
-O agente usa `/opt` para instalar o `/opt/application/netapp` diretório e seu conteúdo.
-
---
-Espaço em disco em /var:: 20 GiB de espaço devem estar disponíveis
-+
---
-O agente do Console requer este espaço em `/var` porque o Docker ou o Podman são arquitetados para criar os contêineres dentro deste diretório.  Especificamente, eles criarão contêineres no `/var/lib/containers/storage` diretório.  Montagens externas ou links simbólicos não funcionam neste espaço.
-
 --
 
 
@@ -466,7 +454,7 @@ image:screenshot_azure_shell_upload.png["Uma captura de tela do Azure Cloud Shel
 +
 [source, azurecli]
 ----
-az role definition create --role-definition Connector_Policy.json
+az role definition create --role-definition agent_Policy.json
 ----
 
 
@@ -537,7 +525,7 @@ image:screenshot_azure_shell_upload.png["Uma captura de tela do Azure Cloud Shel
 +
 [source, azurecli]
 ----
-az role definition create --role-definition Connector_Policy.json
+az role definition create --role-definition agent_Policy.json
 ----
 +
 Agora você deve ter uma função personalizada chamada Operador do Console que pode ser atribuída à máquina virtual do agente do Console.

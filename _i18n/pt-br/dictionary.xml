@@ -497,7 +497,6 @@
   <block id="e53619c1fe611a51eeeb8d148ba6e532" category="list-text">BATER</block>
   <block id="911ede8df5585598c294830dafe276fa" category="list-text">32 GB</block>
   <block id="38522fbf43585538a7a55ea25460e779" category="list-text">Tipo de instância AWS EC2</block>
-  <block id="3cb4677fb343d8a6f3ab8d904462fda9" category="list-text">Um tipo de instância que atende aos requisitos de CPU e RAM acima.  Recomendamos t3.2xlarge.</block>
   <block id="6cd56a4cc4ddbbfd2bc9d57de5d788aa" category="list-text">Par de chaves</block>
   <block id="56ff78b5911451c928f64308fe1d80b3" category="list-text">Ao criar o agente do Console, você precisará selecionar um par de chaves EC2 para usar com a instância.</block>
   <block id="c8e7383477673ee726b6ba29dc487444" category="list-text">Limite de salto de resposta PUT ao usar IMDSv2</block>
@@ -507,9 +506,7 @@
   <block id="75c0fbf84b1614b17a984df62bf849f6" category="inline-link">Documentação da AWS: Alterar o limite de salto de resposta PUT</block>
   <block id="ca7f44589a06d75665d92002d6148e98" category="list-text"><block ref="ca7f44589a06d75665d92002d6148e98" category="inline-link-rx"></block></block>
   <block id="893ba5865a015de9dc77765cdf7184e3" category="list-text">Tamanho da VM do Azure</block>
-  <block id="021caa7094e7de94c50c2e35da292351" category="list-text">Um tipo de instância que atende aos requisitos de CPU e RAM acima.  Recomendamos Standard_D8s_v3.</block>
   <block id="35ba60210572b9248078c07c4079b9ab" category="list-text">Tipo de máquina do Google Cloud</block>
-  <block id="bff17a7a57b9d5cdc97a4f823a72230f" category="list-text">Um tipo de instância que atende aos requisitos de CPU e RAM acima.  Recomendamos n2-standard-8.</block>
   <block id="984ca77a9a51746d3dd5a855a71d3493" category="inline-link">Recursos de VM blindada</block>
   <block id="8cf4908ee9f94967cb06f69408879f3b" category="paragraph">O agente do Console é compatível com o Google Cloud em uma instância de VM com um sistema operacional compatível<block ref="bd10301ee2e8f0cb38112a71d2b6920c" category="inline-link-rx"></block></block>
   <block id="0a772cdeecb207bdf7ffd5850a8d59bd" category="list-text">Espaço em disco em /opt</block>
@@ -1868,15 +1865,10 @@
   <block id="fd976d7410ccbb05f33da778aade918e" category="section-title">Como começar a usar o RHEL 8 e 9</block>
   <block id="ff1e80df6a2782ea650e40a872d2e409" category="paragraph">Consulte as páginas a seguir para obter detalhes sobre os requisitos do host, os requisitos do Podman e as etapas para instalar o Podman e o Cagent:</block>
   <block id="b604a3e5099a3ec9c55ef70ee5afe1d3" category="inline-link">Instalar e configurar um agente de console no local</block>
-  <block id="b1d29a547b37c5ca536185e06aad8c38" category="list-text"><block ref="b1d29a547b37c5ca536185e06aad8c38" category="inline-link-rx"></block></block>
   <block id="a64fe2903c7070d5b81ce6dce3b03548" category="inline-link">Instalar manualmente o agente do Console na AWS</block>
-  <block id="de0ae011b0cce336af3e7c07509c4273" category="list-text"><block ref="de0ae011b0cce336af3e7c07509c4273" category="inline-link-rx"></block></block>
   <block id="49b6ed50435718c0a1e9c1c394702ab8" category="inline-link">Instalar manualmente o agente do Console no Azure</block>
-  <block id="b8485a51d966129a5585c0a1be3fc645" category="list-text"><block ref="b8485a51d966129a5585c0a1be3fc645" category="inline-link-rx"></block></block>
   <block id="eccadaf4d74bf176f32c91d78a6673c8" category="inline-link">Instalar manualmente o agente do Console no Google Cloud</block>
-  <block id="8aefadd00f648d310359bbc4b016e9e8" category="list-text"><block ref="8aefadd00f648d310359bbc4b016e9e8" category="inline-link-rx"></block></block>
   <block id="6df5369b59a40f64ce1869a0d4d405ea" category="inline-link">Preparar para implantação no modo restrito</block>
-  <block id="9f1e71ff4946538e6e8d4160102056bb" category="paragraph"><block ref="9f1e71ff4946538e6e8d4160102056bb" category="inline-link-rx"></block></block>
   <block id="fcd7347bb021d8231184894bed7bd347" category="section-title">Como redescobrir seus sistemas</block>
   <block id="cdb83aacf48e960662fcf2d6745e5b60" category="paragraph">Consulte as páginas a seguir para redescobrir seus sistemas depois de implantar um novo agente do Console.</block>
   <block id="6c0fb6078ec778ca2319e375a19e994b" category="inline-link">Adicionar sistemas Cloud Volumes ONTAP existentes</block>
@@ -1884,7 +1876,6 @@
   <block id="c5fbee6586294d81141f8dd158707985" category="inline-link">Descubra clusters ONTAP locais</block>
   <block id="f610a540e2ecafae9447279876425a0e" category="list-text"><block ref="f610a540e2ecafae9447279876425a0e" category="inline-link-rx"></block></block>
   <block id="504f5f6c5adc93609131b644e3f8c2a9" category="inline-link">Crie ou descubra um sistema FSx para ONTAP</block>
-  <block id="f93f1cb0f92d9e89cd92ec94db26274f" category="list-text"><block ref="f93f1cb0f92d9e89cd92ec94db26274f" category="inline-link-rx"></block></block>
   <block id="8111d5a0f80f0b3c708f77dc1b05dc00" category="inline-link">Criar um sistema de Azure NetApp Files</block>
   <block id="ee2dcfcc83687ed3d92f8b7d687f1f05" category="list-text"><block ref="ee2dcfcc83687ed3d92f8b7d687f1f05" category="inline-link-rx"></block></block>
   <block id="e4a9dd1c7d750241fad0d52a3bc7903b" category="inline-link">Descubra os sistemas da Série E</block>
@@ -2273,25 +2264,12 @@
   <block id="55334f6c7481482659eaa1b0aef1601a" category="paragraph">O agente não é suportado em uma VM compartilhada com outros aplicativos.  A VM deve ser dedicada ao software do agente.</block>
   <block id="39c131bd8f90ef7749228972a6486162" category="section-title">Agentes e extensões de terceiros</block>
   <block id="4b7e9b197f794c9b7019035a05713f81" category="paragraph">Agentes de terceiros ou extensões de VM não são suportados na VM do agente.</block>
-  <block id="5c189366c181471a6cd7a0fd9423b536" category="summary">Quando você efetua login e usa o console baseado na web, ele entra em contato com vários endpoints para concluir as ações que você inicia.  Os computadores que acessam o NetApp Console devem ter conexões com esses endpoints.</block>
-  <block id="5c391484b92635a85b81f4c8d0e49deb" category="doc">Pontos de acesso de rede necessários para 3.9.55 e abaixo</block>
-  <block id="f19f55c1a9162421ca7d1afd7a70e205" category="paragraph">Este tópico detalha o acesso à rede necessário para versões do modo padrão do NetApp Console anteriores à versão 4.0.0 do NetApp Console, o agente do NetApp Console e o acesso de saída à Internet dos serviços de dados do NetApp , além da capacidade de contatar os endpoints necessários.  Você precisa garantir que o Console e quaisquer agentes que você instalar tenham o acesso de rede correto para funcionar corretamente.</block>
-  <block id="3f137c5ea124b1f3a059cf7b573f064d" category="paragraph">Você precisará configurar o acesso à rede para computadores que acessam o NetApp Console como software como serviço (SaaS) e para quaisquer agentes do Console que você instalar no local ou na nuvem.  Você também pode precisar de endpoints adicionais para determinados serviços de dados da NetApp , incluindo o Cloud Volumes ONTAP.</block>
   <block id="7b7f8f1228adee0b98f669d033848211" category="section-title">Atualize sua lista de endpoints para a lista revisada para 4.0.0 e superior</block>
   <block id="4c9c91c3daf4ca466e31f9eaa8cef3d2" category="paragraph">A partir da versão 4.0.0, os agentes do Console exigem menos endpoints.  Implantações existentes anteriores à versão 4.0.0 continuam com suporte.  Após atualizar para a versão 4.0.0 ou posterior, você pode remover os endpoints antigos da sua lista de permissões quando for conveniente.</block>
-  <block id="69d1d632a1bef1823c2e6978a8ec48a4" category="paragraph">A NetApp recomenda que você atualize suas regras de firewall para usar a lista de endpoints revisada.  A lista revisada é menor, portanto mais segura e fácil de gerenciar.</block>
-  <block id="a090914d06379fb21d650db09e763abe" category="inline-link-macro">endpoints suportados para 4.0.0 e superior</block>
-  <block id="495dc5be8b2dffcc4b87563ad8019997" category="paragraph">Análise<block ref="5d27d1bef0dabbacd053766b50c0ccca" category="inline-link-macro-rx"></block></block>
   <block id="ae702d0a49628819c46d528d565558a9" category="inline-link-macro">Pontos de extremidade suportados para 4.0.0 e superior</block>
   <block id="29336372af9a1e2392c4f443c954f44f" category="list-text">Coloque os endpoints na lista de permissões em<block ref="3d8ba9dde5b52d1c1933603757e09278" category="inline-link-macro-rx"></block> .</block>
   <block id="507b02d897089d910d9bc5b402ca61f5" category="list-text">Reinicie o serviço do gerenciador de serviços 2 em cada agente executando o seguinte comando:</block>
   <block id="676fa375fa6a8741c606249933e8d347" category="list-text">Execute o seguinte comando e verifique se o status do agente é exibido como _ativo(em execução)_: _</block>
-  <block id="8022b55ce4a5f3a2ba458e22097b2c3d" category="list-text">Remova os endpoints antigos da sua lista de permissões.</block>
-  <block id="d8fef6a6d61cdd4c511a17a3b901fe2a" category="section-title">Endpoints contatados pelo NetApp Console</block>
-  <block id="ab2bd68622da4c3251d86a26932580c8" category="paragraph">Cada computador que acessa o NetApp Console deve ter conexões com os endpoints listados abaixo.</block>
-  <block id="1d69c4b71aa988e71520fc1776bcce8c" category="paragraph">O sistema contata esses terminais em dois cenários:</block>
-  <block id="a3a17bc80dc2595291a5560d6cb288e1" category="list-text">A partir de um computador acessando o<block ref="9fa63571706fcef6edc9d423212e6d10" category="inline-link-rx"></block> como software como serviço (SaaS).</block>
-  <block id="5d00584a124779bdb80eb803f08be0ad" category="list-text">De um computador acessando diretamente um host do agente, para efetuar login e configurá-lo ou acessar o Console a partir do host do agente.</block>
   <block id="e4790a0da59cd51d8f46272b21b89870" category="cell">\ https://support.netapp.com \ https://mysupport.netapp.com</block>
   <block id="db9e137068a05efe5440105c2494b7f1" category="cell">Para obter informações de licenciamento e enviar mensagens do AutoSupport para o suporte da NetApp .</block>
   <block id="8009adbb433e9c2ef597d562ea535af5" category="cell">\https://\*.api.bluexp.netapp.com \ https://api.bluexp.netapp.com \https://*.cloudmanager.cloud.netapp.com \ https://cloudmanager.cloud.netapp.com \ https://netapp-cloud-account.auth0.com \ https://netapp-cloud-account.us.auth0.com</block>
@@ -2303,51 +2281,26 @@
   <block id="f3b521898fd9510c7d26d0b0ea8284c8" category="list-text">Os endpoints da Opção 1 são suportados em 3.9.47 e superiores.  Versões anteriores à 3.9.47 não oferecem suporte à compatibilidade com versões anteriores.</block>
   <block id="3f22e8460387fbe2426f3e71560e86e4" category="list-text">O agente do Console inicia o contato com os endpoints na opção 2 primeiro.  Se esses terminais não estiverem acessíveis, ele entrará em contato automaticamente com os terminais na opção 1.</block>
   <block id="5a1acaa8c83a1beeb2be7c01dd1efeb3" category="list-text">Se você usar o agente do Console com o NetApp Backup and Recovery ou o Ransomware Resilience, o sistema não oferecerá suporte aos endpoints da Opção 1.  Permitir pontos de extremidade da Opção 2 e não permitir a Opção 1.</block>
-  <block id="4f82485cadfd42a1a7920faaa08dd4eb" category="section-title">Endpoints contatados pelo agente do Console</block>
-  <block id="6bf3c3b6320a25ca1c756d707beb9501" category="paragraph">Você instala o agente do Console no local ou na nuvem, e ele entra em contato com os endpoints para concluir as ações iniciadas pelo Console.</block>
-  <block id="11de2fc225151812a62c02855c50d6e0" category="paragraph">Os agentes do console precisam acessar os mesmos endpoints que o NetApp Console, além de endpoints adicionais se você implantar o agente no seu provedor de nuvem.</block>
-  <block id="4d3694235fe47618495789cb51a45b99" category="section-title">Pontos de extremidade do agente para AWS</block>
-  <block id="63e19220969e7a68e2e526befc1666be" category="paragraph">Esses pontos de extremidade são aplicáveis aos agentes do Console anteriores à versão 4.0.0.</block>
-  <block id="2fb275317dd3b17c9c9f418ac55fc85f" category="cell">Serviços da AWS (amazonaws.com): CloudFormation Elastic Compute Cloud (EC2) Gerenciamento de Identidade e Acesso (IAM) Serviço de Gerenciamento de Chaves (KMS) Serviço de Token de Segurança (STS) Serviço de Armazenamento Simples (S3)</block>
-  <block id="91fc04a757a54f41a1e535fbce01e9c4" category="cell">Para gerenciar recursos na AWS.  O ponto final exato depende da região da AWS que você está usando.  Consulte a documentação da AWS para obter detalhes sobre como obter informações de licenciamento e enviar mensagens do AutoSupport ao suporte da NetApp .</block>
-  <block id="876974bae0861068d4d4bad2bcfb2030" category="section-title">Pontos de extremidade do agente para o Azure</block>
-  <block id="c00fd35fb36d540f88a9f585e3eacbf4" category="paragraph">Esses pontos de extremidade se aplicam aos agentes do Console anteriores à versão 4.0.0.</block>
   <block id="7dfb843f052469a3cc66d13554feb0f4" category="cell">\ https://management.azure.com \ https://login.microsoftonline.com \ https://blob.core.windows.net \ https://core.windows.net</block>
   <block id="068395f3cd26ca40ad905de3790c9435" category="cell">Para gerenciar recursos em regiões públicas do Azure.</block>
   <block id="6d03c18e4e6ecfac89f686c621314d96" category="cell">\ https://management.chinacloudapi.cn \ https://login.chinacloudapi.cn \ https://blob.core.chinacloudapi.cn \ https://core.chinacloudapi.cn</block>
   <block id="232055d452a21264f8d549e50d695b18" category="cell">Para gerenciar recursos nas regiões do Azure China.</block>
-  <block id="9479dd672c1173937cff0e6b2bf64e73" category="section-title">Pontos de extremidade do agente para o Google Cloud</block>
-  <block id="8220d542eb7f542142d33f264325fad2" category="cell">\ https://www.googleapis.com/compute/v1/ \ https://compute.googleapis.com/compute/v1 \ https://cloudresourcemanager.googleapis.com/v1/projects \ https://www.googleapis.com/compute/beta \ https://storage.googleapis.com/storage/v1 \ https://www.googleapis.com/storage/v1 \ https://iam.googleapis.com/v1 \ https://cloudkms.googleapis.com/v1 \ https://www.googleapis.com/deploymentmanager/v2/project</block>
   <block id="d377a02fb22cec7bf850087d3c9a31fa" category="cell">Para gerenciar recursos no Google Cloud.</block>
-  <block id="3e85017db5f11cb5fd9a2ce0cc5c2952" category="paragraph">A NetApp recomenda permitir endpoints da Opção 1 no seu firewall, pois eles são mais seguros, e não permitir endpoints da Opção 2.  Observe o seguinte sobre esses pontos finais:</block>
-  <block id="355aa2cb084da03a5497f77553128a7e" category="list-text">A partir da versão 3.9.47 do agente do Console, o sistema oferece suporte aos endpoints listados na opção 1.  Versões anteriores do agente do Console não oferecem suporte à compatibilidade com versões anteriores.</block>
-  <block id="39f1f892613e1b48ea2dcb8e91007840" category="list-text">O agente do Console primeiro contata os endpoints na opção 2.  Se esses terminais não estiverem acessíveis, ele entrará em contato automaticamente com os terminais na opção 1.</block>
-  <block id="0f21327cfa5424ff9e53ceabb12fc793" category="section-title">Pontos de extremidade do agente local</block>
   <block id="4bfdb1b61ef66a3957a6d5d1361c6ccf" category="summary">O NetApp Console, o agente do NetApp Console e os serviços de dados do NetApp exigem acesso de saída à Internet e a capacidade de entrar em contato com os endpoints necessários.</block>
   <block id="4f5ec630b094c4c82b26ea6404d2fb60" category="doc">Preparar o acesso à rede para o NetApp Console</block>
   <block id="4233b9cb96923f9b990894123ee8b824" category="paragraph">Você precisará configurar o acesso à rede para o seguinte:</block>
   <block id="2252b9effa4a2578182ceca5e5099224" category="list-text">Computadores que acessam o NetApp Console como software como serviço (SaaS)</block>
-  <block id="a46336f4b91114f84d727815dd065275" category="list-text">Locais de rede onde você implanta agentes do Console que você instala no local ou na nuvem.</block>
-  <block id="fff5e3dfea178a23d7b2584ff3483b21" category="list-text">Pontos de extremidade adicionais para determinados serviços de dados da NetApp , incluindo Cloud Volumes ONTAP.</block>
   <block id="76e8c2ef4f00506a56e17505bb27d4f1" category="inline-link-macro">Aprenda como atualizar sua lista de endpoints.</block>
-  <block id="99417dfb179b84518f26cde4bd5522ec" category="admonition">A NetApp reduziu os pontos de extremidade de rede necessários para o Console e os agentes do Console, aumentando a segurança e simplificando a implantação.  É importante ressaltar que todas as implantações anteriores à versão 4.0.0 continuam com suporte total.  Embora os endpoints anteriores permaneçam disponíveis para os agentes existentes, a NetApp recomenda fortemente atualizar as regras de firewall para os endpoints atuais após confirmar as atualizações bem-sucedidas dos agentes.<block ref="c20299b46c31a56bf458fdfeb71942cd" category="inline-link-macro-rx"></block></block>
-  <block id="d2e2173be8de3803d29804ba7e3cbcab" category="list-text">De um computador acessando diretamente um host do agente do Console, para efetuar login e configurá-lo ou acessar o Console a partir do host do agente.</block>
   <block id="8963387394e2ee3e2a5a9ba160566a58" category="cell">\ https://support.netapp.com</block>
   <block id="fe0afb21d6cb9bc2fa6c390327246314" category="cell">Para atualizar as credenciais do NetApp Support Site (NSS) ou adicionar novas credenciais do NSS ao NetApp Console.</block>
   <block id="f092dc53062418401abf8d7b17161fcb" category="cell">Para obter informações de licenciamento e enviar mensagens do AutoSupport para o suporte da NetApp , bem como receber atualizações de software para o Cloud Volumes ONTAP.</block>
   <block id="1daedeccee3ce9bebdac02815a88e596" category="cell">\ https://api.bluexp.netapp.com \ https://netapp-cloud-account.auth0.com \ https://netapp-cloud-account.us.auth0.com \ https://console.netapp.com \ https://components.console.bluexp.netapp.com \ https://cdn.auth0.com</block>
-  <block id="96fe77e6e2cd8589ca112918c9a04ec6" category="section-title">Preparar a rede para o agente do Console</block>
-  <block id="79ad55cf82aac1a039766a722bd36b49" category="paragraph">Os agentes do console devem ter acesso aos mesmos endpoints que o NetApp Console, além de endpoints adicionais, dependendo de onde você instalar o agente.</block>
-  <block id="8e67676c15ae2a94213bdd7971d44506" category="paragraph">Configure o acesso ao ponto de extremidade da rede antes de instalar o agente do Console.</block>
   <block id="5eda3a7f9f9788e7beae44ca11c3fca1" category="inline-link-macro">Configurar acesso à rede AWS para um agente do Console</block>
   <block id="fe65e3a837dc9a3749e87481b67ff0fb" category="list-text"><block ref="fe65e3a837dc9a3749e87481b67ff0fb" category="inline-link-macro-rx"></block></block>
   <block id="413296dfc7c1face41e185f79c4f8f7a" category="inline-link-macro">Configurar acesso à rede do Azure para um agente do Console</block>
   <block id="64594581e02e022dfc201735b71465f0" category="list-text"><block ref="64594581e02e022dfc201735b71465f0" category="inline-link-macro-rx"></block></block>
   <block id="6be29013501c644b088dfb30237d31df" category="inline-link-macro">Configurar o acesso à rede do Google Cloud para um agente do Console</block>
   <block id="4b93f2e9726ccb43bb5df85b409d91b3" category="list-text"><block ref="4b93f2e9726ccb43bb5df85b409d91b3" category="inline-link-macro-rx"></block></block>
-  <block id="f10bf17567a71d86b25d142d5d98b33b" category="inline-link-macro">Configurar acesso à rede local para um agente do Console</block>
-  <block id="c918e5911e84e6725906f864a7cf4ed3" category="list-text"><block ref="c918e5911e84e6725906f864a7cf4ed3" category="inline-link-macro-rx"></block></block>
-  <block id="627545d3fae412b9188d4c9140899c75" category="section-title">Preparar a rede para o Cloud Volumes ONTAP</block>
   <block id="fd6e08319e0931b5b5ca23214370bc11" category="paragraph">Alguns serviços de dados da NetApp , bem como o Cloud Volumes ONTAP, exigem que o agente tenha acesso adicional à Internet de saída.</block>
   <block id="3a10984b52469b032ed6d718a9e2670f" category="section-title">Pontos de extremidade para Cloud Volumes ONTAP</block>
   <block id="16c64e82d59e1f4418f7d809b42f2983" category="inline-link-macro">Endpoints para Cloud Volumes ONTAP na AWS</block>
@@ -2356,8 +2309,6 @@
   <block id="d64c0a8c2325cb4b58acab3ef2d51a05" category="list-text"><block ref="d64c0a8c2325cb4b58acab3ef2d51a05" category="inline-link-macro-rx"></block></block>
   <block id="90da399078404708cface539488b8fb2" category="inline-link-macro">Pontos de extremidade para Cloud Volumes ONTAP no Google Cloud</block>
   <block id="46a1f2a1262e75b4e5ea88e748ead245" category="list-text"><block ref="46a1f2a1262e75b4e5ea88e748ead245" category="inline-link-macro-rx"></block></block>
-  <block id="8dfda8cf3bfed1ba46319b9487959873" category="inline-link">Consulte a documentação dos respectivos serviços de dados da NetApp .</block>
-  <block id="9e66adbc40ae0df7bfa345fcbb26e31b" category="paragraph"><block ref="9e66adbc40ae0df7bfa345fcbb26e31b" category="inline-link-rx"></block></block>
   <block id="87536203946c0c72fcd130937e3cc7ef" category="doc">Permissões da AWS para o agente do Console</block>
   <block id="c1141a37b962270fc1e8960233830c99" category="section-title">Políticas de IAM</block>
   <block id="573b0df2f89364b268637488ea138d56" category="paragraph">As políticas do IAM disponíveis abaixo fornecem as permissões que um agente do Console precisa para gerenciar recursos e processos dentro do seu ambiente de nuvem pública com base na sua região da AWS.</block>
@@ -4482,7 +4433,6 @@
   <block id="e9a22dbe949aceeeba0832b4920f12de" category="paragraph">Se você implantou o agente do Console em uma região governamental, a caixa de seleção já estará habilitada e não poderá ser alterada.  Isso ocorre porque o modo restrito é o único modo suportado nas regiões governamentais.</block>
   <block id="34ef49f2003b645a0f1b248a8e158945" category="paragraph">O agente do Console agora está instalado e configurado com sua organização do Console.  Todos os usuários precisam acessar o Console usando o endereço IP da instância do agente do Console.</block>
   <block id="cb763b4641bf6e6767c99d379a3c59aa" category="paragraph">Forneça ao Console as permissões que você configurou anteriormente.</block>
-  <block id="c9164a572d40f77b59f664b9b1e570ce" category="section-title">Etapa 3: fornecer permissões ao NetApp Console</block>
   <block id="0d90b7023964fcc3c91d83c1e214d24e" category="paragraph">Se você implantou o agente do Console do Azure Marketplace ou se instalou manualmente o software do agente do Console, será necessário fornecer as permissões configuradas anteriormente.</block>
   <block id="9ec50c85d379863701d46321169dc12e" category="paragraph">Essas etapas não se aplicam se você implantou o agente do Console do AWS Marketplace porque escolheu a função do IAM necessária durante a implantação.</block>
   <block id="d8325912caeaba85aaefdb17eacaea8d" category="inline-link-macro">Aprenda a preparar permissões de nuvem</block>
@@ -5597,4 +5547,56 @@
   <block id="446a691d3cf6457cb60610b81794fdbc" category="paragraph">A AWS inicia o software com as configurações especificadas. O agente do Console é implantado em aproximadamente cinco minutos.</block>
   <block id="118b5697b68c5f4ada51d65dffac2674" category="paragraph">Se você usar um endereço IP de SKU padrão, o Console usará o endereço IP _privado_ do agente do Console, em vez do IP público. Se a máquina que você está usando para acessar o Console não tiver acesso a esse endereço IP privado, as ações do Console falharão.</block>
   <block id="d1cb423c9810b1ddd65eea821845fff2" category="admonition">Para ativar a detecção de atividades suspeitas do usuário, você deve ter a função de administrador da Organização do Console.</block>
+  <block id="148a5defddc98b9d994f39780f74e348" category="cell">*Pontos finais anteriores*</block>
+  <block id="c563d78603e1e09616c6c043a19061ba" category="cell">*Pontos finais para 4.0.0 e superiores*</block>
+  <block id="1463a95efc33a52765f03569e1e39a10" category="cell">*Propósito*</block>
+  <block id="3b02fb538695ecfedde92943f6fd865e" category="paragraph">Para licenciamento e contato com o Suporte da NetApp .</block>
+  <block id="37ba276f010f4ea07f1196b487811443" category="list-text">\https://*.api.bluexp.netapp.com</block>
+  <block id="e1095ff19466581c5274f67123c95036" category="list-text">\ https://api.bluexp.netapp.com</block>
+  <block id="9e434ddc2ad4b9de005368b77254223d" category="list-text">\https://*.cloudmanager.cloud.netapp.com</block>
+  <block id="115781a0043a85f8707c5c99fd02dc75" category="list-text">\ https://cloudmanager.cloud.netapp.com</block>
+  <block id="300f031c227ed1b4448a8bb51abec2bb" category="list-text">\ https://netapp-cloud-account.auth0.com</block>
+  <block id="14a739c7dd9ae7124076d6fca0a62a7e" category="list-text">\ https://netapp-cloud-account.us.auth0.com</block>
+  <block id="03275fa7fd8487800900fe5ed21b50b4" category="list-text">\ https://console.bluexp.netapp.com</block>
+  <block id="5802dd4b381723f6988464d2d6587cfa" category="list-text">\https://*.console.bluexp.netapp.com</block>
+  <block id="be39dcb2fcc989bf18987169d1f8afc4" category="list-text">\ https://console.netapp.com</block>
+  <block id="9ebf544c1d9c2833a9338e1e70ee31de" category="list-text">\ https://components.console.bluexp.netapp.com</block>
+  <block id="44c8f9fac8ac8a713dca77d34b7e902d" category="list-text">\ https://cdn.auth0.com</block>
+  <block id="30c4239755a3fa7fe7952fafec8297dd" category="paragraph">Para operações do dia a dia.</block>
+  <block id="533560d1d92ef216fc2f7047b132da5b" category="list-text">Um tipo de instância que atende aos requisitos de CPU e RAM.  A NetApp recomenda t3.2xlarge.</block>
+  <block id="5218e689f8059e737f702b1608b1d2aa" category="list-text">Um tipo de instância que atende aos requisitos de CPU e RAM.  A NetApp recomenda Standard_D8s_v3.</block>
+  <block id="8cf6ae40c51e78159e689e6172cff9c8" category="list-text">Um tipo de instância que atende aos requisitos de CPU e RAM.  A NetApp recomenda o n2-standard-8.</block>
+  <block id="8506e9451ada0f6713ff22e19ea5ea81" category="list-text"><block ref="8506e9451ada0f6713ff22e19ea5ea81" category="inline-link-rx"></block></block>
+  <block id="4339f3c8171824c42987385b4c398ef1" category="list-text"><block ref="4339f3c8171824c42987385b4c398ef1" category="inline-link-rx"></block></block>
+  <block id="1c9245a65b8c79506ab48fc890a4c565" category="list-text"><block ref="1c9245a65b8c79506ab48fc890a4c565" category="inline-link-rx"></block></block>
+  <block id="a84a1e7810d5b8e81646124511b75732" category="list-text"><block ref="a84a1e7810d5b8e81646124511b75732" category="inline-link-rx"></block></block>
+  <block id="7dfa5cc30dbbbfee91158767b86487c0" category="paragraph"><block ref="7dfa5cc30dbbbfee91158767b86487c0" category="inline-link-rx"></block></block>
+  <block id="9588595fbe3fa7f47431af3c53dbfa23" category="list-text"><block ref="9588595fbe3fa7f47431af3c53dbfa23" category="inline-link-rx"></block></block>
+  <block id="cb4f6677094ab1c46678dcab5e428e83" category="summary">Você precisa garantir que o Console e quaisquer agentes instalados tenham o acesso de rede correto para funcionar corretamente.</block>
+  <block id="08c556d51e4f6c65d7b6fa418e7669be" category="doc">Acesso de rede necessário para 3.9.55 e abaixo</block>
+  <block id="fffe82f62bbb62138e05f9a97b7b3c53" category="paragraph">O NetApp Console, o agente do NetApp Console e os serviços de dados do NetApp exigem acesso de saída à Internet para contatar os endpoints necessários.</block>
+  <block id="85c99bdcf4951ca82a78bf31a1de7173" category="inline-link-macro">os endpoints necessários para 4.0.0 e superior</block>
+  <block id="e631f72e5da7444059b0ba7e6eae2fc7" category="admonition">Este tópico documenta o acesso à rede necessário para versões do modo padrão do NetApp Console 3.9.55 e anteriores.  Para os endpoints necessários para 4.0.0 e superior, revise<block ref="ef1073f8509c45bff5f75999a15fb4b5" category="inline-link-macro-rx"></block> .</block>
+  <block id="be32f6aa31e21ef01c8c31dad096f006" category="paragraph">Você precisa configurar o acesso à rede para o seguinte:</block>
+  <block id="5b16a9b1f1c5db997bd70dba9f662b5e" category="list-text">Agentes de console que você instala no local ou na nuvem.</block>
+  <block id="3b62838410a7c6895d979922d9581f52" category="paragraph">A NetApp recomenda atualizar as regras de firewall para usar a lista de endpoints revisada, que é menor, mais segura e mais fácil de gerenciar.  A NetApp elimina a necessidade de entradas curinga, e os endpoints para atualizações de agentes oferecem suporte a todos os serviços de dados.</block>
+  <block id="35da316807382c07bf908d0aa0e25366" category="inline-link-macro">Ver versão do agente.</block>
+  <block id="f9920faba4be0356d6cca95490bf1c5e" category="list-text">Verifique se a versão do seu agente é 4.0.0 ou superior.<block ref="87e2f33545ea1e2438f05031eeb588f8" category="inline-link-macro-rx"></block></block>
+  <block id="13c50e9c029227770d707c8452860d49" category="list-text">Remova os endpoints antigos da lista de permissões do seu firewall.</block>
+  <block id="7429bce12833578efeb5b94559cdb2cc" category="section-title">Endpoints para NetApp Console e agentes de console para 3.9.55 e anteriores</block>
+  <block id="99f5210f9005cdc79b5e7445fc47dfa6" category="paragraph">Esses pontos de extremidade são usados para agentes do Console 3.9.55 e anteriores.</block>
+  <block id="6d7ce399b2920c8a12c1f75743f81bf1" category="section-title">Pontos de extremidade do provedor de nuvem contatados pelo agente do Console</block>
+  <block id="62382c601b0acb2fd67b8ef8d844f33d" category="paragraph">Os agentes de console devem ter acesso a endpoints adicionais se estiverem implantados no seu provedor de nuvem.</block>
+  <block id="9b80fcff76bb72e8a8ad5585de95999c" category="paragraph">Habilite o acesso aos endpoints do provedor de nuvem antes de instalar o agente do Console.</block>
+  <block id="34abad90bc81b2b4339231b5d1e66cd2" category="paragraph">Os pontos de extremidade do provedor de nuvem são os mesmos para todas as versões.</block>
+  <block id="1f3baebddcc5e633764f391ecbf1a431" category="section-title">Pontos de extremidade de serviços de dados contatados pelo agente do Console</block>
+  <block id="8c046aa00b403bc460358c56847f6566" category="paragraph">O agente do Console requer acesso adicional à Internet de saída para dar suporte a alguns serviços de dados do NetApp e ao Cloud Volumes ONTAP.</block>
+  <block id="f879fd651c263b963ba75d4b5bb22e1c" category="list-text">Agentes de console que você instala no local ou na nuvem. Agentes de console.</block>
+  <block id="290681220934acfd2c865ebc995ac39d" category="admonition">Com a versão 4.0.0, a NetApp reduziu os pontos de extremidade de rede necessários para o Console e os agentes do Console, aumentando a segurança e simplificando a implantação. É importante ressaltar que todas as implantações anteriores à versão 4.0.0 continuam com suporte total.  Embora os endpoints anteriores permaneçam disponíveis para os agentes existentes, a NetApp recomenda fortemente atualizar as regras de firewall para os endpoints atuais após confirmar as atualizações bem-sucedidas dos agentes.<block ref="c20299b46c31a56bf458fdfeb71942cd" category="inline-link-macro-rx"></block></block>
+  <block id="053ff009632babfa14d2ab9238cc32ea" category="section-title">Endpoints contatados pelo NetApp Console e agentes do Console</block>
+  <block id="d15daa74ffdfc25ce19959268f28c7cd" category="paragraph">Cada agente implantado e cada computador que acessa o NetApp Console deve ter conexões com os endpoints listados abaixo.</block>
+  <block id="6cb7b38169a9c67522d02da6290d53d7" category="paragraph">Os agentes de console implantados no seu provedor de nuvem precisam acessar os endpoints respectivos a esse provedor de nuvem.</block>
+  <block id="a64b4879b658ef7dd1a5bf863f66e510" category="section-title">Os endpoints do provedor de nuvem contataram o agente do Console</block>
+  <block id="334af2b72c201a4f9aea3650a21ea8ec" category="paragraph">Configure o acesso ao ponto de extremidade da rede do provedor de nuvem antes de instalar o agente do Console.</block>
+  <block id="9ccb545b97d1ad0ce41d2577f6ae2e82" category="section-title">Etapa 3: fornecer permissões ao agente do Console</block>
 </blocks>

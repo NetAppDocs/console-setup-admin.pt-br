@@ -148,7 +148,7 @@ CPU:: 8 núcleos ou 8 vCPUs
 BATER:: 32 GB
 
 
-Tipo de instância AWS EC2:: Um tipo de instância que atende aos requisitos de CPU e RAM acima.  Recomendamos t3.2xlarge.
+Tipo de instância AWS EC2:: Um tipo de instância que atende aos requisitos de CPU e RAM.  A NetApp recomenda t3.2xlarge.
 
 
 Par de chaves:: Ao criar o agente do Console, você precisará selecionar um par de chaves EC2 para usar com a instância.
@@ -164,10 +164,10 @@ Limite de salto de resposta PUT ao usar IMDSv2:: Se o IMDSv2 estiver habilitado 
 --
 
 
-Tamanho da VM do Azure:: Um tipo de instância que atende aos requisitos de CPU e RAM acima.  Recomendamos Standard_D8s_v3.
+Tamanho da VM do Azure:: Um tipo de instância que atende aos requisitos de CPU e RAM.  A NetApp recomenda Standard_D8s_v3.
 
 
-Tipo de máquina do Google Cloud:: Um tipo de instância que atende aos requisitos de CPU e RAM acima.  Recomendamos n2-standard-8.
+Tipo de máquina do Google Cloud:: Um tipo de instância que atende aos requisitos de CPU e RAM.  A NetApp recomenda o n2-standard-8.
 +
 --
 O agente do Console é compatível com o Google Cloud em uma instância de VM com um sistema operacional compatível https://cloud.google.com/compute/shielded-vm/docs/shielded-vm["Recursos de VM blindada"^]

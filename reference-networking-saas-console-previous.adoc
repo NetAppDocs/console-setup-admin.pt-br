@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: reference-networking-saas-console-previous.html 
-keywords: networking, urls, endpoints, web browser, console, network, set up networking, bluexp 
-summary: Quando você efetua login e usa o console baseado na web, ele entra em contato com vários endpoints para concluir as ações que você inicia.  Os computadores que acessam o NetApp Console devem ter conexões com esses endpoints. 
+keywords: networking, urls, endpoints, web browser, console, network, set up networking, netapp console 
+summary: Você precisa garantir que o Console e quaisquer agentes instalados tenham o acesso de rede correto para funcionar corretamente. 
 ---
-= Pontos de acesso de rede necessários para 3.9.55 e abaixo
+= Acesso de rede necessário para 3.9.55 e abaixo
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,9 +14,16 @@ summary: Quando você efetua login e usa o console baseado na web, ele entra em 
 
 
 [role="lead"]
-Este tópico detalha o acesso à rede necessário para versões do modo padrão do NetApp Console anteriores à versão 4.0.0 do NetApp Console, o agente do NetApp Console e o acesso de saída à Internet dos serviços de dados do NetApp , além da capacidade de contatar os endpoints necessários.  Você precisa garantir que o Console e quaisquer agentes que você instalar tenham o acesso de rede correto para funcionar corretamente.
+O NetApp Console, o agente do NetApp Console e os serviços de dados do NetApp exigem acesso de saída à Internet para contatar os endpoints necessários.
 
-Você precisará configurar o acesso à rede para computadores que acessam o NetApp Console como software como serviço (SaaS) e para quaisquer agentes do Console que você instalar no local ou na nuvem.  Você também pode precisar de endpoints adicionais para determinados serviços de dados da NetApp , incluindo o Cloud Volumes ONTAP.
+
+NOTE: Este tópico documenta o acesso à rede necessário para versões do modo padrão do NetApp Console 3.9.55 e anteriores.  Para os endpoints necessários para 4.0.0 e superior, reviselink:reference-networking-saas-console.html["os endpoints necessários para 4.0.0 e superior"] .
+
+Você precisa configurar o acesso à rede para o seguinte:
+
+* Computadores que acessam o NetApp Console como software como serviço (SaaS)
+* Agentes de console que você instala no local ou na nuvem.
+
 
 
 
@@ -24,11 +31,62 @@ Você precisará configurar o acesso à rede para computadores que acessam o Net
 
 A partir da versão 4.0.0, os agentes do Console exigem menos endpoints.  Implantações existentes anteriores à versão 4.0.0 continuam com suporte.  Após atualizar para a versão 4.0.0 ou posterior, você pode remover os endpoints antigos da sua lista de permissões quando for conveniente.
 
-A NetApp recomenda que você atualize suas regras de firewall para usar a lista de endpoints revisada.  A lista revisada é menor, portanto mais segura e fácil de gerenciar.
+A NetApp recomenda atualizar as regras de firewall para usar a lista de endpoints revisada, que é menor, mais segura e mais fácil de gerenciar.  A NetApp elimina a necessidade de entradas curinga, e os endpoints para atualizações de agentes oferecem suporte a todos os serviços de dados.
 
-Análiselink:reference-networking-saas-console.html["endpoints suportados para 4.0.0 e superior"]
+[cols="3*"]
+|===
+| *Pontos finais anteriores* | *Pontos finais para 4.0.0 e superiores* | *Propósito* 
 
+
+ a| 
+* \ https://support.netapp.com
+* \ https://mysupport.netapp.com
+
+ a| 
+* \ https://mysupport.netapp.com
+* \ https://signin.b2c.netapp.com
+* \ https://support.netapp.com
+
+ a| 
+Para licenciamento e contato com o Suporte da NetApp .
+
+
+
+ a| 
+* \https://*.api.bluexp.netapp.com
+* \ https://api.bluexp.netapp.com
+* \https://*.cloudmanager.cloud.netapp.com
+* \ https://cloudmanager.cloud.netapp.com
+* \ https://netapp-cloud-account.auth0.com
+* \ https://netapp-cloud-account.us.auth0.com
+* \ https://console.bluexp.netapp.com
+* \https://*.console.bluexp.netapp.com
+
+ a| 
+* \ https://api.bluexp.netapp.com
+* \ https://netapp-cloud-account.auth0.com
+* \ https://netapp-cloud-account.us.auth0.com
+* \ https://console.netapp.com
+* \ https://components.console.bluexp.netapp.com
+* \ https://cdn.auth0.com
+
+ a| 
+Para operações do dia a dia.
+
+
+
+ a| 
+* \https://*.blob.core.windows.net
+* \ https://cloudmanagerinfraprod.azurecr.io
+
+ a| 
+* \ https://bluexpinfraprod.eastus2.data.azurecr.io
+* \ https://bluexpinfraprod.azurecr.io
+
+| Para obter imagens para atualizações do agente do Console. 
+|===
 .Passos
+. Verifique se a versão do seu agente é 4.0.0 ou superior.link:task-troubleshoot-agent.html#view-the-console-agent-version["Ver versão do agente."]
 . Coloque os endpoints na lista de permissões emlink:reference-networking-saas-console.html["Pontos de extremidade suportados para 4.0.0 e superior"] .
 . Reinicie o serviço do gerenciador de serviços 2 em cada agente executando o seguinte comando:
 +
@@ -42,30 +100,30 @@ systemctl restart netapp-service-manager.service
 ----
 systemctl status netapp-service-manager.service
 ----
-. Remova os endpoints antigos da sua lista de permissões.
+. Remova os endpoints antigos da lista de permissões do seu firewall.
 
 
 
 
-== Endpoints contatados pelo NetApp Console
+== Endpoints para NetApp Console e agentes de console para 3.9.55 e anteriores
 
-Cada computador que acessa o NetApp Console deve ter conexões com os endpoints listados abaixo.
-
-O sistema contata esses terminais em dois cenários:
-
-* A partir de um computador acessando o https://console.netapp.com["NetApp Console"^] como software como serviço (SaaS).
-* De um computador acessando diretamente um host do agente, para efetuar login e configurá-lo ou acessar o Console a partir do host do agente.
-
+Esses pontos de extremidade são usados para agentes do Console 3.9.55 e anteriores.
 
 [cols="2*"]
 |===
 | Pontos finais | Propósito 
 
 
-| \ https://support.netapp.com \ https://mysupport.netapp.com | Para obter informações de licenciamento e enviar mensagens do AutoSupport para o suporte da NetApp . 
+ a| 
+\ https://support.netapp.com \ https://mysupport.netapp.com
+ a| 
+Para obter informações de licenciamento e enviar mensagens do AutoSupport para o suporte da NetApp .
 
 
-| \https://\*.api.bluexp.netapp.com \ https://api.bluexp.netapp.com \https://*.cloudmanager.cloud.netapp.com \ https://cloudmanager.cloud.netapp.com \ https://netapp-cloud-account.auth0.com \ https://netapp-cloud-account.us.auth0.com | Para fornecer recursos e serviços no NetApp Console. 
+
+ a| 
+\https://\*.api.bluexp.netapp.com \ https://api.bluexp.netapp.com \https://*.cloudmanager.cloud.netapp.com \ https://cloudmanager.cloud.netapp.com \ https://netapp-cloud-account.auth0.com \ https://netapp-cloud-account.us.auth0.com
+| Para fornecer recursos e serviços no NetApp Console. 
 
 
  a| 
@@ -93,170 +151,30 @@ A NetApp recomenda permitir endpoints da Opção 1 no seu firewall, pois eles s�
 |===
 
 
-== Endpoints contatados pelo agente do Console
+== Pontos de extremidade do provedor de nuvem contatados pelo agente do Console
 
-Você instala o agente do Console no local ou na nuvem, e ele entra em contato com os endpoints para concluir as ações iniciadas pelo Console.
+Os agentes de console devem ter acesso a endpoints adicionais se estiverem implantados no seu provedor de nuvem.
 
-Os agentes do console precisam acessar os mesmos endpoints que o NetApp Console, além de endpoints adicionais se você implantar o agente no seu provedor de nuvem.
+Habilite o acesso aos endpoints do provedor de nuvem antes de instalar o agente do Console.
 
+* link:task-install-agent-aws-console.html#networking-aws-agent["Configurar acesso à rede AWS para um agente do Console"]
+* link:task-install-agent-azure-console.html#networking-azure-agent["Configurar acesso à rede do Azure para um agente do Console"]
+* link:task-install-agent-google-console-gcloud.html#networking-gcp-agent["Configurar o acesso à rede do Google Cloud para um agente do Console"]
 
 
-=== Pontos de extremidade do agente para AWS
+Os pontos de extremidade do provedor de nuvem são os mesmos para todas as versões.
 
-Esses pontos de extremidade são aplicáveis aos agentes do Console anteriores à versão 4.0.0.
 
-[cols="2*"]
-|===
-| Pontos finais | Propósito 
 
+== Pontos de extremidade de serviços de dados contatados pelo agente do Console
 
-| Serviços da AWS (amazonaws.com): CloudFormation Elastic Compute Cloud (EC2) Gerenciamento de Identidade e Acesso (IAM) Serviço de Gerenciamento de Chaves (KMS) Serviço de Token de Segurança (STS) Serviço de Armazenamento Simples (S3) | Para gerenciar recursos na AWS.  O ponto final exato depende da região da AWS que você está usando.  Consulte a documentação da AWS para obter detalhes sobre como obter informações de licenciamento e enviar mensagens do AutoSupport ao suporte da NetApp . 
+O agente do Console requer acesso adicional à Internet de saída para dar suporte a alguns serviços de dados do NetApp e ao Cloud Volumes ONTAP.
 
 
-| \ https://support.netapp.com \ https://mysupport.netapp.com | Para obter informações de licenciamento e enviar mensagens do AutoSupport para o suporte da NetApp . 
 
+=== Pontos de extremidade para Cloud Volumes ONTAP
 
- a| 
-Escolha entre dois conjuntos de pontos de extremidade:
+* link:https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/reference-networking-aws.html#outbound-internet-access-for-cloud-volumes-ontap-nodes["Endpoints para Cloud Volumes ONTAP na AWS"]
+* link:https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/reference-networking-azure.html["Pontos de extremidade para Cloud Volumes ONTAP no Azure"]
+* link:https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/reference-networking-gcp.html#outbound-internet-access["Pontos de extremidade para Cloud Volumes ONTAP no Google Cloud"]
 
-* Opção 1 (recomendada)
-+
-\ https://bluexpinfraprod.eastus2.data.azurecr.io \ https://bluexpinfraprod.azurecr.io
-
-* Opção 2
-+
-\https://*.blob.core.windows.net \ https://cloudmanagerinfraprod.azurecr.io
-
-
- a| 
-Para obter imagens para atualizações do agente do Console.
-
-A NetApp recomenda permitir endpoints da Opção 1 no seu firewall, pois eles são mais seguros, e não permitir endpoints da Opção 2, a menos que você esteja usando o Ransomware Resilience ou o Backup and Recovery.  Observe o seguinte sobre esses pontos finais:
-
-* Os endpoints da Opção 1 são suportados em 3.9.47 e superiores.  Versões anteriores à 3.9.47 não oferecem suporte à compatibilidade com versões anteriores.
-* O agente do Console inicia o contato com os endpoints na opção 2 primeiro.  Se esses terminais não estiverem acessíveis, ele entrará em contato automaticamente com os terminais na opção 1.
-* Se você usar o agente do Console com o NetApp Backup and Recovery ou o Ransomware Resilience, o sistema não oferecerá suporte aos endpoints da Opção 1.  Permitir pontos de extremidade da Opção 2 e não permitir a Opção 1.
-
-
-|===
-
-
-=== Pontos de extremidade do agente para o Azure
-
-Esses pontos de extremidade se aplicam aos agentes do Console anteriores à versão 4.0.0.
-
-[cols="2*"]
-|===
-| Pontos finais | Propósito 
-
-
-| \ https://management.azure.com \ https://login.microsoftonline.com \ https://blob.core.windows.net \ https://core.windows.net | Para gerenciar recursos em regiões públicas do Azure. 
-
-
-| \ https://management.chinacloudapi.cn \ https://login.chinacloudapi.cn \ https://blob.core.chinacloudapi.cn \ https://core.chinacloudapi.cn | Para gerenciar recursos nas regiões do Azure China. 
-
-
-| \ https://support.netapp.com \ https://mysupport.netapp.com | Para obter informações de licenciamento e enviar mensagens do AutoSupport para o suporte da NetApp . 
-
-
- a| 
-Escolha entre dois conjuntos de pontos de extremidade:
-
-* Opção 1 (recomendada)
-+
-\ https://bluexpinfraprod.eastus2.data.azurecr.io \ https://bluexpinfraprod.azurecr.io
-
-* Opção 2
-+
-\https://*.blob.core.windows.net \ https://cloudmanagerinfraprod.azurecr.io
-
-
- a| 
-Para obter imagens para atualizações do agente do Console.
-
-A NetApp recomenda permitir endpoints da Opção 1 no seu firewall, pois eles são mais seguros, e não permitir endpoints da Opção 2, a menos que você esteja usando o Ransomware Resilience ou o Backup and Recovery.  Observe o seguinte sobre esses pontos finais:
-
-* Os endpoints da Opção 1 são suportados em 3.9.47 e superiores.  Versões anteriores à 3.9.47 não oferecem suporte à compatibilidade com versões anteriores.
-* O agente do Console inicia o contato com os endpoints na opção 2 primeiro.  Se esses terminais não estiverem acessíveis, ele entrará em contato automaticamente com os terminais na opção 1.
-* Se você usar o agente do Console com o NetApp Backup and Recovery ou o Ransomware Resilience, o sistema não oferecerá suporte aos endpoints da Opção 1.  Permitir pontos de extremidade da Opção 2 e não permitir a Opção 1.
-
-
-|===
-
-
-=== Pontos de extremidade do agente para o Google Cloud
-
-Esses pontos de extremidade se aplicam aos agentes do Console anteriores à versão 4.0.0.
-
-[cols="2*"]
-|===
-| Pontos finais | Propósito 
-
-
-| \ https://www.googleapis.com/compute/v1/ \ https://compute.googleapis.com/compute/v1 \ https://cloudresourcemanager.googleapis.com/v1/projects \ https://www.googleapis.com/compute/beta \ https://storage.googleapis.com/storage/v1 \ https://www.googleapis.com/storage/v1 \ https://iam.googleapis.com/v1 \ https://cloudkms.googleapis.com/v1 \ https://www.googleapis.com/deploymentmanager/v2/project | Para gerenciar recursos no Google Cloud. 
-
-
-| \ https://support.netapp.com \ https://mysupport.netapp.com | Para obter informações de licenciamento e enviar mensagens do AutoSupport para o suporte da NetApp . 
-
-
- a| 
-Escolha entre dois conjuntos de pontos de extremidade:
-
-* Opção 1 (recomendada)
-+
-\ https://bluexpinfraprod.eastus2.data.azurecr.io \ https://bluexpinfraprod.azurecr.io
-
-* Opção 2
-+
-\https://*.blob.core.windows.net \ https://cloudmanagerinfraprod.azurecr.io
-
-
- a| 
-Para obter imagens para atualizações do agente do Console.
-
-A NetApp recomenda permitir endpoints da Opção 1 no seu firewall, pois eles são mais seguros, e não permitir endpoints da Opção 2.  Observe o seguinte sobre esses pontos finais:
-
-* A partir da versão 3.9.47 do agente do Console, o sistema oferece suporte aos endpoints listados na opção 1.  Versões anteriores do agente do Console não oferecem suporte à compatibilidade com versões anteriores.
-* O agente do Console primeiro contata os endpoints na opção 2.  Se esses terminais não estiverem acessíveis, ele entrará em contato automaticamente com os terminais na opção 1.
-* Se você usar o agente do Console com o NetApp Backup and Recovery ou o Ransomware Resilience, o sistema não oferecerá suporte aos endpoints da Opção 1.  Permitir pontos de extremidade da Opção 2 e não permitir a Opção 1.
-
-
-|===
-
-
-== Pontos de extremidade do agente local
-
-[cols="2*"]
-|===
-| Pontos finais | Propósito 
-
-
-| \ https://support.netapp.com \ https://mysupport.netapp.com | Para obter informações de licenciamento e enviar mensagens do AutoSupport para o suporte da NetApp . 
-
-
-| \https://\*.api.bluexp.netapp.com \ https://api.bluexp.netapp.com \https://*.cloudmanager.cloud.netapp.com \ https://cloudmanager.cloud.netapp.com \ https://netapp-cloud-account.auth0.com \ https://netapp-cloud-account.us.auth0.com | Para fornecer recursos e serviços no NetApp Console. 
-
-
- a| 
-Escolha entre dois conjuntos de pontos de extremidade:
-
-* Opção 1 (recomendada)
-+
-\ https://bluexpinfraprod.eastus2.data.azurecr.io \ https://bluexpinfraprod.azurecr.io
-
-* Opção 2
-+
-\https://*.blob.core.windows.net \ https://cloudmanagerinfraprod.azurecr.io
-
-
- a| 
-Para obter imagens para atualizações do agente do Console.
-
-A NetApp recomenda permitir endpoints da Opção 1 no seu firewall, pois eles são mais seguros, e não permitir endpoints da Opção 2, a menos que você esteja usando o Ransomware Resilience ou o Backup and Recovery.  Observe o seguinte sobre esses pontos finais:
-
-* Os endpoints da Opção 1 são suportados em 3.9.47 e superiores.  Versões anteriores à 3.9.47 não oferecem suporte à compatibilidade com versões anteriores.
-* O agente do Console inicia o contato com os endpoints na opção 2 primeiro.  Se esses terminais não estiverem acessíveis, ele entrará em contato automaticamente com os terminais na opção 1.
-* Se você usar o agente do Console com o NetApp Backup and Recovery ou o Ransomware Resilience, o sistema não oferecerá suporte aos endpoints da Opção 1.  Permitir pontos de extremidade da Opção 2 e não permitir a Opção 1.
-
-
-|===

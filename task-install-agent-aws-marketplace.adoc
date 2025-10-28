@@ -177,7 +177,7 @@ Ao criar o agente do Console, você precisa escolher um tipo de instância do EC
 
 CPU:: 8 núcleos ou 8 vCPUs
 BATER:: 32 GB
-Tipo de instância AWS EC2:: Um tipo de instância que atende aos requisitos de CPU e RAM acima.  Recomendamos t3.2xlarge.
+Tipo de instância AWS EC2:: Um tipo de instância que atende aos requisitos de CPU e RAM.  A NetApp recomenda t3.2xlarge.
 
 
 

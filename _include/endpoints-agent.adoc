@@ -46,6 +46,46 @@ Os endpoints listados abaixo são todos entradas CNAME.
 
 | \ https://api.bluexp.netapp.com \ https://netapp-cloud-account.auth0.com \ https://netapp-cloud-account.us.auth0.com \ https://console.netapp.com \ https://components.console.bluexp.netapp.com \ https://cdn.auth0.com | Para fornecer recursos e serviços no NetApp Console.
 
+[cols="2*"]
+|===
+| Pontos finais | Propósito 
+
+
+ a| 
+\ https://support.netapp.com \ https://mysupport.netapp.com
+ a| 
+Para obter informações de licenciamento e enviar mensagens do AutoSupport para o suporte da NetApp .
+
+
+
+ a| 
+\https://\*.api.bluexp.netapp.com \ https://api.bluexp.netapp.com \https://*.cloudmanager.cloud.netapp.com \ https://cloudmanager.cloud.netapp.com \ https://netapp-cloud-account.auth0.com \ https://netapp-cloud-account.us.auth0.com
+| Para fornecer recursos e serviços no NetApp Console. 
+
+
+ a| 
+Escolha entre dois conjuntos de pontos de extremidade:
+
+* Opção 1 (recomendada)
++
+\ https://bluexpinfraprod.eastus2.data.azurecr.io \ https://bluexpinfraprod.azurecr.io
+
+* Opção 2
++
+\https://*.blob.core.windows.net \ https://cloudmanagerinfraprod.azurecr.io
+
+
+ a| 
+Para obter imagens para atualizações do agente do Console.
+
+A NetApp recomenda permitir endpoints da Opção 1 no seu firewall, pois eles são mais seguros, e não permitir endpoints da Opção 2, a menos que você esteja usando o Ransomware Resilience ou o Backup and Recovery.  Observe o seguinte sobre esses pontos finais:
+
+* Os endpoints da Opção 1 são suportados em 3.9.47 e superiores.  Versões anteriores à 3.9.47 não oferecem suporte à compatibilidade com versões anteriores.
+* O agente do Console inicia o contato com os endpoints na opção 2 primeiro.  Se esses terminais não estiverem acessíveis, ele entrará em contato automaticamente com os terminais na opção 1.
+* Se você usar o agente do Console com o NetApp Backup and Recovery ou o Ransomware Resilience, o sistema não oferecerá suporte aos endpoints da Opção 1.  Permitir pontos de extremidade da Opção 2 e não permitir a Opção 1.
+
+
+|===
 a| \ https://bluexpinfraprod.eastus2.data.azurecr.io \ https://bluexpinfraprod.azurecr.io a| Para obter imagens para atualizações do agente do Console.
 
 * Quando você implanta um novo agente, a verificação de validação testa a conectividade com os endpoints atuais. Se você usarlink:reference-networking-saas-console-previous.html["pontos finais anteriores"] , a verificação de validação falha. Para evitar essa falha, pule a verificação de validação.
@@ -80,3 +120,56 @@ a| Se o agente do Console estiver em uma região comercial ou soberana, você po
 
 
 | Para obter imagens para atualizações do agente do Console quando o agente do Console estiver instalado em uma região comercial ou soberana.
+
+[cols="3*"]
+|===
+| *Pontos finais anteriores* | *Pontos finais para 4.0.0 e superiores* | *Propósito* 
+
+
+ a| 
+* \ https://support.netapp.com
+* \ https://mysupport.netapp.com
+
+ a| 
+* \ https://mysupport.netapp.com
+* \ https://signin.b2c.netapp.com
+* \ https://support.netapp.com
+
+ a| 
+Para licenciamento e contato com o Suporte da NetApp .
+
+
+
+ a| 
+* \https://*.api.bluexp.netapp.com
+* \ https://api.bluexp.netapp.com
+* \https://*.cloudmanager.cloud.netapp.com
+* \ https://cloudmanager.cloud.netapp.com
+* \ https://netapp-cloud-account.auth0.com
+* \ https://netapp-cloud-account.us.auth0.com
+* \ https://console.bluexp.netapp.com
+* \https://*.console.bluexp.netapp.com
+
+ a| 
+* \ https://api.bluexp.netapp.com
+* \ https://netapp-cloud-account.auth0.com
+* \ https://netapp-cloud-account.us.auth0.com
+* \ https://console.netapp.com
+* \ https://components.console.bluexp.netapp.com
+* \ https://cdn.auth0.com
+
+ a| 
+Para operações do dia a dia.
+
+
+
+ a| 
+* \https://*.blob.core.windows.net
+* \ https://cloudmanagerinfraprod.azurecr.io
+
+ a| 
+* \ https://bluexpinfraprod.eastus2.data.azurecr.io
+* \ https://bluexpinfraprod.azurecr.io
+
+| Para obter imagens para atualizações do agente do Console. 
+|===
