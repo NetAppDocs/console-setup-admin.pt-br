@@ -123,7 +123,7 @@ a| Se o agente do Console estiver em uma região comercial ou soberana, você po
 
 [cols="3*"]
 |===
-| *Pontos finais anteriores* | *Pontos finais para 4.0.0 e superiores* | *Propósito* 
+| *Endpoints para versões 3.9.55 e anteriores* | *Pontos finais para 4.0.0 e superiores* | *Propósito* 
 
 
  a| 

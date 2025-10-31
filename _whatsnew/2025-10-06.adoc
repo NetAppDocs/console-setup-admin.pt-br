@@ -134,7 +134,7 @@ A versão 4.0.0 está disponível para modo padrão e modo restrito.
 
 A NetApp reduziu os pontos de extremidade de rede necessários para o Console e os agentes do Console, aumentando a segurança e simplificando a implantação.  É importante ressaltar que todas as implantações anteriores à versão 4.0.0 continuam com suporte total.  Embora os endpoints anteriores permaneçam disponíveis para os agentes existentes, a NetApp recomenda fortemente atualizar as regras de firewall para os endpoints atuais após confirmar as atualizações bem-sucedidas dos agentes.
 
-* link:https://docs.netapp.com/us-en/console-setup-admin/reference-networking-saas-console-previous.html#update-endpoint-list["Aprenda como atualizar sua lista de endpoints"] .
+* link:https://docs.netapp.com/us-en/console-setup-admin/reference-networking-saas-console-previous.html#update-endpoint-list["Aprenda como atualizar sua lista de endpoints e veja uma comparação."].
 * link:https://docs.netapp.com/us-en/console-setup-admin/reference-networking-saas-console.html["Saiba mais sobre os pontos de extremidade necessários."]
 
 
