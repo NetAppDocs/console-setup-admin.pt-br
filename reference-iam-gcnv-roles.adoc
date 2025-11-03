@@ -19,5 +19,5 @@ Você pode atribuir a seguinte função aos usuários para fornecer a eles acess
 O Google Cloud NetApp Volumes usa a seguinte função:
 
 * * Administrador do Google Cloud NetApp Volumes *: Descubra e gerencie o Google Cloud NetApp Volumes no Console.
-* *Usuário do Google Cloud NetApp Volumes *: Visualize o Google Cloud NetApp Volumes no Console.
+* *Visualizador de Google Cloud NetApp Volumes *: Visualize os Google Cloud NetApp Volumes no Console.
 
