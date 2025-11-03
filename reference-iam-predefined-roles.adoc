@@ -64,6 +64,9 @@ A seguir está uma lista de funções na categoria de aplicação.  Cada funçã
 | link:reference-iam-gcnv-roles.html["Administrador do Google Cloud NetApp Volumes"] | Usuários com a função Google Cloud NetApp Volumes podem descobrir e gerenciar o Google Cloud NetApp Volumes. 
 
 
+| link:reference-iam-gcnv-roles.html["Usuário do Google Cloud NetApp Volumes"] | Usuários com a função de usuário Google Cloud NetApp Volumes podem visualizar os Google Cloud NetApp Volumes. 
+
+
 | link:reference-iam-keystone-roles.html["Administrador Keystone"] | Usuários com a função de administrador do Keystone podem criar solicitações de serviço.  Permite que os usuários monitorem e visualizem o uso, os recursos e os detalhes administrativos dentro do locatário do Keystone que estão acessando. 
 
 
