@@ -77,18 +77,41 @@ O agente do Console é compatível com o Google Cloud em uma instância de VM co
 --
 Hipervisor:: É necessário um hipervisor bare metal ou hospedado certificado para executar um sistema operacional compatível.
 [[podman-versions]]Requisitos do sistema operacional e do contêiner:: O agente do Console é compatível com os seguintes sistemas operacionais ao usar o Console no modo padrão ou no modo restrito.  Uma ferramenta de orquestração de contêineres é necessária antes de instalar o agente.
-+
---
+
+
 [cols="2a,2a,2a,2a,2a"]
 |===
-| Sistema operacional | Versões de SO suportadas | Versões de agentes suportadas | Ferramenta de contêiner necessária | SELinux a 
+| Sistema operacional | Versões de SO suportadas | Versões de agentes suportadas | Ferramenta de contêiner necessária | SELinux 
 
 
  a| 
 Red Hat Enterprise Linux
+
+
+
+ a| 
  a| 
 9.1 a 9.4
 
+* Somente versões em inglês.
+* O host deve ser registrado no Red Hat Subscription Management.  Se não estiver registrado, o host não poderá acessar os repositórios para atualizar o software de terceiros necessário durante a instalação do agente.
+
+ a| 
+3.9.50 ou posterior com o Console no modo padrão ou modo restrito
+ a| 
+Podman versão 5.4.0 com podman-compose 1.5.0.
+
+<<podman-configuration,Ver requisitos de configuração do Podman>> .
+ a| 
+Suportado no modo de imposição ou no modo permissivo
+
+* O gerenciamento de sistemas Cloud Volumes ONTAP NÃO é suportado por agentes que tenham o SELinux habilitado no sistema operacional.
+
+
+
+
+ a| 
+ a| 
 8,6 a 8,10
 
 * Somente versões em inglês.
@@ -110,6 +133,10 @@ Suportado no modo de imposição ou no modo permissivo
 
  a| 
 Ubuntu
+
+
+
+ a| 
  a| 
 24,04 LTS
  a| 
@@ -122,6 +149,7 @@ Não suportado
 
 
  a| 
+ a| 
 22,04 LTS
  a| 
 3.9.50 ou posterior
@@ -131,9 +159,6 @@ Docker Engine 23.0.6 para 28.0.0.
 Não suportado
 
 |===
---
-
-
 
 
 == Etapa 4: instalar o Podman ou o Docker Engine

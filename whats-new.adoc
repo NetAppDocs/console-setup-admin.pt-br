@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: whats-new.html 
-keywords: 'what"s new, features, new, release notes, enhancements, fixes, connectors, bluexp, iam, notice, releases' 
+keywords: 'what"s new, features, new, release notes, enhancements, fixes, connectors, bluexp, iam, notice, releases, console' 
 summary: 'Saiba o que há de novo nos recursos de administração do NetApp Console : IAM, agentes do Console, credenciais do provedor de nuvem e muito mais.' 
 ---
 = O que há de novo
