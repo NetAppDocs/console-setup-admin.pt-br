@@ -131,7 +131,7 @@ Não, não é possível mover os recursos da AWS associados ao seu sistema Cloud
 
 === Como as credenciais funcionam para implantações de mercado e implantações locais?
 
-As seções acima descrevem o método de implantação recomendado para o agente do Console, que é do Console.  Você também pode implantar um agente na AWS a partir do AWS Marketplace e instalar manualmente o software do agente do Console no seu próprio host Linux.
+As seções acima descrevem o método de implantação recomendado para o agente do Console, que é do Console. Você também pode implantar um agente na AWS a partir do AWS Marketplace e pode instalar manualmente o software do agente do Console em seu próprio host Linux ou em seu vCenter.
 
 Se você usar o Marketplace, as permissões serão fornecidas da mesma maneira.  Você só precisa criar e configurar manualmente a função do IAM e, em seguida, fornecer permissões para quaisquer contas adicionais.
 

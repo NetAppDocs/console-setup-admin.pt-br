@@ -4,7 +4,7 @@
 
 
 
-== Agente de console 4.1.0
+=== Agente de console 4.1.0
 
 Esta versão do agente do Console inclui melhorias de segurança, correções de bugs e os seguintes recursos:
 
@@ -18,7 +18,7 @@ O agente do Console agora é compatível com RHEL 9.6 e Podman 5.4.0. Além diss
 
 
 
-== Administração do NetApp Console
+=== Administração do NetApp Console
 
 Esta versão inclui o seguinte:
 
