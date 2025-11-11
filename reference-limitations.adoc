@@ -36,7 +36,7 @@ Veja o artigo da Base de Conhecimentolink:https://kb.netapp.com/Advice_and_Troub
 
 === A descriptografia SSL não é suportada
 
-O Console não oferece suporte a configurações de firewall que tenham a descriptografia SSL habilitada.  Se a descriptografia SSL estiver habilitada, mensagens de erro aparecerão no Console e a instância do agente será exibida como inativa.
+O Console não oferece suporte a configurações de firewall que tenham a descriptografia SSL habilitada. Se a descriptografia SSL estiver ativada, as mensagens de erro aparecerão no Console e a instância do agente será exibida como *Desconectada*.
 
 Para maior segurança, você tem a opção delink:task-installing-https-cert.html["instalar um certificado HTTPS assinado por uma autoridade de certificação (CA)"] .
 

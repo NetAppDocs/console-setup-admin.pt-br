@@ -190,27 +190,33 @@ sudo systemctl enable --now podman.socket
 sudo dnf install python3
 ----
 . Instale o pacote do repositório EPEL se ele ainda não estiver disponível no seu sistema.
-. Se estiver usando o Red Hat Enterprise:
-+
+
+
 Esta etapa é necessária porque o podman-compose está disponível no repositório Extra Packages for Enterprise Linux (EPEL).
 
-+
-Para Red Hat Enterprise Linux 9:
-
+. Se estiver usando o Red Hat Enterprise 9:
 +
 [source, cli]
 ----
 sudo dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm
 ----
 +
-Para Red Hat Enterprise Linux 8:
+.. Instale o pacote podman-compose 1.5.0.
++
+[source, cli]
+----
+sudo dnf install podman-compose-1.5.0
+----
 
+
+. Se estiver usando o Red Hat Enterprise Linux 8:
 +
 [source, cli]
 ----
 sudo dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
 ----
-. Instale o pacote podman-compose 1.0.6.
++
+.. Instale o pacote podman-compose 1.0.6.
 +
 [source, cli]
 ----
@@ -220,39 +226,41 @@ sudo dnf install podman-compose-1.0.6
 
 NOTE: Usando o `dnf install` O comando atende ao requisito de adicionar podman-compose à variável de ambiente PATH.  O comando de instalação adiciona podman-compose a /usr/bin, que já está incluído no `secure_path` opção no host.
 
-. Se estiver usando o Red Hat Enterprise Linux 8, verifique se sua versão do Podman está usando o NetAvark com o DNS Aardvark em vez do CNI.
-+
-.. Verifique se o seu networkBackend está definido como CNI executando o seguinte comando:
+.. Se estiver usando o Red Hat Enterprise Linux 8, verifique se sua versão do Podman está usando o NetAvark com o DNS Aardvark em vez do CNI.
+
+
+. Verifique se o seu networkBackend está definido como CNI executando o seguinte comando:
 +
 [source, cli]
 ----
 podman info | grep networkBackend
 ----
-.. Se o networkBackend estiver definido como `CNI` , você precisará alterá-lo para `netavark` .
-.. Instalar `netavark` e `aardvark-dns` usando o seguinte comando:
+. Se o networkBackend estiver definido como `CNI` , você precisará alterá-lo para `netavark` .
+. Instalar `netavark` e `aardvark-dns` usando o seguinte comando:
 +
 [source, cli]
 ----
 dnf install aardvark-dns netavark
 ----
-.. Abra o `/etc/containers/containers.conf` arquivo e modifique a opção network_backend para usar "netavark" em vez de "cni".
-
-
+. Abra o `/etc/containers/containers.conf` arquivo e modifique a opção network_backend para usar "netavark" em vez de "cni".
 +
 Se `/etc/containers/containers.conf` não existe, faça as alterações de configuração para `/usr/share/containers/containers.conf` .
 
-. Reinicie o podman.
++
+.. Reinicie o podman.
 +
 [source, cli]
 ----
 systemctl restart podman
 ----
-. Confirme se networkBackend foi alterado para "netavark" usando o seguinte comando:
+.. Confirme se networkBackend foi alterado para "netavark" usando o seguinte comando:
 +
 [source, cli]
 ----
 podman info | grep networkBackend
 ----
+
+
 
 
 --
@@ -671,7 +679,7 @@ Onde <versão> é a versão do agente do Console que você baixou.
  ./NetApp_Console_Agent_Cloud_<version> --proxy <HTTP or HTTPS proxy server> --cacert <path and file name of a CA-signed certificate>
 ----
 +
-Você precisará adicionar informações de proxy se sua rede exigir um proxy para acesso à Internet.  Você pode adicionar um proxy transparente ou explícito.  Os parâmetros --proxy e --cacert são opcionais e você não será solicitado a adicioná-los.  Se você tiver um servidor proxy, precisará inserir os parâmetros conforme mostrado.
+Você precisará adicionar informações de proxy se sua rede exigir um proxy para acesso à Internet. Você pode adicionar um proxy explícito durante a instalação. Os parâmetros --proxy e --cacert são opcionais e você não será solicitado a adicioná-los. Se você tiver um servidor proxy explícito, precisará inserir os parâmetros conforme mostrado.
 
 +
 Aqui está um exemplo de configuração de um servidor proxy explícito com um certificado assinado por uma CA:
@@ -711,16 +719,9 @@ Por exemplo:
 
 
 
-`--cacert`especifica um certificado assinado pela CA a ser usado para acesso HTTPS entre o agente do Console e o servidor proxy.  Este parâmetro é necessário para servidores proxy HTTPS, servidores proxy de interceptação e servidores proxy transparentes.
 
-+ Aqui está um exemplo de configuração de um servidor proxy transparente.  Ao configurar um proxy transparente, você não precisa definir o servidor proxy.  Você só adiciona um certificado assinado pela CA ao host do agente do Console:
+NOTE: Se você deseja configurar um proxy transparente, pode fazê-lo após a instalação. link:reference-agent-maint-console.html["Saiba mais sobre o console de manutenção do agente."]
 
-+
-
-[source, cli]
-----
- ./NetApp_Console_Agent_Cloud_v4.0.0 --cacert /tmp/cacert/certificate.cer
-----
 . Se você usou o Podman, precisará ajustar a porta aardvark-dns.
 +
 .. SSH para a máquina virtual do agente do Console.

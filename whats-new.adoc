@@ -18,7 +18,34 @@ Saiba o que há de novo nos recursos de administração do NetApp Console : gere
 
 
 
-== 6 de outubro de 2025
+== 10 de novembro de 2025
+
+
+
+== Agente de console 4.1.0
+
+Esta versão do agente do Console inclui melhorias de segurança, correções de bugs e os seguintes recursos:
+
+A versão 4.1.0 está disponível para modo padrão e modo restrito.
+
+.Indicadores de status do agente renomeados
+Renomeamos os indicadores de status do agente do Console de *Ativo* e *Inativo* para *Conectado* e *Desconectado* para tornar sua finalidade mais clara.
+
+.Suporte para Red Hat Enterprise Linux (RHEL) 9.6 e Podman 5.4.0
+O agente do Console agora é compatível com RHEL 9.6 e Podman 5.4.0. Além disso, ao usar o RHEL 9 e versões superiores, a NetApp oferece suporte ao podman-compose 1.5.0.
+
+
+
+== Administração do NetApp Console
+
+Esta versão inclui o seguinte:
+
+.Novo endereço de e-mail para notificações do NetApp Console
+O endereço de e-mail que envia notificações do NetApp Console foi alterado de *service@console.netapp.com* para *service@console.netapp.com*. A NetApp recomenda atualizar todas as regras de e-mail para permitir *service@console.netapp.com* para garantir que você continue recebendo notificações por e-mail do NetApp Console .
+
+
+
+== 06 de outubro de 2025
 
 
 
@@ -395,7 +422,7 @@ link:https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-r
 
 
 
-== 9 de junho de 2025
+== 09 de junho de 2025
 
 
 
@@ -640,7 +667,7 @@ O NetApp Keystone estará disponível em breve na BlueXP e agora está em versã
 
 
 
-== 6 de março de 2025
+== 06 de março de 2025
 
 
 
@@ -872,7 +899,7 @@ Para ambos os cenários, você pode continuar a usar os pontos de extremidade ex
 
 
 
-== 9 de dezembro de 2024
+== 09 de dezembro de 2024
 
 
 
@@ -965,7 +992,7 @@ Este patch inclui correções de bugs.
 
 
 
-== 7 de outubro de 2024
+== 07 de outubro de 2024
 
 
 
@@ -1106,7 +1133,7 @@ Para mais detalhes sobre o modo privado, incluindo como atualizar, consulte o se
 
 
 
-== 9 de setembro de 2024
+== 09 de setembro de 2024
 
 
 

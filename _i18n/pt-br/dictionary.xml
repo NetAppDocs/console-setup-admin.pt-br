@@ -361,8 +361,6 @@
   <block id="e115a77efdd4b6a7256261431461cb96" category="list-text">Se a senha incluir qualquer um dos seguintes caracteres especiais, você deverá escapar esse caractere especial colocando uma barra invertida antes dele: &amp; ou !</block>
   <block id="506c2c0c7f5b70af3df68c45c46f45a7" category="paragraph">Por exemplo:</block>
   <block id="9a8e93f292200e4d86cfd716262b53cc" category="paragraph">\http://bxpproxyuser:netapp1\!@endereço:3128</block>
-  <block id="5ee4651c5c9cc230b5562d22f6bee0d6" category="paragraph"><block ref="a2bb8d2428da5c2a723c47bd3b78308d" prefix="" category="inline-code"></block>especifica um certificado assinado pela CA a ser usado para acesso HTTPS entre o agente do Console e o servidor proxy.  Este parâmetro é necessário para servidores proxy HTTPS, servidores proxy de interceptação e servidores proxy transparentes.</block>
-  <block id="546e142a2330599c0ba92c6922dd0480" category="paragraph">+ Aqui está um exemplo de configuração de um servidor proxy transparente.  Ao configurar um proxy transparente, você não precisa definir o servidor proxy.  Você só adiciona um certificado assinado pela CA ao host do agente do Console:</block>
   <block id="4d286ab7c41699ac1c0222a6a25c8ee6" category="list-text">Se você usou o Podman, precisará ajustar a porta aardvark-dns.</block>
   <block id="e8dcd2e9fa3c43b9aef9e395e7e2b4c9" category="list-text">SSH para a máquina virtual do agente do Console.</block>
   <block id="dbd4c3db8125866be9bb5a796f445d43" category="list-text">Abra o arquivo podman _/usr/share/containers/containers.conf_ e modifique a porta escolhida para o serviço DNS do Aardvark.  Por exemplo, altere para 54.</block>
@@ -536,7 +534,6 @@
   <block id="d85624226a34d354eb24bd9f58803ee7" category="list-text">Habilite e inicie o serviço podman.socket.</block>
   <block id="c258dc586685c07a851bfdce98251de9" category="list-text">Instale python3.</block>
   <block id="97c0d440ee76e86ece38ee9da4a462cb" category="list-text">Instale o pacote do repositório EPEL se ele ainda não estiver disponível no seu sistema.</block>
-  <block id="07a2769ace9f16b5207f20d01a394569" category="list-text">Se estiver usando o Red Hat Enterprise:</block>
   <block id="93052470e7c6a20358c8d89c161e4880" category="paragraph">Esta etapa é necessária porque o podman-compose está disponível no repositório Extra Packages for Enterprise Linux (EPEL).</block>
   <block id="6f3a42415c589950b9ae4d3fe1f87dc7" category="list-text">Instale o pacote podman-compose 1.0.6.</block>
   <block id="ec7c87651a5ede2a98ad4091fe48b517" category="admonition">Usando o<block ref="02c7499137a5d8d10292d68634eb22a0" prefix=" " category="inline-code"></block> O comando atende ao requisito de adicionar podman-compose à variável de ambiente PATH.  O comando de instalação adiciona podman-compose a /usr/bin, que já está incluído no<block ref="c9bac30d1d0554c0790285219e5ad518" prefix=" " category="inline-code"></block> opção no host.</block>
@@ -1763,12 +1760,10 @@
   <block id="9b73989307c1975dfa4d5e1581e4afe8" category="paragraph">Os arquivos de aviso fornecem informações sobre direitos autorais e licenças de terceiros usados no software NetApp .</block>
   <block id="50dbf63cd0ab8144a287e5cd6a0f1de2" category="inline-link-macro">Aviso para o NetApp Console</block>
   <block id="2fdb3c88062031f1ec65eef60690cee3" category="paragraph"><block ref="2fdb3c88062031f1ec65eef60690cee3" category="inline-link-macro-rx"></block></block>
-  <block id="dee61e6ddd6fefdf0afebb3453a2f2ae" category="summary">Saiba mais sobre o agente do Console antes de implantá-lo.</block>
   <block id="40ee256581d30fba4f74b0c1e02c7709" category="doc">Configuração padrão para o agente do Console</block>
   <block id="7cfc350cfd83ea139353035474462a76" category="paragraph">Saiba mais sobre a configuração do agente do Console antes de implantá-lo.</block>
   <block id="87047facc49847cec237f6d055d56b31" category="section-title">Configuração padrão com acesso à Internet</block>
   <block id="ee67bef980f9156a14c8bfbb2de4f437" category="paragraph">Os seguintes detalhes de configuração se aplicam se você implantou um agente do Console do NetApp Console, do marketplace do seu provedor de nuvem ou se instalou manualmente um agente do Console em um host Linux local com acesso à Internet.</block>
-  <block id="5eeca886fa07462826a9ea747483f528" category="section-title">Detalhes AWS</block>
   <block id="716a3a2cd4a75b8f8b3cee509c10b300" category="paragraph">Se você implantou um agente do Console a partir do Console ou do marketplace do provedor de nuvem, observe o seguinte:</block>
   <block id="33ff271280dc3e0c2c15bf39aeefdeb9" category="list-text">O tipo de instância EC2 é t3.2xlarge.</block>
   <block id="7c42c6e2f8295dada12f50f825327ddf" category="list-text">O sistema operacional da imagem é o Ubuntu 22.04 LTS.</block>
@@ -1776,22 +1771,15 @@
   <block id="688aea6136f160e02c8d5bbec6894343" category="list-text">A instalação inclui o Docker Engine, que é a ferramenta de orquestração de contêineres necessária.</block>
   <block id="8061654f55b31a1347dadde5417b3bbe" category="list-text">O nome de usuário para a instância do EC2 Linux é ubuntu (para agentes criados antes de maio de 2023, o nome de usuário é ec2-user).</block>
   <block id="efabd80ebdd217a47d9be936e5f0b8aa" category="list-text">O disco padrão do sistema é um disco gp2 de 100 GiB.</block>
-  <block id="b8c4a5bd8ed4eb470e80955a542dd4bf" category="section-title">Detalhes do Azure</block>
   <block id="f637fe372218bb6ee39fd481301dc99f" category="list-text">O tipo de VM é Standard_D8s_v3.</block>
   <block id="474a089504b47eb34ee00ee62f121108" category="list-text">O disco do sistema padrão é um disco SSD premium de 100 GiB.</block>
-  <block id="f246cf5f23e765f0a7ebed4a6c1d923a" category="section-title">Detalhes do Google Cloud</block>
   <block id="691706b9c4449b81a486ce65a12e3b41" category="paragraph">Se você implantou um agente do Console a partir do Console, observe o seguinte:</block>
   <block id="d8c41b98cc9656d72fb99f79ff2425ba" category="list-text">A instância da VM é n2-standard-8.</block>
   <block id="6cb5fb9b61376b8ee3092321445fdea4" category="list-text">O disco do sistema padrão é um disco persistente SSD de 100 GiB.</block>
   <block id="bc4aa6323016172de14a6835883b27c7" category="section-title">Pasta de instalação</block>
-  <block id="aca8e180ed4d4b3e9c008a4c9e1a9221" category="paragraph">A pasta de instalação do agente está no seguinte local:</block>
-  <block id="1290fecb35d9c7e8b4f1faf1f9b5c7f3" category="paragraph">/opt/aplicativo/netapp/cloudmanager</block>
   <block id="81fae4ea40cc442afa43dab4cc001004" category="section-title">Arquivos de log</block>
   <block id="af22c16aeca9d8bc2515764efff73455" category="paragraph">Os arquivos de log estão contidos nas seguintes pastas:</block>
-  <block id="ff6e28c8eaa73c74f132f30b8a504071" category="list-text">/opt/application/netapp/cloudmanager/log ou</block>
-  <block id="f41aa0898b72dcd91cd63bd3d33d4258" category="list-text">/opt/application/netapp/service-manager-2/logs (começando com novas instalações 3.9.23)</block>
   <block id="e414095fd4f025b97d685f64e5c1c7af" category="paragraph">Os logs nessas pastas fornecem detalhes sobre o agente do Console.</block>
-  <block id="b7fb1cb20b803995e802d3588f424efa" category="list-text">/opt/aplicativo/netapp/cloudmanager/docker_occm/dados/log</block>
   <block id="d1a35865336c23dad37aac219ce9f1eb" category="paragraph">Os logs nesta pasta fornecem detalhes sobre os serviços de nuvem e o serviço do Console executado no agente do Console.</block>
   <block id="aa72bf3f5aa3c9bc5daf446b3f9fdc56" category="section-title">Serviço de agente de console</block>
   <block id="f7a5a4e55ec5894123bb84b3d77ad464" category="list-text">O serviço do agente do Console é chamado occm.</block>
@@ -1803,8 +1791,6 @@
   <block id="953a0ee991cb0f7fd649dff3efa51614" category="section-title">Configuração padrão sem acesso à Internet</block>
   <block id="23b1e0717b9b8b52e9ae0f29f7fc4241" category="inline-link-macro">Saiba mais sobre esta opção de instalação</block>
   <block id="1422f7c6b7eca106db4cb823ab49f18a" category="paragraph">A configuração a seguir se aplica se você instalou manualmente o agente do Console em um host Linux local que não tem acesso à Internet. <block ref="571c6581ab5c68db9f7f7beaff42a50d" category="inline-link-macro-rx"></block> .</block>
-  <block id="7068d488f38430eabf6c395a593e8e5a" category="paragraph">/opt/aplicativo/netapp/ds</block>
-  <block id="a15b1a7954f2d926c5ee7f261a97b4d2" category="paragraph">/var/lib/docker/volumes/ds_occmdata/_data/log</block>
   <block id="76a8602c4b7b9c5cc69c5fd8bd4bd2e0" category="paragraph">Os logs nesta pasta fornecem detalhes sobre o agente do Console e as imagens do Docker.</block>
   <block id="590b2ea5933ad8ead3c9a15a914f1a9c" category="list-text">Todos os serviços estão sendo executados dentro de contêineres docker</block>
   <block id="f76b4c57c56377745199382d59cdeed3" category="paragraph">Os serviços dependem do serviço de tempo de execução do Docker em execução</block>
@@ -2164,7 +2150,6 @@
   <block id="0b4f61b04d569052cea1ace94b4690a4" category="cell"><block ref="0b4f61b04d569052cea1ace94b4690a4" category="inline-link-macro-rx"></block></block>
   <block id="b30f7fc42ef226f0249c91a8c5e5e7da" category="cell">Ver apenas informações.</block>
   <block id="1393a4279651a3334e20f39925a139f5" category="cell">Visualizador de classificação</block>
-  <block id="f373bf1ea256b4e774a8cdeea678371c" category="cell">Permite que os usuários visualizem os resultados da verificação de NetApp Data Classification .  Usuários com essa função podem visualizar informações de conformidade e gerar relatórios para recursos aos quais têm permissão de acesso.  Esses usuários não podem habilitar ou desabilitar a verificação de volumes, buckets ou esquemas de banco de dados.  A classificação não tem um papel de visualizador.</block>
   <block id="c10ec7420a89528925b58b685b8759d7" category="cell"><block ref="c10ec7420a89528925b58b685b8759d7" category="inline-link-macro-rx"></block></block>
   <block id="2b0e5e5222c0782da1fb9f13296d9728" category="cell">Gerencie ações nas guias Proteger, Alertas, Recuperar, Configurações e Relatórios do NetApp Ransomware Resilience.</block>
   <block id="afa8b9420190b4b20d1eb84b7e53d1d6" category="cell"><block ref="afa8b9420190b4b20d1eb84b7e53d1d6" category="inline-link-macro-rx"></block></block>
@@ -2253,7 +2238,6 @@
   <block id="3908aae7c317936ea6bb5e64e5b1e19b" category="inline-link-macro">Conflito de IP do agente com a rede existente</block>
   <block id="e0f2ecf720846ace68fd17b91a2fe18b" category="paragraph">Veja o artigo da Base de Conhecimento<block ref="7fdfcc240d5e57de761ad01a7e9f5a42" category="inline-link-macro-rx"></block> para obter instruções sobre como alterar o endereço IP das interfaces do agente.</block>
   <block id="1bc21092e961975ea4123f4414693f69" category="section-title">A descriptografia SSL não é suportada</block>
-  <block id="312404bd3f092c4ae2981261f9be883d" category="paragraph">O Console não oferece suporte a configurações de firewall que tenham a descriptografia SSL habilitada.  Se a descriptografia SSL estiver habilitada, mensagens de erro aparecerão no Console e a instância do agente será exibida como inativa.</block>
   <block id="7bd92bd111bfbf23b12f73672eb0dd1c" category="inline-link-macro">instalar um certificado HTTPS assinado por uma autoridade de certificação (CA)</block>
   <block id="c3ce271d53cbf6a7afd137a37f4ee8d6" category="paragraph">Para maior segurança, você tem a opção de<block ref="11df3d19916b70ba1d82d33e876689bc" category="inline-link-macro-rx"></block> .</block>
   <block id="e949623e23f093c132f86ba2771e8a2e" category="section-title">Página em branco ao carregar a interface do usuário local</block>
@@ -2261,8 +2245,6 @@
   <block id="1f8685c3e9591b0ac770ad3c60e0ea9b" category="paragraph">Esse problema está relacionado a um problema de cache.  A solução alternativa é usar uma sessão anônima ou privada do navegador.</block>
   <block id="3b9690f89f4029f3b099f8b7c371b951" category="section-title">Hosts Linux compartilhados não são suportados</block>
   <block id="55334f6c7481482659eaa1b0aef1601a" category="paragraph">O agente não é suportado em uma VM compartilhada com outros aplicativos.  A VM deve ser dedicada ao software do agente.</block>
-  <block id="39c131bd8f90ef7749228972a6486162" category="section-title">Agentes e extensões de terceiros</block>
-  <block id="4b7e9b197f794c9b7019035a05713f81" category="paragraph">Agentes de terceiros ou extensões de VM não são suportados na VM do agente.</block>
   <block id="7b7f8f1228adee0b98f669d033848211" category="section-title">Atualize sua lista de endpoints para a lista revisada para 4.0.0 e superior</block>
   <block id="4c9c91c3daf4ca466e31f9eaa8cef3d2" category="paragraph">A partir da versão 4.0.0, os agentes do Console exigem menos endpoints.  Implantações existentes anteriores à versão 4.0.0 continuam com suporte.  Após atualizar para a versão 4.0.0 ou posterior, você pode remover os endpoints antigos da sua lista de permissões quando for conveniente.</block>
   <block id="ae702d0a49628819c46d528d565558a9" category="inline-link-macro">Pontos de extremidade suportados para 4.0.0 e superior</block>
@@ -3321,7 +3303,6 @@
   <block id="349027440539dc46278ee9e93260025d" category="section-title">Atualize o proxy do agente do Console se ele perder o acesso à Internet</block>
   <block id="71164e4bc7911ce651a366899f4f487b" category="paragraph">Se a configuração de proxy da sua rede mudar, seu agente poderá perder o acesso à Internet.  Por exemplo, se alguém alterar a senha do servidor proxy ou atualizar o certificado.  Nesse caso, você precisará acessar a interface do usuário diretamente do host do agente do Console e atualizar as configurações.  Certifique-se de ter acesso à rede do host do agente do Console e de poder efetuar login no Console.</block>
   <block id="54734e5bba3b83b2757e43d1ff24b2c4" category="section-title">Habilitar tráfego direto da API</block>
-  <block id="2a398a7caf83846d0b6a5ffb7e46e036" category="paragraph">Se você configurou um agente do Console para usar um servidor proxy, poderá habilitar o tráfego de API direto no agente do Console para enviar chamadas de API diretamente aos serviços do provedor de nuvem sem passar pelo proxy. Os agentes em execução no AWS, Azure ou Google Cloud oferecem suporte a essa opção.</block>
   <block id="c37870a98a047f7cae1ee48e164d5230" category="paragraph">Se você desabilitar o Azure Private Links com o Cloud Volumes ONTAP e usar pontos de extremidade de serviço, habilite o tráfego de API direto.  Caso contrário, o tráfego não será roteado corretamente.</block>
   <block id="ac10c9401f16ed5ff0a029bce2712adc" category="inline-link">Saiba mais sobre como usar um Azure Private Link ou pontos de extremidade de serviço com o Cloud Volumes ONTAP</block>
   <block id="7036572e3eccb7a8e3ea89ae1a860266" category="paragraph"><block ref="7036572e3eccb7a8e3ea89ae1a860266" category="inline-link-rx"></block></block>
@@ -4554,7 +4535,6 @@
   <block id="776c814c9b0c72880dcd5eaf49118ff2" category="paragraph">Você pode adicionar e remover o Uniform Resource Identifier (URI) de um agente.</block>
   <block id="ae3e99ad1c50edf4e25c2d64cf2eefa5" category="list-text">Expanda a barra *URIs do agente* para visualizar os URIs do agente.</block>
   <block id="fb9b59364e346ccfcbfc4636f13644b5" category="list-text">Adicione e remova URIs e selecione *Aplicar*.</block>
-  <block id="b6abeefbbae1a52ba573ab84b4b8c35a" category="summary">Se você usar vários agentes do Console, poderá alternar entre eles diretamente no Console.  Você também pode gerenciar um único sistema com vários agentes do Console.</block>
   <block id="322805244d3cfbc06b20be41ebf54d36" category="doc">Trabalhar com vários agentes do Console</block>
   <block id="c73b380f2cf43cbe65e10db11adc4709" category="paragraph">Se você usar vários agentes do Console, poderá alternar entre eles diretamente do Console para visualizar os sistemas associados.</block>
   <block id="74bd0729b4aa2adbd6a34d8410d08abb" category="paragraph">Por exemplo, em um ambiente multinuvem, você pode ter um agente na AWS e outro no Google Cloud.  Alterne entre esses agentes para gerenciar os sistemas Cloud Volumes ONTAP nos respectivos ambientes de nuvem.</block>
@@ -4563,18 +4543,6 @@
   <block id="39a66cbd55302576b83a0a5471064712" category="inline-image-macro">Uma captura de tela que mostra o ícone Agentes no cabeçalho e a ação Alternar.</block>
   <block id="2bf29a9ec2a497699149ddb5c47450d4" category="paragraph"><block ref="2bf29a9ec2a497699149ddb5c47450d4" category="inline-image-macro-rx" type="image"></block></block>
   <block id="7453879259a0b97c6566954016435290" category="paragraph">O Console é atualizado e mostra os sistemas associados ao agente selecionado.</block>
-  <block id="5cb02414ba99e03fa83bad53db22c1e4" category="section-title">Configurar uma configuração de recuperação de desastres</block>
-  <block id="30e4546ef393337cf90d00ca9e7087d9" category="paragraph">Você pode gerenciar um sistema com vários agentes do Console ao mesmo tempo para fins de recuperação de desastres.  Se um agente do Console ficar inativo, você pode alternar para o outro agente para gerenciar o sistema imediatamente.</block>
-  <block id="093c50014a3f6a42c69939ec5e59a13b" category="list-text">Alterne para o outro agente do Console que você deseja gerenciar com o agente do Console.</block>
-  <block id="7a9a9f715597e50c4cb86a39ec829d54" category="list-text">Descubra o sistema existente.</block>
-  <block id="08018a7c53e51cbc09b4bf8d9664fd5e" category="inline-link">Adicionar sistemas Cloud Volumes ONTAP existentes ao Console</block>
-  <block id="a6725a99f3665240f29a037172d05628" category="list-text"><block ref="a6725a99f3665240f29a037172d05628" category="inline-link-rx"></block></block>
-  <block id="a1ebf612d281c8e7fb16bbfa253b9627" category="inline-link">Descubra os clusters ONTAP</block>
-  <block id="49aaf65c31a811a37b2627a951f6f6d2" category="list-text"><block ref="49aaf65c31a811a37b2627a951f6f6d2" category="inline-link-rx"></block></block>
-  <block id="6bf1988b3312f00ea9a8a52aa7a47355" category="list-text">Se você estiver gerenciando um sistema Cloud Volumes ONTAP , ajuste o Modo de Gerenciamento de Capacidade para *Modo Manual*.</block>
-  <block id="0bf2e021b970775f65586d6866bfeb5f" category="paragraph">Para evitar problemas de contenção, somente o agente principal do Console deve ser definido como *Modo Automático*.</block>
-  <block id="f05a0e154340f7c017b3a9bfa5a8bf05" category="inline-link">Saiba mais sobre o modo de gerenciamento de capacidade</block>
-  <block id="17fc88f224620f6881e6e779aa01025c" category="paragraph"><block ref="17fc88f224620f6881e6e779aa01025c" category="inline-link-rx"></block></block>
   <block id="1e12fbabb20fb5fd9d147dfb17d80816" category="summary">Dependendo das ações que você realizou no Console, você pode ter associado credenciais do ONTAP e credenciais do NetApp Support Site (NSS) ao seu login de usuário.  Você pode visualizar e gerenciar essas credenciais depois de associá-las.  Por exemplo, se você alterar a senha dessas credenciais, será necessário atualizar a senha no Console.</block>
   <block id="d86c06c14b06c848fca4417d1ccfa279" category="doc">Gerenciar credenciais associadas ao seu login do NetApp Console</block>
   <block id="823a6e1d7fe661be55dd3af05f972b11" category="section-title">Credenciais ONTAP</block>
@@ -5130,11 +5098,9 @@
   <block id="e1b145fbf942267f38a8e6f0928d8629" category="paragraph"><block ref="9ff6aead716ef57f3a1e9e40a858062f" prefix="" category="inline-code"></block></block>
   <block id="0bb43692ecd0352eecc69c235e34d6f0" category="paragraph">_silent_ executa o script sem solicitar sua confirmação.</block>
   <block id="5706dd8bbae1725311aa98f5ff571442" category="section-title">Remover agentes do Console do Console</block>
-  <block id="d6e4f33a31f72ef4b58be87971dbaf7e" category="paragraph">Se um agente do Console estiver inativo, você poderá removê-lo da lista de agentes.  Você pode fazer isso se excluir a máquina virtual do agente ou se desinstalar o software do agente.</block>
   <block id="6535e883467a2f7723aa12bfbf398d49" category="paragraph">Observe o seguinte sobre a remoção de um agente do Console:</block>
   <block id="41b9dde34c587a177c2f3827a8427dfd" category="list-text">Esta ação não exclui a máquina virtual.</block>
   <block id="4d921e8b119cda6cf295382929919d43" category="list-text">Esta ação não pode ser revertida: depois de remover um agente do Console, você não poderá adicioná-lo novamente.</block>
-  <block id="3865cf3e4751d28b58d7666313ad5652" category="list-text">Na página *Visão geral*, selecione o menu de ação para um agente inativo e selecione *Remover agente*.</block>
   <block id="592190ac81807f2097b7f4253f7b5646" category="list-text">Digite o nome do agente para confirmar e selecione *Remover*.</block>
   <block id="2c474831a621d6f0b4bdd5da67196b84" category="summary">Quando você usa o modo padrão ou o modo restrito, o NetApp Console atualiza automaticamente o agente do Console para a versão mais recente, desde que o agente do Console tenha acesso de saída à Internet para obter a atualização do software.</block>
   <block id="ca901ca59322c0976d1191fbab40ddfb" category="doc">Gerenciar atualizações do agente do console</block>
@@ -5197,24 +5163,19 @@
   <block id="54fd6ad42040e4dcd0dcda5cc49c6c66" category="summary">Saiba o que há de novo nos recursos de administração do NetApp Console : IAM, agentes do Console, credenciais do provedor de nuvem e muito mais.</block>
   <block id="490414e0366b091220802d406e52c076" category="doc">O que há de novo</block>
   <block id="3243765239f2c6f00af00297914a69d4" category="paragraph">Saiba o que há de novo nos recursos de administração do NetApp Console : gerenciamento de identidade e acesso (IAM), agentes do Console, credenciais do provedor de nuvem e muito mais.</block>
-  <block id="91d6aafc857e46203357e992ab4434f8" category="section-title">6 de outubro de 2025</block>
   <block id="b9d888f58b09c4007db0247286e392b5" category="section-title">11 de agosto de 2025</block>
   <block id="328e39c031d3f6a77403904d6dda2377" category="section-title">31 de julho de 2025</block>
   <block id="6bf86021a24fd009a31d432250a9ad20" category="section-title">21 de julho de 2025</block>
   <block id="f2673d4a3fe0162a501d43f5168ae950" category="section-title">14 de julho de 2025</block>
-  <block id="f27f1ce6df3e2ec2518f77e8e1a4a531" category="section-title">9 de junho de 2025</block>
   <block id="1971cba9fca6bc598cf10a08dfb20cb6" category="section-title">29 de maio de 2025</block>
   <block id="4409983c60e456858bb3e9ef5737f98a" category="section-title">14 de abril de 2025</block>
   <block id="5f2734b84896bdabcf7fd3574325d116" category="section-title">28 de março de 2025</block>
   <block id="f070435ef55d6c7cc1db59f0a41a4609" category="section-title">10 de março de 2025</block>
-  <block id="278edfabbac204688aa13f79c6f52497" category="section-title">6 de março de 2025</block>
   <block id="df3f743aae5476a7b16bbbc329251f85" category="section-title">18 de fevereiro de 2025</block>
   <block id="c523b074da0b63e607578686184d5981" category="section-title">10 de fevereiro de 2025</block>
   <block id="2b513ec32615ab736c1cab315db516f8" category="section-title">13 de janeiro de 2025</block>
   <block id="c33f35ab44944cc0d09e5bb702125592" category="section-title">16 de dezembro de 2024</block>
-  <block id="1f86b1e4048d088ce153a6f451fb30d6" category="section-title">9 de dezembro de 2024</block>
   <block id="a1fe52ea216874a5214f41ae7e5bbd63" category="section-title">10 de outubro de 2024</block>
-  <block id="e5182edc3707e8e354c40ab7fa819f39" category="section-title">7 de outubro de 2024</block>
   <block id="964635dcf6206ebb279b58d13cf69a92" category="section-title">30 de setembro de 2024</block>
   <block id="2e5948b55d019081bde9b17268d72c2c" category="section-title">Conector 3.9.44</block>
   <block id="eef503d0bc4de5d76d47f4691b412e15" category="paragraph">Esta versão inclui suporte para o Docker Engine 26, um aprimoramento para certificados SSL e correções de bugs.</block>
@@ -5603,4 +5564,49 @@
   <block id="caf28471250404467f130940e7fd6e28" category="cell">Usuários com a função de usuário Google Cloud NetApp Volumes podem visualizar os Google Cloud NetApp Volumes.</block>
   <block id="ab925d8c9a6924f34df64e8e1fb1a38d" category="list-text">*Visualizador de Google Cloud NetApp Volumes *: Visualize os Google Cloud NetApp Volumes no Console.</block>
   <block id="7d04a8adb8b138151b42f809761295c7" category="cell"><block ref="7d04a8adb8b138151b42f809761295c7" category="inline-link-macro-rx"></block></block>
+  <block id="a5e170ce8c9d104f0b20e67e54257be5" category="paragraph">Você precisará adicionar informações de proxy se sua rede exigir um proxy para acesso à Internet. Você pode adicionar um proxy explícito durante a instalação. Os parâmetros --proxy e --cacert são opcionais e você não será solicitado a adicioná-los. Se você tiver um servidor proxy explícito, precisará inserir os parâmetros conforme mostrado.</block>
+  <block id="247a6a0ee254b2ff09347b727ee46227" category="inline-link-macro">Saiba mais sobre o console de manutenção do agente.</block>
+  <block id="ed63faa45dd9543220a2183fa0e02b97" category="admonition">Se você deseja configurar um proxy transparente, pode fazê-lo após a instalação. <block ref="6d6c38ccb358695b7ab850225fcd83aa" category="inline-link-macro-rx"></block></block>
+  <block id="fbcd7669a7a0c8cc9053c7c78029654b" category="admonition">Não é possível definir um certificado para um servidor proxy transparente ao instalar manualmente o agente do Console. Se precisar definir um certificado para um servidor proxy transparente, você deverá usar o Console de Manutenção após a instalação. Saiba mais sobre o<block ref="d3f69ee6935d5f5f8542f4da69ac2bb6" category="inline-link-macro-rx"></block> .</block>
+  <block id="4fcd2b24226e5ab1f33572cdc55d9b7b" category="list-text">Se estiver usando o Red Hat Enterprise 9:</block>
+  <block id="334ed7efb24267c8a9d5f60a214ee627" category="list-text">Instale o pacote podman-compose 1.5.0.</block>
+  <block id="83291537b9ae75a78c7add56b73a4688" category="list-text">Se estiver usando o Red Hat Enterprise Linux 8:</block>
+  <block id="9c1b6a208384484254769349d91e3af9" category="doc">Agente de console 4.1.0</block>
+  <block id="e8cdaf5bab63b64f0740dc40a9389ed9" category="paragraph">Esta versão do agente do Console inclui melhorias de segurança, correções de bugs e os seguintes recursos:</block>
+  <block id="e32e1b9613d2e086e1fc46ae7489620c" category="paragraph">A versão 4.1.0 está disponível para modo padrão e modo restrito.</block>
+  <block id="650940dddaeb353d547fc2674ba4d35b" category="paragraph-title">Indicadores de status do agente renomeados</block>
+  <block id="9722491a4236a9be86f414fa5b3eebb8" category="paragraph">Renomeamos os indicadores de status do agente do Console de *Ativo* e *Inativo* para *Conectado* e *Desconectado* para tornar sua finalidade mais clara.</block>
+  <block id="d9e7da7d4b9cc9086a7ab3a5a270f7da" category="paragraph-title">Suporte para Red Hat Enterprise Linux (RHEL) 9.6 e Podman 5.4.0</block>
+  <block id="d90d113f70d4f4d024f99f4015bbbb96" category="paragraph">O agente do Console agora é compatível com RHEL 9.6 e Podman 5.4.0. Além disso, ao usar o RHEL 9 e versões superiores, a NetApp oferece suporte ao podman-compose 1.5.0.</block>
+  <block id="2749b80160d80f9500fa8b5d5b4da1ba" category="section-title">Administração do NetApp Console</block>
+  <block id="a0d96dec6c85f67c2563063cec22ac66" category="paragraph">Esta versão inclui o seguinte:</block>
+  <block id="ac740509743c941164fb7e88fc8b768e" category="paragraph-title">Novo endereço de e-mail para notificações do NetApp Console</block>
+  <block id="3ded9fa2f8cf197bdf563d5509101e3a" category="paragraph">O endereço de e-mail que envia notificações do NetApp Console foi alterado de *service@console.netapp.com* para *service@console.netapp.com*. A NetApp recomenda atualizar todas as regras de e-mail para permitir *service@console.netapp.com* para garantir que você continue recebendo notificações por e-mail do NetApp Console .</block>
+  <block id="6ee211c536d8760f2108dd2c3e9fde0b" category="summary">Saiba mais sobre o agente do Console antes de implantá-lo.</block>
+  <block id="e079e06be34bd849355b3a013a28ade3" category="section-title">Detalhes da VM do agente de console para AWS</block>
+  <block id="0759ecf4e00f5c23dd6fcb46adfd5f73" category="section-title">Detalhes da VM do agente de console para o Azure</block>
+  <block id="a284e20714904b80b3bc57b894975967" category="section-title">Detalhes da VM do agente do console para o Google Cloud</block>
+  <block id="ccc39ad27a3e5ae6ae32a3552e89ecf6" category="paragraph">A pasta de instalação do agente está localizada no seguinte local:</block>
+  <block id="d19b8636dbd523d212642fc43cc17d39" category="paragraph"><block ref="1290fecb35d9c7e8b4f1faf1f9b5c7f3" prefix="" category="inline-code"></block></block>
+  <block id="549ccc427eb51e8795fefc7eb58efbd7" category="list-text"><block ref="9038f40808a3b534dd4031904a7d2ce8" prefix="" category="inline-code"></block> ou</block>
+  <block id="7879cfbe1211d2f970424c1b2506a0a1" category="list-text"><block ref="0d4b69d94aa57fab56e1a31c631b6b9d" prefix="" category="inline-code"></block> (a partir de novas instalações da versão 3.9.23)</block>
+  <block id="77504c6121663bb82697faa2adb426c0" category="list-text"><block ref="b7fb1cb20b803995e802d3588f424efa" prefix="" category="inline-code"></block></block>
+  <block id="8c0ce03e205216a2506b72de21ab36d0" category="paragraph"><block ref="7068d488f38430eabf6c395a593e8e5a" prefix="" category="inline-code"></block></block>
+  <block id="a7678a59b185360eec3ece4df3f90a18" category="paragraph"><block ref="a15b1a7954f2d926c5ee7f261a97b4d2" prefix="" category="inline-code"></block></block>
+  <block id="49868b41c479810c405bc3509cdb1907" category="cell">Permite que os usuários visualizem os resultados da verificação de NetApp Data Classification . Usuários com essa função podem visualizar informações de conformidade e gerar relatórios para recursos aos quais têm permissão de acesso. Esses usuários não podem habilitar ou desabilitar a verificação de volumes, buckets ou esquemas de banco de dados. A classificação não possui função administrativa.</block>
+  <block id="93fd98d5e6dc8e59c7d87e83e4b28b54" category="paragraph">O Console não oferece suporte a configurações de firewall que tenham a descriptografia SSL habilitada. Se a descriptografia SSL estiver ativada, as mensagens de erro aparecerão no Console e a instância do agente será exibida como *Desconectada*.</block>
+  <block id="5ef1446cf0ab868961d473d928c394d6" category="section-title">Agentes e extensões de terceiros</block>
+  <block id="08ea771e22fb933fc1428178b36eb902" category="paragraph">Agentes de terceiros ou extensões de VM não são suportados na VM do agente.</block>
+  <block id="c976a9d1d7322a1a795f641867000e2b" category="paragraph">Se você configurou um agente do Console para usar um servidor proxy, pode habilitar o tráfego direto da API no agente do Console para enviar chamadas de API diretamente aos serviços do provedor de nuvem sem passar pelo proxy. Agentes executados na AWS, Azure ou Google Cloud são compatíveis com essa opção.</block>
+  <block id="8b1d2ab0552c5d7793153d9fda3b575d" category="paragraph"><block ref="51298227862ac5270d9350ee1061138a" category="inline-link-macro-rx"></block>.</block>
+  <block id="e5d52cc85bda9d53a6d755f08201667b" category="summary">Se você usar vários agentes do Console, poderá alternar entre eles diretamente no Console.</block>
+  <block id="b634c2786e9d7bad38c80a81b3416dd7" category="paragraph">Se você excluiu uma máquina virtual de agente ou desinstalou o agente, deverá removê-la da lista de agentes no Console. Após excluir uma máquina virtual do agente ou desinstalar o software do agente, o agente exibirá o status *Desconectado* no Console.</block>
+  <block id="f6b8e4c4df658aad1c40b366b5c5d259" category="list-text">Na página *Visão geral*, selecione o menu de ações para um agente desconectado e selecione *Remover agente*.</block>
+  <block id="77750efa6f5ff153acdc42067058017f" category="section-title">10 de novembro de 2025</block>
+  <block id="a41dd7aa7d921f9f0881a705d3679e6c" category="section-title">06 de outubro de 2025</block>
+  <block id="791d05d0e9072626d0316ef0a7cf21bc" category="section-title">09 de junho de 2025</block>
+  <block id="cceeb5ea78b799b3b8575b2829590616" category="section-title">06 de março de 2025</block>
+  <block id="527d18dfa760fc67196d102d429a8ea0" category="section-title">09 de dezembro de 2024</block>
+  <block id="f66c63cf0ff76c19209f85ca687a2fb4" category="section-title">07 de outubro de 2024</block>
+  <block id="827939177a8e56e6d981ae1fc3dcb065" category="section-title">09 de setembro de 2024</block>
 </blocks>

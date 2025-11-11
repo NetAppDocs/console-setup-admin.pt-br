@@ -127,7 +127,7 @@ Se a configuração de proxy da sua rede mudar, seu agente poderá perder o aces
 
 == Habilitar tráfego direto da API
 
-Se você configurou um agente do Console para usar um servidor proxy, poderá habilitar o tráfego de API direto no agente do Console para enviar chamadas de API diretamente aos serviços do provedor de nuvem sem passar pelo proxy. Os agentes em execução no AWS, Azure ou Google Cloud oferecem suporte a essa opção.
+Se você configurou um agente do Console para usar um servidor proxy, pode habilitar o tráfego direto da API no agente do Console para enviar chamadas de API diretamente aos serviços do provedor de nuvem sem passar pelo proxy. Agentes executados na AWS, Azure ou Google Cloud são compatíveis com essa opção.
 
 Se você desabilitar o Azure Private Links com o Cloud Volumes ONTAP e usar pontos de extremidade de serviço, habilite o tráfego de API direto.  Caso contrário, o tráfego não será roteado corretamente.
 

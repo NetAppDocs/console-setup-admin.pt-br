@@ -24,7 +24,7 @@ Os seguintes detalhes de configuração se aplicam se você implantou um agente 
 
 
 
-=== Detalhes AWS
+=== Detalhes da VM do agente de console para AWS
 
 Se você implantou um agente do Console a partir do Console ou do marketplace do provedor de nuvem, observe o seguinte:
 
@@ -40,7 +40,7 @@ O sistema operacional não inclui uma GUI.  Você deve usar um terminal para ace
 
 
 
-=== Detalhes do Azure
+=== Detalhes da VM do agente de console para o Azure
 
 Se você implantou um agente do Console a partir do Console ou do marketplace do provedor de nuvem, observe o seguinte:
 
@@ -55,7 +55,7 @@ O sistema operacional não inclui uma GUI.  Você deve usar um terminal para ace
 
 
 
-=== Detalhes do Google Cloud
+=== Detalhes da VM do agente do console para o Google Cloud
 
 Se você implantou um agente do Console a partir do Console, observe o seguinte:
 
@@ -72,9 +72,9 @@ O sistema operacional não inclui uma GUI.  Você deve usar um terminal para ace
 
 === Pasta de instalação
 
-A pasta de instalação do agente está no seguinte local:
+A pasta de instalação do agente está localizada no seguinte local:
 
-/opt/aplicativo/netapp/cloudmanager
+`/opt/application/netapp/cloudmanager`
 
 
 
@@ -82,12 +82,12 @@ A pasta de instalação do agente está no seguinte local:
 
 Os arquivos de log estão contidos nas seguintes pastas:
 
-* /opt/application/netapp/cloudmanager/log ou
-* /opt/application/netapp/service-manager-2/logs (começando com novas instalações 3.9.23)
+* `/opt/application/netapp/cloudmanager/log` ou
+* `/opt/application/netapp/service-manager-2/logs` (a partir de novas instalações da versão 3.9.23)
 +
 Os logs nessas pastas fornecem detalhes sobre o agente do Console.
 
-* /opt/aplicativo/netapp/cloudmanager/docker_occm/dados/log
+* `/opt/application/netapp/cloudmanager/docker_occm/data/log`
 +
 Os logs nesta pasta fornecem detalhes sobre os serviços de nuvem e o serviço do Console executado no agente do Console.
 
@@ -120,13 +120,13 @@ O agente usa as seguintes portas no host Linux:
 
 A configuração a seguir se aplica se você instalou manualmente o agente do Console em um host Linux local que não tem acesso à Internet. link:task-quick-start-private-mode.html["Saiba mais sobre esta opção de instalação"] .
 
-* A pasta de instalação do agente está no seguinte local:
+* A pasta de instalação do agente está localizada no seguinte local:
 +
-/opt/aplicativo/netapp/ds
+`/opt/application/netapp/ds`
 
 * Os arquivos de log estão contidos nas seguintes pastas:
 +
-/var/lib/docker/volumes/ds_occmdata/_data/log
+`/var/lib/docker/volumes/ds_occmdata/_data/log`
 
 +
 Os logs nesta pasta fornecem detalhes sobre o agente do Console e as imagens do Docker.

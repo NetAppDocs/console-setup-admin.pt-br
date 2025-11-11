@@ -125,7 +125,7 @@ A seguir está uma lista de funções na categoria de serviço de dados.  Cada f
 | link:reference-iam-disaster-rec-roles.html["Visualizador de recuperação de desastres"] | Ver apenas informações. 
 
 
-| Visualizador de classificação | Permite que os usuários visualizem os resultados da verificação de NetApp Data Classification .  Usuários com essa função podem visualizar informações de conformidade e gerar relatórios para recursos aos quais têm permissão de acesso.  Esses usuários não podem habilitar ou desabilitar a verificação de volumes, buckets ou esquemas de banco de dados.  A classificação não tem um papel de visualizador. 
+| Visualizador de classificação | Permite que os usuários visualizem os resultados da verificação de NetApp Data Classification . Usuários com essa função podem visualizar informações de conformidade e gerar relatórios para recursos aos quais têm permissão de acesso. Esses usuários não podem habilitar ou desabilitar a verificação de volumes, buckets ou esquemas de banco de dados. A classificação não possui função administrativa. 
 
 
 | link:reference-iam-ransomware-roles.html["Administrador de resiliência de ransomware"] | Gerencie ações nas guias Proteger, Alertas, Recuperar, Configurações e Relatórios do NetApp Ransomware Resilience. 
