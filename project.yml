@@ -20,8 +20,6 @@ sidebar:
       url: "/whats-new.html"
     - title: Limitações conhecidas
       url: "/reference-limitations.html"
-    - title: Alterações nos sistemas operacionais Linux suportados
-      url: "/reference-agent-operating-system-changes.html"
   - title: Começar
     entries:
     - title: Aprenda o básico
