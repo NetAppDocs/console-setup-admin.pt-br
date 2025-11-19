@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: concept-accounts-aws.html 
 keywords: cloud provider accounts, aws, aws accounts, keys, multiple accounts, permission, aws permissions, policy, policies, credentials, marketplace, subscription, replace subscription, subscription, amazon, bluexp, agent 
-summary: Saiba como o NetApp Console usa credenciais da AWS para executar ações em seu nome e como essas credenciais são associadas às assinaturas do marketplace.  Entender esses detalhes pode ser útil ao gerenciar as credenciais de uma ou mais contas da AWS no Console.  Por exemplo, você pode querer saber quando adicionar credenciais adicionais da AWS ao Console. 
+summary: Você usa o NetApp Console para gerenciar credenciais da AWS e assinaturas do marketplace para implantação segura e econômica do Cloud Volumes ONTAP e outros serviços de dados, fornecendo as credenciais IAM apropriadas durante a implantação do agente do Console e associando-as às assinaturas do AWS Marketplace para faturamento em uma ou várias contas da AWS. 
 ---
 = Saiba mais sobre credenciais e permissões da AWS no NetApp Console
 :hardbreaks:
@@ -14,13 +14,13 @@ summary: Saiba como o NetApp Console usa credenciais da AWS para executar açõe
 
 
 [role="lead"]
-Saiba como o NetApp Console usa credenciais da AWS para executar ações em seu nome e como essas credenciais são associadas às assinaturas do marketplace.  Entender esses detalhes pode ser útil ao gerenciar as credenciais de uma ou mais contas da AWS no NetApp Console.  Por exemplo, você pode querer saber quando adicionar credenciais adicionais da AWS.
+Você gerencia as credenciais da AWS e as assinaturas do marketplace diretamente do NetApp Console para garantir a implantação segura do Cloud Volumes ONTAP e de outros serviços de dados, fornecendo as credenciais IAM apropriadas durante a implantação do agente do Console e associando-as às assinaturas do AWS Marketplace para faturamento.
 
 
 
 == Credenciais iniciais da AWS
 
-Ao implantar um agente do Console a partir do Console, você precisa fornecer o ARN de uma função do IAM ou chaves de acesso para um usuário do IAM. O método de autenticação deve ter permissões para implantar o Console na AWS. As permissões necessárias estão listadas no link: task-install-agent-aws-the Console.html#aws-permissions-agent[Política de implantação do agente para AWS].
+Ao implantar um agente do Console a partir do Console, você precisa fornecer o ARN de uma função do IAM ou chaves de acesso para um usuário do IAM. O método de autenticação deve ter permissões para implantar o agente do Console na AWS.  As permissões necessárias estão listadas nolink:task-install-agent-aws-console.html#aws-permissions-agent["Política de implantação de agentes para AWS"] .
 
 Quando o Console inicia o agente do Console na AWS, ele cria uma função do IAM e um perfil para o agente. Ele também anexa uma política que fornece ao agente do Console permissões para gerenciar recursos e processos dentro dessa conta da AWS. link:reference-permissions-aws.html["Revise como o Agente usa as permissões"].
 
@@ -38,7 +38,7 @@ Implante todos os seus sistemas Cloud Volumes ONTAP usando as credenciais inicia
 
 Você pode adicionar credenciais adicionais da AWS ao Console nos seguintes casos:
 
-* Para usar o agente do Console existente com uma conta AWS adicional
+* Para usar seu agente de console existente com uma conta AWS adicional.
 * Para criar um novo agente em uma conta específica da AWS
 * Para criar e gerenciar FSx para sistemas de arquivos ONTAP
 
@@ -49,11 +49,11 @@ Revise as seções abaixo para mais detalhes.
 
 === Adicione credenciais da AWS para usar um agente do Console com outra conta da AWS
 
-Se quiser usar o Console com contas adicionais da AWS, você pode fornecer chaves da AWS para um usuário do IAM ou o ARN de uma função em uma conta confiável.  A imagem a seguir mostra duas contas adicionais, uma fornecendo permissões por meio de uma função do IAM em uma conta confiável e outra por meio das chaves da AWS de um usuário do IAM:
+Para usar o Console com contas AWS adicionais, forneça as chaves da AWS ou o ARN de uma função em uma conta confiável. A imagem a seguir mostra duas contas adicionais, uma fornecendo permissões por meio de uma função do IAM em uma conta confiável e outra por meio das chaves da AWS de um usuário do IAM:
 
 image:diagram_permissions_multiple_aws.png["Uma imagem conceitual que mostra duas contas adicionais.  Cada um tem uma política do IAM, uma é anexada ao usuário do IAM e a outra é anexada a uma função do IAM."]
 
-Em seguida, você adicionaria as credenciais da conta ao Console especificando o Nome do Recurso da Amazon (ARN) da função do IAM ou as chaves da AWS para o usuário do IAM.
+Você adiciona credenciais de conta ao Console especificando o Nome de Recurso da Amazon (ARN) da função do IAM ou as chaves da AWS para o usuário do IAM.
 
 Por exemplo, você pode alternar entre credenciais ao criar um novo sistema Cloud Volumes ONTAP :
 
@@ -65,7 +65,7 @@ link:task-adding-aws-accounts.html#add-credentials-agent-aws["Saiba como adicion
 
 === Adicione credenciais da AWS para criar um agente do Console
 
-Adicionar novas credenciais da AWS ao Console fornece as permissões necessárias para criar um agente do Console.
+Adicionar credenciais da AWS fornece permissões para criar um agente do Console.
 
 link:task-adding-aws-accounts.html#add-credentials-agent-aws["Aprenda como adicionar credenciais da AWS ao Console para criar um agente do Console"]
 
@@ -81,7 +81,7 @@ https://docs.netapp.com/us-en/storage-management-fsx-ontap/requirements/task-set
 
 == Credenciais e assinaturas de mercado
 
-As credenciais que você adiciona a um agente do Console devem ser associadas a uma assinatura do AWS Marketplace para que você possa pagar pelo Cloud Volumes ONTAP a uma taxa por hora (PAYGO) e outros serviços de dados da NetApp ou por meio de um contrato anual. link:task-adding-aws-accounts.html#subscribe["Aprenda como associar uma assinatura da AWS"] .
+Você deve associar as credenciais adicionadas a um agente do Console a uma assinatura do AWS Marketplace para pagar pelo Cloud Volumes ONTAP por hora (PAYGO) e outros serviços de dados da NetApp ou por meio de um contrato anual. link:task-adding-aws-accounts.html#subscribe["Aprenda como associar uma assinatura da AWS"].
 
 Observe o seguinte sobre credenciais da AWS e assinaturas do marketplace:
 
