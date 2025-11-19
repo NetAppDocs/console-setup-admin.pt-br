@@ -68,7 +68,7 @@ Para reativar a atualização automática, siga estas etapas e defina o sinaliza
 +
 [source, json]
 ----
-  "isUpgradeDisabled": true,
+  "isUpgradeDisabled": true
 ----
 . Salve seu arquivo.
 . Reinicie o serviço do gerenciador de serviços 2 executando o seguinte comando:
@@ -77,12 +77,11 @@ Para reativar a atualização automática, siga estas etapas e defina o sinaliza
 ----
 systemctl restart netapp-service-manager.service
 ----
-. Execute o seguinte comando e verifique se o status do agente é exibido como _ativo(em execução)_: _
+. Execute o seguinte comando e verifique se o status do agente é exibido como _ativo (em execução)_:
 +
 [source, cli]
 ----
 systemctl status netapp-service-manager.service
-_
 ----
 
 

@@ -289,15 +289,17 @@ NOTE: Usando o `dnf install` O comando atende ao requisito de adicionar podman-c
 
 
 . Verifique se o seu networkBackend está definido como CNI executando o seguinte comando:
-+
-[source, cli]
+
+
+[listing]
 ----
 podman info | grep networkBackend
 ----
 . Se o networkBackend estiver definido como `CNI` , você precisará alterá-lo para `netavark` .
 . Instalar `netavark` e `aardvark-dns` usando o seguinte comando:
-+
-[source, cli]
+
+
+[listing]
 ----
 dnf install aardvark-dns netavark
 ----
@@ -307,21 +309,21 @@ Se `/etc/containers/containers.conf` não existe, faça as alterações de confi
 
 +
 .. Reinicie o podman.
-+
-[source, cli]
+
+
+
+
+[listing]
 ----
 systemctl restart podman
 ----
-.. Confirme se networkBackend foi alterado para "netavark" usando o seguinte comando:
-+
-[source, cli]
+. Confirme se networkBackend foi alterado para "netavark" usando o seguinte comando:
+
+
+[listing]
 ----
 podman info | grep networkBackend
 ----
-
-
-
-
 --
 .Motor Docker
 --
@@ -638,7 +640,7 @@ Onde <versão> é a versão do agente do Console que você baixou.
 +
 [source, cli]
 ----
- ./NetApp_Console_Agent_Cloud_<version> --proxy <HTTP or HTTPS proxy server> --cacert <path and file name of a CA-signed certificate>
+./NetApp_Console_Agent_Cloud_<version> --proxy <HTTP or HTTPS proxy server> --cacert <path and file name of a CA-signed certificate>
 ----
 +
 Você precisará adicionar informações de proxy se sua rede exigir um proxy para acesso à Internet. Você pode adicionar um proxy explícito durante a instalação. Os parâmetros --proxy e --cacert são opcionais e você não será solicitado a adicioná-los. Se você tiver um servidor proxy explícito, precisará inserir os parâmetros conforme mostrado.
@@ -649,7 +651,7 @@ Aqui está um exemplo de configuração de um servidor proxy explícito com um c
 +
 [source, cli]
 ----
- ./NetApp_Console_Agent_Cloud_v4.0.0--proxy https://user:password@10.0.0.30:8080/ --cacert /tmp/cacert/certificate.cer
+./NetApp_Console_Agent_Cloud_v4.0.0--proxy https://user:password@10.0.0.30:8080/ --cacert /tmp/cacert/certificate.cer
 ----
 +
 `--proxy`configura o agente do Console para usar um servidor proxy HTTP ou HTTPS usando um dos seguintes formatos:
@@ -692,15 +694,19 @@ NOTE: Se você deseja configurar um proxy transparente, pode fazê-lo após a in
 [source, cli]
 ----
 vi /usr/share/containers/containers.conf
-...
+----
++
+Por exemplo:
+
++
+[source, text]
+----
 # Port to use for dns forwarding daemon with netavark in rootful bridge
 # mode and dns enabled.
 # Using an alternate port might be useful if other DNS services should
 # run on the machine.
 #
 dns_bind_port = 54
-...
-Esc:wq
 ----
 .. Reinicie a máquina virtual do agente do Console.
 

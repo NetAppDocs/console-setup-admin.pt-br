@@ -302,15 +302,17 @@ NOTE: Usando o `dnf install` O comando atende ao requisito de adicionar podman-c
 
 
 . Verifique se o seu networkBackend está definido como CNI executando o seguinte comando:
-+
-[source, cli]
+
+
+[listing]
 ----
 podman info | grep networkBackend
 ----
 . Se o networkBackend estiver definido como `CNI` , você precisará alterá-lo para `netavark` .
 . Instalar `netavark` e `aardvark-dns` usando o seguinte comando:
-+
-[source, cli]
+
+
+[listing]
 ----
 dnf install aardvark-dns netavark
 ----
@@ -320,21 +322,21 @@ Se `/etc/containers/containers.conf` não existe, faça as alterações de confi
 
 +
 .. Reinicie o podman.
-+
-[source, cli]
+
+
+
+
+[listing]
 ----
 systemctl restart podman
 ----
-.. Confirme se networkBackend foi alterado para "netavark" usando o seguinte comando:
-+
-[source, cli]
+. Confirme se networkBackend foi alterado para "netavark" usando o seguinte comando:
+
+
+[listing]
 ----
 podman info | grep networkBackend
 ----
-
-
-
-
 --
 .Motor Docker
 --
@@ -636,6 +638,7 @@ Você deve adicionar o ID de cada assinatura do Azure que deseja usar com o NetA
 "/subscriptions/d333af45-0d07-4154-943d-c25fbzzzzzzz",
 "/subscriptions/54b91999-b3e6-4599-908e-416e0zzzzzzz",
 "/subscriptions/398e471c-3b42-4ae7-9b59-ce5bbzzzzzzz"
+]
 ----
 . Use o arquivo JSON para criar uma função personalizada no Azure.
 +
@@ -707,6 +710,7 @@ Você deve adicionar o ID de cada assinatura do Azure a partir da qual os usuár
 "/subscriptions/d333af45-0d07-4154-943d-c25fbzzzzzzz",
 "/subscriptions/54b91999-b3e6-4599-908e-416e0zzzzzzz",
 "/subscriptions/398e471c-3b42-4ae7-9b59-ce5bbzzzzzzz"
+]
 ----
 .. Use o arquivo JSON para criar uma função personalizada no Azure.
 +

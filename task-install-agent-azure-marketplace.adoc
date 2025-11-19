@@ -194,6 +194,7 @@ Você deve adicionar o ID de cada assinatura do Azure que deseja usar com o NetA
 "/subscriptions/d333af45-0d07-4154-943d-c25fbzzzzzzz",
 "/subscriptions/54b91999-b3e6-4599-908e-416e0zzzzzzz",
 "/subscriptions/398e471c-3b42-4ae7-9b59-ce5bbzzzzzzz"
+]
 ----
 . Use o arquivo JSON para criar uma função personalizada no Azure.
 +
@@ -265,6 +266,7 @@ Você deve adicionar o ID de cada assinatura do Azure a partir da qual os usuár
 "/subscriptions/d333af45-0d07-4154-943d-c25fbzzzzzzz",
 "/subscriptions/54b91999-b3e6-4599-908e-416e0zzzzzzz",
 "/subscriptions/398e471c-3b42-4ae7-9b59-ce5bbzzzzzzz"
+]
 ----
 .. Use o arquivo JSON para criar uma função personalizada no Azure.
 +

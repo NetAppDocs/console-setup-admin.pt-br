@@ -114,27 +114,28 @@ Atualize o local de backup para cada sistema Cloud Volumes ONTAP .
 
 +
 .. Na CLI do Cloud Volumes ONTAP , defina o nível de privilégio como avançado:
-+
-[source, cli]
+
+
+
+
+[listing]
 ----
 set -privilege advanced
 ----
-.. Execute o seguinte comando para exibir o destino de backup atual:
-+
-[source, cli]
+. Execute o seguinte comando para exibir o destino de backup atual:
+
+
+[listing]
 ----
 system configuration backup settings show
 ----
-.. Execute o seguinte comando para atualizar o endereço IP do destino de backup:
-+
-[source, cli]
+. Execute o seguinte comando para atualizar o endereço IP do destino de backup:
+
+
+[listing]
 ----
 system configuration backup settings modify -destination <target-location>
 ----
-
-
-
-
 
 
 == Editar URIs de um agente

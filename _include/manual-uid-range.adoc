@@ -44,7 +44,7 @@ Onde <versão> é a versão do agente que você baixou.
 +
 [source, cli]
 ----
- ./NetApp-Console-Agent-<version> --proxy <HTTP or HTTPS proxy server> --cacert <path and file name of a CA-signed certificate>
+./NetApp-Console-Agent-<version> --proxy <HTTP or HTTPS proxy server> --cacert <path and file name of a CA-signed certificate>
 ----
 +
 Os parâmetros --proxy e --cacert são opcionais.  Se você tiver um servidor proxy, precisará inserir os parâmetros conforme mostrado.  O instalador não solicita que você forneça informações sobre um proxy.
@@ -55,7 +55,7 @@ Aqui está um exemplo do comando usando ambos os parâmetros opcionais:
 +
 [source, cli]
 ----
- ./NetApp-Console-Agent-v4.0.0--proxy https://user:password@10.0.0.30:8080/ --cacert /tmp/cacert/certificate.cer
+./NetApp-Console-Agent-v4.0.0--proxy https://user:password@10.0.0.30:8080/ --cacert /tmp/cacert/certificate.cer
 ----
 +
 --proxy configura o agente para usar um servidor proxy HTTP ou HTTPS usando um dos seguintes formatos:
@@ -96,15 +96,19 @@ Por exemplo:
 [source, cli]
 ----
 vi /usr/share/containers/containers.conf
-...
+----
++
+Por exemplo:
+
++
+[source, text]
+----
 # Port to use for dns forwarding daemon with netavark in rootful bridge
 # mode and dns enabled.
 # Using an alternate port might be useful if other DNS services should
 # run on the machine.
 #
 dns_bind_port = 54
-...
-Esc:wq
 ----
 .. Reinicie a máquina virtual do agente.
 
