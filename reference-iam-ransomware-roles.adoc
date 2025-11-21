@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: reference-iam-ransomware-roles.html 
-keywords: predefined roles, iam roles, organization admin, folder or project admin, identity and access management, access roles, admin, 
+keywords: predefined roles, iam roles, organization admin, folder or project admin, identity and access management, access roles, admin, ransomware, ransomware resilience 
 summary: O Ransomware Resilience oferece diferentes funções de usuário para gerenciar o acesso a configurações, ações e relatórios. 
 ---
 = Funções de acesso de resiliência contra ransomware para o NetApp Console

@@ -37,12 +37,16 @@ Você pode atribuir as seguintes funções aos usuários parceiros:
 * link:reference-iam-backup-rec-roles.html["Visualizador de backup"]
 * link:reference-iam-backup-rec-roles.html["Restaurar administrador"]
 * link:reference-iam-backup-rec-roles.html["Clonar administrador"]
+* link:reference-iam-predefined-roles.html["Visualizador de classificação de dados"]
 * link:reference-iam-disaster-rec-roles.html["Administrador de recuperação de desastres"]
 * link:reference-iam-disaster-rec-roles.html["Administrador de failover de recuperação de desastres"]
 * link:reference-iam-disaster-rec-roles.html["Administrador do aplicativo de recuperação de desastres"]
 * link:reference-iam-disaster-rec-roles.html["Visualizador de recuperação de desastres"]
 * link:reference-iam-storage-roles.html["Analista de suporte de operações"]
-* link:reference-iam-predefined-roles.html["Visualizador de classificação"]
+* link:reference-iam-ransomware-roles.html["Administrador de resiliência de ransomware"]
+* link:reference-iam-ransomware-roles.html["Visualizador de resiliência de ransomware"]
+* link:reference-iam-ransomware-roles.html#user-behavior-roles["Comportamento do usuário de resiliência ao ransomware"]
+* link:reference-iam-ransomware-roles.html#user-behavior-roles["Visualizador de comportamento do usuário de resiliência de ransomware"]
 
 
 link:reference-iam-predefined-roles.html["Saiba mais sobre funções predefinidas"]

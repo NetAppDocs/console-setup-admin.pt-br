@@ -1919,14 +1919,8 @@
   <block id="38b9e3522d3a7fe6b61f60b3419f6cd2" category="summary">Você pode atribuir as seguintes funções aos usuários para fornecer a eles acesso ao NetApp Disaster Recovery no Console.  As funções de Recuperação de Desastres oferecem a flexibilidade de atribuir aos usuários uma função específica para as tarefas que eles precisam realizar na sua organização. A maneira como você atribui funções depende das suas próprias práticas de negócios e gerenciamento de armazenamento.</block>
   <block id="26c3a94bfb05fb2052bc1a9cc30a1cf4" category="doc">Funções de NetApp Disaster Recovery no ​​NetApp Console</block>
   <block id="881a358307b4d99de00f95aa58fb5a43" category="paragraph">A recuperação de desastres utiliza as seguintes funções:</block>
-  <block id="3db89b44d26706e71a450352c7c5a1da" category="list-text">*Administrador de recuperação de desastres*: Execute quaisquer ações.</block>
-  <block id="1e732ca66bd89df595b8e795e5dfa4ac" category="list-text">*Administrador de failover de recuperação de desastres*: Executa failover e migrações.</block>
-  <block id="014b84d038553d60cf09cbddcb4e7d08" category="list-text">*Administrador do aplicativo de recuperação de desastres*: Crie planos de replicação.  Modificar planos de replicação.  Iniciar failovers de teste.</block>
-  <block id="ca931702830a76aaa24d5f451156d2b4" category="list-text">*Visualizador de recuperação de desastres*: Visualize somente informações.</block>
   <block id="05d21d5a33096194ae80a609c95e316b" category="paragraph">A tabela a seguir indica as ações que cada função pode executar.</block>
   <block id="df2d943b4d0652d322ec6b3cb52e3036" category="cell">Administrador de recuperação de desastres</block>
-  <block id="71aa2505b70e192a741f69ce63677f4b" category="cell">Administrador de failover de recuperação de desastres</block>
-  <block id="49f16ca5444f519e5203bb5067957eef" category="cell">Administrador do aplicativo de recuperação de desastres</block>
   <block id="ba4b33592d18613c28d684c20110e152" category="cell">Visualizador de recuperação de desastres</block>
   <block id="20f0d287f3a16854279c9e5960c749e1" category="cell">*Na aba Sites*:</block>
   <block id="24f9533e942cbf2b6f6f10572e7060a3" category="cell">Ver sites</block>
@@ -2838,8 +2832,6 @@
   <block id="babc7ae953e58c8202e366520ae9baf4" category="list-text"><block ref="babc7ae953e58c8202e366520ae9baf4" category="inline-link-rx"></block></block>
   <block id="6187e32203fd05e22e575166349f5b99" category="inline-link">Documentos de backup e recuperação</block>
   <block id="9964d0b6e519677dfa6bcd4597b081a2" category="list-text"><block ref="9964d0b6e519677dfa6bcd4597b081a2" category="inline-link-rx"></block></block>
-  <block id="e97ae785ddbd746339946844f92175e6" category="inline-link">Documentação de classificação</block>
-  <block id="6847efe16c9bfc0feacaef65fc05b7b9" category="list-text"><block ref="6847efe16c9bfc0feacaef65fc05b7b9" category="inline-link-rx"></block></block>
   <block id="2971acb1ab572cfb61b7c86d49e2b300" category="inline-link">Documentação do Cloud Volumes ONTAP</block>
   <block id="8c1b893f08cfaa147e0cf92bf09039b9" category="list-text"><block ref="8c1b893f08cfaa147e0cf92bf09039b9" category="inline-link-rx"></block></block>
   <block id="32bf39c0f4f8e0ff3b8343a1c55eccc0" category="inline-link">Documentos de carteira digital</block>
@@ -4633,21 +4625,13 @@
   <block id="4e6fd6febc63e73f33b1e12bb15eab7a" category="paragraph">Uma organização parceira deve primeiro adicionar membros à parceria antes que você possa atribuir a eles funções para recursos em sua organização.<block ref="af42bf104f841b0c4c7b71f12b6693d9" category="inline-link-macro-rx"></block></block>
   <block id="575c38cd2c5990295bb75895f260de3b" category="section-title">Entenda as funções dos usuários da parceria</block>
   <block id="a7a7adfb76bf7fb68d92346dfa9d529d" category="paragraph">Você pode gerenciar funções para membros de organizações parceiras da mesma forma que faz para as suas.  No entanto, nem todas as funções estão disponíveis para usuários de parceria.  Em particular, você não pode conceder aos usuários parceiros uma função que permita atualizações de software.  A atualização do software ONTAP geralmente requer acesso direto à rede.</block>
-  <block id="aa5691f6d018b3411c8082be20a4529f" category="paragraph">Você pode atribuir as seguintes funções aos usuários parceiros:</block>
-  <block id="eaec472b7a23d9c311a78adfd10b1032" category="inline-link-macro">Administrador de backup e recuperação</block>
-  <block id="9b589496549b93bcbd645613fbd03c9c" category="list-text"><block ref="9b589496549b93bcbd645613fbd03c9c" category="inline-link-macro-rx"></block></block>
   <block id="8cf933db073501a5f76a2e7dfd953164" category="list-text"><block ref="8cf933db073501a5f76a2e7dfd953164" category="inline-link-macro-rx"></block></block>
   <block id="29ff866c1c97d8c216bf004c4f447a77" category="inline-link-macro">Restaurar administrador</block>
   <block id="4662f8e16785669755651e2b47080d3a" category="list-text"><block ref="4662f8e16785669755651e2b47080d3a" category="inline-link-macro-rx"></block></block>
   <block id="0ebca6a2628eb3838eff9087ecfc2909" category="inline-link-macro">Clonar administrador</block>
   <block id="4db6f06f37e5b34186c68c70b344b6e5" category="list-text"><block ref="4db6f06f37e5b34186c68c70b344b6e5" category="inline-link-macro-rx"></block></block>
-  <block id="760c54a4cb61f02dffc8c2331073ae1d" category="list-text"><block ref="760c54a4cb61f02dffc8c2331073ae1d" category="inline-link-macro-rx"></block></block>
-  <block id="db385d806691bf16134876c971ae47ac" category="list-text"><block ref="db385d806691bf16134876c971ae47ac" category="inline-link-macro-rx"></block></block>
-  <block id="456f871b4f4ee4ad376b69d4040f5120" category="list-text"><block ref="456f871b4f4ee4ad376b69d4040f5120" category="inline-link-macro-rx"></block></block>
-  <block id="78d4b42d7cc8df44f5151da486494386" category="list-text"><block ref="78d4b42d7cc8df44f5151da486494386" category="inline-link-macro-rx"></block></block>
   <block id="107d607a0fbcdbb5eddd688662ad90ca" category="inline-link-macro">Analista de suporte de operações</block>
   <block id="f06c384501f4ddab22ea69f586c70caf" category="list-text"><block ref="f06c384501f4ddab22ea69f586c70caf" category="inline-link-macro-rx"></block></block>
-  <block id="67580c71df9613a2df5711bad8e2d8d9" category="list-text"><block ref="67580c71df9613a2df5711bad8e2d8d9" category="inline-link-macro-rx"></block></block>
   <block id="31597ba98a5fab9e8c6bca4a800f5ea5" category="inline-link-macro">Saiba mais sobre funções predefinidas</block>
   <block id="dbf8f6054238418a17441da56cada5ea" category="paragraph"><block ref="dbf8f6054238418a17441da56cada5ea" category="inline-link-macro-rx"></block></block>
   <block id="f2d039d8870676819e12952f7e38048c" category="section-title">Adicionar uma função a um usuário parceiro</block>
@@ -5303,7 +5287,6 @@
   <block id="e4c0002e4f9f19273bc004922899fb85" category="sidebar">Acesso à rede do console (legado)</block>
   <block id="0adc03eac86772ad2c75c8f140be417e" category="sidebar">Conhecimento e suporte</block>
   <block id="253b718b7b0bb8f190e2ebe1c721295e" category="paragraph">As funções de resiliência contra ransomware fornecem aos usuários acesso ao NetApp Ransomware Resilience. O Ransomware Resilience oferece suporte às seguintes funções:</block>
-  <block id="f75989b6aa2a7a3c16b04e40aebffd8f" category="paragraph">Usuários com a função *Administrador da organização* ou *Administrador de pasta ou projeto* têm a responsabilidade de atribuir funções a outros usuários. Você pode atribuir funções de acesso com base em um projeto ou pasta. Por exemplo, você pode atribuir a um usuário a função de administrador do Ransomware Resilience para um projeto e a função de administrador do SnapCenter para um projeto diferente. Como alternativa, se um usuário precisar da função de administrador de classificação para todos os projetos dentro de uma pasta específica, você poderá atribuir essa função a ele no nível da pasta.</block>
   <block id="e55d79a6c1774cf0f39d67ca04d67bc0" category="paragraph">Use funções de acesso para atribuir acesso a recursos de armazenamento com base nas tarefas específicas que os usuários precisam executar. Por exemplo, se um usuário precisar interagir com o Ransomware Resilience, ele deverá receber uma função de acesso que inclua permissões de visualização ou administrativas para o Ransomware Resilience para o projeto para o qual a função de acesso foi concedida.</block>
   <block id="e6bf2bfbd541e12c3cb2fca42df08ed3" category="paragraph">Os membros podem ter várias funções dentro do mesmo projeto e em projetos diferentes. Por exemplo, organizações menores podem atribuir todas as funções de acesso disponíveis ao mesmo usuário, enquanto organizações maiores podem ter usuários executando tarefas mais especializadas. Como alternativa, você também pode atribuir a um usuário a função de administrador de resiliência contra ransomware para uma organização.  Nesse exemplo, o usuário seria capaz de executar tarefas de resiliência contra ransomware em todos os projetos da sua organização.</block>
   <block id="c36b12344113082dcf8a9786e36a3536" category="cell">Resiliência ao Ransomware</block>
@@ -5504,7 +5487,6 @@
   <block id="77504c6121663bb82697faa2adb426c0" category="list-text"><block ref="b7fb1cb20b803995e802d3588f424efa" prefix="" category="inline-code"></block></block>
   <block id="8c0ce03e205216a2506b72de21ab36d0" category="paragraph"><block ref="7068d488f38430eabf6c395a593e8e5a" prefix="" category="inline-code"></block></block>
   <block id="a7678a59b185360eec3ece4df3f90a18" category="paragraph"><block ref="a15b1a7954f2d926c5ee7f261a97b4d2" prefix="" category="inline-code"></block></block>
-  <block id="49868b41c479810c405bc3509cdb1907" category="cell">Permite que os usuários visualizem os resultados da verificação de NetApp Data Classification . Usuários com essa função podem visualizar informações de conformidade e gerar relatórios para recursos aos quais têm permissão de acesso. Esses usuários não podem habilitar ou desabilitar a verificação de volumes, buckets ou esquemas de banco de dados. A classificação não possui função administrativa.</block>
   <block id="93fd98d5e6dc8e59c7d87e83e4b28b54" category="paragraph">O Console não oferece suporte a configurações de firewall que tenham a descriptografia SSL habilitada. Se a descriptografia SSL estiver ativada, as mensagens de erro aparecerão no Console e a instância do agente será exibida como *Desconectada*.</block>
   <block id="5ef1446cf0ab868961d473d928c394d6" category="section-title">Agentes e extensões de terceiros</block>
   <block id="08ea771e22fb933fc1428178b36eb902" category="paragraph">Agentes de terceiros ou extensões de VM não são suportados na VM do agente.</block>
@@ -5665,4 +5647,17 @@
   <block id="bc803c81454ea9df76e9060827a7bc53" category="list-text">compute.instances.addAccessConfig</block>
   <block id="f14cdbbd5f80553660910a0a1219e605" category="section-title">2025-11-26</block>
   <block id="3f7540ad5f30cb6539b7476d85d2f608" category="paragraph">As permissões foram atualizadas para maior clareza sobre seu uso, mas nenhuma permissão foi adicionada ou removida. Foram adicionadas três colunas para indicar se cada permissão é usada para implantação, operações diárias ou exclusão. Além disso, algumas permissões são segregadas com base em seu uso para NetApp Data Classification e NetApp Backup and Recovery.</block>
+  <block id="babdf7713555e95437e95d0dc578e050" category="list-text">*Administrador de Recuperação de Desastres*: Execute quaisquer ações necessárias.</block>
+  <block id="756062c061caa73b104caf35ad95abd9" category="list-text">*Administrador de failover de recuperação de desastres*: Executar failover e migrações.</block>
+  <block id="99c828ca537070159318271d66dda996" category="list-text">*Administrador do aplicativo de recuperação de desastres*: Criar planos de replicação. Modificar planos de replicação. Iniciar failovers de teste.</block>
+  <block id="10bfeabec8da9ffb3c60c40834621a5d" category="list-text">*Visualizador de Recuperação de Desastres*: Exibe apenas informações.</block>
+  <block id="f66b3ba81642886354f66476eebc171c" category="cell">Permite que os usuários visualizem os resultados da verificação de NetApp Data Classification . Usuários com essa função podem visualizar informações de conformidade e gerar relatórios para recursos aos quais têm permissão de acesso. Esses usuários não podem habilitar ou desabilitar a verificação de volumes, buckets ou esquemas de banco de dados. A Classificação de Dados não possui função de administrador.</block>
+  <block id="9320804217d782369dccfe3cfe90fd29" category="inline-link">Documentos de classificação de dados</block>
+  <block id="81584a5aa440695d6dd39594311c7b2d" category="list-text"><block ref="81584a5aa440695d6dd39594311c7b2d" category="inline-link-rx"></block></block>
+  <block id="d1047a2a7e1c25fc1d5cbd4c2dea5954" category="paragraph">Usuários com a função *Administrador da organização* ou *Administrador de pasta ou projeto* têm a responsabilidade de atribuir funções a outros usuários. Você pode atribuir funções de acesso com base em um projeto ou pasta. Por exemplo, você pode atribuir a um usuário a função de administrador do Ransomware Resilience para um projeto e a função de administrador do SnapCenter para um projeto diferente. Alternativamente, se um usuário precisar da função de administrador de Resiliência a Ransomware para todos os projetos dentro de uma pasta específica, você pode conceder essa função a ele no nível da pasta.</block>
+  <block id="4c56531120cb5dd49448926a4a5fd1fd" category="paragraph">Você pode atribuir as seguintes funções aos usuários parceiros:</block>
+  <block id="c291dac152d909d3eb9020000be43137" category="inline-link-macro">Visualizador de classificação de dados</block>
+  <block id="c7e28713a896e9488b74e428eb025ad0" category="list-text"><block ref="c7e28713a896e9488b74e428eb025ad0" category="inline-link-macro-rx"></block></block>
+  <block id="08324e7c6f4c191ebd76163dd3616c9a" category="list-text"><block ref="08324e7c6f4c191ebd76163dd3616c9a" category="inline-link-macro-rx"></block></block>
+  <block id="4feead535ae6dd1e4ba78516194fe4b1" category="list-text"><block ref="4feead535ae6dd1e4ba78516194fe4b1" category="inline-link-macro-rx"></block></block>
 </blocks>
