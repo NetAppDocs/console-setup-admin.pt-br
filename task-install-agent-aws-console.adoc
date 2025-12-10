@@ -62,6 +62,16 @@ Para gerenciar recursos da AWS.  O ponto de extremidade depende da sua região d
 
 
  a| 
+Amazon FSX para NetApp ONTAP:
+
+* api.workloads.netapp.com
+
+ a| 
+O console baseado na web contata este endpoint para interagir com as APIs do Workload Factory, a fim de gerenciar e operar cargas de trabalho baseadas no FSx para ONTAP .
+
+
+
+ a| 
 \ https://mysupport.netapp.com
  a| 
 Para obter informações de licenciamento e enviar mensagens do AutoSupport para o suporte da NetApp .

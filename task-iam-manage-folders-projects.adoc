@@ -20,18 +20,18 @@ No NetApp Console, você organiza seus recursos do NetApp usando projetos e past
 
 == Adicionar uma pasta ou projeto
 
-Quando você cria sua organização, ela inclui um único projeto.  Adicione projetos para gerenciar recursos e pastas para agrupar projetos relacionados.
+Quando você cria sua organização, ela inclui um único projeto. Adicione projetos para gerenciar recursos e pastas para agrupar projetos relacionados.
 
-A hierarquia de recursos da sua organização pode ter até sete níveis, com pastas aninhadas em seis níveis de profundidade e projetos no sétimo.
+Você pode criar até sete níveis de pastas e projetos na estrutura de recursos da sua organização.  Crie pastas dentro de pastas para construir uma estrutura hierárquica para sua organização.
 
 .Passos
 . Selecione *Administração > Identidade e acesso*.
 . Selecione *Organização*.
 . Na página *Organização*, selecione *Adicionar pasta ou projeto*.
 . Selecione *Pasta* ou *Projeto*.
-. Forneça detalhes sobre a pasta ou projeto:
+. Insira os detalhes da pasta ou do projeto:
 +
-** *Nome e local*: Insira um nome e escolha um local na hierarquia para a pasta ou projeto.  Uma pasta ou projeto pode estar diretamente abaixo da organização ou dentro de uma pasta.
+** *Nome e local*: Insira um nome e escolha um local na hierarquia para a pasta ou projeto. Coloque uma pasta ou projeto dentro da organização ou em outra pasta.
 ** *Recursos*: Selecione os recursos que você deseja associar a esta pasta ou projeto.
 +
 Você pode selecionar recursos associados à pasta pai ou ao projeto.
@@ -41,7 +41,7 @@ link:concept-identity-and-access-management.html#associate-resource-folder["Apre
 
 ** *Acesso*: visualize os membros que terão acesso à pasta ou projeto com base nas permissões existentes já definidas na sua hierarquia de recursos.
 +
-Selecione *Adicionar um membro* para atribuir acesso e uma função a membros adicionais. Uma função define as permissões que os membros têm para a pasta ou projeto.
+Selecione *Adicionar um membro* para atribuir acesso e uma função.
 
 +
 link:reference-iam-predefined-roles.html["Saiba mais sobre funções de acesso"] .
@@ -68,10 +68,7 @@ Se necessário, você pode alterar o nome de suas pastas e projetos.
 
 Exclua pastas e projetos que você não precisa mais.
 
-.Antes de começar
-* Certifique-se de que a pasta ou projeto não tenha recursos associados. <<modify-resources,Aprenda a desassociar recursos>> .
-* Certifique-se de que a pasta ou projeto não tenha recursos associados.
-
+Antes de excluir uma pasta ou projeto, certifique-se de que ele não contenha nenhum recurso. <<modify-resources,Aprenda como remover recursos>>.
 
 .Passos
 . Na página *Organização*, navegue até um projeto ou pasta na tabela, selecioneimage:icon-action.png["Um ícone com três pontos"] e então selecione *Excluir*.
@@ -101,7 +98,7 @@ image:screenshot-iam-allocated-resources.png["Uma captura de tela da página Edi
 
 
 
-== Modificar os recursos associados a uma pasta ou projeto
+== Alterar os recursos associados a uma pasta ou projeto
 
 Membros com permissões para uma pasta ou projeto podem acessar seus recursos associados.
 
@@ -119,7 +116,7 @@ Na tabela, a coluna *Status* identifica os recursos associados à pasta ou ao pr
 +
 image:screenshot-iam-associate-resources.png["Uma captura de tela da página Editar projeto que mostra a opção Associar recursos que fica disponível depois que você seleciona recursos que não estão associados no momento."]
 
-. Selecione *Aplicar*
+. Selecione *Aplicar*.
 
 
 
@@ -136,9 +133,9 @@ image:screenshot-iam-member-access.png["Uma captura de tela da página Editar pr
 
 == Modificar o acesso de membros a uma pasta ou projeto
 
-Modifique o acesso dos membros para garantir que os membros certos possam acessar os recursos associados.
+Modifique o acesso dos membros para controlar o acesso aos recursos.
 
-O acesso de membro fornecido em um nível hierárquico mais alto não pode ser alterado em níveis mais baixos.  Atualize as permissões dos membros no nível hierárquico superior para alterar o acesso.  Alternativamente, você podelink:task-iam-manage-roles.html#manage-permissions["gerenciar permissões na página de membros"] .
+Não é possível alterar o acesso de membros em níveis inferiores se ele for herdado de um nível hierárquico superior.   Atualize as permissões dos membros no nível hierárquico superior para alterar o acesso. Alternativamente, você podelink:task-iam-manage-roles.html#manage-permissions["gerenciar permissões na página de membros"].
 
 link:concept-identity-and-access-management.html#role-inheritance["Saiba mais sobre herança de funções"] .
 

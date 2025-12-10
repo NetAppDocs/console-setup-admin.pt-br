@@ -14,10 +14,10 @@ Uma conta de serviço do Google Cloud é necessária para fornecer ao agente do 
 .. Faça upload do arquivo YAML que inclui as permissões necessárias.
 .. Crie uma função personalizada usando o `gcloud iam roles create` comando.
 +
-O exemplo a seguir cria uma função chamada "conector" no nível do projeto:
+O exemplo a seguir cria uma função chamada "agente" no nível do projeto:
 
 +
-`gcloud iam roles create connector --project=myproject --file=connector.yaml`
+`gcloud iam roles create connector --project=myproject --file=agent.yaml`
 
 +
 https://cloud.google.com/iam/docs/creating-custom-roles#iam-custom-roles-create-gcloud["Documentação do Google Cloud: Criação e gerenciamento de funções personalizadas"^]

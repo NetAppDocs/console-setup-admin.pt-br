@@ -14,7 +14,7 @@ summary: A criação de parcerias entre organizações no NetApp Console permite
 
 
 [role="lead"]
-Ao criar parcerias entre organizações, o NetApp Console permite que os parceiros gerenciem com segurança os recursos do NetApp em todos os limites organizacionais, simplificando a colaboração e aumentando a segurança.
+A criação de parcerias entre organizações no NetApp Console permite que os parceiros gerenciem recursos da NetApp com segurança, ultrapassando as fronteiras organizacionais, simplificando a colaboração e aprimorando a segurança.
 
 .Funções necessárias
 Administrador de parcerialink:reference-iam-predefined-roles.html["Saiba mais sobre funções de acesso."]

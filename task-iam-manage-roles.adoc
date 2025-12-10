@@ -16,11 +16,11 @@ summary: No NetApp Console, você pode atribuir funções aos usuários com base
 [role="lead"]
 No Console, você pode atribuir funções aos usuários com base no que eles precisam fazer e onde.
 
-Usuários com a função *Administrador da organização* ou *Administrador de pasta ou projeto* têm a responsabilidade de atribuir funções a outros usuários. Você pode atribuir funções de acesso com base em um projeto ou pasta. Por exemplo, você pode atribuir a um usuário a função de administrador do Ransomware Resilience para um projeto e a função de administrador do SnapCenter para um projeto diferente. Alternativamente, se um usuário precisar da função de administrador de Resiliência a Ransomware para todos os projetos dentro de uma pasta específica, você pode conceder essa função a ele no nível da pasta.
+Usuários com a função *Administrador da organização* ou *Administrador de pasta ou projeto* têm a responsabilidade de atribuir funções a outros usuários. Você pode atribuir funções de acesso com base em um projeto ou pasta. Atribua funções de acesso por projeto ou pasta.  Por exemplo, atribua a função de administrador de Resiliência a Ransomware a um usuário para um projeto e a função de administrador do SnapCenter para outro.  Para conceder a um usuário a função de administrador de Resiliência a Ransomware para todos os projetos em uma pasta, atribua a função no nível da pasta.
 
 Use funções de acesso para atribuir acesso a recursos de armazenamento com base nas tarefas específicas que os usuários precisam executar. Por exemplo, se um usuário precisar interagir com o Ransomware Resilience, ele deverá receber uma função de acesso que inclua permissões de visualização ou administrativas para o Ransomware Resilience para o projeto para o qual a função de acesso foi concedida.
 
-Atribua funções aos usuários com base na sua estratégia de IAM para maior segurança.  As funções do IAM garantem que os usuários tenham apenas o acesso necessário.
+Atribua funções de acordo com sua estratégia de IAM para melhorar a segurança.  As funções do IAM limitam o acesso do usuário apenas ao que é necessário.
 
 
 NOTE: Lembre-se de que você não pode conceder acesso direto aos recursos.  Atribua recursos aos projetos primeiro.  Considere configurar sua hierarquia de recursos antes de atribuir acesso aos usuários.link:task-iam-manage-folders-projects.html["Aprenda a organizar seus recursos com pastas e projetos."]
@@ -29,7 +29,7 @@ NOTE: Lembre-se de que você não pode conceder acesso direto aos recursos.  Atr
 
 == Exibir funções atribuídas a um membro
 
-Ao adicionar um membro à sua organização, você será solicitado a atribuir uma função a ele.  Você pode permitir que os membros verifiquem quais funções estão atribuídas a eles no momento.
+Ao adicionar um membro à sua organização, você será solicitado a atribuir uma função a ele. Você pode verificar quais funções estão atribuídas a eles atualmente.
 
 Se você tiver a função de _Administrador de pasta ou projeto_, a página exibirá todos os membros da organização.  No entanto, você só pode visualizar e gerenciar permissões de membros para as pastas e projetos para os quais você tem permissões. link:reference-iam-predefined-roles.html["Saiba mais sobre as ações que um _administrador de pasta ou projeto_ pode concluir"] .
 
@@ -73,7 +73,7 @@ Se você selecionar a organização ou uma pasta, o membro terá permissões par
 
 == Alterar a função atribuída a um membro
 
-Você pode alterar as funções atribuídas a um membro caso precise ajustar o acesso de um usuário.
+Alterar as funções de um membro para atualizar o seu acesso.
 
 
 NOTE: Os usuários devem ter pelo menos uma função atribuída a eles.  Não é possível remover todas as funções de um usuário.  Se precisar remover todas as funções, você deverá excluir o usuário da sua organização.

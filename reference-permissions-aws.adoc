@@ -881,7 +881,7 @@ Você só precisa das seguintes permissões se tiver habilitado os recursos de i
 
 
 
-=== Classificação de Dados
+=== Classificação
 
 O agente faz as seguintes solicitações de API para implantar a NetApp Data Classification:
 

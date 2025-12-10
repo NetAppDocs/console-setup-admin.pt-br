@@ -1,0 +1,44 @@
+= Agente de console 4.2.0
+:allow-uri-read: 
+
+
+
+
+=== Agente de console 4.2.0
+
+A versão 4.2.0 suporta tanto o modo padrão quanto o modo restrito.
+
+Esta versão do agente do Console inclui melhorias de segurança, correções de bugs e os seguintes recursos:
+
+.Suporte para o Google Cloud Infrastructure Manager
+A NetApp agora usa o Google Cloud Infrastructure Manager (IM) em vez do Google Cloud Deployment Manager para implantar e gerenciar agentes no Google Cloud.  Essa alteração foi feita porque o Google irá descontinuar o recurso.link:https://docs.cloud.google.com/deployment-manager/docs/deprecations["Gerenciador de Implantação na Nuvem"] .
+
+* Todos os novos agentes da versão 4.2.0 e superiores utilizam o Infrastructure Manager, e você deve atualizar as permissões da conta de usuário e da conta de serviço usadas para a implantação.link:https://docs.netapp.com/us-en/console-setup-admin/reference-permissions-gcp.html#gcp-permissions-change-log["Veja o registro de alterações de permissões."^]
+* Ao implantar um agente, o sistema também cria um bucket do Google Cloud para armazenar os arquivos de implantação.
+
+
+.Verificações de configuração aprimoradas para agentes do console.
+* O agente do Console agora verifica se há endpoints obsoletos ao realizar uma verificação de configuração.  Caso você não tenha atualizado para a nova lista de endpoints da versão 4.0.0 ou superior, as instalações serão bem-sucedidas se o sistema conseguir acessar a lista de endpoints anterior.link:https://docs.netapp.com/us-en/console-setup-admin/reference-networking-saas-console-previous.html#update-endpoint-list["Saiba mais sobre os endpoints necessários para os agentes do Console."^]
+* Execute verificações de configuração nos agentes do Console instalados a partir do Console ou do console de manutenção do Agente para verificar a conectividade e solucionar problemas.link:https://docs.netapp.com/us-en/console-setup-admin/task-troubleshoot-agent.html#verify-network-access["Aprenda como executar verificações de configuração em agentes do Console."^]
+
+
+.Faça o download do software do agente diretamente do NetApp Console.
+Quando precisar instalar um agente manualmente, você pode acessar o software do agente diretamente do NetApp Console , além do site de suporte da NetApp .link:https://docs.netapp.com/us-en/console-setup-admin/task-install-agent-on-prem.html#install-the-console-agent-manually["Aprenda como baixar o software do agente do Console diretamente do NetApp Console."^]
+
+
+
+=== Administração do NetApp Console
+
+Esta versão inclui o seguinte:
+
+.Possibilidade de configurar notificações para credenciais que expiram.
+Configure notificações para credenciais expiradas em contas de serviço e federações.  Escolha entre sete ou 30 dias.  O Console exibe notificações e envia e-mails aos usuários com a função apropriada.  Os administradores da organização recebem notificações da conta de serviço.  Administradores da organização, administradores da federação e visualizadores da federação recebem notificações da federação.
+
+.Logins locais não estão disponíveis após a ativação da federação.
+Depois de ativar a federação para uma organização do Console, os usuários não poderão usar logins locais e serão redirecionados para logins de federação.
+
+.Melhorias de usabilidade para as páginas de gerenciamento de armazenamento.
+Agora é mais fácil visualizar e gerenciar informações detalhadas sobre seus sistemas ONTAP locais (e FSx para ONTAP) nas páginas de gerenciamento de armazenamento.
+
+* A página * Discoverable systems* separa as informações resumidas da exibição em abas dos sistemas disponíveis, facilitando a visualização de informações completas sobre os sistemas detectáveis.
+

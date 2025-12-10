@@ -35,7 +35,7 @@ _O administrador da pasta ou do projeto_ pode visualizar todos os membros na pá
 
 == Adicionar membros à sua organização
 
-Você pode adicionar dois tipos de membros à sua organização: uma conta de usuário e uma conta de serviço. Os aplicativos usam contas de serviço para executar tarefas de API sem intervenção humana.  Uma pessoa normalmente usa uma conta de usuário para fazer login e gerenciar recursos.
+Você pode adicionar dois tipos de membros à sua organização: uma conta de usuário e uma conta de serviço. Os aplicativos usam contas de serviço para executar tarefas de API automaticamente.  As pessoas usam contas de usuário para fazer login e gerenciar recursos.
 
 Os usuários devem se inscrever no NetApp Console antes que você possa adicioná-los a uma organização ou atribuir-lhes uma função.  Você cria contas de serviço diretamente do Console.
 
@@ -97,7 +97,11 @@ Se você quiser usar a autenticação JWT, tenha sua chave pública ou certifica
 . Insira um nome para a conta de serviço.
 . Se você quiser usar a autenticação JWT, selecione *Usar autenticação JWT de chave privada* e carregue sua chave RSA pública ou certificado.  Pule esta etapa se quiser usar um ID de cliente e um segredo.
 +
-Seu certificado X.509.  Deve estar no formato PEM, CRT ou CER.
+Seu certificado X.509. Deve estar no formato PEM, CRT ou CER.
+
++
+.. Configure notificações de expiração para o seu certificado.  Escolha entre sete dias ou 30 dias.  As notificações de expiração são enviadas por e-mail e exibidas no Console para usuários com a função de Superadministrador ou Administrador da Organização.
+
 
 . Use a seção *Selecione uma organização, pasta ou projeto* para escolher o nível da hierarquia de recursos para o qual o membro deve ter permissões.
 +
@@ -145,7 +149,7 @@ A tabela *Membros* lista os membros da sua organização.
 
 Pode ser necessário remover um membro da sua organização, por exemplo, se ele sair da empresa.
 
-O sistema remove as permissões do membro, mas mantém suas contas do Console e do Site de Suporte NetApp .
+Ao remover um membro, o sistema revoga suas permissões, mas mantém suas contas no Console e no Site de Suporte da NetApp .
 
 .Passos
 . Na página *Membros*, navegue até um membro na tabela, selecioneimage:icon-action.png["Um ícone que tem três pontos lado a lado"] então selecione *Excluir usuário*.
@@ -165,7 +169,7 @@ Ao recriar as credenciais, você exclui as credenciais existentes da conta de se
 . Selecione *Membros*.
 . Na tabela *Membros*, navegue até uma conta de serviço, selecioneimage:icon-action.png["Um ícone que tem três pontos lado a lado"] e então selecione *Recriar segredos*.
 . Selecione *Recriar*.
-. Baixe ou copie o ID do cliente e o segredo do cliente.  + O segredo do cliente é exibido apenas uma vez. Copie ou baixe e armazene com segurança.
+. Baixe ou copie o ID do cliente e o segredo do cliente. + O console exibe o segredo do cliente apenas uma vez. Copie ou baixe e armazene com segurança.
 
 
 
@@ -174,7 +178,7 @@ Ao recriar as credenciais, você exclui as credenciais existentes da conta de se
 
 Se um usuário perder o acesso ao seu dispositivo MFA, você poderá remover ou desabilitar a configuração do MFA.
 
-Os usuários devem reconfigurar o MFA no login após a remoção.  Se o usuário tiver perdido o acesso ao seu dispositivo MFA apenas temporariamente, ele poderá usar o código de recuperação que salvou quando configurou o MFA para fazer login.
+Os usuários deverão configurar a autenticação multifator (MFA) novamente ao fazerem login após a remoção. Se o usuário tiver perdido o acesso ao seu dispositivo MFA apenas temporariamente, ele poderá usar o código de recuperação que salvou quando configurou o MFA para fazer login.
 
 Caso não tenham o código de recuperação, desative temporariamente o MFA para permitir o login. Quando você desabilita o MFA para um usuário, ele é desabilitado por apenas oito horas e depois reabilitado automaticamente. O usuário tem direito a apenas um login durante esse período, sem MFA. Após as oito horas, o usuário deve usar o MFA para efetuar login.
 

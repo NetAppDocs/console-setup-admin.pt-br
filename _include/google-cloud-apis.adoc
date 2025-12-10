@@ -2,6 +2,7 @@
 :allow-uri-read: 
 
 
+* API do Cloud Infrastructure Manager
 * API do Gerenciador de Implantação em Nuvem V2
 * API de registro em nuvem
 * API do Gerenciador de Recursos de Nuvem

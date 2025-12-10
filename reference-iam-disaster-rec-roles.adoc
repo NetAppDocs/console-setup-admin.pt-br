@@ -16,10 +16,10 @@ Você pode atribuir as seguintes funções aos usuários para fornecer a eles ac
 
 A recuperação de desastres utiliza as seguintes funções:
 
-* *Administrador de Recuperação de Desastres*: Execute quaisquer ações necessárias.
-* *Administrador de failover de recuperação de desastres*: Executar failover e migrações.
-* *Administrador do aplicativo de recuperação de desastres*: Criar planos de replicação. Modificar planos de replicação. Iniciar failovers de teste.
-* *Visualizador de Recuperação de Desastres*: Exibe apenas informações.
+* *Administrador de recuperação de desastres*: Execute quaisquer ações.
+* *Administrador de failover de recuperação de desastres*: Executa failover e migrações.
+* *Administrador do aplicativo de recuperação de desastres*: Crie planos de replicação. Modificar planos de replicação. Iniciar failovers de teste.
+* *Visualizador de recuperação de desastres*: Visualize somente informações.
 
 
 A tabela a seguir indica as ações que cada função pode executar.

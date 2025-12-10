@@ -23,4 +23,4 @@ Ao instalar manualmente um agente de console, o agente agora é compatível com 
 Esta versão inclui o seguinte:
 
 .Novo endereço de e-mail para notificações do NetApp Console
-O endereço de e-mail que envia notificações do NetApp Console foi alterado de *service@console.netapp.com* para *service@console.netapp.com*. A NetApp recomenda atualizar todas as regras de e-mail para permitir *service@console.netapp.com* para garantir que você continue recebendo notificações por e-mail do NetApp Console .
+O endereço de e-mail que envia notificações do NetApp Console foi alterado de *service@console.netapp.com* para *service@console.netapp.com*. A NetApp recomenda atualizar todas as regras de e-mail para permitir o endereço *service@console.netapp.com*, garantindo assim o recebimento contínuo de notificações por e-mail do NetApp Console .

@@ -20,16 +20,16 @@ Ao associar um membro à sua organização, você fornece permissões no nível 
 
 == Visualize os recursos em sua organização
 
-Você pode visualizar recursos descobertos e não descobertos associados à sua organização. Recursos não descobertos são recursos de armazenamento identificados, mas ainda não adicionados ao Console.
+Você pode visualizar recursos descobertos e não descobertos associados à sua organização. O sistema localiza recursos de armazenamento e os marca como não descobertos até que você os adicione ao Console.
 
 
-NOTE: OBSERVAÇÃO: a página Recursos exclui os recursos do Amazon FSx for NetApp ONTAP porque os usuários não podem associá-los a uma função.  Visualize-os na página Sistemas ou em Cargas de trabalho.
+NOTE: A página de Recursos exclui os recursos do Amazon FSx for NetApp ONTAP porque os usuários não podem associá-los a uma função.  Veja-os na página *Sistemas* ou em Cargas de Trabalho.
 
 .Passos
 . Selecione *Administração > Identidade e acesso*.
 . Selecione *Recursos*.
 . Selecione *Pesquisa e filtragem avançadas*.
-. Use qualquer uma das opções disponíveis para encontrar o recurso que você está procurando:
+. Utilize as opções disponíveis para encontrar um recurso:
 +
 ** *Pesquisar por nome do recurso*: Insira uma sequência de texto e selecione *Adicionar*.
 ** *Plataforma*: Selecione uma ou mais plataformas, como Amazon Web Services.
@@ -87,7 +87,7 @@ O exemplo a seguir mostra um recurso associado a um projeto.
 image:screenshot-iam-resource-details.png["Uma captura de tela da página de detalhes do recurso que mostra um recurso associado a um projeto que está diretamente abaixo da organização."]
 
 
-NOTE: Se você precisar determinar quais membros da organização têm acesso ao recurso, você podelink:task-iam-manage-folders-projects.html#view-associated-resources-members["visualizar os membros que têm acesso às pastas e projetos associados ao recurso"] .
+NOTE: Para ver quais membros da organização têm acesso ao recurso,link:task-iam-manage-folders-projects.html#view-associated-resources-members["Veja os membros com acesso às pastas e projetos associados."] .
 
 
 
@@ -96,7 +96,7 @@ NOTE: Se você precisar determinar quais membros da organização têm acesso ao
 Para remover um recurso de uma pasta ou projeto, você precisa remover a associação entre a pasta ou projeto e o recurso. Quando você remove a associação, isso impede que os membros gerenciem o recurso na pasta ou no projeto.
 
 
-NOTE: Para remover um recurso descoberto de toda a organização, remova o sistema da página *Sistemas*.
+NOTE: Para remover um recurso detectado de toda a organização, acesse a página *Sistemas* e remova o sistema.
 
 .Passos
 . Na página *Recursos*, navegue até um recurso na tabela, selecioneimage:icon-action.png["Um ícone que tem três pontos lado a lado"] e então selecione *Ver detalhes*.

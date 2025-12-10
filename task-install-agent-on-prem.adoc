@@ -36,7 +36,7 @@ Execute o agente do Console em um host x86 que atenda aos requisitos de sistema 
 
 NOTE: O agente do Console reserva o intervalo de UID e GID de 19000 a 19200.  Este intervalo é fixo e não pode ser modificado.  Se algum software de terceiros no seu host estiver usando UIDs ou GIDs dentro desse intervalo, a instalação do agente falhará.  A NetApp recomenda usar um host livre de software de terceiros para evitar conflitos.
 
-Host dedicado:: O agente do Console não é suportado em um host compartilhado com outros aplicativos. O host deve ser um host dedicado.  O host pode ter qualquer arquitetura que atenda aos seguintes requisitos de tamanho:
+Host dedicado:: O agente do Console requer um host dedicado.  Qualquer arquitetura é suportada, desde que atenda a estes requisitos de tamanho:
 +
 --
 * CPU: 8 núcleos ou 8 vCPUs
@@ -49,7 +49,7 @@ O agente usa `/opt` para instalar o `/opt/application/netapp` diretório e seu c
 
 ** `/var`: 40 GiB de espaço devem estar disponíveis
 +
-O agente do Console requer este espaço em `/var` porque o Docker ou o Podman são arquitetados para criar os contêineres dentro deste diretório.  Especificamente, eles criarão contêineres no `/var/lib/containers/storage` diretório.  Montagens externas ou links simbólicos não funcionam neste espaço.
+O agente do console requer este espaço em `/var` Porque o Podman ou o Docker são projetados para criar contêineres dentro deste diretório.  Especificamente, eles criarão contêineres no `/var/lib/containers/storage` diretório e `/var/lib/docker` para Docker. Montagens externas ou links simbólicos não funcionam neste espaço.
 
 
 
@@ -222,6 +222,16 @@ Serviços da AWS (amazonaws.com):
 
  a| 
 Para gerenciar recursos da AWS.  O ponto de extremidade depende da sua região da AWS. https://docs.aws.amazon.com/general/latest/gr/rande.html["Consulte a documentação da AWS para obter detalhes"^]
+
+
+
+ a| 
+Amazon FSX para NetApp ONTAP:
+
+* api.workloads.netapp.com
+
+ a| 
+O console baseado na web contata este endpoint para interagir com as APIs do Workload Factory, a fim de gerenciar e operar cargas de trabalho baseadas no FSx para ONTAP .
 
 
 
@@ -583,13 +593,13 @@ Dependendo do seu sistema operacional, o Podman ou o Docker Engine é necessári
 ====
 .Podman
 --
-Instale e configure o Podman:
+Siga estas etapas para instalar e configurar o Podman:
 
 * Habilite e inicie o serviço podman.socket
 * Instalar python3
-* Instale o pacote podman-compose correspondente.
+* Instale o pacote podman-compose versão 1.0.6
 * Adicione podman-compose à variável de ambiente PATH
-* Verifique se a sua versão do Podman está usando o DNS Netavark Aardvark em vez do CNI.
+* Se estiver usando o Red Hat Enterprise Linux, verifique se sua versão do Podman está usando o DNS Netavark Aardvark em vez do CNI
 
 
 
@@ -605,7 +615,7 @@ rm /var/run/docker.sock
 ----
 . Instale o Podman.
 +
-Obtenha o Podman nos repositórios do Red Hat Enterprise Linux.
+Você pode obter o Podman nos repositórios oficiais do Red Hat Enterprise Linux.
 
 +
 Para Red Hat Enterprise Linux 9:
@@ -641,32 +651,34 @@ sudo systemctl enable --now podman.socket
 ----
 sudo dnf install python3
 ----
-. Instale o EPEL para obter o podman-compose.
-+
-.. Se estiver usando o Red Hat Enterprise 9.1 a 9.6:
+. Instale o pacote do repositório EPEL se ele ainda não estiver disponível no seu sistema.
+
+
+Esta etapa é necessária porque o podman-compose está disponível no repositório Extra Packages for Enterprise Linux (EPEL).
+
+. Se estiver usando o Red Hat Enterprise 9.1 a 9.6:
 +
 [source, cli]
 ----
 sudo dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm
 ----
-
-
-. Instale o pacote podman-compose 1.5.0.
++
+.. Instale o pacote podman-compose 1.5.0.
 +
 [source, cli]
 ----
 sudo dnf install podman-compose-1.5.0
 ----
-+
-.. Se estiver usando o Red Hat Enterprise Linux 8:
+
+
+. Se estiver usando o Red Hat Enterprise Linux 8:
 +
 [source, cli]
 ----
 sudo dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
 ----
-
-
-. Instale o pacote podman-compose 1.0.6.
++
+.. Instale o pacote podman-compose 1.0.6.
 +
 [source, cli]
 ----
@@ -676,11 +688,10 @@ sudo dnf install podman-compose-1.0.6
 
 NOTE: Usando o `dnf install` O comando atende ao requisito de adicionar podman-compose à variável de ambiente PATH.  O comando de instalação adiciona podman-compose a /usr/bin, que já está incluído no `secure_path` opção no host.
 
-. Se estiver usando o Red Hat Enterprise Linux 8, verifique se sua versão do Podman está usando o NetAvark com o DNS Aardvark em vez do CNI.
-+
-.. Verifique se o seu networkBackend está definido como CNI executando o seguinte comando:
+.. Se estiver usando o Red Hat Enterprise Linux 8, verifique se sua versão do Podman está usando o NetAvark com o DNS Aardvark em vez do CNI.
 
 
+. Verifique se o seu networkBackend está definido como CNI executando o seguinte comando:
 
 
 [listing]
@@ -724,7 +735,7 @@ Siga a documentação do Docker para instalar o Docker Engine.
 .Passos
 . https://docs.docker.com/engine/install/["Ver instruções de instalação do Docker"^]
 +
-Instale uma versão compatível do Docker Engine seguindo os passos indicados. Não instale a versão mais recente, pois o Console não a suporta.
+Siga as etapas para instalar uma versão compatível do Docker Engine. Não instale a versão mais recente, pois ela não é suportada pelo Console.
 
 . Verifique se o Docker está habilitado e em execução.
 +
@@ -754,10 +765,10 @@ Você tem a opção de configurar um servidor proxy após a instalação, mas is
 
 
 
-NOTE: Não é possível definir um certificado para um servidor proxy transparente ao instalar manualmente o agente do Console.  Se precisar definir um certificado para um servidor proxy transparente, você deverá usar o Console de Manutenção após a instalação. Saiba mais sobre olink:reference-agent-maint-console.html["Console de manutenção do agente"] .
+NOTE: Não é possível definir um certificado para um servidor proxy transparente ao instalar manualmente o agente do Console. Se precisar definir um certificado para um servidor proxy transparente, você deverá usar o Console de Manutenção após a instalação. Saiba mais sobre olink:reference-agent-maint-console-proxy.html["Console de manutenção do agente"] .
 
 .Sobre esta tarefa
-O instalador disponível no site de suporte da NetApp pode ser uma versão anterior.  Após a instalação, o agente do Console se atualiza automaticamente se uma nova versão estiver disponível.
+Após a instalação, o agente do Console se atualiza automaticamente se uma nova versão estiver disponível.
 
 .Passos
 . Se as variáveis de sistema _http_proxy_ ou _https_proxy_ estiverem definidas no host, remova-as:
@@ -770,9 +781,14 @@ unset https_proxy
 +
 Se você não remover essas variáveis do sistema, a instalação falhará.
 
-. Baixe o software do agente do Console em https://mysupport.netapp.com/site/products/all/details/cloud-manager/downloads-tab["Site de suporte da NetApp"^] e, em seguida, copie-o para o host Linux.
+. Baixe o software do agente do Console e copie-o para o host Linux.  Você pode baixá-lo tanto do NetApp Console quanto do site de suporte da NetApp .
 +
-Você deve baixar o instalador do agente "online" destinado ao uso em sua rede ou na nuvem.
+** NetApp Console: Acesse *Agentes > Gerenciamento > Implantar agente > Local > Instalação manual*.
++
+Escolha baixar os arquivos de instalação do agente ou um URL para os arquivos.
+
+** Site de suporte da NetApp (necessário caso você ainda não tenha acesso ao Console) https://mysupport.netapp.com/site/products/all/details/netapp-console/downloads-tab["Site de suporte da NetApp"^] ,
+
 
 . Atribua permissões para executar o script.
 +
@@ -832,7 +848,7 @@ Por exemplo:
 
 
 
-NOTE: Se você deseja configurar um proxy transparente, pode fazê-lo após a instalação. link:reference-agent-maint-console.html["Saiba mais sobre o console de manutenção do agente."]
+NOTE: Se você deseja configurar um proxy transparente, pode fazê-lo após a instalação. link:reference-agent-maint-console-proxy.html["Saiba mais sobre o console de manutenção do agente."]
 
 . Se você usou o Podman, precisará ajustar a porta aardvark-dns.
 +

@@ -18,7 +18,7 @@ A NetApp moveu a maioria das opções de menu para o painel de navegação esque
 
 ==== A tela é substituída pela página Sistemas
 
-A NetApp renomeou o Canvas para a página *Sistemas*.  Navegue até a página *Sistema* no menu *Armazenamento > Gerenciamento*.
+A NetApp renomeou o Canvas para a página *Sistemas*. Acesse a página *Sistemas* no menu *Armazenamento > Gerenciamento*.
 
 image:https://docs.netapp.com/us-en/console-setup-admin/media/screenshot-storage-mgmt.png["Uma captura de tela da página de sistemas."]
 

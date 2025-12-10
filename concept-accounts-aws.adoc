@@ -101,7 +101,7 @@ As perguntas a seguir estão relacionadas a credenciais e assinaturas.
 
 Conforme descrito nas seções acima, o Console permite que você forneça credenciais da AWS de algumas maneiras: uma função do IAM associada ao agente do Console, assumindo uma função do IAM em uma conta confiável ou fornecendo chaves de acesso da AWS.
 
-Com as duas primeiras opções, o Console usa o AWS Security Token Service para obter credenciais temporárias que são rotacionadas constantemente.  Este processo é a melhor prática: é automático e seguro.
+Com as duas primeiras opções, o Console usa o AWS Security Token Service para obter credenciais temporárias que são rotacionadas constantemente. Este processo é a melhor prática – é automático e seguro.
 
 Se você fornecer ao Console chaves de acesso da AWS, deverá rotacionar as chaves atualizando-as no Console em intervalos regulares.  Este é um processo completamente manual.
 
