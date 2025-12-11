@@ -86,9 +86,6 @@ Podman versão 5.4.0 com podman-compose 1.5.0.
  a| 
 Suportado no modo de imposição ou no modo permissivo
 
-* O gerenciamento de sistemas Cloud Volumes ONTAP NÃO é suportado por agentes que tenham o SELinux habilitado no sistema operacional.
-
-
 
 
  a| 
@@ -107,9 +104,6 @@ Podman versão 4.9.4 com podman-compose 1.5.0.
  a| 
 Suportado no modo de imposição ou no modo permissivo
 
-* O gerenciamento de sistemas Cloud Volumes ONTAP NÃO é suportado por agentes que tenham o SELinux habilitado no sistema operacional.
-
-
 
 
  a| 
@@ -127,9 +121,6 @@ Podman versão 4.6.1 ou 4.9.4 com podman-compose 1.0.6.
 <<podman-configuration,Ver requisitos de configuração do Podman>> .
  a| 
 Suportado no modo de imposição ou no modo permissivo
-
-* O gerenciamento de sistemas Cloud Volumes ONTAP NÃO é suportado por agentes que tenham o SELinux habilitado no sistema operacional.
-
 
 
 
