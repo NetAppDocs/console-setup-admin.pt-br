@@ -457,7 +457,6 @@
   <block id="98119697a8c596d6a586655f867a2cda" category="inline-xref">Ver requisitos de configuração do Podman</block>
   <block id="a4facfb2d16d1ed97d33467440808582" category="paragraph"><block ref="70e106a4b5e10c3f8e254a047f7ddb34" category="inline-xref-macro-rx"></block> .</block>
   <block id="80626b31c22fa123b11c56011b1f23b6" category="paragraph">Suportado no modo de imposição ou no modo permissivo</block>
-  <block id="af068a958b6647626147316242b85435" category="list-text">O gerenciamento de sistemas Cloud Volumes ONTAP NÃO é suportado por agentes que tenham o SELinux habilitado no sistema operacional.</block>
   <block id="3d945423f8e9496c429a5d8c65b4604f" category="paragraph">Ubuntu</block>
   <block id="4cb2cce5e859bbc5a24d65a5385fba47" category="paragraph">24,04 LTS</block>
   <block id="c7c28552abf6b30437f72dd034b10f4b" category="paragraph">3.9.45 ou posterior com o NetApp Console no modo padrão ou restrito</block>
@@ -469,7 +468,6 @@
   <block id="8f06b143b878ae3919ba41cd38ea7380" category="list-text">O agente do Console é compatível com os seguintes sistemas operacionais ao usar o Console no modo privado.  Uma ferramenta de orquestração de contêineres é necessária antes de instalar o agente.</block>
   <block id="1a3d8802d280d4ec910f54042cd62998" category="cell">SELinux</block>
   <block id="730752c250979031a3c93723f75e0b07" category="paragraph">3.9.42 ou posterior com o Console em modo privado</block>
-  <block id="7e4159d172a1854b6946f160a149d326" category="paragraph">Suportado no modo de imposição ou modo permissivo ^1^</block>
   <block id="607262a04e5c4340fc8d641e874a5695" category="paragraph">3.9.29 ou posterior</block>
   <block id="a3336db0e9f7b6341a12794c144076b6" category="paragraph">Docker Engine 23.0.6 a 26.0.0</block>
   <block id="5556c95763913c6cfa8f61d9cab4f4f2" category="paragraph">26.0.0 é compatível com _novos_ agentes 3.9.44 ou instalações posteriores</block>
@@ -509,7 +507,6 @@
   <block id="72647f42887226fbe161a7784cde9900" category="admonition">Ajuste a porta aardvark-dns (padrão: 53) após instalar o agente para evitar conflitos de porta DNS.  Siga as instruções para configurar a porta.</block>
   <block id="b7f382be5c79895b47058d13f21b554a" category="list-text">Remova o pacote podman-docker se ele estiver instalado no host.</block>
   <block id="3c7e0e0689042d7582c0880e1b998f2c" category="list-text">Instale o Podman.</block>
-  <block id="29c15383bb54e5c0c3bfba429503d481" category="paragraph">Para Red Hat Enterprise Linux 9:</block>
   <block id="6d76d2ad5a4defbd1ab7de4805041d08" category="paragraph">Onde &lt;versão&gt; é a versão suportada do Podman que você está instalando. <block ref="f431862ab66067d97cd0bf60cb34059c" category="inline-xref-macro-rx"></block> .</block>
   <block id="084cfc903eb108eb15642e42f36348f9" category="paragraph">Para Red Hat Enterprise Linux 8:</block>
   <block id="d85624226a34d354eb24bd9f58803ee7" category="list-text">Habilite e inicie o serviço podman.socket.</block>
@@ -784,14 +781,6 @@
   <block id="b539e86fbaa7eae465366a0142624ec2" category="paragraph">Um administrador do BlueXP (usuários com a função de administrador da organização) pode configurar o BlueXP para solicitar que os usuários insiram suas credenciais do ONTAP para acessar o gerenciador do sistema ONTAP .  Quando essa configuração está habilitada, os usuários precisam inserir suas credenciais do ONTAP sempre que elas não são armazenadas no BlueXP.</block>
   <block id="990a2328425e217648ea5dd2ae370ffb" category="inline-link-macro">Aprenda a configurar as definições de credenciais.</block>
   <block id="a97214620795cdb6071bd24584271e12" category="paragraph">Este recurso está disponível no Connector versão 3.9.49 e superiores. <block ref="d8aff65091362c86f97d60b0103d6fe5" category="inline-link-macro-rx"></block> .</block>
-  <block id="a03c6dfbb1d64911f1090d54175ff8d3" category="section-title">Atualização do conector 3.9.48</block>
-  <block id="1697b2b05dc5c7ad63e22e713e94ba7c" category="section-title">Capacidade de desabilitar a configuração de atualização automática do Conector</block>
-  <block id="91f4c340492e583f80db57f970516c1f" category="paragraph">Você pode desativar o recurso de atualização automática do Connector.</block>
-  <block id="459e65cb3fcf9e226149b023791951b2" category="paragraph">Quando você usa o BlueXP no modo padrão ou restrito, o BlueXP atualiza automaticamente seu Connector para a versão mais recente, desde que o Connector tenha acesso de saída à Internet para obter a atualização do software.  Se você precisar gerenciar manualmente quando o conector será atualizado, agora você pode desabilitar as atualizações automáticas para o modo padrão ou restrito.</block>
-  <block id="01d6125faf020265bf432216c335698c" category="admonition">Essa alteração não afeta o modo privado do BlueXP , onde você sempre deve atualizar o conector.</block>
-  <block id="0e9ee8d377b683ca8ac77de05c3539d9" category="paragraph">Este recurso está disponível no Connector versão 3.9.48 e superiores.</block>
-  <block id="355c51d49cd780f57fe417fdede5f61c" category="inline-link-macro">Saiba como desabilitar a atualização automática do Connector.</block>
-  <block id="205d3d3e91b5bdc14b60b9aa01a583a5" category="paragraph"><block ref="205d3d3e91b5bdc14b60b9aa01a583a5" category="inline-link-macro-rx"></block></block>
   <block id="23b3b711859803a815b81aca1cc4811c" category="doc">Conector 3.9.50</block>
   <block id="490e13bea5876f4583d326593619ee16" category="list-text">O gerenciamento de sistemas Cloud Volumes ONTAP agora é suportado por conectores que têm o SELinux habilitado no sistema operacional.</block>
   <block id="256d8753a695f4395908c9903ae723b2" category="paragraph">No momento, a versão 3.9.50 está disponível para modo padrão e modo restrito.</block>
@@ -5175,7 +5164,6 @@
   <block id="c8fa489b70f23c314b0b945db2384452" category="sidebar">Manter um agente instalado no VCenter</block>
   <block id="70328d3965555bdfe7c71386e9e25887" category="sidebar">Instalar um certificado assinado pela CA para acesso ao console da web</block>
   <block id="417a7f2f69f19fbcd309a4694944397e" category="sidebar">Exigir o uso de IMDSv2 em instâncias EC2</block>
-  <block id="c33d6b870a4603154aa9aca1e2bdc138" category="sidebar">Gerenciar atualizações de agentes</block>
   <block id="e5c32965ed32649bcfd48bc8b138f3d2" category="sidebar">Desinstale e remova o agente do Console</block>
   <block id="7c584a16cbf4210dc0a344179e274e09" category="sidebar">Configuração padrão</block>
   <block id="8f235a758f8b25f9b4ff4eddf53e6c5e" category="sidebar">Aplicar permissões ONTAP no NetApp Console</block>
@@ -5537,7 +5525,6 @@
   <block id="e308cbdddf34fb65f938301ff80d4538" category="list-text">compute.subnetworks.useExternalIp</block>
   <block id="bc803c81454ea9df76e9060827a7bc53" category="list-text">compute.instances.addAccessConfig</block>
   <block id="3f7540ad5f30cb6539b7476d85d2f608" category="paragraph">As permissões foram atualizadas para maior clareza sobre seu uso, mas nenhuma permissão foi adicionada ou removida. Foram adicionadas três colunas para indicar se cada permissão é usada para implantação, operações diárias ou exclusão. Além disso, algumas permissões são segregadas com base em seu uso para NetApp Data Classification e NetApp Backup and Recovery.</block>
-  <block id="18ecbdaa6bb0f123dda150b973bd53b7" category="list-text">Se estiver usando o Red Hat Enterprise 9.1 a 9.6:</block>
   <block id="2f78cc1ceedbe872d890b3b087731dee" category="paragraph">Amazon FSX para NetApp ONTAP:</block>
   <block id="fccc45024c0efe519c08e43bb1bd4c5f" category="list-text">api.workloads.netapp.com</block>
   <block id="5e57ad0482de1c13a4a285a6101f6c13" category="paragraph">O console baseado na web contata este endpoint para interagir com as APIs do Workload Factory, a fim de gerenciar e operar cargas de trabalho baseadas no FSx para ONTAP .</block>
@@ -5651,67 +5638,24 @@
   <block id="ba28f37a50f35b5b62bf9d0cebb79e6a" category="section-title">Permissões usadas para o Cloud Volumes ONTAP</block>
   <block id="45c85e2fcbcad00a3b3aff5447627a5b" category="paragraph">O agente do Console usa as permissões da função personalizada para gerenciar recursos e processos do Cloud Volumes ONTAP na sua rede do Google Cloud.  As seções a seguir descrevem como o agente utiliza essas permissões.</block>
   <block id="05fedb77715f320017d52f66da44b1b0" category="example-title">Permissões para Cloud Volumes ONTAP</block>
-  <block id="1978fc577443d8841749463c81c14e1b" category="cell">*config.deployments.create*</block>
   <block id="7011503cf97d17706ff8163876018fb2" category="cell">Para implantar a instância da máquina virtual Cloud Volumes ONTAP usando o Google Cloud Infrastructure Manager.</block>
-  <block id="90859ccfb98bd6357cfd9888e01654f7" category="cell">*config.deployments.delete*</block>
-  <block id="1c823c113d5b21854ab32fb4006d239e" category="cell">*config.deployments.deleteState*</block>
-  <block id="4aef8bfd5362969e0a14daaef6aa2206" category="cell">*config.deployments.get*</block>
-  <block id="39871c3ed7f15a544a81dd29a8f6d5be" category="cell">*config.deployments.getLock*</block>
-  <block id="6f5bdaf7fca0180616b4ae4d03d58a28" category="cell">*config.deployments.getState*</block>
-  <block id="3f52aa0019ca6c92a0b2ce5ef1585bb7" category="cell">*config.deployments.list*</block>
-  <block id="91ea1caf7d132e95307e5641e3eb678a" category="cell">*config.deployments.lock*</block>
-  <block id="5cea6e43ecc95c4f000154ebf17ffe41" category="cell">*config.deployments.update*</block>
-  <block id="efda381a960e37f6857c4e005d80f4d4" category="cell">*config.deployments.updateState*</block>
-  <block id="527ac12ac6f7f67f130d341677f2666a" category="cell">*config.operations.get*</block>
-  <block id="09cbd21df4067bcce7aca81e1d55d7f9" category="cell">*config.previews.get*</block>
-  <block id="4f81cd437237e3919ef57ccf6f896eab" category="cell">*config.previews.list*</block>
-  <block id="25beaddbb4bfa58c896401064f614a49" category="cell">*config.resources.list*</block>
-  <block id="b47fce5e3845afb2bed0589dd445f4b1" category="cell">*config.revisions.get*</block>
-  <block id="6e9d76e8116c43eb4d333f5e51a59158" category="cell">*compute.forwardingRules.create*</block>
   <block id="1204549a036d6f1fa0e77a33b66ba5fc" category="cell">Crie regras de encaminhamento para o roteamento de tráfego para serviços de backend.</block>
-  <block id="51f4457e4ce6f71c07304daee30d55a4" category="cell">*compute.forwardingRules.delete*</block>
   <block id="5625df4a9e5fad50b5ed7483ef854ba0" category="cell">Exclua as regras de encaminhamento existentes.</block>
-  <block id="2747d1bc3f8c306dcd87a303e8d46ac4" category="cell">*compute.forwardingRules.get*</block>
   <block id="518cdf23dbd2f2786baa04a1b251789f" category="cell">Recupere detalhes sobre as regras de encaminhamento existentes.</block>
-  <block id="be4ea57d513cf3eb072627e23f9ab07d" category="cell">*compute.forwardingRules.setLabels*</block>
   <block id="f5be53441d39f1e3531a7e05f4c9cb41" category="cell">Defina ou atualize os rótulos nas regras de encaminhamento da organização.</block>
   <block id="2df5b761a5ee0099ec61a876d1eb970a" category="cell">compute.globalOperations.get</block>
-  <block id="e91ad303361b5fdc2d2c5336e085b399" category="cell">*compute.healthChecks.create*</block>
   <block id="cd9c9102f061e7080ec044f1de8be60f" category="cell">Criar e gerenciar verificações de integridade para monitorar a saúde do serviço de backend.</block>
-  <block id="69c63ecfab8251f5332b3f093989452b" category="cell">*compute.healthChecks.delete*</block>
-  <block id="91fc716755c2ccb249d395deaddc51d1" category="cell">*compute.healthChecks.get*</block>
-  <block id="1d0d0f012d65150fe8a659ddc5246c6b" category="cell">*compute.healthChecks.useReadOnly*</block>
-  <block id="51c92eabc0dc72041fa2d618c547a3b3" category="cell">*compute.instances.use*</block>
   <block id="60f9a4c26542d13806ebfceda41b622a" category="cell">Utilizar instâncias de máquinas virtuais (operações de iniciar, parar e conectar).</block>
-  <block id="7694a96be1a3706f979373e54371672a" category="cell">*compute.resourcePolicies.create*</block>
   <block id="69c9360ed1f6b9f362a8bb04cc2f9976" category="cell">Crie e gerencie políticas de recursos para gerenciamento automatizado de recursos.</block>
-  <block id="5c1436481ccb784f0099a466930a9d4b" category="cell">*compute.resourcePolicies.delete*</block>
-  <block id="79c6a1fb6244cc1241f910477c4585fa" category="cell">*compute.resourcePolicies.get*</block>
-  <block id="946819076f570f98fc2669abc5ebb221" category="cell">*logging.logEntries.create*</block>
   <block id="365620bda694367699a9e977c245c99d" category="cell">Criar e encaminhar entradas de log para monitoramento, depuração e auditoria.</block>
-  <block id="24073bc546846441de345b264ff9733b" category="cell">*logging.logEntries.route*</block>
-  <block id="af467f9a70abceae95e202a38cab79bc" category="cell">*cloudbuild.builds.get*</block>
-  <block id="f93ac717762cc8fe2abd2d13026a6e0c" category="cell">*iam.serviceAccounts.create*</block>
-  <block id="97f415e7bf3ae2691c030ac84e8a7ab4" category="cell">*iam.serviceAccountKeys.create*</block>
   <block id="d097a5e02531e9d8606a4b9016211fb0" category="cell">armazenamento.objetos.criar</block>
   <block id="18e2e5fd1011d7608a9039b76959973f" category="cell">Crie e gerencie objetos (arquivos) em um bucket do Google Cloud Storage.</block>
   <block id="877dd561e8b326f974d6649bf025cc47" category="cell">storage.objects.delete</block>
-  <block id="75c9b1d045f5bd31e38a2fe8fc99685b" category="cell">*compute.addresses.createInternal*</block>
   <block id="a01609be65377c550c1f3f9c95e301e9" category="cell">Criar endereços IP internos dentro da rede VPC para alocação de recursos.</block>
-  <block id="67ce54621d28117b563f4a29bba7ea15" category="cell">*compute.addresses.deleteInternal*</block>
   <block id="eb8b5851a4b3813a0b7d8271e9390168" category="cell">Exclua endereços IP internos para limpeza de recursos.</block>
-  <block id="4a9033f2bc4de0bb816e8bb0b5d4f954" category="cell">*compute.addresses.setLabels*</block>
   <block id="c9100b96b75009cc80c0b2c138896bf1" category="cell">Atualizar rótulos no recurso Endereço.</block>
-  <block id="f80885b173b15e9ea2234f900e51e402" category="cell">*compute.addresses.useInternal*</block>
   <block id="d52c5aaec9bec122290d546577a86741" category="cell">Utilize endereços IP internos para comunicação em rede.</block>
   <block id="6cf64ac632269f6541c1da37cd735d52" category="cell">Criar e gerenciar serviços de backend para roteamento de tráfego.</block>
-  <block id="d8e30cab07834e99dd81b60d6b1eb695" category="cell">*compute.regionBackendServices.delete*</block>
-  <block id="d71ae8f686ef0997fc9137df9832b3a3" category="cell">*compute.regionBackendServices.update*</block>
-  <block id="6ffa2106d04c5f11c8219cf00218c867" category="cell">*compute.regionBackendServices.use*</block>
-  <block id="8afe1371ad74901fbfca12f6507394f7" category="cell">*compute.instanceGroups.create*</block>
-  <block id="31837e29feaf463250d44e6b633644d1" category="cell">*compute.instanceGroups.delete*</block>
-  <block id="a231c32ea863f8bc2002ebefe954023f" category="cell">*compute.instanceGroups.update*</block>
-  <block id="008a67a6e66af0c91194d03a05ed9ca6" category="cell">*compute.instanceGroups.use*</block>
   <block id="fee9fb5dae000866e2823c08577b5639" category="paragraph">O agente do Console usa as permissões da função personalizada para gerenciar os recursos e processos do NetApp Backup and Recovery em sua rede do Google Cloud.  As seções a seguir descrevem como o agente utiliza essas permissões.</block>
   <block id="a696d2e75adad45b4173573021542ba7" category="example-title">Exibir permissões para o NetApp Backup and Recovery.</block>
   <block id="d5ca4eff15be43a2a5ebcb745899160d" category="paragraph">O agente do Console usa as permissões da função personalizada para gerenciar os recursos e processos do NetApp Data Classification na sua rede do Google Cloud.  As seções a seguir descrevem como o agente utiliza essas permissões.</block>
@@ -5862,7 +5806,10 @@
   <block id="e1da0c759b99b40771f992144973dfe0" category="paragraph">Pode haver momentos em que você precise desabilitar as verificações de configuração que verificam a conectividade de saída durante a instalação. Por exemplo, ao instalar manualmente um agente no seu ambiente de Nuvem Governamental, você precisa desativar as verificações de configuração, caso contrário, a instalação falhará.</block>
   <block id="749e848334a8eeda9b72b5bef6878260" category="paragraph">Você desabilita a verificação de configuração definindo o sinalizador _skipConfigCheck_ no arquivo _com/opt/application/netapp/service-manager-2/config.json_. Por padrão, esse sinalizador é definido como falso e a verificação de configuração verifica o acesso de saída do agente. Defina este sinalizador como verdadeiro para desabilitar a verificação. Familiarize-se com a sintaxe JSON antes de concluir esta etapa.</block>
   <block id="174dd97dd1f160583ac76fa482fa6a5e" category="section-title">10 de dezembro de 2025</block>
-  <block id="426c031f387e762bb968fd54671cf5a6" category="paragraph">Diretiva não resolvida em &lt;stdin&gt; - include::_whatsnew/2025-12-08.adoc[]</block>
   <block id="5a348f21cc989b094b43c61561c46351" category="sidebar">Verificações de configuração</block>
   <block id="800641e37082e3805299720dbe2f9713" category="sidebar">Proxy transparente</block>
+  <block id="313de8c309a0a212c02f6a6a480a0bf1" category="list-text">Para Red Hat Enterprise Linux 9,6:</block>
+  <block id="d5bf119df844977ba02663feefe22591" category="list-text">Para Red Hat Enterprise Linux 9.1 a 9.4:</block>
+  <block id="4fcd2b24226e5ab1f33572cdc55d9b7b" category="list-text">Se estiver usando o Red Hat Enterprise 9:</block>
+  <block id="fd1ad73a99f49752f7ad262decfb3b45" category="list-text">Instale o pacote do repositório EPEL.</block>
 </blocks>

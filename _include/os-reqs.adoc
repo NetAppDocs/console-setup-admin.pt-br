@@ -153,7 +153,7 @@ Podman versão 4.6.1 ou 4.9.4
 
 <<podman-configuration,Ver requisitos de configuração do Podman>> .
  a| 
-Suportado no modo de imposição ou modo permissivo ^1^
+Suportado no modo de imposição ou no modo permissivo
 
 
 
