@@ -5402,14 +5402,7 @@
   <block id="46602301e1e9b92a123cc69be96445a2" category="paragraph">O agente do Console faz as seguintes solicitações de API para funcionalidades básicas de NetApp Backup and Recovery :</block>
   <block id="ff9be13f0dd01fa19eeb632c57e75912" category="list-text">Microsoft.Authorization/locks/write</block>
   <block id="9c54728f345d88de2c032cfb76dbdb17" category="list-text">Microsoft.Authorization/locks/read</block>
-  <block id="761a802cfbda43d4d27ac578e6d1127e" category="section-title">Permissões adicionais de backup e recuperação</block>
   <block id="02eee31e5109fac37be42cd2ad631e0f" category="paragraph">O agente do console faz as seguintes solicitações de API para operações avançadas de backup e recuperação, bem como para recursos de busca e restauração. Essas permissões permitem o gerenciamento de redes, cofres de chaves e identidades gerenciadas:</block>
-  <block id="9db96a7be686af799d5b0df68ebdf3a8" category="paragraph">O agente realiza as seguintes solicitações de API quando você utiliza a funcionalidade de Busca e Restauração. Você só precisa dessas permissões se tiver habilitado os recursos de indexação legados antes do lançamento da versão 2 da indexação:</block>
-  <block id="d3a274c843d8b8ce75d55d7c7829a6af" category="paragraph">As seguintes permissões foram removidas do exemplo de função JSON para que o exemplo reflita as permissões mínimas necessárias para Backup e Recuperação:</block>
-  <block id="f4b5566a2cd5de876b361e9f7aaa2d92" category="list-text">Microsoft.Insights/Métricas/Leitura</block>
-  <block id="542e0e990e0a90f3111cc38f8fc96301" category="list-text">Microsoft.Compute/virtualMachines/extensions/write</block>
-  <block id="027acd9694c335956d7cb35872c2d7f5" category="list-text">Microsoft.Compute/virtualMachines/extensions/read</block>
-  <block id="ebd9939fa785bda0707a6efaf5d7b8da" category="paragraph">As seguintes permissões foram adicionadas ao exemplo de função JSON:</block>
   <block id="73361bbe50a41bd2e76e59f453c19c62" category="paragraph">As seguintes permissões não são mais necessárias para Backup e Recuperação, a menos que você esteja usando a indexação legada:</block>
   <block id="c47b4df454cbc8c7bf8207225c8c507d" category="paragraph">As seguintes permissões foram movidas para a seção "Permissões adicionais de backup e recuperação" porque não são necessárias para uma configuração mínima:</block>
   <block id="862b252e960e9fce5bfb6811edec4eb5" category="list-text">Execute o seguinte comando e verifique se o status do agente é exibido como _ativo (em execução)_:</block>
@@ -5812,4 +5805,9 @@
   <block id="d5bf119df844977ba02663feefe22591" category="list-text">Para Red Hat Enterprise Linux 9.1 a 9.4:</block>
   <block id="4fcd2b24226e5ab1f33572cdc55d9b7b" category="list-text">Se estiver usando o Red Hat Enterprise 9:</block>
   <block id="fd1ad73a99f49752f7ad262decfb3b45" category="list-text">Instale o pacote do repositório EPEL.</block>
+  <block id="b83fdcee3fd8ba30cb801a52c12a57c3" category="paragraph">As seções a seguir descrevem como as permissões são usadas para o NetApp Backup and Recovery.</block>
+  <block id="7b1fb20ba83a0d151738ea779ef6b541" category="section-title">Permissões avançadas de backup e recuperação</block>
+  <block id="f81364bddd76f5bb00fa7ea1afb1e8f3" category="paragraph">O agente realiza as seguintes solicitações de API quando você utiliza a funcionalidade de Busca e Restauração. Você só precisa dessas permissões se tiver habilitado os recursos de indexação legados antes do lançamento da versão 2 da indexação, em fevereiro de 2025:</block>
+  <block id="6b3f95e18a1ba0f839260ac943cc5e73" category="paragraph">Foi adicionada uma política JSON personalizada que reflete o mínimo de permissões possível e o escopo mais restrito possível.</block>
+  <block id="0a466732427ffe0e3d3bf69fe76471c6" category="paragraph">As seguintes permissões foram adicionadas à lista mínima de permissões de backup e recuperação:</block>
 </blocks>
