@@ -14,7 +14,7 @@ summary: Existem algumas maneiras diferentes de criar um agente do Console no Go
 
 
 [role="lead"]
-Existem algumas maneiras diferentes de criar um agente do Console no Google Cloud.  Diretamente do NetApp Console é a maneira mais comum.  ---
+Existem algumas maneiras diferentes de criar um agente do Console no Google Cloud.  Diretamente do NetApp Console é a maneira mais comum.
 
 As seguintes opções de instalação estão disponíveis:
 
