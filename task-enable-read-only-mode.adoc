@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
-permalink: task-sign-up-saas.html 
+permalink: task-enable-read-only-mode.html 
 keywords: sign up, signing up, sign in, signing in, login with netapp, log in with netapp, create account, account, log in with nss, nss, nss login 
 summary: Para começar a usar o Console, o primeiro passo é se cadastrar ou fazer login usando suas credenciais do Site de Suporte da NetApp ou criar um login no NetApp Console . Se você for o primeiro usuário da sua empresa a se cadastrar, crie uma nova organização no Console como administrador da organização. Se sua empresa já possui uma organização, você pode se cadastrar ou fazer login para acessá-la. 
 ---
-= Inscreva-se ou faça login no NetApp Console
+= Ativar o modo somente leitura para uma organização do NetApp Console
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,13 +14,35 @@ summary: Para começar a usar o Console, o primeiro passo é se cadastrar ou faz
 
 
 [role="lead"]
-Para usar o Console, inscreva-se ou faça login com suas credenciais do Site de Suporte da NetApp ou crie um login no NetApp Console . Se você for o primeiro da sua empresa a se cadastrar, você criará uma nova organização como administrador. Se sua empresa já possui uma organização, inscreva-se ou faça login com suas credenciais existentes do Site de Suporte da NetApp ou com o login único (SSO) da empresa.
+Como medida de segurança, você pode ativar o modo somente leitura para sua organização do NetApp Console . No modo somente leitura, os usuários podem visualizar recursos e configurações, mas não podem fazer alterações.
+
+No modo somente leitura, os usuários com funções de administrador precisam elevar manualmente suas permissões para fazer alterações, o que garante que as alterações sejam intencionais.
+
+.Funções de acesso necessárias
+Superadministrador ou administrador da organização.
+
+
+
+== Ative o modo somente leitura para sua organização do Console.
+
+Ative o modo somente leitura para restringir as alterações na sua organização do Console. Todos os usuários ainda podem visualizar os recursos. Usuários com funções de administrador não podem executar nenhuma ação no Console sem elevar manualmente suas permissões.
+
+Quando o modo somente leitura está ativado, os usuários veem um banner que os notifica de que a organização está em modo somente leitura. Os usuários devem acessar as Configurações do usuário para elevar seu nível de privilégio.
+
+.Passos
+. Selecione *Administração > Identidade e acesso*.
+. Na guia *Organizações*, selecione *Editar configurações da organização* para a organização que você deseja definir como somente leitura.
+. Na seção *Modo somente leitura*, ative o modo somente leitura movendo a chave para a posição *Ligado* e, em seguida, selecione *Salvar*.
++
+image:screenshot-read-only-slider.png["Uma captura de tela que mostra a opção \"Modo somente leitura\" ativada."]
+
+
 
 
 
 == Cadastre-se no NetApp Console como administrador inicial da organização.
 
-Se sua empresa não possui uma organização NetApp Console , inscreva-se para criar uma. O primeiro usuário se torna o administrador da organização e gerencia as contas de usuário e as permissões. Você poderá atualizar as funções e adicionar mais administradores posteriormente.
+Se sua empresa não possui uma organização NetApp Console , inscreva-se para criar uma. O primeiro usuário é o administrador e gerencia as contas e permissões. Você poderá atualizar as funções e adicionar administradores posteriormente.
 
 .Passos
 . Abra um navegador da web e vá para o https://console.netapp.com["NetApp Console"^]
@@ -46,10 +68,10 @@ Verifique seu endereço de e-mail para concluir o cadastro.
 . Selecione *Vamos começar*.
 
 
-+ Como usuário iniciante e administrador da organização, você segue um processo guiado para adicionar recursos de armazenamento, criar um agente do Console e muito mais. link:task-console-assistant.html["Aprenda a usar o Assistente do Console."^]
++ Se você for um administrador iniciante, siga o processo guiado para adicionar armazenamento, criar um agente do Console e muito mais. link:task-console-assistant.html["Aprenda a usar o Assistente do Console."]
 
 .Próximos passos
-Como administrador, após concluir as etapas incluídas no Assistente do Console, você deve planejar sua estratégia de identidade e acesso, adicionar usuários à sua organização e atribuir funções. link:task-iam-get-started.html["Saiba mais sobre gerenciamento de identidade e acesso para o NetApp Console."^]
+Como administrador, após concluir as etapas incluídas no Assistente do Console, você deve planejar sua estratégia de identidade e acesso, adicionar usuários à sua organização e atribuir funções. link:task-iam-get-started.html["Saiba mais sobre gerenciamento de identidade e acesso para o NetApp Console."]
 
 
 
@@ -77,7 +99,7 @@ Verifique seu endereço de e-mail para concluir o cadastro.
 
 
 . Após efetuar o login, revise e aceite o Contrato de Licença do Usuário Final.
-. Se o sistema solicitar que você crie uma organização, feche a caixa de diálogo e informe um administrador do Console para que ele possa adicioná-lo à sua organização do Console e conceder-lhe acesso. link:task-user-settings.html#contact-admin["Aprenda como entrar em contato com um administrador da organização."^]
+. Se o sistema solicitar que você crie uma organização, feche a caixa de diálogo e informe um administrador do Console para que ele possa adicioná-lo à sua organização do Console e conceder-lhe acesso. link:task-user-settings.html#contact-admin["Aprenda como entrar em contato com um administrador da organização."]
 
 
 .Próximos passos

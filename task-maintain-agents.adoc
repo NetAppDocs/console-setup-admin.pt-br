@@ -17,9 +17,6 @@ summary: Manter o sistema operacional no host do agente é sua responsabilidade.
 Manter o sistema operacional no host do agente do Console é responsabilidade sua (do cliente).  Por exemplo, você (o cliente) deve aplicar atualizações de segurança ao sistema operacional no host do agente seguindo os procedimentos padrão da sua empresa para distribuição do sistema operacional.
 
 
-TIP: Se você já tem um agente, você deve estar ciente delink:reference-agent-operating-system-changes.html["alterações nos sistemas operacionais Linux suportados"] .
-
-
 
 == Patches do sistema operacional e o agente
 

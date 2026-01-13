@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: task-iam-manage-members-permissions.html 
-keywords: user, service account, member, role, permissions, organization, project, folder, iam, identity and access management 
+keywords: user, service account, member, role, permissions, organization, project, folder, iam, identity and access management, federated groups, SSO, access roles, add members, grant permissions 
 summary: Gerencie os membros da sua organização para fornecer permissões em diferentes níveis da hierarquia de recursos da sua organização. 
 ---
-= Adicionar membros e contas de serviço ao NetApp Console
+= Adicionar usuários a uma organização do NetApp Console
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,47 +14,49 @@ summary: Gerencie os membros da sua organização para fornecer permissões em d
 
 
 [role="lead"]
-No Console, você pode adicionar usuários e contas de serviço à sua organização e atribuir a eles uma ou mais funções na hierarquia de recursos.  Uma _função_ contém um conjunto de permissões que permite que um membro (usuário ou conta de serviço) execute ações específicas em um nível específico da hierarquia de recursos.
+No Console, você concede aos usuários acesso a projetos ou pastas de acordo com uma função de acesso. Uma _função de acesso_ contém um conjunto de permissões que permite a um membro (usuário ou conta de serviço) executar ações específicas no nível atribuído da hierarquia de recursos.
 
-Você precisa de uma das seguintes funções para gerenciar usuários e permissões:
+.Funções de acesso necessárias
+Superadministrador, administrador da organização ou administrador de pasta ou projeto (para pastas e projetos que eles administram). link:reference-iam-predefined-roles.html["Saiba mais sobre funções de acesso"].
 
-* Administrador da organização
-+
-Usuários com esta função podem gerenciar todos os membros
 
-* Administrador de pasta ou projeto
-+
-Usuários com esta função podem gerenciar apenas membros de uma pasta ou projeto designado
 
-+
-_O administrador da pasta ou do projeto_ pode visualizar todos os membros na página *Membros*, mas gerenciar permissões apenas para pastas e projetos aos quais eles têm acesso. link:reference-iam-predefined-roles.html["Saiba mais sobre as ações que um _administrador de pasta ou projeto_ pode concluir"] .
+== Entenda como o acesso é concedido no NetApp Console.
 
+O NetApp Console utiliza o controle de acesso baseado em funções (RBAC) para gerenciar permissões. Atribua funções aos usuários individualmente ou por meio de grupos federados. Cada função define as ações permitidas para recursos específicos.
+
+Observe o seguinte sobre como conceder acesso no NetApp Console:
+
+* Todos os usuários devem primeiro se cadastrar no NetApp Console antes de obterem acesso aos recursos.
+* Você deve atribuir explicitamente uma função a cada usuário no Console antes que ele possa acessar os recursos, mesmo que seja membro de um grupo federado ao qual já tenha sido atribuída uma função.
+* Você pode adicionar contas de serviço diretamente do Console e atribuir funções a elas.
 
 
 
 
 == Adicionar membros à sua organização
 
-Você pode adicionar dois tipos de membros à sua organização: uma conta de usuário e uma conta de serviço. Os aplicativos usam contas de serviço para executar tarefas de API automaticamente.  As pessoas usam contas de usuário para fazer login e gerenciar recursos.
+O NetApp Console suporta três tipos de membros: contas de usuário, contas de serviço e grupos federados.
 
-Os usuários devem se inscrever no NetApp Console antes que você possa adicioná-los a uma organização ou atribuir-lhes uma função.  Você cria contas de serviço diretamente do Console.
+Os usuários precisam se cadastrar no NetApp Console antes que você possa adicioná-los e atribuir uma função, mesmo que estejam em um grupo federado. Crie contas de serviço diretamente no Console.
 
-Para gerenciar usuários e suas permissões, você deve ter a função *Administrador da organização* ou a função *Administrador de pasta ou projeto*.  Lembre-se de que usuários com a função *Administrador de pasta ou projeto* só podem gerenciar membros da pasta ou dos projetos para os quais têm permissões de administrador.
+Todos os membros devem ter pelo menos uma função explicitamente atribuída a eles para poderem acessar os recursos.
+
+Ao adicionar um membro, escolha o nível de recurso (organização, pasta ou projeto) e atribua uma ou mais funções com as permissões necessárias.
 
 
 
-=== Adicionar uma conta de usuário
+=== Adicionar um usuário
 
-Embora os usuários se inscrevam no NetApp Console por conta própria, eles precisam ser adicionados explicitamente a uma organização ou a pastas ou projetos específicos para acessar recursos no Console.
+Os usuários se cadastram no NetApp Console, mas um administrador da organização, pasta ou projeto precisa adicioná-los à organização, pasta ou projeto para que possam acessar os recursos.
+
+.Antes de começar:
+O usuário já deve ter se cadastrado no NetApp Console. Se eles ainda não se inscreveram, oriente-os a... link:task-sign-up-saas.html["Inscreva-se no NetApp Console."]
+
+
+NOTE: Se você estiver adicionando um usuário que faz parte de um grupo federado, certifique-se de que ele já tenha se cadastrado no NetApp Console e que uma função tenha sido explicitamente atribuída a ele no Console. A NetApp recomenda atribuir uma função de acesso mínima, como a de visualizador da organização.
 
 .Passos
-. Direcionar o usuário para visitar https://console.netapp.com/["NetApp Console"^] para se inscrever.
-+
-Depois que os usuários se inscrevem, eles preenchem a página *Inscrever-se*, verificam seus e-mails e efetuam login. Se o Console solicitar que os usuários criem uma organização, eles a fecham e notificam você sobre a criação da conta.  Você pode então adicionar o usuário à sua organização existente.
-
-+
-link:task-sign-up-saas.html["Saiba como se inscrever no NetApp Console"] .
-
 . Selecione *Administração > Identidade e acesso*.
 . Selecione *Membros*.
 . Selecione *Adicionar um membro*.
@@ -65,8 +67,8 @@ link:task-sign-up-saas.html["Saiba como se inscrever no NetApp Console"] .
 Observe o seguinte:
 
 +
-** Você só pode selecionar pastas e projetos para os quais você tem permissão.
-** Selecionar uma organização ou pasta concede ao membro permissões para todo o seu conteúdo.
+** Você pode selecionar apenas as pastas e os projetos para os quais você tem permissão.
+** Ao selecionar uma organização ou pasta, você concede ao membro permissões para acessar todo o seu conteúdo.
 ** Você só pode atribuir a função *Administrador da organização* no nível da organização.
 
 
@@ -74,10 +76,10 @@ Observe o seguinte:
 +
 link:reference-iam-predefined-roles.html["Saiba mais sobre funções de acesso"] .
 
-. Opcional: selecione uma função ou projeto adicional.  Se você quiser fornecer acesso a pastas ou projetos adicionais dentro da sua organização ou conceder ao usuário funções adicionais na área selecionada, selecione *Adicionar função*, especifique outra pasta ou projeto ou uma categoria de função diferente e escolha uma função.
+. Para conceder acesso a mais pastas, projetos ou funções, selecione *Adicionar função*, escolha a categoria de pasta, projeto ou função e selecione uma função.
 . Selecione *Adicionar*.
 +
-O Console envia ao usuário um e-mail com instruções.
+O console envia instruções ao usuário por e-mail.
 
 
 
@@ -85,9 +87,10 @@ O Console envia ao usuário um e-mail com instruções.
 
 === Adicionar uma conta de serviço
 
-Você pode automatizar tarefas e integrar com segurança as APIs do Console com contas de serviço.  Ao criar uma conta de serviço, escolha entre dois métodos de autenticação: usando um ID de cliente e segredo ou usando autenticação JWT (JSON Web Token).  O ID do cliente e o método secreto são adequados para configurações simples, enquanto a autenticação JWT oferece maior segurança para ambientes automatizados ou nativos da nuvem.  Escolha a opção que melhor se adapta às suas necessidades de segurança e à forma como você planeja usar o Console.
+As contas de serviço permitem automatizar tarefas e conectar-se com segurança às APIs do Console. Escolha um ID e um segredo do cliente para configurações simples ou um JWT (JSON Web Token) para maior segurança em ambientes automatizados ou nativos da nuvem. Selecione o método que atenda aos seus requisitos de segurança.
 
-Se você quiser usar a autenticação JWT, tenha sua chave pública ou certificado pronto para uso.
+.Antes de começar:
+Para autenticação JWT, prepare sua chave pública ou certificado.
 
 .Passos
 . Selecione *Administração > Identidade e acesso*.
@@ -95,7 +98,7 @@ Se você quiser usar a autenticação JWT, tenha sua chave pública ou certifica
 . Selecione *Adicionar um membro*.
 . Para *Tipo de membro*, selecione *Conta de serviço*.
 . Insira um nome para a conta de serviço.
-. Se você quiser usar a autenticação JWT, selecione *Usar autenticação JWT de chave privada* e carregue sua chave RSA pública ou certificado.  Pule esta etapa se quiser usar um ID de cliente e um segredo.
+. Para usar a autenticação JWT, selecione *Usar autenticação JWT com chave privada* e carregue sua chave ou certificado RSA público. Ignore se estiver usando ID e segredo do cliente.
 +
 Seu certificado X.509. Deve estar no formato PEM, CRT ou CER.
 
@@ -113,84 +116,58 @@ Observe o seguinte:
 ** Você só pode atribuir a função *Administrador da organização* no nível da organização.
 
 
-. Selecione uma *Categoria* e depois selecione uma *Função* que forneça ao membro permissões para os recursos associados à organização, pasta ou projeto que você selecionou.
+. Selecione uma *Categoria* e, em seguida, selecione uma *Função* que conceda ao membro permissões para os recursos na organização, pasta ou projeto que você selecionou.
 +
 link:reference-iam-predefined-roles.html["Saiba mais sobre funções de acesso"] .
 
-. Opcional: selecione uma função ou projeto adicional.  Se você quiser fornecer acesso a pastas ou projetos adicionais dentro da sua organização ou conceder ao usuário funções adicionais na área selecionada, selecione *Adicionar função*, especifique outra pasta ou projeto ou uma categoria de função diferente e escolha uma função.
-. Se você não escolheu usar a autenticação JWT, baixe ou copie o ID do cliente e o segredo do cliente.  + O Console mostra o segredo do cliente apenas uma vez.  Copie-o com segurança; você pode recriá-lo mais tarde, se necessário.
-. Se você escolher a autenticação JWT, baixe ou copie o ID do cliente e o público JWT.  Essas informações são exibidas apenas uma vez e não podem ser recuperadas posteriormente.
+. Para conceder acesso a mais pastas, projetos ou funções, selecione *Adicionar função*, escolha a categoria de pasta, projeto ou função e selecione uma função.
+. Se você não escolheu usar a autenticação JWT, baixe ou copie o ID do cliente e o segredo do cliente.
++
+O Console exibe o segredo do cliente apenas uma vez. Faça uma cópia segura; você poderá recriá-la mais tarde, caso a perca.
+
+. Se você escolheu a autenticação JWT, baixe ou copie o ID do cliente e o público-alvo do JWT. O Console exibe essas informações apenas uma vez e não permite que você as recupere posteriormente.
 . Selecione *Fechar*.
 
 
 
 
-== Ver membros da organização
+== Adicione um grupo federado à sua organização.
 
-Para entender quais recursos e permissões estão disponíveis para um membro, você pode visualizar as funções atribuídas ao membro em diferentes níveis da hierarquia de recursos da sua organização.link:task-iam-manage-roles.html["Aprenda a usar funções para controlar o acesso aos recursos do Console."^]
+Você pode adicionar um grupo federado do seu provedor de identidade (IdP) à sua organização. Os membros do grupo federado herdam as funções que você atribui ao grupo no Console.
 
-Você pode visualizar contas de usuário e contas de serviço na página *Membros*.
-
-
-NOTE: Você também pode visualizar todos os membros associados a uma pasta ou projeto específico. link:task-iam-manage-folders-projects.html#view-associated-resources-members["Saber mais"] .
+.Antes de começar:
+Antes de adicionar um grupo federado, certifique-se do seguinte: * Você já deve ter configurado a federação entre seu IdP e o Console. link:concept-federation.html["Aprenda como configurar a federação."] * O grupo já deve existir no seu IdP. * Você precisa saber o nome exato do grupo no seu IdP. * Os usuários pertencentes ao grupo já devem ter se cadastrado no NetApp Console e ter tido uma função atribuída explicitamente no Console.
 
 .Passos
 . Selecione *Administração > Identidade e acesso*.
 . Selecione *Membros*.
+. Selecione *Adicionar um membro*.
+. Em *Tipo de membro*, selecione *Grupo federado*.
+. Selecione a federação à qual o grupo pertence.
+. Em *Nome do grupo*, insira o nome exato do grupo em seu IdP.
+. Use a seção *Selecione uma organização, pasta ou projeto* para escolher o nível da hierarquia de recursos para o qual o membro deve ter permissões.
 +
-A tabela *Membros* lista os membros da sua organização.
+Observe o seguinte:
 
-. Na página *Membros*, navegue até um membro na tabela, selecioneimage:icon-action.png["Um ícone que tem três pontos lado a lado"] e então selecione *Ver detalhes*.
-
-
-
-
-== Remover um membro da sua organização
-
-Pode ser necessário remover um membro da sua organização, por exemplo, se ele sair da empresa.
-
-Ao remover um membro, o sistema revoga suas permissões, mas mantém suas contas no Console e no Site de Suporte da NetApp .
-
-.Passos
-. Na página *Membros*, navegue até um membro na tabela, selecioneimage:icon-action.png["Um ícone que tem três pontos lado a lado"] então selecione *Excluir usuário*.
-. Confirme que você deseja remover o membro da sua organização.
-
-
-
-
-== Recriar as credenciais para uma conta de serviço
-
-Crie novas credenciais caso você as perca ou precise atualizá-las.
-
-Ao recriar as credenciais, você exclui as credenciais existentes da conta de serviço e cria novas. Você não pode usar as credenciais anteriores.
-
-.Passos
-. Selecione *Administração > Identidade e acesso*.
-. Selecione *Membros*.
-. Na tabela *Membros*, navegue até uma conta de serviço, selecioneimage:icon-action.png["Um ícone que tem três pontos lado a lado"] e então selecione *Recriar segredos*.
-. Selecione *Recriar*.
-. Baixe ou copie o ID do cliente e o segredo do cliente. + O console exibe o segredo do cliente apenas uma vez. Copie ou baixe e armazene com segurança.
-
-
-
-
-== Gerenciar a autenticação multifator (MFA) de um usuário
-
-Se um usuário perder o acesso ao seu dispositivo MFA, você poderá remover ou desabilitar a configuração do MFA.
-
-Os usuários deverão configurar a autenticação multifator (MFA) novamente ao fazerem login após a remoção. Se o usuário tiver perdido o acesso ao seu dispositivo MFA apenas temporariamente, ele poderá usar o código de recuperação que salvou quando configurou o MFA para fazer login.
-
-Caso não tenham o código de recuperação, desative temporariamente o MFA para permitir o login. Quando você desabilita o MFA para um usuário, ele é desabilitado por apenas oito horas e depois reabilitado automaticamente. O usuário tem direito a apenas um login durante esse período, sem MFA. Após as oito horas, o usuário deve usar o MFA para efetuar login.
-
-
-NOTE: Para gerenciar a autenticação multifator de um usuário, você deve ter um endereço de e-mail no mesmo domínio que o usuário afetado.
-
-.Passos
-. Selecione *Administração > Identidade e acesso*.
-. Selecione *Membros*.
 +
-A tabela *Membros* lista os membros da sua organização.
+** Você só pode selecionar pastas e projetos para os quais você tem permissão.
+** Selecionar uma organização ou pasta concede ao membro permissões para todo o seu conteúdo.
+** Você só pode atribuir a função *Administrador da organização* no nível da organização.
 
-. Na página *Membros*, navegue até um membro na tabela, selecioneimage:icon-action.png["Um ícone que tem três pontos lado a lado"] e então selecione *Gerenciar autenticação multifator*.
-. Escolha se deseja remover ou desabilitar a configuração MFA do usuário.
+
+. Selecione uma *Categoria* e, em seguida, selecione uma *Função* que conceda ao membro permissões para os recursos na organização, pasta ou projeto que você selecionou.
++
+link:reference-iam-predefined-roles.html["Saiba mais sobre funções de acesso"] .
+
+. Para conceder acesso a mais pastas, projetos ou funções, selecione *Adicionar função*, escolha a categoria de pasta, projeto ou função e selecione uma função.
+
+
+
+
+== Informações relacionadas
+
+* link:concept-identity-and-access-management.html["Saiba mais sobre gerenciamento de identidade e acesso no NetApp Console"]
+* link:task-iam-get-started.html["Comece com identidade e acesso"]
+* link:reference-iam-predefined-roles.html["Funções de acesso ao NetApp Console"]
+* https://docs.netapp.com/us-en/console-automation/tenancyv4/overview.html["Saiba mais sobre a API para identidade e acesso"^]
 

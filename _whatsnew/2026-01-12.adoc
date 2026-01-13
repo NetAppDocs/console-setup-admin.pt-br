@@ -1,0 +1,32 @@
+= Agente de console 4.3.0
+:allow-uri-read: 
+
+
+
+
+=== Agente de console 4.3.0
+
+A versão 4.3.0 suporta tanto o modo padrão quanto o modo restrito.
+
+Esta versão do agente do Console inclui melhorias de segurança, correções de bugs e os seguintes recursos:
+
+.Capacidade de validar conexões de rede de agentes do Console
+Agora você pode validar as conexões de rede dos agentes do Console conectados diretamente do NetApp Console. Este recurso ajuda a verificar a conectividade e a solucionar problemas com os agentes do Console.
+
+link:https://docs.netapp.com/us-en/console-setup-admin/task-troubleshoot-agent.html#verify-network-access["Aprenda como executar verificações de configuração em agentes do Console."]
+
+
+
+=== Administração do NetApp Console
+
+Esta versão inclui o seguinte:
+
+.Suporte para federação quando o NetApp Console está em modo restrito.
+Agora você pode habilitar a federação para uma organização do NetApp Console que esteja em modo restrito. Isso permite que os usuários façam login no Console usando suas credenciais corporativas, mantendo os benefícios de segurança do modo restrito.
+
+.Modo somente leitura
+Você pode definir uma organização do NetApp Console para o modo somente leitura. No modo somente leitura, os usuários podem visualizar recursos e configurações, mas não podem fazer alterações. Um administrador ou superadministrador da organização pode ativar o modo somente leitura para uma organização. Quando o modo somente leitura está ativado, os usuários com funções administrativas devem elevar manualmente suas permissões para fazer as alterações necessárias.
+
+link:https://docs.netapp.com/us-en/console-setup-admin/task-enable-read-only-mode.html["Aprenda como ativar o modo somente leitura para uma organização do Console."]
+
+link:https://docs.netapp.com/us-en/console-setup-admin/task-user-settings["Aprenda como alavancar sua atuação quando sua organização estiver em modo somente leitura."]

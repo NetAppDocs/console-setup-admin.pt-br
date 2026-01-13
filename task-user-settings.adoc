@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: task-user-settings.html 
-keywords: user profile, mfa, change password, role, login, multi-factor, authentication, dark mode 
-summary: No Console, cada usuário tem um perfil que contém informações sobre o usuário e suas configurações. Você pode visualizar e editar as configurações do seu perfil. 
+keywords: user profile, mfa, change password, role, login, multi-factor, authentication, dark mode, read-only mode, contact admin 
+summary: 'Você pode modificar seu perfil do Console, incluindo alterar sua senha, habilitar a autenticação multifator (MFA) e ver quem é o administrador do Console.' 
 ---
 = Gerencie as configurações de usuário do NetApp Console
 :hardbreaks:
@@ -22,7 +22,7 @@ No Console, cada usuário tem um perfil que contém informações sobre o usuár
 
 == Alterar seu nome de exibição
 
-Você pode alterar o nome de exibição do seu Console, que é usado para identificá-lo e fica visível para outros usuários. Seu nome de exibição não é o mesmo que seu nome de usuário ou endereço de e-mail, que não podem ser alterados.
+Você pode alterar o nome de exibição do seu Console, que o identifica para outros usuários. Você não pode alterar seu nome de usuário ou endereço de e-mail.
 
 .Passos
 . Selecione o ícone de perfil no canto superior direito do Console para visualizar o painel de configurações do usuário.
@@ -32,11 +32,29 @@ Você pode alterar o nome de exibição do seu Console, que é usado para identi
 
 
 
+== Aprimore sua função no modo somente leitura.
+
+Em alguns casos, o administrador da sua organização pode colocá-la em modo somente leitura. Se você possui uma função de administrador, precisa elevar suas permissões para fazer alterações. Isso garante que as alterações sejam intencionais e autorizadas.
+
+Após ter sua função elevada, você poderá fazer alterações no Console até que sua sessão atual expire.
+
+Ao terminar, faça logout do Console ou mova o controle deslizante de volta para o modo somente leitura. O sistema remove suas permissões elevadas quando sua sessão expira.
+
+.Passos
+. Selecione o ícone de perfil no canto superior direito do Console para visualizar o painel de configurações do usuário.
+. Para ativar o *modo somente leitura*, mova o controle deslizante para a posição *Elevado* e confirme as alterações.
++
+image:screenshot-user-elevated.png["Uma captura de tela que mostra o controle deslizante do modo Somente leitura na posição Elevado."]
+
+
+
+
+
 == Configurar autenticação multifator
 
 Configure a autenticação multifator (MFA) para melhorar a segurança exigindo um segundo método de verificação.
 
-Usuários que usam logon único com um provedor de identidade externo ou o site de suporte da NetApp não podem habilitar o MFA.  Se alguma dessas situações for verdadeira para você, você não verá a opção para habilitar o MFA nas configurações do seu perfil.
+Usuários que utilizam o login único com um provedor de identidade externo ou o site de suporte da NetApp não podem habilitar a autenticação multifator (MFA). Se alguma dessas situações se aplicar a você, você não verá a opção para ativar a autenticação multifator (MFA) nas configurações do seu perfil.
 
 Não habilite o MFA se sua conta de usuário for usada para acesso à API.  A autenticação multifator interrompe o acesso à API quando ativada para uma conta de usuário.  Use contas de serviço para todo o acesso à API.
 
@@ -75,7 +93,7 @@ Você só pode usar códigos de recuperação uma vez.  Se você usar ou perder 
 
 == Excluir sua configuração de MFA
 
-Para parar de usar a autenticação multifator (MFA) para seu login, exclua sua configuração de MFA.  Isso elimina a necessidade de inserir um código único no seu aplicativo de autenticação ao fazer login.
+Ao terminar, faça logout do Console ou mova o controle deslizante de volta para o modo somente leitura. O sistema remove suas permissões elevadas quando sua sessão expira.
 
 
 NOTE: Se você não conseguir acessar seu aplicativo de autenticação ou código de recuperação, será necessário entrar em contato com o administrador da organização para redefinir sua configuração de MFA.

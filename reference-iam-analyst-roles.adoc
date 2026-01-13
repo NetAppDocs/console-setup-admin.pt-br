@@ -34,8 +34,8 @@ Você pode atribuir a função de analista de suporte operacional aos usuários 
 | Registre-se para obter suporte e envie casos por meio do Console | Sim 
 
 
-| Sim | Ver a página de auditoria e notificações 
+| Ver a página de auditoria e notificações | Sim 
 
 
-| Sim | Visualizar, baixar e configurar alertas 
+| Visualizar, baixar e configurar alertas | Sim 
 |===

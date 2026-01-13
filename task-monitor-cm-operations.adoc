@@ -44,9 +44,11 @@ A tabela destaca os recursos da página Auditoria e do Centro de Notificações 
 
 == Auditar a atividade do usuário na página Auditoria
 
+Use a página Auditoria para identificar quem executou uma ação ou seu status.
+
 A página Auditoria mostra as ações que os usuários concluíram para gerenciar sua organização ou conta.  Isso inclui ações de gerenciamento, como associação de usuários, criação de sistemas, criação de agentes e muito mais.
 
-Use a página Auditoria para identificar quem executou uma ação ou seu status.
+Você também pode verificar quem adicionou um membro a uma organização ou se um projeto foi excluído com sucesso.
 
 .Passos
 . Selecione *Administração > Auditoria*.

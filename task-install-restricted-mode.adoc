@@ -22,6 +22,8 @@ Implante o agente do Console no modo restrito para que você possa usar o NetApp
 
 Instale o agente do Console no marketplace do seu provedor de nuvem ou manualmente em um host Linux.
 
+Você precisa preparar seu ambiente antes de instalar o agente do console. Você pode instalar a partir do AWS Marketplace, do Azure Marketplace ou manualmente em seu próprio host Linux executado na AWS, Azure ou Google Cloud.
+
 [role="tabbed-block"]
 ====
 .Marketplace comercial da AWS
@@ -205,8 +207,10 @@ O Azure implanta a máquina virtual com as configurações especificadas.  A má
 Configurar o NetApp Console.
 
 --
-.Instalação manual
+.Instalação manual (obrigatória para o Google Cloud)
 --
+Você pode instalar o agente do Console manualmente em seu próprio host Linux em execução na AWS, Azure ou Google Cloud.
+
 .Antes de começar
 Você deve ter o seguinte:
 

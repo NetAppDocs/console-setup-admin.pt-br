@@ -1,0 +1,41 @@
+= 
+:allow-uri-read: 
+
+
+.Passos
+. Selecione *Administração > Identidade e acesso*.
+. Selecione *Federação* para visualizar a página *Federações*.
+. Selecione *Configurar nova federação*.
+
+
+. Selecione *Avançar*.
+. Selecione *Testar conexão* para testar sua conexão. Você será direcionado para uma página de login para seu servidor IdP. Faça login com suas credenciais do IdP. Após efetuar o login, volte ao Console para ativar a conexão.
++
+
+NOTE: Ao usar o Console no modo restrito, copie o URL para uma janela anônima do navegador ou para um navegador separado para fazer login no seu IdP.
+
+. No Console, selecione *Avançar* para revisar a página de resumo.
+. Configure as notificações.
++
+Escolha entre sete dias ou 30 dias.  O sistema envia notificações de expiração por e-mail e as exibe no Console para qualquer usuário com as seguintes funções: Superadministrador, Administrador da organização, Administrador da federação e Visualizador da federação.
+
+. Analise os detalhes da federação e selecione *Ativar federação*.
+. Selecione *Concluir* para finalizar o processo.
+
+
+Após habilitar a federação, os usuários fazem login no NetApp Console usando suas credenciais corporativas.
+
+. Insira os detalhes do seu domínio:
++
+.. Escolha se deseja usar um domínio verificado ou seu domínio de e-mail.  O domínio de e-mail é o domínio associado à conta com a qual você está conectado.
+.. Digite o nome da federação que você está configurando.
+.. Se você escolher um domínio verificado, selecione o domínio na lista.
+
+
+. Selecione *Avançar*.
+
+
+.Antes de começar
+* É necessária uma conta IdP com privilégios administrativos.  Coordene com seu administrador do IdP para concluir as etapas.
+* Identifique o domínio que você deseja usar para federação.  Você pode usar seu domínio de e-mail ou um domínio diferente que seja seu.  Se você quiser usar um domínio diferente do seu domínio de e-mail, primeiro verifique o domínio no Console.  Você pode fazer isso seguindo os passos nolink:task-federation-verify-domain.html["Verifique seu domínio no NetApp Console"] tópico.
+

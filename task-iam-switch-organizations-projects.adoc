@@ -31,14 +31,14 @@ Se você for membro de várias organizações, poderá alternar entre elas a qua
 image:screenshot-iam-switch-organizations.png["Uma captura de tela do banner superior onde você pode selecionar o menu suspenso Organização e depois selecionar outra organização."]
 
 . Se você tiver alguma organização parceira, selecione a aba *Parceria* para ver as organizações parceiras disponíveis.
-
-
-+ A aba *Parceria* não será exibida se você não tiver nenhuma organização parceira.
++
+A aba *Parceria* não é exibida se você não tiver nenhuma organização parceira.
 
 . Selecione outra organização e depois selecione *Alternar*.
++
+Se você tiver alguma organização parceira, selecione a aba *Parceria* para ver as organizações parceiras disponíveis.
 
 
-+ Se você tiver alguma organização parceira, selecione a aba *Parceria* para visualizar as organizações parceiras disponíveis.
 
 
 

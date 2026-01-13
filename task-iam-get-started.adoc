@@ -16,7 +16,7 @@ summary: Para começar a usar o gerenciamento de identidade e acesso no NetApp C
 [role="lead"]
 Ao se inscrever no NetApp Console, você será solicitado a criar uma nova organização.  A organização inclui um membro (um administrador da organização) e um projeto padrão.  Para configurar o gerenciamento de identidade e acesso (IAM) para atender às suas necessidades comerciais, você precisará personalizar a hierarquia da sua organização, adicionar membros adicionais, adicionar ou descobrir recursos e associar esses recursos à sua hierarquia.
 
-Você deve ter permissões de *Administrador da organização* para administrar a identidade e o acesso de toda a sua organização.  Se você tiver permissões de *Administrador de pasta ou projeto*, você só poderá administrar as pastas e projetos para os quais você tem permissões.
+Você precisa das permissões de *Administrador da organização* ou *Superadministrador* para gerenciar a identidade e o acesso da sua organização. Com as permissões de *Administrador de pasta ou projeto*, você só pode gerenciar as pastas e os projetos aos quais tem acesso.
 
 Siga estas etapas para configurar uma nova organização.  A ordem pode variar de acordo com as necessidades da sua organização.
 
@@ -29,7 +29,7 @@ link:task-iam-manage-folders-projects.html["Aprenda a organizar seus recursos co
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Dois"]Associe membros à sua organização
 [role="quick-margin-para"]
-Vincule contas de usuários à sua organização e atribua permissões.  Você também tem a opção de adicionar contas de serviço à sua organização.
+Após os usuários se inscreverem no NetApp Console, você deve adicioná-los explicitamente à sua organização do Console. Você também tem a opção de adicionar contas de serviço à sua organização.
 
 [role="quick-margin-para"]
 link:task-iam-manage-members-permissions.html["Aprenda a gerenciar membros e suas permissões"] .

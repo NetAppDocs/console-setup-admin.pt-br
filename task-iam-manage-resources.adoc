@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: task-iam-manage-resources.html 
 keywords: resource, hierarchy, association, access, resource permissions, resource hierarchy, iam, identity and access management 
-summary: Gerencie a hierarquia de recursos da sua organização associando recursos a projetos e pastas específicos. 
+summary: Controle o acesso dos usuários aos recursos adicionando-os a projetos e pastas na sua organização do NetApp Console . Conceder acesso aos usuários no nível do projeto. 
 ---
-= Gerencie a hierarquia de recursos na sua organização do NetApp Console
+= Adicione recursos a pastas e projetos no NetApp Console.
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,22 @@ summary: Gerencie a hierarquia de recursos da sua organização associando recur
 
 
 [role="lead"]
-Ao associar um membro à sua organização, você fornece permissões no nível da organização, pasta ou projeto.  Para garantir que esses membros tenham permissões para acessar os recursos corretos, você precisará gerenciar a hierarquia de recursos da sua organização associando recursos a projetos e pastas específicos.  Um _recurso_ é um sistema de armazenamento ou agente do Console que o Console já gerencia ou do qual tem conhecimento.
+Controle o acesso dos usuários aos recursos adicionando-os a projetos e pastas na sua organização do NetApp Console . Conceder acesso aos usuários no nível do projeto.
+
+Um _recurso_ é uma entidade da qual o Console tem conhecimento, como um recurso de armazenamento, um agente do Console ou uma carga de trabalho de Backup e Recuperação.
+
+Você pode visualizar e gerenciar recursos na página *Recursos* do Console.
+
+
+
+== Tipos de recursos do console
+
+Você pode associar vários tipos de recursos a projetos na sua organização do NetApp Console :
+
+Recursos de armazenamento:: Os recursos de armazenamento são o tipo de recurso mais comum em sua organização e representam sistemas de armazenamento locais e em nuvem. Ao adicionar um sistema de armazenamento ao Console, você pode adicioná-lo a uma pasta ou projeto. Até então, o Console o marca como não descoberto e não o exibe na página *Recursos*.
+Agentes de console:: Se você utilizou um agente de console para descobrir sistemas de armazenamento, adicione o agente à mesma pasta ou projeto. Isso permite que os usuários executem funções habilitadas por agente, como serviços de dados ou gerenciamento de armazenamento nativo do Console. Você pode adicionar agentes a pastas ou projetos na página *Agentes* do Console. link:task-iam-associate-agents.html["Aprenda como associar um agente do Console a uma pasta ou projeto"].
+Assinaturas Keystone:: Se a sua organização possui assinaturas do Keystone , você pode visualizá-las na página *Recursos*. Você pode associar assinaturas do Keystone a pastas ou projetos para fornecer acesso a membros que tenham permissões para essas pastas ou projetos.
+
 
 
 
@@ -23,7 +38,7 @@ Ao associar um membro à sua organização, você fornece permissões no nível 
 Você pode visualizar recursos descobertos e não descobertos associados à sua organização. O sistema localiza recursos de armazenamento e os marca como não descobertos até que você os adicione ao Console.
 
 
-NOTE: A página de Recursos exclui os recursos do Amazon FSx for NetApp ONTAP porque os usuários não podem associá-los a uma função.  Veja-os na página *Sistemas* ou em Cargas de Trabalho.
+NOTE: O Console exclui os recursos do Amazon FSx for NetApp ONTAP da página Recursos porque os usuários não podem associá-los a uma função. Você pode visualizar esses recursos na página *Sistemas* ou em Cargas de Trabalho.
 
 .Passos
 . Selecione *Administração > Identidade e acesso*.
@@ -44,10 +59,7 @@ NOTE: A página de Recursos exclui os recursos do Amazon FSx for NetApp ONTAP po
 
 == Associar um recurso a pastas e projetos
 
-Associe um recurso a uma pasta ou projeto para torná-lo disponível.
-
-.Antes de começar
-Você deve entender como funciona a associação de recursos. link:concept-identity-and-access-management.html#resources["Aprenda sobre recursos, incluindo quando associar um recurso a uma pasta"] .
+Associe um recurso a uma pasta ou projeto para torná-lo disponível aos membros que têm permissões para essa pasta ou projeto.
 
 .Passos
 . Na página *Recursos*, navegue até um recurso na tabela, selecioneimage:icon-action.png["Um ícone que tem três pontos lado a lado"] e então selecione *Associar a pastas ou projetos*.
@@ -59,7 +71,7 @@ Observe que você só pode selecionar pastas e projetos para os quais você tem 
 . Selecione *Associar recursos*.
 +
 ** Se você associou o recurso a projetos, os membros que têm permissões para esses projetos agora poderão acessar o recurso no Console.
-** Se você associou o recurso a uma pasta, um _administrador de pasta ou projeto_ agora pode acessar o recurso e associá-lo a um projeto dentro da pasta. link:concept-identity-and-access-management.html#resources["Aprenda a associar um recurso a uma pasta"] .
+** Se você associou o recurso a uma pasta, um _administrador de pasta ou projeto_ agora pode acessar o recurso e associá-lo a um projeto dentro da pasta. link:task-iam-manage-folders-projects.html#associate-resource-folder["Aprenda a associar um recurso a uma pasta"].
 
 
 
@@ -93,15 +105,15 @@ NOTE: Para ver quais membros da organização têm acesso ao recurso,link:task-i
 
 == Remover um recurso de uma pasta ou projeto
 
-Para remover um recurso de uma pasta ou projeto, você precisa remover a associação entre a pasta ou projeto e o recurso. Quando você remove a associação, isso impede que os membros gerenciem o recurso na pasta ou no projeto.
+Para remover um recurso de uma pasta ou projeto, remova a sua associação. Isso impede que os membros gerenciem o recurso nessa pasta ou projeto.
 
 
 NOTE: Para remover um recurso detectado de toda a organização, acesse a página *Sistemas* e remova o sistema.
 
 .Passos
 . Na página *Recursos*, navegue até um recurso na tabela, selecioneimage:icon-action.png["Um ícone que tem três pontos lado a lado"] e então selecione *Ver detalhes*.
-. Para a pasta ou projeto para o qual você deseja remover o recurso, selecioneimage:icon-delete.png["Um ícone de uma lata de lixo"]
-. Confirme que deseja remover a associação selecionando *Excluir*.
+. Para remover um recurso de uma pasta ou projeto, selecione image:icon-delete.png["Um ícone de uma lata de lixo"] ao lado da pasta ou do projeto.
+. Selecione *Excluir* para remover a associação.
 
 
 

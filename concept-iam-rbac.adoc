@@ -1,0 +1,50 @@
+---
+sidebar: sidebar 
+permalink: concept-iam-rbac.html 
+keywords: roles, permissions, role-based access control, rbac, iam, identity and access management, least privilege, access control, NetApp Console access, organization access, folder access, project access, resource access 
+summary: 'Gerencie o acesso de usuários ao NetApp Console com controle de acesso baseado em funções (RBAC), atribuindo funções predefinidas no nível da organização, pasta ou projeto. Cada função concede permissões específicas que definem quais ações os usuários podem executar dentro do escopo atribuído.' 
+---
+= Saiba mais sobre o controle de acesso baseado em função (RBAC) do NetApp Console .
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Gerencie o acesso de usuários ao NetApp Console com controle de acesso baseado em funções (RBAC), atribuindo funções predefinidas no nível da organização, pasta ou projeto. Cada função concede permissões específicas que definem quais ações os usuários podem executar dentro do escopo atribuído.
+
+A NetApp projeta funções de console com privilégios mínimos, de forma que cada função inclua apenas as permissões necessárias para suas tarefas. Essa abordagem aumenta a segurança ao limitar o acesso apenas ao que cada membro precisa.
+
+Depois de organizar os recursos em pastas e projetos, atribua aos membros da organização uma ou mais funções para pastas ou projetos específicos, permitindo que eles executem apenas suas responsabilidades.
+
+Por exemplo, você pode atribuir a um membro a função de administrador de Resiliência a Ransomware para um nível de projeto específico, permitindo que ele execute operações de Resiliência a Ransomware para recursos dentro desse projeto, sem conceder a ele acesso mais amplo a toda a organização. Esse mesmo usuário pode receber a função para vários projetos dentro da sua organização.
+
+Você pode atribuir aos usuários várias funções para o mesmo escopo ou para escopos diferentes, dependendo de suas responsabilidades. Por exemplo, uma organização menor pode ter o mesmo usuário gerenciando as tarefas de Resiliência a Ransomware e Backup e Recuperação no nível organizacional, enquanto uma organização maior pode ter usuários diferentes atribuídos a cada função no nível do projeto.
+
+
+
+== Tipos de membros da organização Console
+
+Existem três tipos de membros em uma organização do NetApp Console : * _Contas de usuário_: Usuários individuais que fazem login no NetApp Console para gerenciar recursos. Os usuários precisam se cadastrar no NetApp Console antes de serem adicionados a uma organização. * _Contas de serviço_: Contas não humanas usadas por aplicativos ou serviços para interagir com o NetApp Console por meio de APIs. Você pode adicionar contas de serviço diretamente à sua organização do Console. * _Grupos federados_: Grupos sincronizados do seu provedor de identidade (IdP) que permitem gerenciar o acesso de vários usuários coletivamente. Cada usuário dentro de um grupo federado deve ter se cadastrado no NetApp Console e ter sido adicionado à sua organização com uma função de acesso antes de poder acessar os recursos concedidos ao grupo.
+
+link:task-iam-manage-members-permissions.html#add-members["Aprenda como adicionar membros à sua organização."]
+
+
+
+== Funções predefinidas no NetApp Console
+
+O NetApp Console inclui funções predefinidas que você pode atribuir aos membros da organização. Cada função inclui permissões que especificam quais ações um membro pode realizar dentro do seu escopo atribuído (organização, pasta ou projeto).
+
+As funções do NetApp Console utilizam princípios de privilégio mínimo, garantindo que os membros tenham apenas as permissões necessárias para suas tarefas, e categorizam as funções pelo tipo de acesso que fornecem:
+
+* Funções da plataforma: Conceder permissões de administração do console
+* Funções de serviços de dados: Conceder permissões para gerenciar serviços de dados específicos, como Resiliência a Ransomware e Backup e Recuperação.
+* Funções do aplicativo: Conceder permissões para gerenciar o armazenamento, bem como auditar eventos e alertas do Console.
+
+
+Você pode atribuir várias funções a um membro com base em suas responsabilidades. Por exemplo, você pode atribuir a um membro tanto a função de administrador de Resiliência a Ransomware quanto a função de administrador de Backup e Recuperação para um projeto específico.
+
+link:reference-iam-predefined-roles.html["Saiba mais sobre as funções predefinidas disponíveis no NetApp Console."].

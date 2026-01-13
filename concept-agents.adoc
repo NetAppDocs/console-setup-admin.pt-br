@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: concept-agents.html 
-keywords: 'concept, Console agents, learn about agents, what are connectors, what is a connector, what"s a connector, when is a connector required, connector supported locations, restricted mode, private mode, dark site, permissions, multiple connectors, disaster recovery, agents, multiple agents, what is a Console agent' 
-summary: Um _Agente de console_ é um software NetApp em execução na sua rede em nuvem ou na rede local.  Use um agente do Console para conectar os serviços do NetApp Console aos seus ambientes de armazenamento. 
+keywords: 'concept, connectors, learn about connectors, what are connectors, what is a connector, what"s a connector, days, 14 days, when is a connector required, connector supported locations, restricted mode, private mode, dark site, permissions, multiple connectors, disaster recovery, agents, multiple agents, what is a Console agent' 
+summary: Você usa um agente do Console para conectar o NetApp Console à sua infraestrutura e orquestrar com segurança soluções de armazenamento em ambientes AWS, Azure, Google Cloud ou locais, além de usar serviços de proteção de dados. 
 ---
 = Saiba mais sobre os agentes do NetApp Console
 :hardbreaks:
@@ -14,72 +14,225 @@ summary: Um _Agente de console_ é um software NetApp em execução na sua rede 
 
 
 [role="lead"]
-Um _agente de console_ é executado na sua rede em nuvem ou na rede local.  Use um agente do Console para conectar os serviços do NetApp Console aos seus ambientes de armazenamento.
+Você usa um agente do Console para conectar o NetApp Console à sua infraestrutura e orquestrar com segurança soluções de armazenamento em ambientes AWS, Azure, Google Cloud ou locais, além de usar serviços de proteção de dados.
+
+Um agente de console permite que você:
+
+* Orquestre tarefas de gerenciamento de armazenamento a partir do NetApp Console , como provisionamento do Cloud Volumes ONTAP, configuração de volumes de armazenamento, uso de classificação de dados e muito mais.
+* Autentique-se usando as funções IAM do seu provedor de nuvem para integração de faturamento de assinaturas.
+* Utilize serviços de dados avançados (NetApp Backup and Recovery, NetApp Disaster Recovery, NetApp Ransomware Resilience e NetApp Cloud Tiering).
+* Utilize o console no modo restrito.
+
+
+Se você não precisa de orquestração avançada ou proteção de dados, pode gerenciar centralmente clusters ONTAP locais e serviços de armazenamento nativos da nuvem sem implantar um agente. Ferramentas de monitoramento e mobilidade de dados também estão disponíveis.
+
+A tabela a seguir mostra quais recursos e serviços você pode usar com e sem um agente do Console.
+
+[cols="40,20a,20a"]
+|===
+|  | Disponível com agente | Disponível sem agente 
+
+
+3+| *Sistemas de armazenamento suportados*: 
+
+
+| Amazon FSx para ONTAP  a| 
+Sim (recursos de descoberta e gerenciamento)
+ a| 
+Sim (somente descoberta)
 
 
 
-== O que você pode fazer sem um agente de console
-
-Alguns recursos e serviços do Console estarão disponíveis se você não implantar um agente do Console:
-
-* Amazon FSx for NetApp ONTAP
-+
-Algumas ações exigem um agente do Console ou um link do NetApp Workloads. https://docs.netapp.com/us-en/storage-management-fsx-ontap/start/concept-fsx-aws.html["Saiba quais ações exigem um agente ou link do Console"^]
-
-* Centro de automação
-* Azure NetApp Files
-+
-Você não precisa de um agente de console para gerenciar o Azure NetApp Files, mas é necessário um para usar a NetApp Data Classification para verificar o Azure NetApp Files.
-
-* Google Cloud NetApp Volumes
-* NetApp Copy and Sync
-* Consultor digital
-* Monitorar o uso da licença, o monitoramento da assinatura requer um agente do Console
-+
-Normalmente, você pode adicionar uma licença ao NetApp Console sem um agente do Console.
-
-+
-É necessário um agente para adicionar licenças baseadas em nós do Cloud Volumes ONTAP porque os dados vêm das licenças instaladas nos sistemas Cloud Volumes ONTAP .
-
-* Descoberta direta de clusters ONTAP locais
-+
-Você não precisa de um agente do Console para adicionar um cluster ONTAP local ao Console, mas um é necessário para recursos adicionais do Console e serviços de dados.
-
-+
-https://docs.netapp.com/us-en/storage-management-ontap-onprem/task-discovering-ontap.html["Saiba mais sobre opções de descoberta e gerenciamento para clusters ONTAP locais"^]
-
-* Atualizações de software
-* Sustentabilidade
-* Cargas de trabalho da NetApp
+| Armazenamento Amazon S3  a| 
+Sim
+ a| 
+Não
 
 
 
-
-== Quando um agente de console é necessário
-
-No modo padrão, o Console requer um agente de Console para:
-
-* Alertas
-* Recursos de gerenciamento do Amazon FSx para ONTAP
-* Armazenamento Amazon S3
-* Armazenamento de Blobs do Azure
-* NetApp Backup and Recovery
-* Classificação de Dados
-* Cloud Volumes ONTAP
-* NetApp Disaster Recovery
-* Sistemas da série E
-* Eficiência econômica ^1^
-* Baldes do Google Cloud Storage
-* Integração de cluster ONTAP local com serviços de dados NetApp
-* NetApp Ransomware Resilience
-* Sistemas StorageGRID
-* NetApp Cloud Tiering
-* NetApp Volume Caching
+| Armazenamento de Blobs do Azure  a| 
+Sim
+ a| 
+Sim
 
 
-^1^ Você pode acessar esses serviços sem um agente do Console, mas um agente do Console é necessário para iniciar ações.
 
-Você sempre precisa de um agente do Console para usar o Console no modo restrito.
+| Azure NetApp Files  a| 
+Sim
+ a| 
+Sim
+
+
+
+| Cloud Volumes ONTAP  a| 
+Sim
+ a| 
+Não
+
+
+
+| Sistemas da série E  a| 
+Sim
+ a| 
+Não
+
+
+
+| Google Cloud NetApp Volumes  a| 
+Sim
+ a| 
+Sim
+
+
+
+| Buckets de armazenamento do Google Cloud  a| 
+Sim
+ a| 
+Não
+
+
+
+| Sistemas StorageGRID  a| 
+Sim
+ a| 
+Não
+
+
+
+| Cluster ONTAP local (gerenciamento e descoberta avançados)  a| 
+Sim (gestão e descoberta avançadas)
+ a| 
+Não (apenas descoberta básica)
+
+
+
+3+| *Serviços de gestão de armazenamento disponíveis*: 
+
+
+| Alertas  a| 
+Sim
+ a| 
+Não
+
+
+
+| Centro de automação  a| 
+Sim
+ a| 
+Sim
+
+
+
+| Digital Advisor (Active IQ)  a| 
+Sim
+ a| 
+Não
+
+
+
+| Gerenciamento de licenças e assinaturas  a| 
+Sim
+ a| 
+Não
+
+
+
+| Eficiência econômica  a| 
+Sim
+ a| 
+Não
+
+
+
+| Métricas do painel da página inicial  a| 
+Sim^2^
+ a| 
+Não
+
+
+
+| Planejamento do ciclo de vida  a| 
+Sim
+ a| 
+Não^1^
+
+
+
+| Sustentabilidade  a| 
+Sim
+ a| 
+Não
+
+
+
+| Atualizações de software  a| 
+Sim
+ a| 
+Sim
+
+
+
+| Cargas de trabalho da NetApp  a| 
+Sim
+ a| 
+Sim
+
+
+
+3+| *Serviços de dados disponíveis*: 
+
+
+| NetApp Backup and Recovery  a| 
+Sim
+ a| 
+Não
+
+
+
+| Classificação de Dados  a| 
+Sim
+ a| 
+Não
+
+
+
+| NetApp Cloud Tiering  a| 
+Sim
+ a| 
+Não
+
+
+
+| NetApp Copy and Sync  a| 
+Sim
+ a| 
+Não
+
+
+
+| NetApp Disaster Recovery  a| 
+Sim
+ a| 
+Não
+
+
+
+| NetApp Ransomware Resilience  a| 
+Sim
+ a| 
+Não
+
+
+
+| NetApp Volume Caching  a| 
+Sim
+ a| 
+Não
+
+|===
+^1^ É possível visualizar o planejamento do ciclo de vida sem um agente do console, mas um agente do console é necessário para iniciar ações.
+
+^2^ Métricas precisas na página inicial exigem agentes de console com tamanho e configuração adequados.
 
 
 
@@ -125,7 +278,7 @@ link:concept-modes.html["Saiba mais sobre os modos de implantação do NetApp Co
 
 == Como instalar um agente de console
 
-Você pode instalar um agente do Console diretamente do Console, do marketplace do seu provedor de nuvem ou instalando manualmente o software no seu próprio host Linux ou no seu ambiente VCenter.  A maneira como você começa depende se você está usando o Console no modo padrão ou no modo restrito.
+Você pode instalar um agente do Console diretamente do Console, do marketplace do seu provedor de nuvem ou instalando manualmente o software no seu próprio host Linux ou no seu ambiente VCenter.
 
 * link:concept-modes.html["Saiba mais sobre os modos de implantação do NetApp Console"]
 * link:task-quick-start-standard-mode.html["Comece a usar o NetApp Console no modo padrão"]
@@ -134,7 +287,7 @@ Você pode instalar um agente do Console diretamente do Console, do marketplace 
 
 
 
-== Permissões de nuvem
+== Permissões do provedor de nuvem
 
 Você precisa de permissões específicas para criar o agente do Console diretamente do NetApp Console e outro conjunto de permissões para o próprio agente do Console. Se você criar o agente do Console na AWS ou no Azure diretamente do Console, o Console criará o agente do Console com as permissões necessárias.
 
@@ -168,7 +321,7 @@ Para visualizar as permissões exatas que o agente do Console precisa para opera
 
 A NetApp atualiza o software do agente mensalmente para adicionar recursos e melhorar a estabilidade.  Alguns recursos do Console, como o Cloud Volumes ONTAP e o gerenciamento de cluster ONTAP local, dependem da versão e das configurações do agente do Console.
 
-No modo padrão ou restrito, o agente do Console é atualizado automaticamente se tiver acesso à Internet.
+Ao instalar o agente na nuvem, o agente do Console é atualizado automaticamente, desde que tenha acesso à internet.
 
 
 

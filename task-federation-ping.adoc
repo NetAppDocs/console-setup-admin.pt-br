@@ -26,11 +26,6 @@ O NetApp oferece suporte somente a SSO iniciado pelo provedor de serviços (inic
 
 Você pode configurar uma conexão federada com o PingFederate para habilitar o logon único (SSO) para o Console.  O processo envolve configurar seu servidor PingFederate para confiar no Console como um provedor de serviços e, em seguida, criar a conexão no Console.
 
-.Antes de começar
-* É necessária uma conta IdP com privilégios administrativos.  Coordene com seu administrador do IdP para concluir as etapas.
-* Identifique o domínio que você deseja usar para federação.  Você pode usar seu domínio de e-mail ou um domínio diferente que seja seu.  Se você quiser usar um domínio diferente do seu domínio de e-mail, primeiro verifique o domínio no Console.  Você pode fazer isso seguindo os passos nolink:task-federation-verify-domain.html["Verifique seu domínio no NetApp Console"] tópico.
-
-
 .Passos
 . Selecione *Administração > Identidade e acesso*.
 . Selecione *Federação* para visualizar a página *Federações*.
@@ -67,7 +62,11 @@ Você pode configurar uma conexão federada com o PingFederate para habilitar o 
 
 . Selecione *Criar conexão*.  O sistema cria a conexão em poucos segundos.
 . Selecione *Avançar*.
-. . Selecione *Testar conexão* para testar sua conexão. Você será direcionado para uma página de login para seu servidor IdP. Faça login com suas credenciais do IdP.  Após efetuar o login, volte ao Console para ativar a conexão.
+. Selecione *Testar conexão* para testar sua conexão. Você será direcionado para uma página de login para seu servidor IdP. Faça login com suas credenciais do IdP. Após efetuar o login, volte ao Console para ativar a conexão.
++
+
+NOTE: Ao usar o Console no modo restrito, copie o URL para uma janela anônima do navegador ou para um navegador separado para fazer login no seu IdP.
+
 . No Console, selecione *Avançar* para revisar a página de resumo.
 . Configure as notificações.
 +

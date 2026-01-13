@@ -83,7 +83,7 @@ O Console precisa de permissões para executar ações no Azure.  Você pode con
 .Sobre esta tarefa
 A imagem a seguir mostra como o Console obtém permissões para executar operações no Azure.  Um objeto principal de serviço, que está vinculado a uma ou mais assinaturas do Azure, representa o Console no Microsoft Entra ID e é atribuído a uma função personalizada que concede as permissões necessárias.
 
-image:diagram_azure_authentication.png["Imagem conceitual que mostra o Console obtendo autenticação e autorização do Microsoft Entra ID antes de poder fazer uma chamada de API.  No Active Directory, a função Console define permissões.  Ele está vinculado a uma ou mais assinaturas do Azure e a um objeto principal de serviço que representa o aplicativo Cloud Manager."]
+image:diagram_azure_authentication.png["Imagem conceitual que mostra o Console obtendo autenticação e autorização do Microsoft Entra ID antes de poder fazer uma chamada de API. A função Console define permissões no Active Directory. Está vinculado a uma ou mais assinaturas do Azure e a um objeto de entidade de serviço que representa o aplicativo de console."]
 
 .Passos
 . <<Criar um aplicativo Microsoft Entra>> .

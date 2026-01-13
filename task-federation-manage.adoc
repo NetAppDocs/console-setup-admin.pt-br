@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: task-federation-manage.html 
-keywords: federation, BlueXP, identity provider, IdP, single sign-on, SSO, verified domain, credentials, certificate, client secret, update, manage federations, security, compliance, user access, productivity, account management, authentication, access control, business continuity 
+keywords: federation, NetApp Console, identity provider, IdP, single sign-on, SSO, verified domain, credentials, certificate, client secret, update, manage federations, security, compliance, user access, productivity, account management, authentication, access control, business continuity 
 summary: Depois de adicionar uma conexão federada, você pode gerenciá-la no NetApp Console.  Você pode visualizar o status da conexão, habilitá-la ou desabilitá-la conforme necessário. 
 ---
 = Gerenciar federações no NetApp Console
@@ -16,17 +16,18 @@ summary: Depois de adicionar uma conexão federada, você pode gerenciá-la no N
 [role="lead"]
 Você pode gerenciar sua federação no NetApp Console.  Você pode desativá-lo, atualizar credenciais expiradas e também desativá-lo caso não precise mais dele.
 
-
-NOTE: Se você configurou a federação usando o NetApp Cloud Central, importe-a por meio da página *Federação* para gerenciá-la no Console.link:task-federation-import.html["Aprenda como importar sua federação"]
-
-Você também pode adicionar um domínio verificado a uma federação existente, o que permite usar vários domínios para sua conexão federada.
-
-
-NOTE: Eventos de gerenciamento de federação, como habilitar, desabilitar e atualizar federações, são exibidos na Linha do tempo.link:task-monitor-cm-operations.html["Saiba mais sobre o monitoramento de operações no NetApp Console."]
-
 .Funções necessárias
 A função de administrador da Federação é necessária para criar e gerenciar federações.  O visualizador da Federação pode visualizar a página da Federação.link:reference-iam-predefined-roles.html["Saiba mais sobre funções de acesso."]
 
+Você também pode adicionar um domínio verificado adicional a uma federação existente, o que permite usar vários domínios para sua conexão federada.
+
+[NOTE]
+====
+* Se você configurou a federação usando o NetApp Cloud Central, importe-a por meio da página *Federação* para gerenciá-la no Console.link:task-federation-import.html["Aprenda como importar sua federação"]
+* Na página de Auditoria, você pode visualizar eventos de gerenciamento de federação, como ativação, desativação e atualização de federações. link:task-monitor-cm-operations.html["Saiba mais sobre o monitoramento de operações no NetApp Console."]
+
+
+====
 
 
 == Habilitar uma federação

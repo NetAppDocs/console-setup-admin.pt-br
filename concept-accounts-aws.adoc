@@ -24,7 +24,7 @@ Ao implantar um agente do Console a partir do Console, você precisa fornecer o 
 
 Quando o Console inicia o agente do Console na AWS, ele cria uma função do IAM e um perfil para o agente. Ele também anexa uma política que fornece ao agente do Console permissões para gerenciar recursos e processos dentro dessa conta da AWS. link:reference-permissions-aws.html["Revise como o Agente usa as permissões"].
 
-image:diagram_permissions_initial_aws.png["Uma imagem conceitual que mostra o Console implantando o agente do Console em uma conta da AWS. Uma política do IAM é atribuída a uma função do IAM, que é anexada ao Console."]
+image:diagram_permissions_initial_aws.png["Uma imagem conceitual que mostra o Console implantando o agente do Console em uma conta da AWS."]
 
 Se você adicionar um novo sistema Cloud Volumes ONTAP , o Console selecionará estas credenciais da AWS por padrão:
 
@@ -51,7 +51,7 @@ Revise as seções abaixo para mais detalhes.
 
 Para usar o Console com contas AWS adicionais, forneça as chaves da AWS ou o ARN de uma função em uma conta confiável. A imagem a seguir mostra duas contas adicionais, uma fornecendo permissões por meio de uma função do IAM em uma conta confiável e outra por meio das chaves da AWS de um usuário do IAM:
 
-image:diagram_permissions_multiple_aws.png["Uma imagem conceitual que mostra duas contas adicionais.  Cada um tem uma política do IAM, uma é anexada ao usuário do IAM e a outra é anexada a uma função do IAM."]
+image:diagram_permissions_multiple_aws.png["Uma imagem conceitual que mostra duas contas adicionais. Cada um possui uma política IAM. Uma está associada a um usuário do IAM e a outra a uma função do IAM."]
 
 Você adiciona credenciais de conta ao Console especificando o Nome de Recurso da Amazon (ARN) da função do IAM ou as chaves da AWS para o usuário do IAM.
 
