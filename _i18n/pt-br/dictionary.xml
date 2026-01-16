@@ -5910,4 +5910,8 @@
   <block id="99673e10ad28f12bcaf375fb16592097" category="list-text">Configure a federação entre seu IdP e o Console. <block ref="562353f9c9a6ec120d22140ce361907b" category="inline-link-macro-rx"></block></block>
   <block id="2e2db2e64333e9c722068fbbc6cceb8e" category="list-text">O grupo já deve existir no seu IdP e ter recebido acesso ao Console.</block>
   <block id="06d5b18e5be0feb68eea2f9f0a2102d0" category="list-text">Os usuários pertencentes ao grupo já devem ter se cadastrado no NetApp Console e ter recebido uma função explicitamente atribuída no Console. A NetApp recomenda atribuir uma função de acesso mínima, como a de visualizador da organização.</block>
+  <block id="881a7400da554e794b5b8e9d39c7db4a" category="section-title">Pontos finais para cargas de trabalho</block>
+  <block id="7226c299553546c713e6b5ab556098c8" category="paragraph">O agente do console deve ser capaz de acessar o seguinte endpoint para cargas de trabalho do NetApp .</block>
+  <block id="0eda8bbe61d2248f5418aba76b8dc5b1" category="paragraph">https://api.workloads.netapp.com</block>
+  <block id="a2d795d1d62d99052325545b09f9236f" category="paragraph">O console baseado na web contata este endpoint para interagir com as APIs do Workload Factory, a fim de gerenciar e operar cargas de trabalho baseadas no FSx para ONTAP.</block>
 </blocks>
