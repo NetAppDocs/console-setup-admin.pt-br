@@ -34,4 +34,4 @@ Você pode definir uma organização do NetApp Console para o modo somente leitu
 
 link:https://docs.netapp.com/us-en/console-setup-admin/task-enable-read-only-mode.html["Aprenda como ativar o modo somente leitura para uma organização do Console."]
 
-link:https://docs.netapp.com/us-en/console-setup-admin/task-user-settings["Aprenda como alavancar sua atuação quando sua organização estiver em modo somente leitura."]
+link:https://docs.netapp.com/us-en/console-setup-admin/task-user-settings.html["Aprenda como alavancar sua atuação quando sua organização estiver em modo somente leitura."]
