@@ -109,9 +109,6 @@ Os membros podem desempenhar múltiplas funções dentro do mesmo projeto e em p
 
 Sua estratégia de função de acesso deve estar alinhada à maneira como você organizou seus recursos do NetApp .
 
-
-TIP: Um membro que possui a função de administrador da organização não pode receber nenhuma outra função. Eles já possuem permissões em toda a organização. Um membro com a função de administrador de pasta ou projeto não pode receber outras funções dentro da pasta ou projeto em que já possui essa função. Ambas as funções dão acesso a todos os serviços dentro do âmbito a que lhes são atribuídos.
-
 .Passos
 . Selecione *Administração > Identidade e acesso*.
 . Selecione *Membros*.

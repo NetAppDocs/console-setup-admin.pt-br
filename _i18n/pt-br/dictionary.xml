@@ -4838,7 +4838,6 @@
   <block id="70328d3965555bdfe7c71386e9e25887" category="sidebar">Instalar um certificado assinado pela CA para acesso ao console da web</block>
   <block id="417a7f2f69f19fbcd309a4694944397e" category="sidebar">Exigir o uso de IMDSv2 em instâncias EC2</block>
   <block id="e5c32965ed32649bcfd48bc8b138f3d2" category="sidebar">Desinstale e remova o agente do Console</block>
-  <block id="7c584a16cbf4210dc0a344179e274e09" category="sidebar">Configuração padrão</block>
   <block id="8f235a758f8b25f9b4ff4eddf53e6c5e" category="sidebar">Aplicar permissões ONTAP no NetApp Console</block>
   <block id="cbaee96b9499da2c5c6d3b23090382c6" category="sidebar">Saiba mais sobre credenciais e permissões</block>
   <block id="9d812302dfdd0fdbf4faa0fe53b9ed24" category="sidebar">Saiba mais sobre projetos e permissões</block>
@@ -5461,8 +5460,6 @@
   <block id="79af92d05f2b214eab2c765e215beb6b" category="doc">Agente de console 4.3.0</block>
   <block id="6f1b51eea64496510e6cf5a5a2d57d29" category="paragraph">A versão 4.3.0 suporta tanto o modo padrão quanto o modo restrito.</block>
   <block id="664a9e1da962d9131b0a035da50bbcc7" category="paragraph-title">Capacidade de validar conexões de rede de agentes do Console</block>
-  <block id="81cc16a2354d8ec80802e2e4ac22f15a" category="paragraph">Agora você pode validar as conexões de rede dos agentes do Console conectados diretamente do NetApp Console. Este recurso ajuda a verificar a conectividade e a solucionar problemas com os agentes do Console.</block>
-  <block id="65ce32eae3a28c0b24f8cc33c345ab84" category="paragraph"><block ref="65ce32eae3a28c0b24f8cc33c345ab84" category="inline-link-macro-rx"></block></block>
   <block id="8b71edf4fd7d99d72da1d37de5e154b7" category="paragraph-title">Suporte para federação quando o NetApp Console está em modo restrito.</block>
   <block id="58bbe2cc0931c12594be1bafb70597fb" category="paragraph">Agora você pode habilitar a federação para uma organização do NetApp Console que esteja em modo restrito. Isso permite que os usuários façam login no Console usando suas credenciais corporativas, mantendo os benefícios de segurança do modo restrito.</block>
   <block id="ac811c471ef716f9c8a3865d7f14caa3" category="paragraph-title">Modo somente leitura</block>
@@ -5780,7 +5777,6 @@
   <block id="cc58a3864ec91bd4d491cafcb895e671" category="paragraph">Depois que um usuário se cadastra no NetApp Console, você pode adicioná-lo à sua organização e atribuir-lhe uma função para fornecer acesso aos recursos. <block ref="43b297cbb0e75204baf387be01022755" category="inline-link-macro-rx"></block></block>
   <block id="729d1ca3c10203fc503fd9f53e1e1025" category="paragraph">Você pode ajustar o acesso de um membro adicionando ou removendo funções conforme necessário.</block>
   <block id="385f92ada47188b8c301664b007e6ca3" category="paragraph">Os membros podem desempenhar múltiplas funções dentro do mesmo projeto e em projetos diferentes. Por exemplo, organizações menores podem atribuir todas as funções de acesso disponíveis ao mesmo usuário, enquanto organizações maiores podem ter usuários que realizam tarefas mais especializadas. Alternativamente, você também pode atribuir a função de administrador de Resiliência a Ransomware a um usuário no nível da organização. Nesse exemplo, o usuário seria capaz de executar tarefas de resiliência a ransomware em todos os projetos da sua organização.</block>
-  <block id="185fff519c8fc661f991bd10bba243ab" category="admonition">Um membro que possui a função de administrador da organização não pode receber nenhuma outra função. Eles já possuem permissões em toda a organização. Um membro com a função de administrador de pasta ou projeto não pode receber outras funções dentro da pasta ou projeto em que já possui essa função. Ambas as funções dão acesso a todos os serviços dentro do âmbito a que lhes são atribuídos.</block>
   <block id="ebeb67c2ab58cfe7b88d1a1bc054c1a8" category="list-text">Selecione uma das guias de membros: *Usuários*, *Contas de serviço* ou *Grupos federados*.</block>
   <block id="a62c20a6e8e006e17ebdbe37484ef3e8" category="paragraph">Remova um membro se ele deixar sua organização.</block>
   <block id="b28aef4c16ab3aa23caf8777e9998b0c" category="paragraph">Ao remover um membro, o sistema revoga suas permissões de Console, mas mantém suas contas de Console e do Site de Suporte da NetApp .</block>
@@ -5914,4 +5910,10 @@
   <block id="0eda8bbe61d2248f5418aba76b8dc5b1" category="paragraph">https://api.workloads.netapp.com</block>
   <block id="a2d795d1d62d99052325545b09f9236f" category="paragraph">O console baseado na web contata este endpoint para interagir com as APIs do Workload Factory, a fim de gerenciar e operar cargas de trabalho baseadas no FSx para ONTAP.</block>
   <block id="1f48aa3b8a17cda9bff69e07d29acd50" category="paragraph"><block ref="1f48aa3b8a17cda9bff69e07d29acd50" category="inline-link-macro-rx"></block></block>
+  <block id="3a78a8ea0b02debae5e6b16cc1929cb5" category="paragraph">Agora você pode validar as conexões de rede dos agentes do Console conectados diretamente do NetApp Console. Esse recurso ajuda a verificar a conectividade e solucionar problemas com os agentes do Console. Isso se soma à capacidade já existente de executar diagnósticos de rede a partir da interface de linha de comando do console de manutenção do agente do Console (CLI).</block>
+  <block id="16e0d5a8229f3c0136c12aa9def60bb1" category="inline-link-macro">Aprenda como executar a configuração a partir do NetApp Console.</block>
+  <block id="3cb937c3382e580784aa7486c365ec19" category="paragraph"><block ref="3cb937c3382e580784aa7486c365ec19" category="inline-link-macro-rx"></block></block>
+  <block id="ee856bddd35f8f0d8d6a5e0b5017b7dd" category="sidebar">Entenda os agentes do Console</block>
+  <block id="10895cced39195f7b9456b154a2c8530" category="sidebar">Comece a usar o modo privado</block>
+  <block id="1b074cef0a39f307bf3f23d76207e4f6" category="sidebar">Configuração padrão do agente</block>
 </blocks>
