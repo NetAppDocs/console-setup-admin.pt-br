@@ -338,7 +338,6 @@
   <block id="067f3ef114756cdabe76467602ca9b2e" category="list-text">Se estiver instalando em um ambiente de nuvem governamental, desative as verificações de configuração.<block ref="9b8bf974e42c4282e3da7fa6c59f1dce" category="inline-link-macro-rx"></block></block>
   <block id="325740f998865be7879e32048d406868" category="list-text">Execute o script de instalação.</block>
   <block id="5f4022bf0d27f22f4c44ac2e617ae12d" category="paragraph">Aqui está um exemplo de configuração de um servidor proxy explícito com um certificado assinado por uma CA:</block>
-  <block id="0e4e2076c75603c2622d2ec78b60debe" category="paragraph"><block ref="595589ae3dfdb377f4f5b01e56137ac6" prefix="" category="inline-code"></block>configura o agente do Console para usar um servidor proxy HTTP ou HTTPS usando um dos seguintes formatos:</block>
   <block id="2ceb0e196c300f23618f8a9e66bf0553" category="list-text">\http://endereço:porta</block>
   <block id="5c19a40334d46880274be75a5173b4c4" category="list-text">\http://nome-de-usuário:senha@endereço:porta</block>
   <block id="33dbf59ca7c7ba76bec757cd7f795ed4" category="list-text">\http://nome-de-domínio%92nome-de-usuário:senha@endereço:porta</block>
@@ -1987,7 +1986,6 @@
   <block id="bd604d27ce180b4c17807361e716806b" category="paragraph">Se sua rede tiver uma sub-rede configurada com qualquer um desses intervalos, você poderá enfrentar falhas de conectividade no Console.  Por exemplo, a descoberta de clusters ONTAP locais no Console pode falhar.</block>
   <block id="3908aae7c317936ea6bb5e64e5b1e19b" category="inline-link-macro">Conflito de IP do agente com a rede existente</block>
   <block id="e0f2ecf720846ace68fd17b91a2fe18b" category="paragraph">Veja o artigo da Base de Conhecimento<block ref="7fdfcc240d5e57de761ad01a7e9f5a42" category="inline-link-macro-rx"></block> para obter instruções sobre como alterar o endereço IP das interfaces do agente.</block>
-  <block id="1bc21092e961975ea4123f4414693f69" category="section-title">A descriptografia SSL não é suportada</block>
   <block id="7bd92bd111bfbf23b12f73672eb0dd1c" category="inline-link-macro">instalar um certificado HTTPS assinado por uma autoridade de certificação (CA)</block>
   <block id="c3ce271d53cbf6a7afd137a37f4ee8d6" category="paragraph">Para maior segurança, você tem a opção de<block ref="11df3d19916b70ba1d82d33e876689bc" category="inline-link-macro-rx"></block> .</block>
   <block id="e949623e23f093c132f86ba2771e8a2e" category="section-title">Página em branco ao carregar a interface do usuário local</block>
@@ -5005,7 +5003,6 @@
   <block id="caf28471250404467f130940e7fd6e28" category="cell">Usuários com a função de usuário Google Cloud NetApp Volumes podem visualizar os Google Cloud NetApp Volumes.</block>
   <block id="ab925d8c9a6924f34df64e8e1fb1a38d" category="list-text">*Visualizador de Google Cloud NetApp Volumes *: Visualize os Google Cloud NetApp Volumes no Console.</block>
   <block id="7d04a8adb8b138151b42f809761295c7" category="cell"><block ref="7d04a8adb8b138151b42f809761295c7" category="inline-link-macro-rx"></block></block>
-  <block id="a5e170ce8c9d104f0b20e67e54257be5" category="paragraph">Você precisará adicionar informações de proxy se sua rede exigir um proxy para acesso à Internet. Você pode adicionar um proxy explícito durante a instalação. Os parâmetros --proxy e --cacert são opcionais e você não será solicitado a adicioná-los. Se você tiver um servidor proxy explícito, precisará inserir os parâmetros conforme mostrado.</block>
   <block id="247a6a0ee254b2ff09347b727ee46227" category="inline-link-macro">Saiba mais sobre o console de manutenção do agente.</block>
   <block id="fbcd7669a7a0c8cc9053c7c78029654b" category="admonition">Não é possível definir um certificado para um servidor proxy transparente ao instalar manualmente o agente do Console. Se precisar definir um certificado para um servidor proxy transparente, você deverá usar o Console de Manutenção após a instalação. Saiba mais sobre o<block ref="d3f69ee6935d5f5f8542f4da69ac2bb6" category="inline-link-macro-rx"></block> .</block>
   <block id="334ed7efb24267c8a9d5f60a214ee627" category="list-text">Instale o pacote podman-compose 1.5.0.</block>
@@ -5028,7 +5025,6 @@
   <block id="77504c6121663bb82697faa2adb426c0" category="list-text"><block ref="b7fb1cb20b803995e802d3588f424efa" prefix="" category="inline-code"></block></block>
   <block id="8c0ce03e205216a2506b72de21ab36d0" category="paragraph"><block ref="7068d488f38430eabf6c395a593e8e5a" prefix="" category="inline-code"></block></block>
   <block id="a7678a59b185360eec3ece4df3f90a18" category="paragraph"><block ref="a15b1a7954f2d926c5ee7f261a97b4d2" prefix="" category="inline-code"></block></block>
-  <block id="93fd98d5e6dc8e59c7d87e83e4b28b54" category="paragraph">O Console não oferece suporte a configurações de firewall que tenham a descriptografia SSL habilitada. Se a descriptografia SSL estiver ativada, as mensagens de erro aparecerão no Console e a instância do agente será exibida como *Desconectada*.</block>
   <block id="5ef1446cf0ab868961d473d928c394d6" category="section-title">Agentes e extensões de terceiros</block>
   <block id="08ea771e22fb933fc1428178b36eb902" category="paragraph">Agentes de terceiros ou extensões de VM não são suportados na VM do agente.</block>
   <block id="c976a9d1d7322a1a795f641867000e2b" category="paragraph">Se você configurou um agente do Console para usar um servidor proxy, pode habilitar o tráfego direto da API no agente do Console para enviar chamadas de API diretamente aos serviços do provedor de nuvem sem passar pelo proxy. Agentes executados na AWS, Azure ou Google Cloud são compatíveis com essa opção.</block>
@@ -5916,4 +5912,13 @@
   <block id="ee856bddd35f8f0d8d6a5e0b5017b7dd" category="sidebar">Entenda os agentes do Console</block>
   <block id="10895cced39195f7b9456b154a2c8530" category="sidebar">Comece a usar o modo privado</block>
   <block id="1b074cef0a39f307bf3f23d76207e4f6" category="sidebar">Configuração padrão do agente</block>
+  <block id="cf6adff661a596f01b211beffb99d879" category="paragraph">Você precisará adicionar informações de proxy se sua rede exigir um proxy para acesso à internet. Você pode adicionar um proxy explícito durante a instalação. Os parâmetros <block ref="595589ae3dfdb377f4f5b01e56137ac6" prefix=" " category="inline-code"></block> e <block ref="a2bb8d2428da5c2a723c47bd3b78308d" prefix=" " category="inline-code"></block> são opcionais e você não será solicitado a adicioná-los. Se você tiver um servidor proxy explícito, precisará inserir os parâmetros conforme mostrado.</block>
+  <block id="55ccbb5c67dea0ea25dc1703475c6f80" category="paragraph">+<block ref="595589ae3dfdb377f4f5b01e56137ac6" prefix=" " category="inline-code"></block> configura o agente do Console para usar um servidor proxy HTTP ou HTTPS usando um dos seguintes formatos:</block>
+  <block id="f1c3efde333f7f855c03b55ae236bf19" category="paragraph">+ * \http://endereço:porta * \http://nome-do-usuário:senha@endereço:porta * \http://nome-do-domínio%92nome-do-usuário:senha@endereço:porta * \https://endereço:porta * \https://nome-do-usuário:senha@endereço:porta * \https://nome-do-domínio%92nome-do-usuário:senha@endereço:porta</block>
+  <block id="b968056bd5b82381c88e0c9d86ac33b7" category="paragraph">+ Observe o seguinte:</block>
+  <block id="40555c907279e68c131ed885fbd297f2" category="paragraph">+ ** O usuário pode ser um usuário local ou um usuário de domínio. ** Para um usuário de domínio, você deve usar o código ASCII para uma \ conforme mostrado acima. ** O agente do Console não oferece suporte a nomes de usuário ou senhas que incluam o caractere @. ** Se a senha incluir algum dos seguintes caracteres especiais, você deve escapar esse caractere especial adicionando uma barra invertida antes dele: &amp; ou !</block>
+  <block id="2c21faf59a15a9c898da7576148c66a6" category="paragraph">+ Por exemplo:</block>
+  <block id="3f8f6b484a02379b30f40e52234f6023" category="paragraph">+ \http://bxpproxyuser:netapp1\!@address:3128</block>
+  <block id="b7dbcbc4cff4a1c8e5622a89842cfa05" category="section-title">A descriptografia SSL é compatível apenas com Cloud Volumes ONTAP</block>
+  <block id="8b497b868891e9ffde67fbc8a398c594" category="paragraph">Servidores proxy transparentes são suportados apenas para agentes associados ao Cloud Volumes ONTAP. Você não pode usar um servidor proxy transparente para um agente se ele for usado com outros NetApp serviços de dados. Se você usa NetApp serviços de dados com Cloud Volumes ONTAP, crie um agente dedicado para Cloud Volumes ONTAP onde você possa usar um servidor proxy transparente.</block>
 </blocks>

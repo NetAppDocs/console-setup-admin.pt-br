@@ -34,9 +34,9 @@ Veja o artigo da Base de Conhecimentolink:https://kb.netapp.com/Advice_and_Troub
 
 
 
-=== A descriptografia SSL não é suportada
+=== A descriptografia SSL é compatível apenas com Cloud Volumes ONTAP
 
-O Console não oferece suporte a configurações de firewall que tenham a descriptografia SSL habilitada. Se a descriptografia SSL estiver ativada, as mensagens de erro aparecerão no Console e a instância do agente será exibida como *Desconectada*.
+Servidores proxy transparentes são suportados apenas para agentes associados ao Cloud Volumes ONTAP. Você não pode usar um servidor proxy transparente para um agente se ele for usado com outros NetApp serviços de dados. Se você usa NetApp serviços de dados com Cloud Volumes ONTAP, crie um agente dedicado para Cloud Volumes ONTAP onde você possa usar um servidor proxy transparente.
 
 Para maior segurança, você tem a opção delink:task-installing-https-cert.html["instalar um certificado HTTPS assinado por uma autoridade de certificação (CA)"] .
 
