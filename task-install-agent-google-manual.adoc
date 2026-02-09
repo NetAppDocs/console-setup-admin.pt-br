@@ -574,16 +574,14 @@ Diversas APIs do Google Cloud precisam ser ativadas antes que você possa implan
 .Etapa
 . Ative as seguintes APIs do Google Cloud no seu projeto:
 +
-** API do Cloud Infrastructure Manager
 ** API do Gerenciador de Implantação em Nuvem V2
+** API do Cloud Infrastructure Manager
 ** API de registro em nuvem
 ** API do Gerenciador de Recursos de Nuvem
 ** API do mecanismo de computação
 ** API de gerenciamento de identidade e acesso (IAM)
-** API do Serviço de Gerenciamento de Chaves em Nuvem (KMS)
-+
-(Obrigatório somente se você estiver planejando usar o NetApp Backup and Recovery com chaves de criptografia gerenciadas pelo cliente (CMEK))
-
+** Cloud Key Management Service (KMS) API (Necessário apenas se você planeja usar NetApp Backup and Recovery com chaves de criptografia gerenciadas pelo cliente (CMEK))
+** API de Cotas na Nuvem (necessária para implantações do Cloud Volumes ONTAP usando o Infrastructure Manager)
 
 
 

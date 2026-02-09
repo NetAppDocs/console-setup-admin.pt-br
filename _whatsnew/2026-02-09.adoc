@@ -1,0 +1,22 @@
+= Agente do Console 4.4.0
+:allow-uri-read: 
+
+
+
+
+=== Agente do Console 4.4.0
+
+A versão 4.4.0 suporta tanto o modo padrão quanto o modo restrito.
+
+Esta versão do agente do Console inclui melhorias de segurança e correções de erros.
+
+
+
+=== Administração do NetApp Console
+
+Esta versão inclui o seguinte:
+
+.Suporte para acesso baseado em funções para cargas de trabalho do NetApp Backup and Recovery (Oracle e Microsoft SQL Server)
+Você pode associar cargas de trabalho de Backup and Recovery (Oracle e Microsoft SQL Server) a projetos. Após a atribuição a um projeto, os usuários que tiverem uma função de Backup and Recovery atribuída ao projeto podem trabalhar com as cargas de trabalho. Outras cargas de trabalho não são compatíveis com acesso baseado em funções no momento.
+
+link:https://docs.netapp.com/us-en/data-services-backup-recovery/br-rbac-setup.html["Saiba mais sobre como configurar o acesso baseado em funções para cargas de trabalho de Backup and Recovery."^]

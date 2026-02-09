@@ -18,6 +18,12 @@ Saiba o que há de novo nos recursos de administração do NetApp Console : gere
 
 
 
+== 09 de fevereiro de 2026
+
+includes::_whatsnew/2026-02-09.adoc[]
+
+
+
 == 13 de janeiro de 2026
 
 

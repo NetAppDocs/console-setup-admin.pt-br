@@ -191,6 +191,7 @@ includedPermissions:
 - compute.forwardingRules.delete
 - compute.forwardingRules.get
 - compute.forwardingRules.setLabels
+- compute.forwardingRules.update
 - compute.globalOperations.get
 - compute.healthChecks.create
 - compute.healthChecks.delete
@@ -406,6 +407,9 @@ O agente do Console usa as permissões da função personalizada para gerenciar 
 
 
 | compute.forwardingRules.setLabels | Defina ou atualize os rótulos nas regras de encaminhamento da organização. | Não | Sim | Não 
+
+
+| compute.forwardingRules.update | Atualize as regras de encaminhamento existentes para gerenciamento de tráfego. | Não | Sim | Não 
 
 
 | compute.globalOperations.get | Para obter o status das operações. | Sim | Sim | Não 
@@ -790,6 +794,12 @@ O agente do Console usa as permissões da função personalizada para gerenciar 
 == Registro de alterações
 
 As permissões adicionadas e removidas estão indicadas abaixo.
+
+
+
+=== 09 de fevereiro de 2026
+
+A  `compute.forwardingRules.update`permissão foi adicionada para dar suporte ao Infrastructure Manager em implantações do Cloud Volumes ONTAP no Google Cloud.
 
 
 
