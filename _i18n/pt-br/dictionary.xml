@@ -5367,13 +5367,6 @@
   <block id="47d455f427b4674cc00157a8a2934409" category="paragraph">As seguintes permissões foram adicionadas a esta política:</block>
   <block id="e97ae785ddbd746339946844f92175e6" category="inline-link">Documentação de classificação</block>
   <block id="6847efe16c9bfc0feacaef65fc05b7b9" category="list-text"><block ref="6847efe16c9bfc0feacaef65fc05b7b9" category="inline-link-rx"></block></block>
-  <block id="9b894a36c4ebb01df8469fa98daba21f" category="summary">Ocasionalmente, a NetApp atualiza as permissões necessárias para a conta de serviço usada pelo agente do Console quando ele é implantado no Google Cloud.</block>
-  <block id="d6d6c33d995f278b372d3d2f7a10524d" category="doc">Gerenciar permissões do agente do Console para implantações do Google Cloud</block>
-  <block id="daf1fbd23852baa7dc431ec2658722d9" category="inline-link-macro">Verifique a lista de permissões do Google necessárias</block>
-  <block id="c35025e4c3afa1c5d645893259cbce25" category="paragraph"><block ref="df29c88404b44d3e8df12197653b40b2" category="inline-link-macro-rx"></block>.</block>
-  <block id="4860b54918e1580143a7c01984c21fe1" category="paragraph">Use o Console do Google Cloud para atualizar a função do IAM atribuída à conta de serviço para corresponder ao novo conjunto de permissões.</block>
-  <block id="34e82a1501cca5af4e190be9c03c0fbb" category="inline-link-macro">Documentação do Google Cloud: Editar uma função personalizada</block>
-  <block id="322a5219fa870735040f24cb43da8303" category="paragraph"><block ref="322a5219fa870735040f24cb43da8303" category="inline-link-macro-rx"></block></block>
   <block id="16d62d361fbd1153b9fe75b035aa7c51" category="paragraph">Você pode atualizar o servidor proxy transparente existente de um agente do Console usando o<block ref="091092579ca8cede1b760e7c5a90a003" prefix=" " category="inline-code"></block> comando ou remova o servidor proxy transparente usando o<block ref="ef5ebb9e0c08ee0463e7503ff1111f4c" prefix=" " category="inline-code"></block> comando.  Para obter mais informações, consulte a documentação.<block ref="1b2f5cd7e64b458e431e40fa20571324" category="inline-link-macro-rx"></block> .</block>
   <block id="e403ae80ee5407293bf60157033759c8" category="list-text">Insira os detalhes da pasta ou do projeto:</block>
   <block id="70fdeef63f056c10a8cdcc5f3fbc8eb3" category="inline-xref">Aprenda como remover recursos</block>
@@ -5935,5 +5928,21 @@
   <block id="d82499f632494fadd7c3cb95a45cdd03" category="cell">Atualize as regras de encaminhamento existentes para gerenciamento de tráfego.</block>
   <block id="c9d872b23d54864ab58551a55106a3db" category="section-title">09 de fevereiro de 2026</block>
   <block id="86adfecaaa4dc7c9c4b8f67dcfd84a27" category="paragraph">A <block ref="b18fad63d8ccb120bf7c88b5cde19431" prefix=" " category="inline-code"></block>permissão foi adicionada para dar suporte ao Infrastructure Manager em implantações do Cloud Volumes ONTAP no Google Cloud.</block>
-  <block id="dea86e9f14e9d4847c31a2b6d002bdbc" category="paragraph">includes::_whatsnew/2026-02-09.adoc[]</block>
+  <block id="aca93a34ac0830ae93442a45a45230ca" category="summary">Você pode gerenciar as credenciais do Google Cloud associadas à instância da VM do agente do Console associando uma assinatura do marketplace e solucionando problemas no processo de assinatura. Ambas as ações garantem que você possa usar sua assinatura do marketplace para pagar por serviços de dados.</block>
+  <block id="a5902f6d28779078fd2033b21af7a5fe" category="doc">Gerencie as credenciais e assinaturas do Google Cloud para NetApp Console</block>
+  <block id="7fb6ce6ba61ee2f889266f6591c8bf62" category="paragraph">Você pode gerenciar as credenciais do Google Cloud associadas a uma instância de VM do agente do Console associando uma assinatura do marketplace e solucionando problemas no processo de assinatura. Ambas as tarefas garantem que você possa usar sua assinatura do marketplace para pagar por serviços de dados.</block>
+  <block id="209e33f8aa50ade8c82e5bc82a8c023d" category="section-title">Associe uma assinatura do Marketplace às credenciais do Google Cloud</block>
+  <block id="eb7e6d1f8bb6ef3fd9a4c9dde493222f" category="paragraph">Ao implantar um agente do Console no Google Cloud, o Console cria um conjunto padrão de credenciais associadas a uma instância de VM do agente do Console. A qualquer momento, você pode alterar a assinatura do Google Cloud Marketplace associada a essas credenciais. A assinatura permite que você crie um sistema Cloud Volumes ONTAP com pagamento conforme o uso e utilize outros serviços de dados.</block>
+  <block id="55c766cf4228626844250621a71175de" category="section-title">Solucione problemas no processo de assinatura do Marketplace</block>
+  <block id="22799693f8d16282f927158e17952aae" category="paragraph">Às vezes, a assinatura dos serviços de dados da NetApp pelo Google Cloud Marketplace pode ficar fragmentada devido a permissões incorretas ou por não seguir acidentalmente o redirecionamento para o Console. Se isso acontecer, use as etapas a seguir para concluir o processo de assinatura.</block>
+  <block id="5e8a9e85694a19d502ffc719ffe16636" category="inline-link">Página da NetApp no Google Cloud Marketplace</block>
+  <block id="d6e50a6d3ec0159b4980423911b0d4c3" category="list-text">Acesse a <block ref="50dc0afbab90b927abe9802e2e044626" category="inline-link-rx"></block> para verificar o status do pedido. Se a página exibir *Gerenciar no Fornecedor*, role para baixo e selecione *Gerenciar Pedidos*.</block>
+  <block id="1602e955f4d68623784fbd9b3e232de3" category="inline-image-macro">Uma captura de tela da página do marketplace após a assinatura.</block>
+  <block id="138509c56fb0084f814c9be7b6c3f21d" category="paragraph"><block ref="138509c56fb0084f814c9be7b6c3f21d" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="e934500d9ced37392a4bfadda2e26daf" category="list-text">Se o pedido apresentar uma marca de seleção verde e isso for inesperado, é possível que outra pessoa da organização usando a mesma conta de faturamento já esteja inscrita. Se isso for inesperado ou você precisar dos detalhes dessa assinatura, entre em contato com sua equipe de vendas da NetApp.</block>
+  <block id="bb7a877315ec49d95bef4521481a238d" category="inline-image-macro">Uma captura de tela de um direito aceito.</block>
+  <block id="57c37d5700a1b0612b4ca2402852172a" category="paragraph"><block ref="57c37d5700a1b0612b4ca2402852172a" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="342df35452bbec008148c714d47038f6" category="list-text">Se o pedido mostrar um relógio e o status *Pending*, volte à página do marketplace e selecione *Manage on Provider* para concluir o processo conforme documentado acima.</block>
+  <block id="9547217bb6aa822040056cba67310321" category="inline-image-macro">Uma captura de tela de uma autorização pendente no marketplace.</block>
+  <block id="e6ec8d6dff39d45a9056311495699cef" category="paragraph"><block ref="e6ec8d6dff39d45a9056311495699cef" category="inline-image-macro-rx" type="image"></block></block>
 </blocks>
