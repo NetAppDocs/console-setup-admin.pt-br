@@ -5945,4 +5945,7 @@
   <block id="342df35452bbec008148c714d47038f6" category="list-text">Se o pedido mostrar um relógio e o status *Pending*, volte à página do marketplace e selecione *Manage on Provider* para concluir o processo conforme documentado acima.</block>
   <block id="9547217bb6aa822040056cba67310321" category="inline-image-macro">Uma captura de tela de uma autorização pendente no marketplace.</block>
   <block id="e6ec8d6dff39d45a9056311495699cef" category="paragraph"><block ref="e6ec8d6dff39d45a9056311495699cef" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="718285f559bff92f1fc2fb988df3fabe" category="doc">Agente do Console 4.4.1</block>
+  <block id="3ffe5c6490eae7ac4252c8efb9559119" category="paragraph-title">Acesse NetApp Data Infrastructure Insights a partir do NetApp Console</block>
+  <block id="0597e1be82ceeb01b40b4706c1dc68e1" category="paragraph">Você pode acessar uma avaliação gratuita do NetApp Data Infrastructure Insights a partir do NetApp Console. Acesse *Governança* &gt; *Data Infrastructure Insights* para se inscrever e explorar insights e análises sobre seu ambiente de dados.</block>
 </blocks>
