@@ -2613,8 +2613,6 @@
   <block id="9964d0b6e519677dfa6bcd4597b081a2" category="list-text"><block ref="9964d0b6e519677dfa6bcd4597b081a2" category="inline-link-rx"></block></block>
   <block id="2971acb1ab572cfb61b7c86d49e2b300" category="inline-link">Documentação do Cloud Volumes ONTAP</block>
   <block id="8c1b893f08cfaa147e0cf92bf09039b9" category="list-text"><block ref="8c1b893f08cfaa147e0cf92bf09039b9" category="inline-link-rx"></block></block>
-  <block id="32bf39c0f4f8e0ff3b8343a1c55eccc0" category="inline-link">Documentos de carteira digital</block>
-  <block id="07cad670347ede0ff6ee0e3fb79a5e7b" category="list-text"><block ref="07cad670347ede0ff6ee0e3fb79a5e7b" category="inline-link-rx"></block></block>
   <block id="3014dc2d87cf02248e7abe6b8ac89106" category="inline-link">Documentação do cluster ONTAP local</block>
   <block id="e05b0721a950cb94ec4d815fb2fcb330" category="list-text"><block ref="e05b0721a950cb94ec4d815fb2fcb330" category="inline-link-rx"></block></block>
   <block id="7596270426e8c5f92be308ff330e0e64" category="inline-link">Documentação de replicação</block>
@@ -5365,8 +5363,6 @@
   <block id="33fb61c4c752d541a30c9ba8194091da" category="section-title">26 de novembro de 2025</block>
   <block id="90e7692e452d555a08bc34e6a38ecd0c" category="section-title">06 de fevereiro de 2023</block>
   <block id="47d455f427b4674cc00157a8a2934409" category="paragraph">As seguintes permissões foram adicionadas a esta política:</block>
-  <block id="e97ae785ddbd746339946844f92175e6" category="inline-link">Documentação de classificação</block>
-  <block id="6847efe16c9bfc0feacaef65fc05b7b9" category="list-text"><block ref="6847efe16c9bfc0feacaef65fc05b7b9" category="inline-link-rx"></block></block>
   <block id="16d62d361fbd1153b9fe75b035aa7c51" category="paragraph">Você pode atualizar o servidor proxy transparente existente de um agente do Console usando o<block ref="091092579ca8cede1b760e7c5a90a003" prefix=" " category="inline-code"></block> comando ou remova o servidor proxy transparente usando o<block ref="ef5ebb9e0c08ee0463e7503ff1111f4c" prefix=" " category="inline-code"></block> comando.  Para obter mais informações, consulte a documentação.<block ref="1b2f5cd7e64b458e431e40fa20571324" category="inline-link-macro-rx"></block> .</block>
   <block id="e403ae80ee5407293bf60157033759c8" category="list-text">Insira os detalhes da pasta ou do projeto:</block>
   <block id="70fdeef63f056c10a8cdcc5f3fbc8eb3" category="inline-xref">Aprenda como remover recursos</block>
@@ -5594,7 +5590,6 @@
   <block id="eedfa09a5feb67c791cc20a479679c67" category="paragraph">O NetApp Console é compatível com SOC 2 Tipo II.</block>
   <block id="051ae024df3188ffe4e3ac43a493c874" category="inline-link-macro">Saiba mais sobre a conformidade da NetApp com o SOC 2.</block>
   <block id="a7cbfcc3f40f9b759d21b6e0bfb565ec" category="cell">Permite ao usuário acesso irrestrito aos projetos e pastas atribuídos. Podem adicionar membros às pastas ou projetos que gerenciam, bem como executar qualquer tarefa e usar qualquer serviço de dados ou aplicativo em recursos dentro da pasta ou projeto que lhes foi atribuído. Administradores de pastas ou projetos não podem criar agentes do Console.</block>
-  <block id="143bd02c953bba9b731282024d3a9f3d" category="cell">Permite que os usuários visualizem os resultados da verificação de NetApp Data Classification . Usuários com essa função podem visualizar informações de conformidade e gerar relatórios para recursos aos quais têm permissão de acesso. Esses usuários não podem habilitar ou desabilitar a verificação de volumes, buckets ou esquemas de banco de dados. A classificação não possui função administrativa.</block>
   <block id="1282f90034162aa1eb616797e0379691" category="paragraph">Você precisará conceder ao agente do Console as permissões adequadas para que ele possa executar operações em seu ambiente de nuvem. Utilize os links nesta página para acessar rapidamente as permissões necessárias de acordo com seu objetivo.</block>
   <block id="0429753823dd56c6321879ac91c61377" category="cell">Implantar um agente do Console a partir do Console Para implantar um agente do Console na AWS, o usuário precisa de permissões específicas.</block>
   <block id="6a576eacbcc0768a7faf1facae7a80dd" category="cell">A conta de usuário da AWS que você usa para implantar o agente de dados deve ter as permissões necessárias.</block>
@@ -5951,4 +5946,9 @@
   <block id="1bad3fa525f7b2c60b554cc8a36a911c" category="list-text">cloudformation:ListStacks</block>
   <block id="a09b37992441a5c2061c0ef135b80024" category="section-title">24 fevereiro 2026</block>
   <block id="51b31e1901c03d4b274f371dd730c779" category="paragraph">A seguinte permissão agora é necessária para Data Classification:</block>
+  <block id="9ba1f0e426e643179b44f5146f795c55" category="cell">Permite que os usuários visualizem os resultados da verificação de NetApp Data Classification. Usuários com essa função podem visualizar informações de conformidade e gerar relatórios para recursos aos quais têm permissão de acesso. Esses usuários não podem habilitar ou desabilitar a verificação de volumes, buckets ou esquemas de banco de dados. Data Classification não possui uma função de administrador.</block>
+  <block id="9320804217d782369dccfe3cfe90fd29" category="inline-link">Documentos do Data Classification</block>
+  <block id="81584a5aa440695d6dd39594311c7b2d" category="list-text"><block ref="81584a5aa440695d6dd39594311c7b2d" category="inline-link-rx"></block></block>
+  <block id="c19e034a7ae60fb90287c5050a076d5a" category="inline-link">Documentos de licenças e assinaturas</block>
+  <block id="3dc73d95873fb59ed12df54318d70e6a" category="list-text"><block ref="3dc73d95873fb59ed12df54318d70e6a" category="inline-link-rx"></block></block>
 </blocks>
