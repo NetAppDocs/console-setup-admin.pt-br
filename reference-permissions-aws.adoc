@@ -906,6 +906,7 @@ O agente faz as seguintes solicitações de API para implantar a NetApp Data Cla
 * formação de nuvem:DeleteStack
 * cloudformation:DescribeStacks
 * cloudformation:DescreverEventosStack
+* cloudformation:ListStacks
 * iam:AdicionarFunçãoAoPerfilDaInstancia
 * ec2:AssociateIamInstanceProfile
 * ec2:DescribeIamInstanceProfileAssociations
@@ -1195,6 +1196,14 @@ O agente faz as seguintes solicitações de API para implantar e gerenciar o Clo
 == Registro de alterações
 
 Conforme as permissões forem adicionadas e removidas, elas serão anotadas nas seções abaixo.
+
+
+
+=== 24 fevereiro 2026
+
+A seguinte permissão agora é necessária para Data Classification:
+
+cloudformation:ListStacks
 
 
 
