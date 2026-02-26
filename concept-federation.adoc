@@ -16,6 +16,9 @@ summary: A federação de identidade permite o logon único com o NetApp Console
 [role="lead"]
 O logon único (federação) simplifica o processo de login e aumenta a segurança, permitindo que os usuários façam login no NetApp Console usando suas credenciais corporativas.  Você pode habilitar o logon único (SSO) com seu provedor de identidade (IdP) ou com o site de suporte da NetApp .
 
+
+NOTE: A federação não está disponível quando o NetApp Console está no modo privado. link:concept-modes.html["Saiba mais sobre os modos do NetApp Console"^].
+
 .Função necessária
 Administrador da organização, administrador da federação, visualizador da federação.link:reference-iam-predefined-roles.html["Saiba mais sobre funções de acesso."]
 

@@ -408,7 +408,7 @@ Para obter informações de licenciamento e enviar mensagens do AutoSupport para
 
 
  a| 
-\ https://api.bluexp.netapp.com \ https://netapp-cloud-account.auth0.com \ https://netapp-cloud-account.us.auth0.com \ https://console.netapp.com \ https://components.console.bluexp.netapp.com \ https://cdn.auth0.com
+\https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.netapp.com \https://cdn.auth0.com
  a| 
 Para fornecer recursos e serviços no NetApp Console.
 
@@ -481,7 +481,7 @@ Observe que você pode criar uma função personalizada do Azure usando o portal
 +
 https://learn.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/qs-configure-portal-windows-vm["Documentação do Microsoft Azure: Configurar identidades gerenciadas para recursos do Azure em uma VM usando o portal do Azure"^]
 
-. Copie o conteúdo dolink:reference-permissions-azure.html["permissões de função personalizadas para o Conector"] e salvá-los em um arquivo JSON.
+. Copie o conteúdo dolink:reference-permissions-azure.html["permissões de função personalizadas para o agente do Console"] e salvá-los em um arquivo JSON.
 . Modifique o arquivo JSON adicionando IDs de assinatura do Azure ao escopo atribuível.
 +
 Você deve adicionar o ID de cada assinatura do Azure que deseja usar com o NetApp Console.
@@ -715,6 +715,13 @@ Se você não remover essas variáveis do sistema, a instalação falhará.
 +
 Escolha baixar os arquivos de instalação do agente ou um URL para os arquivos.
 
+
+
++
+
+NOTE: Baixe o instalador do agente "online" destinado ao uso em sua rede ou na nuvem. Um instalador "offline" separado está disponível para o agente do Console, mas é compatível apenas com implantações em modo privado.
+
++
 ** Site de suporte da NetApp (necessário caso você ainda não tenha acesso ao Console) https://mysupport.netapp.com/site/products/all/details/netapp-console/downloads-tab["Site de suporte da NetApp"^] ,
 
 

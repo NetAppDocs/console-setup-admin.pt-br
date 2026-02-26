@@ -31,6 +31,7 @@ Você precisará garantir que a função esteja atualizada à medida que novas p
 ** link:task-install-agent-azure-marketplace.html#step-3-set-up-permissions["Configurar permissões para uma implantação do Azure Marketplace"]
 ** link:task-install-agent-on-prem.html#agent-permission-aws-azure["Configurar permissões para implantações locais"]
 ** link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions["Configurar permissões para o modo restrito"]
+** link:task-prepare-private-mode.html#step-6-prepare-cloud-permissions["Configure as permissões para o modo privado"]
 
 
 

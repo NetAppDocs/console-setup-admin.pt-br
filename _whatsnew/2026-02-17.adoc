@@ -6,7 +6,7 @@
 
 === Agente do Console 4.4.1
 
-A versão 4.4.0 suporta tanto o modo padrão quanto o modo restrito.
+A versão 4.4.1 suporta tanto o modo padrão quanto o modo restrito.
 
 Esta versão do agente do Console inclui melhorias de segurança e correções de erros.
 

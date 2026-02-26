@@ -36,6 +36,13 @@ Se você não remover essas variáveis do sistema, a instalação falhará.
 +
 Escolha baixar os arquivos de instalação do agente ou um URL para os arquivos.
 
+
+
++
+
+NOTE: Baixe o instalador do agente "online" destinado ao uso em sua rede ou na nuvem. Um instalador "offline" separado está disponível para o agente do Console, mas é compatível apenas com implantações em modo privado.
+
++
 ** Site de suporte da NetApp (necessário caso você ainda não tenha acesso ao Console) https://mysupport.netapp.com/site/products/all/details/netapp-console/downloads-tab["Site de suporte da NetApp"^] ,
 
 

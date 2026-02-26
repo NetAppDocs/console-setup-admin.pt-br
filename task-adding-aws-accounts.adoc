@@ -156,7 +156,7 @@ Adicione credenciais da AWS fornecendo o ARN de uma função do IAM que concede 
 
 === Configurar a função do IAM
 
-Configure uma função do IAM que permita que a camada de software como serviço (SaaS) do NetApp Console assuma a função.
+Configure uma função do IAM que permita que o aplicativo de software como serviço (SaaS) NetApp Console assuma a função.
 
 .Passos
 . Acesse o console do IAM na conta de destino.

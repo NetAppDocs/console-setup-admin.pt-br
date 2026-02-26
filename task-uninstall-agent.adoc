@@ -16,11 +16,9 @@ summary: Desinstale o agente do Console para solucionar problemas ou removê-lo 
 [role="lead"]
 Desinstale o agente do Console para solucionar problemas ou removê-lo permanentemente do host.  As etapas que você precisa usar dependem do modo de implantação que você está usando.  Depois de remover um agente do Console do seu ambiente, você pode removê-lo do Console.
 
-link:concept-modes.html["Saiba mais sobre os modos de implantação do NetApp Console"] .
 
 
-
-== Desinstale o agente ao usar o modo padrão ou restrito
+== Desinstale o agente quando ele tiver conectividade de saída
 
 Se você estiver usando o modo padrão ou o modo restrito (em outras palavras, o host do agente tem conectividade de saída), siga as etapas abaixo para desinstalar o agente.
 
@@ -33,6 +31,42 @@ Se você estiver usando o modo padrão ou o modo restrito (em outras palavras, o
 +
 _silent_ executa o script sem solicitar sua confirmação.
 
+
+
+
+
+== Desinstale o agente quando ele não tiver conectividade de saída
+
+Se o seu agente não tiver conectividade de saída (por exemplo, em modo privado), você deve remover manualmente o software do agente do host.
+
+.Etapa
+. Conecte-se à VM Linux para o agente do Console.
+. A partir do host Linux, execute os seguintes comandos:
++
+[source, cli]
+----
+/opt/application/netapp/ds/cleanup.sh
+rm -rf /opt/application/netapp/
+----
+. No host Linux, exclua os arquivos de imagem de contêiner antigos e não utilizados para liberar espaço no diretório /var para reinstalação.
++
+[role="tabbed-block"]
+====
+.Podman
+--
+[source, cli]
+----
+podman system prune --all
+----
+--
+.Docker
+--
+[source, cli]
+----
+docker system prune -a
+----
+--
+====
 
 
 

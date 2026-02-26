@@ -33,6 +33,7 @@ Observe o seguinte:
 ** link:task-install-agent-aws-marketplace.html#step-2-set-up-aws-permissions["Configurar permissões para uma implantação do AWS Marketplace"]
 ** link:task-install-agent-on-prem.html#agent-permission-aws-azure["Configurar permissões para implantações locais"]
 ** link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions["Configurar permissões para o modo restrito"]
+** link:task-prepare-private-mode.html#step-6-prepare-cloud-permissions["Configure as permissões para o modo privado"]
 
 
 

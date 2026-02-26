@@ -2,7 +2,7 @@
 :allow-uri-read: 
 
 
-. Copie o conteúdo dolink:reference-permissions-azure.html["permissões de função personalizadas para o Conector"] e salvá-los em um arquivo JSON.
+. Copie o conteúdo dolink:reference-permissions-azure.html["permissões de função personalizadas para o agente do Console"] e salvá-los em um arquivo JSON.
 . Modifique o arquivo JSON adicionando IDs de assinatura do Azure ao escopo atribuível.
 +
 Você deve adicionar o ID de cada assinatura do Azure que deseja usar com o NetApp Console.

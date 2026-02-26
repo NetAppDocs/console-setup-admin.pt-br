@@ -90,7 +90,7 @@ Para obter informações de licenciamento e enviar mensagens do AutoSupport para
 
 
  a| 
-\ https://api.bluexp.netapp.com \ https://netapp-cloud-account.auth0.com \ https://netapp-cloud-account.us.auth0.com \ https://console.netapp.com \ https://components.console.bluexp.netapp.com \ https://cdn.auth0.com
+\https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.netapp.com \https://cdn.auth0.com
  a| 
 Para fornecer recursos e serviços no NetApp Console.
 
@@ -112,7 +112,7 @@ Embora os endpoints anteriores ainda sejam suportados, a NetApp recomenda atuali
 --
 
 
-Endpoints contatados do console NetApp:: À medida que você usa o NetApp Console baseado na Web fornecido pela camada SaaS, ele entra em contato com vários endpoints para concluir tarefas de gerenciamento de dados.  Isso inclui endpoints que são contatados para implantar o agente do Console a partir do Console.
+Endpoints contatados do console NetApp:: Ao usar o aplicativo SaaS baseado na Web NetApp Console, ele contata vários endpoints para concluir tarefas de gerenciamento de dados. Isso inclui endpoints que são contatados para implantar o agente do Console a partir do Console.
 +
 --
 link:reference-networking-saas-console.html["Exibir a lista de endpoints contatados pelo console do NetApp"] .

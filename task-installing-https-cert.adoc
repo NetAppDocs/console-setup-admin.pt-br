@@ -14,7 +14,7 @@ summary: Instale um certificado assinado pela CA para acesso do usuário ao cons
 
 
 [role="lead"]
-Quando você usa o NetApp Console no modo restrito, a interface do usuário pode ser acessada na máquina virtual do agente do Console implantada na sua região de nuvem ou no local.  Por padrão, o Console usa um certificado SSL autoassinado para fornecer acesso HTTPS seguro ao console baseado na Web em execução no agente do Console.
+Ao usar o NetApp Console no modo restrito ou privado, a interface de usuário fica acessível a partir da máquina virtual do agente do Console implantada em sua região de nuvem ou no local. Por padrão, o Console usa um certificado SSL autoassinado para fornecer acesso HTTPS seguro ao console baseado na Web em execução no agente do Console.
 
 Se exigido pela sua empresa, você pode instalar um certificado assinado por uma autoridade de certificação (CA), que fornece melhor proteção de segurança do que um certificado autoassinado.  Após instalar o certificado, o Console usa o certificado assinado pela CA quando os usuários acessam o console baseado na Web.
 

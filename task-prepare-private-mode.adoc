@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
-permalink: task-prepare-restricted-mode.html 
-keywords: restricted mode requirements, requirements, install options, restricted mode networking, dark site, restricted mode permissions, permissions for restricted mode, networking for restricted mode 
-summary: Prepare seu ambiente antes de implantar o NetApp Console no modo restrito.  Você precisa revisar os requisitos do host, preparar a rede, configurar permissões e muito mais. 
+permalink: task-prepare-private-mode.html 
+keywords: private mode requirements, requirements, install options, private mode networking, dark site, private mode permissions, permissions for private mode, networking for private mode 
+summary: Prepare seu ambiente antes de implantar o NetApp Console no modo privado. Você precisa revisar os requisitos do host, preparar a rede, configurar permissões e mais. 
 ---
-= Preparar para implantação no modo restrito
+= Prepare-se para a implantação em modo privado
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,38 +14,32 @@ summary: Prepare seu ambiente antes de implantar o NetApp Console no modo restri
 
 
 [role="lead"]
-Prepare seu ambiente antes de implantar o NetApp Console no modo restrito.  Você precisa revisar os requisitos do host, preparar a rede, configurar permissões e muito mais.
+Prepare seu ambiente antes de implantar o NetApp Console no modo privado. Você precisa revisar os requisitos do host, preparar a rede, configurar permissões e mais.
+
+
+NOTE: Para usar o NetApp Console no https://aws.amazon.com/federal/secret-cloud/["AWS Secret Cloud"^] ou no https://aws.amazon.com/federal/top-secret-cloud/["AWS Top Secret Cloud"^], siga as instruções específicas para esses ambientes. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-getting-started-aws-c2s.html["Aprenda como começar a usar Cloud Volumes ONTAP na AWS Secret Cloud ou Top Secret Cloud"^]
 
 
 
-== Etapa 1: Entenda como funciona o modo restrito
+== Passo 1: Entenda como funciona o modo privado
 
-Entenda como o NetApp Console funciona no modo restrito antes de começar.
+No modo privado, você instala um agente do Console localmente ou na nuvem e, em seguida, usa o NetApp Console para gerenciar seus sistemas de armazenamento (ONTAP local e Cloud Volumes ONTAP). Não há conectividade com os endpoints da API do NetApp Console nem com o aplicativo SaaS do NetApp Console, então você acessa o Console a partir da interface local fornecida pelo agente do Console.
 
-Use a interface baseada no navegador disponível localmente a partir do agente do NetApp Console instalado. Você não pode acessar o NetApp Console a partir do console baseado na Web fornecido pelo aplicativo SaaS.
-
-Além disso, nem todos os recursos do Console e serviços de dados do NetApp estão disponíveis.
-
-link:concept-modes.html["Aprenda como funciona o modo restrito"] .
+link:concept-modes.html["Saiba como funciona o modo privado"].
 
 
 
 == Etapa 2: Revise as opções de instalação
 
-No modo restrito, você só pode instalar o agente do Console na nuvem.  As seguintes opções de instalação estão disponíveis:
+No modo privado, você pode instalar o agente do Console no local ou na nuvem, instalando manualmente o agente em seu próprio host Linux.
 
-* Do AWS Marketplace
-* Do Azure Marketplace
-* Instalando manualmente o agente do Console em seu próprio host Linux em execução no AWS, Azure ou Google Cloud
-
+O local onde você instala o agente do Console determina quais serviços e recursos do NetApp Console estarão disponíveis ao usar o modo privado. O agente do Console deve ser instalado na nuvem se você quiser implantar e gerenciar Cloud Volumes ONTAP.
 
 
 
 == Etapa 3: Revise os requisitos do host
 
-Um host deve atender a requisitos específicos de sistema operacional, RAM e porta para executar o agente do Console.
-
-Quando você implanta o agente do Console do AWS ou do Azure Marketplace, a imagem inclui o sistema operacional e os componentes de software necessários.  Você só precisa escolher um tipo de instância que atenda aos requisitos de CPU e RAM.
+O host deve atender a requisitos específicos de sistema operacional, requisitos de RAM, requisitos de porta e assim por diante para executar o agente do Console.
 
 Host dedicado:: O agente do Console requer um host dedicado.  Qualquer arquitetura é suportada, desde que atenda a estes requisitos de tamanho:
 +
@@ -67,18 +61,9 @@ O agente do console requer este espaço em `/var` Porque o Podman ou o Docker s�
 
 
 --
-Tipo de instância AWS EC2:: Um tipo de instância que atende aos requisitos de CPU e RAM.  A NetApp recomenda t3.2xlarge.
-Tamanho da VM do Azure:: Um tipo de instância que atende aos requisitos de CPU e RAM.  A NetApp recomenda Standard_D8s_v3.
-Tipo de máquina do Google Cloud:: Um tipo de instância que atende aos requisitos de CPU e RAM. A NetApp recomenda o n2-standard-8.
+[[podman-versions]]Requisitos do sistema operacional e do contêiner:: O agente do Console é compatível com os seguintes sistemas operacionais ao usar o Console no modo privado.  Uma ferramenta de orquestração de contêineres é necessária antes de instalar o agente.
 +
 --
-O agente do Console é compatível com o Google Cloud em uma instância de VM com um sistema operacional compatível https://cloud.google.com/compute/shielded-vm/docs/shielded-vm["Recursos de VM blindada"^]
-
---
-Hipervisor:: É necessário um hipervisor bare metal ou hospedado certificado para executar um sistema operacional compatível.
-[[podman-versions]]Requisitos do sistema operacional e do contêiner:: O agente do Console é compatível com os seguintes sistemas operacionais ao usar o Console no modo padrão ou no modo restrito.  Uma ferramenta de orquestração de contêineres é necessária antes de instalar o agente.
-
-
 [cols="2a,2a,2a,2a,2a"]
 |===
 | Sistema operacional | Versões de SO suportadas | Versões de agentes suportadas | Ferramenta de contêiner necessária | SELinux 
@@ -86,56 +71,14 @@ Hipervisor:: É necessário um hipervisor bare metal ou hospedado certificado pa
 
  a| 
 Red Hat Enterprise Linux
-
-
-
- a| 
- a| 
-9,6
-
-* Somente versões em inglês.
-* O host deve ser registrado no Red Hat Subscription Management.  Se não estiver registrado, o host não poderá acessar os repositórios para atualizar o software de terceiros necessário durante a instalação do agente.
-
- a| 
-4.0.0 ou posterior com o Console no modo padrão ou no modo restrito.
- a| 
-Podman versão 5.4.0 com podman-compose 1.5.0.
-
-<<podman-configuration,Ver requisitos de configuração do Podman>> .
- a| 
-Suportado no modo de imposição ou no modo permissivo
-
-
-
- a| 
  a| 
 9.1 a 9.4
 
-* Somente versões em inglês.
-* O host deve ser registrado no Red Hat Subscription Management.  Se não estiver registrado, o host não poderá acessar os repositórios para atualizar o software de terceiros necessário durante a instalação do agente.
-
- a| 
-3.9.50 ou posterior com o Console no modo padrão ou modo restrito
- a| 
-Podman versão 4.9.4 com podman-compose 1.5.0.
-
-<<podman-configuration,Ver requisitos de configuração do Podman>> .
- a| 
-Suportado no modo de imposição ou no modo permissivo
-
-
-
- a| 
- a| 
 8,6 a 8,10
-
-* Somente versões em inglês.
-* O host deve ser registrado no Red Hat Subscription Management.  Se não estiver registrado, o host não poderá acessar os repositórios para atualizar o software de terceiros necessário durante a instalação do agente.
-
  a| 
-3.9.50 ou posterior com o Console no modo padrão ou modo restrito
+3.9.42 ou posterior com o Console em modo privado
  a| 
-Podman versão 4.6.1 ou 4.9.4 com podman-compose 1.0.6.
+Podman versão 4.6.1 ou 4.9.4
 
 <<podman-configuration,Ver requisitos de configuração do Podman>> .
  a| 
@@ -145,37 +88,55 @@ Suportado no modo de imposição ou no modo permissivo
 
  a| 
 Ubuntu
-
-
-
- a| 
- a| 
-24,04 LTS
- a| 
-3.9.45 ou posterior com o NetApp Console no modo padrão ou restrito
- a| 
-Docker Engine 23.06 para 28.0.0.
- a| 
-Não suportado
-
-
-
- a| 
  a| 
 22,04 LTS
  a| 
-3.9.50 ou posterior
+3.9.29 ou posterior
  a| 
-Docker Engine 23.0.6 para 28.0.0.
+Docker Engine 23.0.6 a 26.0.0
+
+26.0.0 é compatível com _novos_ agentes 3.9.44 ou instalações posteriores
  a| 
 Não suportado
 
 |===
+Observações:
+
+. O agente do Console é compatível com versões em inglês desses sistemas operacionais.
+. Para o RHEL, o host deve ser registrado no Red Hat Subscription Management.  Se não estiver registrado, o host não poderá acessar os repositórios para atualizar o software de terceiros necessário durante a instalação do agente.
+
+
+--
+Hipervisor:: É necessário um hipervisor bare metal ou hospedado certificado para executar um sistema operacional compatível.
+CPU:: 8 núcleos ou 8 vCPUs
+BATER:: 32 GB
+Tipo de instância AWS EC2:: Um tipo de instância que atende aos requisitos de CPU e RAM.  A NetApp recomenda t3.2xlarge.
+Tamanho da VM do Azure:: Um tipo de instância que atende aos requisitos de CPU e RAM.  A NetApp recomenda Standard_D8s_v3.
+Tipo de máquina do Google Cloud:: Um tipo de instância que atende aos requisitos de CPU e RAM. A NetApp recomenda o n2-standard-8.
++
+--
+O agente do Console é compatível com o Google Cloud em uma instância de VM com um sistema operacional compatível https://cloud.google.com/compute/shielded-vm/docs/shielded-vm["Recursos de VM blindada"^]
+
+--
+Espaço em disco em /opt:: 100 GiB de espaço devem estar disponíveis
++
+--
+O agente usa `/opt` para instalar o `/opt/application/netapp` diretório e seu conteúdo.
+
+--
+Espaço em disco em /var:: 20 GiB de espaço devem estar disponíveis
++
+--
+O agente do Console requer este espaço em `/var` porque o Docker ou o Podman são arquitetados para criar os contêineres dentro deste diretório.  Especificamente, eles criarão contêineres no `/var/lib/containers/storage` diretório.  Montagens externas ou links simbólicos não funcionam neste espaço.
+
+--
+
+
 
 
 == Etapa 4: instalar o Podman ou o Docker Engine
 
-Para instalar manualmente o agente do Console, prepare o host instalando o Podman ou o Docker Engine.
+Você precisa preparar o host para o agente do Console instalando Podman ou Docker Engine.
 
 Dependendo do seu sistema operacional, o Podman ou o Docker Engine é necessário antes de instalar o agente.
 
@@ -360,40 +321,17 @@ sudo systemctl enable docker && sudo systemctl start docker
 ====
 
 
-== Etapa 5: preparar o acesso à rede
+== Etapa 5: prepare a rede
 
-Configure o acesso à rede para que o agente do Console possa gerenciar recursos na sua nuvem pública.  Além de ter uma rede virtual e uma sub-rede para o agente do Console, você precisa garantir que os seguintes requisitos sejam atendidos.
+Configure a rede para que o agente do Console gerencie recursos em sua nuvem pública. Além de ter uma rede virtual e uma sub-rede para o agente do Console, certifique-se de que os seguintes requisitos sejam atendidos.
 
-Conexões com redes de destino:: Certifique-se de que o agente do Console tenha uma conexão de rede com os locais de armazenamento.  Por exemplo, a VPC ou VNet onde você planeja implantar o Cloud Volumes ONTAP ou o data center onde seus clusters ONTAP locais residem.
-Preparar a rede para acesso do usuário ao NetApp Console:: No modo restrito, os usuários acessam o Console a partir da VM do agente do Console.  O agente do Console entra em contato com alguns endpoints para concluir tarefas de gerenciamento de dados.  Esses endpoints são contatados pelo computador de um usuário ao concluir ações específicas do Console.
-
-
-
-NOTE: Agentes de console anteriores à versão 4.0.0 precisam de endpoints adicionais.  Se você atualizou para 4.0.0 ou posterior, poderá remover os endpoints antigos da sua lista de permissões.link:reference-networking-saas-console-previous.html["Saiba mais sobre o acesso de rede necessário para versões anteriores à 4.0.0."]
-
-+
-
-[cols="2*"]
-|===
-| Pontos finais | Propósito 
-
-
-| \https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.netapp.com \https://cdn.auth0.com | Para fornecer recursos e serviços no NetApp Console. 
-
-
-| \ https://cdn.auth0.com \ https://services.cloud.netapp.com | Seu navegador da Web se conecta a esses endpoints para autenticação centralizada do usuário por meio do NetApp Console. 
-|===
-Acesso de saída à Internet para operações diárias:: O local de rede do agente do Console deve ter acesso de saída à Internet.  Ele precisa ser capaz de alcançar os serviços SaaS do NetApp Console , bem como os endpoints dentro do seu respectivo ambiente de nuvem pública.
+Conexões com redes de destino:: O agente do Console deve ter uma conexão de rede com o local onde você planeja gerenciar o armazenamento. Por exemplo, a VPC ou VNet onde você planeja implantar Cloud Volumes ONTAP, ou o data center onde seus clusters ONTAP locais residem.
+Pontos de extremidade para operações do dia a dia:: Se você planeja criar sistemas Cloud Volumes ONTAP, o agente do Console precisa de conectividade com os endpoints nos recursos publicamente disponíveis do seu provedor de nuvem.
 +
 --
 [cols="2a,1a"]
 |===
 | Pontos finais | Propósito 
-
-
- a| 
-*Ambientes AWS*
-
 
 
  a| 
@@ -422,11 +360,6 @@ O console baseado na web contata este endpoint para interagir com as APIs do Wor
 
 
  a| 
-*Ambientes Azure*
-
-
-
- a| 
 \ https://management.azure.com \ https://login.microsoftonline.com \ https://blob.core.windows.net \ https://core.windows.net
  a| 
 Para gerenciar recursos em regiões públicas do Azure.
@@ -434,9 +367,9 @@ Para gerenciar recursos em regiões públicas do Azure.
 
 
  a| 
-\ https://management.usgovcloudapi.net \ https://login.microsoftonline.us \ https://blob.core.usgovcloudapi.net \ https://core.usgovcloudapi.net
+\https://management.azure.microsoft.scloud \https://login.microsoftonline.microsoft.scloud \https://blob.core.microsoft.scloud \https://core.microsoft.scloud
  a| 
-Para gerenciar recursos em regiões governamentais do Azure.
+Para gerenciar recursos na região IL6 do Azure.
 
 
 
@@ -448,61 +381,9 @@ Para gerenciar recursos nas regiões do Azure China.
 
 
  a| 
-*Ambientes do Google Cloud*
-
-
-
- a| 
 \ https://www.googleapis.com/compute/v1/ \ https://compute.googleapis.com/compute/v1 \ https://cloudresourcemanager.googleapis.com/v1/projects \ https://www.googleapis.com/compute/beta \ https://storage.googleapis.com/storage/v1 \ https://www.googleapis.com/storage/v1 \ https://iam.googleapis.com/v1 \ https://cloudkms.googleapis.com/v1 \ https://config.googleapis.com/v1/projects
  a| 
 Para gerenciar recursos no Google Cloud.
-
-
-
- a| 
-* Pontos de extremidade do NetApp Console *
-
-
-
- a| 
-\ https://mysupport.netapp.com
- a| 
-Para obter informações de licenciamento e enviar mensagens do AutoSupport para o suporte da NetApp .
-
-
-
- a| 
-\ https://signin.b2c.netapp.com
- a| 
-Para atualizar as credenciais do NetApp Support Site (NSS) ou adicionar novas credenciais do NSS ao NetApp Console.
-
-
-
- a| 
-\ https://support.netapp.com
- a| 
-Para obter informações de licenciamento e enviar mensagens do AutoSupport para o suporte da NetApp , bem como receber atualizações de software para o Cloud Volumes ONTAP.
-
-
-
- a| 
-\https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.netapp.com \https://cdn.auth0.com
- a| 
-Para fornecer recursos e serviços no NetApp Console.
-
-
-
- a| 
-\ https://bluexpinfraprod.eastus2.data.azurecr.io \ https://bluexpinfraprod.azurecr.io
- a| 
-Para obter imagens para atualizações do agente do Console.
-
-* Quando você implanta um novo agente, a verificação de validação testa a conectividade com os endpoints atuais. Se você usarlink:reference-networking-saas-console-previous.html["pontos finais anteriores"] , a verificação de validação falha. Para evitar essa falha, pule a verificação de validação.
-+
-Embora os endpoints anteriores ainda sejam suportados, a NetApp recomenda atualizar suas regras de firewall para os endpoints atuais o mais rápido possível. link:reference-networking-saas-console-previous.html#update-endpoint-list["Aprenda como atualizar sua lista de endpoints"] .
-
-* Quando você atualiza os endpoints atuais no seu firewall, seus agentes existentes continuarão funcionando.
-
 
 |===
 --
@@ -526,50 +407,36 @@ Servidor proxy:: O NetApp oferece suporte a configurações de proxy explícitas
 * Endereço IP
 * Credenciais
 * Certificado HTTPS
++
+No modo privado, o NetApp Console só envia tráfego de saída para o seu provedor de nuvem para criar um sistema Cloud Volumes ONTAP.
+
 
 
 --
-
-
-Portos:: Não há tráfego de entrada para o agente do Console, a menos que você o inicie ou se ele for usado como um proxy para enviar mensagens do AutoSupport do Cloud Volumes ONTAP para o Suporte da NetApp .
+Portos:: Não há tráfego de entrada para o agente do Console, a menos que você o inicie.
 +
 --
-* HTTP (80) e HTTPS (443) fornecem acesso à interface de usuário local, que você usará em raras circunstâncias.
-* SSH (22) só é necessário se você precisar se conectar ao host para solução de problemas.
-* Conexões de entrada pela porta 3128 serão necessárias se você implantar sistemas Cloud Volumes ONTAP em uma sub-rede onde uma conexão de saída com a Internet não esteja disponível.
-+
-Se os sistemas Cloud Volumes ONTAP não tiverem uma conexão de saída com a Internet para enviar mensagens do AutoSupport , o Console configurará automaticamente esses sistemas para usar um servidor proxy incluído no agente do Console.  O único requisito é garantir que o grupo de segurança do agente do Console permita conexões de entrada pela porta 3128.  Você precisará abrir esta porta depois de implantar o agente do Console.
-
-
+HTTP (80) e HTTPS (443) fornecem acesso ao NetApp Console. SSH (22) é necessário se você precisar se conectar ao host para solucionar problemas.
 
 --
 
 
 Habilitar NTP:: Se você planeja usar o NetApp Data Classification para verificar suas fontes de dados corporativos, habilite um serviço Network Time Protocol (NTP) no agente do Console e no sistema NetApp Data Classification para que o horário seja sincronizado entre os sistemas. https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["Saiba mais sobre a classificação de dados da NetApp"^]
-+
---
-Se você estiver planejando criar um agente do Console no marketplace do seu provedor de nuvem, implemente este requisito de rede depois de criar o agente do Console.
-
---
 
 
 
 
 == Etapa 6: preparar permissões de nuvem
 
-O agente do Console requer permissões do seu provedor de nuvem para implantar o Cloud Volumes ONTAP em uma rede virtual e usar os serviços de dados do NetApp .  Você precisa configurar permissões no seu provedor de nuvem e então associá-las ao agente do Console.
+Se o agente do Console estiver instalado na nuvem e você planeja criar sistemas Cloud Volumes ONTAP, o NetApp Console exige permissões do provedor de nuvem. Você precisa configurar permissões no seu provedor de nuvem e, em seguida, associar essas permissões à instância do agente do Console após instalá-lo.
 
-Para visualizar as etapas necessárias, escolha a opção de autenticação a ser usada para seu provedor de nuvem.
+Para visualizar os passos necessários, selecione a opção de autenticação que deseja usar para o seu provedor de nuvem.
 
 [role="tabbed-block"]
 ====
 .Função do AWS IAM
 --
-Use uma função do IAM para fornecer permissões ao agente do Console.
-
-Se estiver criando o agente do Console no AWS Marketplace, você será solicitado a selecionar essa função do IAM ao iniciar a instância do EC2.
-
-Se você estiver instalando manualmente o agente do Console em seu próprio host Linux, anexe a função à instância do EC2.
+Use uma função do IAM para conceder permissões ao agente do Console. Você precisará associar manualmente a função à instância EC2 para o agente do Console.
 
 .Passos
 . Faça login no console da AWS e navegue até o serviço IAM.
@@ -596,7 +463,7 @@ Agora você tem uma função do IAM para a instância do EC2 do agente do Consol
 --
 .Chave de acesso AWS
 --
-Configure permissões e uma chave de acesso para um usuário do IAM.  Você precisará fornecer ao Console a chave de acesso da AWS depois de instalar o agente do Console e configurar o Console.
+Configure as permissões e uma chave de acesso para um usuário do IAM. Forneça ao NetApp Console a chave de acesso da AWS após instalar o agente do Console e configurar o NetApp Console.
 
 .Passos
 . Faça login no console da AWS e navegue até o serviço IAM.
@@ -606,7 +473,7 @@ Configure permissões e uma chave de acesso para um usuário do IAM.  Você prec
 .. Selecione *JSON* e copie e cole o conteúdo dolink:reference-permissions-aws.html["Política do IAM para o agente do Console"] .
 .. Conclua as etapas restantes para criar a política.
 +
-Dependendo dos serviços de dados da NetApp que você planeja usar, pode ser necessário criar uma segunda política.
+Dependendo dos serviços do NetApp Console que você planeja usar, talvez seja necessário criar uma segunda política.
 
 +
 Para regiões padrão, as permissões são distribuídas em duas políticas.  Duas políticas são necessárias devido ao limite máximo de tamanho de caracteres para políticas gerenciadas na AWS. link:reference-permissions-aws.html["Saiba mais sobre as políticas do IAM para o agente do Console"] .
@@ -622,15 +489,18 @@ Para regiões padrão, as permissões são distribuídas em duas políticas.  Du
 . Certifique-se de que o usuário tenha uma chave de acesso que você possa adicionar ao NetApp Console após instalar o agente do Console.
 
 
+.Resultado
+A conta agora possui as permissões necessárias.
+
 --
 .Função do Azure
 --
-Crie uma função personalizada do Azure com as permissões necessárias.  Você atribuirá essa função à VM do agente do Console.
+Crie uma função personalizada do Azure com as permissões necessárias. Atribua essa função à VM do agente do Console.
 
 Observe que você pode criar uma função personalizada do Azure usando o portal do Azure, o Azure PowerShell, a CLI do Azure ou a API REST.  As etapas a seguir mostram como criar a função usando a CLI do Azure.  Se preferir usar um método diferente, consulte https://learn.microsoft.com/en-us/azure/role-based-access-control/custom-roles#steps-to-create-a-custom-role["Documentação do Azure"^]
 
 .Passos
-. Se você estiver planejando instalar manualmente o software em seu próprio host, habilite uma identidade gerenciada atribuída pelo sistema na VM para que você possa fornecer as permissões necessárias do Azure por meio de uma função personalizada.
+. Habilite uma identidade gerenciada atribuída pelo sistema na VM onde você planeja instalar o agente do Console para que possa fornecer as permissões necessárias do Azure por meio de uma função personalizada.
 +
 https://learn.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/qs-configure-portal-windows-vm["Documentação do Microsoft Azure: Configurar identidades gerenciadas para recursos do Azure em uma VM usando o portal do Azure"^]
 
@@ -674,7 +544,7 @@ az role definition create --role-definition agent_Policy.json
 --
 .Principal de serviço do Azure
 --
-Crie e configure uma entidade de serviço no Microsoft Entra ID e obtenha as credenciais do Azure necessárias para o Console.  Você precisa fornecer essas credenciais ao Console depois de instalar o agente do Console.
+Crie e configure uma entidade de serviço no Microsoft Entra ID e obtenha as credenciais do Azure que o NetApp Console precisa. Você precisará fornecer ao NetApp Console essas credenciais após instalar o agente do Console e configurar o NetApp Console.
 
 .Crie um aplicativo Microsoft Entra para controle de acesso baseado em função
 . Verifique se você tem permissões no Azure para criar um aplicativo do Active Directory e atribuir o aplicativo a uma função.
@@ -818,7 +688,7 @@ image:screenshot_azure_client_secret.gif["Uma captura de tela do portal do Azure
 
 
 .Resultado
-Seu principal serviço agora está configurado e você deve ter copiado o ID do aplicativo (cliente), o ID do diretório (locatário) e o valor do segredo do cliente.  Você precisa inserir essas informações no Console ao adicionar uma conta do Azure.
+Sua entidade de serviço agora está configurada e você deve ter copiado o ID do aplicativo (cliente), o ID do diretório (locatário) e o valor do segredo do cliente. Insira essas informações no NetApp Console ao adicionar uma credencial do Azure.
 
 --
 .Conta de serviço do Google Cloud
@@ -864,7 +734,7 @@ https://cloud.google.com/iam/docs/creating-managing-service-accounts#creating_a_
 
 == Etapa 7: habilitar as APIs do Google Cloud
 
-Várias APIs são necessárias para implantar o Cloud Volumes ONTAP no Google Cloud.
+Você precisa habilitar várias APIs para implantar Cloud Volumes ONTAP no Google Cloud.
 
 .Etapa
 . https://cloud.google.com/apis/docs/getting-started#enabling_apis["Habilite as seguintes APIs do Google Cloud no seu projeto"^]

@@ -140,6 +140,8 @@ includedPermissions:
 - cloudbuild.connections.list
 - cloudbuild.repositories.accessReadToken
 - cloudbuild.repositories.list
+- cloudbuild.workerpools.list
+- cloudbuild.workerpools.get
 - cloudquotas.quotas.get
 - cloudkms.cryptoKeys.getIamPolicy
 - cloudkms.cryptoKeys.setIamPolicy
@@ -640,6 +642,12 @@ O agente do Console usa as permissões da função personalizada para gerenciar 
 | cloudbuild.builds.get | Sim | Não | Não 
 
 
+| cloudbuild.workerpools.get | Para acessar informações do pool de trabalhadores durante a implantação em modo privado e a conversão de sistemas Cloud Volumes ONTAP usando o Infrastructure Manager. | Sim | Sim | Sim 
+
+
+| cloudbuild.workerpools.list | Para listar as informações do pool de trabalhadores durante a implantação em modo privado de sistemas Cloud Volumes ONTAP usando o Infrastructure Manager. | Sim | Não | Não 
+
+
 | compute.instances.setServiceAccount .6+| Para definir uma conta de serviço na instância do Cloud Volumes ONTAP .  Esta conta de serviço fornece permissões para hierarquização de dados para um bucket do Google Cloud Storage. | Sim | Sim | Não 
 
 
@@ -794,6 +802,12 @@ O agente do Console usa as permissões da função personalizada para gerenciar 
 == Registro de alterações
 
 As permissões adicionadas e removidas estão indicadas abaixo.
+
+
+
+=== 26 fevereiro 2026
+
+As  `cloudbuild.workerpools.get` e  `cloudbuild.workerpools.list` permissões foram adicionadas para dar suporte ao Infrastructure Manager em implantações em modo privado do Cloud Volumes ONTAP no Google Cloud.
 
 
 
