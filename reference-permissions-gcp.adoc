@@ -328,7 +328,7 @@ O agente do Console usa as permissões da função personalizada para gerenciar 
 | config.deployments.deleteState | Não | Não | Sim 
 
 
-| config.deployments.get | Não | Sim | Não 
+| config.deployments.get | Não | Sim | Sim 
 
 
 | config.deployments.getLock | Não | Sim | Não 
