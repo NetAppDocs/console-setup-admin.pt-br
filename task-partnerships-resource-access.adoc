@@ -43,6 +43,8 @@ Você pode atribuir as seguintes funções aos usuários parceiros:
 * link:reference-iam-disaster-rec-roles.html["Visualizador de recuperação de desastres"]
 * link:reference-iam-storage-roles.html["Analista de suporte de operações"]
 * link:reference-iam-predefined-roles.html["Visualizador de classificação"]
+* link:reference-iam-keystone-roles.html["Administrador Keystone"]
+* link:reference-iam-keystone-roles.html["Visualizador Keystone"]
 
 
 link:reference-iam-predefined-roles.html["Saiba mais sobre funções predefinidas"]

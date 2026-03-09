@@ -39,7 +39,7 @@ O `config-checker validate` O comando permite validar a configuração de um age
 `--services <comma-separated list of services to validate>`--*OBRIGATÓRIO*--
 
 [role="quick-margin-para"]
-Selecione um ou mais serviços para validar.  Os nomes de serviço válidos são:*`PLATFORM` que valida a conectividade de rede com os endpoints do Console necessários.
+Selecione um ou mais serviços para validar. Os nomes de serviço válidos são: *`PLATFORM` que valida a conectividade de rede com os endpoints necessários do Console, bem como se as portas necessárias estão abertas para o agente do Console.
 
 `--validationTypes <comma-separated list validation types to run>`--*OBRIGATÓRIO*-- Escolha um ou mais tipos de validação para executar.  Os tipos de validação válidos são: * `NETWORK` que valida a conectividade de rede com os endpoints do Console necessários.
 
