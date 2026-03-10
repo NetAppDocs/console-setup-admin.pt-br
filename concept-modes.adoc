@@ -347,7 +347,7 @@ Para o Cloud Volumes ONTAP, tanto o licenciamento baseado em capacidade quanto o
 | Parcerias de organizações | Não 
 
 
-| Modo somente leitura | Não 
+| Modo somente leitura | Sim 
 
 
 | Notificações | Não 
@@ -579,7 +579,7 @@ Observe que alguns serviços podem ter suporte com limitações. Para mais detal
 | Área de produtos | NetApp service ou recurso | Modo restrito | Modo privado 
 
 
-.10+| *Gerenciamento de sistemas de armazenamento* Esta tabela mostra quais sistemas de armazenamento você pode gerenciar a partir do NetApp Console. Ela não lista destinos de backup para NetApp Backup and Recovery. | Alertas | Não | Não 
+.12+| *Gerenciamento de sistemas de armazenamento* Esta tabela mostra quais sistemas de armazenamento você pode gerenciar a partir do NetApp Console. Ela não lista destinos de backup para NetApp Backup and Recovery. | Alertas | Não | Não 
 
 
 | Amazon FSx para ONTAP | Não | Não 
@@ -609,74 +609,74 @@ Observe que alguns serviços podem ter suporte com limitações. Para mais detal
 | Série E | Não | Não 
 
 
-| StorageGRID | Não | Não | Fábrica de carga de trabalho 
+| StorageGRID | Não | Não 
 
 
-| Não | Não .8+| *Serviços de Dados* | Backup and Recovery 
+| Fábrica de carga de trabalho | Não | Não 
 
 
-| Simhttps://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-limited-internet-connectivity["Veja a lista de destinos de backup suportados para dados de volume ONTAP"^] | Simhttps://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-no-internet-connectivity["Veja a lista de destinos de backup suportados para dados de volume ONTAP"^] | Classificação da NetApp 
+.8+| *Serviços de Dados* | Backup and Recovery | Simhttps://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-limited-internet-connectivity["Veja a lista de destinos de backup suportados para dados de volume ONTAP"^] | Simhttps://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-no-internet-connectivity["Veja a lista de destinos de backup suportados para dados de volume ONTAP"^] 
 
 
-| Sim | Sim | Copiar e sincronizar 
+| Classificação da NetApp | Sim | Sim 
 
 
-| Não | Não | NetApp Disaster Recovery 
+| Copiar e sincronizar | Não | Não 
 
 
-| Não | Não | NetApp Ransomware Protection 
+| NetApp Disaster Recovery | Não | Não 
 
 
-| Não | Não | NetApp Replication 
+| NetApp Ransomware Protection | Não | Não 
 
 
-| Sim | Sim | NetApp Cloud Tiering 
+| NetApp Replication | Sim | Sim 
 
 
-| Não | Não | NetApp Volume Caching 
+| NetApp Cloud Tiering | Não | Não 
 
 
-| Não | Não .4+| *NetApp recursos do contrato de suporte* | Consultor digital 
+| NetApp Volume Caching | Não | Não 
 
 
-| Não | Não | Planejamento do ciclo de vida 
+.4+| *NetApp recursos do contrato de suporte* | Consultor digital | Não | Não 
 
 
-| Não | Não | Atualizações de software 
+| Planejamento do ciclo de vida | Não | Não 
 
 
-| Não | Não | Sustentabilidade 
+| Atualizações de software | Não | Não 
 
 
-| Não | Não .9+| *Funcionalidades administrativas* | Métricas do dashboard para storage e serviços de dados 
+| Sustentabilidade | Não | Não 
 
 
-| Não | Não | Gerenciamento de identidade e acesso 
+.9+| *Funcionalidades administrativas* | Métricas do dashboard para storage e serviços de dados | Não | Não 
 
 
-| Sim | Sim | Gerenciar credenciais de provedores de nuvem 
+| Gerenciamento de identidade e acesso | Sim | Sim 
 
 
-| Sim | Sim | Federação 
+| Gerenciar credenciais de provedores de nuvem | Sim | Sim 
 
 
-| Sim | Não | Licenses and subscriptions 
+| Federação | Sim | Não 
 
 
-| Sim | Sim | Autenticação multifator 
+| Licenses and subscriptions | Sim | Sim 
 
 
-| Sim | Não | Contas NSS 
+| Autenticação multifator | Sim | Não 
 
 
-| Sim | Não | Parcerias de organizações 
+| Contas NSS | Sim | Não 
 
 
-| Sim | Não | Modo somente leitura 
+| Parcerias de organizações | Sim | Não 
 
 
-| Não | Não | Notificações | Sim 
+| Modo somente leitura | Sim | Não 
 
 
-| Não | Auditoria | Sim | Sim 
+| Notificações | Sim | Não | Auditoria 
 |===
