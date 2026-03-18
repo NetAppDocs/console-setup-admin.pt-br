@@ -135,11 +135,13 @@ O Console exibe o segredo do cliente apenas uma vez. Faça uma cópia segura; vo
 
 Você pode adicionar um grupo federado do seu provedor de identidade (IdP) à sua organização e atribuir a ele uma ou mais funções. Os membros do grupo federado herdam as funções que você atribui ao grupo no Console.
 
+
+IMPORTANT: Ao adicionar um grupo federado ao Console e atribuir uma função a ele, somente os usuários que são membros do grupo no seu IdP e que já se inscreveram no NetApp Console e tiveram uma função explicitamente atribuída no Console podem acessar os recursos. NetApp recomenda atribuir uma função de acesso mínima, como visualizador da organização, a esses usuários.
+
 Antes de atribuir uma função a um grupo federado, certifique-se do seguinte:
 
 * Configure a federação entre seu IdP e o Console. link:concept-federation.html["Aprenda como configurar a federação."]
 * O grupo já deve existir no seu IdP e ter recebido acesso ao Console.
-* Os usuários pertencentes ao grupo já devem ter se cadastrado no NetApp Console e ter recebido uma função explicitamente atribuída no Console. A NetApp recomenda atribuir uma função de acesso mínima, como a de visualizador da organização.
 
 
 .Passos

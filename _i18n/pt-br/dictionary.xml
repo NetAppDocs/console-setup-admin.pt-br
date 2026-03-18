@@ -1231,15 +1231,6 @@
   <block id="995b0a469f6f6243977462e753ae05da" category="paragraph">Teste sua conexão federada antes de habilitá-la. Use a opção de teste na página Federação no Console para verificar se o usuário de teste pode ser autenticado com sucesso. Se o teste for bem-sucedido, você poderá habilitar a conexão.</block>
   <block id="6350c75317bf3a6a382ca51f7f21d612" category="paragraph-title"><block ref="3fb1f11a25837416d87a2007da1d76e6" category="inline-image-macro-rx" type="image"></block>Habilite sua conexão no Console</block>
   <block id="de1943b4a42a516fe3f0157be7b5952f" category="paragraph">Depois de habilitar a conexão, os usuários podem efetuar login no Console usando suas credenciais corporativas.</block>
-  <block id="7a15d5af6f3fb4b588190669535d4bbe" category="paragraph">Revise o tópico do seu respectivo protocolo ou IdP para começar:</block>
-  <block id="b5fa3a7b59c0dbf56027e973a978221b" category="inline-link-macro">Configurar uma conexão federada com o AD FS</block>
-  <block id="e655d90f8f735e0e83a1465e53299a3c" category="list-text"><block ref="e655d90f8f735e0e83a1465e53299a3c" category="inline-link-macro-rx"></block></block>
-  <block id="010b9e75f2be10992c686afea2384784" category="inline-link-macro">Configurar uma conexão federada com o Microsoft Entra ID</block>
-  <block id="c26b4a46fbd641691ec1909da444386d" category="list-text"><block ref="c26b4a46fbd641691ec1909da444386d" category="inline-link-macro-rx"></block></block>
-  <block id="d167ee77ecb410e3563f53c002b2587e" category="inline-link-macro">Configurar uma conexão federada com PingFederate</block>
-  <block id="b76c6c3c96f9fd2d4a4d8f47ff90bcb3" category="list-text"><block ref="b76c6c3c96f9fd2d4a4d8f47ff90bcb3" category="inline-link-macro-rx"></block></block>
-  <block id="3f2aa4bd073d2458603c46bc293f8ade" category="inline-link-macro">Configurar uma conexão federada com um provedor de identidade SAML</block>
-  <block id="00aef0f14c29d451cdbf8446ce6b0b8e" category="list-text"><block ref="00aef0f14c29d451cdbf8446ce6b0b8e" category="inline-link-macro-rx"></block></block>
   <block id="728d17e7146dcd6218a24c46a1de8943" category="doc">Saiba mais sobre o gerenciamento de identidade e acesso do NetApp Console</block>
   <block id="e5c1519cd8d7472771e0a519c54ccae1" category="paragraph">Uma _organização_ é o nível superior do sistema Console IAM e normalmente representa sua empresa.  Sua organização consiste em pastas, projetos, membros, funções e recursos.  Os agentes estão associados a projetos específicos na organização.</block>
   <block id="6c8d76b40d187de98318661a9cab7239" category="paragraph">Um _Administrador da organização_ pode associar um recurso a uma pasta para que um _Administrador de pasta ou projeto_ possa vinculá-lo aos projetos apropriados na pasta.</block>
@@ -5491,7 +5482,6 @@
   <block id="3cbafb79babb187563c0124e2520510c" category="section-title">Entenda como o acesso é concedido no NetApp Console.</block>
   <block id="6006dace312ced6616f59ef5355ec45d" category="paragraph">O NetApp Console utiliza o controle de acesso baseado em funções (RBAC) para gerenciar permissões. Atribua funções aos usuários individualmente ou por meio de grupos federados. Cada função define as ações permitidas para recursos específicos.</block>
   <block id="34b1f94b77b5bf3b37ba851f10060189" category="paragraph">Observe o seguinte sobre como conceder acesso no NetApp Console:</block>
-  <block id="68486ab3d656a167edf458a9cdc1ec37" category="list-text">Todos os usuários devem primeiro se cadastrar no NetApp Console antes de obterem acesso aos recursos.</block>
   <block id="2bd8e344bd7b38add589340263927733" category="list-text">Você deve atribuir explicitamente uma função a cada usuário no Console antes que ele possa acessar os recursos, mesmo que seja membro de um grupo federado ao qual já tenha sido atribuída uma função.</block>
   <block id="b499ec6fa9977b0ca77f6656a13829bb" category="list-text">Você pode adicionar contas de serviço diretamente do Console e atribuir funções a elas.</block>
   <block id="9522a4fe29d3a6f0c0622f4995ff5efb" category="paragraph">O NetApp Console suporta três tipos de membros: contas de usuário, contas de serviço e grupos federados.</block>
@@ -5677,7 +5667,6 @@
   <block id="74339c243d7e2c57c81d3b6eeb492598" category="paragraph">Antes de atribuir uma função a um grupo federado, certifique-se do seguinte:</block>
   <block id="99673e10ad28f12bcaf375fb16592097" category="list-text">Configure a federação entre seu IdP e o Console. <block ref="562353f9c9a6ec120d22140ce361907b" category="inline-link-macro-rx"></block></block>
   <block id="2e2db2e64333e9c722068fbbc6cceb8e" category="list-text">O grupo já deve existir no seu IdP e ter recebido acesso ao Console.</block>
-  <block id="06d5b18e5be0feb68eea2f9f0a2102d0" category="list-text">Os usuários pertencentes ao grupo já devem ter se cadastrado no NetApp Console e ter recebido uma função explicitamente atribuída no Console. A NetApp recomenda atribuir uma função de acesso mínima, como a de visualizador da organização.</block>
   <block id="881a7400da554e794b5b8e9d39c7db4a" category="section-title">Pontos finais para cargas de trabalho</block>
   <block id="7226c299553546c713e6b5ab556098c8" category="paragraph">O agente do console deve ser capaz de acessar o seguinte endpoint para cargas de trabalho do NetApp .</block>
   <block id="0eda8bbe61d2248f5418aba76b8dc5b1" category="paragraph">https://api.workloads.netapp.com</block>
@@ -6137,4 +6126,9 @@
   <block id="89c004a6a6a30c4e3297ce59ad9244fe" category="paragraph">Selecione um ou mais serviços para validar. Os nomes de serviço válidos são: <block ref="8b55a44b49368262df89fd0e17b1a181" prefix="*" category="inline-code"></block> que valida a conectividade de rede com os endpoints necessários do Console, bem como se as portas necessárias estão abertas para o agente do Console.</block>
   <block id="81e25f5172548cbe6ade4ab58b86b791" category="section-title">Verifique o acesso à rede e às portas para o agente do Console</block>
   <block id="79809c4a6f04cdeb09f4ec1df49c2f33" category="paragraph">Execute verificações de configuração nos agentes do Console a partir do Console ou do console de manutenção do agente para garantir que eles possam acessar os endpoints necessários e que as portas necessárias estejam abertas.</block>
+  <block id="01440d4fde4475cae0005dbb66b8f907" category="list-text"><block ref="01440d4fde4475cae0005dbb66b8f907" category="inline-link-macro-rx"></block></block>
+  <block id="83c2b9a6cf87b54eb30380def11da84d" category="list-text"><block ref="83c2b9a6cf87b54eb30380def11da84d" category="inline-link-macro-rx"></block></block>
+  <block id="b4a377b58913080baf7f33d3fbf72f1a" category="list-text"><block ref="b4a377b58913080baf7f33d3fbf72f1a" category="inline-link-macro-rx"></block></block>
+  <block id="1bbaa3de74e15060c4e8eab23f5e562e" category="list-text"><block ref="1bbaa3de74e15060c4e8eab23f5e562e" category="inline-link-macro-rx"></block></block>
+  <block id="fa05cdec48b95e7a466d56fb898a127b" category="admonition">Ao adicionar um grupo federado ao Console e atribuir uma função a ele, somente os usuários que são membros do grupo no seu IdP e que já se inscreveram no NetApp Console e tiveram uma função explicitamente atribuída no Console podem acessar os recursos. NetApp recomenda atribuir uma função de acesso mínima, como visualizador da organização, a esses usuários.</block>
 </blocks>
