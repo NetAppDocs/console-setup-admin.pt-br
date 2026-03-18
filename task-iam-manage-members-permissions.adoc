@@ -27,7 +27,7 @@ O NetApp Console utiliza o controle de acesso baseado em funções (RBAC) para g
 
 Observe o seguinte sobre como conceder acesso no NetApp Console:
 
-* Todos os usuários devem primeiro se cadastrar no NetApp Console antes de obterem acesso aos recursos.
+* Todos os usuários devem primeiro se cadastrar no NetApp Console antes de obterem acesso aos recursos, mesmo que façam parte de um grupo federado.
 * Você deve atribuir explicitamente uma função a cada usuário no Console antes que ele possa acessar os recursos, mesmo que seja membro de um grupo federado ao qual já tenha sido atribuída uma função.
 * Você pode adicionar contas de serviço diretamente do Console e atribuir funções a elas.
 
