@@ -4,7 +4,7 @@ permalink: reference-agent-default-config.html
 keywords: linux, user name, operating system, installation files, installation folder, folder, log, logs, service, mysql, packages, linux, connector configuration, connector installation folder, connector folder, connector log, ubuntu, agent, agent installation folder, agent configuration 
 summary: 'Saiba mais sobre as configurações padrão do agente do Console para implantações padrão (com acesso à internet) na AWS, Azure e Google Cloud, bem como para implantações restritas (sem acesso à internet) em ambientes locais.' 
 ---
-= Configuração padrão para o agente do Console
+= Configuração padrão do agente de console no NetApp Console
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -97,10 +97,10 @@ Os logs nesta pasta fornecem detalhes sobre os serviços de nuvem e o serviço d
 
 === Serviço de agente de console
 
-* O serviço do agente do Console é chamado occm.
-* O serviço occm depende do serviço MySQL.
+* O serviço do agente do Console é chamado  `occm`.
+* O  `occm`serviço depende do serviço MySQL.
 +
-Se o serviço MySQL estiver inativo, o serviço occm também estará.
+Se o serviço MySQL estiver inativo, então o  `occm` serviço também estará inativo.
 
 
 

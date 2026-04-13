@@ -4,7 +4,7 @@ permalink: task-install-agent-on-prem-ova.html
 keywords: install agent, on prem agent installation, on prem connector, vmware, OVA, manual install 
 summary: Se você for um usuário do VMWare, poderá usar um OVA para instalar um agente de console no seu VCenter.  O download ou URL do OVA está disponível no NetApp Console. 
 ---
-= Instalar um agente de console no local usando o VCenter
+= Implante um agente do Console localmente usando o VCenter
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,10 +14,10 @@ summary: Se você for um usuário do VMWare, poderá usar um OVA para instalar u
 
 
 [role="lead"]
-Se você for um usuário do VMWare, poderá usar um OVA para instalar um agente de console no seu VCenter.  O download ou URL do OVA está disponível no NetApp Console.
+Se você for usuário do VMWare, poderá usar um OVA para implantar um agente de Console no seu VCenter. O download ou a URL do OVA estão disponíveis no NetApp Console.
 
 
-NOTE: Ao instalar um agente do Console com suas ferramentas do VCenter, você pode usar o console da Web da VM para executar tarefas de manutenção.link:task-agent-vm-config.html["Saiba mais sobre o console da VM para o agente."]
+NOTE: Ao implantar um agente de console com suas ferramentas do vCenter, você pode usar o console da web da VM para executar tarefas de manutenção. link:task-agent-vm-config.html["Saiba mais sobre o console da VM para o agente."]
 
 
 
@@ -450,7 +450,7 @@ image:screenshot_azure_client_secret.gif["Uma captura de tela do portal do Azure
 
 == Instale um agente de console no seu ambiente VCenter
 
-A NetApp oferece suporte à instalação do agente do Console no seu ambiente VCenter.  O arquivo OVA inclui uma imagem de VM pré-configurada que você pode implantar no seu ambiente VMware.  Um download de arquivo ou implantação de URL está disponível diretamente no NetApp Console.  Inclui o software do agente do Console e um certificado autoassinado.
+NetApp oferece suporte à instalação do agente do Console no seu ambiente VCenter. O arquivo OVA inclui uma imagem de VM pré-configurada que você pode implantar no seu ambiente VMware. Um download de arquivo ou implantação por URL está disponível diretamente no NetApp Console. Ele inclui o software do agente do Console e um certificado autoassinado.
 
 
 
@@ -466,12 +466,12 @@ Baixe o OVA ou copie o URL do OVA diretamente do NetApp Console.
 
 
 
-=== Implante o agente no seu VCenter
+=== Implante o agente em seu ambiente vCenter
 
 Efetue login no seu ambiente VCenter para implantar o agente.
 
 .Passos
-. Carregue o certificado autoassinado nos seus certificados confiáveis se o seu ambiente exigir.  Você substitui este certificado após a instalação.link:task-installing-https-cert.html["Aprenda como substituir o certificado autoassinado."]
+. Faça o upload do certificado autoassinado para seus certificados confiáveis, caso seu ambiente exija. Você substituirá este certificado após a instalação.
 . Implante o OVA da biblioteca de conteúdo ou do sistema local.
 +
 |===

@@ -4,7 +4,7 @@ permalink: reference-iam-analyst-roles.html
 keywords: predefined roles, iam roles, organization admin, folder or project admin, identity and access management, access roles, admin 
 summary: Você pode atribuir a função de analista de suporte operacional aos usuários para conceder a eles acesso a alertas e monitoramento. Usuários com essa função também podem abrir casos de suporte. 
 ---
-= Função de acesso de analista de suporte operacional para o NetApp Console
+= Função de analista de suporte operacional com acesso ao NetApp Console
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

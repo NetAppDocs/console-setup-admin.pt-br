@@ -4,7 +4,7 @@ permalink: task-install-agent-azure-console.html
 keywords: install connector, azure connector installation, azure connector, install connector in azure, bluexp, create connector 
 summary: Para criar um agente do Console no Azure a partir do NetApp Console, você precisa configurar sua rede, preparar as permissões do Azure e, em seguida, criar o agente do Console. 
 ---
-= Criar um agente de console no Azure a partir do NetApp Console
+= Implante um agente de Console no Azure a partir do NetApp Console
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,12 @@ summary: Para criar um agente do Console no Azure a partir do NetApp Console, vo
 
 
 [role="lead"]
-Para criar um agente do Console no Azure a partir do NetApp Console, você precisa configurar sua rede, preparar as permissões do Azure e, em seguida, criar o agente do Console.
+Para implantar um agente de Console no Azure a partir do NetApp Console, você precisa configurar sua rede, preparar as permissões do Azure e, em seguida, implantar o agente de Console.
+
+A implantação de um agente no Azure inicia uma máquina virtual executando Linux e o software do agente Console em uma VNet de sua escolha.
+
+
+NOTE: Implante um agente do Console na mesma região do Azure que os sistemas Cloud Volumes ONTAP que ele gerencia, ou na https://docs.microsoft.com/en-us/azure/availability-zones/cross-region-replication-azure#azure-cross-region-replication-pairings-for-all-geographies["Par de regiões do Azure"^]. Isso garante que uma conexão Azure Private Link seja usada entre Cloud Volumes ONTAP e suas contas de storage associadas.
 
 .Antes de começar
 * Você deveria ter umlink:concept-agents.html["compreensão dos agentes do Console"] .
@@ -501,7 +506,9 @@ link:reference-ports-azure.html["Exibir regras de grupo de segurança para o Azu
 +
 []
 ====
-Se você ainda estiver usando olink:reference-networking-saas-console-previous.html["pontos finais anteriores"] usado para atualizações de agentes, a validação falha com um erro.  Para evitar isso, desmarque a caixa de seleção para pular a verificação de validação.
+** Se você ainda estiver usando olink:reference-networking-saas-console-previous.html["pontos finais anteriores"] usado para atualizações de agentes, a validação falha com um erro.  Para evitar isso, desmarque a caixa de seleção para pular a verificação de validação.
+** Durante a instalação, NetApp verifica se o host do agente possui pelo menos 80% do espaço de disco disponível, o que inclui 48 GB em  `/opt` e 32 GB em  `/var` (80 GB no total). Após a instalação, exige que pelo menos 20% do disco total permaneça disponível, o que inclui 12 GB em  `/opt` e 8 GB em  `/var` (20 GB no total).
+
 
 ====
 . Selecione *Adicionar*.

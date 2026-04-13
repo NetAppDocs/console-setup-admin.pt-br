@@ -4,7 +4,7 @@ permalink: reference-whats-next-restricted-mode.html
 keywords: restricted mode, what you can do 
 summary: Depois de começar a usar o NetApp Console no modo restrito, você poderá começar a usar os serviços suportados no modo restrito. 
 ---
-= O que você pode fazer a seguir (modo restrito)
+= Próximos passos para o NetApp Console em modo restrito
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

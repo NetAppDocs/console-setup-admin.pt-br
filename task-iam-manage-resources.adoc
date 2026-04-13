@@ -26,9 +26,16 @@ Você pode visualizar e gerenciar recursos na página *Recursos* do Console.
 
 Você pode associar vários tipos de recursos a projetos na sua organização do NetApp Console :
 
-Recursos de armazenamento:: Os recursos de armazenamento são o tipo de recurso mais comum em sua organização e representam sistemas de armazenamento locais e em nuvem. Ao adicionar um sistema de armazenamento ao Console, você pode adicioná-lo a uma pasta ou projeto. Até então, o Console o marca como não descoberto e não o exibe na página *Recursos*.
-Agentes de console:: Se você utilizou um agente de console para descobrir sistemas de armazenamento, adicione o agente à mesma pasta ou projeto. Isso permite que os usuários executem funções habilitadas por agente, como serviços de dados ou gerenciamento de armazenamento nativo do Console. Você pode adicionar agentes a pastas ou projetos na página *Agentes* do Console. link:task-iam-associate-agents.html["Aprenda como associar um agente do Console a uma pasta ou projeto"].
-Assinaturas Keystone:: Se a sua organização possui assinaturas do Keystone , você pode visualizá-las na página *Recursos*. Você pode associar assinaturas do Keystone a pastas ou projetos para fornecer acesso a membros que tenham permissões para essas pastas ou projetos.
+Recursos de armazenamento:: Os recursos de armazenamento são o tipo de recurso mais comum em sua organização e representam tanto sistemas de storage locais quanto storage de nuvem. Ao adicionar um sistema de storage ao Console, você precisa adicioná-lo a um projeto. Até lá, o Console o marca como não descoberto e não o exibe na página *Recursos*.
++
+--
+
+NOTE: Usuários com a função de administrador da organização podem adicionar recursos a uma pasta para delegar a tarefa de associar o recurso a projetos aos administradores da pasta ou do projeto em questão. link:task-iam-manage-folders-projects.html#associate-resource-folder["Aprenda a associar um recurso a uma pasta"].
+
+--
+Agentes de console:: Se você usou um agente do Console para descobrir sistemas de storage, adicione o agente ao mesmo projeto do sistema de storage. Isso permite que os usuários executem funções habilitadas para agentes, como serviços de dados ou gerenciamento de storage nativo do Console. Você pode adicionar agentes a projetos na página *Agents* do Console. link:task-iam-associate-agents.html["Aprenda como associar um agente do Console a um projeto"].
+Assinaturas Keystone:: Se você tiver assinaturas do Keystone em sua organização, poderá visualizá-las na página *Recursos*. Você pode associar assinaturas do Keystone a projetos para conceder acesso a membros que tenham permissões para esses projetos.
+Cargas de trabalho de backup e recuperação:: As cargas de trabalho de Backup and Recovery também são consideradas recursos. Você pode atribuir permissões aos usuários para acessar cargas de trabalho de Backup and Recovery associando essas cargas de trabalho a projetos. Por exemplo, atribua acesso a uma carga de trabalho de Backup and Recovery a um usuário associando-a a um projeto ao qual o usuário tenha acesso e concedendo a função de Backup and Recovery apropriada.
 
 
 

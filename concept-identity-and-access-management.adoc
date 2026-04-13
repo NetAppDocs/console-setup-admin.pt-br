@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: concept-identity-and-access-management.html 
-keywords: iam overview, overview, how iam works, iam example, organization, folders, projects, resources, members, roles, permissions, resource hierarchy, identity and access management, access roles, iam, bluexp IAM 
+keywords: iam overview, overview, how iam works, iam example, organization, folders, projects, resources, members, roles, permissions, resource hierarchy, identity and access management, access roles, iam 
 summary: 'Utilize o Gerenciamento de Identidade e Acesso (IAM) do NetApp Console para estruturar e controlar o acesso a recursos de acordo com a hierarquia da sua empresa, como por local, departamento ou projeto.' 
 ---
 = Saiba mais sobre o gerenciamento de identidade e acesso do NetApp Console
@@ -16,31 +16,31 @@ summary: 'Utilize o Gerenciamento de Identidade e Acesso (IAM) do NetApp Console
 [role="lead"]
 Utilize o Gerenciamento de Identidade e Acesso (IAM) do NetApp Console para organizar seus recursos NetApp e controlar o acesso de acordo com a estrutura da sua empresa — por local, departamento ou projeto.
 
-Os recursos são organizados hierarquicamente: a organização está no topo, seguida pelas pastas (que podem conter outras pastas ou projetos) e, em seguida, pelos projetos, que contêm sistemas de armazenamento, cargas de trabalho e agentes.
+Você organiza os recursos em uma hierarquia: a organização está no topo, seguida pelas pastas (que podem conter outras pastas ou projetos) e, por fim, os projetos, que contêm sistemas de storage, workloads e agentes.
 
 Atribua funções de acesso no nível da organização, pasta ou projeto para que os usuários tenham o acesso correto aos recursos.
 
 
-NOTE: Você precisa ter as funções de _Superadministrador_, _Administrador da organização_ ou _Administrador de pasta ou projeto_ para gerenciar o IAM no NetApp Console.
+NOTE: Você precisa ter as funções de _Super admin_, _Organization admin_ ou _Folder or project admin_ para gerenciar o IAM no NetApp Console.
 
 A imagem a seguir ilustra essa hierarquia em um nível básico.
 
-image:diagram-iam-resource-hierarchy.png["Um diagrama conceitual que mostra os componentes da gestão de recursos."]]
+image:diagram-iam-resource-hierarchy.png["Um diagrama conceitual que mostra os componentes da gestão de recursos."]
 
 
 
 == Componentes de gerenciamento de identidade e acesso
 
-No NetApp Console, você organiza seus recursos de armazenamento usando três componentes principais: componentes organizacionais, componentes de recursos e componentes de acesso do usuário.
+NetApp Console IAM é construído com base em três tipos de componentes: componentes organizacionais que definem a hierarquia, recursos que são atribuídos dentro dessa hierarquia e membros e funções que controlam quem pode acessar o quê.
 
 
 
-=== Projetos e pastas dentro da sua organização
+=== NetApp Console componentes organizacionais
 
-Dentro da sua estrutura IAM, você trabalha com três componentes organizacionais: organizações, projetos e pastas. Você pode conceder acesso aos usuários atribuindo-lhes funções em qualquer um desses níveis.
+Os componentes organizacionais—organização, pastas e projetos—formam uma hierarquia que determina como os recursos são agrupados e como o acesso é delegado.
 
-Organização:: Uma _organização_ é o nível superior do sistema Console IAM e normalmente representa sua empresa.  Sua organização consiste em pastas, projetos, membros, funções e recursos.  Os agentes estão associados a projetos específicos na organização.
-Projetos:: Um _projeto_ é usado para fornecer acesso a um recurso de armazenamento. Você precisa atribuir recursos ao projeto antes que alguém possa acessá-los. Você pode atribuir vários recursos a um único projeto e também pode ter vários projetos. Em seguida, você atribui permissões de usuário ao projeto para dar a eles acesso aos recursos contidos nele.
+Organização:: Uma _organização_ é o nível mais alto do sistema Console IAM e normalmente representa sua empresa. Sua organização consiste em pastas, projetos, membros, funções e recursos. Os recursos são associados a projetos e os membros recebem funções no nível da organização, da pasta ou do projeto.
+Projetos:: Os projetos agrupam recursos de storage. Atribua recursos a projetos e conceda acesso aos usuários no nível do projeto. Os recursos podem pertencer a vários projetos. Os usuários com acesso a um projeto podem usar seus recursos.
 +
 --
 Por exemplo, você pode associar um sistema ONTAP local a um único projeto ou a todos os projetos da sua organização, dependendo das suas necessidades.
@@ -48,10 +48,11 @@ Por exemplo, você pode associar um sistema ONTAP local a um único projeto ou a
 link:task-iam-manage-folders-projects.html["Aprenda como adicionar projetos à sua organização."^]
 
 --
-Pastas:: Agrupe projetos relacionados em _pastas_ para organizá-los por local, unidade ou negócio. Não é possível associar recursos diretamente a pastas, mas atribuir uma função a um usuário no nível da pasta dá a ele acesso a todos os projetos dessa pasta.
+Pastas:: Agrupe projetos relacionados em _pastas_ para organizá-los por local, site ou unidade de negócios. Não é possível associar recursos diretamente a pastas, mas atribuir uma função a um usuário no nível da pasta concede a ele acesso a todos os projetos dessa pasta.
 
 
-link:task-iam-manage-folders-projects.html["Aprenda como adicionar pastas à sua organização."]
+
+NOTE: Usuários com a função de administrador da organização podem adicionar recursos a uma pasta para delegar a tarefa de associar o recurso a projetos aos administradores da pasta ou do projeto em questão. link:task-iam-manage-folders-projects.html#associate-resource-folder["Aprenda a associar um recurso a uma pasta"].
 
 
 
@@ -59,28 +60,26 @@ link:task-iam-manage-folders-projects.html["Aprenda como adicionar pastas à sua
 
 Um recurso é uma entidade que o Console reconhece e que pode ser atribuída a um projeto. Recursos incluem sistemas de storage, assinaturas do Keystone, algumas cargas de trabalho do NetApp Backup and Recovery, bem como agentes do Console.
 
-+ Você precisa associar um recurso a um projeto antes que alguém possa acessá-lo.
-
-+
+Associe um recurso a um projeto para que os usuários com acesso ao projeto possam usar o recurso.
 
 Por exemplo, você pode associar um sistema Cloud Volumes ONTAP a um projeto ou a todos os projetos da sua organização. A forma como você associa um recurso depende das necessidades da sua organização.
 
-+
-
 link:task-iam-manage-resources.html["Aprenda como associar recursos a projetos."]
 
-Sistemas de armazenamento e assinaturas Keystone:: Os sistemas de storage são os principais recursos que você gerencia no NetApp Console. NetApp Console oferece suporte ao gerenciamento de sistemas de storage locais e de storage de nuvem. Você deve adicionar um sistema de storage a um projeto para que ele possa ser acessado pelas pessoas atribuídas ao projeto.
-Sistemas de storage:: Os sistemas de storage são associados automaticamente ao projeto em que são adicionados, mas você pode associá-los a outros projetos ou pastas na página *Resources*. Você não pode associar sistemas de storage FSx for NetApp ONTAP a projetos ou pastas, mas pode visualizá-los na página *Systems* ou em Workloads.
+Sistemas de storage:: Os sistemas de storage são os principais recursos que você gerencia no NetApp Console. NetApp Console oferece suporte ao gerenciamento de sistemas de storage locais e de storage de nuvem. Adicione um sistema de storage a um projeto para que os usuários com acesso ao projeto possam acessá-lo.
++
+--
+Os sistemas de storage são associados automaticamente ao projeto em que são adicionados, mas você pode associá-los a outros projetos ou pastas na página *Resources*. Você não pode associar sistemas de storage FSx for NetApp ONTAP a projetos ou pastas, mas pode visualizá-los na página *Systems* ou em Workloads.
+
+--
 Assinaturas Keystone:: As assinaturas do Keystone também são recursos que você pode associar a projetos para conceder aos usuários acesso à assinatura no NetApp Console.
-Cargas de trabalho de backup e recuperação (Oracle e Microsoft SQL Server):: Algumas cargas de trabalho de Backup and Recovery também são consideradas recursos. Você pode atribuir permissões aos usuários para acessar Backup and
+Cargas de trabalho de backup e recuperação (Oracle e Microsoft SQL Server):: Algumas cargas de trabalho de Backup e Recuperação também são consideradas recursos. Atribua uma carga de trabalho de Backup e Recuperação a um projeto para conceder acesso aos usuários.
 
 
 [[associate-agents]]
-Agentes de console:: Os administradores da organização criam agentes do Console para gerenciar sistemas de armazenamento e habilitar os serviços de dados da NetApp . Inicialmente, os agentes são vinculados ao projeto em que são criados, mas os administradores podem adicioná-los a outros projetos ou pastas na página Agentes.
+Agentes de console:: Os administradores da organização criam agentes do Console para gerenciar sistemas de storage e habilitar os serviços de dados da NetApp. Os agentes são inicialmente vinculados ao projeto em que são criados, mas os administradores podem adicioná-los a outros projetos na página *Agents*.
 +
 --
-Associar um agente a um projeto permite o gerenciamento de recursos nesse projeto, enquanto associar um agente a uma pasta permite que os administradores da pasta ou do projeto decidam quais projetos devem usar o agente. Os agentes devem estar vinculados a projetos específicos para fornecerem capacidades de gestão.
-
 link:task-iam-associate-agents.html["Aprenda como associar agentes a projetos."]
 
 --
@@ -90,10 +89,12 @@ link:task-iam-associate-agents.html["Aprenda como associar agentes a projetos."]
 
 === Membros e funções
 
+Os membros são os usuários e as contas de serviço da sua organização. As funções definem quais ações eles podem executar e em qual nível da hierarquia—organização, pasta ou projeto.
+
 Membros:: Os membros da sua organização são contas de usuário ou contas de serviço.  Uma conta de serviço normalmente é usada por um aplicativo para concluir tarefas específicas sem intervenção humana.
 +
 --
-Você precisa adicionar membros à sua organização depois que eles se inscreverem no NetApp Console. Depois de adicionados, você pode atribuir funções a eles para fornecer acesso a recursos. Você pode adicionar contas de serviço manualmente no Console ou automatizar a criação e o gerenciamento delas por meio da API IAM do NetApp Console .
+Adicione membros à sua organização depois que eles se inscreverem no NetApp Console. Após adicioná-los, atribua funções para conceder acesso aos recursos. Você pode adicionar contas de serviço manualmente no Console ou automatizar a criação e o gerenciamento delas por meio da NetApp Console IAM API.
 
 link:task-iam-manage-members-permissions.html#add-members["Aprenda como adicionar membros à sua organização."^]
 
@@ -101,11 +102,11 @@ link:task-iam-manage-members-permissions.html#add-members["Aprenda como adiciona
 Funções de acesso:: O Console fornece funções de acesso que você pode atribuir aos membros da sua organização.
 +
 --
-Ao associar um membro a uma função, você pode conceder essa função para toda a organização, uma pasta específica ou um projeto específico. A função que você selecionar concede permissões a um membro para acessar os recursos na parte selecionada da hierarquia.
+Ao associar um membro a uma função, você pode conceder essa função para toda a organização, uma pasta específica ou um projeto específico. A função que você selecionar concede ao membro permissão para os recursos na parte selecionada da hierarquia.
 
-O NetApp Console oferece funções granulares que seguem o princípio do "privilégio mínimo", o que significa que as funções de acesso são projetadas para conceder aos usuários acesso somente ao que eles precisam.
+NetApp Console oferece funções granulares que seguem os princípios do "privilégio mínimo", o que significa que as funções de acesso são projetadas para dar aos usuários acesso apenas ao que eles precisam.
 
-Isso significa que os usuários podem ter várias funções atribuídas a eles à medida que suas responsabilidades aumentam.
+Os usuários podem desempenhar múltiplas funções à medida que suas responsabilidades se expandem.
 
 link:reference-iam-predefined-roles.html["Saiba mais sobre funções de acesso"] .
 
@@ -115,6 +116,8 @@ link:reference-iam-predefined-roles.html["Saiba mais sobre funções de acesso"]
 
 
 == Exemplos de estratégia IAM
+
+A estrutura IAM ideal depende do tamanho da sua organização e de como suas equipes estão organizadas. Os exemplos a seguir mostram como diferentes organizações podem usar a hierarquia IAM para gerenciar o acesso de forma eficaz.
 
 
 

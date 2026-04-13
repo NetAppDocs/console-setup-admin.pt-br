@@ -56,7 +56,7 @@ A NetApp oferece suporte aos seguintes protocolos e provedores de identidade par
 
 .Protocolos
 * link:task-federation-adfs.html["Serviços de Federação do Active Directory (AD FS)"]
-* link:link:task-federation-saml.html["Provedores de identidade de Linguagem de Marcação de Asserção de Segurança (SAML)"]
+* link:task-federation-saml.html["Provedores de identidade de Linguagem de Marcação de Asserção de Segurança (SAML)"]
 
 
 .Provedores de identidade

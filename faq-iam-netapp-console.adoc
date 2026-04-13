@@ -1,0 +1,105 @@
+---
+sidebar: sidebar 
+permalink: faq-iam-netapp-console.html 
+keywords: faq, frequently asked questions, frequently asked questions about netapp console iam, identity and access management, role-based access control, rbac, iam, roles, permissions, organization, folders, projects, members, agents, service accounts, federated groups 
+summary: Perguntas frequentes sobre gerenciamento de identidade e acesso e controle de acesso baseado em funções no NetApp Console. 
+---
+= Perguntas frequentes sobre gerenciamento de identidade e acesso para NetApp Console
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Este FAQ responde a perguntas comuns sobre gerenciamento de identidade e acesso (IAM) no NetApp Console. Ele se concentra em conceitos de controle de acesso baseado em funções, comportamento hierárquico e gerenciamento de membros, que são úteis no planejamento e implementação de acesso para sua organização.
+
+
+
+== Começando
+
+.Quais são os primeiros passos para configurar o IAM após criar uma nova organização do NetApp Console?
+Ao se cadastrar, o Console cria uma organização com um Organization admin e um projeto padrão. A partir daí, as etapas de configuração recomendadas são:
+
+. Edite o projeto padrão ou crie projetos e pastas adicionais para corresponder à hierarquia da sua empresa.
+. Adicione membros à sua organização.
+. Adicione ou descubra recursos.
+. Associe recursos a projetos adicionais conforme necessário.
+
+
+
+
+== Hierarquia de recursos: organizações, pastas e projetos
+
+.Qual a diferença entre uma pasta e um projeto no NetApp Console IAM?
+Pastas agrupam projetos relacionados para fins de estrutura organizacional e delegação de funções. Projetos contêm recursos e são onde os membros acessam esses recursos. Recursos não podem ser associados diretamente a pastas — eles devem ser associados a projetos. Atribuir uma função no nível da pasta concede a esse membro acesso herdado a todos os projetos e pastas subordinados.
+
+.As pastas são visíveis para todos os membros da minha organização?
+Não. As pastas só são visíveis para membros que possuem permissões do IAM: administrador da organização, administrador da pasta ou do projeto, ou super admin. Os membros comuns acessam projetos diretamente e não veem pastas.
+
+.Posso associar um recurso diretamente a uma pasta?
+Não. Os recursos devem ser associados a projetos, não a pastas. No entanto, um administrador da Organization pode associar um recurso a uma pasta para que um administrador da pasta ou do projeto possa vinculá-lo aos projetos apropriados dentro dessa pasta.
+
+.Qual é o nível de aninhamento máximo de pastas e projetos na hierarquia da minha organização?
+Você pode criar até sete níveis de pastas e projetos na estrutura de recursos da sua organização.
+
+.Que tipos de recursos podem ser associados a projetos no NetApp Console?
+Os recursos que podem ser associados aos projetos incluem:
+
+* Sistemas de storage
+* Assinaturas Keystone
+* Algumas cargas de trabalho de backup e recuperação
+* Agentes de console
+
+
+
+
+== Funções e permissões
+
+.Qual a diferença entre um administrador da organização e um administrador de pasta ou projeto?
+Um administrador da organização tem acesso irrestrito a todos os projetos e pastas em toda a organização e é a única função que pode criar agentes do Console. Um administrador de pasta ou projeto só pode gerenciar as pastas e os projetos específicos que lhe foram atribuídos e não pode criar agentes do Console.
+
+.Quem pode criar agentes do Console no NetApp Console?
+Somente usuários com a função de administrador da organização podem criar agentes do console. Administradores de pastas ou projetos não podem criar agentes do console.
+
+.Que função devo atribuir a um usuário que precisa apenas monitorar a integridade do storage e gerenciar chamados de suporte?
+Atribua a função de *Operation support analyst*, que fornece acesso a alertas e ferramentas de monitoramento, além da capacidade de registrar e gerenciar chamados de suporte.
+
+.Posso alterar a função de um membro no nível do projeto se esse acesso foi herdado de uma pasta?
+Não. Você não pode alterar o acesso de um membro em um nível inferior se ele foi herdado de um nível superior. Para modificar o acesso, você deve alterar a permissão do membro no nível hierárquico superior (pasta ou organização) onde ela foi originalmente atribuída.
+
+
+
+== Gerenciamento de membros e acesso
+
+.O que precisa acontecer antes que eu possa adicionar um usuário à minha organização do NetApp Console?
+O usuário precisa ter se cadastrado no NetApp Console antes de você adicioná-lo à sua organização, pasta ou projeto. Esse requisito se aplica mesmo a usuários que são membros de um grupo federado.
+
+.Os usuários federados obtêm acesso automático aos recursos quando adiciono o grupo deles ao Console?
+Não. Mesmo quando um grupo federado recebe uma função, os usuários individuais devem atender a dois requisitos antes de poderem acessar os recursos:
+
+. O usuário já deve ter se cadastrado no NetApp Console.
+. O usuário deve ter uma função atribuída explicitamente no Console.
+
+
+NetApp recomenda atribuir uma função de acesso mínima, como Organization viewer, a esses usuários.
+
+
+
+== Agentes de console
+
+.O que acontece com um agente de Console depois de ser criado, e ele pode ser usado em outros projetos?
+Os agentes do console são inicialmente vinculados ao projeto em que são criados. Após a criação, os administradores podem adicionar agentes a outros projetos ou associá-los a uma pasta na página Agents.
+
+
+
+== Informações relacionadas
+
+* link:concept-identity-and-access-management.html["Saiba mais sobre o gerenciamento de identidade e acesso do NetApp Console"]
+* link:reference-iam-predefined-roles.html["Saiba mais sobre as funções de acesso do NetApp Console"]
+* link:task-iam-get-started.html["Comece a usar identidade e acesso no NetApp Console"]
+* link:task-iam-manage-folders-projects.html["Adicione pastas e projetos à sua organização do NetApp Console."]
+* link:task-iam-manage-members-permissions.html["Adicionar usuários a uma organização do NetApp Console"]
+

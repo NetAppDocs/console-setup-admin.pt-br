@@ -122,17 +122,17 @@ O Console exibe a versão no topo da página.
 
 
 
-== Verifique o acesso à rede e às portas para o agente do Console
+== Verifique se o agente do Console atende aos requisitos
 
-Certifique-se de que o agente do Console tenha o acesso à rede necessário.link:reference-networking-saas-console.html["Saiba mais sobre os pontos de acesso de rede necessários."]
+Os agentes de console exigem acesso a determinados endpoints de rede, precisam ter várias portas abertas e devem atender aos requisitos de hardware. Você pode verificar se o seu agente de console atende a esses requisitos no Console ou usando o agent maintenance console.
 
+link:reference-networking-saas-console.html["Saiba mais sobre os pontos de acesso de rede necessários."] link:
 
+Durante a instalação, NetApp verifica se o host do agente possui pelo menos 80% do espaço de disco disponível, o que inclui 48 GB em  `/opt` e 32 GB em  `/var` (80 GB no total). Após a instalação, exige que pelo menos 20% do disco total permaneça disponível, o que inclui 12 GB em  `/opt` e 8 GB em  `/var` (20 GB no total).
 
-=== Execute verificações de configuração no agente do console.
+link:reference-networking-saas-console.html["Saiba mais sobre os pontos de acesso de rede necessários."] link:
 
-Execute verificações de configuração nos agentes do Console a partir do Console ou do console de manutenção do agente para garantir que eles possam acessar os endpoints necessários e que as portas necessárias estejam abertas.
-
-Você também pode executar verificações de configuração usando o console de manutenção do agente.link:reference-agent-maint-console-config-checker.html["Saiba mais sobre como usar o comando `config-checker validate`."]
+Você também pode executar verificações de validação usando o console de manutenção do agente. link:reference-agent-maint-console-config-checker.html["Saiba mais sobre como usar o comando `config-checker validate`."]
 
 
 NOTE: Você só pode validar agentes que tenham o status *Conectado*.

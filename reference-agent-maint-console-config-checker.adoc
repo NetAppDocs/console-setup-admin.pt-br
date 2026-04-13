@@ -4,7 +4,7 @@ permalink: reference-agent-maint-console-config-checker.html
 keywords: transparent proxy, connector certificate, agent maintenance console, proxy configuration, connector proxy. agent proxy 
 summary: Você pode usar o console de manutenção do agente do Console para configurar um agente do Console para usar um servidor proxy transparente. 
 ---
-= Validação do agente com o console de manutenção
+= Validação do agente do console com o console de manutenção no NetApp Console
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -39,9 +39,19 @@ O `config-checker validate` O comando permite validar a configuração de um age
 `--services <comma-separated list of services to validate>`--*OBRIGATÓRIO*--
 
 [role="quick-margin-para"]
-Selecione um ou mais serviços para validar. Os nomes de serviço válidos são: *`PLATFORM` que valida a conectividade de rede com os endpoints necessários do Console, bem como se as portas necessárias estão abertas para o agente do Console.
+Selecione um ou mais serviços para validar. Os nomes de serviço válidos são:
 
-`--validationTypes <comma-separated list validation types to run>`--*OBRIGATÓRIO*-- Escolha um ou mais tipos de validação para executar.  Os tipos de validação válidos são: * `NETWORK` que valida a conectividade de rede com os endpoints do Console necessários.
+*`PLATFORM`que valida a conectividade de rede com os endpoints do Console necessários, bem como se as portas necessárias estão abertas para o agente do Console.
+
+`--validationTypes <comma-separated list validation types to run>`--*OBRIGATÓRIO*-- Escolha um ou mais tipos de validação para executar. Os tipos de validação válidos são:
+
+* `NETWORK`que valida a conectividade de rede com os endpoints do Console necessários.
+* `HARDWARE` que valida se o host do agente atende aos requisitos mínimos de hardware para o agente do Console.
++
+
+NOTE: Durante a instalação, NetApp verifica se o host do agente possui pelo menos 80% do espaço de disco disponível, o que inclui 48 GB em  `/opt` e 32 GB em  `/var` (80 GB no total). Após a instalação, exige que pelo menos 20% do disco total permaneça disponível, o que inclui 12 GB em  `/opt` e 8 GB em  `/var` (20 GB no total).
+
+
 
 `--proxy <url>`--*OPCIONAL*--
 
@@ -57,20 +67,22 @@ Especifica o caminho para um ou mais arquivos de certificado a serem usados para
 
 === Exemplos de validação do verificador de configuração
 
-.Validação básica:
+Os exemplos a seguir incluem a validação da conectividade de rede, portas necessárias e requisitos de hardware, juntamente com diferentes combinações de uso de um servidor proxy e certificados personalizados.
+
+.Validação dos requisitos de conectividade de rede e hardware:
 [source, cli]
 ----
-./agent-maint-console config-checker validate --services PLATFORM --validationTypes NETWORK
+./agent-maint-console config-checker validate --services PLATFORM --validationTypes NETWORK,HARDWARE
 ----
 .Validação quando um servidor proxy é usado para o agente:
 [source, cli]
 ----
-./agent-maint-console config-checker validate --services PLATFORM --validationTypes NETWORK --proxy http://proxy.company.com:8080
+./agent-maint-console config-checker validate --services PLATFORM --validationTypes NETWORK,HARDWARE --proxy http://proxy.company.com:8080
 ----
 .Validação quando um certificado é usado para o agente:
 [source, cli]
 ----
-./agent-maint-console config-checker validate --services PLATFORM --validationTypes NETWORK --certs /path/to/cert1.pem,/path/to/cert2.pem
+./agent-maint-console config-checker validate --services PLATFORM --validationTypes NETWORK,HARDWARE --certs /path/to/cert1.pem,/path/to/cert2.pem
 ----
 
 

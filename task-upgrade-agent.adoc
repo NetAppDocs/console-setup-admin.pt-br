@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: task-upgrade-agent.html 
-keywords: upgrade, manual upgrade, agent upgrade, manual agent upgrade, upgrade agent manually, private mode upgrade, offline upgrade, upgrade private mode, connector upgrade, agent upgrade 
-summary: 'O agente do Console é atualizado automaticamente quando possui conectividade de saída. Se o seu agente do Console não tiver conectividade de saída, você pode atualizá-lo manualmente (como com o modo privado).' 
+keywords: upgrade, manual upgrade, agent upgrade, manual agent upgrade, upgrade agent manually, private mode upgrade, offline upgrade, upgrade private mode, connector upgrade, agent upgrade, vcenter upgrade, OVA upgrade, ISO upgrade, vsphere upgrade 
+summary: O agente do Console é atualizado automaticamente quando possui conectividade de saída. Se o seu agente do Console não tiver conectividade de saída, você pode atualizá-lo manualmente. Se o seu agente foi implantado em vCenter, você pode atualizá-lo usando uma ISO. 
 ---
-= Gerenciar atualizações do agente do console
+= Atualizar o agente do Console
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: 'O agente do Console é atualizado automaticamente quando possui conect
 
 
 [role="lead"]
-O agente do Console é atualizado automaticamente quando possui conectividade de saída. Se o seu agente do Console não tiver conectividade de saída, você pode atualizá-lo manualmente (como com o modo privado).
+O agente do Console é atualizado automaticamente quando possui conectividade de saída. Se o seu agente do Console não possui conectividade de saída, você pode atualizá-lo manualmente. Se o seu agente foi implantado em vCenter usando um OVA, você pode atualizá-lo para uma nova versão montando uma ISO na máquina virtual.
 
 
 
@@ -44,4 +44,47 @@ sudo /path/NetApp-Console-Agent-Offline-<version>
 Onde <versão> é a versão do agente que você baixou.
 
 . Após a conclusão da atualização, você pode verificar a versão do agente acessando *Administração > Suporte > Agentes*.
+
+
+
+
+== Atualize um agente do Console implantado pelo vCenter usando uma ISO
+
+Se o seu agente do Console foi implantado no vCenter usando um OVA, você pode atualizá-lo para uma nova versão montando uma ISO na VM e executando a atualização a partir do console de manutenção da VM.
+
+Antes de começar, faça um snapshot da máquina virtual caso precise reverter.
+
+.Passos
+. Baixe a ISO do agente Console do https://mysupport.netapp.com/site/products/all/details/cloud-manager/downloads-tab["Site de suporte da NetApp"^].
+. Faça o upload da ISO para um datastore acessível a partir de vCenter.
+. No cliente vSphere, faça login no seu vCenter e selecione a instância da máquina virtual que hospeda o agente do Console.
+. Monte a imagem ISO na máquina virtual:
++
+.. Clique com o botão direito do mouse na máquina virtual e selecione *Editar configurações*.
+.. Selecione a unidade de CD/DVD e escolha *Arquivo ISO do Datastore*.
+.. Navegue até a imagem ISO do agente Console e selecione-a.
+.. Certifique-se de que a opção *Connect* esteja ativada.
+.. Selecione *OK*.
+
+
+. Com a máquina virtual selecionada, selecione *Iniciar Console Web*.
+. Faça login no console de manutenção usando o nome de usuário  `maint` e a senha de manutenção que você especificou ao implantar o OVA.
+. Digite  `1` para abrir o menu *Configuração do Sistema*.
+. Digite `3` para selecionar *Atualizar* e siga as instruções na tela.
++
+A atualização instala o sistema operacional atualizado, o ambiente de execução do Docker e os serviços do agente do Console no lugar. Se o kernel for atualizado, a máquina virtual será reiniciada automaticamente.
+
+. Após a conclusão da atualização, verifique se o agente do Console está funcionando corretamente:
++
+.. No cliente vSphere, confirme se a máquina virtual está ligada e se o console da web está acessível.
+.. No NetApp Console, acesse *Administração > Suporte > Agentes* e confirme se a versão do agente reflete a nova versão.
+
+
+. Desmonte a ISO da máquina virtual:
++
+.. No cliente vSphere, clique com o botão direito do mouse na VM e selecione *Editar configurações*.
+.. Selecione a unidade de CD/DVD e escolha *Dispositivo Cliente* ou desconecte a ISO do datastore.
+.. Selecione *OK*.
+
+
 

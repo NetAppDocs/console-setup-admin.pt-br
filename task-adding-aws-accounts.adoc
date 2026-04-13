@@ -250,7 +250,7 @@ Substituir a assinatura atual do marketplace por uma nova assinatura altera a as
 
 
 .Antes de começar
-Você precisa criar um agente do Console antes de poder configurar uma assinatura. link:concept-agents.html#agent-installation["Aprenda a criar um agente de console"] .
+Você precisa criar um agente de Console antes de configurar uma assinatura. link:concept-agent-install-options.html["Aprenda a criar um agente de console"].
 
 .Passos
 . Selecione *Administração > Credenciais*.

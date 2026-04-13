@@ -18,6 +18,9 @@ Associe agentes do Console a projetos específicos para permitir o gerenciamento
 
 Os superadministradores e administradores da organização podem criar agentes e associar qualquer agente a qualquer projeto ou pasta. Os administradores de pastas ou projetos só podem associar agentes existentes a pastas e projetos para os quais possuem permissões. link:reference-iam-predefined-roles.html["Saiba mais sobre as ações que um _administrador de pasta ou projeto_ pode concluir"].
 
+
+NOTE: Usuários com a função de administrador da organização podem adicionar recursos a uma pasta para delegar a tarefa de associar o recurso a projetos aos administradores da pasta ou do projeto em questão. link:task-iam-manage-folders-projects.html#associate-resource-folder["Aprenda a associar um recurso a uma pasta"].
+
 .Passos
 . Selecione *Administração > Identidade e acesso* > *Agentes*.
 . Na tabela, encontre o agente do Console que você deseja associar.

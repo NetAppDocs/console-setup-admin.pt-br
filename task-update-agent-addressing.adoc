@@ -1,0 +1,70 @@
+---
+sidebar: sidebar 
+permalink: task-update-agent-addressing.html 
+keywords: agent ip address, agent uri, change ip address, edit uri, agent network, agent addressing 
+summary: Quando a configuração da rede for alterada, talvez seja necessário atualizar o endereço IP do agente no seu provedor de nuvem e os URIs registrados no Console. 
+---
+= Atualizar endereçamento do agente e URIs
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Quando a configuração da rede for alterada, talvez seja necessário atualizar o endereço IP do agente no seu provedor de nuvem e os URIs registrados no Console.
+
+
+
+== Alterar o endereço IP de um agente
+
+Você pode alterar os endereços IP internos e públicos da instância do agente atribuída pelo seu provedor de nuvem, se necessário.
+
+.Passos
+. Siga as instruções do seu provedor de nuvem para alterar o endereço IP local ou o endereço IP público (ou ambos) da instância do agente.
+. Reinicie a instância do agente para registrar um novo endereço IP público no Console.
+. Se você alterou o endereço IP privado, atualize o local de backup dos arquivos de configuração do Cloud Volumes ONTAP para que os backups sejam enviados para o novo endereço IP privado no agente.
++
+Atualize o local de backup para cada sistema Cloud Volumes ONTAP .
+
++
+.. Na CLI do Cloud Volumes ONTAP , defina o nível de privilégio como avançado:
+
+
+
+
+[listing]
+----
+set -privilege advanced
+----
+. Execute o seguinte comando para exibir o destino de backup atual:
+
+
+[listing]
+----
+system configuration backup settings show
+----
+. Execute o seguinte comando para atualizar o endereço IP do destino de backup:
+
+
+[listing]
+----
+system configuration backup settings modify -destination <target-location>
+----
+
+
+== Editar URIs de um agente
+
+Atualizar o URI de um agente do Console caso os requisitos de rede mudem. Isso garante o gerenciamento ininterrupto, seguro e em conformidade da sua infraestrutura de storage.
+
+.Passos
+. Selecione *Administração > Agentes*.
+. Na página *Visão geral*, selecione o menu de ação para um agente do Console e selecione *Editar agente*.
++
+O agente do Console deve estar ativo para editá-lo.
+
+. Expanda a barra *URIs do agente* para visualizar os URIs do agente.
+. Adicione e remova URIs e selecione *Aplicar*.
+

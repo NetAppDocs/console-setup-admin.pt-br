@@ -1,0 +1,17 @@
+= Agente do Console 4.6.0
+:allow-uri-read: 
+
+
+
+
+=== Agente do Console 4.6.0
+
+A versão 4.6.0 suporta tanto o modo padrão quanto o modo restrito.
+
+Esta versão do agente do Console inclui melhorias de segurança e correções de bugs, bem como o seguinte novo recurso.
+
+.Suporte para verificações de configuração do espaço de disco necessário
+Você pode verificar se o espaço de disco necessário para o agente do Console está disponível usando verificações de configuração. Você pode realizar verificações de configuração no Console ou no console de manutenção do agente. link:https://docs.netapp.com/us-en/console-setup-admin/task-troubleshoot-agent.html["Saiba mais sobre como executar verificações de configuração no agente do Console"^]
+
+.Atualize um agente do Console implantado pelo vCenter usando uma ISO
+Se você implantou um agente de Console no vCenter usando um OVA, agora pode atualizá-lo para uma nova versão montando uma ISO na VM e executando a atualização a partir do console de manutenção da VM. link:https://docs.netapp.com/us-en/console-setup-admin/task-upgrade-agent.html["Aprenda como atualizar um agente do Console implantado pelo vCenter"^]

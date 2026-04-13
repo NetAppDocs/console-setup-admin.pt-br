@@ -21,6 +21,8 @@ A função de administrador da Federação é necessária para criar e gerenciar
 
 Verificar seu domínio envolve adicionar um registro TXT às configurações de DNS do seu domínio.  Este registro é usado para provar que você é o proprietário do domínio e permite que o NetApp Console confie no domínio para federação.  Talvez seja necessário coordenar com seu administrador de TI ou de rede para concluir esta etapa.
 
+Por exemplo, se estiver usando o Microsoft Entra ID, você pode seguir os passos na documentação da Microsoft link:https://learn.microsoft.com/en-us/entra/fundamentals/add-custom-domain["Adicionar um domínio com Microsoft Entra ID"].
+
 .Passos
 . Selecione *Administração > Identidade e acesso*.
 . Selecione *Federação* para visualizar a página *Federações*.

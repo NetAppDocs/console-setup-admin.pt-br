@@ -44,8 +44,8 @@ indexpage:
       url: task-iam-manage-members-permissions.html
   - title: Implantar agentes do console
     links:
-    - title: Saiba mais sobre os agentes do Console
-      url: concept-agents.html
+    - title: Escolha um método de implantação do agente do console
+      url: "/concept-agent-install-options.html"
     - title: Implante um agente localmente
       url: "/task-install-agent-on-prem.html"
     - title: Implante um agente na AWS
@@ -55,7 +55,7 @@ indexpage:
     - title: Implante um agente no Google Cloud.
       url: "/task-install-agent-google-console-gcloud.html"
     - title: Manter agentes do console
-      url: task-maintain-agents.html
+      url: "/task-maintain-agents.html"
   - title: Segurança e conformidade
     links:
     - title: Integre com seu provedor de identidade.

@@ -25,7 +25,7 @@ Execute estas tarefas de manutenção usando o console da Web da VM:
 
 
 .Limitações
-A atualização do agente pelo console ainda não é suportada.  Além disso, você só pode visualizar informações sobre o endereço IP, DNS e gateways.
+Você só pode visualizar (e não atualizar) informações sobre o endereço IP, DNS e gateways através do console de manutenção.
 
 
 

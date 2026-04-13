@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: task-federation-ping.html 
-keywords: PingFederate, BlueXP, federation, single sign-on, SSO, identity provider, IdP, service provider-initiated SSO, X.509 certificate, Audience/Entity ID, Reply URL, organization admin 
+keywords: PingFederate, BlueXP, federation, single sign-on, SSO, identity provider, IdP, service provider-initiated SSO, X.509 certificate, Audience ID, Entity ID, Reply URL, organization admin 
 summary: 'Federe com seu provedor PingFederate IdP para habilitar o logon único (SSO) para o NetApp Console.  Isso permite que os usuários façam login usando suas credenciais corporativas.' 
 ---
 = Federar o NetApp Console com o PingFederate

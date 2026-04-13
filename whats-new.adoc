@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: whats-new.html 
 keywords: 'what"s new, features, new, release notes, enhancements, fixes, connectors, bluexp, iam, notice, releases, console' 
-summary: 'Saiba o que há de novo nos recursos de administração do NetApp Console : IAM, agentes do Console, credenciais do provedor de nuvem e muito mais.' 
+summary: Descubra as novidades na administração do NetApp Console. 
 ---
 = O que há de novo
 :hardbreaks:
@@ -18,6 +18,24 @@ Saiba o que há de novo nos recursos de administração do NetApp Console : gere
 
 
 
+== 13 de abril de 2026
+
+
+
+=== Agente do Console 4.6.0
+
+A versão 4.6.0 suporta tanto o modo padrão quanto o modo restrito.
+
+Esta versão do agente do Console inclui melhorias de segurança e correções de bugs, bem como o seguinte novo recurso.
+
+.Suporte para verificações de configuração do espaço de disco necessário
+Você pode verificar se o espaço de disco necessário para o agente do Console está disponível usando verificações de configuração. Você pode realizar verificações de configuração no Console ou no console de manutenção do agente. link:https://docs.netapp.com/us-en/console-setup-admin/task-troubleshoot-agent.html["Saiba mais sobre como executar verificações de configuração no agente do Console"^]
+
+.Atualize um agente do Console implantado pelo vCenter usando uma ISO
+Se você implantou um agente de Console no vCenter usando um OVA, agora pode atualizá-lo para uma nova versão montando uma ISO na VM e executando a atualização a partir do console de manutenção da VM. link:https://docs.netapp.com/us-en/console-setup-admin/task-upgrade-agent.html["Aprenda como atualizar um agente do Console implantado pelo vCenter"^]
+
+
+
 == 10 de março de 2026
 
 
@@ -28,14 +46,14 @@ A versão 4.5.0 suporta tanto o modo padrão quanto o modo restrito.
 
 Esta versão do agente do Console inclui melhorias de segurança e correções de bugs, bem como o seguinte novo recurso.
 
-.Suporte para verificações de configuração nas portas necessárias
-Você pode validar se as portas necessárias para o agente do Console estão abertas usando verificações de configuração. Você pode realizar verificações de configuração a partir do Console ou do console de manutenção do agente. link:https://docs.netapp.com/console-setup-admin/task-troubleshoot-agent.html["Saiba mais sobre como executar verificações de configuração no agente do Console."]
+.Suporte para verificação de configuração das portas necessárias
+Você pode validar se as portas necessárias para o agente do Console estão abertas usando verificações de configuração. Você pode realizar verificações de configuração a partir do Console ou do console de manutenção do agente. link:https://docs.netapp.com/us-en/console-setup-admin/task-troubleshoot-agent.html["Saiba mais sobre como executar verificações de configuração no agente do Console."]
 
 
 
 === Administração do console
 
-Você pode atribuir funções do Keystone a usuários parceiros para permitir que esses usuários gerenciem recursos do Keystone em uma organização parceira. link:https://docs.netapp.com/console-setup-admin/console-administration/task-partnerships-assign-users.html["Saiba mais sobre como atribuir funções do Keystone a usuários parceiros."]
+Você pode atribuir funções do Keystone a usuários parceiros para permitir que esses usuários gerenciem recursos do Keystone em uma organização parceira. link:https://docs.netapp.com/us-en/console-setup-admin/task-partnerships-assign-users.html["Saiba mais sobre como atribuir funções do Keystone a usuários parceiros."]
 
 
 
