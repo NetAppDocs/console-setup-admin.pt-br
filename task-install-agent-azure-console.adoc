@@ -22,7 +22,7 @@ A implantação de um agente no Azure inicia uma máquina virtual executando Lin
 NOTE: Implante um agente do Console na mesma região do Azure que os sistemas Cloud Volumes ONTAP que ele gerencia, ou na https://docs.microsoft.com/en-us/azure/availability-zones/cross-region-replication-azure#azure-cross-region-replication-pairings-for-all-geographies["Par de regiões do Azure"^]. Isso garante que uma conexão Azure Private Link seja usada entre Cloud Volumes ONTAP e suas contas de storage associadas.
 
 .Antes de começar
-* Você deveria ter umlink:concept-agents.html["compreensão dos agentes do Console"] .
+* link:concept-agent-install-options.html#agent-console-deploy["Saiba quando implantar a partir do Console"].
 * Você deve revisarlink:reference-limitations.html["Limitações do agente do console"] .
 
 

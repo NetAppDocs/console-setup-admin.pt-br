@@ -19,7 +19,7 @@ Você pode implantar um agente do Console na AWS diretamente do NetApp Console. 
 Ao implantar um agente na AWS, é iniciada uma instância EC2 executando Linux e o software do agente Console em uma VPC de sua escolha.
 
 .Antes de começar
-* link:concept-agents.html["Saiba mais sobre os agentes do Console"].
+* link:concept-agent-install-options.html#agent-console-deploy["Saiba quando implantar a partir do Console"].
 * Você deve revisarlink:reference-limitations.html["Limitações do agente do console"] .
 
 

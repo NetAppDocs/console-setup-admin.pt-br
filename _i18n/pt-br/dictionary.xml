@@ -1198,37 +1198,7 @@
   <block id="a97fa38afe9727184ada1ed0c4bf8cbf" category="list-text"><block ref="a97fa38afe9727184ada1ed0c4bf8cbf" category="inline-link-macro-rx"></block></block>
   <block id="d0be151a63fab72d6333774c4ad643bb" category="inline-link">Saiba mais sobre a API para NetApp Console IAM</block>
   <block id="d7726716920c51dac9e8d3b944fb1d9c" category="list-text"><block ref="d7726716920c51dac9e8d3b944fb1d9c" category="inline-link-rx"></block></block>
-  <block id="00755108fad233add4100be86dce2451" category="summary">Existem algumas maneiras diferentes de criar um agente de console na AWS.  Diretamente do NetApp Console é a maneira mais comum.</block>
-  <block id="7ff9f8e2467774df163161a38d2d5040" category="doc">Opções de instalação do agente de console na AWS</block>
-  <block id="b5afc81c4f24b143224e304b939a3f6c" category="paragraph">As seguintes opções de instalação estão disponíveis:</block>
-  <block id="b9dd01a6aae803f666e75d60b5cc37fe" category="inline-link-macro">Crie o agente do Console diretamente do Console</block>
-  <block id="22ca43ce5c5a872fcead2b9795d43ce4" category="list-text"><block ref="4cac40a6f38a644ae4e3211385f3144e" category="inline-link-macro-rx"></block>(esta é a opção padrão)</block>
-  <block id="f27c252d931beb3466d3231006b71803" category="paragraph">Esta ação inicia uma instância do EC2 executando o Linux e o software do agente do Console em uma VPC de sua escolha.</block>
-  <block id="1515391ee07716093ddb994cd9906006" category="inline-link-macro">Crie um agente de console no AWS Marketplace</block>
-  <block id="b0a755c889be10fff38496428b62e124" category="list-text"><block ref="b0a755c889be10fff38496428b62e124" category="inline-link-macro-rx"></block></block>
-  <block id="b839e2143764191ce8726714fcf0e54c" category="paragraph">Esta ação também inicia uma instância do EC2 executando o Linux e o software do agente do Console, mas a implantação é iniciada diretamente do AWS Marketplace, e não do Console.</block>
-  <block id="7ec389ef03b4378689ec8afd5b977499" category="inline-link-macro">Baixe e instale manualmente o software em seu próprio host Linux</block>
-  <block id="ce8b5514801557c28339a07e7885738d" category="list-text"><block ref="ce8b5514801557c28339a07e7885738d" category="inline-link-macro-rx"></block></block>
-  <block id="a189e78df125d3702fb17473d7a17faa" category="paragraph">A opção de instalação escolhida afeta a maneira como você se prepara para a instalação.  Isso inclui como você fornece ao Console as permissões necessárias para autenticar e gerenciar recursos na AWS.</block>
-  <block id="f67190f28c8f18c6676794f4acd943fc" category="summary">Existem algumas maneiras diferentes de criar um agente de console no Azure.  Diretamente do NetApp Console é a maneira mais comum.</block>
-  <block id="dcd94e7f09b8c058ae8084e8e5730bbb" category="doc">Opções de instalação do agente de console no Azure</block>
-  <block id="f73d744dbe9e744eb8f73a3bab9f243e" category="inline-link-macro">Crie um agente de console diretamente do NetApp Console</block>
-  <block id="4d116474327ab97148d8a69fd11379ea" category="list-text"><block ref="e0fdd18000ece681beed8a0793eff329" category="inline-link-macro-rx"></block>(esta é a opção padrão)</block>
-  <block id="079e5f76242a76ddceeb5ae46398071c" category="paragraph">Esta ação inicia uma VM executando Linux e o software do agente do Console em uma VNet de sua escolha.</block>
   <block id="2dd5916ed68f963e9c5529d69a4de5fa" category="inline-link-macro">Crie um agente de console no Azure Marketplace</block>
-  <block id="b54d9f5a24d2e6b2b731b2862685ce97" category="list-text"><block ref="b54d9f5a24d2e6b2b731b2862685ce97" category="inline-link-macro-rx"></block></block>
-  <block id="cea96889fec9e311da2265fdf2e92490" category="paragraph">Esta ação também inicia uma VM executando Linux e o software do agente do Console, mas a implantação é iniciada diretamente do Azure Marketplace, e não do Console.</block>
-  <block id="9e0a66536136cc55db9b005faf3fa26e" category="list-text"><block ref="9e0a66536136cc55db9b005faf3fa26e" category="inline-link-macro-rx"></block></block>
-  <block id="320a91e2547bc28be93b76779dc849b4" category="paragraph">A opção de instalação escolhida afeta a maneira como você se prepara para a instalação.  Isso inclui como você fornece ao agente do Console as permissões necessárias para autenticar e gerenciar recursos no Azure.</block>
-  <block id="011286419a3e5b900c9f64647edebdf7" category="summary">Existem algumas maneiras diferentes de criar um agente do Console no Google Cloud.  Diretamente do NetApp Console é a maneira mais comum.</block>
-  <block id="89facd2099770d471c8de70fdb5d0651" category="doc">Opções de instalação do agente de console no Google Cloud</block>
-  <block id="1a208b984fe61bb9d1e4e6b026e30354" category="list-text"><block ref="84693cca73c9981e6b563eb4572174e7" category="inline-link-macro-rx"></block>(esta é a opção padrão)</block>
-  <block id="efbe29648b3d8def21619f8bba35784f" category="paragraph">Esta ação inicia uma instância de VM executando Linux e o software do agente do Console em uma VPC de sua escolha.</block>
-  <block id="f47b616e0890c8a8507745d52fc62533" category="inline-link-macro">Crie o agente do Console usando a plataforma Google</block>
-  <block id="952e50ce3636bd2393f109405c59b8c0" category="list-text"><block ref="952e50ce3636bd2393f109405c59b8c0" category="inline-link-macro-rx"></block></block>
-  <block id="9f0f4ef7b4fff87cc68ce1185ff944ce" category="paragraph">Esta ação também inicia uma instância de VM executando o Linux e o software do agente do Console, mas a implantação é iniciada diretamente do Google Cloud, e não do Console.</block>
-  <block id="0eef87956979cf6724fcf06a20f2e4eb" category="list-text"><block ref="0eef87956979cf6724fcf06a20f2e4eb" category="inline-link-macro-rx"></block></block>
-  <block id="6ca5ab84f54829f432e3fc9d65f06d1c" category="paragraph">A opção de instalação escolhida afeta a maneira como você se prepara para a instalação.  Isso inclui como você fornece ao Console as permissões necessárias para autenticar e gerenciar recursos no Google Cloud.</block>
   <block id="3b878279a04dc47d60932cb294d96259" category="section-title">Visão geral</block>
   <block id="579f2ccfa8f6ecb1be46c191e6f51980" category="paragraph">Cada modo de implantação difere em conectividade de saída, localização, instalação, autenticação, serviços de dados e métodos de cobrança.</block>
   <block id="93cba07454f06a4a960172bbd6e2a435" category="cell">Sim</block>
@@ -3300,8 +3270,6 @@
   <block id="798a2a9b64140e0f8f05fa5695aa1faf" category="list-text">Selecione outro agente e depois selecione *Trocar*.</block>
   <block id="52b5b2b5dbfa5254101b42416d1a8773" category="paragraph"><block ref="58b4c1c7f9a637ac28d3e6f5fb5503dc" category="inline-link-macro-rx"></block> .</block>
   <block id="59451d5b1be51c2e522deb585360baaf" category="doc">Crie um agente de console na AWS a partir do NetApp Console</block>
-  <block id="29c7d79b8474c98bbf8600f925dfb317" category="inline-link-macro">compreensão dos agentes do Console</block>
-  <block id="5f551ddf859b1d7525a5d87169b1c520" category="list-text">Você deveria ter um<block ref="d16111ab8ba33a1610fbb17fe340b992" category="inline-link-macro-rx"></block> .</block>
   <block id="035f13f16b03eaaa0e6f9e50510bada8" category="list-text">Você deve revisar<block ref="2c29232fcf7d2d4af34b1c675a642823" category="inline-link-macro-rx"></block> .</block>
   <block id="ece2bb18919ce5ae01a5179cefd722b3" category="section-title">Etapa 1: configurar a rede para implantar um agente de console na AWS</block>
   <block id="3622d53137f09c5a1f41ab1c1500f461" category="paragraph">Certifique-se de que o local de rede onde você planeja instalar o agente do Console suporte os seguintes requisitos.  Esses requisitos permitem que o agente do Console gerencie recursos e processos na sua nuvem híbrida.</block>
@@ -4117,7 +4085,6 @@
   <block id="08a85e7ea19b20609018d63a75a9ab37" category="list-text">Forneça ao agente do Console as permissões que você configurou anteriormente.</block>
   <block id="1d682899a424ef1c9395956d4422fd8a" category="inline-link-macro">Assine o NetApp Intelligent Services (opcional)</block>
   <block id="e7dd7f23b1ff3326cdebf5cb759f7a6f" category="paragraph-title"><block ref="05b2444faffd66d76e88602ea7dd353f" category="inline-image-macro-rx" type="image"></block> <block ref="60f282c89397f6d15a4ed422eccb831c" category="inline-link-macro-rx"></block></block>
-  <block id="d1d624aaa80d4b95ecda4ca00906004a" category="paragraph">Opcional: assine o NetApp Intelligent Services no marketplace do seu provedor de nuvem para pagar por serviços de dados a uma taxa por hora (PAYGO) ou por meio de um contrato anual.  Os NetApp Intelligent Services incluem NetApp Backup and Recovery, Cloud Volumes ONTAP, NetApp Cloud Tiering, NetApp Ransomware Resilience e NetApp Disaster Recovery.  A NetApp Data Classification está incluída na sua assinatura sem custo adicional.</block>
   <block id="4a5cd58a00c166a3e1b93ea2c38ae5db" category="inline-link-macro">Preparar a rede para usar o console NetApp</block>
   <block id="4170442d537b0bcdcf26afecc0b46214" category="paragraph-title"><block ref="58f667aaf05f87159670e12bd9bc076b" category="inline-image-macro-rx" type="image"></block> <block ref="81434ae0997d25fd3bf3ebcd9de42f03" category="inline-link-macro-rx"></block></block>
   <block id="0f29bdee858adb6d973cf8db83b0a896" category="inline-link-macro">Cadastre-se e crie uma organização</block>
@@ -5164,10 +5131,7 @@
   <block id="b60366a003b487aaa0f17f8db3163ecc" category="paragraph">Não (apenas descoberta básica)</block>
   <block id="3b00545dfd90abf1453721e441754d3d" category="cell">Digital Advisor (Active IQ)</block>
   <block id="c3705e839d1a8df80ae158824bd08448" category="cell">Métricas do painel da página inicial</block>
-  <block id="d3e800228af9a7ced9cadbe31f21cf71" category="paragraph">Sim^2^</block>
-  <block id="fec52cc0232a22ef4060c7b61d92c0a0" category="paragraph">Não^1^</block>
   <block id="3863a60fc30916ec3597541037025585" category="cell">*Serviços de dados disponíveis*:</block>
-  <block id="6444e1b68689d877ddc4f4121e08c0f6" category="paragraph">^1^ É possível visualizar o planejamento do ciclo de vida sem um agente do console, mas um agente do console é necessário para iniciar ações.</block>
   <block id="9ea7157b38fa199a8532fa65cd92d096" category="summary">Gerencie o acesso de usuários ao NetApp Console com controle de acesso baseado em funções (RBAC), atribuindo funções predefinidas no nível da organização, pasta ou projeto. Cada função concede permissões específicas que definem quais ações os usuários podem executar dentro do escopo atribuído.</block>
   <block id="6369e7866450cfbd1595f3b5f17a45ce" category="doc">Saiba mais sobre o controle de acesso baseado em função (RBAC) do NetApp Console .</block>
   <block id="adb744c66714a9cd79eb46c484743e3a" category="paragraph">A NetApp projeta funções de console com privilégios mínimos, de forma que cada função inclua apenas as permissões necessárias para suas tarefas. Essa abordagem aumenta a segurança ao limitar o acesso apenas ao que cada membro precisa.</block>
@@ -5448,7 +5412,6 @@
   <block id="bd2a04f40dfa26475eeaeb5104213639" category="inline-link-macro">Aprenda como descobrir um sistema da Série E</block>
   <block id="20397d9bb3cf91b26829ed1f1050f846" category="list-text"><block ref="20397d9bb3cf91b26829ed1f1050f846" category="inline-link-macro-rx"></block></block>
   <block id="0f1d83ed07623902c200d2b4489a8bc0" category="paragraph-title"><block ref="ef78558f80439832e0f51cc22cee8b8c" category="inline-image-macro-rx" type="image"></block> <block ref="60a7e52b5f1dace8fe7cd5fadf089cd0" category="inline-link-macro-rx"></block></block>
-  <block id="9c50bfc1c0c8af31868d53cf5d274ca4" category="paragraph">Cadastre-se no NetApp Intelligent Services por meio do seu provedor de nuvem para faturamento por hora (PAYGO) ou anual. A assinatura inclui NetApp Backup and Recovery, Cloud Volumes ONTAP, NetApp Cloud Tiering, NetApp Ransomware Resilience, NetApp Disaster Recovery e NetApp Data Classification.</block>
   <block id="b13696d6f982d12cdad42fb6cff86df3" category="paragraph">Para usar o Console, inscreva-se ou faça login com suas credenciais do Site de Suporte da NetApp ou crie um login no NetApp Console . Se você for o primeiro da sua empresa a se cadastrar, você criará uma nova organização como administrador. Se sua empresa já possui uma organização, inscreva-se ou faça login com suas credenciais existentes do Site de Suporte da NetApp ou com o login único (SSO) da empresa.</block>
   <block id="826401015c53957df701460dc5fefb05" category="paragraph">Se sua empresa não possui uma organização NetApp Console , inscreva-se para criar uma. O primeiro usuário se torna o administrador da organização e gerencia as contas de usuário e as permissões. Você poderá atualizar as funções e adicionar mais administradores posteriormente.</block>
   <block id="d5f547e805bd962044877e771a5c80c4" category="paragraph">+ Como usuário iniciante e administrador da organização, você segue um processo guiado para adicionar recursos de armazenamento, criar um agente do Console e muito mais. <block ref="85a3a682e34d7edd80cbda274368cd58" category="inline-link-macro-rx"></block></block>
@@ -5819,7 +5782,6 @@
   <block id="bf2dd05fdc0bdbc8a0f1b7fb8c2afaa1" category="section-title">Serviços de gestão de custos e conformidade no NetApp Console</block>
   <block id="1a9b5932db1134b67b21b3c238ec27e7" category="paragraph">Acompanhe o status do contrato em todos os sistemas para melhorar a gestão de custos, a conformidade e as decisões de compra.</block>
   <block id="58161bba30463b220b84e58cb97f5fd5" category="list-text">Utilize soluções com scripts para automatizar a configuração e a conexão de NetApp produtos e serviços para operações mais fluidas e consistentes.</block>
-  <block id="4832328d355560b55efa26c4c2c2d03c" category="list-text">Expanda seu storage ONTAP no local para a nuvem para otimização de custos e gerenciamento do ciclo de vida dos dados.</block>
   <block id="6db5d32b9455f53fb771511d47bb4646" category="list-text">Prepare os dados da sua aplicação e os ambientes de nuvem para conformidade com as regulamentações de privacidade de dados. Gratuito com assinatura.</block>
   <block id="26444e20535c400889cbd46fa71bcc4b" category="list-text">Crie um volume de cache gravável para acelerar o acesso a dados ou descarregar o tráfego de volumes muito acessados para aumentar o desempenho e a eficiência de custos.</block>
   <block id="46152e594769d440fdd2271b8eef67cc" category="list-text">Projete, configure e opere cargas de trabalho essenciais usando Amazon FSx for NetApp ONTAP para otimizar o desempenho e o custo para aplicações específicas.</block>
@@ -5957,9 +5919,7 @@
   <block id="6f8cdd1e2991c2d2f9a4580b6f79bf52" category="paragraph-title">Atualize um agente do Console implantado pelo vCenter usando uma ISO</block>
   <block id="307d2695a2fce9ab7e904c8ad0ec1904" category="inline-link-macro">Aprenda como atualizar um agente do Console implantado pelo vCenter</block>
   <block id="30c4a8a1d5fde5730fe4249081e4d06c" category="paragraph">Se você implantou um agente de Console no vCenter usando um OVA, agora pode atualizá-lo para uma nova versão montando uma ISO na VM e executando a atualização a partir do console de manutenção da VM. <block ref="5494ba1785de42707e7a1fa6cefcddcd" category="inline-link-macro-rx"></block></block>
-  <block id="4d2638b05d3fa7aba4bb7424fa2b2a26" category="summary">Implante um agente do Console usando o NetApp Console, o marketplace do seu provedor de nuvem ou instalando manualmente o software em um host Linux. O método de implantação determina seu controle sobre o host e a rapidez com que você pode começar</block>
   <block id="9db458bccb025b8de9d4cfd46a4d1578" category="doc">Escolha um método de implantação do agente do console</block>
-  <block id="bf9b093b5914185e68f2bf0b3c47073f" category="paragraph">Implante um agente do Console usando o NetApp Console, o marketplace do seu provedor de nuvem ou instalando manualmente o software em um host Linux. O método de implantação determina o seu controle sobre o host e a rapidez com que você pode começar.</block>
   <block id="091643e3b21d7e830a310e57763b4775" category="paragraph">Para implantações em nuvem, você pode implantar um agente na Amazon Web Services (AWS), Microsoft Azure ou Google Cloud.</block>
   <block id="775737d382907fd41e70093d7ab88b9f" category="section-title">Implantar a partir do NetApp Console</block>
   <block id="d791eb5db248a6d2868b3d89245f5f00" category="paragraph">NetApp recomenda implantar a partir do NetApp Console ao usar o modo padrão. O NetApp Console orienta você na configuração de rede e permissões e, em seguida, inicia automaticamente a VM ou instância em seu provedor de nuvem. O Console orienta você na configuração de rede e permissões e, em seguida, inicia automaticamente a VM ou instância em seu provedor de nuvem.</block>
@@ -6035,7 +5995,6 @@
   <block id="e25842751cafa99bcd27e28d53aa0a74" category="paragraph">A tabela a seguir mostra quais sistemas e serviços de armazenamento estão disponíveis com e sem um agente do Console.</block>
   <block id="103dc98f6960434c2f9ff478ef8618f7" category="cell">*Sistemas de armazenamento suportados*:</block>
   <block id="0ef90fde5440e5fbd859cb4d59f76f2c" category="cell">Cluster ONTAP local</block>
-  <block id="9b2d29fbe0d27c5340433f589b4ffedd" category="paragraph">^2^ Métricas precisas da página inicial exigem agentes do Console com tamanho e configuração adequados.</block>
   <block id="762c7a5905f9e2e1e066d46ccf563a52" category="paragraph">Para gerenciar recursos do Google Cloud, implante seu agente no Google Cloud. Um agente local não pode gerenciar recursos do Google Cloud.</block>
   <block id="6265d84f2de108c19a3c1b8a19a22d01" category="list-text">Nas suas instalações (apenas modos standard ou privado)</block>
   <block id="3f2acb165155b9f2c13851d0a96a3f63" category="inline-link-macro">Compare os métodos de implantação para escolher o mais adequado ao seu ambiente</block>
@@ -6159,7 +6118,6 @@
   <block id="5ac9b947c65653cf6d02fe3c59e7fa2f" category="summary">Você pode implantar um agente do Console na AWS diretamente do NetApp Console. Antes de implantar um agente do Console na AWS a partir do Console, você precisa configurar sua rede e preparar as permissões da AWS.</block>
   <block id="dc06977a17baa1d2ac30423086ded05e" category="doc">Implante um agente do Console na AWS a partir do NetApp Console</block>
   <block id="21bc24ad9112fe84642a352511c8c896" category="paragraph">Ao implantar um agente na AWS, é iniciada uma instância EC2 executando Linux e o software do agente Console em uma VPC de sua escolha.</block>
-  <block id="a7bfdf791cd40e0ecc1b8e7cef1ca6c1" category="list-text"><block ref="6863c249d676553f48927d7d95fd710e" category="inline-link-macro-rx"></block>.</block>
   <block id="13cc9918631bd12add35c3badfe98a74" category="doc">Implante manualmente o agente do Console na AWS</block>
   <block id="3f0527499a34df287448340f6ef53274" category="paragraph">Você pode implantar manualmente um agente do Console em um host Linux em execução na AWS. Para implantar manualmente o agente do Console em seu próprio host Linux, você precisa revisar os requisitos do host, configurar sua rede, preparar as permissões da AWS, implantar o agente do Console e, em seguida, conceder as permissões que você preparou.</block>
   <block id="ae156547be858d5da6a6ad874dab7c9e" category="doc">Implante um agente de Console a partir do AWS Marketplace</block>
@@ -6234,14 +6192,37 @@
   <block id="26ebb9e5362ebbe39939cfeec9b06e2e" category="list-text">No cliente vSphere, clique com o botão direito do mouse na VM e selecione *Editar configurações*.</block>
   <block id="25f777f1eaa91fa773a6c639768fa5fc" category="list-text">Selecione a unidade de CD/DVD e escolha *Dispositivo Cliente* ou desconecte a ISO do datastore.</block>
   <block id="e382e67da79695356dc1fa71918bf917" category="summary">Descubra as novidades na administração do NetApp Console.</block>
-  <block id="34fb7793c6dd21820fca4599855cc8d6" category="sidebar">Opções de instalação do agente de console para AWS</block>
   <block id="dfaeded134f05cc3b6e8cfbb7dc74750" category="sidebar">Crie um agente de Console na AWS a partir do marketplace da AWS.</block>
-  <block id="da3632a79f01a64e10a52f3d8b2f20b3" category="sidebar">Opções de instalação do agente de console para Azure</block>
   <block id="7b3521e08bd698da5e7f4e8dd23ffd28" category="sidebar">Crie um agente de console no Azure a partir do Azure Marketplace</block>
-  <block id="aeb40985e24f14c0392276a5b302ec39" category="sidebar">Opções de instalação do agente do console para o Google Cloud</block>
   <block id="9263d00bd3085ab3f7fe9d54b53da0bb" category="sidebar">Criar um agente de Console no Google Cloud a partir do Google Cloud</block>
   <block id="ef65981a653f842358b97ed65fdd873e" category="sidebar">Instale um agente do Console localmente no vCenter</block>
   <block id="0b1032eeff080ebafeabe1d451b25cbc" category="sidebar">Manter agentes do Console instalados manualmente</block>
   <block id="fed6fefc4794de432303a8decf8cfed9" category="sidebar">Manter um agente instalado manualmente</block>
   <block id="15cae31ad8279b2e766e14f72e9a7766" category="sidebar">Perguntas frequentes sobre gerenciamento de identidade e acesso</block>
+  <block id="bde6bbfbb596382f506558c6bab1343b" category="paragraph">NetApp Cloud Tiering não estará mais disponível para compra ou renovação de licença a partir de 26 de abril de 2026.</block>
+  <block id="bb94a9ffb3205557387f0b00f8e24dca" category="paragraph">Os clientes atuais podem continuar a usar e receber suporte para NetApp Cloud Tiering até que sua assinatura ou contrato de licença expire. Após a expiração da assinatura, os clientes não terão mais acesso aos recursos ou ao suporte do NetApp Cloud Tiering.</block>
+  <block id="f8a967869572457212675a5d470c728f" category="inline-link-macro">Instale uma licença FabricPool em um cluster ONTAP</block>
+  <block id="f1a805b989e2fd716c6ed52db78b4c09" category="paragraph">NetApp recomenda que os clientes trabalhem com seu representante NetApp para migrar suas licenças de tiering existentes para licenças ONTAP FabricPool, que fornecem a funcionalidade de tiering de dados no ONTAP. Consulte <block ref="ecd46e7261f4b06a38f69686168fad8b" category="inline-link-macro-rx"></block> para obter mais informações sobre como configurar o tiering de dados no ONTAP usando FabricPool.</block>
+  <block id="d5b1e29a38c69118ebb52ddd25078a82" category="inline-link-macro">NetApp Cloud Tiering Aviso de Fim de Disponibilidade</block>
+  <block id="3c1b98a4347b1e75ca57e51e43e141b2" category="list-text"><block ref="bc9f3746ee1a6c6e91093bc2b9ff13fb" category="inline-link-macro-rx"></block></block>
+  <block id="65afa52dc402fa4f804d1fad742f5b32" category="inline-link-macro">NetApp Cloud Tiering Perguntas frequentes sobre o fim da disponibilidade</block>
+  <block id="91140b6bf054d442adb9178830663a05" category="list-text"><block ref="317d9243bec15035f876da17dbcf900e" category="inline-link-macro-rx"></block></block>
+  <block id="d1618b2005bb616189c51872f4eeb7a1" category="summary">Implante um agente do Console usando o NetApp Console, o marketplace do seu provedor de nuvem ou instalando manualmente o software em um host Linux. O método de implantação determina como você mantém o host do agente e varia dependendo de qual modo de implantação do NetApp Console você está usando.</block>
+  <block id="45fb0fdcc82849eb5d817c5636b5bdfe" category="paragraph">Sim. Métricas precisas da página inicial exigem agentes do Console com tamanho e configuração adequados.</block>
+  <block id="79f67f651f3a0b97533f98f67c3ae42a" category="paragraph">Não. Você pode visualizar o planejamento do ciclo de vida sem um agente do Console, mas um agente do Console é necessário para iniciar ações.</block>
+  <block id="e56f7590d3bf460e920c96d0e1a4d00c" category="paragraph">NetApp Cloud Tiering*</block>
+  <block id="d82435623d1717d1441dd242d0d2d5dd" category="inline-link-macro">Saiba quando implantar a partir do Console</block>
+  <block id="bb4de92fce42a43473c818b1a685f78e" category="list-text"><block ref="65345eed93b7b4d57b17176976feb61c" category="inline-link-macro-rx"></block>.</block>
+  <block id="4058bec8c05b7eec8e8da62db0d4c29c" category="inline-link-macro">Saiba quando implantar manualmente na AWS</block>
+  <block id="bbba72d665c28a50ff890f9bf258bf44" category="list-text"><block ref="af0eeb37b47edb9c09804643bac40d9c" category="inline-link-macro-rx"></block>.</block>
+  <block id="90e4f94df0a9c5eb44bab6156156dfc9" category="inline-link-macro">Saiba quando implantar a partir do AWS Marketplace</block>
+  <block id="16ed41e7d53f616b01345af5fa5bd8df" category="list-text"><block ref="2cd30ddcbcdf1f251e7b73909152be56" category="inline-link-macro-rx"></block>.</block>
+  <block id="66aa6cab05064212e5db559feb1dc39b" category="inline-link-macro">Saiba quando implantar manualmente no Azure</block>
+  <block id="68168baf0e09918601a7b016175f25dc" category="list-text"><block ref="51a3655f41ec4f97f4438747d212bacc" category="inline-link-macro-rx"></block>.</block>
+  <block id="d1ed08857033eae041161d0cf84b5e13" category="inline-link-macro">Saiba quando implantar a partir do Azure Marketplace</block>
+  <block id="da299adc373f6bb4f71527af1d4a5229" category="list-text"><block ref="549d9ddde85979492f18f1b01a816a1c" category="inline-link-macro-rx"></block>.</block>
+  <block id="ea8976e4bcb3a4dc4f9dbcce6a078f45" category="inline-link-macro">Saiba quando implantar manualmente no Google Cloud</block>
+  <block id="fdac344e6e2a4fe5d79f5e4669b070fe" category="list-text"><block ref="0c9621013a18e4c625fdd25673bfa917" category="inline-link-macro-rx"></block>.</block>
+  <block id="8f5eebf6075fe260d8a4c0281dc3bfe2" category="paragraph">Opcional: Assine NetApp Intelligent Services no marketplace do seu provedor de nuvem para pagar pelos serviços de dados por hora (PAYGO) ou por meio de um contrato anual. NetApp Intelligent Services incluem NetApp Backup and Recovery, Cloud Volumes ONTAP, NetApp Ransomware Resilience e NetApp Disaster Recovery. NetApp Data Classification está incluído na sua assinatura, sem custo adicional.</block>
+  <block id="6c842907a578805c3a54843de813b384" category="paragraph">Inscreva-se nos NetApp Intelligent Services por meio do seu provedor de nuvem para cobrança por hora (PAYGO) ou anual. Uma assinatura inclui NetApp Backup and Recovery, Cloud Volumes ONTAP, NetApp Ransomware Resilience, NetApp Disaster Recovery e NetApp Data Classification.</block>
 </blocks>

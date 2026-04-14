@@ -34,8 +34,21 @@ O modo restrito é normalmente usado por governos estaduais e locais e empresas 
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Três"] link:task-subscribe-restricted-mode.html["Assine o NetApp Intelligent Services (opcional)"]
 [role="quick-margin-para"]
-Opcional: assine o NetApp Intelligent Services no marketplace do seu provedor de nuvem para pagar por serviços de dados a uma taxa por hora (PAYGO) ou por meio de um contrato anual.  Os NetApp Intelligent Services incluem NetApp Backup and Recovery, Cloud Volumes ONTAP, NetApp Cloud Tiering, NetApp Ransomware Resilience e NetApp Disaster Recovery.  A NetApp Data Classification está incluída na sua assinatura sem custo adicional.
+Opcional: Assine NetApp Intelligent Services no marketplace do seu provedor de nuvem para pagar pelos serviços de dados por hora (PAYGO) ou por meio de um contrato anual. NetApp Intelligent Services incluem NetApp Backup and Recovery, Cloud Volumes ONTAP, NetApp Ransomware Resilience e NetApp Disaster Recovery. NetApp Data Classification está incluído na sua assinatura, sem custo adicional.
 
+[NOTE]
+====
+NetApp Cloud Tiering não estará mais disponível para compra ou renovação de licença a partir de 26 de abril de 2026.
+
+Os clientes atuais podem continuar a usar e receber suporte para NetApp Cloud Tiering até que sua assinatura ou contrato de licença expire. Após a expiração da assinatura, os clientes não terão mais acesso aos recursos ou ao suporte do NetApp Cloud Tiering.
+
+NetApp recomenda que os clientes trabalhem com seu representante NetApp para migrar suas licenças de tiering existentes para licenças ONTAP FabricPool, que fornecem a funcionalidade de tiering de dados no ONTAP. Consulte link:https://docs.netapp.com/us-en/ontap/fabricpool/install-license-aws-azure-ibm-task.html["Instale uma licença FabricPool em um cluster ONTAP"] para obter mais informações sobre como configurar o tiering de dados no ONTAP usando FabricPool.
+
+* link:https://go.digital.netapp.com/rs/683-HWH-936/images/Cloud-Tiering-EOA-Notice2.pdf?version=0&mkt_tok=NjgzLUhXSC05MzYAAAGgvTOT_9L2PauNXYE0fOs0RIz8KK2q5Jb6sg8Yv-97NNJ53ceAab9UAqpKOrAvByxsOWqhIQHNCHgFfM0q3TI["NetApp Cloud Tiering Aviso de Fim de Disponibilidade"]
+* link:https://go.digital.netapp.com/rs/683-HWH-936/images/Cloud-Tiering-EOA-FAQ-v3.pdf?version=0&mkt_tok=NjgzLUhXSC05MzYAAAGgvTOT_rplJe_ZtlY4PQAQRQlewsDa0W4JR55muT0KCThR46zI7-uOhIYfVsxODDKFrnYYvy5uZzvhEKHOwBI["NetApp Cloud Tiering Perguntas frequentes sobre o fim da disponibilidade"]
+
+
+====
 
 
 == Recursos e serviços compatíveis para o NetApp Console no modo restrito

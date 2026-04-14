@@ -19,7 +19,7 @@ Você pode implantar um agente do Console no Google Cloud a partir do Console. V
 Ao implantar um agente no Google Cloud, é iniciada uma instância de máquina virtual executando Linux e o software do agente Console em uma VPC de sua escolha.
 
 .Antes de começar
-* Você deveria ter umlink:concept-agents.html["compreensão dos agentes do Console"] .
+* link:concept-agent-install-options.html#agent-console-deploy["Saiba quando implantar a partir do Console"].
 * Você deve revisarlink:reference-limitations.html["Limitações do agente do console"] .
 
 
