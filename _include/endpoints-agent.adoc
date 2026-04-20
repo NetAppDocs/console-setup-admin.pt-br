@@ -102,6 +102,15 @@ Embora os endpoints anteriores ainda sejam suportados, a NetApp recomenda atuali
 * Quando você atualiza os endpoints atuais no seu firewall, seus agentes existentes continuarão funcionando.
 
 
+a| https://occmclientinfragov.azurecr.us.io https://bluexpinfraprod.azurecr.io a| Para obter imagens para atualizações do agente do Console.
+
+* Quando você implanta um novo agente, a verificação de validação testa a conectividade com os endpoints atuais. Se você usarlink:reference-networking-saas-console-previous.html["pontos finais anteriores"] , a verificação de validação falha. Para evitar essa falha, pule a verificação de validação.
++
+Embora os endpoints anteriores ainda sejam suportados, a NetApp recomenda atualizar suas regras de firewall para os endpoints atuais o mais rápido possível. link:reference-networking-saas-console-previous.html#update-endpoint-list["Aprenda como atualizar sua lista de endpoints"] .
+
+* Quando você atualiza os endpoints atuais no seu firewall, seus agentes existentes continuarão funcionando.
+
+
 ^1^ A NetApp recomenda permitir endpoints da Opção 1 no seu firewall, pois são mais seguros, e não permitir endpoints da Opção 2.  Observe o seguinte sobre esses pontos finais:
 
 + * A partir da versão 3.9.47 do agente do Console, o sistema oferece suporte aos pontos de extremidade listados na opção 1.  Versões anteriores do agente do Console não oferecem suporte à compatibilidade com versões anteriores.  * O agente do Console primeiro contata os endpoints na opção 2.  Se esses terminais não estiverem acessíveis, ele entrará em contato automaticamente com os terminais na opção 1.  * Se você usar o agente do Console com o NetApp Backup and Recovery ou o Ransomware Resilience, o sistema não oferecerá suporte aos endpoints da Opção 1.  Permitir pontos de extremidade da Opção 2 e não permitir a Opção 1.
