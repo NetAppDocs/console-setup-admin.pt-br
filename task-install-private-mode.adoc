@@ -32,7 +32,9 @@ Para usar o NetApp Console no https://aws.amazon.com/federal/secret-cloud/["AWS 
 .Passos
 . Faça o download do software do agente do Console no https://mysupport.netapp.com/site/products/all/details/cloud-manager/downloads-tab["Site de suporte da NetApp"^]
 +
-Certifique-se de baixar o instalador offline para redes privadas sem acesso à internet.
+** Selecione a versão que suporta o modo privado. Verifique a link:whats-new.html["notas de lançamento"] para a versão mais recente compatível.
+** Baixe o instalador offline para redes sem acesso à internet.
+
 
 . Copie o instalador para o host Linux.
 . Atribua permissões para executar o script.
