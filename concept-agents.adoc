@@ -167,7 +167,7 @@ Sim
 | Digital Advisor (Active IQ)  a| 
 Sim
  a| 
-Não
+Sim
 
 
 
