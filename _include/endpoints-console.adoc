@@ -5,9 +5,9 @@
 Endpoints contatados de computadores ao usar o NetApp Console baseado na Web::
 +
 --
-Os computadores que acessam o Console a partir de um navegador da web devem ter a capacidade de contatar vários terminais.  Você precisará usar o Console para configurar o agente do Console e para o uso diário do Console.
+Os computadores que acessam o Console a partir de um navegador da web devem ter a capacidade de contatar vários endpoints.
 
-link:reference-networking-saas-console.html["Preparar a rede para o console NetApp"] .
+link:reference-networking-saas-console.html["Prepare a rede para o NetApp Console"].
 
 --
 

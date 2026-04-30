@@ -99,10 +99,10 @@ Embora os endpoints anteriores ainda sejam suportados, a NetApp recomenda atuali
 --
 
 
-Endpoints contatados do console NetApp:: Ao usar o aplicativo SaaS baseado na Web NetApp Console, ele contata vários endpoints para concluir tarefas de gerenciamento de dados. Isso inclui endpoints que são contatados para implantar o agente do Console a partir do Console.
+Endpoints contatados do console NetApp:: Ao usar o aplicativo SaaS Console baseado na Web NetApp, ele contata vários endpoints para concluir tarefas de gerenciamento de dados. Isso inclui endpoints contatados para implantar o agente do Console a partir do Console.
 +
 --
-link:reference-networking-saas-console.html["Exibir a lista de endpoints contatados pelo console do NetApp"] .
+link:reference-networking-saas-console.html["Visualize a lista de endpoints contatados a partir do NetApp Console"].
 
 --
 
@@ -118,7 +118,7 @@ Servidor proxy:: O NetApp oferece suporte a configurações de proxy explícitas
 --
 
 
-Portos:: Não há tráfego de entrada para o agente do Console, a menos que você o inicie ou se ele for usado como um proxy para enviar mensagens do AutoSupport do Cloud Volumes ONTAP para o Suporte da NetApp .
+Portos:: Não há tráfego de entrada para o agente do Console, a menos que você o inicie ou que ele seja usado como um proxy para enviar AutoSupport mensagens do Cloud Volumes ONTAP para o suporte da NetApp.
 +
 --
 * HTTP (80) e HTTPS (443) fornecem acesso à interface de usuário local, que você usará em raras circunstâncias.
@@ -132,7 +132,7 @@ Se os sistemas Cloud Volumes ONTAP não tiverem uma conexão de saída com a Int
 --
 
 
-Habilitar NTP:: Se você planeja usar o NetApp Data Classification para verificar suas fontes de dados corporativos, habilite um serviço Network Time Protocol (NTP) no agente do Console e no sistema NetApp Data Classification para que o horário seja sincronizado entre os sistemas. https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["Saiba mais sobre a classificação de dados da NetApp"^]
+Habilitar NTP:: Se você planeja usar NetApp Data Classification para analisar suas fontes de dados corporativas, deve habilitar um serviço de Protocolo de Tempo de Rede (NTP) tanto no agente do Console quanto no NetApp Data Classification para que o horário seja sincronizado entre os sistemas. https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["Saiba mais sobre NetApp Data Classification"^].
 +
 --
 Implemente este requisito de rede após criar o agente do Console.
@@ -280,8 +280,10 @@ Uma conta de serviço do Google Cloud é necessária para fornecer ao agente do 
 O exemplo a seguir cria uma função chamada "agente" no nível do projeto:
 
 +
-`gcloud iam roles create connector --project=myproject --file=agent.yaml`
-
+[source, shell]
+----
+gcloud iam roles create agent --project=myproject --file=agent.yaml
+----
 +
 https://cloud.google.com/iam/docs/creating-custom-roles#iam-custom-roles-create-gcloud["Documentação do Google Cloud: Criação e gerenciamento de funções personalizadas"^]
 
@@ -292,13 +294,13 @@ https://cloud.google.com/iam/docs/creating-custom-roles#iam-custom-roles-create-
 .. No serviço IAM e Admin, selecione *Contas de serviço > Criar conta de serviço*.
 .. Insira os detalhes da conta de serviço e selecione *Criar e continuar*.
 .. Selecione a função que você acabou de criar.
-.. Conclua as etapas restantes para criar a função.
+.. Conclua as etapas restantes para criar a conta de serviço.
 +
 https://cloud.google.com/iam/docs/creating-managing-service-accounts#creating_a_service_account["Documentação do Google Cloud: Criação de uma conta de serviço"^]
 
 
 
-. Se você planeja implantar sistemas Cloud Volumes ONTAP em projetos diferentes daquele em que o agente do Console reside, será necessário fornecer à conta de serviço do agente do Console acesso a esses projetos.
+. Se você planeja implantar sistemas Cloud Volumes ONTAP em projetos diferentes daquele em que o agente do Console reside, será necessário conceder à conta de serviço do agente do Console acesso a esses projetos.
 +
 Por exemplo, digamos que o agente do Console esteja no projeto 1 e você queira criar sistemas Cloud Volumes ONTAP no projeto 2.  Você precisará conceder acesso à conta de serviço no projeto 2.
 
@@ -364,9 +366,9 @@ compute.networkUser
 |===
 Observações:
 
-. deploymentmanager.editor só é necessário no projeto host se você não estiver passando regras de firewall para a implantação e optar por deixar que o Console as crie para você.  O NetApp Console cria uma implantação no projeto host que contém a regra de firewall VPC0 se nenhuma regra for especificada.
-. firewall.create e firewall.delete só são necessários se você não estiver passando regras de firewall para a implantação e optar por deixar que o Console as crie para você.  Essas permissões residem no arquivo .yaml da conta do Console.  Se você estiver implantando um par de HA usando uma VPC compartilhada, essas permissões serão usadas para criar as regras de firewall para VPC1, 2 e 3.  Para todas as outras implantações, essas permissões também serão usadas para criar regras para VPC0.
-. Para Cloud Tiering, a conta de serviço de hierarquização deve ter a função serviceAccount.user na conta de serviço, não apenas no nível do projeto.  Atualmente, se você atribuir serviceAccount.user no nível do projeto, as permissões não serão exibidas quando você consultar a conta de serviço com getIAMPolicy.
+. `deploymentmanager.editor` Só é necessário no projeto host se você não estiver passando regras de firewall para a implantação e optar por deixar o Console criá-las para você. O NetApp Console cria uma implantação no projeto host que contém a regra de firewall VPC0 se nenhuma regra for especificada.
+. `firewall.create` e  `firewall.delete` são necessárias apenas se você não estiver passando regras de firewall para a implantação e optar por deixar o Console criá-las para você. Essas permissões residem no arquivo .yaml da conta do Console. Se você estiver implantando um par de HA usando uma VPC compartilhada, essas permissões serão usadas para criar as regras de firewall para VPC1, 2 e 3. Para todas as outras implantações, essas permissões também serão usadas para criar regras para VPC0.
+. Para o Cloud Tiering, a conta de serviço de tiering deve ter a  `serviceAccount.user` função na conta de serviço, não apenas no nível do projeto. Se você atribuir  `serviceAccount.user` no nível do projeto, as permissões não são exibidas ao consultar a conta de serviço com  `getIAMPolicy`.
 
 
 ====
@@ -386,7 +388,7 @@ Habilite várias APIs do Google Cloud antes de implantar o agente do Console e o
 ** API do Gerenciador de Recursos de Nuvem
 ** API do mecanismo de computação
 ** API de gerenciamento de identidade e acesso (IAM)
-** Cloud Key Management Service (KMS) API (Necessário apenas se você planeja usar NetApp Backup and Recovery com chaves de criptografia gerenciadas pelo cliente (CMEK))
+** Cloud Key Management Service (KMS) API (necessária apenas se você planeja usar NetApp Backup and Recovery com chaves de criptografia gerenciadas pelo cliente (CMEK))
 ** API de Cotas na Nuvem (necessária para implantações do Cloud Volumes ONTAP usando o Infrastructure Manager)
 
 

@@ -17,8 +17,10 @@ Uma conta de serviço do Google Cloud é necessária para fornecer ao agente do 
 O exemplo a seguir cria uma função chamada "agente" no nível do projeto:
 
 +
-`gcloud iam roles create connector --project=myproject --file=agent.yaml`
-
+[source, shell]
+----
+gcloud iam roles create agent --project=myproject --file=agent.yaml
+----
 +
 https://cloud.google.com/iam/docs/creating-custom-roles#iam-custom-roles-create-gcloud["Documentação do Google Cloud: Criação e gerenciamento de funções personalizadas"^]
 
@@ -29,13 +31,13 @@ https://cloud.google.com/iam/docs/creating-custom-roles#iam-custom-roles-create-
 .. No serviço IAM e Admin, selecione *Contas de serviço > Criar conta de serviço*.
 .. Insira os detalhes da conta de serviço e selecione *Criar e continuar*.
 .. Selecione a função que você acabou de criar.
-.. Conclua as etapas restantes para criar a função.
+.. Conclua as etapas restantes para criar a conta de serviço.
 +
 https://cloud.google.com/iam/docs/creating-managing-service-accounts#creating_a_service_account["Documentação do Google Cloud: Criação de uma conta de serviço"^]
 
 
 
-. Se você planeja implantar sistemas Cloud Volumes ONTAP em projetos diferentes daquele em que o agente do Console reside, será necessário fornecer à conta de serviço do agente do Console acesso a esses projetos.
+. Se você planeja implantar sistemas Cloud Volumes ONTAP em projetos diferentes daquele em que o agente do Console reside, será necessário conceder à conta de serviço do agente do Console acesso a esses projetos.
 +
 Por exemplo, digamos que o agente do Console esteja no projeto 1 e você queira criar sistemas Cloud Volumes ONTAP no projeto 2.  Você precisará conceder acesso à conta de serviço no projeto 2.
 

@@ -128,7 +128,7 @@ Servidor proxy:: O NetApp oferece suporte a configurações de proxy explícitas
 --
 
 
-Portos:: Não há tráfego de entrada para o agente do Console, a menos que você o inicie ou se ele for usado como um proxy para enviar mensagens do AutoSupport do Cloud Volumes ONTAP para o Suporte da NetApp .
+Portos:: Não há tráfego de entrada para o agente do Console, a menos que você o inicie ou que ele seja usado como um proxy para enviar AutoSupport mensagens do Cloud Volumes ONTAP para o suporte da NetApp.
 +
 --
 * HTTP (80) e HTTPS (443) fornecem acesso à interface de usuário local, que você usará em raras circunstâncias.
@@ -142,7 +142,7 @@ Se os sistemas Cloud Volumes ONTAP não tiverem uma conexão de saída com a Int
 --
 
 
-Habilitar NTP:: Se você planeja usar o NetApp Data Classification para verificar suas fontes de dados corporativos, habilite um serviço Network Time Protocol (NTP) no agente do Console e no sistema NetApp Data Classification para que o horário seja sincronizado entre os sistemas. https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["Saiba mais sobre a classificação de dados da NetApp"^]
+Habilitar NTP:: Se você planeja usar NetApp Data Classification para analisar suas fontes de dados corporativas, deve habilitar um serviço de Protocolo de Tempo de Rede (NTP) tanto no agente do Console quanto no NetApp Data Classification para que o horário seja sincronizado entre os sistemas. https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["Saiba mais sobre NetApp Data Classification"^].
 +
 --
 Implemente os requisitos de rede após criar o agente do Console.
@@ -348,7 +348,7 @@ image:screenshot_azure_service_mgmt_apis_add.gif["Uma captura de tela do portal 
 . No serviço *Microsoft Entra ID*, selecione *Registros de aplicativos* e selecione o aplicativo.
 . Copie o *ID do aplicativo (cliente)* e o *ID do diretório (locatário)*.
 +
-image:screenshot_azure_app_ids.gif["Uma captura de tela que mostra o ID do aplicativo (cliente) e o ID do diretório (locatário) para um aplicativo no Microsoft Entra IDy."]
+image:screenshot_azure_app_ids.gif["Uma captura de tela que mostra o ID do aplicativo (cliente) e o ID do diretório (locatário) de um aplicativo no Microsoft Entra ID."]
 
 +
 Ao adicionar a conta do Azure ao Console, você precisa fornecer o ID do aplicativo (cliente) e o ID do diretório (locatário) para o aplicativo.  O Console usa os IDs para fazer login programaticamente.

@@ -17,10 +17,10 @@ Conexões com redes de destino:: O agente do Console requer uma conexão de rede
 Acesso de saída à Internet:: O local de rede onde você implanta o agente do Console deve ter uma conexão de saída com a Internet para entrar em contato com endpoints específicos.
 
 
-Endpoints contatados do console NetApp:: Ao usar o aplicativo SaaS baseado na Web NetApp Console, ele contata vários endpoints para concluir tarefas de gerenciamento de dados. Isso inclui endpoints que são contatados para implantar o agente do Console a partir do Console.
+Endpoints contatados do console NetApp:: Ao usar o aplicativo SaaS Console baseado na Web NetApp, ele contata vários endpoints para concluir tarefas de gerenciamento de dados. Isso inclui endpoints contatados para implantar o agente do Console a partir do Console.
 +
 --
-link:reference-networking-saas-console.html["Exibir a lista de endpoints contatados pelo console do NetApp"] .
+link:reference-networking-saas-console.html["Visualize a lista de endpoints contatados a partir do NetApp Console"].
 
 --
 
@@ -33,7 +33,7 @@ https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-enabli
 --
 
 
-Portos:: Não há tráfego de entrada para o agente do Console, a menos que você o inicie ou se ele for usado como um proxy para enviar mensagens do AutoSupport do Cloud Volumes ONTAP para o Suporte da NetApp .
+Portos:: Não há tráfego de entrada para o agente do Console, a menos que você o inicie ou que ele seja usado como um proxy para enviar AutoSupport mensagens do Cloud Volumes ONTAP para o suporte da NetApp.
 +
 --
 * HTTP (80) e HTTPS (443) fornecem acesso à interface de usuário local, que você usará em raras circunstâncias.
@@ -70,5 +70,5 @@ https://learn.microsoft.com/en-us/azure/virtual-network/ip-services/public-ip-ad
 --
 
 
-Habilitar NTP:: Se você planeja usar o NetApp Data Classification para verificar suas fontes de dados corporativos, habilite um serviço Network Time Protocol (NTP) no agente do Console e no sistema NetApp Data Classification para que o horário seja sincronizado entre os sistemas. https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["Saiba mais sobre a classificação de dados da NetApp"^]
+Habilitar NTP:: Se você planeja usar NetApp Data Classification para analisar suas fontes de dados corporativas, deve habilitar um serviço de Protocolo de Tempo de Rede (NTP) tanto no agente do Console quanto no NetApp Data Classification para que o horário seja sincronizado entre os sistemas. https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["Saiba mais sobre NetApp Data Classification"^].
 

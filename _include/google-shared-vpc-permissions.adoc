@@ -44,9 +44,9 @@ compute.networkUser
 |===
 Observações:
 
-. deploymentmanager.editor só é necessário no projeto host se você não estiver passando regras de firewall para a implantação e optar por deixar que o Console as crie para você.  O NetApp Console cria uma implantação no projeto host que contém a regra de firewall VPC0 se nenhuma regra for especificada.
-. firewall.create e firewall.delete só são necessários se você não estiver passando regras de firewall para a implantação e optar por deixar que o Console as crie para você.  Essas permissões residem no arquivo .yaml da conta do Console.  Se você estiver implantando um par de HA usando uma VPC compartilhada, essas permissões serão usadas para criar as regras de firewall para VPC1, 2 e 3.  Para todas as outras implantações, essas permissões também serão usadas para criar regras para VPC0.
-. Para Cloud Tiering, a conta de serviço de hierarquização deve ter a função serviceAccount.user na conta de serviço, não apenas no nível do projeto.  Atualmente, se você atribuir serviceAccount.user no nível do projeto, as permissões não serão exibidas quando você consultar a conta de serviço com getIAMPolicy.
+. `deploymentmanager.editor` Só é necessário no projeto host se você não estiver passando regras de firewall para a implantação e optar por deixar o Console criá-las para você. O NetApp Console cria uma implantação no projeto host que contém a regra de firewall VPC0 se nenhuma regra for especificada.
+. `firewall.create` e  `firewall.delete` são necessárias apenas se você não estiver passando regras de firewall para a implantação e optar por deixar o Console criá-las para você. Essas permissões residem no arquivo .yaml da conta do Console. Se você estiver implantando um par de HA usando uma VPC compartilhada, essas permissões serão usadas para criar as regras de firewall para VPC1, 2 e 3. Para todas as outras implantações, essas permissões também serão usadas para criar regras para VPC0.
+. Para o Cloud Tiering, a conta de serviço de tiering deve ter a  `serviceAccount.user` função na conta de serviço, não apenas no nível do projeto. Se você atribuir  `serviceAccount.user` no nível do projeto, as permissões não são exibidas ao consultar a conta de serviço com  `getIAMPolicy`.
 
 
 ====

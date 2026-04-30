@@ -120,7 +120,7 @@ image:screenshot_azure_service_mgmt_apis_add.gif["Uma captura de tela do portal 
 . No serviço *Microsoft Entra ID*, selecione *Registros de aplicativos* e selecione o aplicativo.
 . Copie o *ID do aplicativo (cliente)* e o *ID do diretório (locatário)*.
 +
-image:screenshot_azure_app_ids.gif["Uma captura de tela que mostra o ID do aplicativo (cliente) e o ID do diretório (locatário) para um aplicativo no Microsoft Entra IDy."]
+image:screenshot_azure_app_ids.gif["Uma captura de tela que mostra o ID do aplicativo (cliente) e o ID do diretório (locatário) de um aplicativo no Microsoft Entra ID."]
 
 +
 Ao adicionar a conta do Azure ao Console, você precisa fornecer o ID do aplicativo (cliente) e o ID do diretório (locatário) para o aplicativo.  O Console usa os IDs para fazer login programaticamente.

@@ -13,6 +13,5 @@ NOTE: Se o Console implantar o agente com sucesso, ele não gerará um relatóri
 +
 Você deve reiniciar todo o processo se quiser tentar implantar o agente novamente.
 
+. Acesse o relatório e os logs do host do agente do Console
 
-
-Acesse o relatório e os logs do host do agente do Console

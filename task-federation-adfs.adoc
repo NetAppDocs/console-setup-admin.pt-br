@@ -26,6 +26,11 @@ O NetApp oferece suporte somente a SSO iniciado pelo provedor de serviços (inic
 
 Você pode configurar a federação com seu servidor AD FS para habilitar o logon único (SSO) para o NetApp Console.  O processo envolve configurar o AD FS para confiar no Console como um provedor de serviços e, em seguida, criar a conexão no NetApp Console.
 
+.Antes de começar
+* É necessária uma conta IdP com privilégios administrativos.  Coordene com seu administrador do IdP para concluir as etapas.
+* Identifique o domínio que deseja usar para a federação. Você pode usar seu domínio de e-mail ou um domínio diferente que você possua. Se quiser usar um domínio diferente do seu domínio de e-mail, primeiro você deve verificar o domínio no Console. Para obter instruções, consulte link:task-federation-verify-domain.html["Verifique seu domínio no NetApp Console"].
+
+
 .Passos
 . Selecione *Administração > Identidade e acesso*.
 . Selecione *Federação* para visualizar a página *Federações*.
@@ -77,7 +82,7 @@ NOTE: Ao usar o Console no modo restrito, copie o URL para uma janela anônima d
 . No Console, selecione *Avançar* para revisar a página de resumo.
 . Configure as notificações.
 +
-Escolha entre sete dias ou 30 dias.  O sistema envia notificações de expiração por e-mail e as exibe no Console para qualquer usuário com as seguintes funções: Superadministrador, Administrador da organização, Administrador da federação e Visualizador da federação.
+Escolha entre sete e 30 dias. O sistema envia notificações de expiração por e-mail e as exibe no Console para qualquer usuário com as seguintes funções: Super admin, Org admin, Federation admin e Federation viewer.
 
 . Analise os detalhes da federação e selecione *Ativar federação*.
 . Selecione *Concluir* para finalizar o processo.

@@ -49,7 +49,7 @@ O agente usa `/opt` para instalar o `/opt/application/netapp` diretório e seu c
 
 ** `/var`: 40 GiB de espaço devem estar disponíveis
 +
-O agente do console requer este espaço em `/var` Porque o Podman ou o Docker são projetados para criar contêineres dentro deste diretório.  Especificamente, eles criarão contêineres no `/var/lib/containers/storage` diretório e `/var/lib/docker` para Docker. Montagens externas ou links simbólicos não funcionam neste espaço.
+O agente do Console requer este espaço em `/var` porque o Podman ou o Docker são projetados para criar os contêineres dentro deste diretório. Especificamente, eles criarão contêineres no `/var/lib/containers/storage` diretório e `/var/lib/docker` para Docker. Montagens externas ou links simbólicos não funcionam para este espaço.
 
 
 
@@ -135,7 +135,7 @@ Ubuntu
  a| 
 3.9.45 ou posterior com o NetApp Console no modo padrão ou restrito
  a| 
-Docker Engine 23.06 para 28.0.0.
+Docker Engine 23.0.6 para 28.0.0.
  a| 
 Não suportado
 
@@ -167,9 +167,9 @@ Acesso de saída à Internet:: O local de rede onde você implanta o agente do C
 Endpoints contatados de computadores ao usar o NetApp Console baseado na Web::
 +
 --
-Os computadores que acessam o Console a partir de um navegador da web devem ter a capacidade de contatar vários terminais.  Você precisará usar o Console para configurar o agente do Console e para o uso diário do Console.
+Os computadores que acessam o Console a partir de um navegador da web devem ter a capacidade de contatar vários endpoints.
 
-link:reference-networking-saas-console.html["Preparar a rede para o console NetApp"] .
+link:reference-networking-saas-console.html["Prepare a rede para o NetApp Console"].
 
 --
 
@@ -307,7 +307,7 @@ Servidor proxy:: O NetApp oferece suporte a configurações de proxy explícitas
 --
 
 
-Portos:: Não há tráfego de entrada para o agente do Console, a menos que você o inicie ou se ele for usado como um proxy para enviar mensagens do AutoSupport do Cloud Volumes ONTAP para o Suporte da NetApp .
+Portos:: Não há tráfego de entrada para o agente do Console, a menos que você o inicie ou que ele seja usado como um proxy para enviar AutoSupport mensagens do Cloud Volumes ONTAP para o suporte da NetApp.
 +
 --
 * HTTP (80) e HTTPS (443) fornecem acesso à interface de usuário local, que você usará em raras circunstâncias.
@@ -321,7 +321,7 @@ Se os sistemas Cloud Volumes ONTAP não tiverem uma conexão de saída com a Int
 --
 
 
-Habilitar NTP:: Se você planeja usar o NetApp Data Classification para verificar suas fontes de dados corporativos, habilite um serviço Network Time Protocol (NTP) no agente do Console e no sistema NetApp Data Classification para que o horário seja sincronizado entre os sistemas. https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["Saiba mais sobre a classificação de dados da NetApp"^]
+Habilitar NTP:: Se você planeja usar NetApp Data Classification para analisar suas fontes de dados corporativas, deve habilitar um serviço de Protocolo de Tempo de Rede (NTP) tanto no agente do Console quanto no NetApp Data Classification para que o horário seja sincronizado entre os sistemas. https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["Saiba mais sobre NetApp Data Classification"^].
 
 
 
@@ -495,7 +495,7 @@ image:screenshot_azure_service_mgmt_apis_add.gif["Uma captura de tela do portal 
 . No serviço *Microsoft Entra ID*, selecione *Registros de aplicativos* e selecione o aplicativo.
 . Copie o *ID do aplicativo (cliente)* e o *ID do diretório (locatário)*.
 +
-image:screenshot_azure_app_ids.gif["Uma captura de tela que mostra o ID do aplicativo (cliente) e o ID do diretório (locatário) para um aplicativo no Microsoft Entra IDy."]
+image:screenshot_azure_app_ids.gif["Uma captura de tela que mostra o ID do aplicativo (cliente) e o ID do diretório (locatário) de um aplicativo no Microsoft Entra ID."]
 
 +
 Ao adicionar a conta do Azure ao Console, você precisa fornecer o ID do aplicativo (cliente) e o ID do diretório (locatário) para o aplicativo.  O Console usa os IDs para fazer login programaticamente.
@@ -547,7 +547,7 @@ Siga estas etapas para instalar e configurar o Podman:
 
 * Habilite e inicie o serviço podman.socket
 * Instalar python3
-* Instale o pacote podman-compose versão 1.0.6
+* Instale o pacote podman-compose (varia conforme a versão do Red Hat)
 * Adicione podman-compose à variável de ambiente PATH
 * Se estiver usando o Red Hat Enterprise Linux, verifique se sua versão do Podman está usando o DNS Netavark Aardvark em vez do CNI
 
@@ -745,7 +745,7 @@ Se você não remover essas variáveis do sistema, a instalação falhará.
 +
 ** NetApp Console: Acesse *Agentes > Gerenciamento > Implantar agente > Local > Instalação manual*.
 +
-Escolha baixar os arquivos de instalação do agente ou um URL para os arquivos.
+Escolha baixar os arquivos de instalação do agente ou copie um URL para os arquivos.
 
 
 
@@ -754,7 +754,7 @@ Escolha baixar os arquivos de instalação do agente ou um URL para os arquivos.
 NOTE: Baixe o instalador do agente "online" destinado ao uso em sua rede ou na nuvem. Um instalador "offline" separado está disponível para o agente do Console, mas é compatível apenas com implantações em modo privado.
 
 +
-** Site de suporte da NetApp (necessário caso você ainda não tenha acesso ao Console) https://mysupport.netapp.com/site/products/all/details/netapp-console/downloads-tab["Site de suporte da NetApp"^] ,
+** NetApp site de suporte da NetApp (necessário caso você ainda não tenha acesso ao Console) https://mysupport.netapp.com/site/products/all/details/netapp-console/downloads-tab["Site de suporte da NetApp"^].
 
 
 . Atribua permissões para executar o script.
@@ -779,17 +779,17 @@ Você precisará adicionar informações de proxy se sua rede exigir um proxy pa
 
 
 
-NOTE: Se você deseja configurar um proxy transparente, pode fazê-lo após a instalação. link:reference-agent-maint-console-proxy.html["Saiba mais sobre o console de manutenção do agente."]
+NOTE: Se você deseja configurar um proxy transparente, pode fazê-lo após instalar um agente. link:reference-agent-maint-console-proxy.html["Saiba mais sobre o console de manutenção do agente."].
 
 +
 
-Aqui está um exemplo de configuração de um servidor proxy explícito com um certificado assinado por uma CA:
+Aqui está um exemplo de como configurar explicitamente um servidor proxy com um certificado assinado por uma Autoridade Certificadora (CA):
 
 +
 
 [source, cli]
 ----
-./NetApp_Console_Agent_Cloud_v4.0.0--proxy https://user:password@10.0.0.30:8080/ --cacert /tmp/cacert/certificate.cer
+./NetApp_Console_Agent_Cloud_v4.0.0 --proxy https://user:password@10.0.0.30:8080/ --cacert /tmp/cacert/certificate.cer
 ----
 +
 `--proxy` configura o agente do Console para usar um servidor proxy HTTP ou HTTPS usando um dos seguintes formatos:
@@ -877,7 +877,7 @@ Se você acabou de criar essas credenciais da AWS, elas podem levar alguns minut
 . Selecione *Credenciais da organização*.
 . Selecione *Adicionar credenciais* e siga as etapas do assistente.
 +
-.. *Localização das credenciais*: Selecione *Amazon Web Services > Agente.
+.. *Localização das credenciais*: Selecione *Amazon Web Services > Agente*.
 .. *Definir credenciais*: insira uma chave de acesso e uma chave secreta da AWS.
 .. *Assinatura do Marketplace*: Associe uma assinatura do Marketplace a essas credenciais assinando agora ou selecionando uma assinatura existente.
 .. *Revisar*: Confirme os detalhes sobre as novas credenciais e selecione *Adicionar*.

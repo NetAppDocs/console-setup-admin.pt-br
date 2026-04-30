@@ -42,7 +42,7 @@ image:screenshot_gcp_associate.gif["Uma captura de tela de um projeto e assinatu
 NOTE: Antes de concluir as etapas a seguir, verifique se você tem privilégios de administrador de cobrança na sua conta do Google Cloud, bem como um login no NetApp Console .
 
 +
-.. Depois de ser redirecionado para o https://console.cloud.google.com/marketplace/product/netapp-cloudmanager/cloud-manager["Página do NetApp Intelligent Services no Google Cloud Marketplace"^] , certifique-se de que o projeto correto esteja selecionado no menu de navegação superior.
+.. Após ser redirecionado para a  https://console.cloud.google.com/marketplace/product/netapp-cloudmanager/cloud-manager["Página do NetApp Intelligent Services no Google Cloud Marketplace"^], certifique-se de que o projeto correto esteja selecionado no menu de navegação superior.
 +
 image:screenshot_gcp_cvo_marketplace.png["Uma captura de tela da página do marketplace Cloud Volumes ONTAP no Google Cloud."]
 
@@ -62,7 +62,7 @@ image:screenshot_gcp_marketplace_register.png["Uma captura de tela de um pop-up 
 .. Conclua as etapas na página *Atribuição de assinatura*:
 +
 
-NOTE: Se alguém da sua organização já tiver uma assinatura de mercado da sua conta de cobrança, você será redirecionado para https://bluexp.netapp.com/ontap-cloud?x-gcp-marketplace-token=["a página Cloud Volumes ONTAP no NetApp Console"^] em vez de.  Se isso for inesperado, entre em contato com sua equipe de vendas da NetApp .  O Google permite apenas uma assinatura por conta de cobrança do Google.
+NOTE: Se alguém da sua organização já tiver uma assinatura do Marketplace vinculada à sua conta de faturamento, você será redirecionado para  https://bluexp.netapp.com/ontap-cloud?x-gcp-marketplace-token=["a página Cloud Volumes ONTAP no NetApp Console"^] em vez disso. Caso isso seja inesperado, entre em contato com sua equipe de vendas da NetApp. O Google permite apenas uma assinatura por conta de faturamento do Google.
 
 +
 *** Selecione a organização do Console à qual você gostaria de associar esta assinatura.

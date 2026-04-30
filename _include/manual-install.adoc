@@ -34,7 +34,7 @@ Se você não remover essas variáveis do sistema, a instalação falhará.
 +
 ** NetApp Console: Acesse *Agentes > Gerenciamento > Implantar agente > Local > Instalação manual*.
 +
-Escolha baixar os arquivos de instalação do agente ou um URL para os arquivos.
+Escolha baixar os arquivos de instalação do agente ou copie um URL para os arquivos.
 
 
 
@@ -43,7 +43,7 @@ Escolha baixar os arquivos de instalação do agente ou um URL para os arquivos.
 NOTE: Baixe o instalador do agente "online" destinado ao uso em sua rede ou na nuvem. Um instalador "offline" separado está disponível para o agente do Console, mas é compatível apenas com implantações em modo privado.
 
 +
-** Site de suporte da NetApp (necessário caso você ainda não tenha acesso ao Console) https://mysupport.netapp.com/site/products/all/details/netapp-console/downloads-tab["Site de suporte da NetApp"^] ,
+** NetApp site de suporte da NetApp (necessário caso você ainda não tenha acesso ao Console) https://mysupport.netapp.com/site/products/all/details/netapp-console/downloads-tab["Site de suporte da NetApp"^].
 
 
 . Atribua permissões para executar o script.
@@ -68,17 +68,17 @@ Você precisará adicionar informações de proxy se sua rede exigir um proxy pa
 
 
 
-NOTE: Se você deseja configurar um proxy transparente, pode fazê-lo após a instalação. link:reference-agent-maint-console-proxy.html["Saiba mais sobre o console de manutenção do agente."]
+NOTE: Se você deseja configurar um proxy transparente, pode fazê-lo após instalar um agente. link:reference-agent-maint-console-proxy.html["Saiba mais sobre o console de manutenção do agente."].
 
 +
 
-Aqui está um exemplo de configuração de um servidor proxy explícito com um certificado assinado por uma CA:
+Aqui está um exemplo de como configurar explicitamente um servidor proxy com um certificado assinado por uma Autoridade Certificadora (CA):
 
 +
 
 [source, cli]
 ----
-./NetApp_Console_Agent_Cloud_v4.0.0--proxy https://user:password@10.0.0.30:8080/ --cacert /tmp/cacert/certificate.cer
+./NetApp_Console_Agent_Cloud_v4.0.0 --proxy https://user:password@10.0.0.30:8080/ --cacert /tmp/cacert/certificate.cer
 ----
 +
 `--proxy` configura o agente do Console para usar um servidor proxy HTTP ou HTTPS usando um dos seguintes formatos:

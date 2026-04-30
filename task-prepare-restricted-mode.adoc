@@ -60,7 +60,7 @@ O agente usa `/opt` para instalar o `/opt/application/netapp` diretório e seu c
 
 ** `/var`: 40 GiB de espaço devem estar disponíveis
 +
-O agente do console requer este espaço em `/var` Porque o Podman ou o Docker são projetados para criar contêineres dentro deste diretório.  Especificamente, eles criarão contêineres no `/var/lib/containers/storage` diretório e `/var/lib/docker` para Docker. Montagens externas ou links simbólicos não funcionam neste espaço.
+O agente do Console requer este espaço em `/var` porque o Podman ou o Docker são projetados para criar os contêineres dentro deste diretório. Especificamente, eles criarão contêineres no `/var/lib/containers/storage` diretório e `/var/lib/docker` para Docker. Montagens externas ou links simbólicos não funcionam para este espaço.
 
 
 
@@ -154,7 +154,7 @@ Ubuntu
  a| 
 3.9.45 ou posterior com o NetApp Console no modo padrão ou restrito
  a| 
-Docker Engine 23.06 para 28.0.0.
+Docker Engine 23.0.6 para 28.0.0.
  a| 
 Não suportado
 
@@ -198,7 +198,7 @@ Siga estas etapas para instalar e configurar o Podman:
 
 * Habilite e inicie o serviço podman.socket
 * Instalar python3
-* Instale o pacote podman-compose versão 1.0.6
+* Instale o pacote podman-compose (varia conforme a versão do Red Hat)
 * Adicione podman-compose à variável de ambiente PATH
 * Se estiver usando o Red Hat Enterprise Linux, verifique se sua versão do Podman está usando o DNS Netavark Aardvark em vez do CNI
 
@@ -529,7 +529,7 @@ Servidor proxy:: O NetApp oferece suporte a configurações de proxy explícitas
 --
 
 
-Portos:: Não há tráfego de entrada para o agente do Console, a menos que você o inicie ou se ele for usado como um proxy para enviar mensagens do AutoSupport do Cloud Volumes ONTAP para o Suporte da NetApp .
+Portos:: Não há tráfego de entrada para o agente do Console, a menos que você o inicie ou que ele seja usado como um proxy para enviar AutoSupport mensagens do Cloud Volumes ONTAP para o suporte da NetApp.
 +
 --
 * HTTP (80) e HTTPS (443) fornecem acesso à interface de usuário local, que você usará em raras circunstâncias.
@@ -543,7 +543,7 @@ Se os sistemas Cloud Volumes ONTAP não tiverem uma conexão de saída com a Int
 --
 
 
-Habilitar NTP:: Se você planeja usar o NetApp Data Classification para verificar suas fontes de dados corporativos, habilite um serviço Network Time Protocol (NTP) no agente do Console e no sistema NetApp Data Classification para que o horário seja sincronizado entre os sistemas. https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["Saiba mais sobre a classificação de dados da NetApp"^]
+Habilitar NTP:: Se você planeja usar NetApp Data Classification para analisar suas fontes de dados corporativas, deve habilitar um serviço de Protocolo de Tempo de Rede (NTP) tanto no agente do Console quanto no NetApp Data Classification para que o horário seja sincronizado entre os sistemas. https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["Saiba mais sobre NetApp Data Classification"^].
 +
 --
 Se você estiver planejando criar um agente do Console no marketplace do seu provedor de nuvem, implemente este requisito de rede depois de criar o agente do Console.
@@ -796,7 +796,7 @@ image:screenshot_azure_service_mgmt_apis_add.gif["Uma captura de tela do portal 
 . No serviço *Microsoft Entra ID*, selecione *Registros de aplicativos* e selecione o aplicativo.
 . Copie o *ID do aplicativo (cliente)* e o *ID do diretório (locatário)*.
 +
-image:screenshot_azure_app_ids.gif["Uma captura de tela que mostra o ID do aplicativo (cliente) e o ID do diretório (locatário) para um aplicativo no Microsoft Entra IDy."]
+image:screenshot_azure_app_ids.gif["Uma captura de tela que mostra o ID do aplicativo (cliente) e o ID do diretório (locatário) de um aplicativo no Microsoft Entra ID."]
 
 +
 Ao adicionar a conta do Azure ao Console, você precisa fornecer o ID do aplicativo (cliente) e o ID do diretório (locatário) para o aplicativo.  O Console usa os IDs para fazer login programaticamente.
@@ -848,7 +848,7 @@ https://cloud.google.com/iam/docs/creating-custom-roles#iam-custom-roles-create-
 .. No serviço IAM e Admin, selecione *Contas de serviço > Criar conta de serviço*.
 .. Insira os detalhes da conta de serviço e selecione *Criar e continuar*.
 .. Selecione a função que você acabou de criar.
-.. Conclua as etapas restantes para criar a função.
+.. Conclua as etapas restantes para criar a conta de serviço.
 +
 https://cloud.google.com/iam/docs/creating-managing-service-accounts#creating_a_service_account["Documentação do Google Cloud: Criação de uma conta de serviço"^]
 
@@ -874,7 +874,7 @@ Várias APIs são necessárias para implantar o Cloud Volumes ONTAP no Google Cl
 ** API do Gerenciador de Recursos de Nuvem
 ** API do mecanismo de computação
 ** API de gerenciamento de identidade e acesso (IAM)
-** Cloud Key Management Service (KMS) API (Necessário apenas se você planeja usar NetApp Backup and Recovery com chaves de criptografia gerenciadas pelo cliente (CMEK))
+** Cloud Key Management Service (KMS) API (necessária apenas se você planeja usar NetApp Backup and Recovery com chaves de criptografia gerenciadas pelo cliente (CMEK))
 ** API de Cotas na Nuvem (necessária para implantações do Cloud Volumes ONTAP usando o Infrastructure Manager)
 
 

@@ -9,6 +9,6 @@
 * API do Gerenciador de Recursos de Nuvem
 * API do mecanismo de computação
 * API de gerenciamento de identidade e acesso (IAM)
-* Cloud Key Management Service (KMS) API (Necessário apenas se você planeja usar NetApp Backup and Recovery com chaves de criptografia gerenciadas pelo cliente (CMEK))
+* Cloud Key Management Service (KMS) API (necessária apenas se você planeja usar NetApp Backup and Recovery com chaves de criptografia gerenciadas pelo cliente (CMEK))
 * API de Cotas na Nuvem (necessária para implantações do Cloud Volumes ONTAP usando o Infrastructure Manager)
 

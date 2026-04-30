@@ -23,7 +23,7 @@ Siga estas etapas para instalar e configurar o Podman:
 
 * Habilite e inicie o serviço podman.socket
 * Instalar python3
-* Instale o pacote podman-compose versão 1.0.6
+* Instale o pacote podman-compose (varia conforme a versão do Red Hat)
 * Adicione podman-compose à variável de ambiente PATH
 * Se estiver usando o Red Hat Enterprise Linux, verifique se sua versão do Podman está usando o DNS Netavark Aardvark em vez do CNI
 
