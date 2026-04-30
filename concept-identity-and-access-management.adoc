@@ -14,14 +14,14 @@ summary: 'Utilize o Gerenciamento de Identidade e Acesso (IAM) do NetApp Console
 
 
 [role="lead"]
-Utilize o Gerenciamento de Identidade e Acesso (IAM) do NetApp Console para organizar seus recursos NetApp e controlar o acesso de acordo com a estrutura da sua empresa — por local, departamento ou projeto.
+Utilize o Gerenciamento de Identidade e Acesso (IAM) do NetApp Console para organizar seus recursos NetApp e controlar o acesso de acordo com a estrutura da sua empresa—por local, departamento ou projeto.
 
 Você organiza os recursos em uma hierarquia: a organização está no topo, seguida pelas pastas (que podem conter outras pastas ou projetos) e, por fim, os projetos, que contêm sistemas de storage, workloads e agentes.
 
 Atribua funções de acesso no nível da organização, pasta ou projeto para que os usuários tenham o acesso correto aos recursos.
 
 
-NOTE: Você precisa ter as funções de _Super admin_, _Organization admin_ ou _Folder or project admin_ para gerenciar o IAM no NetApp Console.
+NOTE: Você precisa ter a função de _Super admin_, _Organization admin_ ou _Folder or project admin_ para gerenciar o IAM no NetApp Console.
 
 A imagem a seguir ilustra essa hierarquia em um nível básico.
 
@@ -31,7 +31,7 @@ image:diagram-iam-resource-hierarchy.png["Um diagrama conceitual que mostra os c
 
 == Componentes de gerenciamento de identidade e acesso
 
-NetApp Console IAM é construído com base em três tipos de componentes: componentes organizacionais que definem a hierarquia, recursos que são atribuídos dentro dessa hierarquia e membros e funções que controlam quem pode acessar o quê.
+O NetApp Console IAM é construído com base em três tipos de componentes: componentes organizacionais que definem a hierarquia, recursos que são atribuídos dentro dessa hierarquia e membros e funções que controlam quem pode acessar o quê.
 
 
 
@@ -73,7 +73,7 @@ Os sistemas de storage são associados automaticamente ao projeto em que são ad
 
 --
 Assinaturas Keystone:: As assinaturas do Keystone também são recursos que você pode associar a projetos para conceder aos usuários acesso à assinatura no NetApp Console.
-Cargas de trabalho de backup e recuperação (Oracle e Microsoft SQL Server):: Algumas cargas de trabalho de Backup e Recuperação também são consideradas recursos. Atribua uma carga de trabalho de Backup e Recuperação a um projeto para conceder acesso aos usuários.
+Cargas de trabalho de backup e recuperação (Oracle e Microsoft SQL Server):: Algumas cargas de trabalho de Backup and Recovery também são consideradas recursos. Atribua uma carga de trabalho de Backup and Recovery a um projeto para conceder acesso aos usuários.
 
 
 [[associate-agents]]
@@ -104,7 +104,7 @@ Funções de acesso:: O Console fornece funções de acesso que você pode atrib
 --
 Ao associar um membro a uma função, você pode conceder essa função para toda a organização, uma pasta específica ou um projeto específico. A função que você selecionar concede ao membro permissão para os recursos na parte selecionada da hierarquia.
 
-NetApp Console oferece funções granulares que seguem os princípios do "privilégio mínimo", o que significa que as funções de acesso são projetadas para dar aos usuários acesso apenas ao que eles precisam.
+NetApp Console oferece funções granulares que seguem o princípio do "privilégio mínimo", o que significa que as funções de acesso são projetadas para dar aos usuários acesso apenas ao que eles precisam.
 
 Os usuários podem desempenhar múltiplas funções à medida que suas responsabilidades se expandem.
 
@@ -125,17 +125,17 @@ A estrutura IAM ideal depende do tamanho da sua organização e de como suas equ
 
 Para organizações com menos de 50 usuários e gerenciamento de armazenamento centralizado, considere uma abordagem simplificada usando as funções de Superadministrador e Supervisualizador.
 
-**Exemplo: ABC Corporation (equipe de 5 pessoas)**
+*Exemplo: ABC Corporation (equipe de 5 pessoas)*
 
-* **Estrutura:** Organização única com 3 projetos (Produção, Desenvolvimento, Backup)
-* **Funções:**
+* *Estrutura:* Organização única com 3 projetos (Produção, Desenvolvimento, Backup)
+* *Funções:*
 +
 ** 2 membros seniores: Função de *Superadministrador* com acesso administrativo completo.
 ** 3 membros da equipe: Função de *Supervisor* para monitoramento sem direitos de modificação.
 
 
-* **Estratégia de agente:** Um único agente associado a todos os projetos para acesso a recursos compartilhados.
-* **Benefícios:** Administração simplificada, complexidade de funções reduzida, adequado para equipes que necessitam de amplo acesso.
+* *Estratégia de agente:* Um único agente associado a todos os projetos para acesso a recursos compartilhados
+* *Benefícios:* Administração simplificada, complexidade de funções reduzida, adequado para equipes que necessitam de amplo acesso
 
 
 
@@ -144,31 +144,31 @@ Para organizações com menos de 50 usuários e gerenciamento de armazenamento c
 
 Para grandes organizações com operações regionais e equipes especializadas, implemente uma abordagem hierárquica com pastas representando limites geográficos ou de unidades de negócios.
 
-**Exemplo: Corporação XYZ (empresa multinacional)**
+*Exemplo: XYZ Corporation (empresa multinacional)*
 
-* **Estrutura:** Organização > Pastas regionais (América do Norte, Europa, Ásia-Pacífico) > Pastas de projetos por região
-* **Funções da plataforma:**
+* *Estrutura:* Organização > Pastas regionais (América do Norte, Europa, Ásia-Pacífico) > Pastas de projetos por região
+* *Funções da plataforma:*
 +
 ** 1 *Administração organizacional*: Supervisão global e gestão de políticas
 ** 3 *Administradores de pastas ou projetos*: Controle regional (um por região)
 ** 1 *Administração da Federação*: Integração do provedor de identidade corporativa
 
 
-* **Funções de armazenamento por região:**
+* *Funções de armazenamento por região:*
 +
 ** 9 *Administrador de armazenamento*: Descobrir e gerenciar sistemas de armazenamento em regiões atribuídas.
 ** 2 *Visualizador de armazenamento*: Monitore os recursos de armazenamento em diferentes regiões.
 ** 1 *Especialista em integridade do sistema*: Gerencie a integridade do armazenamento sem modificações no sistema
 
 
-* **Funções do serviço de dados:**
+* *Funções do serviço de dados*
 +
 ** *Administrador de Backup e Recuperação*: Cobrança por projeto, com base nas responsabilidades de backup.
 ** *Administrador de Resiliência a Ransomware*: Monitoramento da equipe de segurança em todos os projetos
 
 
-* **Estratégia de agentes:** Agentes regionais associados a projetos geográficos relevantes.
-* **Benefícios:** Segurança reforçada por meio da segregação de funções, autonomia regional e conformidade com as regulamentações locais.
+* *Estratégia de agentes:* Agentes regionais associados a projetos geográficos apropriados
+* *Benefícios:* Segurança reforçada por meio da segregação de funções, autonomia regional e conformidade com as regulamentações locais
 
 
 
@@ -177,10 +177,10 @@ Para grandes organizações com operações regionais e equipes especializadas, 
 
 Para organizações com equipes especializadas que necessitam de acesso a serviços de dados específicos, utilize atribuições de funções direcionadas com base nas responsabilidades funcionais.
 
-**Exemplo: TechCorp (empresa de tecnologia de médio porte)**
+*Exemplo: TechCorp (empresa de tecnologia de médio porte)*
 
-* **Estrutura:** Organização > Pastas de departamento (TI, Segurança, Desenvolvimento) > Recursos específicos do projeto
-* **Funções especializadas:**
+* *Estrutura:* Organização > Pastas de departamento (TI, Segurança, Desenvolvimento) > Recursos específicos do projeto
+* *Funções especializadas:*
 +
 ** Equipe de segurança: funções de *Administrador de Resiliência a Ransomware* e *Visualizador de Classificações*.
 ** Equipe de backup: *Superadministrador de backup e recuperação* para operações de backup abrangentes.
@@ -188,8 +188,8 @@ Para organizações com equipes especializadas que necessitam de acesso a servi�
 ** Equipe de Compliance: *Analista de suporte operacional* para monitoramento e gerenciamento de casos de suporte.
 
 
-* **Estratégia de agentes:** Agentes vinculados a projetos departamentais com base na propriedade dos recursos.
-* **Benefícios:** Controle de acesso personalizado, maior eficiência operacional e responsabilidade clara por tarefas especializadas.
+* *Estratégia de agentes:* Agentes vinculados a projetos departamentais com base na propriedade de recursos
+* *Benefícios:* controle de acesso personalizado, maior eficiência operacional e responsabilidade clara por tarefas especializadas
 
 
 

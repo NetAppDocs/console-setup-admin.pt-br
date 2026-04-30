@@ -143,8 +143,8 @@ Para obter imagens para atualizações do agente do Console.
 
 A NetApp recomenda permitir endpoints da Opção 1 no seu firewall, pois eles são mais seguros, e não permitir endpoints da Opção 2, a menos que você esteja usando o Ransomware Resilience ou o Backup and Recovery.  Observe o seguinte sobre esses pontos finais:
 
-* Os endpoints da Opção 1 são suportados em 3.9.47 e superiores.  Versões anteriores à 3.9.47 não oferecem suporte à compatibilidade com versões anteriores.
-* O agente do Console inicia o contato com os endpoints na opção 2 primeiro.  Se esses terminais não estiverem acessíveis, ele entrará em contato automaticamente com os terminais na opção 1.
+* Os endpoints da Option 1 são suportados nas versões 3.9.47 e superiores. Versões anteriores à 3.9.47 não oferecem compatibilidade retroativa.
+* O agente do Console primeiro contata os endpoints da Opção 2. Se esses endpoints não estiverem acessíveis, ele contata automaticamente os endpoints da Opção 1.
 * Se você usar o agente do Console com o NetApp Backup and Recovery ou o Ransomware Resilience, o sistema não oferecerá suporte aos endpoints da Opção 1.  Permitir pontos de extremidade da Opção 2 e não permitir a Opção 1.
 
 

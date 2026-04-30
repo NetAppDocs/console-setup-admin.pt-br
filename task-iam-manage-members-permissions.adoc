@@ -23,7 +23,7 @@ Superadministrador, administrador da organização ou administrador de pasta ou 
 
 == Entenda como o acesso é concedido no NetApp Console.
 
-O NetApp Console utiliza o controle de acesso baseado em funções (RBAC) para gerenciar permissões. Atribua funções aos usuários individualmente ou por meio de grupos federados. Cada função define as ações permitidas para recursos específicos.
+O NetApp Console utiliza controle de acesso baseado em funções (RBAC) para gerenciar permissões. Atribua funções aos usuários individualmente ou por meio de grupos federados. Cada função define as ações permitidas para recursos específicos.
 
 Observe o seguinte sobre como conceder acesso no NetApp Console:
 
@@ -54,7 +54,7 @@ Os usuários se cadastram no NetApp Console, mas um administrador da organizaç�
 O usuário já deve ter se cadastrado no NetApp Console. Se eles ainda não se inscreveram, oriente-os a... link:task-sign-up-saas.html["Inscreva-se no NetApp Console."]
 
 
-NOTE: Se você estiver adicionando um usuário que faz parte de um grupo federado, certifique-se de que ele já tenha se cadastrado no NetApp Console e que uma função tenha sido explicitamente atribuída a ele no Console. A NetApp recomenda atribuir uma função de acesso mínima, como a de visualizador da organização.
+NOTE: Se você estiver adicionando um usuário que faz parte de um grupo federado, certifique-se de que o usuário já tenha se cadastrado no NetApp Console e que uma função tenha sido explicitamente atribuída a ele no Console. NetApp recomenda atribuir uma função de acesso mínima, como visualizador da organização.
 
 .Passos
 . Selecione *Administração > Identidade e acesso*.
@@ -100,7 +100,7 @@ Para autenticação JWT, prepare sua chave pública ou certificado.
 . Insira um nome para a conta de serviço.
 . Para usar a autenticação JWT, selecione *Usar autenticação JWT com chave privada* e carregue sua chave ou certificado RSA público. Ignore se estiver usando ID e segredo do cliente.
 +
-Seu certificado X.509. Deve estar no formato PEM, CRT ou CER.
+Faça o upload do seu certificado X.509 nos formatos PEM, CRT ou CER.
 
 +
 .. Configure notificações de expiração para o seu certificado.  Escolha entre sete dias ou 30 dias.  As notificações de expiração são enviadas por e-mail e exibidas no Console para usuários com a função de Superadministrador ou Administrador da Organização.
@@ -121,7 +121,7 @@ Observe o seguinte:
 link:reference-iam-predefined-roles.html["Saiba mais sobre funções de acesso"] .
 
 . Para conceder acesso a mais pastas, projetos ou funções, selecione *Adicionar função*, escolha a categoria de pasta, projeto ou função e selecione uma função.
-. Se você não escolheu usar a autenticação JWT, baixe ou copie o ID do cliente e o segredo do cliente.
+. Se você não utilizou autenticação JWT, baixe ou copie o client ID e o client secret.
 +
 O Console exibe o segredo do cliente apenas uma vez. Faça uma cópia segura; você poderá recriá-la mais tarde, caso a perca.
 
@@ -136,7 +136,7 @@ O Console exibe o segredo do cliente apenas uma vez. Faça uma cópia segura; vo
 Você pode adicionar um grupo federado do seu provedor de identidade (IdP) à sua organização e atribuir a ele uma ou mais funções. Os membros do grupo federado herdam as funções que você atribui ao grupo no Console.
 
 
-IMPORTANT: Ao adicionar um grupo federado ao Console e atribuir uma função a ele, somente os usuários que são membros do grupo no seu IdP e que já se inscreveram no NetApp Console e tiveram uma função explicitamente atribuída no Console podem acessar os recursos. NetApp recomenda atribuir uma função de acesso mínima, como visualizador da organização, a esses usuários.
+IMPORTANT: Ao adicionar um grupo federado ao Console e atribuir uma função a ele, somente os usuários que são membros do grupo no seu IdP e que já se inscreveram no NetApp Console e tiveram uma função explicitamente atribuída no Console poderão acessar os recursos. NetApp recomenda atribuir uma função de acesso mínima, como visualizador da organização, a esses usuários.
 
 Antes de atribuir uma função a um grupo federado, certifique-se do seguinte:
 
