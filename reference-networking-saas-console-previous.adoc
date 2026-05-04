@@ -82,6 +82,7 @@ Para operações do dia a dia.
  a| 
 * \ https://bluexpinfraprod.eastus2.data.azurecr.io
 * \ https://bluexpinfraprod.azurecr.io
+* https://occmclientinfragov.azurecr.us.io (se estiver em um ambiente de modo restrito)
 
 | Para obter imagens para atualizações do agente do Console. 
 |===

@@ -165,19 +165,11 @@
   <block id="641d1f191c2b819061a8e9b6046fdbeb" category="paragraph">| Para gerenciar recursos no Google Cloud.</block>
   <block id="4600c0d23dfe95b8db6f735a4b192742" category="paragraph">a| \ https://bluexpinfraprod.eastus2.data.azurecr.io \ https://bluexpinfraprod.azurecr.io a| Para obter imagens para atualizações do agente do Console.</block>
   <block id="4691a33bfa50c006ca907ff0f1c2ff22" category="inline-link-macro">Aprenda como atualizar sua lista de endpoints</block>
-  <block id="6e9c9d81baee7aa9e962024fc724b7ca" category="paragraph">Embora os endpoints anteriores ainda sejam suportados, a NetApp recomenda atualizar suas regras de firewall para os endpoints atuais o mais rápido possível. <block ref="b264fb455cda46e4971383987c8dce4c" category="inline-link-macro-rx"></block> .</block>
   <block id="b44e4956810f4ddc108ea4c7e1339c8b" category="list-text">Quando você atualiza os endpoints atuais no seu firewall, seus agentes existentes continuarão funcionando.</block>
   <block id="27ef411618dcaaeae6016b6063099cd3" category="paragraph">^1^ A NetApp recomenda permitir endpoints da Opção 1 no seu firewall, pois são mais seguros, e não permitir endpoints da Opção 2.  Observe o seguinte sobre esses pontos finais:</block>
-  <block id="9d8771d45517bfb98492c1863dcd84e6" category="paragraph">| Se o agente do Console estiver em uma região do governo da AWS: \https://*.blob.core.windows.net \ https://cloudmanagerinfraprod.azurecr.io</block>
-  <block id="d69547f8da7a3fc1f1750b21a40b4d81" category="paragraph">| Para obter imagens para atualizações do agente do Console quando o agente do Console estiver instalado em uma região do AWS Government.</block>
-  <block id="e1e00fbff5d8f3eda49d54653859b8dc" category="paragraph">| Se o agente do Console estiver em uma região do Azure Government: \https://*.blob.core.windows.net \ https://occmclientinfragov.azurecr.us</block>
-  <block id="95c562cec08a4fe5f10bc4bf63bcd8b1" category="paragraph">| Para obter imagens para atualizações do agente do Console quando o agente do Console estiver instalado em uma região do Azure Government.</block>
-  <block id="a69993e3de4e29e60253494f1d804482" category="paragraph">a| Se o agente do Console estiver em uma região comercial ou soberana, você poderá escolher entre dois conjuntos de pontos de extremidade:</block>
-  <block id="5f6428bd6c6248b828101aca600e81cd" category="list-text">Opção 1 (recomendada) ^1^</block>
   <block id="7d9fb0da2a7d9c9f4e35c19e20d063fa" category="paragraph">\ https://bluexpinfraprod.eastus2.data.azurecr.io \ https://bluexpinfraprod.azurecr.io</block>
   <block id="e24963e40778134b357f4a5eac58e1f5" category="list-text">Opção 2</block>
   <block id="136fa3635085015cd64da15749cb05d3" category="paragraph">\https://*.blob.core.windows.net \ https://cloudmanagerinfraprod.azurecr.io</block>
-  <block id="6e4b673e0b468e69f5eee0cd8a1bc7be" category="paragraph">| Para obter imagens para atualizações do agente do Console quando o agente do Console estiver instalado em uma região comercial ou soberana.</block>
   <block id="e30145628db8e56b12ce8e660f2e5fda" category="inline-link-macro">listados aqui</block>
   <block id="cf6ace098b5e91cbdb744b6c08dce9e8" category="inline-link-macro">Aprenda a atualizar sua rede</block>
   <block id="5ba4013e86db68ef909f6a62fad996ec" category="list-text">Se você atualizar os endpoints no seu firewall, seus agentes existentes continuarão funcionando.</block>
@@ -4073,7 +4065,6 @@
   <block id="0960e06fac3e48e6403802fb4aa8fbde" category="paragraph">Para obter informações mais detalhadas sobre como acessar o diagnóstico do agente do Console, consulte os seguintes tópicos:</block>
   <block id="a25b82d4083e9054d77530a1b1771861" category="inline-link-macro">Verifique o status do agente do console (para implantações de host Linux)</block>
   <block id="fb418088b41b8e87851b52debc27d47c" category="list-text"><block ref="fb418088b41b8e87851b52debc27d47c" category="inline-link-macro-rx"></block></block>
-  <block id="0b73ccbc949b18b9ec9f895e07294e36" category="list-text">Podman (para implantações do RedHat Enterprise Linux)</block>
   <block id="7456d0b67dfbe48185fc6410c811e1dc" category="section-title">Ver a versão do agente do Console</block>
   <block id="23fc9bc00056f19d24e4c3ab8b5ca0c6" category="paragraph">Visualize a versão do agente do Console para confirmar a atualização ou compartilhe-a com seu representante da NetApp .</block>
   <block id="b9b50a4a67814c748f85c0dd361e7931" category="list-text">Selecione *Administração &gt; Suporte &gt; Agentes*.</block>
@@ -4340,7 +4331,6 @@
   <block id="0adc03eac86772ad2c75c8f140be417e" category="sidebar">Conhecimento e suporte</block>
   <block id="253b718b7b0bb8f190e2ebe1c721295e" category="paragraph">As funções de resiliência contra ransomware fornecem aos usuários acesso ao NetApp Ransomware Resilience. O Ransomware Resilience oferece suporte às seguintes funções:</block>
   <block id="16a7e3e925ade6eef4533f96172d423f" category="sidebar">Funções de resiliência de ransomware</block>
-  <block id="4ed68ecf8e006d0fab7f06897731cf53" category="list-text">Quando você implanta um novo agente, a verificação de validação testa a conectividade com os endpoints atuais. Se você usar<block ref="99a33b76fea6c3306005dfd630a43c9c" category="inline-link-macro-rx"></block> , a verificação de validação falha. Para evitar essa falha, pule a verificação de validação.</block>
   <block id="a8b7063e167b83f7676ad4659510d5ea" category="sidebar">Funções de backup e recuperação</block>
   <block id="ffce0d237e59f85993727b9607fade6c" category="sidebar">Funções de recuperação de desastres</block>
   <block id="fffc92a6b6a3b44b650e6669aa797cac" category="summary">O Ransomware Resilience oferece diferentes funções de usuário para gerenciar o acesso a configurações, ações e relatórios.</block>
@@ -6192,11 +6182,17 @@
   <block id="fffc3b17829167ae6b45a4b144c7bad7" category="list-text"><block ref="fffc3b17829167ae6b45a4b144c7bad7" category="inline-link-macro-rx"></block></block>
   <block id="3081a7b6bb95ec0d5cf84dc2ea835174" category="list-text">Docker (para Ubuntu e vCenter deployments)</block>
   <block id="0128c0d35d7f984db85c5d65138fb691" category="section-title">Verifique se o agente do Console atende aos requisitos</block>
-  <block id="787bde807a1a57661aeb1e9aa8557b03" category="paragraph"><block ref="787bde807a1a57661aeb1e9aa8557b03" category="inline-link-macro-rx"></block></block>
   <block id="c45122f09d565aa9c39277ed8a04fe96" category="paragraph">Se você não conseguiu resolver os problemas com o agente do Console, talvez queira entrar em contato com o suporte da NetApp. O suporte da NetApp pode solicitar o ID do agente do Console ou pedir que você envie os logs do agente do Console, caso ainda não os tenham.</block>
   <block id="550db41d5673daf8fdbc4334a1fbff87" category="paragraph">Se você estiver com problemas, a NetApp pode pedir que você envie uma mensagem AutoSupport para o Suporte da NetApp para fins de resolução de problemas.</block>
   <block id="97c06a2bee370a00309be22a5d370be9" category="summary">Desinstale um agente do Console para solucionar problemas ou removê-lo permanentemente do host. Os passos necessários dependem do modo de implantação que você está utilizando. Depois de remover um agente do Console do seu ambiente, você pode removê-lo do Console.</block>
   <block id="42e88fe3980dba2a9d6c7e65cc1f3a04" category="list-text">Na página *Visão geral*, selecione o menu de ações para um agente desconectado e selecione *Remover agente*.</block>
   <block id="6b0481da6e57f7d61d264eda118c6c5b" category="paragraph">Atualize o URI de um agente do Console caso seus requisitos de rede mudem. Isso garante o gerenciamento ininterrupto, seguro e em conformidade da sua infraestrutura de storage.</block>
   <block id="55a14e6b296f723d13dead096a169722" category="paragraph">O agente do Console precisa ser reiniciado durante o processo de atualização, portanto o NetApp Console ficará indisponível durante a atualização.</block>
+  <block id="530df3726781395191a4e890157aa779" category="list-text">https://occmclientinfragov.azurecr.us.io (se estiver em um ambiente de modo restrito)</block>
+  <block id="a3bf5c90fa71fd1dac8e77c19a0cae5c" category="inline-link-macro">Saiba mais sobre os requisitos de host.</block>
+  <block id="ed637bdd25ff9b3d6cdb12d0b3117fd4" category="paragraph"><block ref="787bde807a1a57661aeb1e9aa8557b03" category="inline-link-macro-rx"></block> <block ref="2cf3600481d00e694d39bf1acae4604c" category="inline-link-macro-rx"></block></block>
+  <block id="51bc5a08850d61e055a088db3581d040" category="paragraph">\https://occmclientinfragov.azurecr.us \https://bluexpinfraprod.azurecr.io</block>
+  <block id="db454f9269515bb4dec7a10f7a86bc01" category="list-text">Podman (para implantações do Red Hat Enterprise Linux)</block>
+  <block id="d92105d2e9772b92b6c636fbe0cfdf2c" category="inline-link-macro">Saiba mais sobre os pontos de acesso à rede necessários para modo restrito.</block>
+  <block id="befec105cd1e8a7f9d2e63f216085cb8" category="admonition">Para clientes de nuvem do governo (modo restrito), o NetApp Console não valida o endpoint de upgrade do modo restrito. Você deve confirmar manualmente se as regras do seu firewall permitem acesso a esse endpoint.<block ref="df5e5876be260d9f3642c620299197c9" category="inline-link-macro-rx"></block></block>
 </blocks>

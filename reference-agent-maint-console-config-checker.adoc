@@ -32,6 +32,8 @@ Você pode acessar o console de manutenção a partir do host do agente do conso
 
 O `config-checker validate` O comando permite validar a configuração de um agente de console.
 
+link:reference-networking-saas-console.html["Saiba mais sobre os pontos de acesso de rede necessários."] link:task-install-agent-on-prem.html#os-req-agent["Saiba mais sobre os requisitos de host."]
+
 
 
 === Parâmetros
