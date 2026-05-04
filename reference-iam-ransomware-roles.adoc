@@ -16,13 +16,13 @@ summary: O Ransomware Resilience oferece diferentes funções de usuário para g
 [role="lead"]
 As funções de resiliência contra ransomware fornecem aos usuários acesso ao NetApp Ransomware Resilience. O Ransomware Resilience oferece suporte às seguintes funções:
 
-**Funções de base**
+*Funções básicas*
 
 * Administrador de resiliência contra ransomware - Configurar as configurações de resiliência contra ransomware; investigar e responder a alertas de criptografia
 * Visualizador de resiliência de ransomware - visualize incidentes de criptografia, relatórios e configurações de descoberta
 
 
-**Funções de atividade de comportamento do usuário**link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/suspicious-user-activity.html["Detecção de atividade suspeita do usuário"^] Os alertas fornecem visibilidade de dados como eventos de atividade de arquivo; esses alertas incluem nomes de arquivos e ações de arquivo (como Ler, Gravar, Excluir, Renomear) executadas pelo usuário.  Para limitar a visibilidade desses dados, somente usuários com essas funções podem gerenciar ou visualizar esses alertas.
+*Funções de atividade de comportamento do usuário* link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/suspicious-user-activity.html["Detecção de atividade suspeita do usuário"^] alertas fornecem visibilidade de dados como eventos de atividade de arquivos; esses alertas incluem nomes de arquivos e ações de arquivos (como Ler, Gravar, Excluir, Renomear) realizadas pelo usuário. Para limitar a visibilidade desses dados, somente usuários com essas funções podem gerenciar ou visualizar esses alertas.
 
 * Administrador de comportamento do usuário de resiliência contra ransomware - Ative a detecção de atividades suspeitas do usuário, investigue e responda a alertas de atividades suspeitas do usuário
 * Visualizador de comportamento do usuário do Ransomware Resilience - Visualize alertas de atividades suspeitas do usuário
@@ -309,7 +309,7 @@ Sim
 
 Para configurar configurações de comportamento suspeito do usuário e responder a alertas, um usuário deve ter a função de administrador de comportamento do usuário de resiliência ao ransomware. Para visualizar apenas alertas de comportamento suspeito do usuário, o usuário deve ter a função de visualizador de comportamento do usuário do Ransomware Resilience.
 
-As funções de comportamento do usuário devem ser conferidas aos usuários com privilégios de administrador ou visualizador do Ransomware Resilience existentes que precisam de acesso alink:https://docs.netapp.com/us-en/data-services-ransomware-resilience/suspicious-user-activity.html["configurações e alertas de atividades suspeitas do usuário"^] .  Um usuário com a função de administrador de Resiliência contra Ransomware, por exemplo, deve receber a função de administrador de comportamento de usuário de Resiliência contra Ransomware para configurar agentes de atividade do usuário e bloquear ou desbloquear usuários.  A função de administrador de comportamento do usuário de Resiliência contra Ransomware não deve ser conferida a um visualizador de Resiliência contra Ransomware.
+As funções de comportamento do usuário devem ser atribuídas a usuários com privilégios de administrador ou visualizador do Ransomware Resilience que precisam de acesso link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/suspicious-user-activity.html["configurações e alertas de atividades suspeitas do usuário"^]. Um usuário com a função de administrador do Ransomware Resilience, por exemplo, deve receber a função de administrador de comportamento do usuário do Ransomware Resilience para configurar agentes de atividade do usuário e bloquear ou desbloquear usuários. A função de administrador de comportamento do usuário do Ransomware Resilience não deve ser atribuída a um visualizador do Ransomware Resilience.
 
 
 NOTE: Para ativar a detecção de atividades suspeitas do usuário, você deve ter a função de administrador da Organização do Console.

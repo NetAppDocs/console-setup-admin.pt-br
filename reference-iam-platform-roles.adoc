@@ -39,7 +39,7 @@ As tabelas a seguir indicam as ações que cada função da plataforma Console p
 | Criar agentes | Sim | Não 
 
 
-| Criar, modificar ou excluir sistemas do Console (adicionar ou descobrir sistemas) | Sim | Sim 
+| Criar, modificar ou excluir sistemas a partir do Console (adicionar ou descobrir sistemas) | Sim | Sim 
 
 
 | Crie pastas e projetos, incluindo exclusão | Sim | Não 

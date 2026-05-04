@@ -14,7 +14,7 @@ summary: Adicione e gerencie credenciais da AWS para que o NetApp Console tenha 
 
 
 [role="lead"]
-Adicione e gerencie credenciais da AWS para que você implante e gerencie recursos de nuvem em suas contas da AWS a partir do NetApp Console.  Se você gerencia várias assinaturas do AWS Marketplace, pode atribuir cada uma delas a diferentes credenciais da AWS na página Credenciais.
+Adicione e gerencie credenciais da AWS para que você possa implantar e gerenciar recursos na nuvem em suas contas da AWS a partir do NetApp Console. Se você gerencia várias assinaturas do AWS Marketplace, pode atribuir cada uma delas a credenciais diferentes da AWS na página Credenciais.
 
 
 
@@ -99,7 +99,7 @@ A conta tem as permissões necessárias. <<add-the-credentials,Agora você pode 
 
 ==== Conceder permissões fornecendo chaves da AWS
 
-Se você quiser fornecer ao Console chaves da AWS para um usuário do IAM, precisará conceder as permissões necessárias a esse usuário.  A política do Console IAM define as ações e os recursos da AWS que o Console tem permissão para usar.
+Se você deseja fornecer chaves da AWS para um usuário do IAM ao Console, é necessário conceder as permissões necessárias a esse usuário. A política do IAM do Console define as ações e os recursos da AWS que o Console tem permissão para usar.
 
 Você deve usar este método de autenticação se um agente do Console estiver instalado no local.  Você não pode usar uma função do IAM.
 
@@ -189,7 +189,7 @@ Por exemplo, a política deve ficar assim:
 }
 ----
 +
-Consulte link:https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies-cross-account-resource-access.html["Documentação do AWS Identity and Access Management (IAM)"^] para obter mais informações sobre acesso a recursos entre contas no IAM.
+Consulte link:https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies-cross-account-resource-access.html["Documentação do AWS Identity and Access Management (IAM)"^] para obter mais informações sobre o acesso a recursos entre contas no IAM.
 
 ** Crie uma política que inclua as permissões necessárias para criar um agente do Console.
 +
@@ -212,7 +212,7 @@ A função IAM agora tem as permissões necessárias. <<add-the-credentials,Agor
 Depois de fornecer à função do IAM as permissões necessárias, adicione o ARN da função ao Console.
 
 .Antes de começar
-Se você acabou de criar a função do IAM, pode levar alguns minutos até que ela esteja disponível para uso.  Aguarde alguns minutos antes de adicionar as credenciais ao Console.
+Se você acabou de criar a função do IAM, pode levar alguns minutos até que ela esteja disponível para uso. Aguarde alguns minutos antes de adicionar as credenciais ao Console.
 
 .Passos
 . Selecione *Administração > Credenciais*.
@@ -232,7 +232,7 @@ image:screenshot-settings-icon-organization.png["Uma captura de tela que mostra 
 
 == Adicionar credenciais ao Console do Amazon FSx para ONTAP
 
-Para mais detalhes, consulte o https://docs.netapp.com/us-en/storage-management-fsx-ontap/requirements/task-setting-up-permissions-fsx.html["a documentação do console para Amazon FSx para ONTAP"^]
+Para obter detalhes, consulte o https://docs.netapp.com/us-en/storage-management-fsx-ontap/requirements/task-setting-up-permissions-fsx.html["Documentação do console para Amazon FSx para ONTAP"^]
 
 
 
@@ -292,7 +292,7 @@ Para todas as outras organizações ou contas, você precisará associar manualm
 
 == Associe uma assinatura existente à sua organização
 
-Ao assinar no AWS Marketplace, a última etapa do processo é associar a assinatura à sua organização. Se você não concluiu esta etapa, não poderá usar a assinatura com sua organização.
+Ao assinar um serviço no AWS Marketplace, a última etapa do processo é associar a assinatura à sua organização. Se você não concluir essa etapa, não poderá usar a assinatura com sua organização.
 
 * link:concept-modes.html["Saiba mais sobre os modos de implantação do Console"]
 * link:concept-identity-and-access-management.html["Saiba mais sobre o gerenciamento de identidade e acesso do Console"]

@@ -39,7 +39,7 @@ Cada painel na página inicial requer funções de usuário diferentes:
 
 Se você não tiver permissões para acessar um painel, o painel exibirá uma mensagem indicando que você não tem permissões para usá-lo.
 
-https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["Saiba mais sobre as funções de acesso do NetApp Console ."] .
+link:reference-iam-predefined-roles.html["Saiba mais sobre as funções de acesso do NetApp Console"].
 
 .Passos
 . No menu do NetApp Console , selecione *Home*.

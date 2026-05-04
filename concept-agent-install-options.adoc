@@ -41,7 +41,7 @@ Escolha este método quando:
 * O menor número de etapas manuais entre todos os métodos de implantação de nuvem
 
  a| 
-* Não disponível para ambientes locais, modo restrito ou isolados da internet
+* Não disponível para ambientes locais, modo restrito ou ambientes isolados da internet
 
 
 |===
@@ -100,7 +100,7 @@ Escolha este método quando:
 
  a| 
 * A maioria das etapas de qualquer método de implantação. Você deve preparar o host, instalar Podman ou Docker, configurar rede, instalar o software e conceder permissões manualmente
-* * A implantação é iniciada fora do NetApp Console, portanto o fluxo de trabalho guiado não está disponível
+* A implantação é iniciada fora do NetApp Console, portanto o fluxo de trabalho guiado não está disponível
 
 
 |===
@@ -108,9 +108,9 @@ link:task-install-agent-aws-manual.html["Instalar manualmente um agente de Conso
 
 
 
-== Instalação manual local usando o VCenter (OVA)
+== Instalação manual local usando vCenter (OVA)
 
-Se você usa o VMware VCenter, pode implantar o agente do Console importando um arquivo OVA (Open Virtual Appliance). O OVA é uma imagem de máquina virtual pré-configurada que você implanta com o cliente vSphere, sem precisar instalar Linux ou configurar um ambiente de execução de contêiner.
+Se você usa o VMware vCenter, pode implantar o agente do Console importando um arquivo OVA (Open Virtual Appliance). O OVA é uma imagem de máquina virtual pré-configurada que você implanta com o cliente vSphere, sem precisar instalar Linux ou configurar um ambiente de execução de contêiner.
 
 Escolha este método quando:
 
@@ -131,24 +131,24 @@ NOTE: Não é possível gerenciar recursos do Google Cloud a partir de um agente
 * Apenas local; não disponível para implantação de nuvem
 * Inclui um console de manutenção baseado em menus para tarefas de manutenção do agente
 * Fluxo de trabalho de implantação familiar para administradores do VMware
-* * A imagem de máquina virtual pré-configurada ajuda a evitar erros e facilita a manutenção
+* A imagem de máquina virtual pré-configurada ajuda a evitar erros e facilita a manutenção
 
  a| 
 * Requer vCenter; não pode ser instalado diretamente em um host ESXi bare metal
 
 
 |===
-link:task-install-agent-on-prem-ova.html["Implante localmente usando o VCenter"]
+link:task-install-agent-on-prem-ova.html["Implante localmente usando vCenter"]
 
 
 
-== Instalação manual local (sem vCenter)
+== Instalar manualmente no local (sem vCenter)
 
 Você pode instalar manualmente o agente do Console em qualquer host Linux local. É necessário configurar o host Linux e o ambiente de execução do contêiner (Docker ou Podman), em seguida, instalar o agente do Console.
 
 Escolha este método quando:
 
-* Você está realizando a implantação localmente e não possui um ambiente VMware VCenter.
+* Você está realizando a implantação localmente e não possui um ambiente VMware vCenter.
 * Você se sente confortável com a administração de Linux e deseja gerenciar o host subjacente por conta própria.
 * Você deseja controlar quando o agente do Console será atualizado.
 

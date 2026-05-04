@@ -625,7 +625,7 @@ Para regiões padrão, as permissões são distribuídas em duas políticas.  Du
 --
 Crie uma função personalizada do Azure com as permissões necessárias.  Você atribuirá essa função à VM do agente do Console.
 
-Observe que você pode criar uma função personalizada do Azure usando o portal do Azure, o Azure PowerShell, a CLI do Azure ou a API REST.  As etapas a seguir mostram como criar a função usando a CLI do Azure.  Se preferir usar um método diferente, consulte https://learn.microsoft.com/en-us/azure/role-based-access-control/custom-roles#steps-to-create-a-custom-role["Documentação do Azure"^]
+Observe que você pode criar uma função personalizada do Azure usando o portal do Azure, Azure PowerShell, Azure CLI ou API REST. As etapas a seguir mostram como criar a função usando o Azure CLI. Se preferir usar um método diferente, consulte  https://learn.microsoft.com/en-us/azure/role-based-access-control/custom-roles#steps-to-create-a-custom-role["Documentação do Azure"^].
 
 .Passos
 . Se você estiver planejando instalar manualmente o software em seu próprio host, habilite uma identidade gerenciada atribuída pelo sistema na VM para que você possa fornecer as permissões necessárias do Azure por meio de uma função personalizada.

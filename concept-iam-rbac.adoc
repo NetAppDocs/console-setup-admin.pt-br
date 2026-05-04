@@ -16,9 +16,9 @@ summary: 'Gerencie o acesso de usuários ao NetApp Console com controle de acess
 [role="lead"]
 Gerencie o acesso de usuários ao NetApp Console com controle de acesso baseado em funções (RBAC), atribuindo funções predefinidas no nível da organização, pasta ou projeto. Cada função concede permissões específicas que definem quais ações os usuários podem executar dentro do escopo atribuído.
 
-A NetApp projeta funções de console com privilégios mínimos, de forma que cada função inclua apenas as permissões necessárias para suas tarefas. Essa abordagem aumenta a segurança ao limitar o acesso apenas ao que cada membro precisa.
+NetApp projeta funções do Console com privilégios mínimos, de forma que cada função inclua apenas as permissões necessárias para suas tarefas. Essa abordagem aumenta a segurança ao limitar o acesso ao que cada membro precisa.
 
-Depois de organizar os recursos em pastas e projetos, atribua aos membros da organização uma ou mais funções para pastas ou projetos específicos, permitindo que eles executem apenas suas responsabilidades.
+Depois de organizar os recursos em pastas e projetos, atribua aos membros uma função ou funções para pastas ou projetos específicos, permitindo que eles executem apenas suas responsabilidades.
 
 Por exemplo, você pode atribuir a um membro a função de administrador de Resiliência a Ransomware para um nível de projeto específico, permitindo que ele execute operações de Resiliência a Ransomware para recursos dentro desse projeto, sem conceder a ele acesso mais amplo a toda a organização. Esse mesmo usuário pode receber a função para vários projetos dentro da sua organização.
 
@@ -43,7 +43,7 @@ link:task-iam-manage-members-permissions.html#add-members["Aprenda como adiciona
 
 O NetApp Console inclui funções predefinidas que você pode atribuir aos membros da organização. Cada função inclui permissões que especificam quais ações um membro pode realizar dentro do seu escopo atribuído (organização, pasta ou projeto).
 
-As funções do NetApp Console utilizam princípios de privilégio mínimo, garantindo que os membros tenham apenas as permissões necessárias para suas tarefas, e categorizam as funções pelo tipo de acesso que fornecem:
+NetApp Console utiliza princípios de privilégio mínimo que garantem que os membros tenham apenas as permissões necessárias para suas tarefas e categorizam as funções pelo tipo de acesso que fornecem:
 
 * Funções da plataforma: Conceder permissões de administração do console
 * Funções de serviços de dados: Conceder permissões para gerenciar serviços de dados específicos, como Resiliência a Ransomware e Backup e Recuperação.

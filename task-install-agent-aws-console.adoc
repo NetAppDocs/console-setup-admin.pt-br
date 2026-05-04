@@ -291,7 +291,7 @@ Agora você deve ter uma função do IAM que tenha as permissões necessárias o
 
 == Etapa 3: Criar o agente do Console
 
-Crie o agente do Console diretamente do console baseado na Web.
+Crie o agente do Console diretamente a partir do console baseado na Web do Console.
 
 .Sobre esta tarefa
 * A criação do agente do Console a partir do Console implanta uma instância do EC2 na AWS usando uma configuração padrão.  Não mude para uma instância EC2 menor com menos CPUs ou menos RAM depois de criar o agente do Console. link:reference-agent-default-config.html["Saiba mais sobre a configuração padrão do agente do Console"] .
@@ -311,10 +311,10 @@ Você deve ter o seguinte:
 
 .Passos
 . Selecione *Administração > Agentes*.
-. Na página *Visão geral*, selecione *Implantar agente > AWS*
+. Na página *Visão geral*, selecione *Implantar agente > AWS*.
 . Siga as etapas do assistente para criar o agente do Console:
-. Na página *Introdução* é fornecida uma visão geral do processo
-. Na página *Credenciais da AWS*, especifique sua região da AWS e escolha um método de autenticação, que pode ser uma função do IAM que o Console pode assumir ou uma chave de acesso e uma chave secreta da AWS.
+. Na página *Introdução*, revise a visão geral do processo.
+. Na página *Credenciais da AWS*, especifique sua região da AWS e, em seguida, escolha um método de autenticação, que pode ser uma função do IAM que o Console pode assumir ou uma chave de acesso e uma chave secreta da AWS.
 +
 
 TIP: Se você escolher *Assumir função*, poderá criar o primeiro conjunto de credenciais no assistente de implantação do agente do Console.  Qualquer conjunto adicional de credenciais deve ser criado na página Credenciais.  Eles estarão disponíveis no assistente em uma lista suspensa. link:task-adding-aws-accounts.html["Aprenda como adicionar credenciais adicionais"] .
@@ -327,7 +327,7 @@ TIP: Se você escolher *Assumir função*, poderá criar o primeiro conjunto de 
 ** Escolha se deseja criptografar os discos EBS do agente do Console.  Você tem a opção de usar a chave de criptografia padrão ou usar uma chave personalizada.
 
 
-. Na página *Rede*, especifique uma VPC, uma sub-rede e um par de chaves para o agente, escolha se deseja habilitar um endereço IP público e, opcionalmente, especifique uma configuração de proxy.
+. Na página *Rede*, especifique uma VPC, sub-rede e par de chaves para o agente, escolha se deseja habilitar um endereço IP público e, opcionalmente, especifique uma configuração de proxy.
 +
 Certifique-se de ter o par de chaves correto para acessar a máquina virtual do agente do Console.  Sem um par de chaves, você não pode acessá-lo.
 

@@ -456,7 +456,7 @@ NOTE: Operador do console é o nome padrão fornecido na política.  Se você es
 --
 .Principal de serviço do Azure
 --
-Forneça ao NetApp Console as credenciais para a entidade de serviço do Azure que você configurou anteriormente.
+Forneça ao NetApp Console as credenciais da entidade de serviço do Azure que você configurou anteriormente.
 
 .Passos
 . Selecione *Administração > Credenciais*.
@@ -477,7 +477,7 @@ Forneça ao NetApp Console as credenciais para a entidade de serviço do Azure q
 
 
 .Resultado
-O NetApp Console agora tem as permissões necessárias para executar ações no Azure em seu nome.
+O NetApp Console agora possui as permissões necessárias para executar ações no Azure em seu nome.
 
 --
 .Conta de serviço do Google Cloud

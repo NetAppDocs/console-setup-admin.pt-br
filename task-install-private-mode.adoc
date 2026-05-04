@@ -160,7 +160,7 @@ NOTE: Operador do console é o nome padrão fornecido na política.  Se você es
 --
 .Principal de serviço do Azure
 --
-Forneça ao agente do Console as credenciais para a entidade de serviço do Azure que você configurou anteriormente.
+Forneça ao agente do Console as credenciais da entidade de serviço do Azure que você configurou anteriormente.
 
 .Passos
 . Selecione *Administração > Credenciais*.

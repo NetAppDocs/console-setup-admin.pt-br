@@ -17,9 +17,9 @@ summary: No NetApp Console, você pode atribuir funções aos usuários com base
 Gerencie o acesso de membros na sua organização do Console. Atribua funções para definir permissões. Remover membros quando eles saírem.
 
 .Funções de acesso necessárias
-Superadministrador, administrador da organização ou administrador de pasta ou projeto (para pastas e projetos que eles administram). Link:reference-iam-predefined-roles.html[Saiba mais sobre funções de acesso].
+Superadministrador, administrador da organização ou administrador de pasta ou projeto (para pastas e projetos que eles administram). link:reference-iam-predefined-roles.html["Saiba mais sobre funções de acesso"].
 
-Você pode atribuir funções de acesso por projeto ou pasta. Por exemplo, atribua uma função a um usuário para dois projetos específicos ou atribua a função no nível da pasta para conceder a um usuário a função de administrador de Resiliência a Ransomware para todos os projetos em uma pasta.
+Você pode atribuir funções de acesso por projeto ou pasta. Por exemplo, atribua uma função a um usuário para dois projetos específicos ou atribua a função no nível da pasta para conceder a um usuário a função de administrador de Ransomware Resilience para todos os projetos em uma pasta.
 
 
 NOTE: Adicione suas pastas e projetos antes de atribuir acesso aos usuários. link:task-iam-manage-folders-projects.html["Aprenda como adicionar pastas e projetos."]
@@ -28,7 +28,7 @@ NOTE: Adicione suas pastas e projetos antes de atribuir acesso aos usuários. li
 
 == Entenda como o acesso é concedido no NetApp Console.
 
-O NetApp Console utiliza um modelo de controle de acesso baseado em funções (RBAC) para gerenciar as permissões de usuário. Você pode atribuir funções predefinidas aos membros individualmente ou por meio de grupos federados. Você pode adicionar e atribuir funções a contas de serviço, bem como a grupos federados. Cada função define quais ações um membro pode executar nos recursos associados.
+O NetApp Console utiliza um modelo de controle de acesso baseado em funções (RBAC) para gerenciar permissões de usuário. Você pode atribuir funções predefinidas a membros individualmente ou por meio de grupos federados. Você pode adicionar e atribuir funções a contas de serviço, bem como a grupos federados. Cada função define quais ações um membro pode executar nos recursos associados.
 
 Observe o seguinte sobre como conceder acesso no NetApp Console:
 
@@ -60,9 +60,9 @@ A tabela *Membros* lista os membros da sua organização.
 
 
 
-== Exibir funções atribuídas a um membro
+== Veja a(s) função(ões) atribuída(s) a um membro
 
-Você pode verificar quais funções estão atribuídas a eles atualmente.
+Você pode verificar quais funções estão atribuídas ao membro atualmente.
 
 Se você tiver a função de _Administrador de pasta ou projeto_, a página exibirá todos os membros da organização.  No entanto, você só pode visualizar e gerenciar permissões de membros para as pastas e projetos para os quais você tem permissões. link:reference-iam-predefined-roles.html["Saiba mais sobre as ações que um _administrador de pasta ou projeto_ pode concluir"] .
 

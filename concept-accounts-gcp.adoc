@@ -25,7 +25,7 @@ Antes de usar o Console para gerenciar recursos no seu projeto do Google Cloud, 
 Dois conjuntos de permissões devem estar em vigor antes de você implantar um agente do Console diretamente do Console:
 
 . Você precisa implantar um agente do Console usando uma conta do Google que tenha permissões para iniciar o agente do Console a partir do Console.
-. Ao implantar o agente do Console, você será solicitado a selecionar um https://cloud.google.com/iam/docs/service-accounts["conta de serviço"^] para o agente O Console obtém permissões da conta de serviço para criar e gerenciar sistemas Cloud Volumes ONTAP , gerenciar backups usando o backup e a recuperação do NetApp e muito mais. As permissões são fornecidas anexando uma função personalizada à conta de serviço.
+. Ao implantar o agente do Console, você será solicitado a selecionar uma  https://cloud.google.com/iam/docs/service-accounts["conta de serviço"^] para o agente. O Console obtém permissões da conta de serviço para criar e gerenciar sistemas Cloud Volumes ONTAP, gerenciar backups usando NetApp backup e recuperação, e muito mais. As permissões são concedidas ao associar uma função personalizada à conta de serviço.
 
 
 A imagem a seguir descreve os requisitos de permissão descritos nos números 1 e 2 acima:

@@ -168,7 +168,7 @@ Crie uma função personalizada do Azure que você pode atribuir à sua conta do
 
 O Console implanta a VM do agente do Console no Azure, habilita um https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview["identidade gerenciada atribuída pelo sistema"^] , cria a função necessária e a atribui à VM. link:reference-permissions-azure.html["Revise como o Console usa as permissões"] .
 
-Observe que você pode criar uma função personalizada do Azure usando o portal do Azure, o Azure PowerShell, a CLI do Azure ou a API REST.  As etapas a seguir mostram como criar a função usando a CLI do Azure.  Se preferir usar um método diferente, consulte https://learn.microsoft.com/en-us/azure/role-based-access-control/custom-roles#steps-to-create-a-custom-role["Documentação do Azure"^]
+Observe que você pode criar uma função personalizada do Azure usando o portal do Azure, Azure PowerShell, Azure CLI ou API REST. As etapas a seguir mostram como criar a função usando o Azure CLI. Se preferir usar um método diferente, consulte  https://learn.microsoft.com/en-us/azure/role-based-access-control/custom-roles#steps-to-create-a-custom-role["Documentação do Azure"^].
 
 .Passos
 . Copie as permissões necessárias para uma nova função personalizada no Azure e salve-as em um arquivo JSON.
@@ -455,9 +455,9 @@ Essas permissões são para o próprio agente do Console. É um conjunto diferen
 
 .Passos
 . Selecione *Administração > Agentes*.
-. Na página *Visão geral*, selecione *Implantar agente > Azure*
+. Na página *Visão geral*, selecione *Implantar agente > Azure*.
 . Na página *Revisão*, revise os requisitos para implantar um agente.  Esses requisitos também estão detalhados acima nesta página.
-. Na página *Autenticação de Máquina Virtual*, selecione a opção de autenticação que corresponde à forma como você configura as permissões do Azure:
+. Na página *Autenticação de Máquina Virtual*, selecione a opção de autenticação que corresponde à forma como você configurou as permissões do Azure:
 +
 ** Selecione *Fazer login* para fazer login na sua conta da Microsoft, que deve ter as permissões necessárias.
 +
@@ -484,19 +484,16 @@ TIP: Se você já estiver conectado a uma conta do Azure, o Console usará essa 
 O método de autenticação para a máquina virtual pode ser uma senha ou uma chave pública SSH.
 
 +
-https://learn.microsoft.com/en-us/azure/virtual-machines/linux-vm-connect?tabs=Linux["Saiba mais sobre como se conectar a uma VM Linux no Azure"^]
++ https://learn.microsoft.com/en-us/azure/virtual-machines/linux-vm-connect?tabs=Linux["Saiba mais sobre como se conectar a uma VM Linux no Azure"^]
 
-. Na página *Detalhes*, insira um nome para o agente, especifique as tags e escolha se deseja que o Console crie uma nova função com as permissões necessárias ou se deseja selecionar uma função existente configurada comlink:reference-permissions-azure.html["as permissões necessárias"] .
+. Na página *Detalhes*, insira um nome para o agente, especifique as tags e escolha se deseja que o Console crie uma nova função com as permissões necessárias ou se deseja selecionar uma função existente que você configurou com link:reference-permissions-azure.html["as permissões necessárias"].
 +
 Observe que você pode escolher as assinaturas do Azure associadas a essa função.  Cada assinatura escolhida fornece ao agente do Console permissões para gerenciar recursos nessa assinatura (por exemplo, Cloud Volumes ONTAP).
 
 . Na página *Rede*, escolha uma VNet e uma sub-rede, se deseja habilitar um endereço IP público e, opcionalmente, especifique uma configuração de proxy.
-+
-** Na página *Grupo de segurança*, escolha se deseja criar um novo grupo de segurança ou se deseja selecionar um grupo de segurança existente que permita as regras de entrada e saída necessárias.
+. Na página *Grupo de segurança*, escolha se deseja criar um novo grupo de segurança ou se deseja selecionar um grupo de segurança existente que permita as regras de entrada e saída necessárias.
 +
 link:reference-ports-azure.html["Exibir regras de grupo de segurança para o Azure"] .
-
-
 
 . Revise suas seleções para verificar se sua configuração está correta.
 +

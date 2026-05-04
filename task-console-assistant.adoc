@@ -24,7 +24,7 @@ O assistente do Console está disponível somente para usuários com a função 
 
 Por padrão, o NetApp Console exibe o assistente do Console na página inicial para usuários que acessam o sistema pela primeira vez e que possuem a função de administrador da organização. Ele permanecerá disponível até que você conclua as tarefas obrigatórias de criação de um agente de console e adição de um sistema.
 
-Utilize o assistente para concluir essas tarefas, que fornecem a configuração mínima para o seu ambiente NetApp Console :
+Utilize o assistente para concluir essas tarefas, que fornecem a configuração mínima para o seu ambiente NetApp Console:
 
 * Adicione uma conta do NetApp Support Site (NSS).
 +

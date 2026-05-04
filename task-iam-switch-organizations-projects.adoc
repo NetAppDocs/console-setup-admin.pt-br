@@ -35,9 +35,6 @@ image:screenshot-iam-switch-organizations.png["Uma captura de tela do banner sup
 A aba *Parceria* não é exibida se você não tiver nenhuma organização parceira.
 
 . Selecione outra organização e depois selecione *Alternar*.
-+
-Se você tiver alguma organização parceira, selecione a aba *Parceria* para ver as organizações parceiras disponíveis.
-
 
 
 

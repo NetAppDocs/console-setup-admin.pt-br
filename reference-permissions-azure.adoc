@@ -756,7 +756,7 @@ O agente faz as seguintes solicitações de API para implantar e gerenciar o Clo
 | Criptografar contas de armazenamento durante a criação | Microsoft.ManagedIdentity/userAssignedIdentities/atribuir/ação | Sim | Sim | Não 
 
 
-.3+| Use conjuntos de dimensionamento de máquina virtual no modo de orquestração flexível para especificar zonas específicas para o Cloud Volumes ONTAP | Microsoft.Compute/virtualMachineScaleSets/gravação | Sim | Não | Não 
+.3+| Use conjuntos de dimensionamento de máquinas virtuais no modo de orquestração flexível para especificar zonas específicas para Cloud Volumes ONTAP | Microsoft.Compute/virtualMachineScaleSets/gravação | Sim | Não | Não 
 
 
 | Microsoft.Compute/virtualMachineScaleSets/leitura | Sim | Não | Não 

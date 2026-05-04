@@ -19,13 +19,13 @@ Você pode atribuir as seguintes funções aos usuários para fornecer a eles ac
 O serviço usa as seguintes funções específicas do NetApp Backup and Recovery.
 
 * *Superadministrador de Backup e Recuperação*: Execute qualquer ação no NetApp Backup and Recovery.
-* *Administrador de backup e recuperação*: execute backups em instantâneos locais, replique para armazenamento secundário e faça backup em ações de armazenamento de objetos no NetApp Backup and Recovery.
-* *Administrador de restauração de backup e recuperação*: restaure cargas de trabalho usando o NetApp Backup and Recovery.
-* *Administrador de Clone de Backup e Recuperação*: Clone aplicativos e dados usando o NetApp Backup and Recovery.
+* *Backup e recuperação administrador de backup*: execute backups para snapshots locais, replique para storage secundário e faça backup para storage de objetos em NetApp Backup and Recovery.
+* *Administrador de restauração de backup e recuperação*: Restaure cargas de trabalho usando NetApp Backup and Recovery.
+* *Administrador de clonagem de backup e recuperação*: Clone aplicativos e dados usando NetApp Backup e Recovery.
 * *Visualizador de backup e recuperação*: visualize informações no NetApp Backup and Recovery, mas não execute nenhuma ação.
 
 
-Para obter detalhes sobre todas as funções de acesso do NetApp Console , consulte https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["a documentação de configuração e administração do Console"^] .
+Para obter detalhes sobre todas as funções de acesso ao NetApp Console, consulte link:reference-iam-predefined-roles.html["funções de acesso"].
 
 
 

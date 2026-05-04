@@ -14,10 +14,10 @@ summary: Depois de adicionar uma conexão federada, você pode gerenciá-la no N
 
 
 [role="lead"]
-Você pode gerenciar sua federação no NetApp Console.  Você pode desativá-lo, atualizar credenciais expiradas e também desativá-lo caso não precise mais dele.
+Você pode gerenciar sua federação no NetApp Console. Você pode desativá-la, atualizar credenciais expiradas, assim como excluí-la se não precisar mais dela.
 
 .Funções necessárias
-A função de administrador da Federação é necessária para criar e gerenciar federações.  O visualizador da Federação pode visualizar a página da Federação.link:reference-iam-predefined-roles.html["Saiba mais sobre funções de acesso."]
+A função de administrador da Federação é necessária para criar e gerenciar federações. O visualizador da Federação pode visualizar a página da Federação. link:reference-iam-predefined-roles.html["Saiba mais sobre funções de acesso."]
 
 Você também pode adicionar um domínio verificado adicional a uma federação existente, o que permite usar vários domínios para sua conexão federada.
 
@@ -82,7 +82,7 @@ Teste a conexão de uma federação existente para verificar se ela funciona.  I
 .Passos
 . Selecione *Administração > Identidade e acesso*.
 . Selecione a aba *Federação*.
-. Selecione o menu de açõesimage:button_3_vert_dots.png["um ícone com três pontos verticais"] ao lado da federação à qual você deseja adicionar um domínio verificado e selecione *Testar conexão*.
+. Selecione o menu de ações image:button_3_vert_dots.png["um ícone com três pontos verticais"] ao lado da federação que deseja testar e selecione *Testar conexão*.
 . Selecione *Testar*.  O sistema solicita que você faça login com suas credenciais corporativas.  Se a conexão for bem-sucedida, você será redirecionado para o NetApp Console.  Se a conexão falhar, você verá uma mensagem de erro indicando o problema com a federação.
 . Selecione *Concluído* para retornar à aba *Federação*.
 
@@ -98,7 +98,7 @@ Desabilite uma federação antes de excluí-la, como ao desativar o IdP ou desco
 .Passos
 . Selecione *Administração > Identidade e acesso*.
 . Selecione a aba *Federação*.
-. Selecione o menu de açõesimage:button_3_vert_dots.png["um ícone com três pontos verticais"] ao lado da federação à qual você deseja adicionar um domínio verificado e selecione *Desativar*.
+. Selecione o menu de ações image:button_3_vert_dots.png["um ícone com três pontos verticais"] ao lado da federação que deseja desativar e selecione *Desativar*.
 
 
 
@@ -113,7 +113,7 @@ Não é possível recuperar uma federação após excluí-la.  Você deve criar 
 IMPORTANT: Você deve desabilitar uma federação antes de poder excluí-la.  Não é possível recuperar uma federação após excluí-la.
 
 .Passos
-. Selecione *Administração > Identidade e acesso* .
+. Selecione *Administração > Identidade e acesso*.
 . Selecione *Federações* para visualizar a página *Federações*.
-. Selecione o menu de açõesimage:button_3_vert_dots.png["um ícone com três pontos verticais"] ao lado da federação à qual você deseja adicionar um domínio verificado e selecione *Excluir*.
+. Selecione o menu de ações image:button_3_vert_dots.png["um ícone com três pontos verticais"] ao lado da federação que deseja excluir e selecione *Excluir*.
 

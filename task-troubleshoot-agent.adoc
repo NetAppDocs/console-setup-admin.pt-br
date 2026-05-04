@@ -48,7 +48,7 @@ Não é possível acessar a interface do usuário do agente NetApp
 Esta mensagem aparece ao tentar acessar o endereço IP de um agente.  O agente pode falhar ao inicializar se não tiver o acesso correto à rede ou se estiver instável.
  a| 
 * Conecte-se ao agente do Console.
-* Verifique se o serviço Service Manager
+* Verifique se o serviço Service Manager está ativo.
 * Verifique se o agente tem o acesso à rede necessário.link:reference-networking-saas-console.html["Saiba mais sobre os pontos de extremidade de acesso à rede necessários."]
 
 
@@ -57,7 +57,7 @@ Esta mensagem aparece ao tentar acessar o endereço IP de um agente.  O agente p
  a| 
 Não é possível carregar as configurações do agente
  a| 
-O Console exibe esta mensagem quando você tenta acessar a página de configurações do Agente.
+O Console exibe esta mensagem quando você tenta acessar a página de configurações do Agent.
  a| 
 * Verifique se o contêiner OCCM está em execução e funcionando.
 * Se o problema persistir, entre em contato com o suporte.
@@ -78,18 +78,18 @@ Esta mensagem é exibida se o agente não conseguir acessar sua conta de suporte
 
 == Verifique o status do agente do Console
 
-Use um dos seguintes comandos para verificar seu agente do Console.  Todos os serviços devem ter o status _Em execução_.  Se esse não for o caso, entre em contato com o suporte da NetApp .
+Use um dos seguintes comandos para verificar o agente do Console. Todos os serviços devem ter o status _Em execução_. Se isso não acontecer, entre em contato com o suporte da NetApp.
 
 [NOTE]
 ====
 Para obter informações mais detalhadas sobre como acessar o diagnóstico do agente do Console, consulte os seguintes tópicos:
 
 * link:task-maintain-agents.html#connect-linux-host["Verifique o status do agente do console (para implantações de host Linux)"]
-* link:task-agent-vm-config.html#connect-vcenter-host["Verifique o status do agente do console (para implantações do VCenter)"]
+* link:task-agent-vm-config.html#connect-vcenter-host["Verifique o status do agente do Console (para vCenter deployments)"]
 
 
 ====
-Docker (para implantações do Ubuntu e VCenter)::
+Docker (para Ubuntu e vCenter deployments)::
 +
 --
 [source, cli]
@@ -126,11 +126,9 @@ O Console exibe a versão no topo da página.
 
 Os agentes de console exigem acesso a determinados endpoints de rede, precisam ter várias portas abertas e devem atender aos requisitos de hardware. Você pode verificar se o seu agente de console atende a esses requisitos no Console ou usando o agent maintenance console.
 
-link:reference-networking-saas-console.html["Saiba mais sobre os pontos de acesso de rede necessários."] link:
+link:reference-networking-saas-console.html["Saiba mais sobre os pontos de acesso de rede necessários."]
 
 Durante a instalação, NetApp verifica se o host do agente possui pelo menos 80% do espaço de disco disponível, o que inclui 48 GB em  `/opt` e 32 GB em  `/var` (80 GB no total). Após a instalação, exige que pelo menos 20% do disco total permaneça disponível, o que inclui 12 GB em  `/opt` e 8 GB em  `/var` (20 GB no total).
-
-link:reference-networking-saas-console.html["Saiba mais sobre os pontos de acesso de rede necessários."] link:
 
 Você também pode executar verificações de validação usando o console de manutenção do agente. link:reference-agent-maint-console-config-checker.html["Saiba mais sobre como usar o comando `config-checker validate`."]
 
@@ -210,7 +208,7 @@ systemctl restart netapp-service-manager.service
 
 == Trabalhe com o suporte da NetApp
 
-Se você não conseguiu resolver os problemas com seu agente do Console, entre em contato com o Suporte da NetApp .  O suporte da NetApp pode solicitar o ID do agente do Console ou que você envie os logs do agente do Console, caso eles ainda não os tenham.
+Se você não conseguiu resolver os problemas com o agente do Console, talvez queira entrar em contato com o suporte da NetApp. O suporte da NetApp pode solicitar o ID do agente do Console ou pedir que você envie os logs do agente do Console, caso ainda não os tenham.
 
 
 
@@ -236,7 +234,7 @@ image:screenshot-system-id.png["Uma captura de tela que mostra o ID do sistema q
 
 === Baixe ou envie uma mensagem de AutoSupport
 
-Se você estiver tendo problemas, a NetApp pode solicitar que você envie uma mensagem de AutoSupport para o suporte da NetApp para fins de solução de problemas.
+Se você estiver com problemas, a NetApp pode pedir que você envie uma mensagem AutoSupport para o Suporte da NetApp para fins de resolução de problemas.
 
 
 NOTE: O NetApp Console leva até cinco horas para enviar mensagens de AutoSupport devido ao balanceamento de carga.  Para comunicação urgente, baixe o arquivo e envie-o manualmente.
@@ -260,7 +258,7 @@ O agente do Console baixa automaticamente as atualizações de software para o C
 .Etapa
 . Envie uma solicitação PUT para /occm/config com o seguinte JSON como corpo:
 +
-[source]
+[source, json]
 ----
 {
   "maxDownloadSessions": 32

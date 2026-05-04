@@ -19,7 +19,7 @@ Crie parcerias para estabelecer conexões seguras e gerenciadas entre sua organi
 As parcerias permitem que você gerencie com segurança os recursos do NetApp em todos os limites com relacionamentos baseados em funções no Console.  A organização iniciadora concede acesso aos seus recursos, enquanto a organização aceitante fornece os usuários ou contas de serviço aos quais será concedido acesso.  As parcerias são estabelecidas por meio de um fluxo de trabalho de autoatendimento, dando à organização iniciadora controle total sobre quais recursos são compartilhados, quais funções são atribuídas e a capacidade de integrar, gerenciar ou revogar o acesso do parceiro conforme necessário.
 
 .Funções necessárias
-A função *Administrador de parceria* é necessária para criar e gerenciar parcerias.  O *Visualizador de Parcerias* pode visualizar a página Parcerias.link:reference-iam-predefined-roles.html["Saiba mais sobre funções de acesso."]
+A função de *Administrador de Parcerias* é necessária para criar e gerenciar parcerias. O *Visualizador de Parcerias* pode visualizar a página de Parcerias. link:reference-iam-predefined-roles.html["Saiba mais sobre funções de acesso."]
 
 
 
@@ -62,7 +62,7 @@ NOTE: Todos os membros que você adicionar ficarão visíveis na organização d
 
 
 .Resultado
-A parceria que você aprovou agora mostra o status *Estabelecida*.  Usuários com as funções *Administrador de parceria* ou *Visualizador de parceria* em qualquer organização podem visualizar a parceria.
+A parceria que você aprovou agora exibe o status *Established*. Usuários com as funções de *Partnership admin* ou *Partnership viewer* em qualquer uma das organizações podem visualizar a parceria.
 
 
 
@@ -75,7 +75,7 @@ Administrador de parceria, visualizador de parceria.link:reference-iam-predefine
 
 .Passos
 . Selecione *Administração > Identidade e acesso*.
-. Selecione *Parcerias*.
+. Selecione a aba *Parcerias*.
 . Selecione a aba *Parcerias iniciadas* ou *Parcerias recebidas*.
 . Revise a tabela respectiva que exibe as parcerias e seus status.
 
@@ -91,7 +91,7 @@ Administração de parcerias.link:reference-iam-predefined-roles.html["Saiba mai
 
 .Passos
 . Selecione *Administração > Identidade e acesso*.
-. Selecione *Parcerias*.
+. Selecione a aba *Parcerias*.
 . Selecione a aba *Parcerias iniciadas*.
 . Revise a tabela respectiva que exibe as parcerias e seus status.
 . Navegue até a parceria iniciada que deseja desabilitar e selecioneimage:icon-action.png["Um ícone que tem três pontos lado a lado"] e então selecione *Desativar*.

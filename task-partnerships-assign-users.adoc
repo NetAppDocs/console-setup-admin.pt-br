@@ -17,15 +17,15 @@ summary: Você pode adicionar usuários a uma parceria adicionando-os à organiz
 Você pode adicionar usuários a uma parceria adicionando-os à organização parceira.  Depois de adicionar usuários, a organização parceira é responsável por atribuir a eles funções para recursos específicos em sua organização.
 
 .Funções necessárias
-A função *Administrador de parceria* é necessária para criar e gerenciar parcerias.  O *Visualizador de Parcerias* pode visualizar a página Parcerias.link:reference-iam-predefined-roles.html["Saiba mais sobre funções de acesso."]
+A função de *Administrador de Parcerias* é necessária para criar e gerenciar parcerias. O *Visualizador de Parcerias* pode visualizar a página de Parcerias. link:reference-iam-predefined-roles.html["Saiba mais sobre funções de acesso."]
 
-Você pode remover usuários de uma parceria a qualquer momento.  Remover um usuário de uma parceria revoga imediatamente seu acesso a quaisquer recursos na organização parceira.
+Você pode remover usuários de uma parceria a qualquer momento. A remoção de um usuário de uma parceria revoga imediatamente o acesso dele a quaisquer recursos da organização parceira.
 
 
 
 == Adicionar membros a uma parceria
 
-Ao adicionar membros a uma parceria, o *administrador da parceria* da organização parceira deve atribuir a eles funções para recursos específicos na organização antes que eles possam acessá-los.
+Ao adicionar membros a uma parceria, o *administrador da parceria* da organização parceira deve atribuir-lhes funções para determinados recursos em sua organização antes que eles possam acessar esses recursos.
 
 Depois de adicionar membros a uma parceria, os membros são exibidos como membros na organização parceira, onde o parceiro pode atribuí-los aos recursos.
 
@@ -33,7 +33,7 @@ Depois de adicionar membros a uma parceria, os membros são exibidos como membro
 . Selecione *Administração > Identidade e acesso*.
 . Selecione *Parcerias*.
 . Selecione a aba *Parceria recebida*.
-. Selecione o menu de açõesimage:icon-action.png["um ícone com três pontos verticais"] ao lado da parceria estabelecida que você deseja incluir como membros e selecione *Adicionar membros*.
+. Selecione o menu de ações image:icon-action.png["um ícone com três pontos verticais"] ao lado da parceria estabelecida à qual deseja adicionar membros e selecione *Adicionar membros*.
 . Escolha um ou mais membros para adicionar à parceria e selecione *Adicionar*.
 
 
@@ -41,7 +41,7 @@ Depois de adicionar membros a uma parceria, os membros são exibidos como membro
 
 == Remover membros de uma parceria
 
-Você pode remover membros de uma parceria a qualquer momento.  Remover um usuário de uma parceria revoga imediatamente seu acesso a quaisquer recursos na organização parceira.
+Você pode remover membros de uma parceria a qualquer momento. A remoção de um usuário de uma parceria revoga imediatamente o acesso dele a todos os recursos da organização parceira.
 
 Se você quiser ajustar a função de um membro ou os recursos que ele pode acessar, o administrador da Parceria da organização parceira deverá fazer essas alterações.
 
@@ -49,7 +49,7 @@ Se você quiser ajustar a função de um membro ou os recursos que ele pode aces
 . Selecione *Administração > Identidade e acesso*.
 . Selecione *Parcerias*.
 . Selecione a aba *Parceria recebida*.
-. Selecione o menu de açõesimage:icon-action.png["um ícone com três pontos verticais"] ao lado do membro que você deseja remover e selecione *Remover associação*.
+. Selecione o menu de ações image:icon-action.png["um ícone com três pontos verticais"] ao lado do membro que deseja remover e selecione *Remover associação*.
 . Confirme a ação selecionando *Remover* na caixa de diálogo.
 
 

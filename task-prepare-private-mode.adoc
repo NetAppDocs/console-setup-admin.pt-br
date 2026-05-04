@@ -408,7 +408,7 @@ Servidor proxy:: O NetApp oferece suporte a configurações de proxy explícitas
 * Credenciais
 * Certificado HTTPS
 +
-No modo privado, o NetApp Console só envia tráfego de saída para o seu provedor de nuvem para criar um sistema Cloud Volumes ONTAP.
+No modo privado, o único momento em que o NetApp Console envia tráfego de saída é para o seu provedor de nuvem para criar um sistema Cloud Volumes ONTAP.
 
 
 
@@ -428,7 +428,7 @@ Habilitar NTP:: Se você planeja usar NetApp Data Classification para analisar s
 
 == Etapa 6: preparar permissões de nuvem
 
-Se o agente do Console estiver instalado na nuvem e você planeja criar sistemas Cloud Volumes ONTAP, o NetApp Console exige permissões do provedor de nuvem. Você precisa configurar permissões no seu provedor de nuvem e, em seguida, associar essas permissões à instância do agente do Console após instalá-lo.
+Se o agente do Console estiver instalado na nuvem e você planeja criar sistemas Cloud Volumes ONTAP, o NetApp Console exige permissões do provedor de nuvem. Você precisa configurar as permissões no seu provedor de nuvem e, em seguida, associar essas permissões à instância do agente do Console após a instalação.
 
 Para visualizar os passos necessários, selecione a opção de autenticação que deseja usar para o seu provedor de nuvem.
 
@@ -497,7 +497,7 @@ A conta agora possui as permissões necessárias.
 --
 Crie uma função personalizada do Azure com as permissões necessárias. Atribua essa função à VM do agente do Console.
 
-Observe que você pode criar uma função personalizada do Azure usando o portal do Azure, o Azure PowerShell, a CLI do Azure ou a API REST.  As etapas a seguir mostram como criar a função usando a CLI do Azure.  Se preferir usar um método diferente, consulte https://learn.microsoft.com/en-us/azure/role-based-access-control/custom-roles#steps-to-create-a-custom-role["Documentação do Azure"^]
+Observe que você pode criar uma função personalizada do Azure usando o portal do Azure, Azure PowerShell, Azure CLI ou API REST. As etapas a seguir mostram como criar a função usando o Azure CLI. Se preferir usar um método diferente, consulte  https://learn.microsoft.com/en-us/azure/role-based-access-control/custom-roles#steps-to-create-a-custom-role["Documentação do Azure"^].
 
 .Passos
 . Habilite uma identidade gerenciada atribuída pelo sistema na VM onde você planeja instalar o agente do Console para que possa fornecer as permissões necessárias do Azure por meio de uma função personalizada.

@@ -90,7 +90,7 @@ Você deve renovar o certificado HTTPS do agente antes que ele expire para garan
 . Selecione *Administração > Agentes*.
 . Na página *Visão geral*, selecione o menu de ação para um agente do Console e selecione *Configuração HTTPS*.
 +
-Detalhes sobre o certificado são exibidos, incluindo a data de validade.
+Detalhes sobre a exibição do certificado, incluindo a data de validade.
 
 . Selecione *Alterar certificado* e siga as etapas para gerar um CSR ou instalar seu próprio certificado assinado pela CA.
 

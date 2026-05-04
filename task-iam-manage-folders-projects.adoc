@@ -16,7 +16,7 @@ summary: Adicione pastas e projetos para que correspondam à estrutura da sua em
 [role="lead"]
 Adicione pastas e projetos para que correspondam à estrutura da sua empresa. Depois de criar pastas e projetos, você pode associar recursos a eles e gerenciar o acesso dos membros a esses projetos.
 
-O Console cria automaticamente um projeto para você quando você cria uma nova organização. A maioria das organizações precisa de mais de um projeto, além de pastas para manter tudo organizado. link:concept-identity-and-access-management.html["Saiba mais sobre a hierarquia de recursos no NetApp Console."].
+O Console cria automaticamente um projeto para você quando você cria uma nova organização. A maioria das organizações precisa de mais de um projeto, bem como de pastas para manter tudo organizado. link:concept-identity-and-access-management.html["Saiba mais sobre a hierarquia de recursos no NetApp Console."].
 
 
 
@@ -35,7 +35,7 @@ As pastas também permitem gerenciar o acesso de membros de forma mais eficiente
 
 NOTE: As pastas são uma ferramenta organizacional e não são visíveis para membros que não possuem permissões do IAM, como administrador da organização, administrador de pasta ou projeto, ou superadministrador. Os membros têm acesso a projetos, não a pastas.
 
-Os administradores da organização podem delegar responsabilidades administrativas criando pastas. Após criar uma pasta, um administrador da organização pode atribuir a um membro as funções de administrador da pasta ou do projeto para pastas específicas. Esses membros podem então gerenciar todos os projetos dentro dessa pasta sem ter acesso a toda a organização.
+Os administradores da organização podem delegar responsabilidades administrativas criando pastas. Após criar uma pasta, um administrador da organização pode atribuir a um membro a função de administrador da pasta ou do projeto para pastas específicas. Esses membros podem então gerenciar todos os projetos dentro dessa pasta sem ter acesso a toda a organização.
 
 As pastas podem ter outras pastas ou projetos como filhos, mas não podem ter recursos diretamente associados a elas. Os recursos devem estar associados a um projeto.
 
@@ -194,7 +194,7 @@ image:screenshot-iam-member-access.png["Uma captura de tela da página Editar pr
 
 Modifique o acesso dos membros para controlar o acesso aos recursos. Lembre-se de que as funções atribuídas no nível da pasta são herdadas por todos os projetos e pastas filhos.
 
-Não é possível alterar o acesso de membros em níveis inferiores se ele for herdado do nível da pasta ou da organização. Altere a permissão do membro no nível hierárquico superior para modificar o acesso. Alternativamente, você pode link:task-iam-manage-roles.html#manage-permissions["gerenciar permissões na página de membros"].
+Não é possível alterar o acesso de membros em níveis inferiores se ele for herdado do nível da pasta ou da organização. Altere a permissão do membro no nível hierárquico superior para alterar o acesso. Como alternativa, você pode link:task-iam-manage-roles.html#manage-permissions["gerenciar permissões na página de membros"].
 
 .Passos
 . Na página *Organização*, navegue até um projeto ou pasta na tabela, selecioneimage:icon-action.png["Um ícone que tem três pontos lado a lado"] e então selecione *Editar pasta* ou *Editar projeto*.

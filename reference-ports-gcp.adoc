@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: reference-ports-gcp.html 
 keywords: ports, firewall rules, http, https, inbound, outbound, connector, agent 
-summary: As regras de firewall do Google Cloud para o agente exigem regras de entrada e saída.  O NetApp Console cria automaticamente esse grupo de segurança quando você cria um agente do Console a partir do Console. Para outras opções de instalação, você precisa configurar esse grupo de segurança manualmente. 
+summary: As regras de firewall do Google Cloud para o agente exigem regras de entrada e de saída. O NetApp Console cria automaticamente esse grupo de segurança quando você cria um agente do Console. Para outras opções de instalação, você precisa configurar esse grupo de segurança manualmente. 
 ---
 = Regras de firewall do agente de console no Google Cloud
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: As regras de firewall do Google Cloud para o agente exigem regras de en
 
 
 [role="lead"]
-As regras de firewall do Google Cloud para o agente exigem regras de entrada e saída.  O NetApp Console cria automaticamente esse grupo de segurança quando você cria um agente do Console a partir do Console. Para outras opções de instalação, você precisa configurar esse grupo de segurança manualmente.
+As regras de firewall do Google Cloud para o agente exigem regras de entrada e de saída. O NetApp Console cria automaticamente esse grupo de segurança quando você cria um agente do Console. Para outras opções de instalação, você precisa configurar esse grupo de segurança manualmente.
 
 
 
@@ -82,5 +82,5 @@ NOTE: O endereço IP de origem é o host do agente.
 | Chamadas de API | TCP | 8080 | Classificação de Dados | Sondar a instância de classificação de dados durante a implantação 
 
 
-| DNS | UDP | 53 | DNS | Usado para resolução de DNS por classificação de dados 
+| DNS | UDP | 53 | DNS | Utilizado para resolução de DNS pela classificação de dados 
 |===

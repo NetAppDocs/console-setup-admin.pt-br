@@ -93,8 +93,6 @@ Você só pode usar códigos de recuperação uma vez.  Se você usar ou perder 
 
 == Excluir sua configuração de MFA
 
-Ao terminar, faça logout do Console ou mova o controle deslizante de volta para o modo somente leitura. O sistema remove suas permissões elevadas quando sua sessão expira.
-
 
 NOTE: Se você não conseguir acessar seu aplicativo de autenticação ou código de recuperação, será necessário entrar em contato com o administrador da organização para redefinir sua configuração de MFA.
 

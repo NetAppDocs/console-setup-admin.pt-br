@@ -33,7 +33,7 @@ Se o próprio agente do Console não tiver uma conexão de saída com a Internet
 
 
 
-IMPORTANT: Depois de configurar um proxy, você não poderá alterar o tipo de proxy.  Se precisar alterar o tipo de proxy, remova o agente do Console e adicione um novo agente com o novo tipo de proxy.
+IMPORTANT: Depois de configurar um proxy, não é possível alterar o tipo de proxy. Se precisar alterar o tipo de proxy, você deve remover o agente do Console e adicionar um novo agente com o novo tipo de proxy.
 
 
 
@@ -115,7 +115,7 @@ Certifique-se de que o arquivo de certificado esteja no formato PEM e resida no 
 Você pode atualizar o servidor proxy transparente existente de um agente do Console usando o `proxy update` comando ou remova o servidor proxy transparente usando o `proxy remove` comando.  Para obter mais informações, consulte a documentação.link:reference-agent-maint-console-proxy.html["Console de manutenção do agente"] .
 
 
-IMPORTANT: Depois de configurar um proxy, você não poderá alterar o tipo de proxy.  Se precisar alterar o tipo de proxy, remova o agente do Console e adicione um novo agente com o novo tipo de proxy.
+IMPORTANT: Depois de configurar um proxy, não é possível alterar o tipo de proxy. Se precisar alterar o tipo de proxy, você deve remover o agente do Console e adicionar um novo agente com o novo tipo de proxy.
 
 
 
@@ -127,7 +127,7 @@ Se a configuração de proxy da sua rede mudar, seu agente poderá perder o aces
 
 == Habilitar tráfego direto da API
 
-Se você configurou um agente do Console para usar um servidor proxy, pode habilitar o tráfego direto da API no agente do Console para enviar chamadas de API diretamente aos serviços do provedor de nuvem sem passar pelo proxy. Agentes executados na AWS, Azure ou Google Cloud são compatíveis com essa opção.
+Se você configurou um agente do Console para usar um servidor proxy, pode habilitar o tráfego direto da API no agente do Console para enviar chamadas de API diretamente aos serviços do provedor de nuvem sem passar pelo proxy. Agentes em execução na AWS, Azure ou Google Cloud oferecem suporte a essa opção.
 
 Se você desabilitar o Azure Private Links com o Cloud Volumes ONTAP e usar pontos de extremidade de serviço, habilite o tráfego de API direto.  Caso contrário, o tráfego não será roteado corretamente.
 

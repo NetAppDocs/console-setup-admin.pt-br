@@ -14,10 +14,10 @@ summary: 'Federe com seu provedor SAML 2.0 IdP para habilitar o logon único (SS
 
 
 [role="lead"]
-Federe com seu provedor SAML 2.0 IdP para habilitar o logon único (SSO) para o NEtApp Console.  Isso permite que os usuários façam login usando suas credenciais corporativas.
+Federe com seu provedor SAML 2.0 IdP para habilitar o logon único (SSO) para o NetApp Console.  Isso permite que os usuários façam login usando suas credenciais corporativas.
 
 .Função necessária
-A função de administrador da Federação é necessária para criar e gerenciar federações.  O visualizador da Federação pode visualizar a página da Federação.link:reference-iam-predefined-roles.html["Saiba mais sobre funções de acesso."]
+A função de administrador da Federação é necessária para criar e gerenciar federações. O visualizador da Federação pode visualizar a página da Federação. link:reference-iam-predefined-roles.html["Saiba mais sobre funções de acesso."]
 
 
 NOTE: Você pode federar com seu IdP corporativo ou com o site de suporte da NetApp .  Você não pode federar com ambos.

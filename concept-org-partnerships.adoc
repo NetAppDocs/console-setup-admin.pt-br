@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: concept-org-partnerships.html 
-keywords: identity federation, single sign-on, SSO, identity provider, IdP, SAML, Microsoft Entra ID, AD FS, PingFederate, ACS URL, Entity ID, user access, security, productivity, compliance, authentication, business continuity, account management, user experience, access control, workflow automation, credential management, login process, organization admin, bluexp, BlueXP 
+keywords: organization partnerships, partner access, Partnership admin role, Partnership viewer role, organization ID, managed service provider, MSP collaboration, reseller access, cross-organization management, delegated administration 
 summary: A criação de parcerias entre organizações no NetApp Console permite que os parceiros da organização gerenciem com segurança os recursos do NetApp em todos os limites organizacionais, simplificando a colaboração e aumentando a segurança. 
 ---
 = Parcerias organizacionais no NetApp Console
@@ -26,7 +26,7 @@ Os clientes podem autorizar MSPs ou revendedores a gerenciar ambientes NetApp se
 Como parceiro, você obtém visibilidade e controle centralizados em todos os ambientes do cliente.  Você pode facilmente mudar para a organização de um cliente para gerenciar recursos, executar serviços de dados e monitorar a integridade dentro de limites definidos, reduzindo ferramentas personalizadas e garantindo o alinhamento com as políticas de cada cliente.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Um"]Atribuir a um ou mais usuários a função de administrador de parceria
-Atribua a função Partnership admin a um ou mais usuários, tanto na organização iniciadora quanto na receptora, para criar e gerenciar parcerias. você pode atribuir a função Partnership viewer a usuários que precisam apenas visualizar parcerias, e não gerenciar.
+Atribua a função de Partnership admin a um ou mais usuários, tanto na organização iniciadora quanto na receptora, para criar e gerenciar parcerias. Você pode atribuir a função de Partnership viewer a usuários que precisam apenas visualizar parcerias, não gerenciá-las.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Dois"]Compartilhe o ID da sua organização com a organização iniciadora
 [role="quick-margin-para"]

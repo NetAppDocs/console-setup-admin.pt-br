@@ -17,7 +17,7 @@ summary: Gerencie os membros da sua organização para fornecer permissões em d
 Proteja o acesso dos usuários à sua organização NetApp Console gerenciando as configurações de segurança dos membros. Você pode redefinir senhas de usuários, gerenciar a autenticação multifator (MFA) e recriar credenciais de contas de serviço.
 
 .Funções de acesso necessárias
-Superadministrador, administrador da organização ou administrador de pasta ou projeto (para pastas e projetos que eles administram). Link:reference-iam-predefined-roles.html[Saiba mais sobre funções de acesso].
+Superadministrador, administrador da organização ou administrador de pasta ou projeto (para pastas e projetos que eles administram). link:reference-iam-predefined-roles.html["Saiba mais sobre funções de acesso"].
 
 
 
@@ -60,7 +60,7 @@ A tabela *Membros* lista os membros da sua organização.
 
 == Recriar as credenciais para uma conta de serviço
 
-Você pode criar novas credenciais para um serviço caso as perca ou precise atualizá-las.
+Você pode criar novas credenciais para uma conta de serviço caso as perca ou precise atualizá-las.
 
 A criação de novas credenciais exclui as antigas. Você não pode usar as credenciais antigas.
 

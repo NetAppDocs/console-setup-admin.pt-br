@@ -78,16 +78,16 @@ Para federar com um domínio diferente do seu domínio de e-mail, verifique se v
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Dois"]Configure seu IdP para confiar na NetApp como um provedor de serviços
 [role="quick-margin-para"]
-Configure seu provedor de identidade para confiar no NetApp criando um novo aplicativo e fornecendo detalhes como URL do ACS, ID da entidade ou outras informações de credencial. As informações do provedor de serviços variam de acordo com o provedor de identidade, portanto, consulte a documentação do seu provedor de identidade específico para obter detalhes. Você precisará trabalhar com o administrador do seu IdP para concluir esta etapa.
+Configure seu provedor de identidade para confiar na NetApp criando um novo aplicativo e fornecendo detalhes como a URL do ACS, o ID da entidade ou outras informações de credencial. As informações do provedor de serviços variam de acordo com o provedor de identidade, portanto, consulte a documentação do seu provedor de identidade específico para obter detalhes. Você precisará trabalhar com o administrador do seu IdP para concluir esta etapa.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Três"]Crie a conexão federada no Console
 [role="quick-margin-para"]
 Forneça o URL ou arquivo de metadados SAML do seu provedor de identidade para criar a conexão.  Essas informações são usadas para estabelecer a relação de confiança entre o Console e seu provedor de identidade. As informações fornecidas dependem do IdP que você está usando. Por exemplo, se estiver usando o Microsoft Entra ID, você precisará fornecer o ID do cliente, o segredo e o domínio.
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Três"]Teste sua federação no Console
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Quatro"]Teste sua federação no Console
 [role="quick-margin-para"]
 Teste sua conexão federada antes de habilitá-la. Use a opção de teste na página Federação no Console para verificar se o usuário de teste pode ser autenticado com sucesso. Se o teste for bem-sucedido, você poderá habilitar a conexão.
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["Três"]Habilite sua conexão no Console
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["Cinco"]Ative sua conexão no Console
 [role="quick-margin-para"]
 Depois de habilitar a conexão, os usuários podem efetuar login no Console usando suas credenciais corporativas.

@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: reference-agent-maint-console-config-checker.html 
-keywords: transparent proxy, connector certificate, agent maintenance console, proxy configuration, connector proxy. agent proxy 
-summary: Você pode usar o console de manutenção do agente do Console para configurar um agente do Console para usar um servidor proxy transparente. 
+keywords: agent maintenance console, agent troubleshooting, network connectivity validation, agent validation, hardware requirements, deployment readiness, operational compliance, installation troubleshooting 
+summary: Você pode usar o console de manutenção do agente do Console para validar a instalação e a configuração de um agente do Console. 
 ---
 = Validação do agente do console com o console de manutenção no NetApp Console
 :hardbreaks:
@@ -20,7 +20,7 @@ Você pode usar o console de manutenção do agente do Console para validar a in
 
 == Acesse o console de manutenção do agente
 
-Você pode acessar o Console de manutenção a partir do host do agente do Console.  Navegue até o seguinte diretório:
+Você pode acessar o console de manutenção a partir do host do agente do console. Navegue até o seguinte diretório:
 
 [source, cli]
 ----
@@ -41,9 +41,10 @@ O `config-checker validate` O comando permite validar a configuração de um age
 [role="quick-margin-para"]
 Selecione um ou mais serviços para validar. Os nomes de serviço válidos são:
 
-*`PLATFORM`que valida a conectividade de rede com os endpoints do Console necessários, bem como se as portas necessárias estão abertas para o agente do Console.
+* `PLATFORM`que valida a conectividade de rede com os endpoints do Console necessários, bem como se as portas necessárias estão abertas para o agente do Console.
 
-`--validationTypes <comma-separated list validation types to run>`--*OBRIGATÓRIO*-- Escolha um ou mais tipos de validação para executar. Os tipos de validação válidos são:
+
+`--validationTypes <comma-separated list of validation types to run>`--*OBRIGATÓRIO*-- Escolha um ou mais tipos de validação para executar. Os tipos de validação válidos são:
 
 * `NETWORK`que valida a conectividade de rede com os endpoints do Console necessários.
 * `HARDWARE` que valida se o host do agente atende aos requisitos mínimos de hardware para o agente do Console.

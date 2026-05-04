@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: task-agent-vm-config.html 
 keywords: agent VM, vcenter, esxi, increase cpu, increase ram, vm maintenance, agent maintenance, agent operating system, agent host 
-summary: Você pode fazer alterações no seu host VCenter ou ESXi existente depois de implantar o agente do Console.  Por exemplo, você pode aumentar a CPU ou a RAM da instância da VM que hospeda o agente do Console. 
+summary: Você pode fazer alterações no seu vCenter ou host ESXi existente após implantar o agente do Console. Por exemplo, você pode aumentar a CPU ou a RAM da instância da VM que hospeda o agente do Console. 
 ---
-= Manter um host VCenter ou ESXi para o agente do Console
+= Manter um vCenter ou host ESXi para o agente do Console
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: Você pode fazer alterações no seu host VCenter ou ESXi existente dep
 
 
 [role="lead"]
-Você pode fazer alterações no seu host VCenter ou ESXi existente depois de implantar o agente do Console.  Por exemplo, você pode aumentar a CPU ou a RAM da instância da VM que hospeda o agente do Console.
+Você pode fazer alterações no seu vCenter ou host ESXi existente após implantar o agente do Console. Por exemplo, você pode aumentar a CPU ou a RAM da instância da VM que hospeda o agente do Console.
 
 Execute estas tarefas de manutenção usando o console da Web da VM:
 
@@ -31,10 +31,10 @@ Você só pode visualizar (e não atualizar) informações sobre o endereço IP,
 
 == Acesse o console de manutenção da VM
 
-Você pode acessar o Console de manutenção a partir do cliente VSphere.
+Você pode acessar o console de manutenção a partir do cliente vSphere.
 
 .Passos
-. Abra o cliente VSphere e faça login no seu VCenter.
+. Abra o cliente vSphere e faça login no seu vCenter.
 . Selecione a instância da VM que hospeda o agente do Console.
 . Selecione *Iniciar Console Web*.
 . Efetue login na instância da VM usando o nome de usuário e a senha que você especificou quando criou a instância da VM.  O nome de usuário é `maint` e a senha é aquela que você especificou quando criou a instância da VM.
@@ -47,7 +47,7 @@ Você pode acessar o Console de manutenção a partir do cliente VSphere.
 Você pode alterar a senha para o `maint` usuário.
 
 .Passos
-. Abra o cliente VSphere e faça login no seu VCenter.
+. Abra o cliente vSphere e faça login no seu vCenter.
 . Selecione a instância da VM que hospeda o agente do Console.
 . Selecione *Iniciar Console Web*.
 . Efetue login na instância da VM usando o nome de usuário e a senha que você especificou quando criou a instância da VM.  O nome de usuário é `maint` e a senha é aquela que você especificou quando criou a instância da VM.
@@ -61,10 +61,10 @@ Você pode alterar a senha para o `maint` usuário.
 
 Você pode aumentar a CPU ou a RAM da instância da VM que hospeda o agente do Console.
 
-Edite as configurações da instância da VM no seu host VCenter ou ESXi e use o Console de manutenção para aplicar as alterações.
+Edite as configurações da instância da máquina virtual no seu vCenter ou host ESXi e, em seguida, use o console de manutenção para aplicar as alterações.
 
-.Etapas no cliente VSphere
-. Abra o cliente VSphere e faça login no seu VCenter.
+.Etapas no cliente vSphere
+. Abra o cliente vSphere e faça login no seu vCenter.
 . Selecione a instância da VM que hospeda o agente do Console.
 . Clique com o botão direito do mouse na instância da VM e selecione *Editar configurações*.
 . Aumente o espaço do disco rígido usado para /opt ou a partição /var.
@@ -77,11 +77,11 @@ Edite as configurações da instância da VM no seu host VCenter ou ESXi e use o
 
 
 .Etapas no console de manutenção
-. Abra o cliente VSphere e faça login no seu VCenter.
+. Abra o cliente vSphere e faça login no seu vCenter.
 . Selecione a instância da VM que hospeda o agente do Console.
 . Selecione *Iniciar Console Web*.
 . Efetue login na instância da VM usando o nome de usuário e a senha que você especificou quando criou a instância da VM.  O nome de usuário é `maint` e a senha é aquela que você especificou quando criou a instância da VM.
-. Digitar `1 to view the `System Configuration` menu.
+. Digitar `1` para ver o `System Configuration` menu.
 . Digitar `2` e siga as instruções na tela.  O console procura novas configurações e aumenta o tamanho das partições.
 
 
@@ -89,10 +89,10 @@ Edite as configurações da instância da VM no seu host VCenter ou ESXi e use o
 
 === Exibir configurações de rede para a VM do agente
 
-Visualize as configurações de rede da VM do agente no cliente VSphere para confirmar ou solucionar problemas de rede.  Você só pode visualizar (não atualizar) as seguintes configurações de rede: endereço IP e detalhes de DNS.
+Visualize as configurações de rede da VM do agente no vSphere client para confirmar ou solucionar problemas de rede. Você só pode visualizar (não atualizar) as seguintes configurações de rede: endereço IP e detalhes de DNS.
 
 .Passos
-. Abra o cliente VSphere e faça login no seu VCenter.
+. Abra o cliente vSphere e faça login no seu vCenter.
 . Selecione a instância da VM que hospeda o agente do Console.
 . Selecione *Iniciar Console Web*.
 . Efetue login na instância da VM usando o nome de usuário e a senha que você especificou quando criou a instância da VM.  O nome de usuário é `maint` e a senha é aquela que você especificou quando criou a instância da VM.
@@ -107,7 +107,7 @@ Visualize as configurações de rede da VM do agente no cliente VSphere para con
 Adicione, atualize ou remova rotas estáticas para a VM do agente, conforme necessário.
 
 .Passos
-. Abra o cliente VSphere e faça login no seu VCenter.
+. Abra o cliente vSphere e faça login no seu vCenter.
 . Selecione a instância da VM que hospeda o agente do Console.
 . Selecione *Iniciar Console Web*.
 . Efetue login na instância da VM usando o nome de usuário e a senha que você especificou quando criou a instância da VM.  O nome de usuário é `maint` e a senha é aquela que você especificou quando criou a instância da VM.
@@ -125,11 +125,11 @@ Adicione, atualize ou remova rotas estáticas para a VM do agente, conforme nece
 Você pode atualizar as configurações do domínio de pesquisa para a VM do agente.
 
 .Passos
-. Abra o cliente VSphere e faça login no seu VCenter.
+. Abra o cliente vSphere e faça login no seu vCenter.
 . Selecione a instância da VM que hospeda o agente do Console.
 . Selecione *Iniciar Console Web*.
 . Efetue login na instância da VM usando o nome de usuário e a senha que você especificou quando criou a instância da VM.  O nome de usuário é `maint` e a senha é aquela que você especificou quando criou a instância da VM.
-. Digitar `2`` para ver o `Network Configuration` menu.
+. Digitar `2` para ver o `Network Configuration` menu.
 . Digitar `8` para atualizar as configurações de pesquisa de domínio e seguir as instruções na tela.
 . Pressione Enter.
 . Opcionalmente, faça alterações adicionais.
@@ -143,7 +143,7 @@ Você pode atualizar as configurações do domínio de pesquisa para a VM do age
 Acesse ferramentas de diagnóstico para solucionar problemas com o agente do Console.  O Suporte da NetApp pode solicitar que você faça isso ao solucionar problemas.
 
 .Passos
-. Abra o cliente VSphere e faça login no seu VCenter.
+. Abra o cliente vSphere e faça login no seu vCenter.
 . Selecione a instância da VM que hospeda o agente do Console.
 . Selecione *Iniciar Console Web*.
 . Efetue login na instância da VM usando o nome de usuário e a senha que você especificou quando criou a instância da VM.  O nome de usuário é `maint` e a senha é aquela que você especificou quando criou a instância da VM.
@@ -160,7 +160,7 @@ Você pode acessar ferramentas de diagnóstico remotamente com uma ferramenta co
 O acesso SSH habilita recursos avançados do terminal, como copiar e colar.
 
 .Passos
-. Abra o cliente VSphere e faça login no seu VCenter.
+. Abra o cliente vSphere e faça login no seu vCenter.
 . Selecione a instância da VM que hospeda o agente do Console.
 . Selecione *Iniciar Console Web*.
 . Efetue login na instância da VM usando o nome de usuário e a senha que você especificou quando criou a instância da VM.  O nome de usuário é `maint` e a senha é aquela que você especificou quando criou a instância da VM.

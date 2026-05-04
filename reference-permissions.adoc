@@ -160,7 +160,7 @@ Ao usar o NetApp Backup and Recovery para fazer backup do Cloud Volumes ONTAP, v
 |===
 
 
-=== Cópia e sincronização do NetApp
+=== NetApp Copy and Sync
 
 [cols="20,60,20"]
 |===

@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-enable-read-only-mode.html 
 keywords: sign up, signing up, sign in, signing in, login with netapp, log in with netapp, create account, account, log in with nss, nss, nss login 
-summary: Para começar a usar o Console, o primeiro passo é se cadastrar ou fazer login usando suas credenciais do Site de Suporte da NetApp ou criar um login no NetApp Console . Se você for o primeiro usuário da sua empresa a se cadastrar, crie uma nova organização no Console como administrador da organização. Se sua empresa já possui uma organização, você pode se cadastrar ou fazer login para acessá-la. 
+summary: Como medida de segurança, você pode ativar o modo somente leitura para sua organização do NetApp Console . No modo somente leitura, os usuários podem visualizar recursos e configurações, mas não podem fazer alterações. 
 ---
 = Ativar o modo somente leitura para uma organização do NetApp Console
 :hardbreaks:
@@ -40,70 +40,3 @@ Quando o modo somente leitura está ativado, os usuários veem um banner que os 
 image:screenshot-read-only-slider.png["Uma captura de tela que mostra a opção \"Modo somente leitura\" ativada."]
 
 
-
-
-
-== Cadastre-se no NetApp Console como administrador inicial da organização.
-
-Se sua empresa não possui uma organização NetApp Console , inscreva-se para criar uma. O primeiro usuário é o administrador e gerencia as contas e permissões. Você poderá atualizar as funções e adicionar administradores posteriormente.
-
-.Passos
-. Abra um navegador da web e vá para o https://console.netapp.com["NetApp Console"^]
-. Se você possui uma conta no site de suporte da NetApp , insira o endereço de e-mail associado à sua conta diretamente na página de *login*.
-+
-O Console realiza o seu cadastro como parte deste login inicial, utilizando as suas credenciais do Site de Suporte da NetApp .
-
-. Se você quiser se inscrever criando um login no Console, selecione *Inscrever-se*.
-+
-.. Na página *Inscreva-se*, insira as informações necessárias e selecione *Avançar*.
-+
-
-NOTE: Somente caracteres em inglês são permitidos no formulário de inscrição.
-
-.. Verifique sua caixa de entrada para ver se recebeu um e-mail da NetApp com instruções para verificar seu endereço de e-mail.
-+
-Verifique seu endereço de e-mail para concluir o cadastro.
-
-
-
-. Após efetuar o login, revise e aceite o Contrato de Licença do Usuário Final.
-. Na página *Boas-vindas*, crie uma organização.
-. Selecione *Vamos começar*.
-
-
-+ Se você for um administrador iniciante, siga o processo guiado para adicionar armazenamento, criar um agente do Console e muito mais. link:task-console-assistant.html["Aprenda a usar o Assistente do Console."]
-
-.Próximos passos
-Como administrador, após concluir as etapas incluídas no Assistente do Console, você deve planejar sua estratégia de identidade e acesso, adicionar usuários à sua organização e atribuir funções. link:task-iam-get-started.html["Saiba mais sobre gerenciamento de identidade e acesso para o NetApp Console."]
-
-
-
-== Cadastre-se ou faça login no NetApp Console se já existir uma organização.
-
-Se sua empresa já possui uma organização NetApp Console , inscreva-se ou faça login para acessá-la. O método de cadastro ou login depende se sua empresa utiliza federação de identidades ou possui credenciais do site de suporte da NetApp . Caso contrário, crie um login no NetApp Console .
-
-.Passos
-. Abra um navegador da web e vá para o https://console.netapp.com["NetApp Console"^]
-. Se você possui uma conta no site de suporte da NetApp ou se sua empresa configurou o login único (SSO), insira seu endereço de e-mail associado ou suas credenciais de SSO na página *Entrar*. Siga as instruções para concluir o login.
-+
-Em ambos os casos, você se inscreve no Console como parte desse login inicial.
-
-. Se você quiser se inscrever criando um login no Console, selecione *Inscrever-se*.
-+
-.. Na página *Inscreva-se*, insira as informações necessárias e selecione *Avançar*.
-+
-
-NOTE: Somente caracteres em inglês são permitidos no formulário de inscrição.
-
-.. Verifique sua caixa de entrada para ver se recebeu um e-mail da NetApp com instruções para verificar seu endereço de e-mail.
-+
-Verifique seu endereço de e-mail para concluir o cadastro.
-
-
-
-. Após efetuar o login, revise e aceite o Contrato de Licença do Usuário Final.
-. Se o sistema solicitar que você crie uma organização, feche a caixa de diálogo e informe um administrador do Console para que ele possa adicioná-lo à sua organização do Console e conceder-lhe acesso. link:task-user-settings.html#contact-admin["Aprenda como entrar em contato com um administrador da organização."]
-
-
-.Próximos passos
-Após receber acesso à sua organização, você poderá começar a gerenciar o armazenamento e usar os serviços de dados que lhe forem atribuídos.

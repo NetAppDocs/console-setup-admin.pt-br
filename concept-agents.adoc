@@ -313,7 +313,7 @@ Você pode implantar agentes diretamente do Console, do seu marketplace na nuvem
 
 Implante agentes na sua nuvem ou no local para estabelecer a conectividade com o aplicativo SaaS Console hospedado na nuvem. Os agentes habilitam recursos avançados enquanto a interface do usuário do Console permanece acessível de qualquer lugar.
 
-Você pode instalar agentes diretamente do Console ao usar o aplicativo SaaS (modo padrão). Você pode instalar na AWS, Azure ou Google Cloud, ou manualmente em suas instalações, em seu próprio host Linux ou em seu ambiente vCenter.
+Você pode instalar agentes diretamente do NetApp Console ao usar o aplicativo SaaS (modo padrão). Você pode instalar na AWS, Azure ou Google Cloud, ou manualmente em suas instalações, em seu próprio host Linux ou em seu vCenter environment.
 
 
 

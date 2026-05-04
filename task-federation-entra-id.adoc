@@ -17,14 +17,14 @@ summary: 'Federe com seu provedor de IdP do Microsoft Entra ID para habilitar o 
 Federe com seu provedor de IdP do Microsoft Entra ID para habilitar o logon único (SSO) para o NetApp Console.  Isso permite que os usuários façam login usando suas credenciais corporativas.
 
 .Funções necessárias
-A função de administrador da Federação é necessária para criar e gerenciar federações.  O visualizador da Federação pode visualizar a página da Federação.link:reference-iam-predefined-roles.html["Saiba mais sobre funções de acesso."]
+A função de administrador da Federação é necessária para criar e gerenciar federações. O visualizador da Federação pode visualizar a página da Federação. link:reference-iam-predefined-roles.html["Saiba mais sobre funções de acesso."]
 
 
 NOTE: Você pode federar com seu IdP corporativo ou com o site de suporte da NetApp .  A NetApp recomenda escolher um ou outro, mas não ambos.
 
 O NetApp oferece suporte somente a SSO iniciado pelo provedor de serviços (iniciado pelo SP).  Primeiro, você precisa configurar o provedor de identidade para confiar na NetApp como provedora de serviços.  Em seguida, você pode criar uma conexão no Console que usa a configuração do provedor de identidade.
 
-Você pode configurar uma conexão federada com o Microsoft Entra ID para habilitar o logon único (SSO) para o Console.  O processo envolve configurar seu ID do Microsoft Entra para confiar no Console como um provedor de serviços e, em seguida, criar a conexão no Console.
+Você pode configurar uma conexão federada com o Microsoft Entra ID para habilitar o logon único (SSO) para o Console. O processo envolve configurar seu Microsoft Entra ID para confiar no Console como provedor de serviços e, em seguida, criar a conexão no Console.
 
 .Antes de começar
 * É necessária uma conta IdP com privilégios administrativos.  Coordene com seu administrador do IdP para concluir as etapas.
@@ -77,9 +77,9 @@ Você pode configurar uma conexão federada com o Microsoft Entra ID para habili
 [discrete]
 ====== Criar conexão
 
-. Crie a conexão com o Microsoft Entra ID
+. Crie a conexão com o Microsoft Entra ID.
 +
-.. Insira o ID do cliente e o segredo do cliente que você criou na etapa anterior.
+.. Insira o client ID e o client secret que você criou na etapa anterior.
 .. Digite o nome de domínio do ID do Microsoft Entra.
 
 

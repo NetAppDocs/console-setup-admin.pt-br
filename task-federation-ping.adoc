@@ -17,14 +17,14 @@ summary: 'Federe com seu provedor PingFederate IdP para habilitar o logon único
 Federe com seu provedor PingFederate IdP para habilitar o logon único (SSO) para o NetApp Console.  Isso permite que os usuários façam login usando suas credenciais corporativas.
 
 .Funções necessárias
-A função de administrador da Federação é necessária para criar e gerenciar federações.  O visualizador da Federação pode visualizar a página da Federação.link:reference-iam-predefined-roles.html["Saiba mais sobre funções de acesso."]
+A função de administrador da Federação é necessária para criar e gerenciar federações. O visualizador da Federação pode visualizar a página da Federação. link:reference-iam-predefined-roles.html["Saiba mais sobre funções de acesso."]
 
 
 NOTE: Você pode federar com seu IdP corporativo ou com o site de suporte da NetApp .  A NetApp recomenda escolher um ou outro, mas não ambos.
 
 O NetApp oferece suporte somente a SSO iniciado pelo provedor de serviços (iniciado pelo SP).  Primeiro, você precisa configurar o provedor de identidade para confiar na NetApp como provedora de serviços.  Em seguida, você pode criar uma conexão no Console que usa a configuração do provedor de identidade.
 
-Você pode configurar uma conexão federada com o PingFederate para habilitar o logon único (SSO) para o Console.  O processo envolve configurar seu servidor PingFederate para confiar no Console como um provedor de serviços e, em seguida, criar a conexão no Console.
+Você pode configurar uma conexão federada com PingFederate para habilitar o logon único (SSO) para o Console. O processo envolve configurar seu servidor PingFederate para confiar no Console como provedor de serviços e, em seguida, criar a conexão no Console.
 
 .Antes de começar
 * É necessária uma conta IdP com privilégios administrativos.  Coordene com seu administrador do IdP para concluir as etapas.
@@ -51,7 +51,7 @@ Você pode configurar uma conexão federada com o PingFederate para habilitar o 
 +
 *** Para o *URL de resposta* ou *URL do serviço de consumidor de declaração (ACS)*, use `https://netapp-cloud-account.auth0.com/login/callback`
 *** Para o *URL de logout*, use `https://netapp-cloud-account.auth0.com/logout`
-*** Para *ID do público/entidade*, use `urn:auth0:netapp-cloud-account:<fed-domain-name-saml>` onde <fed-domain-name-pingfederate> é o nome de domínio da federação.  Por exemplo, se o seu domínio for `example.com` , o ID do público/entidade seria `urn:auth0:netappcloud-account:fed-example-com-pingfederate` .
+*** Para o *ID de Público/Entidade*, use  `urn:auth0:netapp-cloud-account:<fed-domain-name-pingfederate>` onde <fed-domain-name-pingfederate> é o nome de domínio da federação. Por exemplo, se o seu domínio for  `example.com`, o ID de Público/Entidade seria  `urn:auth0:netapp-cloud-account:fed-example-com-pingfederate`.
 
 
 .. Copie a URL do servidor PingFederate.  Você precisará deste URL ao criar a conexão no Console.
@@ -59,7 +59,7 @@ Você pode configurar uma conexão federada com o PingFederate para habilitar o 
 
 
 . Retorne ao Console e selecione *Avançar* para criar a conexão.
-. Crie a conexão com PingFederate
+. Crie a conexão com PingFederate.
 +
 .. Digite a URL do servidor PingFederate que você copiou na etapa anterior.
 .. Carregue o certificado de assinatura X.509.  O certificado deve estar no formato PEM, CER ou CRT.

@@ -19,7 +19,7 @@ Para implantar um agente do Console no Google Cloud usando o Google Cloud, você
 Ao implantar um agente no Google Cloud, é iniciada uma instância de máquina virtual executando Linux e o software do agente Console em uma VPC de sua escolha.
 
 .Antes de começar
-* Você deveria ter um(a link:concept-agents.html["Saiba mais sobre os agentes do Console"]).
+* link:concept-agents.html["Saiba mais sobre os agentes do Console"].
 * Você deve revisarlink:reference-limitations.html["Limitações do agente do console"] .
 
 
@@ -147,7 +147,7 @@ Implemente este requisito de rede após criar o agente do Console.
 Configure permissões para o usuário do Google Cloud implantar a VM do agente do Console do Google Cloud.
 
 .Passos
-. Crie uma função personalizada na plataforma Google:
+. Crie uma função personalizada no Google Cloud:
 +
 .. Crie um arquivo YAML que inclua as seguintes permissões:
 +
@@ -248,8 +248,10 @@ includedPermissions:
 O exemplo a seguir cria uma função chamada "connectorDeployment" no nível do projeto:
 
 +
-gcloud iam roles criar connectorDeployment --project=myproject --file=connector-deployment.yaml
-
+[source, bash]
+----
+gcloud iam roles create connectorDeployment --project=myproject --file=connector-deployment.yaml
+----
 +
 https://cloud.google.com/iam/docs/creating-custom-roles#iam-custom-roles-create-gcloud["Documentação do Google Cloud: Criação e gerenciamento de funções personalizadas"^]
 

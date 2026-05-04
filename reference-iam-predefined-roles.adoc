@@ -27,7 +27,7 @@ As funções da plataforma concedem permissões de administração do NetApp Con
 | Função da plataforma | Responsabilidades 
 
 
-| link:reference-iam-platform-roles.html#organization-admin-roles["Administrador da organização"] | Permite que um usuário tenha acesso irrestrito a todos os projetos e pastas dentro de uma organização, adicione membros a qualquer projeto ou pasta, bem como execute qualquer tarefa e use qualquer serviço de dados que não tenha uma função explícita associada a ele.  Usuários com essa função gerenciam sua organização criando pastas e projetos, atribuindo funções, adicionando usuários e gerenciando sistemas, se tiverem as credenciais adequadas.  Esta é a única função de acesso que pode criar agentes do Console. 
+| link:reference-iam-platform-roles.html#organization-admin-roles["Administrador da organização"] | Permite ao usuário acesso irrestrito a todos os projetos e pastas dentro de uma organização. Pode adicionar membros a qualquer projeto ou pasta, bem como executar qualquer tarefa e usar qualquer serviço de dados que não tenha uma função explícita associada a ele. Usuários com essa função gerenciam sua organização criando pastas e projetos, atribuindo funções, adicionando usuários e gerenciando sistemas, desde que possuam as credenciais adequadas. Esta é a única função de acesso que pode criar agentes do Console. 
 
 
 | link:reference-iam-platform-roles.html#organization-admin-roles["Administrador de pasta ou projeto"] | Permite ao usuário acesso irrestrito aos projetos e pastas atribuídos. Podem adicionar membros às pastas ou projetos que gerenciam, bem como executar qualquer tarefa e usar qualquer serviço de dados ou aplicativo em recursos dentro da pasta ou projeto que lhes foi atribuído. Administradores de pastas ou projetos não podem criar agentes do Console. 
@@ -48,7 +48,7 @@ As funções da plataforma concedem permissões de administração do NetApp Con
 | link:reference-iam-platform-roles.html#super-admin-roles["Superadministrador"] | Dá ao usuário um subconjunto de funções de administrador.  Esta função foi projetada para organizações menores que podem não precisar distribuir responsabilidades do Console entre vários usuários. 
 
 
-| link:reference-iam-platform-roles.html#super-admin-roles["Super visualizador"] | Dá ao usuário um subconjunto de funções de visualizador.  Esta função foi projetada para organizações menores que podem não precisar distribuir responsabilidades do Console entre vários usuários. 
+| link:reference-iam-platform-roles.html#super-admin-roles["Super visualizador"] | Concede ao usuário um subconjunto de funções de visualizador. Essa função foi projetada para organizações menores que podem não precisar distribuir as responsabilidades do Console entre vários usuários. 
 |===
 
 
@@ -104,10 +104,10 @@ A seguir está uma lista de funções na categoria de serviço de dados.  Cada f
 | link:reference-iam-backup-rec-roles.html["Administrador de backup e recuperação"] | Faça backups em snapshots locais, replique para armazenamento secundário e faça backup no armazenamento de objetos. 
 
 
-| link:reference-iam-backup-rec-roles.html["Administração de restauração de backup e recuperação"] | Restaure cargas de trabalho no Backup e Recuperação. 
+| link:reference-iam-backup-rec-roles.html["Administração de restauração de backup e recuperação"] | Restaurar cargas de trabalho em Backup e Recovery. 
 
 
-| link:reference-iam-backup-rec-roles.html["Administrador clone de backup e recuperação"] | Clone aplicativos e dados no Backup e Recuperação. 
+| link:reference-iam-backup-rec-roles.html["Administrador clone de backup e recuperação"] | Clone aplicativos e dados no Backup e Recovery. 
 
 
 | link:reference-iam-backup-rec-roles.html["Visualizador de backup e recuperação"] | Ver informações de backup e recuperação. 

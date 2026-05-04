@@ -91,13 +91,13 @@ NetApp Replication
 
 * Suportado em regiões governamentais com modo restrito.  Não suportado em regiões comerciais ou em regiões soberanas com modo restrito.
 
-| Sim*, (não é necessário se a replicação for de ONTAP on-premises para ONTAP on-premises) 
+| Sim* (não é necessário se a replicação for de ONTAP local para ONTAP local) 
 
 
 | *NetApp recursos do contrato de suporte* | Nenhum | N / D 
 
 
-.12+| *Funcionalidades administrativas* | Auditoria | Não 
+.11+| *Funcionalidades administrativas* | Auditoria | Não 
 
 
 | Centro de automação | Não 
@@ -144,7 +144,4 @@ Para o Cloud Volumes ONTAP, tanto o licenciamento baseado em capacidade quanto o
 
 
 | Modo somente leitura | Não 
-
-
-| Notificações | Não 
 |===

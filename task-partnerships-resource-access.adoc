@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: task-partnerships-resource-access.html 
-keywords: role-based access, partnership access, partner resources, resource access, grant acces, provide partner access, partnership organization 
+keywords: role-based access, partnership access, partner resources, resource access, grant access, provide partner access, partnership organization 
 summary: Você pode conceder acesso a usuários de parceria atribuindo a eles funções específicas para pastas e projetos dentro da sua organização. 
 ---
 = Fornecer acesso a recursos para usuários de parceria
@@ -61,7 +61,7 @@ Por exemplo, se você tivesse dois projetos e quisesse que o mesmo usuário tive
 . Selecione *Administração > Identidade e acesso*.
 . Selecione *Parcerias*.
 . Selecione a aba *Parceria iniciada*.
-. Selecione o menu de açõesimage:icon-action.png["um ícone com três pontos verticais"] ao lado da parceria estabelecida que você deseja visualizar e selecione *Ver detalhes*.
+. Selecione o menu de ações image:icon-action.png["um ícone com três pontos verticais"] ao lado da parceria estabelecida que deseja visualizar e selecione *Ver detalhes*.
 +
 A lista *Membros* exibe os membros que a organização parceira adicionou à parceria.
 
@@ -90,7 +90,7 @@ Você pode alterar ou remover uma função que atribuiu a um membro de uma organ
 . Selecione *Administração > Identidade e acesso*.
 . Selecione *Parcerias*.
 . Selecione a aba *Parceria iniciada*.
-. Selecione o menu de açõesimage:icon-action.png["um ícone com três pontos verticais"] ao lado da parceria estabelecida que você deseja visualizar e selecione *Ver detalhes*.
+. Selecione o menu de ações image:icon-action.png["um ícone com três pontos verticais"] ao lado da parceria estabelecida que deseja visualizar e selecione *Ver detalhes*.
 +
 A lista *Membros* exibe os membros que a organização parceira adicionou à parceria.
 

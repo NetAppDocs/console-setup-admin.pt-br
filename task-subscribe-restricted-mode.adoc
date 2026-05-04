@@ -28,7 +28,7 @@ Uma assinatura de mercado permite cobrar pelos seguintes serviços de dados com 
 A NetApp Data Classification é habilitada por meio de sua assinatura, mas não há cobrança pelo uso da classificação.
 
 .Antes de começar
-Você já deve ter implantado um agente do Console para assinar serviços de dados.  Você precisa associar uma assinatura do marketplace às credenciais de nuvem conectadas a um agente do Console.
+Você já deve ter implantado um agente do Console para assinar os serviços de dados. É necessário associar uma assinatura do marketplace às credenciais de nuvem conectadas a um agente do Console.
 
 [role="tabbed-block"]
 ====
