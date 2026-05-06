@@ -128,15 +128,10 @@ Os agentes de console exigem acesso a determinados endpoints de rede, precisam t
 
 link:reference-networking-saas-console.html["Saiba mais sobre os pontos de acesso de rede necessários."] link:task-install-agent-on-prem.html#os-req-agent["Saiba mais sobre os requisitos de host."]
 
-Durante a instalação, NetApp verifica se o host do agente possui pelo menos 80% do espaço de disco disponível, o que inclui 48 GB em  `/opt` e 32 GB em  `/var` (80 GB no total). Após a instalação, exige que pelo menos 20% do disco total permaneça disponível, o que inclui 12 GB em  `/opt` e 8 GB em  `/var` (20 GB no total).
-
 Você também pode executar verificações de validação usando o console de manutenção do agente. link:reference-agent-maint-console-config-checker.html["Saiba mais sobre como usar o comando `config-checker validate`."]
 
 
 IMPORTANT: Para clientes de nuvem do governo (modo restrito), o NetApp Console não valida o endpoint de upgrade do modo restrito. Você deve confirmar manualmente se as regras do seu firewall permitem acesso a esse endpoint.link:task-prepare-restricted-mode.html["Saiba mais sobre os pontos de acesso à rede necessários para modo restrito."]
-
-
-NOTE: Você só pode validar agentes que tenham o status *Conectado*.
 
 .Etapas a partir do console
 . Selecione *Administração > Agentes*.

@@ -16,6 +16,8 @@ summary: Se você deseja federar com um domínio diferente do seu domínio de e-
 [role="lead"]
 Se você deseja federar com um domínio diferente do seu domínio de e-mail, primeiro precisa verificar se é o proprietário do domínio. Você só pode usar domínios verificados para federação.
 
+Este fluxo de trabalho de verificação de domínio é diferente da verificação de organização. link:task-verify-organization.html["Aprenda como verificar sua organização"].
+
 .Funções necessárias
 A função de administrador da Federação é necessária para criar e gerenciar federações. O visualizador da Federação pode visualizar a página da Federação. link:reference-iam-predefined-roles.html["Saiba mais sobre funções de acesso."]
 

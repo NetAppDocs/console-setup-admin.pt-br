@@ -51,7 +51,7 @@ Os agentes de console implantados no seu provedor de nuvem precisam acessar os e
 
 
  a| 
-\ https://bluexpinfraprod.eastus2.data.azurecr.io \ https://bluexpinfraprod.azurecr.io
+https://bluexpinfraprod.eastus2.data.azurecr.io https://bluexpinfraprod.azurecr.io https://occmclientinfragov.azurecr.us (necessário para implantações em modo restrito)
  a| 
 Para obter imagens para atualizações do agente do Console.
 

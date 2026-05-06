@@ -59,7 +59,15 @@ Adicionar ou descobrir um sistema no Console associa automaticamente o recurso a
 * link:task-iam-associate-agents.html["Aprenda como associar um agente do Console a uma pasta ou projeto"] .
 
 
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["Cinco"]Verifique sua organização (opcional)
+[role="quick-margin-para"]
+Se sua equipe usa verificação organizacional, vincule sua organização do Console à identidade da sua conta comercial NetApp.
+
+[role="quick-margin-para"]
+link:task-verify-organization.html["Aprenda como verificar sua organização"].
+
 .Informações relacionadas
 * link:concept-identity-and-access-management.html["Saiba mais sobre gerenciamento de identidade e acesso no NetApp Console"]
+* link:concept-verified-organization.html["Saiba mais sobre organizações verificadas no NetApp Console"]
 * https://docs.netapp.com/us-en/console-automation/tenancyv4/overview.html["Saiba mais sobre a API para identidade e acesso"^]
 

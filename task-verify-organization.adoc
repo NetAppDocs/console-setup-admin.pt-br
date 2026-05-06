@@ -1,0 +1,34 @@
+---
+sidebar: sidebar 
+permalink: task-verify-organization.html 
+keywords: verify organization, organization verification, cmat, crm id, business account, iam, digital advisor, AIQ, identity and access management 
+summary: Verifique sua organização para vincular sua organização do NetApp Console à identidade da sua conta comercial NetApp. 
+---
+= Verifique sua organização no NetApp Console
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+A verificação da sua organização vincula a organização do Console à identidade da sua conta comercial NetApp. Isso permite que você use recursos como o Digital Advisor e as recomendações do AIQ.
+
+.Funções necessárias
+Administrador da organização ou superadministrador. link:reference-iam-predefined-roles.html["Saiba mais sobre funções de acesso."]
+
+Se sua empresa tiver mais de uma conta comercial com NetApp, você deverá verificar sua organização e associá-la à conta comercial correta. Se sua empresa tiver apenas uma conta comercial com NetApp, sua organização será verificada e vinculada automaticamente a essa conta comercial.
+
+Quando a sua organização do Console estiver associada à sua conta comercial, Digital Advisor mostrará apenas os recursos associados a essa conta. Se você tiver várias contas comerciais, precisará selecionar uma para associar à sua organização do Console. Se você precisar alterar a associação, poderá verificar sua organização novamente e selecionar uma conta comercial diferente.
+
+.Passos
+. Selecione *Administração > Identidade e acesso*.
+. Selecione *Organização*.
+. Na página *Organização*, selecione *Verificar* ao lado do título da página.
++
+image:screenshot-iam-verify-org.png["Uma captura de tela da página da Organização que mostra o botão Verificar ao lado do título da página."]
+
+. Na caixa de diálogo *Associar conta comercial*, escolha a conta comercial que deseja associar à sua organização.
+
