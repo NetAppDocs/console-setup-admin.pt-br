@@ -1,0 +1,45 @@
+---
+sidebar: sidebar 
+permalink: task-iam-organization-verify.html 
+keywords: verify Console organization, associate business account, CMAT account, digital advisor, filtering, organization verification,, business account management, multi-account NetApp customers, organization governance, account ownership verification, resource visibility control 
+summary: Por padrão, Digital Advisor exibe todas as contas NetApp associadas à sua empresa, e não apenas a sua organização do Console. Para limitar o que é exibido no Digital Advisor a uma conta específica, verifique a conta comercial que você deseja usar com a sua organização do Console. 
+---
+= Verifique sua organização do NetApp Console
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Por padrão, Digital Advisor exibe todas as contas NetApp associadas à sua empresa, e não apenas a sua organização do Console. Para limitar o que é exibido no Digital Advisor a uma conta específica, verifique a conta comercial que você deseja usar com a sua organização do Console.
+
+
+
+== Antes de começar
+
+Você precisa ter a função de administrador da organização para verificar sua organização. Seu usuário também precisa estar associado a uma conta do site de suporte da NetApp (NSS). link:task-adding-nss-accounts["Aprenda como associar sua conta NSS"].
+
+
+NOTE: Se sua empresa tiver apenas uma conta comercial e seu usuário estiver associado a uma conta do site de suporte da NetApp, o Console verificará automaticamente sua organização.
+
+
+
+== Verifique sua organização
+
+.Passos
+. Se o seu usuário tiver acesso a mais de uma organização, selecione a organização que deseja verificar no menu suspenso Organization.
+. Em *Administração > Identidade e acesso*.
+. Selecione *Organização*.
+. Ao lado do título da página, selecione *Verificar*.
++
+image:screenshot-iam-verify-org.png["Captura de tela da página Organization com o botão Verify destacado."]
+
++
+
+NOTE: Se sua empresa tiver apenas uma conta comercial, a etiqueta ao lado do cabeçalho da página exibirá *Verificado* e não há nenhuma ação a ser tomada.
+
+. Na caixa de diálogo *Associar conta comercial*, selecione a conta comercial que deseja associar à sua organização do Console no menu suspenso. Em seguida, selecione *Associar*.
+

@@ -18,6 +18,27 @@ Saiba o que há de novo nos recursos de administração do NetApp Console : gere
 
 
 
+== 11 de maio de 2026
+
+
+
+=== Agente do Console 4.7.0
+
+A versão 4.7.0 suporta tanto o modo padrão quanto o modo restrito.
+
+Esta versão do agente do Console inclui melhorias de segurança e correções de erros.
+
+
+
+=== Administração do NetApp Console
+
+Esta versão inclui a seguinte nova funcionalidade.
+
+.Verifique a organização do seu console
+Por padrão, Digital Advisor exibe todas as contas NetApp associadas à sua empresa, e não apenas a sua organização do Console. Para limitar o que é exibido no Digital Advisor a uma conta específica, verifique a conta comercial que você deseja usar com a sua organização do Console. link:https://docs.netapp.com/us-en/console-setup-admin/task-iam-organization-verify.html["Saiba como verificar a organização do seu Console"^]
+
+
+
 == 13 de abril de 2026
 
 
@@ -51,7 +72,7 @@ Você pode validar se as portas necessárias para o agente do Console estão abe
 
 
 
-=== Administração do console
+=== Administração do NetApp Console
 
 Você pode atribuir funções do Keystone a usuários parceiros para permitir que esses usuários gerenciem recursos do Keystone em uma organização parceira. link:https://docs.netapp.com/us-en/console-setup-admin/task-partnerships-assign-users.html["Saiba mais sobre como atribuir funções do Keystone a usuários parceiros."]
 

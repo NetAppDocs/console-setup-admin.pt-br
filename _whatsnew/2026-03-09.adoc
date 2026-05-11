@@ -15,6 +15,6 @@ Você pode validar se as portas necessárias para o agente do Console estão abe
 
 
 
-=== Administração do console
+=== Administração do NetApp Console
 
 Você pode atribuir funções do Keystone a usuários parceiros para permitir que esses usuários gerenciem recursos do Keystone em uma organização parceira. link:https://docs.netapp.com/us-en/console-setup-admin/task-partnerships-assign-users.html["Saiba mais sobre como atribuir funções do Keystone a usuários parceiros."]
