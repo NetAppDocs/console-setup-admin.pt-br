@@ -1,0 +1,46 @@
+---
+sidebar: sidebar 
+permalink: reference-iam-data-classification.html 
+keywords: role-based access control, IAM roles, access delegation, data classification, cloud data sense, compliance admin, classification viewer 
+summary: NetApp Data Classification oferece suporte a duas funções para gerenciar o acesso de leitura e gravação aos ativos. 
+---
+= NetApp Data Classification funções no NetApp Console
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Data Classification oferece suporte ao gerenciamento de identidade e acesso, proporcionando flexibilidade para atribuir aos usuários uma função específica de acordo com as tarefas que precisam realizar em sua organização. A forma como você atribui funções depende das suas próprias práticas de negócios e de gerenciamento de storage.
+
+O Data Classification oferece suporte a dois papéis:
+
+* Administrador de conformidade
+* Visualizador de classificação
+
+
+
+
+== Administrador de conformidade
+
+A função de Compliance admin funciona apenas no nível da organização para gerenciar o acesso aos recursos de Data Classification. Se um usuário tiver responsabilidades inferiores às de um Organization admin, ele deverá ter a função de Compliance admin para instalar o Data Classification.
+
+
+IMPORTANT: A função de administrador de conformidade não é independente. Os usuários com a função de administrador de conformidade também devem estar associados a pelo menos uma link:reference-iam-platform-roles.html["Função da plataforma"].
+
+
+NOTE: O administrador de Compliance foi adicionado ao Data Classification na versão 1.54. Se você implantou o Data Classification antes dessa versão e tinha uma função na plataforma com menos acesso do que um administrador da organização, a função de administrador de Compliance foi automaticamente associada à conta do usuário.
+
+
+
+== Visualizador de classificação
+
+O visualizador de Classificação foi projetado para usuários que precisam acessar os resultados da verificação em Data Classification, mas não precisam acessar os recursos de configuração. Usuários com a função de visualizador de Classificação podem visualizar os resultados do mapeamento e das verificações completas para avaliar áreas para economia de storage ou riscos potenciais de dados. Usuários com a função de visualizador de Classificação também podem gerar relatórios para os recursos aos quais têm acesso. Esses usuários não podem habilitar ou desabilitar a verificação de volumes, buckets ou esquemas de banco de dados.
+
+
+
+== Mais informações
+
+* link:https://docs.netapp.com/us-en/data-services-data-classification/concept-classification.html["Saiba mais sobre NetApp Data Classification"^]
+
