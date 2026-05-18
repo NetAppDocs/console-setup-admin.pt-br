@@ -73,6 +73,12 @@ A seguir está uma lista de funções na categoria de aplicação.  Cada funçã
 | link:reference-iam-keystone-roles.html["Visualizador Keystone"] | Usuários com a função de visualizador do Keystone NÃO PODEM criar solicitações de serviço.  Permite que os usuários monitorem e visualizem o consumo, os ativos e as informações administrativas dentro do locatário do Keystone que estão acessando. 
 
 
+| link:reference-iam-licenses-subscriptions.html["Administração de licenças e assinaturas"] | Usuários com a função de administrador de Licenses and subscriptions podem criar, atualizar e excluir licenças diretas e assinaturas do marketplace para o NetApp Console e serviços de dados afiliados. 
+
+
+| link:reference-iam-licenses-subscriptions.html["Visualizador de licenças e assinaturas"] | Usuários com a função de visualizador de Licenses and subscriptions podem visualizar licenças diretas e assinaturas do marketplace para o NetApp Console e serviços de dados afiliados. 
+
+
 | Função de configuração do Mediador ONTAP | Contas de serviço com a função de configuração do ONTAP Mediator podem criar solicitações de serviço.  Esta função é necessária em uma conta de serviço para configurar uma instância dolink:https://docs.netapp.com/us-en/ontap/mediator/mediator-overview-concept.html["Mediador de Nuvem ONTAP"^] . 
 
 

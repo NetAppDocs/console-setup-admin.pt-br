@@ -1,0 +1,50 @@
+---
+sidebar: sidebar 
+permalink: reference-iam-licenses-subscriptions.html 
+keywords: licenses, subscriptions, digital wallet, operational governance, access delegation, rbac, IAM roles 
+summary: NetApp As funções de Licenças e Assinaturas permitem atribuir diferentes funções aos usuários no NetApp Console para realizar as tarefas necessárias para o gerenciamento de licenças e assinaturas. 
+---
+= Funções de licenses and subscriptions no NetApp Console
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Para gerenciar Licenses and subscriptions no NetApp Console, você precisa garantir que os usuários tenham as permissões apropriadas. O gerenciamento de Licenses and subscriptions é essencial para garantir a implantação eficaz e a continuidade dos seus serviços no Console. A forma como você atribui funções depende das suas próprias práticas de negócio e de gerenciamento de storage.
+
+Licenses and subscriptions usam as seguintes funções:
+
+* *Administrador de licenses e subscriptions*
+* *Visualizador de licenças e assinaturas*
+
+
+[cols="40,30,30"]
+|===
+| Capacidade | Administrador de licenses e subscriptions | Visualizador de licenses and subscriptions 
+
+
+| Adicionar licença | Sim | Não 
+
+
+| Ver licença | Sim | Sim 
+
+
+| Atualizar licença | Sim | Não 
+
+
+| Adicionar assinatura | Sim | Não 
+
+
+| Modificar assinatura | Sim | Não 
+
+
+| Ver assinatura | Sim | Sim 
+
+
+| Remover assinatura | Sim | Não 
+
+
+| Excluir licença | Sim | Não 
+|===
