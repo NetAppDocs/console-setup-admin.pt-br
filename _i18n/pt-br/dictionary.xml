@@ -3733,7 +3733,6 @@
   <block id="9677e2cfcf9bc5456798a21522590a93" category="paragraph">Para descartar notificações individuais, passe o cursor sobre a notificação e selecione *Descartar*.</block>
   <block id="def7f3eac7eed1dada5cdcd2951ede36" category="section-title">Definir configurações de notificação por e-mail</block>
   <block id="a6ca8d5aaf648abdbc2d400cc1275aed" category="paragraph">Você pode enviar tipos específicos de notificações por e-mail para ser informado sobre atividades importantes do sistema, mesmo quando não estiver conectado. Os e-mails podem ser enviados a qualquer usuário que faça parte da sua organização ou conta, ou a qualquer outro destinatário que precise estar ciente de certos tipos de atividade do sistema.</block>
-  <block id="1989e58795a64829ac69121bb1b0c591" category="list-text">O Console envia notificações por e-mail para o agente, licenças e assinaturas, NetApp Copy and Sync e NetApp Backup and Recovery.</block>
   <block id="73e3e67a2ad49cc81c8aa84272ebe07c" category="list-text">O envio de notificações por e-mail não é suportado quando o agente do Console está instalado em um site sem acesso à Internet.</block>
   <block id="e879b7fea6cc39a26268d3c9029be021" category="paragraph">Os filtros definidos na Central de Notificações não determinam os tipos de notificações que você recebe por e-mail.  Por padrão, qualquer administrador da organização receberá e-mails para todas as notificações "Críticas" e "Recomendações".  Essas notificações são válidas para todos os serviços. Você não pode optar por receber notificações apenas para determinados serviços, por exemplo, agentes ou NetApp Backup and Recovery.</block>
   <block id="7fcffcce675dad706dbf53d68f1f86f2" category="paragraph">Todos os outros usuários e destinatários estão configurados para não receber nenhum e-mail de notificação. Portanto, você precisará configurar as definições de notificação para quaisquer usuários adicionais.</block>
@@ -6310,4 +6309,5 @@
   <block id="3726f34b9bf1c6c6d98054942b244313" category="cell">RANSOMWARE_RESILIENCE_USER_BEHAVIOR_ADMIN</block>
   <block id="91a470b0f7bf1c1702a23ad6d9d4159d" category="cell">VISUALIZADOR DE COMPORTAMENTO DO USUÁRIO DE RESILIÊNCIA A RANSOMWARE</block>
   <block id="a67d722a1a98561bf88726ffcf6ecda7" category="cell">SNAPCENTER_ADMIN</block>
+  <block id="6b0a56bcf40e8d005fd8e9e5b2559479" category="list-text">O Console envia notificações por e-mail para o agente, licenças e assinaturas, NetApp Copy and Sync, NetApp Backup and Recovery e NetApp Ransomware Resilience.</block>
 </blocks>
