@@ -30,6 +30,7 @@ Observe o seguinte sobre como conceder acesso no NetApp Console:
 * Todos os usuários devem primeiro se cadastrar no NetApp Console antes de obterem acesso aos recursos, mesmo que façam parte de um grupo federado.
 * Você deve atribuir explicitamente uma função a cada usuário no Console antes que ele possa acessar os recursos, mesmo que seja membro de um grupo federado ao qual já tenha sido atribuída uma função.
 * Você pode adicionar contas de serviço diretamente do Console e atribuir funções a elas.
+* Você pode escolher entre as funções compatíveis ao atribuir funções a usuários ou contas de serviço.
 
 
 
@@ -74,7 +75,7 @@ Observe o seguinte:
 
 . *Selecione uma categoria* e depois selecione uma *Função* que forneça ao membro permissões para os recursos associados à organização, pasta ou projeto que você selecionou.
 +
-link:reference-iam-predefined-roles.html["Saiba mais sobre funções de acesso"] .
+Apenas as funções compatíveis são exibidas na lista suspensa. link:reference-iam-predefined-roles.html["Saiba mais sobre funções de acesso"].
 
 . Para conceder acesso a mais pastas, projetos ou funções, selecione *Adicionar função*, escolha a categoria de pasta, projeto ou função e selecione uma função.
 . Selecione *Adicionar*.
@@ -163,7 +164,7 @@ Observe o seguinte:
 
 . Selecione uma *Categoria* e, em seguida, selecione uma *Função* que conceda ao membro permissões para os recursos na organização, pasta ou projeto que você selecionou.
 +
-link:reference-iam-predefined-roles.html["Saiba mais sobre funções de acesso"] .
+Apenas as funções compatíveis são exibidas na lista suspensa. link:reference-iam-predefined-roles.html["Saiba mais sobre funções de acesso"].
 
 . Para conceder acesso a mais pastas, projetos ou funções, selecione *Adicionar função*, escolha a categoria de pasta, projeto ou função e selecione uma função.
 

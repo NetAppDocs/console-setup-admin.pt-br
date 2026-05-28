@@ -40,10 +40,6 @@ O NetApp Console IAM é construído com base em três tipos de componentes: comp
 Os componentes organizacionais—organização, pastas e projetos—formam uma hierarquia que determina como os recursos são agrupados e como o acesso é delegado.
 
 Organização:: Uma _organização_ é o nível mais alto do sistema Console IAM e normalmente representa sua empresa. Sua organização consiste em pastas, projetos, membros, funções e recursos. Os recursos são associados a projetos e os membros recebem funções no nível da organização, da pasta ou do projeto.
-
-
-Você também pode verificar sua organização para vinculá-la à identidade da sua conta comercial NetApp, garantindo uma governança consistente em todos os sistemas NetApp. link:concept-verified-organization.html["Saiba mais sobre organizações verificadas no NetApp Console"].
-
 Projetos:: Os projetos agrupam recursos de storage. Atribua recursos a projetos e conceda acesso aos usuários no nível do projeto. Os recursos podem pertencer a vários projetos. Os usuários com acesso a um projeto podem usar seus recursos.
 +
 --

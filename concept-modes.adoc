@@ -125,16 +125,19 @@ NetApp recomenda que os clientes trabalhem com seu representante NetApp para mig
 | Armazenamento em nuvem do Google | Sim 
 
 
+| Acesso à assinatura Keystone | Sim 
+
+
 | Clusters ONTAP locais | Necessário para descoberta e gerenciamento. Você pode usar a descoberta direta sem um agente do Console, mas precisa de um agente para usar os recursos de gerenciamento. 
 
 
 | StorageGRID | Sim 
 
 
-| Cargas de trabalho | Não 
+| Cargas de trabalho | Não .8+| *Serviços de Dados* 
 
 
-.8+| *Serviços de Dados* | NetApp Backup and Recovery | Sim 
+| NetApp Backup and Recovery | Sim 
 
 
 | Classificação da NetApp | Sim 
@@ -155,10 +158,10 @@ NetApp recomenda que os clientes trabalhem com seu representante NetApp para mig
 | NetApp Cloud Tiering | Sim 
 
 
-| NetApp Volume Caching | Sim 
+| NetApp Volume Caching | Sim .5+| *NetApp recursos do contrato de suporte* 
 
 
-.5+| *NetApp recursos do contrato de suporte* | Consultor digital | Sim 
+| Consultor digital | Sim 
 
 
 | Eficiência econômica | Sim 
@@ -170,10 +173,10 @@ NetApp recomenda que os clientes trabalhem com seu representante NetApp para mig
 | Atualizações de software | Não 
 
 
-| Sustentabilidade | Sim 
+| Sustentabilidade | Sim .12+| *Funcionalidades administrativas* 
 
 
-.12+| *Funcionalidades administrativas* | Auditoria | Não 
+| Auditoria | Não 
 
 
 | Centro de automação | Não 
