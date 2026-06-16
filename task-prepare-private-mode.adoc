@@ -76,7 +76,7 @@ Red Hat Enterprise Linux
 
 8,6 a 8,10
  a| 
-3.9.42 ou posterior com o Console em modo privado
+4.0.0 ou posterior com o Console em modo privado
  a| 
 Podman versão 4.6.1 ou 4.9.4
 
@@ -91,7 +91,7 @@ Ubuntu
  a| 
 22,04 LTS
  a| 
-3.9.29 ou posterior
+4.0.0 ou posterior
  a| 
 Docker Engine 23.0.6 a 26.0.0
 
