@@ -129,7 +129,7 @@ https://_ipaddress_[]
 .. Digite um nome para o sistema.
 .. Em *Você está executando em um ambiente seguro?* mantenha o modo restrito desabilitado.
 +
-Você deve manter o modo restrito desabilitado porque estas etapas descrevem como usar o Console no modo padrão.  Você deve habilitar o modo restrito somente se tiver um ambiente seguro e quiser desconectar esta conta dos serviços de backend do Console.  Se for esse o caso,link:task-quick-start-restricted-mode.html["siga as etapas para começar a usar o NetApp Console no modo restrito"] .
+Você deve manter o modo restrito desativado porque estas etapas descrevem como usar o Console no modo padrão. Você deve ativar o modo restrito somente se tiver um ambiente seguro e quiser desconectar esta conta dos serviços de backend do Console. Se for esse o caso, link:./task-quick-start-restricted-mode.html["siga as etapas para começar a usar o NetApp Console no modo restrito"].
 
 .. Selecione *Vamos começar*.
 

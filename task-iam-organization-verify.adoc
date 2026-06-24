@@ -20,7 +20,7 @@ Por padrão, Digital Advisor exibe todas as contas NetApp associadas à sua empr
 
 == Antes de começar
 
-Você precisa ter a função de administrador da organização para verificar sua organização. Seu usuário também precisa estar associado a uma conta do site de suporte da NetApp (NSS). link:task-adding-nss-accounts["Aprenda como associar sua conta NSS"].
+Você precisa ter a função de administrador da organização para verificar sua organização. Seu usuário também precisa estar associado a uma conta do site de suporte da NetApp (NSS). link:task-adding-nss-accounts.html["Aprenda como associar sua conta NSS"].
 
 
 NOTE: Se sua empresa tiver apenas uma conta comercial e seu usuário estiver associado a uma conta do site de suporte da NetApp, o Console verificará automaticamente sua organização.
