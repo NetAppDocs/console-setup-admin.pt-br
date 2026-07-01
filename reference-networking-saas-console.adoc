@@ -100,4 +100,11 @@ https://api.workloads.netapp.com
  a| 
 O console baseado na web contata este endpoint para interagir com as APIs do Workload Factory, a fim de gerenciar e operar cargas de trabalho baseadas no FSx para ONTAP.
 
+
+
+ a| 
+\https://ws.workloads.bluexp.netapp.com
+ a| 
+Utilizado pelo backend do Workload Factory para consultar o agente do Console em busca de operações do ONTAP.
+
 |===
