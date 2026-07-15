@@ -21,6 +21,7 @@ TIP: Você pode pertencer a várias organizações se outra organização o conv
 
 
 
+[[switch-between-organizations]]
 == Alternar entre organizações
 
 Se você for membro de várias organizações, poderá alternar entre elas a qualquer momento.
@@ -39,6 +40,7 @@ A aba *Parceria* não é exibida se você não tiver nenhuma organização parce
 
 
 
+[[switch-between-projects]]
 == Alternar entre projetos
 
 Se sua organização incluir vários projetos e você tiver acesso a eles, poderá alternar entre eles a qualquer momento.
@@ -56,6 +58,7 @@ image:screenshot-iam-switch-projects-select.png["Uma captura de tela do menu Esc
 
 
 
+[[switch-between-console-agents]]
 == Alternar entre agentes do Console
 
 Se você tiver vários agentes do Console, poderá alternar entre eles para ver os sistemas associados a um agente específico.
@@ -70,6 +73,7 @@ link:task-iam-associate-agents.html["Associar agentes a pastas e projetos"] .
 
 
 
+[[related-information]]
 == Informações relacionadas
 
 * link:concept-identity-and-access-management.html["Saiba mais sobre identidade e acesso no NetApp Console"]

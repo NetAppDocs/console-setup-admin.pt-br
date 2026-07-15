@@ -18,6 +18,7 @@ Quando a configuração da rede for alterada, talvez seja necessário atualizar 
 
 
 
+[[change-the-ip-address-for-an-agent]]
 == Alterar o endereço IP de um agente
 
 Você pode alterar os endereços IP internos e públicos da instância do agente atribuída pelo seu provedor de nuvem, se necessário.
@@ -55,6 +56,7 @@ system configuration backup settings modify -destination <target-location>
 ----
 
 
+[[edit-an-agents-uris]]
 == Editar URIs de um agente
 
 Atualize o URI de um agente do Console caso seus requisitos de rede mudem. Isso garante o gerenciamento ininterrupto, seguro e em conformidade da sua infraestrutura de storage.

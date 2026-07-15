@@ -22,6 +22,7 @@ O Data Classification oferece suporte a dois papéis:
 
 
 
+[[compliance-admin]]
 == Administrador de conformidade
 
 A função de Compliance admin funciona apenas no nível da organização para gerenciar o acesso aos recursos de Data Classification. Se um usuário tiver responsabilidades inferiores às de um Organization admin, ele deverá ter a função de Compliance admin para instalar o Data Classification.
@@ -34,12 +35,14 @@ NOTE: O administrador de Compliance foi adicionado ao Data Classification na ver
 
 
 
+[[classification-viewer]]
 == Visualizador de classificação
 
 O visualizador de Classificação foi projetado para usuários que precisam acessar os resultados da verificação em Data Classification, mas não precisam acessar os recursos de configuração. Usuários com a função de visualizador de Classificação podem visualizar os resultados do mapeamento e das verificações completas para avaliar áreas para economia de storage ou riscos potenciais de dados. Usuários com a função de visualizador de Classificação também podem gerar relatórios para os recursos aos quais têm acesso. Esses usuários não podem habilitar ou desabilitar a verificação de volumes, buckets ou esquemas de banco de dados.
 
 
 
+[[more-information]]
 == Mais informações
 
 * link:https://docs.netapp.com/us-en/data-services-data-classification/concept-classification.html["Saiba mais sobre NetApp Data Classification"^]

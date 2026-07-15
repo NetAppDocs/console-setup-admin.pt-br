@@ -4,6 +4,7 @@
 
 
 
+[[new-secure-endpoints-to-obtain-connector-images]]
 === Novos endpoints seguros para obter imagens do conector
 
 Quando você instala o Connector, ou quando ocorre uma atualização automática, o Connector entra em contato com repositórios para baixar imagens para a instalação ou atualização.  Por padrão, o Conector sempre contatou os seguintes endpoints:

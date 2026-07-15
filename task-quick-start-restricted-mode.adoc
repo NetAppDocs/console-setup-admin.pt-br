@@ -51,6 +51,7 @@ NetApp recomenda que os clientes trabalhem com seu representante NetApp para mig
 ====
 
 
+[[supported-features-and-services-for-netapp-console-in-restricted-mode]]
 == Recursos e serviços compatíveis para o NetApp Console no modo restrito
 
 A tabela a seguir lista os recursos de gerenciamento de storage, serviços de dados e recursos administrativos disponíveis no NetApp Console quando você o instala no modo restrito.

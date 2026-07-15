@@ -4,6 +4,7 @@
 
 
 
+[[console-agent-4-3-0]]
 === Agente de console 4.3.0
 
 A versão 4.3.0 suporta tanto o modo padrão quanto o modo restrito.
@@ -17,6 +18,7 @@ link:https://docs.netapp.com/us-en/console-setup-admin/task-troubleshoot-agent.h
 
 
 
+[[netapp-console-administration]]
 === Administração do NetApp Console
 
 Esta versão inclui o seguinte:

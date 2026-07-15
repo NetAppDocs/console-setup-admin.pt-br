@@ -25,6 +25,7 @@ Ao implantar um agente na AWS, é iniciada uma instância EC2 executando Linux e
 
 
 
+[[step-1-set-up-networking]]
 == Etapa 1: configurar a rede
 
 Certifique-se de que o local de rede do agente do Console atenda aos seguintes requisitos para gerenciar recursos de nuvem híbrida.
@@ -145,6 +146,7 @@ Implemente esse acesso à rede depois de criar o agente do Console.
 
 
 
+[[step-2-set-up-aws-permissions]]
 == Etapa 2: configurar permissões da AWS
 
 Para se preparar para uma implantação de mercado, crie políticas do IAM na AWS e anexe-as a uma função do IAM.  Ao criar o agente do Console no AWS Marketplace, você será solicitado a selecionar essa função do IAM.
@@ -176,6 +178,7 @@ Agora você tem uma função do IAM que pode ser associada à instância do EC2 
 
 
 
+[[step-3-review-instance-requirements]]
 == Etapa 3: Revisar os requisitos da instância
 
 Ao criar o agente do Console, você precisa escolher um tipo de instância do EC2 que atenda aos seguintes requisitos.
@@ -187,6 +190,7 @@ Tipo de instância AWS EC2:: Um tipo de instância que atende aos requisitos de 
 
 
 
+[[step-4-create-the-console-agent]]
 == Etapa 4: criar o agente do console
 
 Crie o agente do Console diretamente do AWS Marketplace.

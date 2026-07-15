@@ -18,6 +18,7 @@ Você pode atribuir a função de analista de suporte operacional aos usuários 
 
 
 
+[[operational-support-analyst]]
 == Analista de suporte operacional
 
 [cols="1,2"]

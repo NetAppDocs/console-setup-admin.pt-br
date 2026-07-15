@@ -20,6 +20,7 @@ No Console, cada usuário tem um perfil que contém informações sobre o usuár
 
 
 
+[[change-your-display-name]]
 == Alterar seu nome de exibição
 
 Você pode alterar o nome de exibição do seu Console, que o identifica para outros usuários. Você não pode alterar seu nome de usuário ou endereço de e-mail.
@@ -32,6 +33,7 @@ Você pode alterar o nome de exibição do seu Console, que o identifica para ou
 
 
 
+[[elevate-your-role-in-read-only-mode]]
 == Aprimore sua função no modo somente leitura.
 
 Em alguns casos, o administrador da sua organização pode colocá-la em modo somente leitura. Se você possui uma função de administrador, precisa elevar suas permissões para fazer alterações. Isso garante que as alterações sejam intencionais e autorizadas.
@@ -50,6 +52,8 @@ image:screenshot-user-elevated.png["Uma captura de tela que mostra o controle de
 
 
 
+[[configure-multi-factor-authentication]]
+[[task-user-mfa]]
 == Configurar autenticação multifator
 
 Configure a autenticação multifator (MFA) para melhorar a segurança exigindo um segundo método de verificação.
@@ -78,6 +82,7 @@ Depois de configurar o MFA, o Console solicitará que você insira um código ú
 
 
 
+[[regenerate-your-mfa-recovery-code]]
 == Regenere seu código de recuperação MFA
 
 Você só pode usar códigos de recuperação uma vez.  Se você usar ou perder o seu, crie um novo.
@@ -91,6 +96,7 @@ Você só pode usar códigos de recuperação uma vez.  Se você usar ou perder 
 
 
 
+[[delete-your-mfa-configuration]]
 == Excluir sua configuração de MFA
 
 
@@ -104,6 +110,8 @@ NOTE: Se você não conseguir acessar seu aplicativo de autenticação ou códig
 
 
 
+[[contact-your-organization-administrator]]
+[[contact-admin]]
 == Entre em contato com o administrador da sua organização
 
 Se precisar entrar em contato com o administrador da sua organização, você pode enviar um e-mail diretamente do Console.  O administrador gerencia contas de usuários e permissões dentro da sua organização.
@@ -120,6 +128,7 @@ NOTE: Você deve ter um aplicativo de e-mail padrão configurado no seu navegado
 
 
 
+[[configure-dark-mode-dark-theme]]
 == Configurar modo escuro (tema escuro)
 
 Você pode configurar o Console para exibir no modo escuro.

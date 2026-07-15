@@ -30,6 +30,7 @@ Você também pode adicionar um domínio verificado adicional a uma federação 
 ====
 
 
+[[enable-a-federation]]
 == Habilitar uma federação
 
 Se você criou uma federação, mas ela não está habilitada, você pode habilitá-la na página *Federação*.  Habilitar uma federação permite que usuários associados à federação façam login no Console usando suas credenciais corporativas.  Crie e teste a federação com sucesso antes de habilitá-la.
@@ -42,6 +43,7 @@ Se você criou uma federação, mas ela não está habilitada, você pode habili
 
 
 
+[[add-a-verified-domain-to-an-existing-federation]]
 == Adicionar um domínio verificado a uma federação existente
 
 Você pode adicionar um domínio verificado a uma federação existente no Console para usar vários domínios com o mesmo provedor de identidade (IdP).
@@ -58,6 +60,7 @@ Você já deve ter verificado o domínio no Console antes de poder adicioná-lo 
 
 
 
+[[updating-an-expiring-federated-connection]]
 == Atualizando uma conexão federada que está expirando
 
 Você pode atualizar os detalhes de uma federação no Console.  Por exemplo, você precisará atualizar a federação se as credenciais, como um certificado ou segredo do cliente, expirarem.  Quando necessário, atualize a data de notificação para lembrá-lo de atualizar a conexão antes que ela expire.
@@ -75,6 +78,7 @@ IMPORTANT: Atualize o Console antes de atualizar seu IdP para evitar problemas d
 
 
 
+[[test-an-existing-federation]]
 == Testar uma federação existente
 
 Teste a conexão de uma federação existente para verificar se ela funciona.  Isso pode ajudar você a identificar quaisquer problemas com a federação e solucioná-los.
@@ -89,6 +93,7 @@ Teste a conexão de uma federação existente para verificar se ela funciona.  I
 
 
 
+[[disable-a-federation]]
 == Desabilitar uma federação
 
 Se você não precisar mais de uma federação, poderá desativá-la.  Isso impede que usuários associados à federação façam login no Console usando suas credenciais corporativas.  Você pode reativar a federação mais tarde, se necessário.
@@ -103,6 +108,7 @@ Desabilite uma federação antes de excluí-la, como ao desativar o IdP ou desco
 
 
 
+[[delete-a-federation]]
 == Excluir uma federação
 
 Se você não precisar mais de uma federação, poderá excluí-la.  Isso remove a federação e impede que qualquer usuário associado a ela faça login no Console usando suas credenciais corporativas.  Por exemplo, se o IdP estiver sendo desativado ou se a federação não for mais necessária.

@@ -42,6 +42,7 @@ A tabela destaca os recursos da página Auditoria e do Centro de Notificações 
 |===
 
 
+[[audit-user-activity-from-the-audit-page]]
 == Auditar a atividade do usuário na página Auditoria
 
 Use a página Auditoria para identificar quem executou uma ação ou seu status.
@@ -60,6 +61,7 @@ Por exemplo, você pode usar o filtro *Serviço* para mostrar ações relacionad
 
 
 
+[[download-audit-logs-from-the-audit-page]]
 === Baixe os logs de auditoria da página Auditoria
 
 Você pode baixar os logs de auditoria da página Auditoria para um arquivo CSV.  Isso permite que você mantenha um registro das ações que os usuários realizam na sua organização.  O arquivo CSV inclui todas as colunas no arquivo CSV baixado, independentemente dos filtros ou colunas exibidas na página Auditoria.
@@ -70,6 +72,8 @@ Você pode baixar os logs de auditoria da página Auditoria para um arquivo CSV.
 
 
 
+[[monitor-activities-using-the-notification-center]]
+[[notification-center]]
 == Monitore atividades usando o Centro de Notificações
 
 As notificações rastreiam as operações do Console para confirmar o sucesso.  Eles permitem que você visualize o status de muitas ações do Console que você iniciou durante sua sessão de login atual.  Nem todos os serviços do Console reportam informações ao Centro de Notificações.
@@ -80,6 +84,7 @@ Você também pode configurar o Console para enviar certos tipos de notificaçõ
 
 
 
+[[comparing-the-notification-center-with-alerts]]
 === Comparando o Centro de Notificações com alertas
 
 O Centro de Notificações permite que você visualize o status das operações iniciadas e configure notificações de alerta para determinados tipos de atividades do sistema.  Enquanto isso, os alertas permitem que você visualize problemas ou riscos potenciais no seu ambiente de armazenamento ONTAP relacionados à capacidade, disponibilidade, desempenho, proteção e segurança.
@@ -88,6 +93,7 @@ https://docs.netapp.com/us-en/console-alerts/index.html["Saiba mais sobre os ale
 
 
 
+[[notification-types]]
 === Tipos de notificação
 
 O Console classifica as notificações nas seguintes categorias:
@@ -116,6 +122,7 @@ O Console classifica as notificações nas seguintes categorias:
 |===
 
 
+[[filter-notifications]]
 === Filtrar notificações
 
 Por padrão, você verá todas as notificações ativas na Central de Notificações.  Você pode filtrar as notificações que vê para mostrar apenas aquelas que são importantes para você.  Você pode filtrar por "Serviço" e por "Tipo" de notificação.
@@ -126,6 +133,7 @@ Por exemplo, se você quiser ver apenas notificações de "Erro" e "Aviso" para 
 
 
 
+[[dismiss-notifications]]
 === Descartar notificações
 
 Você pode remover notificações da página se não precisar mais vê-las.  Você pode descartar notificações individualmente ou todas de uma vez.
@@ -136,6 +144,7 @@ Para descartar notificações individuais, passe o cursor sobre a notificação 
 
 
 
+[[set-email-notification-settings]]
 === Definir configurações de notificação por e-mail
 
 Você pode enviar tipos específicos de notificações por e-mail para ser informado sobre atividades importantes do sistema, mesmo quando não estiver conectado. Os e-mails podem ser enviados a qualquer usuário que faça parte da sua organização ou conta, ou a qualquer outro destinatário que precise estar ciente de certos tipos de atividade do sistema.
@@ -169,6 +178,7 @@ A página *Destinatários adicionais* permite que você configure o Console para
 
 
 
+[[add-additional-email-recipients]]
 === Adicionar destinatários de e-mail adicionais
 
 Os usuários que aparecem na página _Usuários da organização_ são preenchidos automaticamente a partir dos usuários da sua organização ou conta.  Você pode adicionar endereços de e-mail na página _Destinatários adicionais_ para outras pessoas ou grupos que não têm acesso ao Console, mas que precisam ser notificados sobre determinados tipos de alertas e notificações.

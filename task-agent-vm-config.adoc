@@ -29,6 +29,7 @@ Você só pode visualizar (e não atualizar) informações sobre o endereço IP,
 
 
 
+[[access-the-vm-maintenance-console]]
 == Acesse o console de manutenção da VM
 
 Você pode acessar o console de manutenção a partir do cliente vSphere.
@@ -42,6 +43,7 @@ Você pode acessar o console de manutenção a partir do cliente vSphere.
 
 
 
+[[change-the-maint-user-password]]
 === Alterar a senha do usuário de manutenção
 
 Você pode alterar a senha para o `maint` usuário.
@@ -57,6 +59,7 @@ Você pode alterar a senha para o `maint` usuário.
 
 
 
+[[increase-the-cpu-or-ram-of-the-vm-instance]]
 === Aumente a CPU ou a RAM da instância da VM
 
 Você pode aumentar a CPU ou a RAM da instância da VM que hospeda o agente do Console.
@@ -87,6 +90,7 @@ Edite as configurações da instância da máquina virtual no seu vCenter ou hos
 
 
 
+[[view-network-settings-for-the-agent-vm]]
 === Exibir configurações de rede para a VM do agente
 
 Visualize as configurações de rede da VM do agente no vSphere client para confirmar ou solucionar problemas de rede. Você só pode visualizar (não atualizar) as seguintes configurações de rede: endereço IP e detalhes de DNS.
@@ -102,6 +106,7 @@ Visualize as configurações de rede da VM do agente no vSphere client para conf
 
 
 
+[[update-the-static-routes-for-the-agent-vm]]
 === Atualizar as rotas estáticas para a VM do agente
 
 Adicione, atualize ou remova rotas estáticas para a VM do agente, conforme necessário.
@@ -120,6 +125,7 @@ Adicione, atualize ou remova rotas estáticas para a VM do agente, conforme nece
 
 
 
+[[update-domain-search-settings-for-the-agent-vm]]
 === Atualizar as configurações de pesquisa de domínio para a VM do agente
 
 Você pode atualizar as configurações do domínio de pesquisa para a VM do agente.
@@ -138,6 +144,8 @@ Você pode atualizar as configurações do domínio de pesquisa para a VM do age
 
 
 
+[[access-the-agent-diagnostic-tools]]
+[[connect-vcenter-host]]
 === Acesse as ferramentas de diagnóstico do agente
 
 Acesse ferramentas de diagnóstico para solucionar problemas com o agente do Console.  O Suporte da NetApp pode solicitar que você faça isso ao solucionar problemas.
@@ -153,6 +161,7 @@ Acesse ferramentas de diagnóstico para solucionar problemas com o agente do Con
 
 
 
+[[access-the-agent-diagnostic-tools-remotely]]
 === Acesse as ferramentas de diagnóstico do agente remotamente
 
 Você pode acessar ferramentas de diagnóstico remotamente com uma ferramenta como o Putty.  Habilite o acesso SSH à VM do agente atribuindo uma senha de uso único.

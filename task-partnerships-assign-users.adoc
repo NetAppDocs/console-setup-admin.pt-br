@@ -23,6 +23,7 @@ Você pode remover usuários de uma parceria a qualquer momento. A remoção de 
 
 
 
+[[add-members-to-a-partnership]]
 == Adicionar membros a uma parceria
 
 Ao adicionar membros a uma parceria, o *administrador da parceria* da organização parceira deve atribuir-lhes funções para determinados recursos em sua organização antes que eles possam acessar esses recursos.
@@ -39,6 +40,7 @@ Depois de adicionar membros a uma parceria, os membros são exibidos como membro
 
 
 
+[[remove-members-from-a-partnership]]
 == Remover membros de uma parceria
 
 Você pode remover membros de uma parceria a qualquer momento. A remoção de um usuário de uma parceria revoga imediatamente o acesso dele a todos os recursos da organização parceira.
@@ -55,6 +57,7 @@ Se você quiser ajustar a função de um membro ou os recursos que ele pode aces
 
 
 
+[[view-role-information-for-a-user]]
 == Exibir informações de função de um usuário
 
 Você pode visualizar a função que foi atribuída a um usuário e os recursos associados.

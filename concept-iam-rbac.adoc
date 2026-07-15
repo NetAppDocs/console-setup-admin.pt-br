@@ -26,6 +26,7 @@ Você pode atribuir aos usuários várias funções para o mesmo escopo ou para 
 
 
 
+[[types-of-console-organization-members]]
 == Tipos de membros da organização Console
 
 Existem três tipos de membros em uma organização NetApp Console:
@@ -39,6 +40,7 @@ link:task-iam-manage-members-permissions.html#add-members["Aprenda como adiciona
 
 
 
+[[predefined-roles-in-netapp-console]]
 == Funções predefinidas no NetApp Console
 
 O NetApp Console inclui funções predefinidas que você pode atribuir aos membros da organização. Cada função inclui permissões que especificam quais ações um membro pode realizar dentro do seu escopo atribuído (organização, pasta ou projeto).

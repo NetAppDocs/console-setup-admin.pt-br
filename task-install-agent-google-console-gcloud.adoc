@@ -25,6 +25,8 @@ Ao implantar um agente no Google Cloud, é iniciada uma instância de máquina v
 
 
 
+[[step-1-set-up-networking]]
+[[networking-gcp-agent]]
 == Etapa 1: configurar a rede
 
 Configure a rede para garantir que o agente do Console possa gerenciar recursos, com conexões a redes de destino e acesso de saída à Internet.
@@ -135,6 +137,8 @@ Implemente este requisito de rede após criar o agente do Console.
 
 
 
+[[step-2-set-up-permissions-to-create-the-console-agent]]
+[[agent-permissions-google]]
 == Etapa 2: configurar permissões para criar o agente do Console
 
 Antes de poder implantar um agente do Console a partir do Console, você precisa configurar permissões para o usuário da Plataforma Google que implanta a VM do agente do Console.
@@ -255,6 +259,8 @@ https://cloud.google.com/iam/docs/granting-changing-revoking-access#grant-single
 
 
 
+[[step-3-create-a-google-cloud-service-account-to-use-with-the-agent]]
+[[console-permissions-google]]
 == Etapa 3: Crie uma conta de serviço do Google Cloud para usar com o agente.
 
 Uma conta de serviço do Google Cloud é necessária para fornecer ao agente do Console as permissões necessárias para que o Console gerencie recursos no Google Cloud.  Ao criar o agente do Console, você precisará associar essa conta de serviço à VM do agente do Console.
@@ -314,6 +320,7 @@ Para mais detalhes, consulte https://cloud.google.com/iam/docs/granting-changing
 
 
 
+[[step-4-set-up-shared-vpc-permissions]]
 == Etapa 4: configurar permissões de VPC compartilhadas
 
 Se você estiver usando uma VPC compartilhada para implantar recursos em um projeto de serviço, precisará preparar suas permissões.
@@ -366,6 +373,7 @@ Observações:
 ====
 
 
+[[step-5-enable-google-cloud-apis]]
 == Etapa 5: habilitar as APIs do Google Cloud
 
 Você deve habilitar várias APIs do Google Cloud antes de implantar o agente do Console e o Cloud Volumes ONTAP.
@@ -390,6 +398,7 @@ https://cloud.google.com/apis/docs/getting-started#enabling_apis["Documentação
 
 
 
+[[step-6-create-the-console-agent]]
 == Etapa 6: Criar o agente do Console
 
 Crie um agente do Console diretamente do Console.

@@ -27,6 +27,7 @@ NOTE: Com a versão 4.0.0, a NetApp reduziu os pontos de extremidade de rede nec
 
 
 
+[[endpoints-contacted-by-netapp-console-and-console-agents]]
 == Endpoints contatados pelo NetApp Console e agentes do Console
 
 Cada agente implantado e cada computador que acessa o NetApp Console deve ter conexões com os endpoints listados abaixo.
@@ -58,6 +59,7 @@ Para obter imagens para atualizações do agente do Console.
 |===
 
 
+[[cloud-provider-endpoints-contacted-the-console-agent]]
 == Os endpoints do provedor de nuvem contataram o agente do Console
 
 Os agentes de console devem ter acesso a endpoints adicionais se estiverem implantados no seu provedor de nuvem.
@@ -71,12 +73,14 @@ Configure o acesso ao ponto de extremidade da rede do provedor de nuvem antes de
 
 
 
+[[data-services-endpoints-contacted-by-the-console-agent]]
 == Pontos de extremidade de serviços de dados contatados pelo agente do Console
 
 Alguns serviços de dados da NetApp , bem como o Cloud Volumes ONTAP, exigem que o agente tenha acesso adicional à Internet de saída.
 
 
 
+[[endpoints-for-cloud-volumes-ontap]]
 === Pontos de extremidade para Cloud Volumes ONTAP
 
 * link:https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/reference-networking-aws.html#outbound-internet-access-for-cloud-volumes-ontap-nodes["Endpoints para Cloud Volumes ONTAP na AWS"]
@@ -86,6 +90,7 @@ Alguns serviços de dados da NetApp , bem como o Cloud Volumes ONTAP, exigem que
 
 
 
+[[endpoints-for-workloads]]
 === Pontos finais para cargas de trabalho
 
 O agente do console deve ser capaz de acessar o seguinte endpoint para cargas de trabalho do NetApp .

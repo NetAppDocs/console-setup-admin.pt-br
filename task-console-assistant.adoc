@@ -18,6 +18,7 @@ Se você estiver usando o NetApp Console (SaaS) pela primeira vez e tiver a fun�
 
 
 
+[[required-roles-to-access-the-console-assistant]]
 == Funções necessárias para acessar o assistente do Console
 
 O assistente do Console está disponível somente para usuários com a função de administrador da organização.

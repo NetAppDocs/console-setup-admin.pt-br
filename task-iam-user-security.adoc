@@ -21,6 +21,7 @@ Superadministrador, administrador da organização ou administrador de pasta ou 
 
 
 
+[[reset-user-passwords-local-users-only]]
 == Redefinir senhas de usuários (somente usuários locais)
 
 Os administradores da organização não podem redefinir as senhas dos usuários locais. No entanto, eles podem instruir os usuários a redefinirem suas próprias senhas.
@@ -32,6 +33,8 @@ NOTE: Essa opção não está disponível para usuários em uma organização fe
 
 
 
+[[manage-a-users-multi-factor-authentication-mfa]]
+[[manage-mfa]]
 == Gerenciar a autenticação multifator (MFA) de um usuário
 
 Se um usuário perder o acesso ao seu dispositivo MFA, você poderá remover ou desabilitar a configuração do MFA.
@@ -58,6 +61,7 @@ A tabela *Membros* lista os membros da sua organização.
 
 
 
+[[recreate-the-credentials-for-a-service-account]]
 == Recriar as credenciais para uma conta de serviço
 
 Você pode criar novas credenciais para uma conta de serviço caso as perca ou precise atualizá-las.

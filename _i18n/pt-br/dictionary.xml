@@ -6273,4 +6273,88 @@
   <block id="c352b7fbc4bc73fdf6c2e56c32996413" category="paragraph">A versão 4.8.0 suporta tanto o modo padrão quanto o modo restrito.</block>
   <block id="179021adb01b0c7bf08f12ed1f7e4cea" category="paragraph">Esta versão inclui melhorias de segurança e correções de erros.</block>
   <block id="36864a323861d58f15ec5fb9c0a62095" category="section-title">8 de junho de 2026</block>
+  <block id="b52a1b50313551938bf7b6520c957f67" category="doc">Agente do Console 4.9.0</block>
+  <block id="8643cb7b1a266632b3ce870a592c9aed" category="paragraph">A versão 4.9.0 suporta tanto o modo padrão quanto o modo restrito.</block>
+  <block id="148954cf851ed4aa263eb6cd90ea3000" category="paragraph-title">Suporte para controle de acesso baseado em funções para Cloud Volumes ONTAP</block>
+  <block id="bfc35791f70b3b115636ea79999bc1e3" category="paragraph">O console oferece suporte ao controle de acesso baseado em funções para Cloud Volumes ONTAP.</block>
+  <block id="a849f909985995e89c42154f270a1245" category="inline-link-macro">Saiba mais sobre o controle de acesso baseado em funções para Cloud Volumes ONTAP</block>
+  <block id="ea256e0ef091d570fc3443bfdb29b124" category="paragraph"><block ref="8c5db5921f383526df21d84d3b1bfd83" category="inline-link-macro-rx"></block>.</block>
+  <block id="e0bcb2ebdbad366327cfe5a2bb3842af" category="summary">Você pode atribuir as seguintes funções aos usuários para conceder-lhes acesso ao Cloud Volumes ONTAP no Console. As funções do Cloud Volumes ONTAP oferecem a flexibilidade de atribuir aos usuários uma função específica para as tarefas que eles precisam realizar em sua organização.</block>
+  <block id="38231d7ab948e14954505c434dbc3406" category="doc">Funções de acesso do Cloud Volumes ONTAP no NetApp Console</block>
+  <block id="cf1bb4e2b95630bcd705b5ed0583a3f6" category="paragraph">Você pode atribuir as seguintes funções aos usuários para conceder acesso ao Cloud Volumes ONTAP no Console. As funções do Cloud Volumes ONTAP oferecem a flexibilidade de atribuir aos usuários uma função específica para as tarefas que eles precisam realizar em sua organização. Como você atribui as funções depende das práticas do seu negócio e de gerenciamento de storage.</block>
+  <block id="0ef7f8c52a11ca17c940eb122edda23d" category="paragraph">Cloud Volumes ONTAP utiliza as seguintes funções:</block>
+  <block id="ccb8cf6de876397f5af5fd2969199a4c" category="list-text">*Cloud Volumes ONTAP admin*: fornece acesso completo a todas as operações do Cloud Volumes ONTAP.</block>
+  <block id="f89da74408fedae3ccfafd61cfb7bbd0" category="list-text">*Cloud Volumes ONTAP operator*: Execute operações importantes de storage, como descobrir e gerenciar sistemas Cloud Volumes ONTAP, incluindo adicionar volumes, agregados, snapshots e replicações, modificar algumas configurações e atualizar versões do Cloud Volumes ONTAP.</block>
+  <block id="0d01873a225e72f3074f310aae6b4cd1" category="list-text">*Cloud Volumes ONTAP viewer*: Fornece acesso somente leitura às informações do Cloud Volumes ONTAP. Esta função não pode executar nenhuma operação ativa. Algumas abas e telas que contêm informações de configuração podem não estar disponíveis para visualizadores.</block>
+  <block id="e612ed3cf7a0977aec6f993000cc46f1" category="section-title">Como as mudanças de função entram em vigor</block>
+  <block id="283d45b1cce5ad68028d1e4ccf0bbb68" category="paragraph">Cloud Volumes ONTAP aplica controle de acesso baseado em funções (RBAC) usando um cache local para cada atribuição de função. O cache é atualizado automaticamente a cada hora. Se uma função for atribuída ou alterada, a alteração pode levar até uma hora para entrar em vigor. Após a conclusão da atualização, o Console habilita os fluxos de trabalho permitidos por essa função.</block>
+  <block id="99f9bec3d41eefb18e9b6540df4c9630" category="admonition">Quando um agente do Console é implantado pela primeira vez, ou quando um agente existente do Console é atualizado para a versão 4.9.0 ou posterior, o Console executa um processo de inicialização único que atribui funções do Cloud Volumes ONTAP aos usuários existentes na organização. Esse processo pode levar até 30 minutos para ser concluído.</block>
+  <block id="fee3007030dccd80255a7211926472b7" category="section-title">Permissões de função do Cloud Volumes ONTAP</block>
+  <block id="04133a29798abb95ff37ba8c50cf2155" category="cell">Visualizador do Cloud Volumes ONTAP</block>
+  <block id="eddfc9398b9966908680fb984db5a4af" category="cell">Operador do Cloud Volumes ONTAP</block>
+  <block id="f8ce0c164ea8a4e0ddd34253df0f4d02" category="cell">Administrador do Cloud Volumes ONTAP</block>
+  <block id="70c96718d28204569b4d506719f1b08c" category="paragraph">*Página de sistemas*:</block>
+  <block id="68508a9dfe7d188ddfacdf20bf897e7f" category="paragraph">Insira um sistema</block>
+  <block id="6b3c1595afc04f7a21a3249b677c0c9b" category="paragraph">Visualizar um volume</block>
+  <block id="bf4d918de9d256d487afb992811ca965" category="paragraph">Descubra um sistema</block>
+  <block id="3cbb7699679cf8ac6bb42f2d93fd4d72" category="paragraph">Adicionar um volume</block>
+  <block id="ef86e727369acd14c1154ae70c7818c2" category="paragraph">Use *Replicação* (não aplicável ao FSx for ONTAP ou sistemas on-premises)</block>
+  <block id="ebfc655a9ee5a72608591f3c5fc9a2c5" category="paragraph">Use arrastar e soltar para *Replicação* (com Cloud Volumes ONTAP como origem ou destino)</block>
+  <block id="770e6e1d37ec8e564116ac215a622e66" category="paragraph">Adicionar um sistema</block>
+  <block id="34d606f181de5f7ebc55948eff861656" category="paragraph">Acesse *Custo e desempenho otimizados*</block>
+  <block id="a319340d2793ad3feb216caae04b1972" category="paragraph">Abrir o System Manager</block>
+  <block id="78428d7e57376db0e62744220d91520f" category="paragraph">Ative o Cloud Volumes ONTAP</block>
+  <block id="ae52ff2fa45ec695a0eb4dddc56142e2" category="paragraph">Remover um sistema</block>
+  <block id="77c36d637ce6be24a47b2084784aaa2c" category="paragraph">*Página de agentes*:</block>
+  <block id="c15cd722e8101855682f654bf1796e4f" category="paragraph">Visualizar configurações do Cloud Volumes ONTAP</block>
+  <block id="afe14dca9719a7fe52b49677da4d8814" category="paragraph">Editar configurações do Cloud Volumes ONTAP</block>
+  <block id="dc586dfa749e8f2723104b54cbd24e88" category="paragraph">*Aba Overview*:</block>
+  <block id="5288a56300efd1e1c3e2751aa731a390" category="paragraph">Adicionar um agregado</block>
+  <block id="39ca4d74366a4f92b22ffc56ae7560da" category="paragraph">Use *Atualizar agora*</block>
+  <block id="905cb7c01c2c938fc7dfb74be192c7fe" category="paragraph">Atualizar a versão do ONTAP</block>
+  <block id="6e30995a6a4455f38520c4967a6891dc" category="paragraph">Edite a configuração *CIFS* no menu do lápis</block>
+  <block id="50384ef287bf4f3284ec6c4fdcbb197d" category="paragraph">Use o botão Liga/Desliga</block>
+  <block id="cc940bf2667209e4d71ddc12d8f2e5ed" category="paragraph">Defina uma senha</block>
+  <block id="89d30dd0d2abc48eac8a8820c224f0cb" category="paragraph">Remova o sistema da área de trabalho</block>
+  <block id="611740b36c016d17e48d1933b790fbcd" category="paragraph">Excluir o sistema</block>
+  <block id="dd1f6e9949dfffc643a8da7aace730ca" category="paragraph">Edite o seguinte usando o ícone de lápis no painel direito:</block>
+  <block id="e9b2a4ceea8a7547d6acff51725a45d5" category="list-text">*Tags do sistema*</block>
+  <block id="7b59bf185ead08ea8d76e9e065d0c541" category="list-text">*Tempo de inatividade programado*</block>
+  <block id="57a30152ed2185b0f66d4deefe98895f" category="list-text">*Classes de armazenamento*</block>
+  <block id="49d174862d061ffc45b535cfe19aa675" category="list-text">*Tipo de instância*</block>
+  <block id="351998bce1715b24f1ec7084565d4a3e" category="list-text">*Método de carregamento*</block>
+  <block id="84d510d425e276dc06d673c0b4026179" category="list-text">*Velocidade de escrita*</block>
+  <block id="47cf4ae2e1f94cc06b1198ad70feadf4" category="list-text">*Proteção contra ransomware*</block>
+  <block id="8c93fb65447e8e41a5b80cede16835fb" category="list-text">*Registro de suporte*</block>
+  <block id="78000761f276b3432ac1a0954ead15d0" category="list-text">*WORM*</block>
+  <block id="57361aebcdd7b8f5bd95eef8f458ca7d" category="paragraph">*Aba Volumes*:</block>
+  <block id="d50044469c0bf9ab38eff9cf7243fb25" category="paragraph">Clonar um volume</block>
+  <block id="5b5eeee4d1e6b7007829d66c8b144064" category="paragraph">Criar uma cópia instantânea</block>
+  <block id="9e32a435d22aa5cbc195e861b5fe629f" category="paragraph">Editar configurações de volume</block>
+  <block id="8e9a64bda9d21f945b6489df2e7946e1" category="paragraph">Excluir um volume</block>
+  <block id="ff1652826450f50c76cdfdda64d94e2f" category="paragraph">Restaurar a partir de uma cópia instantânea</block>
+  <block id="98ac35c4695c65fda5915fe55d337301" category="paragraph">Alterar o tipo de disco</block>
+  <block id="9f4aa892debf403a854859b0ca9c9ff6" category="paragraph">Alterar a política de tiering</block>
+  <block id="fdb328de5591e0e1226752360851ec3c" category="paragraph">*Aba Aggregates*:</block>
+  <block id="261c95ed5d454ef55df25657c605d472" category="paragraph">Aumentar capacidade</block>
+  <block id="8ce62ed0fdfe7abb736c3597956922c2" category="paragraph">Excluir um agregado</block>
+  <block id="08cce486a8251110d0aa4356efa31acd" category="paragraph">*Página de replicação* (com Cloud Volumes ONTAP como origem ou destino):</block>
+  <block id="444c64ac4c351f349e58d8d514287ab4" category="paragraph">Interromper replicação</block>
+  <block id="892027dedcdbb237fc210b3a00cf2ae5" category="paragraph">Ressincronizar replicação</block>
+  <block id="78c8c117652a47404403fff983b2f82f" category="paragraph">Replicação de resincronização reversa</block>
+  <block id="51f4afdf17b1f2127b36e48896363c41" category="paragraph">Edite o cronograma</block>
+  <block id="487bfcf1a1cc5511a69fc77de0b7b697" category="paragraph">Editar a taxa máxima de transferência</block>
+  <block id="d93259d25822e675cbf5c2324eca93de" category="paragraph">Atualizar replicação</block>
+  <block id="62ef027c0c691039af4f8f02b7fbb023" category="paragraph">Excluir replicação</block>
+  <block id="b56d101e2f90a7d1325719cb29a94d92" category="cell"><block ref="b56d101e2f90a7d1325719cb29a94d92" category="inline-link-macro-rx"></block></block>
+  <block id="2c4d9923a9d5b3c3a767052959fd8136" category="cell">CVO_ADMIN</block>
+  <block id="88158c4b6ccecd89ab78e336e14d21e2" category="cell">Fornece acesso completo a todas as operações do Cloud Volumes ONTAP.</block>
+  <block id="e3a725b478c365e353fb71da352b5528" category="cell"><block ref="e3a725b478c365e353fb71da352b5528" category="inline-link-macro-rx"></block></block>
+  <block id="c56cd6f914d687294a94bb04b6ac445f" category="cell">CVO_OPERATOR</block>
+  <block id="354977cef76cb978943529851a22368a" category="cell">Permite a execução de tarefas de gerenciamento diárias, incluindo a adição de volumes, a configuração de replicação e o gerenciamento de storage.</block>
+  <block id="78672301082003054933c3ae90d2a937" category="cell"><block ref="78672301082003054933c3ae90d2a937" category="inline-link-macro-rx"></block></block>
+  <block id="a705354c1854b9d3509c237079d3020f" category="cell">CVO_VIEWER</block>
+  <block id="6f9b7785bb9c36940a328cc9b5ee0194" category="cell">Fornece acesso somente leitura às informações do Cloud Volumes ONTAP. Esta função não pode executar nenhuma operação ativa.</block>
+  <block id="593b7503b2bb0ab3939f80c599e28d01" category="section-title">15 de julho de 2026</block>
+  <block id="82ee751249da8a12693a499bea6987f2" category="sidebar">Funções do Cloud Volumes ONTAP</block>
 </blocks>

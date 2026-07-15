@@ -25,6 +25,7 @@ Ao implantar um agente no Google Cloud, é iniciada uma instância de máquina v
 
 
 
+[[step-1-set-up-networking]]
 == Etapa 1: configurar a rede
 
 Configure a rede para permitir que o agente do Console gerencie recursos e se conecte às redes de destino e à Internet.
@@ -135,6 +136,8 @@ Implemente este requisito de rede após criar o agente do Console.
 
 
 
+[[step-2-set-up-permissions-to-create-the-console-agent]]
+[[agent-permissions-google]]
 == Etapa 2: configurar permissões para criar o agente do Console
 
 Configure permissões para o usuário do Google Cloud implantar a VM do agente do Console do Google Cloud.
@@ -258,6 +261,8 @@ https://cloud.google.com/iam/docs/granting-changing-revoking-access#grant-single
 
 
 
+[[step-3-set-up-permissions-for-the-console-agent-operations]]
+[[console-permissions-google]]
 == Etapa 3: Configurar permissões para as operações do agente do Console
 
 Uma conta de serviço do Google Cloud é necessária para fornecer ao agente do Console as permissões necessárias para que o Console gerencie recursos no Google Cloud.  Ao criar o agente do Console, você precisará associar essa conta de serviço à VM do agente do Console.
@@ -317,6 +322,7 @@ Para mais detalhes, consulte https://cloud.google.com/iam/docs/granting-changing
 
 
 
+[[step-4-set-up-shared-vpc-permissions]]
 == Etapa 4: configurar permissões de VPC compartilhadas
 
 Se você estiver usando uma VPC compartilhada para implantar recursos em um projeto de serviço, precisará preparar suas permissões.
@@ -369,6 +375,7 @@ Observações:
 ====
 
 
+[[step-5-enable-google-cloud-apis]]
 == Etapa 5: habilitar as APIs do Google Cloud
 
 Habilite várias APIs do Google Cloud antes de implantar o agente do Console e o Cloud Volumes ONTAP.
@@ -393,6 +400,7 @@ https://cloud.google.com/apis/docs/getting-started#enabling_apis["Documentação
 
 
 
+[[step-6-create-the-console-agent]]
 == Etapa 6: Criar o agente do Console
 
 Crie um agente do Console usando o Google Cloud.

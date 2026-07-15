@@ -23,6 +23,7 @@ A função de *Administrador de Parcerias* é necessária para criar e gerenciar
 
 
 
+[[initiate-an-organization-partnership]]
 == Iniciar uma parceria organizacional
 
 Você pode solicitar uma parceria com outra organização se souber o ID da organização.  A organização receptora aprova a solicitação antes que a parceria possa prosseguir.
@@ -41,6 +42,7 @@ A solicitação de parceria é enviada à organização parceira para aprovaçã
 
 
 
+[[approve-an-organization-partnership]]
 == Aprovar uma parceria organizacional
 
 Uma solicitação de parceria de organização deve ser aceita pela organização receptora antes que a parceria possa prosseguir.  Você deve ter a função *Administrador de parceria* para aprovar e gerenciar parcerias.
@@ -66,6 +68,7 @@ A parceria que você aprovou agora exibe o status *Established*. Usuários com a
 
 
 
+[[view-partnership-status]]
 == Ver status da parceria
 
 Veja o status das suas parcerias.
@@ -82,6 +85,7 @@ Administrador de parceria, visualizador de parceria.link:reference-iam-predefine
 
 
 
+[[disable-an-organization-partnership]]
 == Desabilitar uma parceria de organização
 
 Você deve ser membro da organização iniciadora para desabilitar uma parceria.  Desabilitar uma parceria revoga imediatamente o acesso a quaisquer recursos na sua organização que foram compartilhados com a organização parceira.

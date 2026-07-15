@@ -26,6 +26,7 @@ Superadministrador ou administrador da organização.
 
 
 
+[[enable-read-only-mode-for-your-console-organization]]
 == Ative o modo somente leitura para sua organização do Console.
 
 Ative o modo somente leitura para restringir as alterações na sua organização do Console. Todos os usuários ainda podem visualizar os recursos. Usuários com funções de administrador não podem executar nenhuma ação no Console sem elevar manualmente suas permissões.

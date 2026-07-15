@@ -24,6 +24,7 @@ Administrador da organização, administrador da federação, visualizador da fe
 
 
 
+[[single-sign-on-with-netapp-support-site]]
 == Autenticação única com o site de suporte da NetApp
 
 A federação com o site de suporte da NetApp permite que os usuários façam login no Console, no Active IQ Digital Advisor e em outros aplicativos associados usando as mesmas credenciais.
@@ -41,6 +42,7 @@ A equipe de suporte da NetApp analisa e processa sua solicitação.
 
 
 
+[[single-sign-on-with-your-identity-provider]]
 == Autenticação única com seu provedor de identidade
 
 Você pode configurar uma conexão federada com seu provedor de identidade para habilitar o logon único (SSO) para o Console.  O processo envolve configurar seu provedor de identidade para confiar na NetApp como provedora de serviços e, em seguida, criar a conexão no Console.
@@ -50,6 +52,7 @@ NOTE: Se você configurou a federação anteriormente usando o NetApp Cloud Cent
 
 
 
+[[supported-identity-providers]]
 === Provedores de identidade suportados
 
 A NetApp oferece suporte aos seguintes protocolos e provedores de identidade para federação:
@@ -66,6 +69,7 @@ A NetApp oferece suporte aos seguintes protocolos e provedores de identidade par
 
 
 
+[[federation-with-netapp-console-workflow]]
 === Federação com fluxo de trabalho do NetApp Console
 
 O NetApp oferece suporte somente a SSO iniciado pelo provedor de serviços (iniciado pelo SP).  Primeiro, você precisa configurar o provedor de identidade para confiar na NetApp como provedora de serviços.  Em seguida, você pode criar uma conexão no Console que usa a configuração do provedor de identidade.

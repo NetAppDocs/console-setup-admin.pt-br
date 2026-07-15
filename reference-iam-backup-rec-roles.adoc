@@ -29,6 +29,7 @@ Para obter detalhes sobre todas as funções de acesso ao NetApp Console, consul
 
 
 
+[[roles-used-for-common-actions]]
 == Funções usadas para ações comuns
 
 A tabela a seguir indica as ações que cada função do NetApp Backup and Recovery pode executar para todas as cargas de trabalho.
@@ -291,12 +292,14 @@ Não
 |===
 
 
+[[roles-used-for-workload-specific-actions]]
 == Funções usadas para ações específicas da carga de trabalho
 
 A tabela a seguir indica as ações que cada função do NetApp Backup and Recovery pode executar para cargas de trabalho específicas.
 
 
 
+[[kubernetes-workloads]]
 === Cargas de trabalho do Kubernetes
 
 Esta tabela indica as ações que cada função do NetApp Backup and Recovery pode executar para ações específicas de cargas de trabalho do Kubernetes.

@@ -28,6 +28,7 @@ NOTE: Implante um agente do Console na mesma região do Azure que os sistemas Cl
 
 
 
+[[step-1-set-up-networking]]
 == Etapa 1: configurar a rede
 
 Certifique-se de que o local da rede onde você planeja instalar o agente do Console atenda aos seguintes requisitos. Esses requisitos permitem que o agente do Console gerencie recursos em sua nuvem híbrida.
@@ -145,6 +146,7 @@ Implemente os requisitos de rede após criar o agente do Console.
 
 
 
+[[step-2-review-vm-requirements]]
 == Etapa 2: Revisar os requisitos da VM
 
 Ao criar o agente do Console, escolha um tipo de máquina virtual que atenda aos seguintes requisitos.
@@ -156,6 +158,7 @@ Tamanho da VM do Azure:: Um tipo de instância que atende aos requisitos de CPU 
 
 
 
+[[step-3-set-up-permissions]]
 == Etapa 3: Configurar permissões
 
 Você pode fornecer permissões das seguintes maneiras:
@@ -364,6 +367,7 @@ image:screenshot_azure_client_secret.gif["Uma captura de tela do portal do Azure
 ====
 
 
+[[step-4-create-the-console-agent]]
 == Etapa 4: criar o agente do console
 
 Inicie o agente do Console diretamente do Azure Marketplace.
@@ -448,6 +452,7 @@ Se você tiver armazenamento de Blobs do Azure na mesma assinatura do Azure em q
 
 
 
+[[step-5-provide-permissions-to-the-console-agent]]
 == Etapa 5: fornecer permissões ao agente do Console
 
 Agora que você criou o agente do Console, precisa fornecer a ele as permissões que configurou anteriormente.  Fornecer as permissões permite que o agente do Console gerencie seus dados e infraestrutura de armazenamento no Azure.

@@ -22,6 +22,7 @@ Você pode visualizar e gerenciar recursos na página *Recursos* do Console.
 
 
 
+[[console-resource-types]]
 == Tipos de recursos do console
 
 Você pode associar vários tipos de recursos a projetos na sua organização do NetApp Console :
@@ -40,6 +41,7 @@ Cargas de trabalho de backup e recuperação:: As cargas de trabalho de Backup a
 
 
 
+[[view-the-resources-in-your-organization]]
 == Visualize os recursos em sua organização
 
 Você pode visualizar recursos descobertos e não descobertos associados à sua organização. O sistema localiza recursos de armazenamento e os marca como não descobertos até que você os adicione ao Console.
@@ -64,6 +66,8 @@ NOTE: O Console exclui os recursos do Amazon FSx for NetApp ONTAP da página Rec
 
 
 
+[[associate-a-resource-with-folders-and-projects]]
+[[associate-resource]]
 == Associar um recurso a pastas e projetos
 
 Associe um recurso a uma pasta ou projeto para torná-lo disponível aos membros que têm permissões para essa pasta ou projeto.
@@ -90,6 +94,8 @@ link:task-iam-associate-agents.html["Aprenda como associar um agente do Console 
 
 
 
+[[view-the-folders-and-projects-associated-with-a-resource]]
+[[view-folders-and-projects]]
 == Visualizar as pastas e projetos associados a um recurso
 
 Você pode visualizar as pastas e os projetos associados a um recurso específico.
@@ -110,6 +116,8 @@ NOTE: Para ver quais membros da organização têm acesso ao recurso,link:task-i
 
 
 
+[[remove-a-resource-from-a-folder-or-project]]
+[[remove-resource]]
 == Remover um recurso de uma pasta ou projeto
 
 Para remover um recurso de uma pasta ou projeto, remova a sua associação. Isso impede que os membros gerenciem o recurso nessa pasta ou projeto.
@@ -125,6 +133,7 @@ NOTE: Para remover um recurso detectado de toda a organização, acesse a págin
 
 
 
+[[related-information]]
 == Informações relacionadas
 
 * link:concept-identity-and-access-management.html["Saiba mais sobre identidade e acesso no NetApp Console"]

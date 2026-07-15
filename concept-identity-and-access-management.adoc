@@ -29,12 +29,14 @@ image:diagram-iam-resource-hierarchy.png["Um diagrama conceitual que mostra os c
 
 
 
+[[identity-and-access-management-components]]
 == Componentes de gerenciamento de identidade e acesso
 
 O NetApp Console IAM é construído com base em três tipos de componentes: componentes organizacionais que definem a hierarquia, recursos que são atribuídos dentro dessa hierarquia e membros e funções que controlam quem pode acessar o quê.
 
 
 
+[[netapp-console-organizational-components]]
 === NetApp Console componentes organizacionais
 
 Os componentes organizacionais—organização, pastas e projetos—formam uma hierarquia que determina como os recursos são agrupados e como o acesso é delegado.
@@ -56,6 +58,7 @@ NOTE: Usuários com a função de administrador da organização podem adicionar
 
 
 
+[[resources]]
 === Recursos
 
 Um recurso é uma entidade que o Console reconhece e que pode ser atribuída a um projeto. Recursos incluem sistemas de storage, assinaturas do Keystone, algumas cargas de trabalho do NetApp Backup and Recovery, bem como agentes do Console.
@@ -87,6 +90,7 @@ link:task-iam-associate-agents.html["Aprenda como associar agentes a projetos."]
 
 
 
+[[members-and-roles]]
 === Membros e funções
 
 Os membros são os usuários e as contas de serviço da sua organização. As funções definem quais ações eles podem executar e em qual nível da hierarquia—organização, pasta ou projeto.
@@ -115,12 +119,14 @@ link:reference-iam-predefined-roles.html["Saiba mais sobre funções de acesso"]
 
 
 
+[[iam-strategy-examples]]
 == Exemplos de estratégia IAM
 
 A estrutura IAM ideal depende do tamanho da sua organização e de como suas equipes estão organizadas. Os exemplos a seguir mostram como diferentes organizações podem usar a hierarquia IAM para gerenciar o acesso de forma eficaz.
 
 
 
+[[small-organization-strategy]]
 === Estratégia para pequenas organizações
 
 Para organizações com menos de 50 usuários e gerenciamento de armazenamento centralizado, considere uma abordagem simplificada usando as funções de Superadministrador e Supervisualizador.
@@ -140,6 +146,7 @@ Para organizações com menos de 50 usuários e gerenciamento de armazenamento c
 
 
 
+[[multi-regional-enterprise-strategy]]
 === Estratégia empresarial multirregional
 
 Para grandes organizações com operações regionais e equipes especializadas, implemente uma abordagem hierárquica com pastas representando limites geográficos ou de unidades de negócios.
@@ -173,6 +180,7 @@ Para grandes organizações com operações regionais e equipes especializadas, 
 
 
 
+[[departmental-specialization-strategy]]
 === Estratégia de especialização departamental
 
 Para organizações com equipes especializadas que necessitam de acesso a serviços de dados específicos, utilize atribuições de funções direcionadas com base nas responsabilidades funcionais.
@@ -194,6 +202,7 @@ Para organizações com equipes especializadas que necessitam de acesso a servi�
 
 
 
+[[next-steps-with-iam-in-netapp-console]]
 == Próximos passos com o IAM no NetApp Console
 
 * link:task-iam-get-started.html["Introdução ao IAM no NetApp Console"]

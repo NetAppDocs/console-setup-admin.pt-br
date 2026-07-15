@@ -35,6 +35,7 @@ Consulte as tabelas a seguir para obter descrições detalhadas de cada função
 
 
 
+[[baseline-roles]]
 == Funções de base
 
 A tabela a seguir descreve as ações disponíveis para as funções de administrador e visualizador do Ransomware Resilience.
@@ -305,6 +306,7 @@ Sim
 |===
 
 
+[[user-behavior-roles]]
 == Funções de comportamento do usuário
 
 Para configurar configurações de comportamento suspeito do usuário e responder a alertas, um usuário deve ter a função de administrador de comportamento do usuário de resiliência ao ransomware. Para visualizar apenas alertas de comportamento suspeito do usuário, o usuário deve ter a função de visualizador de comportamento do usuário do Ransomware Resilience.

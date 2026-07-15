@@ -18,6 +18,7 @@ O gerenciamento de identidade e acesso (IAM) no NetApp Console fornece funções
 
 
 
+[[platform-roles]]
 == Funções da plataforma
 
 As funções da plataforma concedem permissões de administração do NetApp Console , incluindo atribuição de funções e gerenciamento de usuários.  O Console tem várias funções de plataforma.
@@ -55,6 +56,7 @@ As funções da plataforma concedem permissões de administração do NetApp Con
 |===
 
 
+[[application-roles]]
 == Funções de aplicação
 
 A seguir está uma lista de funções na categoria de aplicação.  Cada função concede permissões específicas dentro de seu escopo designado.  Usuários sem a função de aplicativo ou plataforma necessária não podem acessar o respectivo aplicativo.
@@ -92,6 +94,7 @@ A seguir está uma lista de funções na categoria de aplicação.  Cada funçã
 |===
 
 
+[[data-service-roles]]
 == Funções de serviço de dados
 
 A seguir está uma lista de funções na categoria de serviço de dados.  Cada função concede permissões específicas dentro de seu escopo designado.  Usuários que não tenham a função de serviço de dados necessária ou uma função de plataforma não poderão acessar o serviço de dados.
@@ -114,6 +117,15 @@ A seguir está uma lista de funções na categoria de serviço de dados.  Cada f
 
 
 | link:reference-iam-backup-rec-roles.html["Visualizador de backup e recuperação"] | VISUALIZADOR_DE_BACKUP | Padrão, Restrito, Privado | Ver informações de backup e recuperação. 
+
+
+| link:reference-iam-cvo-roles.html["Administrador do Cloud Volumes ONTAP"] | CVO_ADMIN | Padrão, Restrito, Privado | Fornece acesso completo a todas as operações do Cloud Volumes ONTAP. 
+
+
+| link:reference-iam-cvo-roles.html["Operador do Cloud Volumes ONTAP"] | CVO_OPERATOR | Padrão, Restrito, Privado | Permite a execução de tarefas de gerenciamento diárias, incluindo a adição de volumes, a configuração de replicação e o gerenciamento de storage. 
+
+
+| link:reference-iam-cvo-roles.html["Visualizador do Cloud Volumes ONTAP"] | CVO_VIEWER | Padrão, Restrito, Privado | Fornece acesso somente leitura às informações do Cloud Volumes ONTAP. Esta função não pode executar nenhuma operação ativa. 
 
 
 | link:reference-iam-disaster-rec-roles.html["Administrador de recuperação de desastres"] | ADMINISTRAÇÃO DE RECUPERAÇÃO DE DESASTRES | Padrão | Execute quaisquer ações no serviço NetApp Disaster Recovery . 
@@ -147,6 +159,7 @@ A seguir está uma lista de funções na categoria de serviço de dados.  Cada f
 |===
 
 
+[[related-links]]
 == Links relacionados
 
 * link:concept-identity-and-access-management.html["Saiba mais sobre o gerenciamento de identidade e acesso do NetApp Console"]

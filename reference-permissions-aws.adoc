@@ -18,6 +18,7 @@ Quando o NetApp Console inicia um agente do Console na AWS, ele anexa uma polít
 
 
 
+[[iam-policies]]
 == Políticas de IAM
 
 As políticas do IAM disponíveis abaixo fornecem as permissões que um agente do Console precisa para gerenciar recursos e processos dentro do seu ambiente de nuvem pública com base na sua região da AWS.
@@ -745,12 +746,14 @@ Para regiões padrão, as permissões são distribuídas em duas políticas.  Du
 ====
 
 
+[[how-the-aws-permissions-are-used]]
 == Como as permissões da AWS são usadas
 
 As seções a seguir descrevem como as permissões são usadas para cada serviço de gerenciamento ou dados do NetApp Console .  Essas informações podem ser úteis se suas políticas corporativas determinarem que as permissões sejam fornecidas somente quando necessário.
 
 
 
+[[amazon-fsx-for-ontap]]
 === Amazon FSx para ONTAP
 
 O agente do Console faz as seguintes solicitações de API para gerenciar um sistema de arquivos Amazon FSx para ONTAP :
@@ -785,6 +788,7 @@ O agente do Console faz as seguintes solicitações de API para gerenciar um sis
 
 
 
+[[amazon-s3-bucket-discovery]]
 === Descoberta de bucket do Amazon S3
 
 O agente do Console faz a seguinte solicitação de API para descobrir buckets do Amazon S3:
@@ -793,6 +797,7 @@ s3:ObterConfiguração de Criptografia
 
 
 
+[[netapp-backup-and-recovery]]
 === NetApp Backup and Recovery
 
 O agente faz as seguintes solicitações de API para gerenciar backups no Amazon S3:
@@ -886,6 +891,7 @@ Você só precisa das seguintes permissões se tiver habilitado os recursos de i
 
 
 
+[[netapp-data-classification]]
 === NetApp Data Classification
 
 O agente faz as seguintes solicitações de API para implantar a NetApp Data Classification:
@@ -939,6 +945,7 @@ O agente faz as seguintes solicitações de API para verificar buckets do S3 qua
 
 
 
+[[cloud-volumes-ontap]]
 === Cloud Volumes ONTAP
 
 O agente faz as seguintes solicitações de API para implantar e gerenciar o Cloud Volumes ONTAP na AWS.
@@ -1198,12 +1205,14 @@ O agente faz as seguintes solicitações de API para implantar e gerenciar o Clo
 |===
 
 
+[[change-log]]
 == Registro de alterações
 
 Conforme as permissões forem adicionadas e removidas, elas serão anotadas nas seções abaixo.
 
 
 
+[[24-february-2026]]
 === 24 fevereiro 2026
 
 A seguinte permissão agora é necessária para Data Classification:
@@ -1212,6 +1221,7 @@ cloudformation:ListStacks
 
 
 
+[[11-november-2025]]
 === 11 de novembro de 2025
 
 As seguintes permissões não são mais necessárias para o NetApp Backup and Recovery, a menos que você utilize a indexação legada. Essas permissões foram removidas das políticas desta página:
@@ -1229,6 +1239,7 @@ As seguintes permissões não são mais necessárias para o NetApp Backup and Re
 
 
 
+[[9-september-2024]]
 === 9 de setembro de 2024
 
 As permissões foram removidas da política nº 2 para regiões padrão porque o NetApp Console não oferece mais suporte ao cache de borda do NetApp , nem à descoberta e ao gerenciamento de clusters do Kubernetes.
@@ -1280,6 +1291,7 @@ As permissões foram removidas da política nº 2 para regiões padrão porque o
 ====
 
 
+[[9-may-2024]]
 === 9 de maio de 2024
 
 A seguinte permissão agora é necessária para o Cloud Volumes ONTAP:
@@ -1288,6 +1300,7 @@ ec2:DescreverZonasDeDisponibilidade
 
 
 
+[[6-june-2023]]
 === 6 de junho de 2023
 
 A seguinte permissão agora é necessária para o Cloud Volumes ONTAP:
@@ -1296,6 +1309,7 @@ kms:GerarChaveDeDadosSemTextoSimples
 
 
 
+[[14-february-2023]]
 === 14 de fevereiro de 2023
 
 A seguinte permissão agora é necessária para o NetApp Cloud Tiering:

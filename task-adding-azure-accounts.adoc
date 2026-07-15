@@ -18,6 +18,7 @@ Adicione e gerencie credenciais do Azure para que o NetApp Console tenha as perm
 
 
 
+[[overview]]
 == Visão geral
 
 Há duas maneiras de adicionar assinaturas e credenciais adicionais do Azure no Console.
@@ -28,6 +29,7 @@ Há duas maneiras de adicionar assinaturas e credenciais adicionais do Azure no 
 
 
 
+[[associate-additional-azure-subscriptions-with-a-managed-identity]]
 == Associar assinaturas adicionais do Azure a uma identidade gerenciada
 
 O Console permite que você escolha as credenciais do Azure e a assinatura do Azure nas quais deseja implantar o Cloud Volumes ONTAP.  Você não pode selecionar uma assinatura diferente do Azure para o perfil de identidade gerenciado, a menos que associe o https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview["identidade gerenciada"^] com essas assinaturas.
@@ -65,6 +67,8 @@ image:screenshot_accounts_switch_azure_subscription.gif["Uma captura de tela que
 
 
 
+[[add-additional-azure-credentials-to-netapp-console]]
+[[add-credentials-azure]]
 == Adicionar credenciais adicionais do Azure ao NetApp Console
 
 Quando você implanta um agente do Console a partir do Console, o Console habilita uma identidade gerenciada atribuída pelo sistema na máquina virtual que tem as permissões necessárias.  O Console seleciona essas credenciais do Azure por padrão quando você cria um novo sistema para o Cloud Volumes ONTAP.
@@ -76,6 +80,7 @@ Se você quiser implantar o Cloud Volumes ONTAP usando credenciais _diferentes_ 
 
 
 
+[[grant-azure-permissions-using-a-service-principal]]
 === Conceder permissões do Azure usando uma entidade de serviço
 
 O Console precisa de permissões para executar ações no Azure.  Você pode conceder as permissões necessárias a uma conta do Azure criando e configurando uma entidade de serviço no Microsoft Entra ID e obtendo as credenciais do Azure necessárias para o Console.
@@ -231,6 +236,7 @@ image:screenshot_azure_service_mgmt_apis_add.gif["Uma captura de tela do portal 
 
 
 
+[[ids]]
 ==== Obtenha o ID do aplicativo e o ID do diretório
 
 Ao adicionar a conta do Azure ao Console, você precisa fornecer o ID do aplicativo (cliente) e o ID do diretório (locatário) para o aplicativo.  O Console usa os IDs para fazer login programaticamente.
@@ -269,6 +275,7 @@ Seu principal serviço agora está configurado e você deve ter copiado o ID do 
 
 
 
+[[add-the-credentials-to-the-console]]
 === Adicione as credenciais ao Console
 
 Depois de fornecer uma conta do Azure com as permissões necessárias, você pode adicionar as credenciais dessa conta ao Console.  Concluir esta etapa permite que você inicie o Cloud Volumes ONTAP usando diferentes credenciais do Azure.
@@ -303,12 +310,15 @@ image:screenshot_accounts_switch_azure.gif["Uma captura de tela que mostra a sel
 
 
 
+[[manage-existing-credentials]]
 == Gerenciar credenciais existentes
 
 Gerencie as credenciais do Azure que você já adicionou ao Console associando uma assinatura do Marketplace, editando credenciais e excluindo-as.
 
 
 
+[[associate-an-azure-marketplace-subscription-to-credentials]]
+[[subscribe]]
 === Associar uma assinatura do Azure Marketplace às credenciais
 
 Depois de adicionar suas credenciais do Azure ao Console, você pode associar uma assinatura do Azure Marketplace a essas credenciais.  Você pode usar a assinatura para criar um sistema Cloud Volumes ONTAP com pagamento conforme o uso e acessar os serviços de dados da NetApp .
@@ -358,6 +368,7 @@ Para todas as outras organizações ou contas, você precisará associar manualm
 
 
 
+[[edit-credentials]]
 === Editar credenciais
 
 Edite suas credenciais do Azure no Console.  Por exemplo, você pode atualizar o segredo do cliente se um novo segredo tiver sido criado para o aplicativo principal do serviço.
@@ -371,6 +382,7 @@ Edite suas credenciais do Azure no Console.  Por exemplo, você pode atualizar o
 
 
 
+[[delete-credentials]]
 === Excluir credenciais
 
 Se você não precisar mais de um conjunto de credenciais, poderá excluí-las.  Você só pode excluir credenciais que não estejam associadas a um sistema.

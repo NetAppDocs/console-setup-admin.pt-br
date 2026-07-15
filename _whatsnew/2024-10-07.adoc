@@ -4,6 +4,7 @@
 
 
 
+[[bluexp-identity-and-access-management]]
 === Gerenciamento de identidade e acesso BlueXP
 
 O gerenciamento de identidade e acesso (IAM) do BlueXP é um novo modelo de gerenciamento de recursos e acesso que substitui e aprimora a funcionalidade anterior fornecida pelas contas do BlueXP ao usar o BlueXP no modo padrão.
@@ -57,6 +58,7 @@ O BlueXP IAM é suportado ao usar o BlueXP no modo padrão.  Se estiver usando o
 
 
 
+[[connector-3-9-45]]
 === Conector 3.9.45
 
 Esta versão inclui suporte expandido ao sistema operacional e correções de bugs.
@@ -70,6 +72,7 @@ https://docs.netapp.com/us-en/bluexp-setup-admin/task-install-connector-on-prem.
 
 
 
+[[support-for-selinux-with-rhel-hosts]]
 === Suporte para SELinux com hosts RHEL
 
 O BlueXP agora oferece suporte ao Connector com hosts Red Hat Enterprise Linux que tenham o SELinux habilitado no modo de imposição ou no modo permissivo.

@@ -4,6 +4,7 @@
 
 
 
+[[console-agent-4-6-0]]
 === Agente do Console 4.6.0
 
 A versão 4.6.0 suporta tanto o modo padrão quanto o modo restrito.

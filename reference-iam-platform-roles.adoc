@@ -29,6 +29,8 @@ As tabelas a seguir indicam as ações que cada função da plataforma Console p
 
 
 
+[[organization-administration-roles]]
+[[organization-admin-roles]]
 == Funções de administração da organização
 
 [cols="2,1,1"]
@@ -79,6 +81,7 @@ As tabelas a seguir indicam as ações que cada função da plataforma Console p
 |===
 
 
+[[federation-roles]]
 == Funções da Federação
 
 [cols="2,1,1"]
@@ -105,6 +108,7 @@ As tabelas a seguir indicam as ações que cada função da plataforma Console p
 |===
 
 
+[[partnership-roles]]
 == Funções de parceria
 
 [cols="2,1,1"]
@@ -125,6 +129,8 @@ As tabelas a seguir indicam as ações que cada função da plataforma Console p
 |===
 
 
+[[super-admin-and-viewer-roles]]
+[[super-admin-roles]]
 == Funções de superadministrador e visualizador
 
 A função *Superadministrador* fornece acesso total para gerenciar recursos do Console, armazenamento e serviços de dados.  Essa função é adequada para aqueles que supervisionam a administração e a governança.  Em contraste, a função *Super visualizador* oferece acesso somente leitura, ideal para auditores ou partes interessadas que precisam de visibilidade sem fazer alterações.

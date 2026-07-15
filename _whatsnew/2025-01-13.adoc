@@ -4,6 +4,7 @@
 
 
 
+[[connector-3-9-48]]
 === Conector 3.9.48
 
 Esta versão do BlueXP Connector inclui pequenas melhorias de segurança e correções de bugs.
@@ -12,6 +13,7 @@ No momento, a versão 3.9.48 está disponível para modo padrão e modo restrito
 
 
 
+[[bluexp-identity-and-access-management]]
 === Gerenciamento de identidade e acesso BlueXP
 
 * A página Recursos agora exibe recursos não descobertos.  Recursos não descobertos são recursos de armazenamento que o BlueXP conhece, mas para os quais você não criou ambientes de trabalho.  Por exemplo, recursos exibidos no consultor digital que ainda não têm ambientes de trabalho são exibidos na página Recursos como recursos não descobertos.
@@ -20,6 +22,7 @@ No momento, a versão 3.9.48 está disponível para modo padrão e modo restrito
 
 
 
+[[create-a-support-case-for-additional-bluexp-services]]
 === Crie um caso de suporte para serviços BlueXP adicionais
 
 Depois de registrar o BlueXP para suporte, você pode criar um caso de suporte diretamente do console web do BlueXP .  Ao criar o caso, você precisa selecionar o serviço ao qual o problema está associado.

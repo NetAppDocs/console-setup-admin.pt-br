@@ -32,12 +32,14 @@ Você pode instalar o NetApp Console localmente ou em um ambiente de nuvem segur
 
 
 
+[[supported-features-and-services-for-netapp-console-in-private-mode]]
 == Recursos e serviços compatíveis para o NetApp Console no modo privado
 
 A tabela a seguir lista os recursos de gerenciamento de storage, serviços de dados e recursos administrativos disponíveis no NetApp Console quando você o instala no modo privado. Os recursos variam quando você instala o NetApp Console na nuvem em comparação com suas instalações.
 
 
 
+[[private-mode-installed-in-the-cloud]]
 === Modo privado instalado na nuvem
 
 [cols="3*"]
@@ -112,6 +114,7 @@ https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-manage
 |===
 
 
+[[private-mode-installed-on-premises]]
 === Modo privado instalado no local
 
 [cols="3*"]

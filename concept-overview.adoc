@@ -22,6 +22,7 @@ O Console funciona com agentes do Console que você implanta em seu ambiente par
 
 
 
+[[choose-how-to-access-netapp-console]]
 == Escolha como acessar o NetApp Console
 
 Comece a usar o NetApp Console inscrevendo-se no aplicativo SaaS (modo padrão), instalando-o na sua nuvem (modo restrito) ou nas suas instalações (modo privado). Alguns recursos não estão disponíveis nos modos restrito ou privado.
@@ -30,6 +31,7 @@ link:concept-modes.html["Saiba mais sobre os modos de implantação"] .
 
 
 
+[[extend-console-capabilities-with-console-agents]]
 == Amplie as funcionalidades do Console com agentes do Console
 
 Os agentes do console são componentes de software leves que fornecem conectividade ao aplicativo NetApp Console SaaS e às APIs baseadas em nuvem, possibilitando recursos avançados e serviços de dados.
@@ -40,6 +42,7 @@ link:concept-agents.html["Saiba mais sobre os agentes do Console"] .
 
 
 
+[[manage-user-access-and-permissions-in-netapp-console]]
 == Gerencie o acesso e as permissões do usuário na NetApp Console
 
 O Console oferece gerenciamento de identidade e acesso (IAM) para aprimorar a segurança e o controle em toda a sua infraestrutura de dados. Organize seu storage e serviços de dados em torno de funções e responsabilidades organizacionais para reduzir o risco de acesso não autorizado enquanto mantém a eficiência operacional:
@@ -54,6 +57,7 @@ link:concept-identity-and-access-management.html["Saiba mais sobre o IAM no NetA
 
 
 
+[[security-and-compliance-in-netapp-console]]
 == Segurança e conformidade no NetApp Console
 
 Habilite recursos de segurança e conformidade, como logon único (SSO), para controlar o acesso ao seu storage e aos serviços de dados. Usuários com a função de administrador da organização podem definir o modo somente leitura por padrão, exigindo que os usuários solicitem permissões elevadas para fazer alterações nos sistemas de storage e usar os serviços de dados. Você também pode usar o NetApp Console para monitorar o gerenciamento de storage e a atividade do usuário. O NetApp Console possui certificação SOC 2 Tipo 2, e a NetApp fornece relatórios SOC 2 aos clientes.
@@ -62,12 +66,14 @@ https://www.netapp.com/company/trust-center/compliance/soc-2/["Ver relatórios S
 
 
 
+[[netapp-console-capabilities-and-supported-storage]]
 == NetApp Console: funcionalidades e storage compatível
 
 NetApp Console oferece suporte a uma ampla variedade de tipos de storage, recursos e serviços de dados em seus ambientes de storage no local e na nuvem. Use o Console para gerenciar seus sistemas de storage, monitorar sua integridade e desempenho e habilitar serviços de dados para proteger e otimizar seus dados.
 
 
 
+[[supported-cloud-and-on-premises-storage-in-netapp-console]]
 === Storage em nuvem e no local compatível no NetApp Console
 
 Gerencie esses tipos de storage a partir do Console:
@@ -104,6 +110,7 @@ Armazenamento de objetos em nuvem::
 
 
 
+[[storage-management-and-health-services-in-netapp-console]]
 === Gerenciamento de storage e serviços de integridade na NetApp Console
 
 NetApp Console oferece gerenciamento unificado da sua infraestrutura de storage NetApp por meio de uma única interface.
@@ -126,6 +133,7 @@ Painel de sustentabilidade:: Analise a sustentabilidade dos seus sistemas de arm
 
 
 
+[[data-security-and-protection-services-in-netapp-console]]
 === Serviços de segurança e proteção de dados no NetApp Console
 
 Use os serviços de dados incorporados para proteger dados críticos e otimizar a eficiência de storage.
@@ -139,6 +147,7 @@ NetApp Replication:: Replique dados entre sistemas de armazenamento para dar sup
 
 
 
+[[cost-and-compliance-management-services-in-netapp-console]]
 === Serviços de gestão de custos e conformidade no NetApp Console
 
 Acompanhe o status do contrato em todos os sistemas para melhorar a gestão de custos, a conformidade e as decisões de compra.
@@ -167,6 +176,7 @@ Cargas de trabalho da NetApp:: Projete, configure e opere cargas de trabalho ess
 
 
 
+[[netapp-console-cost]]
 === NetApp Console custo
 
 NetApp não cobra pelo Console. Você incorre em custos ao implantar agentes do Console ou usar o modo restrito na nuvem. Alguns serviços de dados da NetApp também têm custos associados. https://bluexp.netapp.com/pricing["Saiba mais sobre os preços dos serviços de dados da NetApp"^]

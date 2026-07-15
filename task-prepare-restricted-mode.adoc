@@ -18,6 +18,7 @@ Prepare seu ambiente antes de implantar o NetApp Console no modo restrito.  Voc�
 
 
 
+[[step-1-understand-how-restricted-mode-works]]
 == Etapa 1: Entenda como funciona o modo restrito
 
 Entenda como o NetApp Console funciona no modo restrito antes de começar.
@@ -30,6 +31,7 @@ link:concept-modes.html["Aprenda como funciona o modo restrito"] .
 
 
 
+[[step-2-review-installation-options]]
 == Etapa 2: Revise as opções de instalação
 
 No modo restrito, você só pode instalar o agente do Console na nuvem.  As seguintes opções de instalação estão disponíveis:
@@ -41,6 +43,7 @@ No modo restrito, você só pode instalar o agente do Console na nuvem.  As segu
 
 
 
+[[step-3-review-host-requirements]]
 == Etapa 3: Revise os requisitos do host
 
 Um host deve atender a requisitos específicos de sistema operacional, RAM e porta para executar o agente do Console.
@@ -173,6 +176,8 @@ Não suportado
 |===
 
 
+[[step-4-install-podman-or-docker-engine]]
+[[podman-configuration]]
 == Etapa 4: instalar o Podman ou o Docker Engine
 
 Para instalar manualmente o agente do Console, prepare o host instalando o Podman ou o Docker Engine.
@@ -360,6 +365,7 @@ sudo systemctl enable docker && sudo systemctl start docker
 ====
 
 
+[[step-5-prepare-network-access]]
 == Etapa 5: preparar o acesso à rede
 
 Configure o acesso à rede para que o agente do Console possa gerenciar recursos na sua nuvem pública.  Além de ter uma rede virtual e uma sub-rede para o agente do Console, você precisa garantir que os seguintes requisitos sejam atendidos.
@@ -546,6 +552,7 @@ Se você estiver planejando criar um agente do Console no marketplace do seu pro
 
 
 
+[[step-6-prepare-cloud-permissions]]
 == Etapa 6: preparar permissões de nuvem
 
 O agente do Console requer permissões do seu provedor de nuvem para implantar o Cloud Volumes ONTAP em uma rede virtual e usar os serviços de dados do NetApp .  Você precisa configurar permissões no seu provedor de nuvem e então associá-las ao agente do Console.
@@ -853,6 +860,7 @@ https://cloud.google.com/iam/docs/creating-managing-service-accounts#creating_a_
 ====
 
 
+[[step-7-enable-google-cloud-apis]]
 == Etapa 7: habilitar as APIs do Google Cloud
 
 Várias APIs são necessárias para implantar o Cloud Volumes ONTAP no Google Cloud.

@@ -4,12 +4,14 @@
 
 
 
+[[bluexp-is-now-netapp-console]]
 == BlueXP agora é NetApp Console
 
 O NetApp Console, criado com base na base aprimorada e reestruturada do BlueXP , fornece gerenciamento centralizado do armazenamento NetApp e do NetApp Data Services em ambientes locais e na nuvem em nível empresarial, fornecendo insights em tempo real, fluxos de trabalho mais rápidos e administração simplificada, altamente segura e compatível.
 
 
 
+[[navigation-menus-and-pages]]
 === Menus e páginas de navegação
 
 A NetApp moveu a maioria das opções de menu para o painel de navegação esquerdo e reorganizou os menus para facilitar a navegação no NetApp Console.
@@ -58,6 +60,7 @@ image:https://docs.netapp.com/us-en/console-setup-admin/media/screenshot-governa
 
 
 
+[[more-intuitive-naming-of-elements-data-services-and-features]]
 === Nomenclatura mais intuitiva de elementos, serviços de dados e recursos
 
 A NetApp renomeou vários elementos, serviços de dados e recursos para esclarecer sua finalidade.  As principais mudanças incluem:
@@ -112,6 +115,7 @@ Acesse suas licenças e assinaturas no menu *Administração > Licenses and subs
 |===
 
 
+[[console-agents]]
 === Agentes de console
 
 Acesse e gerencie seus agentes do Console no menu *Administração > Agentes*.  A NetApp mudou a forma de selecionar um agente de Console para a página *Sistemas* (antigamente Canvas).  A NetApp substituiu o nome do menu Conector por um íconeimage:icon-agent.png["ícone do agente"] , permitindo que você selecione o agente do Console cujos sistemas você deseja visualizar.
@@ -122,6 +126,7 @@ Você também pode gerenciar seus agentes no menu *Administração > Agentes*.
 
 
 
+[[console-agent-4-0-0]]
 == Agente de console 4.0.0
 
 Esta versão do agente do Console inclui melhorias de segurança, correções de bugs e os seguintes novos recursos.
@@ -130,6 +135,7 @@ A versão 4.0.0 está disponível para modo padrão e modo restrito.
 
 
 
+[[consolidation-and-reduction-of-required-network-endpoints]]
 === Consolidação e redução de pontos de extremidade de rede necessários
 
 A NetApp reduziu os pontos de extremidade de rede necessários para o Console e os agentes do Console, aumentando a segurança e simplificando a implantação.  É importante ressaltar que todas as implantações anteriores à versão 4.0.0 continuam com suporte total.  Embora os endpoints anteriores permaneçam disponíveis para os agentes existentes, a NetApp recomenda fortemente atualizar as regras de firewall para os endpoints atuais após confirmar as atualizações bem-sucedidas dos agentes.
@@ -140,6 +146,7 @@ A NetApp reduziu os pontos de extremidade de rede necessários para o Console e 
 
 
 
+[[support-for-vcenter-deployment-of-console-agents]]
 === Suporte para implantação de agentes de console no VCenter
 
 Você pode implantar agentes do Console em ambientes VMware usando um arquivo OVA.  O arquivo OVA inclui uma imagem de VM pré-configurada com software de agente do Console e configurações para conectar ao NetApp Console.  Um download de arquivo ou implantação de URL está disponível diretamente no NetApp Console.link:https://docs.netapp.com/us-en/console-setup-admin/task-install-agent-on-prem-ova.html["Aprenda a implantar um agente de console em ambientes VMware."]
@@ -148,66 +155,77 @@ O agente de console OVA para VMware oferece uma imagem de VM pré-configurada pa
 
 
 
+[[validation-reports-for-failed-agent-deployments]]
 === Relatórios de validação para implantações de agentes com falha
 
 Ao implantar um agente do Console a partir do NetApp Console, agora você tem a opção de validar a configuração do agente.  Se o Console não conseguir implantar o agente, ele fornecerá um relatório para download para ajudar você a solucionar o problema.
 
 
 
+[[improved-troubleshooting-for-console-agents]]
 === Solução de problemas aprimorada para agentes do Console
 
 O agente do Console melhorou as mensagens de erro que ajudam você a entender melhor os problemas.link:https://docs.netapp.com/us-en/console-setup-admin/task-troubleshoot-agent.html["Aprenda a solucionar problemas de agentes do Console."]
 
 
 
+[[netapp-console]]
 == NetApp Console
 
 A administração do NetApp Console inclui os seguintes novos recursos:
 
 
 
+[[home-page-dashboard]]
 === Painel da página inicial
 
 O painel da página inicial do NetApp Console fornece visibilidade em tempo real da infraestrutura de armazenamento com métricas de integridade, capacidade, status da licença e serviços de dados.link:https://docs.netapp.com/us-en/console-setup-admin/task-dashboard.html["Saiba mais sobre a página inicial."]
 
 
 
+[[netapp-assistant]]
 === Assistente NetApp
 
 Novos usuários com a função de administrador da organização podem usar o assistente do NetApp para configurar o Console, incluindo adicionar um agente, vincular uma conta de suporte do NetApp e adicionar um sistema de armazenamento.link:https://docs.netapp.com/us-en/console-setup-admin/task-console-assistant.html["Saiba mais sobre o assistente NetApp ."]
 
 
 
+[[service-account-authentication]]
 === Autenticação de conta de serviço
 
 O NetApp Console oferece suporte à autenticação de conta de serviço usando um ID de cliente gerado pelo sistema e JWTs secretos ou gerenciados pelo cliente, permitindo que as organizações selecionem a abordagem que melhor se adapta aos seus requisitos de segurança e fluxos de trabalho de integração.  A autenticação de cliente JWT de chave privada usa criptografia assimétrica, fornecendo segurança mais forte do que métodos tradicionais de ID de cliente e segredo.  A autenticação de cliente JWT de chave privada usa criptografia assimétrica, mantendo a chave privada segura no ambiente do cliente, reduzindo os riscos de roubo de credenciais e melhorando a segurança da sua pilha de automação e dos aplicativos do cliente.link:https://docs.netapp.com/us-en/console-setup-admin/task-iam-manage-members-permissions.html#service-account["Saiba como adicionar uma conta de serviço."]
 
 
 
+[[session-timeouts]]
 === Tempo limite de sessão
 
 O sistema desconecta os usuários após 24 horas ou quando eles fecham o navegador.
 
 
 
+[[support-for-partnerships-between-organizations]]
 === Apoio a parcerias entre organizações
 
 Você pode criar parcerias no NetApp Console que permitem que os parceiros gerenciem com segurança os recursos do NetApp em todos os limites organizacionais, facilitando a colaboração e fortalecendo a segurança. link:https://docs.netapp.com/us-en/console-setup-admin/task-partnerships-create.html["Aprenda a gerir parcerias"] .
 
 
 
+[[super-admin-and-super-viewer-roles]]
 === Funções de superadministrador e supervisualizador
 
 Adicionadas as funções *Superadministrador* e *Supervisualizador*.  *Superadministrador* concede acesso de gerenciamento total aos recursos do Console, armazenamento e serviços de dados.  *Super visualizador* fornece visibilidade somente leitura para auditores e partes interessadas.  Essas funções são úteis para equipes menores de membros seniores, onde o acesso amplo é comum.  Para maior segurança e capacidade de auditoria, as organizações são incentivadas a usar o acesso de *Superadministrador* com moderação e atribuir funções refinadas sempre que possível.link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["Saiba mais sobre funções de acesso."]
 
 
 
+[[additional-role-for-ransomware-resilience]]
 === Função adicional para Resiliência de Ransomware
 
 Adicionadas as funções *Administrador de comportamento do usuário de resiliência ao ransomware* e *Visualizador de comportamento do usuário de resiliência ao ransomware*.  Essas funções permitem que os usuários configurem e visualizem o comportamento do usuário e os dados analíticos, respectivamente.link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["Saiba mais sobre funções de acesso."]
 
 
 
+[[removed-support-chat]]
 === Chat de suporte removido
 
 A NetApp removeu o recurso de chat de suporte do NetApp Console.  Use a página *Administração > Suporte* para criar e gerenciar casos de suporte.

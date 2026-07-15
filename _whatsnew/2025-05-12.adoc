@@ -4,6 +4,7 @@
 
 
 
+[[connector-3-9-52]]
 === Conector 3.9.52
 
 Esta versão do BlueXP Connector inclui pequenas melhorias de segurança e correções de bugs, bem como algumas atualizações adicionais.
@@ -24,12 +25,14 @@ Os nós do Cloud Volumes ONTAP não desligam mais quando o Conector não está e
 
 
 
+[[keystone-administration-available-in-bluexp]]
 === Administração Keystone disponível no BlueXP
 
 A versão beta do NetApp Keystone no BlueXP adicionou acesso à administração do Keystone .  Você pode acessar a página de inscrição para o NetApp Keystone beta na barra de navegação esquerda do BlueXP.
 
 
 
+[[bluexp-identity-and-access-management-iam]]
 === Gerenciamento de Identidade e Acesso (IAM) BlueXP
 
 

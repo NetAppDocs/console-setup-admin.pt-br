@@ -23,6 +23,7 @@ Uma organização parceira deve primeiro adicionar membros à parceria antes que
 
 
 
+[[understand-roles-for-partnership-users]]
 == Entenda as funções dos usuários da parceria
 
 Você pode gerenciar funções para membros de organizações parceiras da mesma forma que faz para as suas.  No entanto, nem todas as funções estão disponíveis para usuários de parceria.  Em particular, você não pode conceder aos usuários parceiros uma função que permita atualizações de software.  A atualização do software ONTAP geralmente requer acesso direto à rede.
@@ -51,6 +52,7 @@ link:reference-iam-predefined-roles.html["Saiba mais sobre funções predefinida
 
 
 
+[[add-a-role-to-a-partner-user]]
 == Adicionar uma função a um usuário parceiro
 
 Você fornece acesso aos recursos da sua organização adicionando uma função a um membro.  Ao atribuir uma função, você especifica um recurso e uma função.  Você pode atribuir mais de uma função a um usuário.
@@ -82,6 +84,7 @@ Se você selecionar a organização ou uma pasta, o membro terá permissões par
 
 
 
+[[change-or-remove-a-role-from-a-partner-user]]
 == Alterar ou remover uma função de um usuário parceiro
 
 Você pode alterar ou remover uma função que atribuiu a um membro de uma organização parceira.

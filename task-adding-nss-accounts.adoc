@@ -20,6 +20,7 @@ O Console também suporta a associação de uma conta NSS por conta de usuário.
 
 
 
+[[overview]]
 == Visão geral
 
 É necessário associar as credenciais do site de suporte da NetApp ao número de série específico da sua conta do Console para habilitar as seguintes tarefas:
@@ -39,6 +40,7 @@ Essas credenciais estão associadas ao número de série específico da sua cont
 
 
 
+[[add-an-nss-account]]
 == Adicionar uma conta NSS
 
 Você pode adicionar e gerenciar suas contas do Site de Suporte NetApp para uso com o Console no Painel de Suporte do Console.
@@ -82,6 +84,7 @@ Os usuários agora podem selecionar a conta ao criar novos sistemas Cloud Volume
 
 
 
+[[update-nss-credentials]]
 == Atualizar credenciais NSS
 
 Por motivos de segurança, você deve atualizar suas credenciais do NSS a cada 90 dias.  Você será notificado no centro de notificações do Console se sua credencial NSS tiver expirado. link:task-monitor-cm-operations.html#notification-center["Saiba mais sobre o Centro de Notificações"^] .
@@ -107,6 +110,8 @@ A NetApp usa o Microsoft Entra ID como provedor de identidade para serviços de 
 
 
 
+[[attach-a-system-to-a-different-nss-account]]
+[[attach-system-nss-account]]
 == Anexar um sistema a uma conta NSS diferente
 
 Se sua organização tiver várias contas do NetApp Support Site, você poderá alterar qual conta está associada a um sistema Cloud Volumes ONTAP .
@@ -131,6 +136,7 @@ image:screenshot-nss-change-account.png["Uma captura de tela que mostra o menu d
 
 
 
+[[display-the-email-address-for-an-nss-account]]
 == Exibir o endereço de e-mail de uma conta NSS
 
 Por segurança, o endereço de e-mail associado a uma conta NSS não é exibido por padrão.  Você pode visualizar o endereço de e-mail e o nome de usuário associado a uma conta NSS.
@@ -146,6 +152,7 @@ TIP: Quando você acessa a página Gerenciamento do NSS, o Console gera um token
 
 
 
+[[remove-an-nss-account]]
 == Remover uma conta NSS
 
 Exclua todas as contas NSS que você não deseja mais usar com o Console.

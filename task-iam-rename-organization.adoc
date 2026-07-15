@@ -19,6 +19,7 @@ Sua organização NetApp Console tem um nome e um ID. Você pode escolher um nom
 
 
 
+[[rename-your-organization]]
 == Renomeie sua organização
 
 Você pode renomear sua organização. Isso é útil se você dá suporte a mais de uma organização.
@@ -35,6 +36,7 @@ image:screenshot-iam-edit-organization.png["Uma captura de tela da página Organ
 
 
 
+[[get-the-organization-id]]
 == Obter o ID da organização
 
 O ID da organização é usado para determinadas integrações com o Console.
@@ -48,6 +50,8 @@ Você pode visualizar o ID da organização na página Organizações e copiá-l
 
 
 
+[[obtain-the-id-for-a-project]]
+[[project-id]]
 == Obter o ID de um projeto
 
 Você precisará obter o ID de um projeto se estiver usando a API.  Por exemplo, ao criar um sistema Cloud Volumes ONTAP .

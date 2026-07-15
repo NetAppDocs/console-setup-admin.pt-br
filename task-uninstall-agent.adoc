@@ -18,6 +18,7 @@ Desinstale um agente do Console para solucionar problemas ou removê-lo permanen
 
 
 
+[[uninstall-the-agent-when-it-has-outbound-connectivity]]
 == Desinstale o agente quando ele tiver conectividade de saída
 
 Se você estiver usando o modo padrão ou o modo restrito (em outras palavras, o host do agente tem conectividade de saída), siga as etapas abaixo para desinstalar o agente.
@@ -35,6 +36,7 @@ _silent_ executa o script sem solicitar sua confirmação.
 
 
 
+[[uninstall-the-agent-when-it-has-no-outbound-connectivity]]
 == Desinstale o agente quando ele não tiver conectividade de saída
 
 Se o seu agente não tiver conectividade de saída (por exemplo, em modo privado), você deve remover manualmente o software do agente do host.
@@ -71,6 +73,7 @@ docker system prune -a
 
 
 
+[[remove-console-agents-from-the-console]]
 == Remover agentes do Console do Console
 
 Se você excluiu uma máquina virtual de agente ou desinstalou o agente, deverá removê-la da lista de agentes no Console. Após excluir uma máquina virtual do agente ou desinstalar o software do agente, o agente exibirá o status *Desconectado* no Console.

@@ -217,6 +217,8 @@ sidebar:
           entries:
           - title: Funções de backup e recuperação
             url: "/reference-iam-backup-rec-roles.html"
+          - title: Funções do Cloud Volumes ONTAP
+            url: "/reference-iam-cvo-roles.html"
           - title: Funções de classificação de dados
             url: "/reference-iam-data-classification.html"
           - title: Funções de recuperação de desastres

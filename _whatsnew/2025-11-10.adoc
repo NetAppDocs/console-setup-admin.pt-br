@@ -4,6 +4,7 @@
 
 
 
+[[console-agent-4-1-0]]
 === Agente de console 4.1.0
 
 Esta versão do agente do Console inclui melhorias de segurança, correções de bugs e os seguintes recursos:
@@ -18,6 +19,7 @@ Ao instalar manualmente um agente de console, o agente agora é compatível com 
 
 
 
+[[netapp-console-administration]]
 === Administração do NetApp Console
 
 Esta versão inclui o seguinte:

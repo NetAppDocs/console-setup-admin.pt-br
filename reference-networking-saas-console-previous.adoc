@@ -27,6 +27,8 @@ Você precisa configurar o acesso à rede para o seguinte:
 
 
 
+[[update-your-endpoint-list-to-the-revised-list-for-4-0-0-and-higher]]
+[[update-endpoint-list]]
 == Atualize sua lista de endpoints para a lista revisada para 4.0.0 e superior
 
 A partir da versão 4.0.0, os agentes do Console exigem menos endpoints.  Implantações existentes anteriores à versão 4.0.0 continuam com suporte.  Após atualizar para a versão 4.0.0 ou posterior, você pode remover os endpoints antigos da sua lista de permissões quando for conveniente.
@@ -106,6 +108,7 @@ systemctl status netapp-service-manager.service
 
 
 
+[[endpoints-for-netapp-console-and-console-agents-for-3-9-55-and-below]]
 == Endpoints para NetApp Console e agentes de console para 3.9.55 e anteriores
 
 Esses pontos de extremidade são usados para agentes do Console 3.9.55 e anteriores.
@@ -152,6 +155,7 @@ A NetApp recomenda permitir endpoints da Opção 1 no seu firewall, pois eles s�
 |===
 
 
+[[cloud-provider-endpoints-contacted-by-the-console-agent]]
 == Pontos de extremidade do provedor de nuvem contatados pelo agente do Console
 
 Os agentes de console devem ter acesso a endpoints adicionais se estiverem implantados no seu provedor de nuvem.
@@ -167,12 +171,14 @@ Os pontos de extremidade do provedor de nuvem são os mesmos para todas as vers�
 
 
 
+[[data-services-endpoints-contacted-by-the-console-agent]]
 == Pontos de extremidade de serviços de dados contatados pelo agente do Console
 
 O agente do Console requer acesso adicional à Internet de saída para dar suporte a alguns serviços de dados do NetApp e ao Cloud Volumes ONTAP.
 
 
 
+[[endpoints-for-cloud-volumes-ontap]]
 === Pontos de extremidade para Cloud Volumes ONTAP
 
 * link:https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/reference-networking-aws.html#outbound-internet-access-for-cloud-volumes-ontap-nodes["Endpoints para Cloud Volumes ONTAP na AWS"]

@@ -18,12 +18,14 @@ Saiba mais sobre as configurações padrão do agente do Console para implantaç
 
 
 
+[[default-configuration-with-internet-access]]
 == Configuração padrão com acesso à Internet
 
 Os seguintes detalhes de configuração se aplicam se você implantou um agente do Console do NetApp Console, do marketplace do seu provedor de nuvem ou se instalou manualmente um agente do Console em um host Linux local com acesso à Internet.
 
 
 
+[[console-agent-vm-details-for-aws]]
 === Detalhes da VM do agente de console para AWS
 
 Se você implantou um agente do Console a partir do Console ou do marketplace do provedor de nuvem, observe o seguinte:
@@ -40,6 +42,7 @@ O sistema operacional não inclui uma GUI.  Você deve usar um terminal para ace
 
 
 
+[[console-agent-vm-details-for-azure]]
 === Detalhes da VM do agente de console para o Azure
 
 Se você implantou um agente do Console a partir do Console ou do marketplace do provedor de nuvem, observe o seguinte:
@@ -55,6 +58,7 @@ O sistema operacional não inclui uma GUI.  Você deve usar um terminal para ace
 
 
 
+[[console-agent-vm-details-for-google-cloud]]
 === Detalhes da VM do agente do console para o Google Cloud
 
 Se você implantou um agente do Console a partir do Console, observe o seguinte:
@@ -70,6 +74,7 @@ O sistema operacional não inclui uma GUI.  Você deve usar um terminal para ace
 
 
 
+[[installation-folder]]
 === Pasta de instalação
 
 A pasta de instalação do agente está localizada no seguinte local:
@@ -78,6 +83,7 @@ A pasta de instalação do agente está localizada no seguinte local:
 
 
 
+[[log-files]]
 === Arquivos de log
 
 Os arquivos de log estão contidos nas seguintes pastas:
@@ -95,6 +101,7 @@ Os logs nesta pasta fornecem detalhes sobre os serviços de nuvem e o serviço d
 
 
 
+[[console-agent-service]]
 === Serviço de agente de console
 
 * O serviço do agente do Console é chamado  `occm`.
@@ -106,6 +113,7 @@ Se o serviço MySQL estiver inativo, então o  `occm` serviço também estará i
 
 
 
+[[ports]]
 === Portos
 
 O agente usa as seguintes portas no host Linux:
@@ -116,6 +124,7 @@ O agente usa as seguintes portas no host Linux:
 
 
 
+[[default-configuration-without-internet-access]]
 == Configuração padrão sem acesso à Internet
 
 A configuração a seguir se aplica se você instalou manualmente o agente do Console em um host Linux local que não tem acesso à Internet. link:task-quick-start-private-mode.html["Saiba mais sobre esta opção de instalação"] .

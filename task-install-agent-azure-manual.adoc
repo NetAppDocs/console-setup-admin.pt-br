@@ -28,6 +28,7 @@ NOTE: Implante um agente do Console na mesma região do Azure que os sistemas Cl
 
 
 
+[[step-1-review-host-requirements]]
 == Etapa 1: Revise os requisitos do host
 
 O software do agente do Console deve ser executado em um host que atenda aos requisitos específicos do sistema operacional, requisitos de RAM, requisitos de porta e assim por diante.
@@ -154,6 +155,8 @@ Não suportado
 |===
 
 
+[[step-2-install-podman-or-docker-engine]]
+[[podman-configuration]]
 == Etapa 2: instalar o Podman ou o Docker Engine
 
 Dependendo do seu sistema operacional, o Podman ou o Docker Engine é necessário antes de instalar o agente.
@@ -339,6 +342,7 @@ sudo systemctl enable docker && sudo systemctl start docker
 ====
 
 
+[[step-3-set-up-networking]]
 == Etapa 3: configurar a rede
 
 Certifique-se de que o local de rede onde você planeja instalar o agente do Console suporte os seguintes requisitos.  Atender a esses requisitos permite que o agente do Console gerencie recursos e processos dentro do seu ambiente de nuvem híbrida.
@@ -458,6 +462,7 @@ Habilitar NTP:: Se você planeja usar NetApp Data Classification para analisar s
 
 
 
+[[step-4-set-up-console-agent-deployment-permissions]]
 == Etapa 4: configurar permissões de implantação do agente do console
 
 Você precisa fornecer permissões do Azure ao agente do Console usando uma das seguintes opções:
@@ -669,6 +674,7 @@ Seu principal serviço agora está configurado e você deve ter copiado o ID do 
 ====
 
 
+[[step-5-install-the-console-agent]]
 == Etapa 5: instalar o agente do console
 
 Após a conclusão dos pré-requisitos, você pode instalar manualmente o software no seu próprio host Linux.
@@ -835,6 +841,7 @@ Se você tiver armazenamento de Blobs do Azure na mesma assinatura do Azure em q
 
 
 
+[[step-6-provide-permissions-to-netapp-console]]
 == Etapa 6: fornecer permissões ao NetApp Console
 
 Agora que você instalou o agente do Console, precisa fornecer a ele as permissões do Azure que você configurou anteriormente.  Fornecer as permissões permite que o Console gerencie seus dados e infraestrutura de armazenamento no Azure.

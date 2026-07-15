@@ -4,6 +4,7 @@
 
 
 
+[[console-agent-4-7-0]]
 === Agente do Console 4.7.0
 
 A versão 4.7.0 suporta tanto o modo padrão quanto o modo restrito.
@@ -12,6 +13,7 @@ Esta versão do agente do Console inclui melhorias de segurança e correções d
 
 
 
+[[netapp-console-administration]]
 === Administração do NetApp Console
 
 Esta versão inclui a seguinte nova funcionalidade.

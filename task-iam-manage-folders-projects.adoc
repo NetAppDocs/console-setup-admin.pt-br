@@ -20,12 +20,14 @@ O Console cria automaticamente um projeto para você quando você cria uma nova 
 
 
 
+[[using-folders-and-projects-to-organize-resources]]
 == Utilizando pastas e projetos para organizar recursos
 
 No NetApp Console, uma organização contém pastas e projetos que ajudam você a organizar seus recursos. As pastas ajudam a agrupar projetos relacionados, e os projetos ajudam a gerenciar recursos e o acesso de membros.
 
 
 
+[[folders]]
 === Pastas
 
 As pastas ajudam você a organizar projetos relacionados. Você pode criar pastas aninhadas para representar diferentes níveis da estrutura da sua organização. Por exemplo, você pode criar uma pasta de nível superior para cada unidade de negócios e, em seguida, criar subpastas para diferentes equipes dentro dessa unidade de negócios. Em seguida, você cria projetos dentro de pastas.
@@ -64,6 +66,7 @@ Membros que têm permissões para o projeto A agora podem acessar o recurso.
 ====
 
 
+[[projects]]
 === Projetos
 
 Associe recursos a projetos para permitir que os membros os gerenciem. Os recursos devem ser associados a um projeto para fins de gerenciamento e acesso do usuário.
@@ -74,6 +77,7 @@ Os usuários navegam entre os projetos atribuídos na página *Sistemas* para ge
 
 
 
+[[add-a-folder-or-project]]
 == Adicionar uma pasta ou projeto
 
 Adicione projetos para gerenciar recursos e pastas para agrupar projetos relacionados. Ao criar uma nova organização, o Console inclui um projeto.
@@ -107,6 +111,7 @@ link:reference-iam-predefined-roles.html["Saiba mais sobre funções de acesso"]
 
 
 
+[[rename-a-folder-or-project]]
 == Renomear uma pasta ou projeto
 
 Renomeie uma pasta ou projeto conforme necessário. A mudança de nome não afeta os recursos associados nem o acesso dos membros.
@@ -118,6 +123,7 @@ Renomeie uma pasta ou projeto conforme necessário. A mudança de nome não afet
 
 
 
+[[delete-a-folder-or-project]]
 == Excluir uma pasta ou projeto
 
 Exclua pastas e projetos que você não precisa mais, como após uma reestruturação da equipe ou a conclusão de um projeto.
@@ -131,6 +137,8 @@ Antes de excluir uma pasta ou projeto, certifique-se de que ele não contenha ne
 
 
 
+[[view-the-resources-associated-with-a-folder-or-project]]
+[[view-associated-resources-members]]
 == Visualizar os recursos associados a uma pasta ou projeto
 
 Veja quais recursos e membros estão associados a uma pasta ou projeto.
@@ -152,6 +160,8 @@ image:screenshot-iam-allocated-resources.png["Uma captura de tela da página Edi
 
 
 
+[[change-the-resources-associated-with-a-folder-or-project]]
+[[modify-resources]]
 == Alterar os recursos associados a uma pasta ou projeto
 
 Você pode alterar os recursos associados a uma pasta ou projeto conforme as necessidades da sua organização mudam.
@@ -172,6 +182,7 @@ image:screenshot-iam-associate-resources.png["Uma captura de tela da página Edi
 
 
 
+[[view-members-associated-with-a-folder-or-project]]
 == Ver membros associados a uma pasta ou projeto
 
 Você pode visualizar os membros associados a uma pasta ou projeto na página *Organização*.
@@ -190,6 +201,8 @@ image:screenshot-iam-member-access.png["Uma captura de tela da página Editar pr
 
 
 
+[[modify-member-access-to-a-folder-or-project]]
+[[modify-members]]
 == Modificar o acesso de membros a uma pasta ou projeto
 
 Modifique o acesso dos membros para controlar o acesso aos recursos. Lembre-se de que as funções atribuídas no nível da pasta são herdadas por todos os projetos e pastas filhos.
@@ -211,6 +224,7 @@ Não é possível alterar o acesso de membros em níveis inferiores se ele for h
 
 
 
+[[related-information]]
 == Informações relacionadas
 
 * link:concept-identity-and-access-management.html["Saiba mais sobre identidade e acesso no NetApp Console"]

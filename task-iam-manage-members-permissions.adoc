@@ -21,6 +21,7 @@ Superadministrador, administrador da organização ou administrador de pasta ou 
 
 
 
+[[understand-how-access-is-granted-in-netapp-console]]
 == Entenda como o acesso é concedido no NetApp Console.
 
 O NetApp Console utiliza controle de acesso baseado em funções (RBAC) para gerenciar permissões. Atribua funções aos usuários individualmente ou por meio de grupos federados. Cada função define as ações permitidas para recursos específicos.
@@ -35,6 +36,8 @@ Observe o seguinte sobre como conceder acesso no NetApp Console:
 
 
 
+[[add-members-to-your-organization]]
+[[add-members]]
 == Adicionar membros à sua organização
 
 O NetApp Console suporta três tipos de membros: contas de usuário, contas de serviço e grupos federados.
@@ -47,6 +50,7 @@ Ao adicionar um membro, escolha o nível de recurso (organização, pasta ou pro
 
 
 
+[[add-a-user]]
 === Adicionar um usuário
 
 Os usuários se cadastram no NetApp Console, mas um administrador da organização, pasta ou projeto precisa adicioná-los à organização, pasta ou projeto para que possam acessar os recursos.
@@ -86,6 +90,8 @@ O console envia instruções ao usuário por e-mail.
 
 
 
+[[add-a-service-account]]
+[[service-account]]
 === Adicionar uma conta de serviço
 
 As contas de serviço permitem automatizar tarefas e conectar-se com segurança às APIs do Console. Escolha um ID e um segredo do cliente para configurações simples ou um JWT (JSON Web Token) para maior segurança em ambientes automatizados ou nativos da nuvem. Selecione o método que atenda aos seus requisitos de segurança.
@@ -132,6 +138,7 @@ O Console exibe o segredo do cliente apenas uma vez. Faça uma cópia segura; vo
 
 
 
+[[add-a-federated-group-to-your-organization]]
 == Adicione um grupo federado à sua organização.
 
 Você pode adicionar um grupo federado do seu provedor de identidade (IdP) à sua organização e atribuir a ele uma ou mais funções. Os membros do grupo federado herdam as funções que você atribui ao grupo no Console.
@@ -171,6 +178,7 @@ Apenas as funções compatíveis são exibidas na lista suspensa. link:reference
 
 
 
+[[related-information]]
 == Informações relacionadas
 
 * link:concept-identity-and-access-management.html["Saiba mais sobre gerenciamento de identidade e acesso no NetApp Console"]
