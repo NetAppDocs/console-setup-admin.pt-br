@@ -185,15 +185,6 @@ rm /var/run/docker.sock
 Você pode obter o Podman nos repositórios oficiais do Red Hat Enterprise Linux.
 
 +
-.. Para Red Hat Enterprise Linux 9,6:
-+
-[source, cli]
-----
-sudo dnf install podman-5:<version>
-----
-+
-Onde <versão> é a versão suportada do Podman que você está instalando. <<podman-versions,Veja as versões do Podman suportadas>> .
-
 .. Para Red Hat Enterprise Linux 9.1 a 9.4:
 +
 [source, cli]

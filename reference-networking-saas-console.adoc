@@ -48,7 +48,7 @@ Os agentes de console implantados no seu provedor de nuvem precisam acessar os e
 | \ https://support.netapp.com | Para obter informações sobre licenciamento e enviar mensagens do AutoSupport ao suporte da NetApp, assim como receber atualizações de software para Cloud Volumes ONTAP. 
 
 
-| \https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.netapp.com \https://cdn.auth0.com | Para fornecer recursos e serviços no NetApp Console. 
+| \https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.bluexp.netapp.com \https://cdn.auth0.com | Para fornecer recursos e serviços no NetApp Console. 
 
 
  a| 
