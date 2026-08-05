@@ -124,6 +124,7 @@ Para regiões padrão, as permissões são distribuídas em duas políticas.  Du
         "iam:DeleteInstanceProfile",
         "iam:GetRolePolicy",
         "iam:GetRole",
+        "iam:TagRole",
         "sts:DecodeAuthorizationMessage",
         "sts:AssumeRole",
         "s3:GetBucketTagging",
@@ -362,6 +363,7 @@ Para regiões padrão, as permissões são distribuídas em duas políticas.  Du
         "iam:CreateRole",
         "iam:DeleteRole",
         "iam:PutRolePolicy",
+        "iam:TagRole",
         "iam:CreateInstanceProfile",
         "iam:DeleteRolePolicy",
         "iam:AddRoleToInstanceProfile",
@@ -558,6 +560,7 @@ Para regiões padrão, as permissões são distribuídas em duas políticas.  Du
         "iam:CreateRole",
         "iam:DeleteRole",
         "iam:PutRolePolicy",
+        "iam:TagRole",
         "iam:CreateInstanceProfile",
         "iam:DeleteRolePolicy",
         "iam:AddRoleToInstanceProfile",
@@ -678,6 +681,7 @@ Para regiões padrão, as permissões são distribuídas em duas políticas.  Du
         "iam:CreateRole",
         "iam:DeleteRole",
         "iam:PutRolePolicy",
+        "iam:TagRole",
         "iam:CreateInstanceProfile",
         "iam:DeleteRolePolicy",
         "iam:AddRoleToInstanceProfile",
@@ -955,7 +959,7 @@ O agente faz as seguintes solicitações de API para implantar e gerenciar o Clo
 | Propósito | Ação | Usado para implantação? | Usado para operações diárias? | Usado para exclusão? 
 
 
-.13+| Crie e gerencie funções do IAM e perfis de instância para instâncias do Cloud Volumes ONTAP | iam:ListInstanceProfiles | Sim | Sim | Não 
+.14+| Crie e gerencie funções do IAM e perfis de instância para instâncias do Cloud Volumes ONTAP | iam:ListInstanceProfiles | Sim | Sim | Não 
 
 
 | iam:CriarFunção | Sim | Não | Não 
@@ -965,6 +969,9 @@ O agente faz as seguintes solicitações de API para implantar e gerenciar o Clo
 
 
 | iam:PutRolePolicy | Sim | Não | Não 
+
+
+| iam:TagRole | Sim | Não | Não 
 
 
 | iam:CriarPerfilDeInstancia | Sim | Não | Não 

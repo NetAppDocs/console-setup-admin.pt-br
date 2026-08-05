@@ -1089,7 +1089,6 @@
   <block id="c4173993f088503294e79bbbe0bb63d6" category="paragraph-title">Função necessária</block>
   <block id="4610064cac3ad84114cc400649031071" category="paragraph">Administrador da organização, administrador da federação, visualizador da federação.<block ref="8f129ac67aaaf533c741c49d131f7a5d" category="inline-link-macro-rx"></block></block>
   <block id="89a60a6294b7338e14dd136c35959073" category="paragraph">A federação com o site de suporte da NetApp permite que os usuários façam login no Console, no Active IQ Digital Advisor e em outros aplicativos associados usando as mesmas credenciais.</block>
-  <block id="465e770e13636214d49910bb014b1053" category="admonition">Se você se federar com o Site de Suporte da NetApp , não poderá se federar também com seu provedor de gerenciamento de identidade corporativa.  Escolha o que funciona melhor para sua organização.</block>
   <block id="0a3bde973847d35b12a69e1debea9ca9" category="inline-link">Formulário de solicitação de federação da NetApp</block>
   <block id="2364b4b1093b706141a365b97b678a4d" category="list-text">Baixe e complete o<block ref="82f36446881e14fa28b945cd41d2b383" category="inline-link-rx"></block> .</block>
   <block id="28ff396d9aacc41256de2a2d064386fd" category="list-text">Envie o formulário para o endereço de e-mail especificado no formulário.</block>
@@ -6358,4 +6357,5 @@
   <block id="9ebf544c1d9c2833a9338e1e70ee31de" category="list-text">\https://components.console.bluexp.netapp.com</block>
   <block id="e4f459430f502d8d3158a4b206057282" category="paragraph">NetApp Console 4.9.0 administração inclui o seguinte novo recurso.</block>
   <block id="1daedeccee3ce9bebdac02815a88e596" category="cell">\https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.bluexp.netapp.com \https://cdn.auth0.com</block>
+  <block id="7f862a4b8fc22b0af5dda5c9ababa346" category="cell">iam:TagRole</block>
 </blocks>
