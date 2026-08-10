@@ -24,6 +24,8 @@ indexpage:
       url: concept-identity-and-access-management.html
     - title: Saiba mais sobre os modos de implantação
       url: concept-modes.html
+    - title: Compare o NetApp Console e a implantação local do NetApp Console
+      url: console-differences.html
   - title: Começar
     links:
     - title: Primeiros passos com o NetApp Console (SaaS)
