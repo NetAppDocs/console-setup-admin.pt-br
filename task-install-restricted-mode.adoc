@@ -4,7 +4,7 @@ permalink: task-install-restricted-mode.html
 keywords: government region, gov, govcloud, connector, sovereign cloud 
 summary: Implante o agente do Console no modo restrito para que você possa usar o NetApp Console com conectividade de saída limitada.  Para começar, instale o agente do Console, configure o Console acessando a interface do usuário que está em execução no agente do Console e, em seguida, forneça as permissões de nuvem que você configurou anteriormente. 
 ---
-= Implantar o agente do Console no modo restrito
+= Implante o agente do NetApp Console no modo restrito
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

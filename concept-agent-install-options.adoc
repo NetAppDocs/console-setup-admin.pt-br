@@ -4,7 +4,7 @@ permalink: concept-agent-install-options.html
 keywords: install agent, deployment method, console install, marketplace install, manual install, ova install, vcenter install, installation options, 
 summary: Implante um agente do Console usando o NetApp Console, o marketplace do seu provedor de nuvem ou instalando manualmente o software em um host Linux. O método de implantação determina como você mantém o host do agente e varia dependendo de qual modo de implantação do NetApp Console você está usando. 
 ---
-= Escolha um método de implantação do agente do console
+= Saiba mais sobre os métodos de implantação do agente do NetApp Console
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

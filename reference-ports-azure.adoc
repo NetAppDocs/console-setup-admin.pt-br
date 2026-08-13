@@ -4,7 +4,7 @@ permalink: reference-ports-azure.html
 keywords: ports, security group, http, https, inbound, outbound 
 summary: O grupo de segurança do Azure para o agente requer regras de entrada e de saída. O NetApp Console cria automaticamente esse grupo de segurança quando você cria um agente do Console. Para outras opções de instalação, você precisa configurar esse grupo de segurança manualmente. 
 ---
-= Regras de grupo de segurança do agente de console no Azure
+= NetApp Console regras de grupo de segurança do agente no Azure
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

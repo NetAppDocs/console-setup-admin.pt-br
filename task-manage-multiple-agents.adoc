@@ -4,7 +4,7 @@ permalink: task-manage-multiple-agents.html
 keywords: switch connectors, multiple connectors, disaster recovery, dr, two connectors 
 summary: Se sua organização utiliza vários agentes do Console, você pode alternar entre esses agentes do Console diretamente na página Sistemas para visualizar os sistemas associados. 
 ---
-= Visualizar sistemas associados a diferentes agentes do Console
+= Visualizar sistemas associados a diferentes agentes do NetApp Console
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

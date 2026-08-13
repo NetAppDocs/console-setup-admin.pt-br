@@ -4,7 +4,7 @@ permalink: task-update-agent-addressing.html
 keywords: agent ip address, agent uri, change ip address, edit uri, agent network, agent addressing 
 summary: Quando a configuração da rede for alterada, talvez seja necessário atualizar o endereço IP do agente no seu provedor de nuvem e os URIs registrados no Console. 
 ---
-= Atualizar endereçamento do agente e URIs
+= Atualizar o endereçamento e as URIs do agente do NetApp Console
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

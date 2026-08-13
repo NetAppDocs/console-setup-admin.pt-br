@@ -4,7 +4,7 @@ permalink: task-quick-start-private-mode.html
 keywords: private mode quick start, quick start, aws top secret cloud, aws secret cloud, secret cloud, top secret cloud, bluexp legacy, bluexp, netapp console private mode 
 summary: O modo privado é normalmente usado em ambientes locais que não possuem conexão com a internet e em regiões de nuvem seguras, o que inclui AWS Secret Cloud, AWS Top Secret Cloud e Azure IL6. 
 ---
-= Fluxo de trabalho de primeiros passos para o NetApp Console no modo privado
+= Guia rápido para o NetApp Console em modo privado
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

@@ -4,7 +4,7 @@ permalink: task-agent-vm-config.html
 keywords: agent VM, vcenter, esxi, increase cpu, increase ram, vm maintenance, agent maintenance, agent operating system, agent host 
 summary: Você pode fazer alterações no seu vCenter ou host ESXi existente após implantar o agente do Console. Por exemplo, você pode aumentar a CPU ou a RAM da instância da VM que hospeda o agente do Console. 
 ---
-= Manter um vCenter ou host ESXi para o agente do Console
+= Mantenha um host vCenter ou ESXi para o agente do NetApp Console
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

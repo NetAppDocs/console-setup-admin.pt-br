@@ -4,7 +4,7 @@ permalink: task-installing-https-cert.html
 keywords: https certificate, certificate, adding, installing, ca, certificate authority, format, encoding, restricted mode, access 
 summary: Instale um certificado assinado pela CA para acesso do usuário ao console baseado na Web ao usar o NetApp Console no modo restrito. 
 ---
-= Instalar um certificado assinado por CA para acesso ao console baseado na web
+= Instale um certificado assinado por uma Autoridade Certificadora (CA) para acesso ao NetApp Console
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

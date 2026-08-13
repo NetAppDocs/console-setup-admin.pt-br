@@ -4,7 +4,7 @@ permalink: task-prepare-restricted-mode.html
 keywords: restricted mode requirements, requirements, install options, restricted mode networking, dark site, restricted mode permissions, permissions for restricted mode, networking for restricted mode 
 summary: Prepare seu ambiente antes de implantar o NetApp Console no modo restrito.  Você precisa revisar os requisitos do host, preparar a rede, configurar permissões e muito mais. 
 ---
-= Preparar para implantação no modo restrito
+= Prepare-se para implantação no NetApp Console modo restrito
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

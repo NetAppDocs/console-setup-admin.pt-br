@@ -4,7 +4,7 @@ permalink: task-partnerships-work.html
 keywords: partner organizations, create partnership, MSPs, service provider access 
 summary: Depois de receber uma função em uma organização parceira, você pode alternar para essa organização e executar ações para as quais tem permissão. 
 ---
-= Trabalhar em uma organização parceira
+= Trabalhe em uma organização parceira no NetApp Console
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

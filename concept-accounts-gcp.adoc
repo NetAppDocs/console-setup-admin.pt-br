@@ -4,7 +4,7 @@ permalink: concept-accounts-gcp.html
 keywords: cloud provider accounts, gcp, gcp accounts, google cloud platform, google accounts, google cloud platform accounts, permissions, project, google cloud project, credential, bluexp 
 summary: Saiba como o NetApp Console usa as credenciais do Google Cloud para executar ações em seu nome e como essas credenciais são associadas às assinaturas do marketplace.  Entender esses detalhes pode ser útil ao gerenciar as credenciais de um ou mais projetos do Google Cloud.  Por exemplo, talvez você queira saber mais sobre a conta de serviço associada à VM do agente do Console. 
 ---
-= Saiba mais sobre projetos e permissões do Google Cloud
+= Saiba mais sobre projetos e permissões do Google Cloud no NetApp Console
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

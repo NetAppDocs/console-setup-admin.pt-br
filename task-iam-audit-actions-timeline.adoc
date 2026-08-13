@@ -4,7 +4,7 @@ permalink: task-iam-audit-actions-timeline.html
 keywords: iam, audit, monitor, audit iam actions, monitor iam actions 
 summary: Monitore ou audite as ações de gerenciamento de identidade e acesso do NetApp Console na página Auditoria. 
 ---
-= Monitorar ou auditar a atividade do IAM
+= Monitore ou audite a atividade do IAM no NetApp Console
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

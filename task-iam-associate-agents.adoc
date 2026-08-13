@@ -4,7 +4,7 @@ permalink: task-iam-associate-agents.html
 keywords: agent, associate agent, folder, project, associate folder with connector, associate project with connector, associate connector with project, associate connector with resource, connector, associate connector, 
 summary: Se os membros da sua organização precisarem usar um agente do Console em outro projeto, você precisará associar esse agente do Console ao respectivo projeto. 
 ---
-= Associar um agente do Console a outras pastas e projetos
+= Associe um agente do NetApp Console a outras pastas e projetos
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

@@ -4,7 +4,7 @@ permalink: task-iam-manage-members-permissions.html
 keywords: user, service account, member, role, permissions, organization, project, folder, iam, identity and access management, federated groups, SSO, access roles, add members, grant permissions 
 summary: Gerencie os membros da sua organização para fornecer permissões em diferentes níveis da hierarquia de recursos da sua organização. 
 ---
-= Adicionar usuários a uma organização do NetApp Console
+= Adicionar membros a uma organização do NetApp Console
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
