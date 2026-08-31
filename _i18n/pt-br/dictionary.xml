@@ -5104,7 +5104,6 @@
   <block id="f19aee9e6e2e5954d2de8e30cbe4751d" category="sidebar">Integre com seu provedor de identidade.</block>
   <block id="444cf9807eaf5ac0945edfce9108c729" category="sidebar">Ativar modo somente leitura</block>
   <block id="320b734c12631424ce316d6953d1dedc" category="sidebar">Atividade do console de monitoramento</block>
-  <block id="650a6b9660e523c1a925feddd83c0c4d" category="sidebar">Implantar o NetApp Console no modo restrito (implantações em nuvem soberana)</block>
   <block id="d71a2025aa5d19fc2c3bab8a7d5d1bc1" category="sidebar">Conformidade com SOC-2</block>
   <block id="aa201c2db7dd29fb5926c96c4006fa2d" category="sidebar">Parcerias de consoles</block>
   <block id="c595922d1b033b7101399b8ddff46d28" category="sidebar">contas de suporte da NetApp</block>
@@ -6441,4 +6440,118 @@
   <block id="1ffdd70508b45fa8740a4e5db3fed667" category="doc">Atualize o agente do NetApp Console</block>
   <block id="88119fcc4c91e2769610d7732f2d8876" category="doc">O que há de novo no NetApp Console</block>
   <block id="01b8b50c6af6a26d04385207f4b3c02e" category="section-title">13 de agosto de 2026</block>
+  <block id="1058dc5369c0908359aaf95158dd0d0f" category="summary">Aprenda como proteger as implantações do NetApp Console, o acesso de usuários, os agentes do Console e as operações de gerenciamento de storage.</block>
+  <block id="5d7fcd9743b1dc5a7dfb8167192a0a56" category="doc">Protegendo o NetApp Console</block>
+  <block id="bdd077838c93e11800ec4f06eb3a835b" category="paragraph">Proteja as operações de armazenamento limitando o acesso ao NetApp Console, protegendo os agentes do Console e monitorando a atividade em busca de alterações não autorizadas ou não intencionais.</block>
+  <block id="f89e189eab4b0a84dde6088f4027e6e1" category="paragraph">A segurança é uma responsabilidade compartilhada. NetApp protege o serviço do Console, enquanto você é responsável por escolher o modo de implantação apropriado, controlar o acesso de usuários e contas de serviço, proteger os ambientes onde você implanta os agentes do Console e monitorar a atividade em sua organização.</block>
+  <block id="3173168275b216d053bdec7a280ec461" category="section-title">Escolha o modo de implantação apropriado</block>
+  <block id="0e73d1e9e7747b1b1b4b3b143c68f576" category="paragraph">Escolha um modo de implantação com base em seus requisitos de conectividade, isolamento e operacionais:</block>
+  <block id="26c0fd0d76bb5a678c4cca1b2ab14d60" category="list-text">O modo padrão utiliza o aplicativo SaaS hospedado na nuvem.</block>
+  <block id="7dd7f9cd8bdd5ebb53ba16dcb7ec7947" category="list-text">O modo restrito instala o NetApp Console em um ambiente de nuvem pública com conectividade de saída limitada às APIs da NetApp.</block>
+  <block id="94671ddee001ed58f550c5dec055e5ae" category="list-text">O modo privado instala o NetApp Console localmente ou em um ambiente isolado da internet, sem conectividade de saída para NetApp.</block>
+  <block id="9c1615767d701966b45379b7c58e3d62" category="paragraph">Cada modo possui diferentes disponibilidades de recursos e requisitos de segurança. <block ref="d0fb4185dcdae7937ec99f5b30ad1a65" category="inline-link-macro-rx"></block>.</block>
+  <block id="466fe6a37480f459dfb29f33029949a8" category="section-title">Controle de identidade e acesso</block>
+  <block id="ec8357a35950f72e7cf816a40f21b7be" category="paragraph">Utilize o Gerenciamento de Identidade e Acesso (IAM) para conceder aos usuários e contas de serviço apenas o acesso necessário para a execução de suas tarefas:</block>
+  <block id="8356ca0d1248293dffe430b44a9dc8aa" category="list-text">Organize os recursos em projetos e, quando apropriado, em pastas que reflitam os limites da sua empresa ou operação.</block>
+  <block id="dabb178434082180a8558f051e774a03" category="list-text">Atribua funções predefinidas no nível mais baixo da hierarquia organizacional que forneça o acesso necessário.</block>
+  <block id="54ff18ce569c4f91f21af8d6abcef91b" category="list-text">Analise regularmente os membros da organização, as contas de serviço e suas funções. Remova o acesso que não for mais necessário.</block>
+  <block id="81dc9345250f1f6289b7a8cc34fef322" category="list-text">Utilize a federação de identidades para autenticação única (SSO) quando ela atender aos requisitos da sua organização. A federação não está disponível no modo privado.</block>
+  <block id="1ddb29d678b51b4e086a8e3bba08b740" category="list-text">Exija que os usuários locais usem autenticação multifator (MFA) e proteja as credenciais da conta de serviço como segredos. Recrie as credenciais da conta de serviço quando forem perdidas ou precisarem ser rotacionadas.</block>
+  <block id="8abf9a466e4c9494ea94af378cf41efe" category="inline-link-macro">Saiba mais sobre IAM no NetApp Console</block>
+  <block id="0ff7aecca234ce48c5524a55697a2ab4" category="paragraph"><block ref="8f4dacc1355f6b0f32454c70c7a5554f" category="inline-link-macro-rx"></block>.</block>
+  <block id="20d82496be37603c3aa358f272b228b8" category="section-title">Agentes do Console Seguro</block>
+  <block id="93f61e19d062d5546ce06f1a3d7b08e0" category="paragraph">Os agentes do Console fazem a ponte entre o Console e os sistemas de armazenamento, bem como com ambientes em nuvem ou locais. Os agentes iniciam a comunicação com o Console; o Console não inicia conexões com os agentes.</block>
+  <block id="2dbde24776bdf42975eef846402c2bbc" category="paragraph">Aplique os seguintes controles a cada agente:</block>
+  <block id="5442403e707d9578ed32c3be54184634" category="list-text">Implante o agente em um ambiente que atenda aos requisitos de host, rede e controle de acesso da sua organização.</block>
+  <block id="8cfb226c3d3449da4e7e84f027c3ab24" category="list-text">Permita apenas as conexões de rede de saída necessárias e as permissões de nuvem necessárias. Revise as permissões específicas do provedor e os requisitos de porta antes da implantação.</block>
+  <block id="34a1e4720a42b92622003bfb676aabe2" category="list-text">Use uma configuração de proxy compatível quando o tráfego de saída precisar passar por um servidor proxy.</block>
+  <block id="85214b639a9dc16f16c9fff3b343aad4" category="list-text">Instale um certificado assinado por uma Autoridade Certificadora (CA) quando os usuários acessarem o console web do agente via HTTPS.</block>
+  <block id="5d079d8b3bdd2a21cd919b281144297c" category="list-text">Mantenha o software do agente atualizado. Os agentes em modo privado devem ser atualizados manualmente.</block>
+  <block id="1284c01df79967e9a9cb0fa34a8fc1d0" category="list-text">Na AWS, considere exigir o IMDSv2 para instâncias EC2 que hospedam um agente do Console.</block>
+  <block id="510c458f335c9e63f10ead0565bc2160" category="section-title">Reduza alterações não intencionais</block>
+  <block id="9cdb404f81065f4fe2888a384f99999e" category="paragraph">Os administradores da organização podem ativar o modo somente leitura para a organização. O modo somente leitura ajuda a impedir que os usuários façam alterações nos sistemas de storage ou usem serviços de dados até que solicitem permissões elevadas.</block>
+  <block id="5a883dfb4caaaf143ab7d8771e1a98f4" category="inline-link-macro">Aprenda como ativar o modo somente leitura</block>
+  <block id="734b33d0a32bbd9e142a6daf22f123b0" category="paragraph"><block ref="de3e3793ad80a364bdc4648dc1cedccd" category="inline-link-macro-rx"></block>.</block>
+  <block id="802ad0d8de017224a428aaf6dc70e614" category="section-title">Monitorar e revisar a atividade</block>
+  <block id="46aaf6874279db1f02b13d9345965a72" category="paragraph">Utilize a linha do tempo de operações para revisar o gerenciamento de storage e a atividade do usuário no Console. Revise regularmente o acesso de membros, as atribuições de funções, as credenciais da conta de serviço, o status do agente e as operações recentes como parte do processo de segurança da sua organização.</block>
+  <block id="acf4d569e85ba4f07dee65d868e312db" category="inline-link-macro">Aprenda como monitorar as operações do Console</block>
+  <block id="8c87e344e1cb6ec1fa88a41d9b58b050" category="paragraph"><block ref="19f12f26a8f3bcda1c7b8ec8dd09d6b1" category="inline-link-macro-rx"></block>.</block>
+  <block id="dde081281e2bc1099c59a3a9abd2ab3b" category="section-title">Tópicos de segurança relacionados</block>
+  <block id="0d16e0fa8385f4ecca48c87b54700eff" category="inline-link-macro">Gerencie a segurança do usuário</block>
+  <block id="c0dc5bcd7d24bdf49727fa822a80ff00" category="list-text"><block ref="3b3467491ef8ae505b09e60553381f2c" category="inline-link-macro-rx"></block>, incluindo MFA e credenciais de conta de serviço.</block>
+  <block id="3ea31604ad2a4d3b7cfe571d0fc5b898" category="list-text"><block ref="484813cc457e81afea222e9c4c55417e" category="inline-link-macro-rx"></block>.</block>
+  <block id="bace6dfef8b8b6bdc38f380797a8ac13" category="list-text"><block ref="c231010d3250b37fefa79e49c7fac573" category="inline-link-macro-rx"></block>.</block>
+  <block id="114871ac953b22269534be5463d5bed4" category="inline-link-macro">Revise os requisitos de acesso à rede para o aplicativo SaaS</block>
+  <block id="e48c9dcd823413ddca6e3e2dceabdf12" category="list-text"><block ref="acba60e5cc3ccbd1da8e2e4daa0251aa" category="inline-link-macro-rx"></block>.</block>
+  <block id="66ea689c24dc9ab9ecf7b3dcbdf2d2bb" category="inline-link-macro">Analise as permissões do provedor de nuvem e os requisitos de rede</block>
+  <block id="1772f0b91f03cc431bd437e649681bdc" category="list-text"><block ref="ac7ed8f265c73428987eae567f5a25a0" category="inline-link-macro-rx"></block>.</block>
+  <block id="f8866b2b7454ef2769d5caa0375ad400" category="inline-link-macro">Saiba mais sobre conformidade de segurança para o NetApp Console</block>
+  <block id="838ed343eb419ca177b29290cfa5cea7" category="list-text"><block ref="7de827dce0dc8582e4b10f433db46dd9" category="inline-link-macro-rx"></block>.</block>
+  <block id="50e8f64941e4c6ae32b514644df19767" category="summary">Siga as etapas recomendadas para proteger o NetApp Console, o IAM, a federação de identidade, o modo somente leitura, as contas de serviço, os agentes do Console e o acesso ao ONTAP System Manager.</block>
+  <block id="fa6cced3b6fa7ad524a13722716b4e25" category="doc">Console seguro NetApp</block>
+  <block id="91d6f99841f27c7d4ae8a576545136e3" category="paragraph">Siga os passos abaixo para estabelecer uma base de segurança para sua organização. Siga o fluxo de trabalho de configuração para seu modo de implantação antes de aplicar os controles de segurança listados abaixo. <block ref="d0fb4185dcdae7937ec99f5b30ad1a65" category="inline-link-macro-rx"></block>.</block>
+  <block id="ca77259f0411c49133e28233f7e0a594" category="paragraph-title"><block ref="58f667aaf05f87159670e12bd9bc076b" category="inline-image-macro-rx" type="image"></block>Escolha um modo de implantação do NetApp Console e conclua a configuração inicial</block>
+  <block id="6643f0fc063b73ae7cb00644017cef4a" category="paragraph">Crie a organização e defina o primeiro administrador da organização. Conclua o fluxo de trabalho de configuração que corresponde à sua implementação.</block>
+  <block id="22f7b8c9e3cec45bb0909cca22e4e862" category="inline-link-macro">Comece a usar o NetApp Console no modo padrão</block>
+  <block id="1b04b04eae157b7a2e94f5fe3a41ed68" category="list-text"><block ref="1b04b04eae157b7a2e94f5fe3a41ed68" category="inline-link-macro-rx"></block></block>
+  <block id="bb052ff727ad3405f9e377f005178fd8" category="inline-link-macro">Comece a usar o NetApp Console no modo restrito</block>
+  <block id="07a84f2a895ff5384ba250bbd0694216" category="list-text"><block ref="07a84f2a895ff5384ba250bbd0694216" category="inline-link-macro-rx"></block></block>
+  <block id="43a0f032817197132c98b19efcb2283f" category="inline-link-macro">Comece a usar o NetApp Console no modo privado</block>
+  <block id="894324cb3dad3c4c463e07e85ea7dc44" category="list-text"><block ref="894324cb3dad3c4c463e07e85ea7dc44" category="inline-link-macro-rx"></block></block>
+  <block id="4ca59768f21f1460981bd735f1baac9d" category="paragraph-title"><block ref="54f425ce8d89f4ed6b8a546561af5d60" category="inline-image-macro-rx" type="image"></block> Permissões do agente do Secure Console, acesso à rede e hosts</block>
+  <block id="35da275a1ecec991e7323642d414234d" category="paragraph">Limite as permissões de nuvem e o acesso à rede de cada agente do Console ao mínimo necessário. Proteja o tráfego do console web e mantenha o software do agente do Console.</block>
+  <block id="ac7ed8f265c73428987eae567f5a25a0" category="list-text"><block ref="ac7ed8f265c73428987eae567f5a25a0" category="inline-link-macro-rx"></block></block>
+  <block id="487d3f01749236f4a1c63ceebd697397" category="inline-link-macro">Revisar os requisitos de acesso à rede</block>
+  <block id="1c05e14c7de8a7f8cd966ad66b4b3e01" category="list-text"><block ref="1c05e14c7de8a7f8cd966ad66b4b3e01" category="inline-link-macro-rx"></block></block>
+  <block id="b56591a52f1058d1f87b24f5b185e077" category="inline-link-macro">Instale um certificado assinado por uma Autoridade Certificadora (CA)</block>
+  <block id="739a0d5d95bf9c38769b463ca19accaa" category="list-text"><block ref="739a0d5d95bf9c38769b463ca19accaa" category="inline-link-macro-rx"></block></block>
+  <block id="72e9c60a82606c5e5b157cc82e336351" category="inline-link-macro">Configure um servidor proxy</block>
+  <block id="8d296f5cd8486485175e81f9eb156ece" category="list-text"><block ref="8d296f5cd8486485175e81f9eb156ece" category="inline-link-macro-rx"></block></block>
+  <block id="dbfecc969c3a84fbdcd91e50bdd86a68" category="list-text"><block ref="dbfecc969c3a84fbdcd91e50bdd86a68" category="inline-link-macro-rx"></block></block>
+  <block id="35bf205af05d718bb2b7b145e4c400fa" category="paragraph-title"><block ref="05b2444faffd66d76e88602ea7dd353f" category="inline-image-macro-rx" type="image"></block> Organize a hierarquia do IAM do NetApp Console</block>
+  <block id="902e832c587f1279a5acf65feaf1211e" category="paragraph">Configure a hierarquia organizacional para corresponder à forma como suas equipes trabalham. Defina o escopo dos sistemas de storage, serviços de dados e agentes do Console para os projetos que os gerenciam.</block>
+  <block id="0e6ece2237e7f9e1f9a0aa6ba9e9b5d9" category="inline-link-macro">Crie pastas e projetos.</block>
+  <block id="04c98a584416c40d70b3f74fc101a548" category="list-text"><block ref="04c98a584416c40d70b3f74fc101a548" category="inline-link-macro-rx"></block></block>
+  <block id="5cab9254ce355b5c287938249b28816e" category="inline-link-macro">Associe recursos a projetos.</block>
+  <block id="df91e596a0ec0af0359838f6f8db8c62" category="list-text"><block ref="df91e596a0ec0af0359838f6f8db8c62" category="inline-link-macro-rx"></block></block>
+  <block id="839425f36147da7d1cc666e9089039b1" category="paragraph-title"><block ref="beadfa85a2fdca06b91edc1131c603e6" category="inline-image-macro-rx" type="image"></block> Configure a federação de identidade e os grupos federados do NetApp Console</block>
+  <block id="9a52c08293d409a842184acb141eb8de" category="paragraph">Conecte o NetApp Console ao seu provedor de identidade corporativo (IdP) para que os usuários façam login com credenciais corporativas e seu IdP possa aplicar suas políticas de autenticação. O NetApp Console é compatível com AD FS, Microsoft Entra ID, PingFederate e provedores de identidade SAML genéricos.</block>
+  <block id="01ad1d46d1fca1a4c36d506b90b391ec" category="inline-link-macro">Aprenda como adicionar um grupo federado</block>
+  <block id="420464487a0edfeb41fd919551a6272d" category="paragraph">Adicione usuários e grupos federados à organização do Console e atribua a eles funções do Console. A federação não substitui a associação ao Console nem a atribuição de funções. <block ref="c0efbcf589f6ac5b125ed3ce815ba603" category="inline-link-macro-rx"></block>.</block>
+  <block id="2b765ea4ff3da54728d8447c5c6571b8" category="list-text"><block ref="2b765ea4ff3da54728d8447c5c6571b8" category="inline-link-macro-rx"></block></block>
+  <block id="1fa77426337802b6d8934e569c4ca014" category="inline-link-macro">Federe com o AD FS</block>
+  <block id="b027d5096fb538387f89c4209d60f160" category="list-text"><block ref="b027d5096fb538387f89c4209d60f160" category="inline-link-macro-rx"></block></block>
+  <block id="390ed3aa4df4a47d3c0287b8903016f5" category="inline-link-macro">Federar com Microsoft Entra ID</block>
+  <block id="73b73bc1a7e29b791c85daa4e26a58bb" category="list-text"><block ref="73b73bc1a7e29b791c85daa4e26a58bb" category="inline-link-macro-rx"></block></block>
+  <block id="5cfe4565ad097684341bd371674bcb66" category="list-text"><block ref="5cfe4565ad097684341bd371674bcb66" category="inline-link-macro-rx"></block></block>
+  <block id="f76ee8d03e827ecd67d8fd3a7f399659" category="list-text"><block ref="f76ee8d03e827ecd67d8fd3a7f399659" category="inline-link-macro-rx"></block></block>
+  <block id="7f267bf56eb86142c609448d2b6fa486" category="paragraph-title"><block ref="99e8b2f00e172bfcff96afdce69907bc" category="inline-image-macro-rx" type="image"></block> Adicione membros ao NetApp Console e atribua funções com privilégios mínimos</block>
+  <block id="0adafca284bb085118cee75938fe8cf1" category="paragraph">Conceda a cada usuário, conta de serviço e grupo federado apenas o acesso necessário para suas responsabilidades. Atribua funções no escopo mais restrito de organização, pasta ou projeto que suporte o trabalho. Habilite a autenticação multifator para usuários locais.</block>
+  <block id="73af05182f26c2bb0c80203ab811f740" category="inline-link-macro">Adicione membros à sua organização do NetApp Console</block>
+  <block id="d9e6b511fcd1aac84cc476d56001fce8" category="list-text"><block ref="d9e6b511fcd1aac84cc476d56001fce8" category="inline-link-macro-rx"></block></block>
+  <block id="22f29f8030a62c2c0af6b4e6b6f606e4" category="inline-link-macro">Saiba mais sobre controle de acesso baseado em funções</block>
+  <block id="3b2e25af1bea98c2b0ae625453e6f096" category="list-text"><block ref="3b2e25af1bea98c2b0ae625453e6f096" category="inline-link-macro-rx"></block></block>
+  <block id="195648ee3edf3d90376eb60ce8982563" category="inline-link-macro">Analise as funções predefinidas</block>
+  <block id="b727bb2ef69c2fcbbd990168c72ee6ca" category="list-text"><block ref="b727bb2ef69c2fcbbd990168c72ee6ca" category="inline-link-macro-rx"></block></block>
+  <block id="a1a6242d2d072d6e6fdd57f576b606ed" category="list-text"><block ref="a1a6242d2d072d6e6fdd57f576b606ed" category="inline-link-macro-rx"></block></block>
+  <block id="2d44ec90fe255157950694f5d9085d23" category="paragraph-title"><block ref="ef78558f80439832e0f51cc22cee8b8c" category="inline-image-macro-rx" type="image"></block> Automação segura do NetApp Console com contas de serviço</block>
+  <block id="79f7a42800700476b37ddd6e61cfe43e" category="paragraph">Mantenha a automação separada das contas humanas. Atribua a cada conta de serviço a função e o escopo mínimos necessários. Armazene as credenciais com segurança e recrie-as quando forem perdidas ou rotacionadas.</block>
+  <block id="3f507ae6cfa9c8dd23848c7ac6318097" category="inline-link-macro">Saiba como adicionar uma conta de serviço</block>
+  <block id="f44d55cb0b77f0ef3a3b8c6b63aebf33" category="paragraph"><block ref="f44d55cb0b77f0ef3a3b8c6b63aebf33" category="inline-link-macro-rx"></block></block>
+  <block id="12e67aac3e7f9227cc35f8f047d7dc74" category="inline-image-macro">Sete</block>
+  <block id="d3d636e2f07c73c47ceb409e33a007f6" category="paragraph-title"><block ref="36915574c413876eaa75cbd48f69fd00" category="inline-image-macro-rx" type="image"></block>Ative o modo somente leitura para uma organização do NetApp Console</block>
+  <block id="916b3d0ae2a38a356dac81b21f0aadb9" category="paragraph">Exija que os administradores elevem seu papel antes de fazer alterações. Esse controle reduz alterações não intencionais nos sistemas de storage e nos serviços de dados.</block>
+  <block id="de3e3793ad80a364bdc4648dc1cedccd" category="paragraph"><block ref="de3e3793ad80a364bdc4648dc1cedccd" category="inline-link-macro-rx"></block></block>
+  <block id="4a03ba8153e8c5adf50924eb1148e173" category="admonition">O modo somente leitura não está disponível quando o NetApp Console está no modo privado.</block>
+  <block id="baca0ca6729684fd54206793ae4b5bd5" category="inline-image-macro">Oito</block>
+  <block id="b65c76d2d63a4b6eda425db31ce4a506" category="paragraph-title"><block ref="430057c670c01688e904ed2ba129a0b5" category="inline-image-macro-rx" type="image"></block> Impor permissões do ONTAP para o ONTAP System Manager</block>
+  <block id="077e2c69447d026f0fd6df0117d66f5a" category="paragraph">Ative a opção *Forçar Credenciais* nos agentes ativos do Console que gerenciam sistemas ONTAP de produção. Os usuários fornecem suas credenciais do cluster ONTAP ao abrir o ONTAP System Manager, e o ONTAP aplica suas permissões.</block>
+  <block id="7956c3d473c153fa708c836ff115cf1f" category="inline-link-macro">Saiba como aplicar permissões do ONTAP para o ONTAP System Manager</block>
+  <block id="183e4774dd06af5ef46d71d3a6f8b5bf" category="paragraph"><block ref="183e4774dd06af5ef46d71d3a6f8b5bf" category="inline-link-macro-rx"></block></block>
+  <block id="24db11216549ee55172c33cf3def2f3f" category="inline-image-macro">Nove</block>
+  <block id="d09dec5c2df9a4ff4cb80a7d3198cc65" category="paragraph-title"><block ref="b37b448eff4f65237cf47b29bdd2817c" category="inline-image-macro-rx" type="image"></block> Analise a atividade de auditoria e os controles de segurança do NetApp Console</block>
+  <block id="d1a2ee8ff075a4679389e2746373a22a" category="paragraph">Estabeleça um processo de revisão recorrente para membros, mapeamentos de grupos, funções, credenciais, agentes e operações recentes. Remova o acesso que não for mais necessário e investigue atividade inesperada.</block>
+  <block id="03e21ac1acdd1f03c79cf52cd9cf7e75" category="inline-link-macro">Aprenda como auditar ações do Console</block>
+  <block id="e64d42268f0853ee74265280546a395b" category="list-text"><block ref="e64d42268f0853ee74265280546a395b" category="inline-link-macro-rx"></block></block>
+  <block id="19f12f26a8f3bcda1c7b8ec8dd09d6b1" category="list-text"><block ref="19f12f26a8f3bcda1c7b8ec8dd09d6b1" category="inline-link-macro-rx"></block></block>
 </blocks>
