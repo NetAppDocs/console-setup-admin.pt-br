@@ -12,7 +12,7 @@ summary: NetApp Data Classification oferece suporte a duas funções para gerenc
 
 
 [role="lead"]
-NetApp Data Classification oferece suporte ao gerenciamento de identidade e acesso, proporcionando flexibilidade para atribuir aos usuários uma função específica de acordo com as tarefas que precisam realizar em sua organização. A forma como você atribui funções depende das suas próprias práticas de negócios e de gerenciamento de storage.
+NetApp Data Classification oferece suporte a funções de gerenciamento de identidade e acesso (IAM), permitindo que você personalize o acesso às tarefas que os usuários precisam realizar. A forma como você atribui funções depende das suas próprias práticas de negócios e de gerenciamento de storage.
 
 O Data Classification oferece suporte a dois papéis:
 
@@ -38,7 +38,7 @@ NOTE: O administrador de Compliance foi adicionado ao Data Classification na ver
 [[classification-viewer]]
 == Visualizador de classificação
 
-O visualizador de Classificação foi projetado para usuários que precisam acessar os resultados da verificação em Data Classification, mas não precisam acessar os recursos de configuração. Usuários com a função de visualizador de Classificação podem visualizar os resultados do mapeamento e das verificações completas para avaliar áreas para economia de storage ou riscos potenciais de dados. Usuários com a função de visualizador de Classificação também podem gerar relatórios para os recursos aos quais têm acesso. Esses usuários não podem habilitar ou desabilitar a verificação de volumes, buckets ou esquemas de banco de dados.
+O visualizador de Classification foi projetado para usuários que precisam acessar os resultados da verificação em NetApp Data Classification, mas não precisam acessar os recursos de configuração. Usuários com a função de visualizador de Classification podem visualizar os resultados do mapeamento e das verificações completas para avaliar áreas para economia de storage ou riscos potenciais aos dados. Usuários com a função de visualizador de Classification também podem gerar relatórios para os recursos aos quais têm acesso. Esses usuários não podem habilitar ou desabilitar a verificação de volumes, buckets ou esquemas de banco de dados.
 
 
 
