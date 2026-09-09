@@ -61,7 +61,7 @@ indexpage:
   - title: Segurança e conformidade
     links:
     - title: Console seguro NetApp
-      url: task-secure-netapp-console.html
+      url: "/task-secure-netapp-console.html"
     - title: Integre com seu provedor de identidade.
       url: "/concept-federation.html"
     - title: Ativar modo somente leitura
