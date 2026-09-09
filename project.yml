@@ -36,7 +36,7 @@ sidebar:
         url: "/concept-agents.html"
       - title: Gerenciamento de identidade e acesso
         url: "/concept-identity-and-access-management.html"
-    - title: Comece a usar o NetApp Console (SaaS)
+    - title: Comece a usar o NetApp Console (modo padrão)
       entries:
       - title: Fluxo de trabalho de introdução
         url: "/task-quick-start-standard-mode.html"
@@ -222,7 +222,11 @@ sidebar:
           - title: Funções de backup e recuperação
             url: "/reference-iam-backup-rec-roles.html"
           - title: Funções do Cloud Volumes ONTAP
-            url: "/reference-iam-cvo-roles.html"
+            entries:
+            - title: Funções do Cloud Volumes ONTAP
+              url: "/reference-iam-cvo-roles.html"
+            - title: Configure o acesso baseado em funções para Cloud Volumes ONTAP
+              url: "/task-cvo-rbac-setup.html"
           - title: Funções de classificação de dados
             url: "/reference-iam-data-classification.html"
           - title: Funções de recuperação de desastres
@@ -237,8 +241,6 @@ sidebar:
           url: https://docs.netapp.com/us-en/console-automation/tenancyv4/overview.html
     - title: Segurança e conformidade
       entries:
-      - title: Console seguro NetApp
-        url: "/task-secure-netapp-console.html"
       - title: Federação de identidade
         entries:
         - title: Saiba mais sobre federação de identidade

@@ -1,0 +1,106 @@
+---
+sidebar: sidebar 
+permalink: task-cvo-rbac-setup.html 
+keywords: cloud volumes ontap, role-based access, iam, identity and access management, permissions, roles, users, subscribers 
+summary: Configure o acesso baseado em funções para o Cloud Volumes ONTAP organizando projetos, adicionando membros ao NetApp Console e atribuindo funções do Cloud Volumes ONTAP. 
+---
+= Configure o acesso baseado em funções para Cloud Volumes ONTAP no NetApp Console
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Configure o acesso ao Cloud Volumes ONTAP para que os usuários existentes do NetApp Console mantenham o acesso necessário e os novos assinantes possam adicionar usuários com as permissões apropriadas.
+
+Use uma das seguintes seções:
+
+* *Novidade no NetApp Console e Cloud Volumes ONTAP*: configure o acesso baseado em funções para novos usuários e sistemas Cloud Volumes ONTAP.
+* *Atualização para uma versão do agente Console que suporte funções*: revise as funções atribuídas automaticamente aos usuários existentes e ajuste-as conforme necessário.
+
+
+
+
+[[set-up-access-for-users-after-initial-configuration-of-cloud-volumes-ontap]]
+== Configure o acesso para usuários após a configuração inicial do Cloud Volumes ONTAP
+
+Novos assinantes começam criando uma organização no NetApp Console. O primeiro assinante recebe a função de administrador da organização. link:concept-identity-and-access-management.html["Aprenda sobre gerenciamento de identidade e acesso"].
+
+
+
+[[plan-cloud-volumes-ontap-role-assignments]]
+=== Planeje as atribuições de funções do Cloud Volumes ONTAP
+
+Atribua uma função do Cloud Volumes ONTAP no nível da organização, pasta ou projeto que contém o sistema. As funções da plataforma permitem que você administre os recursos do NetApp Console, como organizações, pastas, projetos, membros e acesso a recursos. As funções do Cloud Volumes ONTAP permitem que você gerencie sistemas do Cloud Volumes ONTAP.
+
+Atribua apenas as funções que cada usuário precisa. Atribua tanto uma função de plataforma quanto uma função do Cloud Volumes ONTAP quando um usuário administra recursos do NetApp Console e gerencia sistemas do Cloud Volumes ONTAP. Uma função de plataforma não substitui uma função do Cloud Volumes ONTAP para operações do Cloud Volumes ONTAP.
+
+* Por exemplo, atribua as funções *Administrador de pasta ou projeto* e *Administrador do Cloud Volumes ONTAP* a um usuário que gerencia o acesso a um projeto e administra os sistemas Cloud Volumes ONTAP nesse projeto.
+* Atribua as funções de *Organization admin* e *Cloud Volumes ONTAP operator* a um usuário que gerencia as configurações do agente do NetApp Console e os sistemas Cloud Volumes ONTAP em toda a organização.
+* Se um usuário não precisar administrar recursos do NetApp Console, atribua apenas uma função do Cloud Volumes ONTAP que corresponda ao nível de acesso que ele precisa para gerenciar os sistemas do Cloud Volumes ONTAP.
+
+
+
+
+==== Atribuições de função recomendadas quando os usuários também precisam administrar recursos do NetApp Console
+
+Use estas atribuições de função quando um usuário precisar administrar recursos do Console e gerenciar sistemas Cloud Volumes ONTAP em uma organização que usa o NetApp Console apenas para o Cloud Volumes ONTAP.
+
+[cols="20,30,30,20"]
+|===
+| Escopo | Função da plataforma | Função do Cloud Volumes ONTAP | Recomendação 
+
+
+| Organização | Administrador da organização | Operador do Cloud Volumes ONTAP | Quando um usuário precisa administrar os recursos do NetApp Console (incluindo as configurações do agente do NetApp Console) e gerenciar os sistemas Cloud Volumes ONTAP 
+
+
+| Pasta ou projeto | Administrador de pasta ou projeto | Administrador do Cloud Volumes ONTAP | Quando um usuário precisa administrar recursos do NetApp Console em uma pasta ou projeto específico e administrar sistemas Cloud Volumes ONTAP 
+
+
+| Pasta ou projeto | Administrador de pasta ou projeto | Operador do Cloud Volumes ONTAP | Quando um usuário precisa administrar recursos do NetApp Console em uma pasta ou projeto específico e gerenciar sistemas Cloud Volumes ONTAP 
+
+
+| Pasta ou projeto | Administrador de pasta ou projeto | Visualizador do Cloud Volumes ONTAP | Quando um usuário precisa administrar recursos do NetApp Console em uma pasta ou projeto específico e necessita apenas de acesso de leitura aos sistemas Cloud Volumes ONTAP 
+|===
+
+NOTE: Um problema conhecido atualmente impede que a combinação das funções *Visualizador da organização* e *Visualizador do Cloud Volumes ONTAP* funcione no escopo da organização. Use a função *Administrador da organização* ou *Administrador de pasta ou projeto* como solução alternativa temporária.
+
+.Passos
+. Cadastre-se no NetApp Console e crie sua organização.
+. Utilize o projeto padrão ou crie pastas e projetos que correspondam à forma como você deseja organizar os seus Cloud Volumes ONTAP.
+. Configure ou associe a assinatura do Cloud Volumes ONTAP.
+. Adicione usuários, contas de serviço ou grupos federados à organização. link:task-iam-manage-members-permissions.html["Saiba como adicionar membros a uma organização do NetApp Console"].
+. Atribua uma função do Cloud Volumes ONTAP a um usuário no nível da organização, pasta ou projeto onde o sistema será gerenciado. Se um membro também precisar administrar recursos do NetApp Console e atribuir acesso a outros, atribua a função de plataforma apropriada.
+. Adicione ou descubra o Cloud Volumes ONTAP no projeto em que ele será gerenciado. Saiba mais  https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/index.html["Cloud Volumes ONTAP"^].
+. Se o sistema ou seu agente do Console precisarem estar disponíveis em outros projetos, associe os recursos a esses projetos. link:task-iam-manage-resources.html["Aprenda como associar recursos a pastas e projetos"].
+
+
+
+
+[[review-roles-after-upgrading-the-console-agent]]
+== Analise as funções após atualizar o agente do NetApp Console
+
+Após você atualizar um agente do Console para a versão 4.9.0 ou posterior, o Console atribui automaticamente as funções do Cloud Volumes ONTAP aos usuários existentes com base em suas funções de plataforma. Essa atribuição única, chamada de seeding, ajuda você a manter o acesso apropriado ao Cloud Volumes ONTAP sem exigir que um administrador atribua cada função manualmente. O seeding atribui a função de admin ou viewer do Cloud Volumes ONTAP com base na função de plataforma existente do usuário. Os mapeamentos se aplicam apenas durante a migração; uma função de plataforma não substitui uma função explícita do Cloud Volumes ONTAP para novas atribuições. Revise as funções atribuídas pelo seeding para confirmar que os usuários mantêm apenas o acesso necessário.
+
+.Passos
+. Identifique a organização, pasta ou projeto que contém cada Cloud Volumes ONTAP.
+. Analise a função do Cloud Volumes ONTAP atribuída a cada usuário e confirme se ela está atribuída no nível da organização, pasta ou projeto que contém o sistema. Para as funções padrão esperadas, consulte link:reference-iam-cvo-roles.html#seeding-mappings-for-existing-users["Mapeamento inicial para usuários existentes"].
+. Atribua ou altere a função do Cloud Volumes ONTAP quando a função predefinida não corresponder às responsabilidades do usuário. O processo de predefinição atribui a função de administrador ou visualizador do Cloud Volumes ONTAP com base na função existente do usuário na plataforma. Se um usuário precisar de permissões de nível de operador, atribua explicitamente a função de operador do Cloud Volumes ONTAP após a predefinição.
+. Aguarde até uma hora para que as atribuições de função novas ou atualizadas entrem em vigor. O Cloud Volumes ONTAP atualiza as atribuições de função a cada hora.
+. Peça ao usuário para acessar o Cloud Volumes ONTAP e confirmar que as operações disponíveis correspondem à função atribuída.
+
+
+Se um usuário não conseguir acessar um sistema, verifique se ele possui uma função do Cloud Volumes ONTAP no nível da organização, pasta ou projeto.
+
+
+
+[[related-information]]
+== Informações relacionadas
+
+* link:reference-iam-cvo-roles.html["Funções de acesso do Cloud Volumes ONTAP"]
+* link:concept-iam-rbac.html["Saiba mais sobre o controle de acesso baseado em funções do NetApp Console"]
+* link:task-iam-manage-roles.html["Gerencie o acesso de membros no NetApp Console."]
+
