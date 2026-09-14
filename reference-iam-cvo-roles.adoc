@@ -28,18 +28,19 @@ Atribua funções do Cloud Volumes ONTAP no nível da organização, pasta ou pr
 
 
 [[role-migrations-for-existing-users]]
+[[seeding-mappings-for-existing-users]]
 == Migrações de funções para usuários existentes
 
 Ao atualizar um agente do Console para a versão 4.9.0 ou posterior, o Console atribui funções adicionais do Cloud Volumes ONTAP aos usuários existentes com base em suas funções na plataforma.
 
 
-NOTE: Quando um agente do Console existente é atualizado para o Console 4.9.0 ou posterior, o Console executa um processo de inicialização único que atribui funções do Cloud Volumes ONTAP aos usuários existentes na organização. Esse processo pode levar até 30 minutos para ser concluído. Para revisar e ajustar as funções inicializadas, consulte link:task-cvo-rbac-setup.html#review-roles-after-upgrading-the-console-agent["Analise as funções após atualizar o agente do NetApp Console"].
+NOTE: Quando um agente do Console existente é atualizado para o Console 4.9.0 ou posterior, o Console executa um processo de migração único que atribui funções do Cloud Volumes ONTAP aos usuários existentes na organização. Esse processo pode levar até 30 minutos para ser concluído. Para revisar e ajustar as funções atribuídas durante a migração, consulte link:task-cvo-rbac-setup.html#review-roles-after-upgrading-the-console-agent["Analise as funções após atualizar o agente do NetApp Console"].
 
 Os mapeamentos a seguir se aplicam somente a este processo de migração único.
 
 [cols="50,50"]
 |===
-| Função existente na plataforma | Função do Cloud Volumes ONTAP atribuída durante a inicialização 
+| Função existente na plataforma | Função Cloud Volumes ONTAP atribuída durante a atualização 
 
 
 | Superadministrador | Administrador do Cloud Volumes ONTAP 

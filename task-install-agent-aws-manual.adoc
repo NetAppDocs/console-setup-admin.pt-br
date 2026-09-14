@@ -315,6 +315,7 @@ podman info | grep networkBackend
 
 
 
+. Se você associar este agente a um Cloud Volumes ONTAP, considere aumentar o número de threads associadas ao agente para melhorar o desempenho. link:https://kb.netapp.com/Cloud/ncds/nds/cvods/cvods_kbs/CVO_going_to_failed_state_frequently_in_NetApp_Console["Saiba mais sobre como aumentar o limite de threads do contêiner do agente"^].
 
 
 --
