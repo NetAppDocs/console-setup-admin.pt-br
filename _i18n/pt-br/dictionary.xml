@@ -6619,7 +6619,6 @@
   <block id="a22ba5cede201b398675ddfd63c9864d" category="paragraph">A versão 4.10.0 inclui atualizações para os seguintes componentes e serviços do NetApp Console.</block>
   <block id="c1b9fde9363d4906a9e67eb0862e9fc7" category="cell">4.10.0</block>
   <block id="5ff195749703fc07b830e8ce460f4513" category="cell">Acesse o <block ref="9d354d50c04a9174ec71f0d3d8410a23" category="inline-link-rx"></block> e consulte as alterações incluídas para as versões 4.10.0.</block>
-  <block id="c87dd127a9f46f1b24fd3cf0f74c6588" category="cell">5.6.2 (17 de agosto de 2026)</block>
   <block id="669d8c7c23d7c1df9de525a93369bb8f" category="cell">1.546.0 (10 de agosto de 2026)</block>
   <block id="99eb4ee0a56c7fb9d9fef77053e43af4" category="paragraph">Permite fazer backup de snapshots de clusters ONTAP locais usando o NetApp Backup and Recovery para aplicativos. Um membro com essa função pode realizar as seguintes ações:</block>
   <block id="f44c611b4162cee5fdf2ee447ed48192" category="list-text">Conclua qualquer ação em NetApp Backup and Recovery &gt; Applications</block>
@@ -6628,4 +6627,5 @@
   <block id="4d2ba7b1416b46d72e4a391ee901ec54" category="paragraph">SnapCenter não possui função de visualizador.</block>
   <block id="1e464951e7ffdbf5ba8f20ee5038f44f" category="section-title">17 de setembro de 2026</block>
   <block id="9d26347bf9049c082d482aa87b79d702" category="section-title">16 de setembro de 2026</block>
+  <block id="9bb8a5cf038a4165b497e11d9718970b" category="cell">5.6.2 (31 de agosto de 2026)</block>
 </blocks>
