@@ -155,7 +155,16 @@ A seguir está uma lista de funções na categoria de serviço de dados.  Cada f
 | link:reference-iam-ransomware-roles.html["Visualizador de comportamento do usuário de resiliência de ransomware"] | VISUALIZADOR DE COMPORTAMENTO DO USUÁRIO DE RESILIÊNCIA A RANSOMWARE | Padrão | Veja alertas e insights sobre comportamento suspeito de usuários no Ransomware Resilience. 
 
 
-| Administrador do SnapCenter | SNAPCENTER_ADMIN | Padrão, Privado | Oferece a capacidade de fazer backup de instantâneos de clusters ONTAP locais usando o NetApp Backup and Recovery para aplicativos.  Um membro com essa função pode concluir as seguintes ações: * Concluir qualquer ação em Backup e recuperação > Aplicativos * Gerenciar todos os sistemas nos projetos e pastas para os quais eles têm permissões * Usar todos os serviços do NetApp Console O SnapCenter não tem uma função de visualizador. 
+| Administrador do SnapCenter | SNAPCENTER_ADMIN | Padrão, Privado  a| 
+Permite fazer backup de snapshots de clusters ONTAP locais usando o NetApp Backup and Recovery para aplicativos. Um membro com essa função pode realizar as seguintes ações:
+
+* Conclua qualquer ação em NetApp Backup and Recovery > Applications
+* Gerenciar todos os sistemas nos projetos e pastas para os quais possuem permissões
+* Use todos os serviços do NetApp Console
+
+
+SnapCenter não possui função de visualizador.
+
 |===
 
 

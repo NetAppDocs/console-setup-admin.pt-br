@@ -92,9 +92,6 @@ Classificação da NetApp
 Licenses and subscriptions gerenciamento de licenças e assinaturas
 
 * Apenas BYOL é suportado com o modo privado.
-+
-Para Cloud Volumes ONTAP BYOL, somente o licenciamento baseado em nós é suportado. O licenciamento baseado em capacidade não é suportado. Como não há conexão de internet disponível, você precisa fazer o upload manual do seu arquivo de licenciamento do Cloud Volumes ONTAP no Console.
-
 
 
 https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-manage-node-licenses.html#add-unassigned-licenses["Saiba como adicionar licenças"^]
