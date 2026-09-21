@@ -17,8 +17,8 @@ Você pode atribuir as seguintes funções aos usuários para fornecer a eles ac
 A recuperação de desastres utiliza as seguintes funções:
 
 * *Administrador de recuperação de desastres*: Execute quaisquer ações.
-* *Administrador de failover de recuperação de desastres*: Executa failover e migrações.
-* *Administrador do aplicativo de recuperação de desastres*: Crie planos de replicação. Modificar planos de replicação. Iniciar failovers de teste.
+* *Administrador de failover de recuperação de desastres*: executar failovers e migrações.
+* *Administrador de aplicações de recuperação de desastres*: criar e modificar planos de replicação; iniciar testes de failover.
 * *Visualizador de recuperação de desastres*: Visualize somente informações.
 
 
@@ -26,21 +26,24 @@ A tabela a seguir indica as ações que cada função pode executar.
 
 [cols="30,20a,20a,20a,20a"]
 |===
-| Recurso e ação | Administrador de recuperação de desastres | Administrador de failover de recuperação de desastres | Administrador do aplicativo de recuperação de desastres | Visualizador de recuperação de desastres 
+| Ação | Administrador de recuperação de desastres | Administrador de failover de recuperação de desastres | Administrador do aplicativo de recuperação de desastres | Visualizador de recuperação de desastres 
 
 
-| Ver painel e todas as guias  a| 
+5+| *Ativação e descoberta* 
+
+
+| Ativar licença  a| 
 Sim
+ a| 
+Não
  a| 
 Sim
  a| 
-Sim
- a| 
-Sim
+Não
 
 
 
-| Iniciar teste gratuito  a| 
+| Inicie o teste gratuito  a| 
 Sim
  a| 
 Não
@@ -62,6 +65,17 @@ Não
 
 
 
+| Ver painel e todas as guias  a| 
+Sim
+ a| 
+Sim
+ a| 
+Sim
+ a| 
+Sim
+
+
+
 | Ver informações da licença  a| 
 Sim
  a| 
@@ -73,18 +87,29 @@ Sim
 
 
 
-| Ativar licença  a| 
+| Ver credenciais  a| 
+Sim
+ a| 
 Sim
  a| 
 Não
  a| 
+Não
+
+
+
+| Criar, atualizar ou excluir credenciais  a| 
 Sim
+ a| 
+Sim
+ a| 
+Não
  a| 
 Não
 
 
 
-5+| *Na aba Sites*: 
+5+| *Sites* 
 
 
 | Ver sites  a| 
@@ -98,7 +123,7 @@ Sim
 
 
 
-| Adicionar, modificar ou excluir sites  a| 
+| Adicionar, modificar ou excluir sites ou clusters  a| 
 Sim
  a| 
 Não
@@ -109,7 +134,18 @@ Não
 
 
 
-5+| *Na aba Planos de replicação*: 
+| Visualizar clusters  a| 
+Sim
+ a| 
+Não
+ a| 
+Não
+ a| 
+Não
+
+
+
+5+| *Planos de replicação* 
 
 
 | Ver planos de replicação  a| 
@@ -211,7 +247,32 @@ Não
 
 
 
-5+| *Na aba Grupos de recursos*: 
+5+| *Configurações* 
+
+
+| Crie ou modifique AppVaults  a| 
+Sim
+ a| 
+Sim
+ a| 
+Não
+ a| 
+Não
+
+
+
+| Criar ou modificar transformações de recursos  a| 
+Sim
+ a| 
+Sim
+ a| 
+Não
+ a| 
+Não
+
+
+
+5+| *Grupos de recursos* 
 
 
 | Exibir grupos de recursos  a| 
@@ -236,7 +297,7 @@ Não
 
 
 
-5+| *Na aba Monitoramento de Tarefas*: 
+5+| *Monitoramento de tarefas* 
 
 
 | Ver empregos  a| 
