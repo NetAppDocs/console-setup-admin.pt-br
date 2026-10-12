@@ -16,6 +16,9 @@ summary: Configure o acesso baseado em funções para o Cloud Volumes ONTAP orga
 [role="lead"]
 Configure o acesso ao Cloud Volumes ONTAP para que os usuários existentes do NetApp Console mantenham o acesso necessário e os novos assinantes possam adicionar usuários com as permissões apropriadas.
 
+
+NOTE: As funções de acesso para o Cloud Volumes ONTAP estão disponíveis quando você estiver executando um agente do Console versão 4.9.0 ou posterior.
+
 Use uma das seguintes seções:
 
 * *Novidade no NetApp Console e Cloud Volumes ONTAP*: configure o acesso baseado em funções para novos usuários e sistemas Cloud Volumes ONTAP.

@@ -6534,7 +6534,6 @@
   <block id="e4a3525277e1b4371bb89478f9422b67" category="list-text">*O operador do Cloud Volumes ONTAP*: executa operações importantes de armazenamento, como descobrir e gerenciar sistemas Cloud Volumes ONTAP, incluindo adicionar volumes, agregados, snapshots e replicações, modificar algumas configurações e atualizar versões do Cloud Volumes ONTAP.</block>
   <block id="769bcb1b917e9456afc908e3923e871d" category="inline-link-macro">Configure o acesso baseado em funções para Cloud Volumes ONTAP</block>
   <block id="460200b9d3d05ac8165deb4aceb3eee1" category="paragraph">Atribua funções do Cloud Volumes ONTAP no nível da organização, pasta ou projeto que contém o sistema. As funções da plataforma permitem que os usuários administrem os recursos do NetApp Console, enquanto as funções do Cloud Volumes ONTAP permitem que os usuários gerenciem os sistemas Cloud Volumes ONTAP. Para obter orientações sobre o planejamento da atribuição de funções, consulte <block ref="4fa2aa48d2bde5e7446b8c98acc74eca" category="inline-link-macro-rx"></block>.</block>
-  <block id="477c09cb5610382ea6fb7978147584f0" category="section-title">Migrações de funções para usuários existentes</block>
   <block id="2144a74d9bd9b04e77b26ea6f662072b" category="paragraph">Ao atualizar um agente do Console para a versão 4.9.0 ou posterior, o Console atribui funções adicionais do Cloud Volumes ONTAP aos usuários existentes com base em suas funções na plataforma.</block>
   <block id="8f07835784615aa819dfff43f4ab0f2e" category="inline-link-macro">Analise as funções após atualizar o agente do NetApp Console</block>
   <block id="cc4d5362d4db1743065e85867391e3f7" category="paragraph">Os mapeamentos a seguir se aplicam somente a este processo de migração único.</block>
@@ -6663,4 +6662,6 @@
   <block id="f195c3b76464876e0848dadd15d334f6" category="inline-link-macro">Aprenda como aumentar o tamanho de um agente local em execução no VCenter</block>
   <block id="4cbf31d3afff31a0915f41b3987e9479" category="list-text"><block ref="706e14d3d1493bd7bc93630a70dd883a" category="inline-link-macro-rx"></block>.</block>
   <block id="83ea5433d56d3644fb56d0b6b799c35e" category="sidebar">Manter um agente instalado no vCenter</block>
+  <block id="5d9476182acf1146ab60b631fc72ec99" category="admonition">As funções de acesso para o Cloud Volumes ONTAP estão disponíveis quando você estiver executando um agente do Console versão 4.9.0 ou posterior.</block>
+  <block id="7be2d306061e806c6a2cf1ac2026ea93" category="section-title">Migrações de funções para usuários existentes após a atualização para a versão 4.9.0 ou posterior do agente Console</block>
 </blocks>

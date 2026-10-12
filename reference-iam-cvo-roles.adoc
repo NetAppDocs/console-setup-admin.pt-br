@@ -16,6 +16,9 @@ summary: Você pode atribuir as seguintes funções aos usuários para conceder-
 [role="lead"]
 Você pode atribuir as seguintes funções aos usuários para conceder-lhes acesso ao Cloud Volumes ONTAP no NetApp Console.
 
+
+NOTE: As funções de acesso para o Cloud Volumes ONTAP estão disponíveis quando você estiver executando um agente do Console versão 4.9.0 ou posterior.
+
 * *Cloud Volumes ONTAP admin*: fornece acesso completo a todas as operações do Cloud Volumes ONTAP.
 * *O operador do Cloud Volumes ONTAP*: executa operações importantes de armazenamento, como descobrir e gerenciar sistemas Cloud Volumes ONTAP, incluindo adicionar volumes, agregados, snapshots e replicações, modificar algumas configurações e atualizar versões do Cloud Volumes ONTAP.
 * *Cloud Volumes ONTAP viewer*: Fornece acesso somente leitura às informações do Cloud Volumes ONTAP. Esta função não pode executar nenhuma operação ativa. Algumas abas e telas que contêm informações de configuração podem não estar disponíveis para visualizadores.
@@ -27,9 +30,9 @@ Atribua funções do Cloud Volumes ONTAP no nível da organização, pasta ou pr
 
 
 
-[[role-migrations-for-existing-users]]
+[[role-migrations-for-existing-users-after-upgrading-to-console-agent-version-4-9-0-or-later]]
 [[seeding-mappings-for-existing-users]]
-== Migrações de funções para usuários existentes
+== Migrações de funções para usuários existentes após a atualização para a versão 4.9.0 ou posterior do agente Console
 
 Ao atualizar um agente do Console para a versão 4.9.0 ou posterior, o Console atribui funções adicionais do Cloud Volumes ONTAP aos usuários existentes com base em suas funções na plataforma.
 
