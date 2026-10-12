@@ -179,11 +179,6 @@ Você também pode acessar o relatório de validação no formato JSON e os logs
 [[disable-config-check]]
 === Desabilitar verificações de configuração para instalações manuais
 
-
-
-[[disable-configuration-checks-for-manual-installations]]
-=== Desabilitar verificações de configuração para instalações manuais
-
 Pode haver momentos em que você precise desabilitar as verificações de configuração que verificam a conectividade de saída durante a instalação. Por exemplo, ao instalar manualmente um agente no seu ambiente de Nuvem Governamental, você precisa desativar as verificações de configuração, caso contrário, a instalação falhará.
 
 Você desabilita a verificação de configuração definindo o sinalizador _skipConfigCheck_ no arquivo _com/opt/application/netapp/service-manager-2/config.json_. Por padrão, esse sinalizador é definido como falso e a verificação de configuração verifica o acesso de saída do agente. Defina este sinalizador como verdadeiro para desabilitar a verificação. Familiarize-se com a sintaxe JSON antes de concluir esta etapa.

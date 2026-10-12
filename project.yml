@@ -130,12 +130,12 @@ sidebar:
         url: "/concept-agents.html"
       - title: Manter agentes do console
         entries:
-        - title: Manter agentes do Console instalados manualmente
-          entries:
-          - title: Manter um agente instalado no VCenter
-            url: "/task-agent-vm-config.html"
-          - title: Manter um agente instalado manualmente
-            url: "/task-maintain-agents.html"
+        - title: Manter um agente instalado no vCenter
+          url: "/task-agent-vm-config.html"
+        - title: Manter as VMs do agente do NetApp Console
+          url: "/task-maintain-agents.html"
+      - title: Agentes do Console Seguro
+        entries:
         - title: Atualizar endereçamento do agente e URIs
           url: "/task-update-agent-addressing.html"
         - title: Instalar um certificado assinado pela CA para acesso ao console da
@@ -143,12 +143,12 @@ sidebar:
           url: "/task-installing-https-cert.html"
         - title: Configurar um agente de console para usar um servidor proxy
           url: "/task-configuring-proxy.html"
-        - title: Solucionar problemas do agente do console
-          url: "/task-troubleshoot-agent.html"
-        - title: Atualizar o agente do Console
-          url: "/task-upgrade-agent.html"
-        - title: Desinstale e remova o agente do Console
-          url: "/task-uninstall-agent.html"
+      - title: Solucionar problemas do agente do console
+        url: "/task-troubleshoot-agent.html"
+      - title: Atualizar o agente do Console
+        url: "/task-upgrade-agent.html"
+      - title: Desinstale e remova o agente do Console
+        url: "/task-uninstall-agent.html"
       - title: Gerenciar credenciais de provedores de nuvem
         entries:
         - title: AWS
