@@ -31,7 +31,7 @@ Os seguintes detalhes de configuração se aplicam se você implantou um agente 
 Se você implantou um agente do Console a partir do Console ou do AWS Marketplace, observe o seguinte:
 
 * O tipo de instância EC2 é t3.2xlarge.
-* O sistema operacional da imagem é o Ubuntu 22.04 LTS.
+* O sistema operacional da imagem é o Ubuntu 24.04 LTS.
 +
 O sistema operacional não inclui uma GUI.  Você deve usar um terminal para acessar o sistema.
 
@@ -48,7 +48,7 @@ O sistema operacional não inclui uma GUI.  Você deve usar um terminal para ace
 Se você implantou um agente do Console a partir do Console ou do Azure marketplace, observe o seguinte:
 
 * O tipo de VM é Standard_D8s_v3.
-* O sistema operacional da imagem é o Ubuntu 22.04 LTS.
+* O sistema operacional da imagem é o Ubuntu 24.04 LTS.
 +
 O sistema operacional não inclui uma GUI.  Você deve usar um terminal para acessar o sistema.
 
@@ -64,7 +64,7 @@ O sistema operacional não inclui uma GUI.  Você deve usar um terminal para ace
 Se você implantou um agente do Console a partir do Console ou do Google Cloud marketplace, observe o seguinte:
 
 * A instância da VM é n2-standard-8.
-* O sistema operacional da imagem é o Ubuntu 22.04 LTS.
+* O sistema operacional da imagem é o Ubuntu 24.04 LTS.
 +
 O sistema operacional não inclui uma GUI.  Você deve usar um terminal para acessar o sistema.
 
