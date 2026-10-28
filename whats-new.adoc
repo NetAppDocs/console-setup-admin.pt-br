@@ -18,6 +18,13 @@ Saiba o que há de novo nos recursos de administração do NetApp Console : gere
 
 
 
+[[15-october-2026]]
+== 15 de outubro de 2026
+
+Diretiva não resolvida em <stdin> - include::_whatsnew/2026-10-13.adoc[]
+
+
+
 [[17-september-2026]]
 == 17 de setembro de 2026
 

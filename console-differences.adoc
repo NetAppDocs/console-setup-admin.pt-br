@@ -54,7 +54,7 @@ A implantação local do console oferece suporte a clusters ONTAP locais e ao Ne
 
 A implantação local do Console é mais adequada para organizações com grandes ambientes ONTAP locais que exigem provisionamento voltado a políticas, verificações automatizadas de conformidade e total soberania de dados.
 
-link:https://docs.netapp.com/us-en/console-local/concept-netapp-console-local.html["Saiba mais sobre a implantação local do NetApp Console^."]
+link:https://docs.netapp.com/us-en/console-local/concept-netapp-console-local.html["Saiba mais sobre a implantação local do NetApp Console."^]
 
 
 
