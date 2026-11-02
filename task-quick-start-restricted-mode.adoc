@@ -20,16 +20,22 @@ O modo restrito é normalmente usado por governos estaduais e locais e empresas 
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Um"] link:task-prepare-restricted-mode.html["Preparar para implantação"]
 [role="quick-margin-list"]
-. Prepare um host Linux dedicado que atenda aos requisitos de CPU, RAM, espaço em disco, ferramenta de orquestração de contêineres e muito mais.
+. Analise os requisitos do host. Se você fizer a instalação manualmente, prepare um host Linux dedicado que atenda aos requisitos de CPU, RAM, espaço em disco e da ferramenta de orquestração de contêineres. link:task-prepare-restricted-mode.html#step-3-review-host-requirements["Analisar os requisitos do host"].
 . Configure uma rede que forneça acesso às redes de destino, acesso de saída à Internet para instalações manuais e acesso de saída à Internet para acesso diário.
-. Configure permissões no seu provedor de nuvem para que você possa associá-las à instância do agente do Console após implantá-lo.
+. Prepare as permissões de nuvem necessárias para seu provedor e método de implantação.
 
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Dois"] link:task-install-restricted-mode.html["Implantar o agente do Console"]
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Dois"]Implante o agente do Console
 [role="quick-margin-list"]
-. Instale o agente do Console no marketplace do seu provedor de nuvem ou instalando manualmente o software no seu próprio host Linux.
+. Selecione as instruções de implantação para seu ambiente de nuvem:
++
+** AWS: link:task-install-restricted-mode-aws.html["Implantar na AWS"]
+** Azure: link:task-install-restricted-mode-azure.html["Implantar no Azure"]
+** Instalação manual: link:task-install-restricted-mode-manual.html["Implante manualmente na AWS, Azure ou Google Cloud"]
+
+
 . Configure o NetApp Console abrindo um navegador da Web e inserindo o endereço IP do host Linux.
-. Forneça ao agente do Console as permissões que você configurou anteriormente.
+. Siga as instruções específicas do seu provedor para associar as permissões necessárias ao agente do Console. Para implantações no AWS Marketplace, selecione a função do IAM ao iniciar a instância do EC2.
 
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Três"] link:task-subscribe-restricted-mode.html["Assine o NetApp Intelligent Services (opcional)"]

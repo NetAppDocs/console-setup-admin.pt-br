@@ -50,44 +50,64 @@ Os endpoints listados abaixo são todos entradas CNAME.
 
 
  a| 
-\ https://www.googleapis.com/compute/v1/ \ https://compute.googleapis.com/compute/v1 \ https://cloudresourcemanager.googleapis.com/v1/projects \ https://www.googleapis.com/compute/beta \ https://storage.googleapis.com/storage/v1 \ https://www.googleapis.com/storage/v1 \ https://iam.googleapis.com/v1 \ https://cloudkms.googleapis.com/v1 \ https://config.googleapis.com/v1/projects
+* \https://www.googleapis.com/compute/v1/
+* \https://compute.googleapis.com/compute/v1
+* \https://cloudresourcemanager.googleapis.com/v1/projects
+* \https://www.googleapis.com/compute/beta
+* \https://storage.googleapis.com/storage/v1
+* \https://www.googleapis.com/storage/v1
+* \https://iam.googleapis.com/v1
+* \https://cloudkms.googleapis.com/v1
+* \https://config.googleapis.com/v1/projects
+
  a| 
 Para gerenciar recursos no Google Cloud.
 
 
 
  a| 
-\ https://mysupport.netapp.com
+* \ https://mysupport.netapp.com
+
  a| 
 Para obter informações sobre licenciamento e enviar mensagens AutoSupport para o suporte da NetApp.
 
 
 
  a| 
-\ https://signin.b2c.netapp.com
+* \ https://signin.b2c.netapp.com
+
  a| 
 Para atualizar as credenciais do NetApp Support Site (NSS) ou adicionar novas credenciais do NSS ao NetApp Console.
 
 
 
  a| 
-\ https://support.netapp.com
+* \ https://support.netapp.com
+
  a| 
 Para obter informações sobre licenciamento e enviar mensagens do AutoSupport ao suporte da NetApp, assim como receber atualizações de software para Cloud Volumes ONTAP.
 
 
 
  a| 
-\https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.bluexp.netapp.com \https://cdn.auth0.com
+* \ https://api.bluexp.netapp.com
+* \ https://netapp-cloud-account.auth0.com
+* \ https://netapp-cloud-account.us.auth0.com
+* \ https://console.netapp.com
+* \https://components.console.bluexp.netapp.com
+* \ https://cdn.auth0.com
+
  a| 
 Para fornecer recursos e serviços no NetApp Console.
 
 
 
  a| 
-https://bluexpinfraprod.eastus2.data.azurecr.io https://bluexpinfraprod.azurecr.io https://occmclientinfragov.azurecr.us (necessário para implantações em modo restrito)
+* \ https://bluexpinfraprod.eastus2.data.azurecr.io
+* \ https://bluexpinfraprod.azurecr.io
+
  a| 
-Para obter imagens para atualizações do agente do Console.
+Para obter imagens para implantação e atualizações do agente do Console.
 
 |===
 --

@@ -4,7 +4,7 @@ permalink: reference-networking-saas-console.html
 keywords: networking, urls, endpoints, web browser, console, network, set up networking, bluexp 
 summary: O NetApp Console, o agente do NetApp Console e os serviços de dados do NetApp exigem acesso de saída à Internet e a capacidade de entrar em contato com os endpoints necessários. 
 ---
-= Acesso à rede para o NetApp Console
+= Acesso à rede para o NetApp Console no modo padrão
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -19,7 +19,7 @@ O NetApp Console, o agente do NetApp Console e os serviços de dados do NetApp e
 Você precisará configurar o acesso à rede para o seguinte:
 
 * Computadores que acessam o NetApp Console como software como serviço (SaaS)
-* Agentes de console que você instala no local ou na nuvem. Agentes de console.
+* Agentes de console que você instala no local ou na nuvem.
 
 
 
@@ -39,22 +39,49 @@ Os agentes de console implantados no seu provedor de nuvem precisam acessar os e
 | Pontos finais | Propósito 
 
 
-| \ https://mysupport.netapp.com | Para obter informações sobre licenciamento e enviar mensagens AutoSupport para o suporte da NetApp. 
+ a| 
+* \ https://mysupport.netapp.com
 
+ a| 
+Para obter informações sobre licenciamento e enviar mensagens AutoSupport para o suporte da NetApp.
 
-| \ https://signin.b2c.netapp.com | Para atualizar as credenciais do NetApp Support Site (NSS) ou adicionar novas credenciais do NSS ao NetApp Console. 
-
-
-| \ https://support.netapp.com | Para obter informações sobre licenciamento e enviar mensagens do AutoSupport ao suporte da NetApp, assim como receber atualizações de software para Cloud Volumes ONTAP. 
-
-
-| \https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.bluexp.netapp.com \https://cdn.auth0.com | Para fornecer recursos e serviços no NetApp Console. 
 
 
  a| 
-https://bluexpinfraprod.eastus2.data.azurecr.io https://bluexpinfraprod.azurecr.io https://occmclientinfragov.azurecr.us (necessário para implantações em modo restrito)
+* \ https://signin.b2c.netapp.com
+
  a| 
-Para obter imagens para atualizações do agente do Console.
+Para atualizar as credenciais do NetApp Support Site (NSS) ou adicionar novas credenciais do NSS ao NetApp Console.
+
+
+
+ a| 
+* \ https://support.netapp.com
+
+ a| 
+Para obter informações sobre licenciamento e enviar mensagens do AutoSupport ao suporte da NetApp, assim como receber atualizações de software para Cloud Volumes ONTAP.
+
+
+
+ a| 
+* \ https://api.bluexp.netapp.com
+* \ https://netapp-cloud-account.auth0.com
+* \ https://netapp-cloud-account.us.auth0.com
+* \ https://console.netapp.com
+* \https://components.console.bluexp.netapp.com
+* \ https://cdn.auth0.com
+
+ a| 
+Para fornecer recursos e serviços no NetApp Console.
+
+
+
+ a| 
+* \ https://bluexpinfraprod.eastus2.data.azurecr.io
+* \ https://bluexpinfraprod.azurecr.io
+
+ a| 
+Para obter imagens para implantação e atualizações do agente do Console.
 
 |===
 

@@ -10,7 +10,7 @@ Esses endpoints são necessários para todas as implantações do agente do Cons
 
 [cols="2a,1a"]
 |===
-| Pontos finais | Diretiva não resolvida em <stdin> - include::endpoints-agent.adoc[tag=nss-endpoints] Diretiva não resolvida em <stdin> - include::endpoints-agent.adoc[tag=saas-endpoints] Diretiva não resolvida em <stdin> - include::endpoints-agent.adoc[tag=upgrade-endpoints] 
+| Pontos finais | Finalidade Diretiva não resolvida em <stdin> - include::endpoints-agent.adoc[tag=nss-endpoints] Diretiva não resolvida em <stdin> - include::endpoints-agent.adoc[tag=saas-endpoints] Diretiva não resolvida em <stdin> - include::endpoints-agent.adoc[tag=upgrade-endpoints-saas] 
 |===
 --
 .Pontos de extremidade adicionais para recursos da AWS

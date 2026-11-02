@@ -24,58 +24,7 @@ NOTE: As funções de acesso para o Cloud Volumes ONTAP estão disponíveis quan
 * *Cloud Volumes ONTAP viewer*: Fornece acesso somente leitura às informações do Cloud Volumes ONTAP. Esta função não pode executar nenhuma operação ativa. Algumas abas e telas que contêm informações de configuração podem não estar disponíveis para visualizadores.
 
 
-link:reference-iam-predefined-roles.html["Saiba mais sobre funções de acesso"] .
-
-Atribua funções do Cloud Volumes ONTAP no nível da organização, pasta ou projeto que contém o sistema. As funções da plataforma permitem que os usuários administrem os recursos do NetApp Console, enquanto as funções do Cloud Volumes ONTAP permitem que os usuários gerenciem os sistemas Cloud Volumes ONTAP. Para obter orientações sobre o planejamento da atribuição de funções, consulte link:task-cvo-rbac-setup.html#plan-cloud-volumes-ontap-role-assignments["Configure o acesso baseado em funções para Cloud Volumes ONTAP"].
-
-
-
-[[role-migrations-for-existing-users-after-upgrading-to-console-agent-version-4-9-0-or-later]]
-[[seeding-mappings-for-existing-users]]
-== Migrações de funções para usuários existentes após a atualização para a versão 4.9.0 ou posterior do agente Console
-
-Ao atualizar um agente do Console para a versão 4.9.0 ou posterior, o Console atribui funções adicionais do Cloud Volumes ONTAP aos usuários existentes com base em suas funções na plataforma.
-
-
-NOTE: Quando um agente do Console existente é atualizado para o Console 4.9.0 ou posterior, o Console executa um processo de migração único que atribui funções do Cloud Volumes ONTAP aos usuários existentes na organização. Esse processo pode levar até 30 minutos para ser concluído. Para revisar e ajustar as funções atribuídas durante a migração, consulte link:task-cvo-rbac-setup.html#review-roles-after-upgrading-the-console-agent["Analise as funções após atualizar o agente do NetApp Console"].
-
-Os mapeamentos a seguir se aplicam somente a este processo de migração único.
-
-[cols="50,50"]
-|===
-| Função existente na plataforma | Função Cloud Volumes ONTAP atribuída durante a atualização 
-
-
-| Superadministrador | Administrador do Cloud Volumes ONTAP 
-
-
-| Administrador da organização | Administrador do Cloud Volumes ONTAP 
-
-
-| Administrador da Federação | Administrador do Cloud Volumes ONTAP 
-
-
-| Administrador de pasta ou projeto | Administrador do Cloud Volumes ONTAP 
-
-
-| Super visualizador | Visualizador do Cloud Volumes ONTAP 
-
-
-| Visualizador de organização | Visualizador do Cloud Volumes ONTAP 
-
-
-| Visualizador da Federação | Visualizador do Cloud Volumes ONTAP 
-
-
-| Visualizador de pastas ou projetos | Visualizador do Cloud Volumes ONTAP 
-
-
-| Qualquer outra função na plataforma | Visualizador do Cloud Volumes ONTAP 
-|===
-O NetApp Console atribui a função Cloud Volumes ONTAP no mesmo nível hierárquico da função de plataforma existente. Esses mapeamentos não se aplicam a novas atribuições de função. Para revisar e ajustar as funções predefinidas, consulte link:task-cvo-rbac-setup.html#review-roles-after-upgrading-the-console-agent["Analise as funções após atualizar o agente do NetApp Console"].
-
-
-NOTE: Um problema conhecido atualmente impede que a combinação das funções *Visualizador da organização* e *Visualizador do Cloud Volumes ONTAP* funcione no escopo da organização. Use a função *Administrador da organização* ou *Administrador de pasta ou projeto* como solução alternativa temporária.
+Para obter detalhes sobre todas as funções de acesso ao NetApp Console, consulte link:reference-iam-predefined-roles.html["funções de acesso"].
 
 
 

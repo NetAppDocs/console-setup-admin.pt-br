@@ -28,10 +28,20 @@ As funções da plataforma concedem permissões de administração do NetApp Con
 | Função da plataforma | Nome da API* *O nome da API é o identificador de função usado nas APIs. Copie o valor exatamente como mostrado (incluindo maiúsculas e minúsculas e sublinhados). | Disponibilidade de modo | Responsabilidades 
 
 
-| link:reference-iam-platform-roles.html#organization-admin-roles["Administrador da organização"] | ADMINISTRADOR DA ORGANIZAÇÃO | Padrão, Restrito, Privado | Permite ao usuário acesso irrestrito a todos os projetos e pastas dentro de uma organização, adicionar membros a qualquer projeto ou pasta, bem como executar qualquer tarefa e usar qualquer serviço de dados que não tenha uma função explícita associada a ele. Usuários com essa função gerenciam sua organização criando pastas e projetos, atribuindo funções, adicionando usuários e gerenciando sistemas se possuírem as credenciais adequadas. Esta é a única função de acesso que pode criar agentes do Console. 
+| link:reference-iam-platform-roles.html#organization-admin-roles["Administrador da organização"] | ADMINISTRADOR DA ORGANIZAÇÃO | Padrão, Restrito, Privado  a| 
+Permite ao usuário acesso irrestrito a todos os projetos e pastas dentro de uma organização, adicionar membros a qualquer projeto ou pasta, bem como executar qualquer tarefa e usar qualquer serviço de dados que não tenha uma função explícita associada a ele.
+
+Usuários com essa função gerenciam sua organização criando pastas e projetos, atribuindo funções, adicionando usuários e gerenciando sistemas se possuírem as credenciais adequadas.
+
+Esta é a única função de acesso que pode criar agentes do Console.
 
 
-| link:reference-iam-platform-roles.html#organization-admin-roles["Administrador de pasta ou projeto"] | ADMINISTRADOR DE PASTA OU PROJETO | Padrão, Restrito, Privado | Permite ao usuário acesso irrestrito aos projetos e pastas atribuídos. Podem adicionar membros às pastas ou projetos que gerenciam, bem como executar qualquer tarefa e usar qualquer serviço de dados ou aplicativo em recursos dentro da pasta ou projeto que lhes foi atribuído. Administradores de pastas ou projetos não podem criar agentes do Console. 
+
+| link:reference-iam-platform-roles.html#organization-admin-roles["Administrador de pasta ou projeto"] | ADMINISTRADOR DE PASTA OU PROJETO | Padrão, Restrito, Privado  a| 
+Permite ao usuário acesso irrestrito aos projetos e pastas atribuídos. Pode adicionar membros às pastas ou projetos que gerencia, bem como executar qualquer tarefa e usar qualquer serviço de dados ou aplicativo nos recursos dentro da pasta ou projeto ao qual está atribuído.
+
+Administradores de pastas ou projetos não podem criar agentes do console.
+
 
 
 | link:reference-iam-platform-roles.html#federation-roles["Administrador da Federação"] | FEDERATION_ADMIN | Padrão, Restrito | Permite que um usuário crie e gerencie federações com o Console, o que permite logon único (SSO). 

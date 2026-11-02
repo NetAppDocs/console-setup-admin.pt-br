@@ -191,37 +191,48 @@ Esses endpoints são necessários para todas as implantações do agente do Cons
 
 
  a| 
-\ https://mysupport.netapp.com
+* \ https://mysupport.netapp.com
+
  a| 
 Para obter informações sobre licenciamento e enviar mensagens AutoSupport para o suporte da NetApp.
 
 
 
  a| 
-\ https://signin.b2c.netapp.com
+* \ https://signin.b2c.netapp.com
+
  a| 
 Para atualizar as credenciais do NetApp Support Site (NSS) ou adicionar novas credenciais do NSS ao NetApp Console.
 
 
 
  a| 
-\ https://support.netapp.com
+* \ https://support.netapp.com
+
  a| 
 Para obter informações sobre licenciamento e enviar mensagens do AutoSupport ao suporte da NetApp, assim como receber atualizações de software para Cloud Volumes ONTAP.
 
 
 
  a| 
-\https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.bluexp.netapp.com \https://cdn.auth0.com
+* \ https://api.bluexp.netapp.com
+* \ https://netapp-cloud-account.auth0.com
+* \ https://netapp-cloud-account.us.auth0.com
+* \ https://console.netapp.com
+* \https://components.console.bluexp.netapp.com
+* \ https://cdn.auth0.com
+
  a| 
 Para fornecer recursos e serviços no NetApp Console.
 
 
 
  a| 
-https://bluexpinfraprod.eastus2.data.azurecr.io https://bluexpinfraprod.azurecr.io https://occmclientinfragov.azurecr.us (necessário para implantações em modo restrito)
+* \ https://bluexpinfraprod.eastus2.data.azurecr.io
+* \ https://bluexpinfraprod.azurecr.io
+
  a| 
-Para obter imagens para atualizações do agente do Console.
+Para obter imagens para implantação e atualizações do agente do Console.
 
 |===
 --
@@ -269,14 +280,22 @@ Quando o agente do Console é instalado localmente, ele precisa de acesso à red
 
 
  a| 
-\ https://management.azure.com \ https://login.microsoftonline.com \ https://blob.core.windows.net \ https://core.windows.net
+* \https://management.azure.com
+* \https://login.microsoftonline.com
+* \https://blob.core.windows.net
+* \https://core.windows.net
+
  a| 
 Para gerenciar recursos em regiões públicas do Azure.
 
 
 
  a| 
-\ https://management.chinacloudapi.cn \ https://login.chinacloudapi.cn \ https://blob.core.chinacloudapi.cn \ https://core.chinacloudapi.cn
+* \https://management.chinacloudapi.cn
+* \https://login.chinacloudapi.cn
+* \https://blob.core.chinacloudapi.cn
+* \https://core.chinacloudapi.cn
+
  a| 
 Para gerenciar recursos nas regiões do Azure China.
 
