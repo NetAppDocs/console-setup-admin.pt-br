@@ -74,9 +74,9 @@ Antes de começar, faça um snapshot da máquina virtual caso precise reverter.
 . Digite  `1` para abrir o menu *Configuração do Sistema*.
 . Digite `3` para selecionar *Atualizar* e siga as instruções na tela.
 +
-A atualização instala o sistema operacional atualizado, o ambiente de execução do Docker e os serviços do agente do Console no lugar. Se o kernel for atualizado, a máquina virtual será reiniciada automaticamente.
+A atualização instala o OS atualizado, o runtime do Docker e os serviços do Console agent no local. Ao atualizar para o Console agent 4.13.0, certifique-se de reiniciar a VM após a conclusão da atualização. A VM pode reiniciar automaticamente. O Console agent fica indisponível até que a reinicialização seja concluída. Para outras versões, a VM reinicia automaticamente se o kernel for atualizado.
 
-. Após a conclusão da atualização, verifique se o agente do Console está funcionando corretamente:
+. Após a conclusão da atualização e o término de qualquer reinício, verifique se o agente do Console está funcionando corretamente:
 +
 .. No cliente vSphere, confirme se a máquina virtual está ligada e se o console da web está acessível.
 .. No NetApp Console, acesse *Administração > Suporte > Agentes* e confirme se a versão do agente reflete a nova versão.

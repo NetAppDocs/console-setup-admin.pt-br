@@ -57,10 +57,13 @@ Use estas atribuições de função quando um usuário precisar administrar recu
 | Escopo | Função da plataforma | Função do Cloud Volumes ONTAP | Recomendação 
 
 
-| Organização | Administrador da organização | Operador do Cloud Volumes ONTAP | Quando um usuário precisa administrar os recursos do NetApp Console (incluindo as configurações do agente do NetApp Console) e gerenciar os sistemas Cloud Volumes ONTAP 
+| Organização | Administrador da organização | Administrador do Cloud Volumes ONTAP | Quando um usuário precisa administrar os recursos do NetApp Console (incluindo as configurações do agente do NetApp Console) e gerenciar os sistemas Cloud Volumes ONTAP 
 
 
 | Pasta ou projeto | Administrador de pasta ou projeto | Administrador do Cloud Volumes ONTAP | Quando um usuário precisa administrar recursos do NetApp Console em uma pasta ou projeto específico e administrar sistemas Cloud Volumes ONTAP 
+
+
+| Pasta ou projeto | Administrador de pasta ou projeto | Colaborador do Cloud Volumes ONTAP | Quando um usuário precisa administrar recursos do NetApp Console em uma pasta ou projeto específico e gerenciar sistemas Cloud Volumes ONTAP 
 
 
 | Pasta ou projeto | Administrador de pasta ou projeto | Operador do Cloud Volumes ONTAP | Quando um usuário precisa administrar recursos do NetApp Console em uma pasta ou projeto específico e gerenciar sistemas Cloud Volumes ONTAP 

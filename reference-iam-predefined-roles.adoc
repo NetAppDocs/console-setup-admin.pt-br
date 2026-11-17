@@ -132,6 +132,9 @@ A seguir está uma lista de funções na categoria de serviço de dados.  Cada f
 | link:reference-iam-cvo-roles.html["Administrador do Cloud Volumes ONTAP"] | CVO_ADMIN | Padrão, Restrito, Privado | Fornece acesso completo a todas as operações do Cloud Volumes ONTAP. 
 
 
+| link:reference-iam-cvo-roles.html["Colaborador do Cloud Volumes ONTAP"] | CVO_CONTRIBUTOR | Padrão, Restrito, Privado | Oferece acesso semelhante ao da função de administrador do Cloud Volumes ONTAP, exceto para operações que excluem ou removem recursos ou ligam ou desligam sistemas. 
+
+
 | link:reference-iam-cvo-roles.html["Operador do Cloud Volumes ONTAP"] | CVO_OPERATOR | Padrão, Restrito, Privado | Permite a execução de tarefas de gerenciamento diárias, incluindo a adição de volumes, a configuração de replicação e o gerenciamento de storage. 
 
 

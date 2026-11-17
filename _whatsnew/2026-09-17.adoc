@@ -22,7 +22,7 @@ A versão 4.10.0 inclui atualizações para os seguintes componentes e serviços
 | NetApp Backup and Recovery | 5.6.2 (31 de agosto de 2026) | Vá para o https://docs.netapp.com/us-en/data-services-backup-recovery/whats-new.html["Novidades na página de NetApp Backup and Recovery"^]. 
 
 
-| NetApp Data Classification | 1.546.0 (10 de agosto de 2026) | Vá para o https://docs.netapp.com/us-en/data-services-data-classification/whats-new.html["Novidades na página de Classificação da NetApp"^]. 
+| NetApp Data Classification | 1.56.0 (10 de agosto de 2026) | Vá para o https://docs.netapp.com/us-en/data-services-data-classification/whats-new.html["Novidades na página de Classificação da NetApp"^]. 
 |===
 
 
