@@ -516,12 +516,6 @@
   <block id="9a3441a99feefccc201b51666c68d0d2" category="inline-image-macro">Um ícone que lembra uma lata de lixo</block>
   <block id="d63f1c66d83451eade374ce0e602a4b4" category="list-text">Na tabela, expanda a linha respectiva da organização, pasta ou projeto onde você deseja visualizar a função atribuída ao membro e selecione *Exibir* na coluna *Função*.</block>
   <block id="45e27b9fcac7d60b4663ab56a2bac350" category="paragraph">Você também pode acessar o relatório de validação no formato JSON e os logs de configuração diretamente do host do agente do Console nos seguintes diretórios:</block>
-  <block id="647fa610609fa01d971d4fbb3656f443" category="paragraph">Se você selecionou a caixa de seleção *Validar configuração do agente* na página *Revisar*, o Console verificará a configuração do agente do Console após sua criação.  Se o Console não conseguir implantar o agente, ele fornecerá um relatório para download para ajudar você a solucionar o problema.</block>
-  <block id="86ca8a8c90ac1b3bb3ee0781703dca27" category="admonition">Se o Console implantar o agente com sucesso, ele não gerará um relatório e uma caixa de diálogo de confirmação será exibida, verificando uma implantação bem-sucedida.</block>
-  <block id="9dbc3a54bc2b38732d8c2b0c483d6cfa" category="list-text">Na caixa de diálogo *Falha na implantação do agente*, selecione *Baixar relatório* para baixar um arquivo PDF que contém o relatório de validação.</block>
-  <block id="6eefca337b8d129a6a60a608481b8fa0" category="list-text">Como alternativa, você pode selecionar *Recomeçar* para retornar ao assistente *Implantar agente* e tentar novamente.</block>
-  <block id="796a270bf063faafbf314a64bc6d45dc" category="paragraph">Você deve reiniciar todo o processo se quiser tentar implantar o agente novamente.</block>
-  <block id="1f40a959293314118eb6cd9e626b48d6" category="paragraph">Acesse o relatório e os logs do host do agente do Console</block>
   <block id="3dcf5c663cbfb598f8a710902a7eb120" category="paragraph">Manter o sistema operacional no host do agente do Console é responsabilidade sua (do cliente).  Por exemplo, você (cliente) deve aplicar atualizações de segurança ao sistema operacional no host do agente do Console seguindo os procedimentos padrão da sua empresa para distribuição do sistema operacional.</block>
   <block id="1727dc0bbb7fbac9af669b5ee698c1ac" category="paragraph">Se você (cliente) precisar parar e iniciar a VM do agente do Console, faça isso no console do seu provedor de nuvem ou usando os procedimentos padrão para gerenciamento local.</block>
   <block id="0beb94109608ff82d313b33947162f96" category="doc">Lançamento do modo privado (3.9.44)</block>
@@ -2341,7 +2335,6 @@
   <block id="3d35bba2e5ea6e739fb94736dc402017" category="inline-link">Veja as permissões necessárias para o FSx para ONTAP</block>
   <block id="68841948fc1b61d494dc523ccae2402a" category="list-text"><block ref="68841948fc1b61d494dc523ccae2402a" category="inline-link-rx"></block></block>
   <block id="c19d1741d0fa79c8b012a7f8b068bc6c" category="inline-link-macro">Exibir a política de implantação do agente</block>
-  <block id="6acff1832d6612cd1afefaf53c386a82" category="list-text"><block ref="6acff1832d6612cd1afefaf53c386a82" category="inline-link-macro-rx"></block></block>
   <block id="884fd0826fb740e296bb4324a3742247" category="list-text">Copie o ARN da função do IAM para que você possa colá-lo no Console na próxima etapa.</block>
   <block id="d04fbc50c09432c35c0eb302581b70e6" category="inline-xref">Agora você pode adicioná-lo ao Console</block>
   <block id="75d520940839feb20c7009bf3a4913f6" category="paragraph">Depois de fornecer à função do IAM as permissões necessárias, adicione o ARN da função ao Console.</block>
@@ -3093,14 +3086,9 @@
   <block id="52b5b2b5dbfa5254101b42416d1a8773" category="paragraph"><block ref="58b4c1c7f9a637ac28d3e6f5fb5503dc" category="inline-link-macro-rx"></block> .</block>
   <block id="59451d5b1be51c2e522deb585360baaf" category="doc">Crie um agente de console na AWS a partir do NetApp Console</block>
   <block id="035f13f16b03eaaa0e6f9e50510bada8" category="list-text">Você deve revisar<block ref="2c29232fcf7d2d4af34b1c675a642823" category="inline-link-macro-rx"></block> .</block>
-  <block id="ece2bb18919ce5ae01a5179cefd722b3" category="section-title">Etapa 1: configurar a rede para implantar um agente de console na AWS</block>
-  <block id="3622d53137f09c5a1f41ab1c1500f461" category="paragraph">Certifique-se de que o local de rede onde você planeja instalar o agente do Console suporte os seguintes requisitos.  Esses requisitos permitem que o agente do Console gerencie recursos e processos na sua nuvem híbrida.</block>
   <block id="b3f4a5004c2a10094d2af8bd28589cbf" category="paragraph">Serviços da AWS (amazonaws.com):</block>
   <block id="46db632d39e89f845984f05056817700" category="paragraph">Para gerenciar recursos da AWS.  O ponto de extremidade depende da sua região da AWS.<block ref="04572646466baf6f86d09965eb5c3c86" category="inline-link-rx"></block></block>
   <block id="dc648d2a312f61564f5f6beb2e95a5cc" category="paragraph">Você precisará implementar esse requisito de rede depois de criar o agente do Console.</block>
-  <block id="fe34c82f62d8c19159528f702fa22a96" category="section-title">Etapa 2: configurar permissões da AWS para o agente do Console</block>
-  <block id="eeda2f4307e522dfb736cc96eb303e27" category="list-text">Deixe o Console assumir uma função do IAM que tenha as permissões necessárias</block>
-  <block id="4964e9eef6df2fe316a2618afd8cd963" category="list-text">Forneça uma chave de acesso e uma chave secreta da AWS para um usuário do IAM que tenha as permissões necessárias</block>
   <block id="15f7c3376619ce497205d543fd1d7767" category="paragraph">Se necessário, você pode restringir a política do IAM usando o IAM<block ref="9e2941b3c81256fac10392aaca4ccfde" prefix=" " category="inline-code"></block> elemento.<block ref="19ffef022087e160f1e54b9948795943" category="inline-link-rx"></block></block>
   <block id="1e71ce7defc90d8f5a2c46c08ba968df" category="list-text">Acesse o console do AWS IAM.</block>
   <block id="d36ec2dc8acd5ade1fda1b4397ccc99a" category="list-text">Selecione *JSON*.</block>
@@ -3109,38 +3097,25 @@
   <block id="01de2e1a7f136c3eeda419bfb07814da" category="list-text">Selecione *Avançar* e insira um nome e uma descrição.</block>
   <block id="db92c743d97601150bbdfa11bf3cf66b" category="list-text">Selecione *Criar política*.</block>
   <block id="1829da9b52c1f3e7152aa60a47e70046" category="list-text">Anexe a política a uma função do IAM que o Console pode assumir ou a um usuário do IAM para que você possa fornecer chaves de acesso ao Console:</block>
-  <block id="5d2e64dfdb803f8ad6ebad1af3e82afb" category="list-text">(Opção 1) Configure uma função do IAM que o Console pode assumir:</block>
   <block id="0e78dc7220ea8b6abafe6ef7aaad9998" category="list-text">Acesse o console do AWS IAM na conta de destino.</block>
   <block id="83786519cfff82cadf61b5802dbc3e96" category="list-text">Selecione *Outra conta AWS* e insira o ID da conta SaaS do Console: 952013314444</block>
   <block id="dbab690717fb052924566c13e8768748" category="list-text">Selecione a política que você criou na seção anterior.</block>
   <block id="077eba020cf13e24bf6f5121e9f6be99" category="list-text">Depois de criar a função, copie o ARN da função para poder colá-lo no Console ao criar o agente do Console.</block>
-  <block id="3aa44d82675acc53c059d6b7f6d5b53c" category="list-text">(Opção 2) Configure permissões para um usuário do IAM para que você possa fornecer chaves de acesso ao Console:</block>
   <block id="ab9ad001a35a833243a30f3acf6417eb" category="list-text">No console do AWS IAM, selecione *Usuários* e, em seguida, selecione o nome do usuário.</block>
   <block id="93583a9b95fb527997b95ba8db57df14" category="list-text">Selecione *Adicionar permissões &gt; Anexar políticas existentes diretamente*.</block>
   <block id="8bcbf62e98416780ffe2095559aba87a" category="list-text">Selecione a política que você criou.</block>
   <block id="0a6bca3addac2684ad319713b9fb22ed" category="list-text">Selecione *Avançar* e depois selecione *Adicionar permissões*.</block>
   <block id="c34ab4140439856fda51871a0f20b53c" category="list-text">Certifique-se de ter a chave de acesso e a chave secreta para o usuário do IAM.</block>
-  <block id="bbba7638debc60d9989ee9d0b3f92713" category="paragraph">Agora você deve ter uma função do IAM que tenha as permissões necessárias ou um usuário do IAM que tenha as permissões necessárias.  Ao criar o agente do Console a partir do Console, você pode fornecer informações sobre a função ou as chaves de acesso.</block>
-  <block id="a5d705a0b67c1b72cfaf22a7b055e724" category="section-title">Etapa 3: Criar o agente do Console</block>
   <block id="5f951668599865c2dd2220fcb0617434" category="inline-link-macro">Saiba mais sobre a configuração padrão do agente do Console</block>
   <block id="6b02626fac3ccb06150290f9d284c115" category="list-text">A criação do agente do Console a partir do Console implanta uma instância do EC2 na AWS usando uma configuração padrão.  Não mude para uma instância EC2 menor com menos CPUs ou menos RAM depois de criar o agente do Console. <block ref="29c6b59463611f41ce7d1e55e2554b51" category="inline-link-macro-rx"></block> .</block>
   <block id="5b648a602c64391c13459b2242feaccf" category="inline-link-macro">Saiba mais sobre a política do IAM para o agente do Console</block>
-  <block id="aca02eea323174e41d57225a762eb959" category="list-text">Um método de autenticação da AWS: uma função do IAM ou chaves de acesso para um usuário do IAM com as permissões necessárias.</block>
   <block id="482049a2c27830202c448327d329f378" category="list-text">Uma VPC e uma sub-rede que atendem aos requisitos de rede.</block>
   <block id="b16e9971e18d4e63cd90cc2dc398c39e" category="list-text">Um par de chaves para a instância EC2.</block>
-  <block id="f28438646c4a6dc83acec91c3242235c" category="inline-link-macro">requisitos de rede</block>
-  <block id="e07d32ad7020a93e690821c42ba3112e" category="list-text">Configurar<block ref="aeef43fcefe3ad151bacb8d8f811157c" category="inline-link-macro-rx"></block> .</block>
-  <block id="74e3fd473af4965ff33c6bdccf60d41f" category="list-text">Configurar<block ref="24eff8afdaae8d04c3eb2e1328f5234f" category="inline-link-macro-rx"></block> .</block>
   <block id="f5a67c5390424014ada0320046007eec" category="list-text">Siga as etapas do assistente para criar o agente do Console:</block>
-  <block id="8b8f36850755c4ac43a0df238add8748" category="inline-link-macro">Aprenda como adicionar credenciais adicionais</block>
-  <block id="a92469e7b4819b542d643764a5f08089" category="admonition">Se você escolher *Assumir função*, poderá criar o primeiro conjunto de credenciais no assistente de implantação do agente do Console.  Qualquer conjunto adicional de credenciais deve ser criado na página Credenciais.  Eles estarão disponíveis no assistente em uma lista suspensa. <block ref="21eba73392ef6be6fd6da758f5bd2e93" category="inline-link-macro-rx"></block> .</block>
-  <block id="f07116b379707ffd76d2b1be3d766311" category="list-text">Na página *Detalhes*, forneça detalhes sobre o agente do Console.</block>
   <block id="a6100ac4fa5cb7bbb1c49e95165b96b2" category="inline-link-macro">as permissões necessárias</block>
-  <block id="603cd6f77a8d8d20e21808a8ba4480ea" category="list-text">Escolha se deseja que o Console crie uma nova função que tenha as permissões necessárias ou se deseja selecionar uma função existente que você configurou com<block ref="8b098a06817becf62c06297dd76999b5" category="inline-link-macro-rx"></block> .</block>
   <block id="a7dcc75dc3cacce63a6952fff1a50f65" category="list-text">Escolha se deseja criptografar os discos EBS do agente do Console.  Você tem a opção de usar a chave de criptografia padrão ou usar uma chave personalizada.</block>
   <block id="a2f078803960d5d37e3fe024b9a33315" category="paragraph">Certifique-se de ter o par de chaves correto para acessar a máquina virtual do agente do Console.  Sem um par de chaves, você não pode acessá-lo.</block>
   <block id="39dbd35a18bfa38cac810c0be826b561" category="paragraph">Após a conclusão do processo, o agente do Console estará disponível para uso no Console.</block>
-  <block id="1cc84d19a969a49be773baf953e6565c" category="admonition">Se a implantação falhar, você poderá baixar um relatório e logs do Console para ajudar a corrigir os problemas.<block ref="61c0b8f4aae5855ed1c7905138f2dd94" category="inline-link-macro-rx"></block></block>
   <block id="510a2d4afe6727bcdbafc74a103f9f16" category="inline-link">Aprenda a gerenciar buckets do S3 no NetApp Console</block>
   <block id="68105c97320cc4f91ac35396075a2ebb" category="paragraph">Se você tiver buckets do Amazon S3 na mesma conta da AWS onde criou o agente do Console, verá um ambiente de trabalho do Amazon S3 aparecer automaticamente na página *Sistemas*.<block ref="74eed29a16619fe7bd97e3bf2235caa0" category="inline-link-rx"></block></block>
   <block id="3b46ada3c2c8fc9685f33a61ccf996e6" category="summary">Você pode instalar manualmente um agente do Console em um host Linux em execução na AWS.  Para instalar manualmente o agente do Console no seu próprio host Linux, você precisa revisar os requisitos do host, configurar sua rede, preparar as permissões da AWS, instalar o agente do Console e, em seguida, fornecer as permissões que você preparou.</block>
@@ -3552,10 +3527,6 @@
   <block id="19df8bb4b5a805b23aeac731605bdf21" category="list-text">Suas credenciais existentes do NetApp Support Site (NSS)</block>
   <block id="912ae110aa8df4a37c4331859a5e502a" category="list-text">Uma conta do NetApp Console usando seu endereço de e-mail e uma senha</block>
   <block id="03eb7e8aedd1ad900f6996ff1a9cf8dd" category="list-text">Na página *Login*, insira o endereço de e-mail associado ao seu login.</block>
-  <block id="e841c125c9e210ed4ede7a3ae1c5ada8" category="paragraph">Aplique patches de segurança do sistema operacional sem interromper os serviços do host do agente.</block>
-  <block id="d69b367407abdea589b8942156f4e07a" category="paragraph">Se você criar um agente do Console a partir do Console, ele implantará uma instância de VM no seu provedor de nuvem com uma configuração padrão.  Depois de criar o agente, não mude para uma instância de VM menor com menos CPU ou RAM.</block>
-  <block id="a97c9ede934c84f0e97d896b05cd1ae0" category="inline-link-macro">Saiba mais sobre a configuração padrão do agente</block>
-  <block id="4203742da4cdc7c1dd82452f22078923" category="paragraph"><block ref="6644ee05b73ff616838ce63980e80332" category="inline-link-macro-rx"></block> .</block>
   <block id="3eecd3f04a3aed6d69a686b8c6860e44" category="section-title">Monitore o agente</block>
   <block id="317906a769f89601a484794c64e9042d" category="paragraph">O Console notifica você quando a VM do agente não está íntegra, incluindo problemas de espaço em disco, RAM e CPU.  Monitore essas notificações no Centro de Notificações do Console ou configure notificações por e-mail.  Aumentos ocasionais no espaço em disco, na memória ou no uso da CPU são normais, mas se isso acontecer com frequência, você deve tomar medidas para resolver.</block>
   <block id="1ea31e4b3b5747148fd4f93da267694f" category="paragraph">Por exemplo, o Console notifica você quando um recurso do agente (CPU, RAM ou espaço em disco) excede 90% de sua capacidade total por 30 minutos consecutivos.  Depois, se o uso do recurso cair abaixo desse limite, a notificação será exibida como resolvida (verde) na Central de Notificações.</block>
@@ -3565,10 +3536,8 @@
   <block id="373df0df4c9bf458b635c60e6bd81875" category="inline-link-macro">Revise o artigo da Base de conhecimento da NetApp</block>
   <block id="8ca3660780f744c30c74aa618432df0d" category="cell"><block ref="f6f7f11517faa4caaf22eb279fe6cff9" category="inline-link-macro-rx"></block> .</block>
   <block id="72200965fbc3c379905f503caa91b909" category="cell">O uso da CPU está muito alto</block>
-  <block id="bf18babce135cfcba99582e4e84f2f5c" category="cell">Aumente o tamanho da CPU da VM do agente no seu provedor de nuvem ou no local, dependendo de onde você a instalou.  Como alternativa, crie agentes adicionais e distribua a carga de trabalho entre vários agentes.  A utilização de RAM pode variar de acordo com seu ambiente, cargas de trabalho ONTAP , número de sistemas Cloud Volumes ONTAP e os serviços de dados que você está usando.</block>
   <block id="d77ff27143770c407f290ec9ffcbc917" category="cell">O uso de RAM é muito alto</block>
   <block id="988964edbbb2132f905be0d293cd66c4" category="cell">Aumente a RAM da VM do agente no seu provedor de nuvem ou no local, dependendo de onde você a instalou.  Como alternativa, crie agentes adicionais e distribua a carga de trabalho entre vários agentes.  A utilização de RAM pode variar de acordo com seu ambiente, cargas de trabalho ONTAP , número de sistemas Cloud Volumes ONTAP e os serviços de dados que você está usando.</block>
-  <block id="0d75592eefb72eac4699a1f49bd7769a" category="section-title">Parando e iniciando a VM do agente</block>
   <block id="665e5fcb7c888a6273d0761790d05ed5" category="paragraph">Se necessário, pare e inicie a VM do agente usando o console do seu provedor de nuvem ou procedimentos locais padrão.</block>
   <block id="fab2977be6b57a804b266fd2b7996179" category="inline-link-macro">Esteja ciente de que o agente do Console deve estar operacional o tempo todo</block>
   <block id="d9ae58af06fdcaab9da3f43fe827c682" category="paragraph"><block ref="b4ea7ed3eae261783526e5f0a6706763" category="inline-link-macro-rx"></block> .</block>
@@ -4299,14 +4268,8 @@
   <block id="63355a9119047d0bb5216fe09819ed76" category="admonition">Não é possível editar as credenciais de um perfil de instância associado a uma instância do agente do Console ou a uma instância do Amazon FSx for ONTAP . Você só pode renomear as credenciais de uma instância do FSx for ONTAP .</block>
   <block id="f2a10e059f22d2e4e590bf375629f82c" category="list-text">Na página *Credenciais da organização*, selecione o menu de ações para um conjunto de credenciais e, em seguida, selecione *Editar credenciais*.</block>
   <block id="76f673856509040ebe6f53809741b891" category="admonition">Não é possível excluir as credenciais de um perfil de instância associado a um agente do Console.</block>
-  <block id="743026d6272c7eac4898bf78c6a0ec00" category="paragraph">O Console precisa ser autenticado na AWS antes de poder implantar o agente do Console na sua VPC. Você pode escolher um destes métodos de autenticação:</block>
-  <block id="3c3077c55d74474a96914d3933e99034" category="paragraph">Com qualquer uma das opções, o primeiro passo é criar uma política de IAM. Esta política contém apenas as permissões necessárias para iniciar o agente do Console na AWS a partir do Console.</block>
-  <block id="a6ff8031b9b97942fbb164a958bb15cb" category="inline-link-macro">Exibir permissões necessárias para o próprio agente do Console</block>
-  <block id="f09d39b62bcd3db5dbab86ed9186dad9" category="paragraph">Esta política contém apenas as permissões necessárias para iniciar o agente do Console na AWS a partir do Console.  Quando o Console cria o agente do Console, ele aplica um novo conjunto de permissões ao agente do Console que permite que o agente do Console gerencie recursos da AWS. <block ref="909ec4de2b545730e300a321f5abea2f" category="inline-link-macro-rx"></block>.</block>
-  <block id="318bbdd390cdff7f023b8038a3fb0070" category="list-text">Quando o Console cria o agente do Console, ele cria uma função do IAM e um perfil para o agente. Esta função inclui permissões que permitem ao agente do Console gerenciar recursos da AWS. Garanta que a função seja atualizada conforme novas permissões forem adicionadas em versões futuras. <block ref="5fa58f5972b383411e34ca4f11e8af66" category="inline-link-macro-rx"></block>.</block>
   <block id="dd74de0d68eefd1c10bd1501afbc8b46" category="list-text">Digite um nome.</block>
   <block id="cc12b07ff25c8e9f0f635a74e2d22a82" category="list-text">Adicione tags personalizadas (metadados).</block>
-  <block id="193563612f46c81d99f9d364d74518c6" category="paragraph">O Console implanta o agente em cerca de 10 minutos. Permaneça na página até que o processo seja concluído.</block>
   <block id="0cbff45e0f71134dbbfed8f2ba0d6f76" category="paragraph">Crie uma função personalizada do Azure que você pode atribuir à sua conta do Azure ou a uma entidade de serviço do Microsoft Entra. O Console é autenticado com o Azure e usa essas permissões para criar o agente do Console em seu nome.</block>
   <block id="a07294e253f6aa6ecfa69e1864aed3dc" category="paragraph">Essas permissões são para o próprio agente do Console. É um conjunto diferente de permissões do que você configurou anteriormente para implantar a VM do agente do Console.</block>
   <block id="19ffcd7024175b13282f800ea3adbed2" category="paragraph">O Console prepara o agente em cerca de 10 minutos. Permaneça na página até que o processo seja concluído.</block>
@@ -4417,7 +4380,6 @@
   <block id="c47b4df454cbc8c7bf8207225c8c507d" category="paragraph">As seguintes permissões foram movidas para a seção "Permissões adicionais de backup e recuperação" porque não são necessárias para uma configuração mínima:</block>
   <block id="fd45d2e80d190b12659f895ff5aa6e01" category="summary">Você usa o NetApp Console para gerenciar credenciais da AWS e assinaturas do marketplace para implantação segura e econômica do Cloud Volumes ONTAP e outros serviços de dados, fornecendo as credenciais IAM apropriadas durante a implantação do agente do Console e associando-as às assinaturas do AWS Marketplace para faturamento em uma ou várias contas da AWS.</block>
   <block id="1efd890aee5019c9dd6a5ca79812af47" category="paragraph">Você gerencia as credenciais da AWS e as assinaturas do marketplace diretamente do NetApp Console para garantir a implantação segura do Cloud Volumes ONTAP e de outros serviços de dados, fornecendo as credenciais IAM apropriadas durante a implantação do agente do Console e associando-as às assinaturas do AWS Marketplace para faturamento.</block>
-  <block id="e2df328564731e7d9ccff77a0ccc21d0" category="inline-link-macro">Política de implantação de agentes para AWS</block>
   <block id="1b87d5ac2b76ff03a714cd78cd28bf3b" category="list-text">Para usar seu agente de console existente com uma conta AWS adicional.</block>
   <block id="93b7ab66bd8976eacd3146faac726986" category="paragraph">Para usar o Console com contas AWS adicionais, forneça as chaves da AWS ou o ARN de uma função em uma conta confiável. A imagem a seguir mostra duas contas adicionais, uma fornecendo permissões por meio de uma função do IAM em uma conta confiável e outra por meio das chaves da AWS de um usuário do IAM:</block>
   <block id="1bd60f6ffbfbe027889fb2ff7fd8f14c" category="paragraph">Você adiciona credenciais de conta ao Console especificando o Nome de Recurso da Amazon (ARN) da função do IAM ou as chaves da AWS para o usuário do IAM.</block>
@@ -5649,7 +5611,6 @@
   <block id="e773bf9ef8fd07284aa97da5bcac5b10" category="list-text">Se você usou um agente do Console para descobrir sistemas de storage, adicione o agente ao mesmo projeto do sistema de storage. Isso permite que os usuários executem funções habilitadas para agentes, como serviços de dados ou gerenciamento de storage nativo do Console. Você pode adicionar agentes a projetos na página *Agents* do Console. <block ref="9575d7837a709e4ae8a4165fa6169eb2" category="inline-link-macro-rx"></block>.</block>
   <block id="f84bc6d9d13416ccde14b675c20b3fe0" category="list-text">Se você tiver assinaturas do Keystone em sua organização, poderá visualizá-las na página *Recursos*. Você pode associar assinaturas do Keystone a projetos para conceder acesso a membros que tenham permissões para esses projetos.</block>
   <block id="e828183af99bbe9f55b9edafa7e11282" category="list-text">Cargas de trabalho de backup e recuperação</block>
-  <block id="5ac9b947c65653cf6d02fe3c59e7fa2f" category="summary">Você pode implantar um agente do Console na AWS diretamente do NetApp Console. Antes de implantar um agente do Console na AWS a partir do Console, você precisa configurar sua rede e preparar as permissões da AWS.</block>
   <block id="dc06977a17baa1d2ac30423086ded05e" category="doc">Implante um agente do Console na AWS a partir do NetApp Console</block>
   <block id="21bc24ad9112fe84642a352511c8c896" category="paragraph">Ao implantar um agente na AWS, é iniciada uma instância EC2 executando Linux e o software do agente Console em uma VPC de sua escolha.</block>
   <block id="3f0527499a34df287448340f6ef53274" category="paragraph">Você pode implantar manualmente um agente do Console em um host Linux em execução na AWS. Para implantar manualmente o agente do Console em seu próprio host Linux, você precisa revisar os requisitos do host, configurar sua rede, preparar as permissões da AWS, implantar o agente do Console e, em seguida, conceder as permissões que você preparou.</block>
@@ -5665,8 +5626,6 @@
   <block id="4cf3aefb03cce74960230022eaa4e100" category="paragraph">Para implantar manualmente o agente do Console em seu próprio host Linux, você precisa revisar os requisitos do host, configurar sua rede, preparar as permissões do Google Cloud, habilitar as APIs do Google Cloud, instalar o Console e, em seguida, fornecer as permissões que você preparou.</block>
   <block id="c55edff269043bf525a954a4154ec0a3" category="list-text">Faça o upload do certificado autoassinado para seus certificados confiáveis, caso seu ambiente exija. Você substituirá este certificado após a instalação.</block>
   <block id="e8e9fe3b3946d0efef2689d6b175ac89" category="summary">Implante um agente do Console localmente e, em seguida, faça login e configure-o para funcionar com sua organização do Console.</block>
-  <block id="9845a65d039380c03d0798dc8b86888f" category="paragraph">Ao instalar manualmente um agente de Console, a manutenção do sistema operacional no host do agente é de sua responsabilidade (do cliente). Por exemplo, você (o cliente) deve aplicar as atualizações de segurança ao sistema operacional no host do agente seguindo os procedimentos padrão da sua empresa para distribuição de sistemas operacionais.</block>
-  <block id="3ce4474c24a93038aca82b41eaebbafa" category="paragraph">Para manter a compatibilidade com as configurações suportadas, você deve impedir que o Docker ou o Podman sejam atualizados durante a aplicação de patches de rotina no sistema operacional. Você pode fazer isso excluindo temporariamente o Docker ou o Podman durante as atualizações ou configurando permanentemente o gerenciador de pacotes para ignorar as atualizações do Docker ou do Podman.</block>
   <block id="1df03cb601702d6a5780de5b5b3fad56" category="paragraph">A seguir, apresentamos exemplos de como excluir atualizações do Docker ou do Podman em diferentes distribuições Linux. Consulte a documentação da sua distribuição Linux para obter as instruções mais recentes sobre como excluir pacotes das atualizações.</block>
   <block id="63fc7b8ffa3779963d0e9e15f3827fb1" category="listing-title">Exemplo de Podman</block>
   <block id="3402ff8bffa8ff62a7a411640fbf9267" category="listing-title">Exemplo de Docker</block>
@@ -5853,7 +5812,6 @@
   <block id="4a45e858c46a20f0b12c22eb89c4bf5e" category="admonition">Se alguém da sua organização já tiver uma assinatura do Marketplace vinculada à sua conta de faturamento, você será redirecionado para <block ref="eeda9d490d323c6921491a4ef94ce954" category="inline-link-rx"></block> em vez disso. Caso isso seja inesperado, entre em contato com sua equipe de vendas da NetApp. O Google permite apenas uma assinatura por conta de faturamento do Google.</block>
   <block id="ca4a244a9789951f646667ad547e7eba" category="list-text">Selecione o menu de ações <block ref="be3f2325aec41f7d51bd119595280fab" category="inline-image-macro-rx" type="image"></block> ao lado do membro ao qual deseja atribuir uma função e selecione *Adicionar uma função*.</block>
   <block id="407cb118eb4c73b0358d157028082059" category="list-text">Para desatribuir a função de um membro, selecione <block ref="e7d3eb2c8040b3803a37719a0c0ad857" category="inline-image-macro-rx" type="image"></block> ao lado da função para remover a respectiva função do membro. Você será solicitado a confirmar a remoção.</block>
-  <block id="92ebc8b88ec7bf78397ce21f44b480e5" category="paragraph">Ao implantar um agente do Console a partir do Console, você precisa fornecer o ARN de uma função do IAM ou as chaves de acesso de um usuário do IAM. O método de autenticação deve ter permissões para implantar o agente do Console na AWS. As permissões necessárias estão listadas em <block ref="90ba5e70f609b78ed2966a8cb311c96b" category="inline-link-macro-rx"></block>.</block>
   <block id="b62a0502738c456bdd542e9396b92ddd" category="inline-link-macro">Analise como o agente utiliza as permissões</block>
   <block id="c4fe162c4036edff0d6ce01762682fbf" category="paragraph">Quando o Console inicia o agente do Console na AWS, ele cria uma função do IAM e um perfil para o agente. Ele também anexa uma política que fornece ao agente do Console permissões para gerenciar recursos e processos dentro dessa conta da AWS. <block ref="e912f6cf90fec29124fef634f33fedf8" category="inline-link-macro-rx"></block>.</block>
   <block id="109a76aa4a30822be3d0a4a6162bbc73" category="paragraph">Você pode implantar todos os seus sistemas Cloud Volumes ONTAP usando as credenciais iniciais da AWS ou pode adicionar credenciais adicionais.</block>
@@ -5958,11 +5916,7 @@
   <block id="91d12260d1ad1dfaf6d6d9c6451488ca" category="inline-image-macro">Uma captura de tela da página Organization mostrando o ícone de ações e a opção Edit organization.</block>
   <block id="d8d4b80e8ceacee81ae8ac803aa9544a" category="paragraph"><block ref="d8d4b80e8ceacee81ae8ac803aa9544a" category="inline-image-macro-rx" type="image"></block></block>
   <block id="3a09c67515f2086631474e15f73de6c7" category="paragraph">Você pode criar novas credenciais para uma conta de serviço caso as perca ou precise atualizá-las.</block>
-  <block id="d1c2b78068099b6e93f011f154246f8b" category="paragraph">Crie o agente do Console diretamente a partir do console baseado na Web do Console.</block>
   <block id="ed0dd9d63bd421526bd794c04a3256c0" category="list-text">Na página *Visão geral*, selecione *Implantar agente &gt; AWS*.</block>
-  <block id="127c02abe37c50ab3c73979251d93fb8" category="list-text">Na página *Introdução*, revise a visão geral do processo.</block>
-  <block id="d559b433162bbc7b74a8c8dc30b08d72" category="list-text">Na página *Credenciais da AWS*, especifique sua região da AWS e, em seguida, escolha um método de autenticação, que pode ser uma função do IAM que o Console pode assumir ou uma chave de acesso e uma chave secreta da AWS.</block>
-  <block id="30cafd7bc647a9050e47c88afcfe662c" category="list-text">Na página *Rede*, especifique uma VPC, sub-rede e par de chaves para o agente, escolha se deseja habilitar um endereço IP público e, opcionalmente, especifique uma configuração de proxy.</block>
   <block id="f93188ab864d6406986c3b7aaaf18c2d" category="paragraph">Dependendo dos NetApp data services que você planeja usar, talvez seja necessário criar uma segunda política. Para regiões padrão, as permissões são distribuídas em duas políticas. Duas políticas são necessárias devido ao limite máximo de caracteres para políticas gerenciadas na AWS. <block ref="d22d28fc84a3a60208070dc479be7a49" category="inline-link-macro-rx"></block>.</block>
   <block id="194f8ad43e882b08a80a930a234a89ab" category="paragraph">Se você tiver buckets do Amazon S3 na mesma conta da AWS em que criou o agente do Console, verá um sistema de storage Amazon S3 aparecer automaticamente na página *Sistemas*.<block ref="74eed29a16619fe7bd97e3bf2235caa0" category="inline-link-rx"></block></block>
   <block id="601b5207ae306935dd96ffd67ef100bc" category="paragraph">Observe que você pode criar uma função personalizada do Azure usando o portal do Azure, Azure PowerShell, Azure CLI ou API REST. As etapas a seguir mostram como criar a função usando o Azure CLI. Se preferir usar um método diferente, consulte <block ref="9dee1d16cb9c40964c81f1bda0fd9839" category="inline-link-rx"></block>.</block>
@@ -6563,17 +6517,7 @@
   <block id="d936096dffa04e3124e5d4c80196d9de" category="paragraph">Se você implantou um agente do Console a partir do Console ou do AWS Marketplace, observe o seguinte:</block>
   <block id="0fa3a8f00ba3b038c62aebffe253e28f" category="paragraph">Se você implantou um agente do Console a partir do Console ou do Azure marketplace, observe o seguinte:</block>
   <block id="a2323952e590356476553107e2abe98c" category="paragraph">Se você implantou um agente do Console a partir do Console ou do Google Cloud marketplace, observe o seguinte:</block>
-  <block id="21de1b13e5efe0020aa6cdbb1d2b61d2" category="summary">Saiba como manter as VMs do agente do NetApp Console, incluindo atualizações de segurança do sistema operacional para agentes instalados manualmente, dimensionamento recomendado de CPU e RAM, notificações de integridade de recursos e procedimentos de inicialização e parada de VMs.</block>
   <block id="035e92b8aeea6fa24a0517bf7366d1b5" category="doc">Manter as VMs do agente do NetApp Console</block>
-  <block id="881c784605961fd632d1b333ae2b94d3" category="paragraph">Faça a manutenção das VMs do agente do NetApp Console aplicando atualizações de segurança do sistema operacional aos agentes instalados manualmente, respondendo a alertas de CPU, RAM e espaço em disco e redimensionando, parando e iniciando as VMs quando necessário.</block>
-  <block id="a5acc2e9f80d7968826410eb8d90176a" category="paragraph">Se uma máquina virtual do agente ficar subprovisionada ou apresentar problemas de desempenho, você deve tomar as medidas apropriadas para atualizar os recursos da máquina virtual.</block>
-  <block id="a0b87bad7f7c6fb7b05dad4b5379c7f4" category="inline-link-macro">Aprenda como manter uma VM de agente no vCenter</block>
-  <block id="f4be3684a7c70d65bbde755040eb5341" category="admonition">Se você instalou o agente em vCenter, use a ferramenta de manutenção do Console para redimensionar a instância da VM. <block ref="580222f1768f95a45a989516898619e7" category="inline-link-macro-rx"></block>.</block>
-  <block id="faeff01d1eb32a62718670db7485bac5" category="section-title">Aplique atualizações do sistema operacional aos hosts do agente instalados manualmente</block>
-  <block id="914d0fb4e5278e862bac0a1144be9e3a" category="section-title">Redimensionar a VM ou o tipo de instância</block>
-  <block id="5026ee94a3844739b7b98e26eb0afa69" category="paragraph">Se você receber notificações de que sua VM do agente está com recursos insuficientes, considere atualizar para uma instância de VM maior, com mais CPU ou RAM, para garantir o desempenho ideal.</block>
-  <block id="680b19ee1d758b71ac801931567484fa" category="inline-link-macro">Aprenda a redimensionar a VM do agente no VCenter</block>
-  <block id="82286d11ad0d72c2f4444465cfc607f8" category="admonition">Se você instalou o agente no VCenter, use a ferramenta de manutenção do Console para redimensionar a instância da VM. <block ref="60222936a5c51d9355b2bdeed0ba0625" category="inline-link-macro-rx"></block>.</block>
   <block id="429d13a19800a749f805f159f0d1f48b" category="paragraph">Se você precisar aumentar a CPU ou a RAM da sua VM de agente, siga as instruções fornecidas pelo seu provedor de nuvem ou pela sua plataforma de virtualização local para redimensionar a instância da VM. NetApp recomenda dobrar a alocação atual de CPU e RAM para garantir o desempenho ideal. A tabela a seguir mostra os níveis de dimensionamento recomendados, em que cada nível dobra a CPU e a RAM do nível anterior.</block>
   <block id="9483f17a69bd0b52dbc44f9106718634" category="cell">Nível</block>
   <block id="686a4be8c9228f8a3b2888584052a87d" category="cell">CPU (núcleos ou vCPUs)</block>
@@ -6591,8 +6535,6 @@
   <block id="347d20ed7ad2270153e63a9dbfe44620" category="list-text"><block ref="de92966e3a85c9672341001f96935512" category="inline-link-macro-rx"></block>.</block>
   <block id="adc4a092d7d7c679e76d2c12eaf31f06" category="inline-link-macro">Aprenda como aumentar o tamanho de uma VM de agente no Google Cloud</block>
   <block id="7aa535f489b823f460c3cb01996a277c" category="list-text"><block ref="eaf540623fa9cd9c0c91c8db62cef688" category="inline-link-macro-rx"></block>.</block>
-  <block id="f195c3b76464876e0848dadd15d334f6" category="inline-link-macro">Aprenda como aumentar o tamanho de um agente local em execução no VCenter</block>
-  <block id="4cbf31d3afff31a0915f41b3987e9479" category="list-text"><block ref="706e14d3d1493bd7bc93630a70dd883a" category="inline-link-macro-rx"></block>.</block>
   <block id="83ea5433d56d3644fb56d0b6b799c35e" category="sidebar">Manter um agente instalado no vCenter</block>
   <block id="5d9476182acf1146ab60b631fc72ec99" category="admonition">As funções de acesso para o Cloud Volumes ONTAP estão disponíveis quando você estiver executando um agente do Console versão 4.9.0 ou posterior.</block>
   <block id="ecfb18572af1acc83bcc04e648fd570d" category="paragraph">4.0.0 ou posterior com o NetApp Console em modo privado</block>
@@ -6750,4 +6692,102 @@
   <block id="fad937fde933fc3f4eb6f492e83e25f7" category="sidebar">Implantar o NetApp Console no modo restrito no Azure Marketplace</block>
   <block id="ab3aa42abeac29b26d4ae086a0bd858d" category="sidebar">Instale manualmente o modo restrito do NetApp Console (necessário para o Google Cloud)</block>
   <block id="0e5ef03889d1ef7ccf4da7c7c07d046d" category="list-text">Analise a função do Cloud Volumes ONTAP atribuída a cada usuário e confirme se ela está atribuída no nível da organização, pasta ou projeto que contém o sistema. <block ref="bba8a3e7de854a3d39018c92690eeeb3" category="inline-link-macro-rx"></block>.</block>
+  <block id="0d84bfbf8029ade908132f76f14e831b" category="doc">Solucione problemas de uma implantação com falha do agente Console</block>
+  <block id="713b3eb46227b1661f5e6ebedf8c97e2" category="paragraph">Use o relatório de implantação para descobrir o que bloqueou a implantação do agente do Console e tente novamente.</block>
+  <block id="94c779a7a4679f68a7e4c31292d5a8f3" category="paragraph">O Console fornece um relatório somente se a caixa de seleção *Validate agent configuration* estiver marcada. Se a implantação for bem-sucedida, não haverá relatório.</block>
+  <block id="bf9f9e6ca72a1145b43d126aa42854de" category="list-text">Na caixa de diálogo *Falha na implantação do agente*, selecione *Baixar relatório*.</block>
+  <block id="d4ef26c88a59b925e78f907c5b94a046" category="paragraph">O Console baixa um arquivo PDF que contém o relatório de validação.</block>
+  <block id="cea25356482aea58e7922fb2bfede059" category="list-text">Analise o relatório e corrija os problemas que ele lista.</block>
+  <block id="f77a98f3b38ecb318dd504ab4c2e58ad" category="list-text">Na caixa de diálogo, selecione *Start over* e, em seguida, conclua a implantação novamente.</block>
+  <block id="6d48a0a0b0ba105d16dc85da600d8c7f" category="paragraph">Você precisa reiniciar todo o processo para tentar novamente.</block>
+  <block id="61c0b8f4aae5855ed1c7905138f2dd94" category="paragraph"><block ref="61c0b8f4aae5855ed1c7905138f2dd94" category="inline-link-macro-rx"></block></block>
+  <block id="9bdb3ee516d1e515bfeeccf1df40576e" category="doc">Agente do Console 4.13.0</block>
+  <block id="d3b38c9d33046f2e3c185918b58a83ca" category="paragraph">A versão 4.13.0 suporta tanto o modo padrão quanto o modo restrito.</block>
+  <block id="6ca1b90cd272b2a7ade71c2fc662e45c" category="paragraph-title">Crie a função de implantação da AWS automaticamente ao implantar um agente do Console</block>
+  <block id="d6591183e410cea7db23b6baa5d1dea3" category="inline-link-macro">Aprenda como implantar um agente do Console na AWS a partir do Console</block>
+  <block id="71567bfcfb6d698d6ccd52f047c0bbf4" category="paragraph">Você não precisa mais criar a função do IAM para implantar um agente do Console na AWS antes de começar. O NetApp Console pode criar a função para você. <block ref="64e2803082978c21df13de1f40aff9c6" category="inline-link-macro-rx"></block></block>
+  <block id="1b5c39ac6df8c341d7385e1bee9d23db" category="inline-link-macro">Permissões de implantação de agentes para AWS</block>
+  <block id="90cd2b0314c00d85e4f9d7be2c8909f4" category="paragraph">Ao implantar um agente do Console a partir do Console, você pode solicitar que o Console crie uma função do IAM para você ou pode fornecer o ARN de uma função do IAM ou as chaves de acesso de um usuário do IAM. O método de autenticação deve ter permissões para implantar o agente do Console na AWS. As permissões necessárias estão listadas em <block ref="154a306387318bdf412bffca3215a542" category="inline-link-macro-rx"></block>.</block>
+  <block id="ce04d046ff28aa8daa5816b86e857f8d" category="list-text"><block ref="ce04d046ff28aa8daa5816b86e857f8d" category="inline-link-macro-rx"></block></block>
+  <block id="bd479677918347de969ad8ecb6f4f77d" category="summary">Implante um agente do Console na AWS a partir do NetApp Console usando as opções "Criar função para mim", "Assumir função" ou "Chaves da AWS". Configure a rede e as permissões primeiro.</block>
+  <block id="d24a8c902edf3bbc111726f6e333b162" category="paragraph">Implante um agente do Console na AWS sem sair do NetApp Console, para que você possa começar a gerenciar seus recursos e serviços de dados da AWS.</block>
+  <block id="9cbd10be121785ecc43be4bdfdd7f1de" category="paragraph">A implantação de um agente do Console na AWS inicia uma instância EC2 executando Linux e o software do agente do Console em uma VPC de sua escolha.</block>
+  <block id="7411fa92d12638c448ef207962591bfd" category="section-title">Etapa 1: configure a rede para implantar um agente do Console na AWS</block>
+  <block id="237745129b92b17dccca58f0ad5744fc" category="paragraph">Certifique-se de que o local da rede onde você planeja implantar o agente do Console atenda aos seguintes requisitos. Esses requisitos permitem que o agente do Console gerencie recursos e processos em sua nuvem híbrida.</block>
+  <block id="8c6293af17a10a6d96ece4fe7b21794b" category="section-title">Etapa 2: configure as permissões da AWS para implantar o agente do Console</block>
+  <block id="d7e488db2483a357393631e5b14d990d" category="paragraph">Conceda ao Console apenas as permissões da AWS necessárias para implantar o agente do Console em sua VPC, com base no método de autenticação que você escolher.</block>
+  <block id="df6a8d10af17f7e54fa683d0bb242ac1" category="paragraph">Escolha um destes métodos de autenticação e configure apenas o que for necessário:</block>
+  <block id="4c3880bb027f159e801041b1021e88e8" category="cell">Método</block>
+  <block id="b12c51b935d86f01d092fb23a1fa4f9f" category="cell">O que faz</block>
+  <block id="e7781f3bb99b46118388d761b97e92fa" category="cell">O que você configurou</block>
+  <block id="4061b186661bd3fd0f37384a4fae946f" category="paragraph">*Crie uma função para mim*</block>
+  <block id="51727ed8d41f1fa22cab6d7d6127582e" category="paragraph">O Console abre o AWS CloudFormation Quick Create, que cria a função de implantação que o Console assume.</block>
+  <block id="afbae31f70b1a3185e8e93d03365f690" category="paragraph">Permissões para a identidade da AWS que envia a pilha.</block>
+  <block id="6d8e334d4827af36dffcd7e52ab6d06a" category="paragraph">*Assuma o papel*</block>
+  <block id="2d0904cede0655a943f92ad45a4c5382" category="paragraph">O Console assume uma função IAM existente na sua conta.</block>
+  <block id="07a9e3d48efc84d68abf04df418b0f36" category="paragraph">Uma política e uma função do IAM.</block>
+  <block id="0cc5c59c164e5f759e4d1002c32bbba3" category="paragraph">*Chaves AWS*</block>
+  <block id="4dc7188d08f83aae067e7836a7ec29b3" category="paragraph">O Console utiliza uma chave de acesso e uma chave secreta da AWS.</block>
+  <block id="4ae53682de66d0721635eb1a4cd487b3" category="paragraph">Uma política e um usuário IAM.</block>
+  <block id="e2e1b56fd184a92e24fa99f6587f7eab" category="inline-link-macro">Aprenda a usar sua própria função de agente</block>
+  <block id="68d9a0350458b9c34dcccfa81bb65730" category="paragraph">Com as opções *Criar função para mim* e *Assumir função*, o Console assume uma função do IAM, chamada *função de implantação*, para implantar o agente do Console. Após a implantação, o agente do Console usa uma função do IAM separada, associada à sua instância EC2, chamada *função de agente*. Por padrão, o Console cria a função de agente para você. <block ref="24a48228b3e573c533b7c2f3136461e2" category="inline-link-macro-rx"></block>.</block>
+  <block id="645c86b8e0271431d87daa9ee66c462e" category="section-title">Configure as permissões de Criar função para mim (CloudFormation Quick Create)</block>
+  <block id="b82075a3b798f2fef46d0afc25adf10c" category="paragraph">Use uma identidade da AWS que possa criar a pilha do CloudFormation e a função de implantação, para que a pilha seja concluída sem erros de permissão.</block>
+  <block id="50f698706c0c21b8040884f3ac9e0a31" category="paragraph">A identidade que envia a pilha do Quick Create do CloudFormation precisa de permissões de administrador ou das seguintes permissões mínimas. Essas permissões permitem que o CloudFormation crie a função de implantação. Elas não são as permissões da função do agente.</block>
+  <block id="e0528e41495ccc63324c86085d8d84a3" category="section-title">Configure as permissões para o Assume role ou as chaves da AWS</block>
+  <block id="631ea36fac949b666b0cacbd0784b2a8" category="paragraph">Se você escolher *Assume role* ou *AWS keys*, crie uma política com apenas as permissões necessárias para implantar o agente do Console e associe-a à função ou ao usuário que o Console utiliza.</block>
+  <block id="2c86ddacb479ba245d17cdf2209a478b" category="inline-link-macro">Veja as permissões da função de agente</block>
+  <block id="e6f68df2e365f5ac4300347384c90199" category="paragraph">Esta política contém apenas as permissões necessárias para iniciar o agente do Console na AWS a partir do Console. <block ref="48c929a88734384c46aa5d9a6ef49894" category="inline-link-macro-rx"></block>.</block>
+  <block id="0524bf84f37b3268ebecdd96249f91bb" category="list-text">*Assumir função*: configure uma função do IAM que o Console possa assumir:</block>
+  <block id="5d7999c23e9c86d76c43ff4a2c93587f" category="list-text">*Chaves AWS*: configure as permissões para um usuário do IAM para que você possa fornecer chaves de acesso ao Console:</block>
+  <block id="8f978fd18a307a24790c4fa59fc260b4" category="paragraph">Agora você tem uma função de implantação ou um usuário do IAM com as permissões necessárias. Ao implantar o agente do Console, você fornece o ARN da função ou as chaves de acesso.</block>
+  <block id="4babbcac9ad228f3dbcbef5366b8bd36" category="section-title">Etapa 3: configure sua própria função IAM para o agente do Console (opcional)</block>
+  <block id="52ccff51d6e83d755c0013ce9a2a6892" category="paragraph">Crie sua própria função de agente se desejar selecioná-la em vez da função criada pelo Console por padrão. Crie a função antes de implantar o agente do Console.</block>
+  <block id="c1311701b5fea93e50ab40c8dc97e66f" category="paragraph">Agora você tem uma função de agente que você pode selecionar em *Detalhes de implantação do agente* ao implantar o agente do Console.</block>
+  <block id="f651a3f0594fbae084422818f82b38d0" category="section-title">Etapa 4: implante o agente do Console</block>
+  <block id="7eb86e5d1fc93e57377ab8eb5f3e53d2" category="paragraph">Forneça os detalhes de autenticação, implantação, rede e grupo de segurança para que o Console inicie o agente do Console em sua VPC.</block>
+  <block id="15a6bc94fa7f909ca8c64c2821890a9c" category="list-text">Por padrão, o Console cria a função de agente e seu perfil. Se você fornecer sua própria função de agente, certifique-se de atualizá-la conforme novas permissões forem adicionadas em versões futuras. <block ref="5fa58f5972b383411e34ca4f11e8af66" category="inline-link-macro-rx"></block>.</block>
+  <block id="8206f3a187e53cca39bdaa5cd96f4535" category="list-text">Um método de autenticação da AWS: *Create role for me*, *Assume role* ou *AWS keys*.</block>
+  <block id="6f4a225b29c0975663d0e4b9e1f4547f" category="inline-link-macro">Etapa 1</block>
+  <block id="b0a8dd2142da0b8b022400e6ac62d642" category="list-text">Concluído <block ref="e2994d912d436fe40da18544a7526d5a" category="inline-link-macro-rx"></block>.</block>
+  <block id="e31ad1284b7618a9c10777ed99b12e64" category="inline-link-macro">Etapa 2</block>
+  <block id="e6fa5cb5e8a15fee834567f80d81bc93" category="list-text">Concluído <block ref="34575509f0193a6fa750fdfa092b5a55" category="inline-link-macro-rx"></block>.</block>
+  <block id="ef59a512cfcb9656276397261f27e3f1" category="list-text">Na seção *Credenciais da AWS para implantação do agente*, escolha um dos seguintes métodos de autenticação:</block>
+  <block id="07eba5ef45a6cafc51c7decc428715d1" category="list-text">*Crie uma função para mim*:</block>
+  <block id="c688fb8dc62a6c6f0cb734deefbfa380" category="list-text">Selecione sua região da AWS e insira o ID da sua conta da AWS. Opcionalmente, insira um ID externo.</block>
+  <block id="15640fe1eda1ab1476d294aff63b245a" category="list-text">Selecione *Open CloudFormation Quick Create*.</block>
+  <block id="763ff38204e7e0d506c1758fb5eb61e6" category="list-text">Na AWS, aceite os termos e selecione *Criar pilha*.</block>
+  <block id="24228bcfb55ce738f6eeadf2834908f0" category="list-text">Quando a AWS terminar de criar a função, volte ao Console e confirme a função.</block>
+  <block id="97422a1c59e5c2c1328f27aca0f6bc9c" category="list-text">*Assumir função*: insira o ARN da função IAM e selecione *Validar credenciais*.</block>
+  <block id="4400e26b83b69d691b0c562a37c8d9e7" category="list-text">*Chaves AWS*: insira a chave de acesso e a chave secreta e selecione *Validar credenciais*.</block>
+  <block id="f964530e35352fd4119491068fe4a4a8" category="list-text">Na seção *Detalhes de implantação do agente*, forneça detalhes sobre o agente do Console.</block>
+  <block id="b6f96d584ec9e27436e11a87833c8151" category="inline-link-macro">configure por conta própria</block>
+  <block id="5ac3e84b6d8b6552d4d10a47768109c5" category="list-text">Escolha se deseja que o Console crie a função de agente ou selecione uma função de agente que você já tenha <block ref="d7ceee608428f8f482000c613f8a9166" category="inline-link-macro-rx"></block>.</block>
+  <block id="6228b37bb0fc2f7fd4d51778a3837e15" category="list-text">Na seção *Configuração de rede*, especifique uma VPC, uma sub-rede e um par de chaves para o agente do Console, escolha se deseja habilitar um endereço IP público e, opcionalmente, especifique uma configuração de proxy.</block>
+  <block id="7843f0cd1218bc75c32d06106bb8ea0d" category="list-text">Na seção *Grupo de segurança*, escolha se deseja criar um novo grupo de segurança ou selecionar um grupo de segurança existente que permita as regras de entrada e saída necessárias.</block>
+  <block id="d919de4ad2c5c37c921fbdd95b3a2d3e" category="paragraph">O Console implanta o agente do Console em cerca de 10 minutos. Permaneça na página até que o processo seja concluído.</block>
+  <block id="267bfd7dc3651781bb44db5df04378a5" category="summary">Saiba como manter VMs do agente do NetApp Console, incluindo atualizações do sistema operacional, dimensionamento recomendado de CPU e RAM, notificações de integridade de recursos e procedimentos de inicialização e parada de VMs.</block>
+  <block id="ce9ac031b680338838833b14732d22e4" category="paragraph">Mantenha suas VMs do agente do Console atualizadas, com o dimensionamento correto e saudáveis para que o agente permaneça operacional o tempo todo.</block>
+  <block id="611e1867e5bba6c8303410feeb281e94" category="section-title">Aplique atualizações do sistema operacional aos hosts do agente</block>
+  <block id="8b25f989c2c9684662af40bc1af0d027" category="paragraph">Aplique as atualizações de segurança ao sistema operacional e aos pacotes associados no host do agente para que o host permaneça seguro.</block>
+  <block id="c645d3182af28e7cce3e171f59a1f1ce" category="paragraph">Essa é sua responsabilidade como cliente. O software do agente do Console pode se atualizar, mas não atualiza o sistema operacional nem os pacotes associados.</block>
+  <block id="2fcc5bf978e7d194ed14f4c79a896ec1" category="inline-link-macro">Atualize o agente usando uma ISO</block>
+  <block id="7043a5a6f81b9bc03cf95efe67df1d63" category="admonition">Se você implantou o agente do Console no vCenter usando um OVA, o sistema operacional faz parte da imagem do agente. <block ref="e1089ca8cce620a89c37d64d468f6955" category="inline-link-macro-rx"></block> para atualizar o sistema operacional.</block>
+  <block id="1cee14ffed0f3f27a79d1fcfca2f42f2" category="paragraph">Siga os procedimentos padrão da sua empresa para a distribuição do seu sistema operacional. Não é necessário interromper os serviços do host do agente ao aplicar patches de segurança do sistema operacional.</block>
+  <block id="2f0659efc4a255f7afa0b5bfbfec4ad4" category="paragraph">Em agentes que você não implantou a partir de um OVA, impeça que o Docker ou o Podman sejam atualizados durante a aplicação rotineira de patches do sistema operacional para manter a compatibilidade com as configurações suportadas. Você pode fazer isso excluindo temporariamente o Docker ou o Podman durante as atualizações ou configurando permanentemente o gerenciador de pacotes para ignorar as atualizações do Docker ou do Podman.</block>
+  <block id="aefd948377a328657246c968c90b8615" category="section-title">Redimensionar a VM ou o tipo de instância</block>
+  <block id="e27ffaf3640d8fc28273da853969c62f" category="paragraph">Aumente a CPU ou a RAM de uma máquina virtual de agente com recursos insuficientes para que o agente continue funcionando bem.</block>
+  <block id="6f4a807d18adcacc0f8252e6d5e8e7c3" category="inline-link-macro">Saiba mais sobre as configurações padrão do agente</block>
+  <block id="ded20d9ce93b9931d00f43770bbaef6e" category="paragraph">Se você criar um agente do Console no Console, ele implanta uma instância de VM no seu provedor de nuvem com uma configuração padrão. <block ref="0d4177c8f8926d5e9aa2fabe1afbc89c" category="inline-link-macro-rx"></block>. Depois de criar o agente, não mude para uma instância de VM menor com menos CPU ou RAM.</block>
+  <block id="2544bcfcb2d7e3f39fe93d79ea8a7bc4" category="paragraph">Se você receber notificações de que sua VM do agente está com recursos insuficientes, considere atualizar para uma instância de VM maior, com mais CPU ou RAM.</block>
+  <block id="6386880b4c233814221a0ec6e2778b92" category="inline-link-macro">Aprenda como redimensionar a VM do agente no vCenter</block>
+  <block id="ed6f3fca7c7a0c244038828824074ecb" category="admonition">Se você instalou o agente em vCenter, use a ferramenta de manutenção do Console para redimensionar a instância da VM. <block ref="253298fadead80ed9ff2f3ea8c9cd4ab" category="inline-link-macro-rx"></block>.</block>
+  <block id="804c4273d064b5c047930d27abef5a03" category="paragraph">Mantenha-se informado sobre problemas de espaço de disco, RAM e CPU na sua máquina virtual do agente para que você possa resolvê-los.</block>
+  <block id="2cfac13585404933609bdd1993b9860c" category="paragraph">Aumente o tamanho da CPU da VM do agente no seu provedor de nuvem ou no ambiente local, dependendo de onde você a instalou. Como alternativa, crie agentes adicionais e distribua a carga de trabalho entre vários agentes.</block>
+  <block id="9bcbfa45d81610532c10cdf8e33562d0" category="inline-link-macro">Aprenda como aumentar o tamanho de um agente local em execução no vCenter</block>
+  <block id="1b4283b531174f869b1e0cdef983d6e3" category="list-text"><block ref="ca6737d7570eb6f4ce48adf81eac58a5" category="inline-link-macro-rx"></block>.</block>
+  <block id="2cf7a5d26ce7d4d99d4c91d9a7be62a2" category="section-title">Pare e inicie a máquina virtual do agente</block>
+  <block id="b4c95a42ca3d365982b8e5cd0c5f9a12" category="paragraph">Limite o tempo de inatividade ao parar e iniciar a VM do agente, pois os serviços de gerenciamento e de dados dependem de o agente permanecer operacional.</block>
+  <block id="4a818b70467076c03f2c14237204886a" category="paragraph">Verifique o status do agente do Console em sua VM Linux para confirmar se ele está em execução.</block>
+  <block id="e370f8f4d5db9e4f93257ac02adddec3" category="section-title">09 de novembro de 2026</block>
 </blocks>

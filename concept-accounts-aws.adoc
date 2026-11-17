@@ -21,7 +21,7 @@ Você gerencia as credenciais da AWS e as assinaturas do marketplace diretamente
 [[initial-aws-credentials]]
 == Credenciais iniciais da AWS
 
-Ao implantar um agente do Console a partir do Console, você precisa fornecer o ARN de uma função do IAM ou as chaves de acesso de um usuário do IAM. O método de autenticação deve ter permissões para implantar o agente do Console na AWS. As permissões necessárias estão listadas em link:task-install-agent-aws-console.html#aws-permissions-agent["Política de implantação de agentes para AWS"].
+Ao implantar um agente do Console a partir do Console, você pode solicitar que o Console crie uma função do IAM para você ou pode fornecer o ARN de uma função do IAM ou as chaves de acesso de um usuário do IAM. O método de autenticação deve ter permissões para implantar o agente do Console na AWS. As permissões necessárias estão listadas em link:task-install-agent-aws-console.html#aws-permissions-agent["Permissões de implantação de agentes para AWS"].
 
 Quando o Console inicia o agente do Console na AWS, ele cria uma função do IAM e um perfil para o agente. Ele também anexa uma política que fornece ao agente do Console permissões para gerenciar recursos e processos dentro dessa conta da AWS. link:reference-permissions-aws.html["Analise como o agente utiliza as permissões"].
 

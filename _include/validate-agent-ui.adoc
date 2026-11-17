@@ -1,17 +1,27 @@
-= 
+= Solucione problemas de uma implantação com falha do agente Console
 :allow-uri-read: 
 
 
-Se você selecionou a caixa de seleção *Validar configuração do agente* na página *Revisar*, o Console verificará a configuração do agente do Console após sua criação.  Se o Console não conseguir implantar o agente, ele fornecerá um relatório para download para ajudar você a solucionar o problema.
 
 
-NOTE: Se o Console implantar o agente com sucesso, ele não gerará um relatório e uma caixa de diálogo de confirmação será exibida, verificando uma implantação bem-sucedida.
+[[troubleshoot-a-failed-console-agent-deployment]]
+[[troubleshoot-agent-deployment]]
+== Solucione problemas de uma implantação com falha do agente Console
+
+Use o relatório de implantação para descobrir o que bloqueou a implantação do agente do Console e tente novamente.
+
+O Console fornece um relatório somente se a caixa de seleção *Validate agent configuration* estiver marcada. Se a implantação for bem-sucedida, não haverá relatório.
 
 .Passos
-. Na caixa de diálogo *Falha na implantação do agente*, selecione *Baixar relatório* para baixar um arquivo PDF que contém o relatório de validação.
-. Como alternativa, você pode selecionar *Recomeçar* para retornar ao assistente *Implantar agente* e tentar novamente.
+. Na caixa de diálogo *Falha na implantação do agente*, selecione *Baixar relatório*.
 +
-Você deve reiniciar todo o processo se quiser tentar implantar o agente novamente.
+O Console baixa um arquivo PDF que contém o relatório de validação.
 
-. Acesse o relatório e os logs do host do agente do Console
+. Analise o relatório e corrija os problemas que ele lista.
+. Na caixa de diálogo, selecione *Start over* e, em seguida, conclua a implantação novamente.
++
+Você precisa reiniciar todo o processo para tentar novamente.
 
+
+
+link:task-troubleshoot-agent.html#troubleshoot-installation["Aprenda a solucionar problemas de instalação."]

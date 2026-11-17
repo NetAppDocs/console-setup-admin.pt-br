@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: task-maintain-agents.html 
-keywords: agent operating system, agent maintenance, vm maintenance, os updates, operating system updates, stop agent, restart agent, notifications, agent health, agent disk space, agent cpu usage, agent ram usage, agent vm, connector, connector health 
-summary: Saiba como manter as VMs do agente do NetApp Console, incluindo atualizações de segurança do sistema operacional para agentes instalados manualmente, dimensionamento recomendado de CPU e RAM, notificações de integridade de recursos e procedimentos de inicialização e parada de VMs. 
+keywords: agent operating system, agent maintenance, vm maintenance, os updates, operating system updates, os patching, security updates, ova, marketplace, stop agent, restart agent, notifications, agent health, agent disk space, agent cpu usage, agent ram usage, agent vm, connector, connector health 
+summary: Saiba como manter VMs do agente do NetApp Console, incluindo atualizações do sistema operacional, dimensionamento recomendado de CPU e RAM, notificações de integridade de recursos e procedimentos de inicialização e parada de VMs. 
 ---
 = Manter as VMs do agente do NetApp Console
 :hardbreaks:
@@ -14,23 +14,23 @@ summary: Saiba como manter as VMs do agente do NetApp Console, incluindo atualiz
 
 
 [role="lead"]
-Faça a manutenção das VMs do agente do NetApp Console aplicando atualizações de segurança do sistema operacional aos agentes instalados manualmente, respondendo a alertas de CPU, RAM e espaço em disco e redimensionando, parando e iniciando as VMs quando necessário.
-
-Ao instalar manualmente um agente de Console, a manutenção do sistema operacional no host do agente é de sua responsabilidade (do cliente). Por exemplo, você (o cliente) deve aplicar as atualizações de segurança ao sistema operacional no host do agente seguindo os procedimentos padrão da sua empresa para distribuição de sistemas operacionais.
-
-Se uma máquina virtual do agente ficar subprovisionada ou apresentar problemas de desempenho, você deve tomar as medidas apropriadas para atualizar os recursos da máquina virtual.
-
-
-NOTE: Se você instalou o agente em vCenter, use a ferramenta de manutenção do Console para redimensionar a instância da VM. link:task-agent-vm-config.html["Aprenda como manter uma VM de agente no vCenter"^].
+Mantenha suas VMs do agente do Console atualizadas, com o dimensionamento correto e saudáveis para que o agente permaneça operacional o tempo todo.
 
 
 
-[[apply-operating-system-updates-to-the-manually-installed-agent-hosts]]
-== Aplique atualizações do sistema operacional aos hosts do agente instalados manualmente
+[[apply-operating-system-updates-to-agent-hosts]]
+== Aplique atualizações do sistema operacional aos hosts do agente
 
-Aplique patches de segurança do sistema operacional sem interromper os serviços do host do agente.
+Aplique as atualizações de segurança ao sistema operacional e aos pacotes associados no host do agente para que o host permaneça seguro.
 
-Para manter a compatibilidade com as configurações suportadas, você deve impedir que o Docker ou o Podman sejam atualizados durante a aplicação de patches de rotina no sistema operacional. Você pode fazer isso excluindo temporariamente o Docker ou o Podman durante as atualizações ou configurando permanentemente o gerenciador de pacotes para ignorar as atualizações do Docker ou do Podman.
+Essa é sua responsabilidade como cliente. O software do agente do Console pode se atualizar, mas não atualiza o sistema operacional nem os pacotes associados.
+
+
+NOTE: Se você implantou o agente do Console no vCenter usando um OVA, o sistema operacional faz parte da imagem do agente. link:task-upgrade-agent.html#upgrade-a-vcenter-deployed-console-agent-using-an-iso["Atualize o agente usando uma ISO"^] para atualizar o sistema operacional.
+
+Siga os procedimentos padrão da sua empresa para a distribuição do seu sistema operacional. Não é necessário interromper os serviços do host do agente ao aplicar patches de segurança do sistema operacional.
+
+Em agentes que você não implantou a partir de um OVA, impeça que o Docker ou o Podman sejam atualizados durante a aplicação rotineira de patches do sistema operacional para manter a compatibilidade com as configurações suportadas. Você pode fazer isso excluindo temporariamente o Docker ou o Podman durante as atualizações ou configurando permanentemente o gerenciador de pacotes para ignorar as atualizações do Docker ou do Podman.
 
 A seguir, apresentamos exemplos de como excluir atualizações do Docker ou do Podman em diferentes distribuições Linux. Consulte a documentação da sua distribuição Linux para obter as instruções mais recentes sobre como excluir pacotes das atualizações.
 
@@ -49,17 +49,17 @@ sudo apt upgrade
 ----
 
 
-[[resizing-the-vm-or-instance-type]]
+[[resize-the-vm-or-instance-type]]
 == Redimensionar a VM ou o tipo de instância
 
-Se você criar um agente do Console a partir do Console, ele implantará uma instância de VM no seu provedor de nuvem com uma configuração padrão.  Depois de criar o agente, não mude para uma instância de VM menor com menos CPU ou RAM.
+Aumente a CPU ou a RAM de uma máquina virtual de agente com recursos insuficientes para que o agente continue funcionando bem.
 
-Se você receber notificações de que sua VM do agente está com recursos insuficientes, considere atualizar para uma instância de VM maior, com mais CPU ou RAM, para garantir o desempenho ideal.
+Se você criar um agente do Console no Console, ele implanta uma instância de VM no seu provedor de nuvem com uma configuração padrão. link:reference-agent-default-config.html["Saiba mais sobre as configurações padrão do agente"]. Depois de criar o agente, não mude para uma instância de VM menor com menos CPU ou RAM.
+
+Se você receber notificações de que sua VM do agente está com recursos insuficientes, considere atualizar para uma instância de VM maior, com mais CPU ou RAM.
 
 
-NOTE: Se você instalou o agente no VCenter, use a ferramenta de manutenção do Console para redimensionar a instância da VM. link:task-agent-vm-config.html["Aprenda a redimensionar a VM do agente no VCenter"^].
-
-link:reference-agent-default-config.html["Saiba mais sobre a configuração padrão do agente"] .
+NOTE: Se você instalou o agente em vCenter, use a ferramenta de manutenção do Console para redimensionar a instância da VM. link:task-agent-vm-config.html["Aprenda como redimensionar a VM do agente no vCenter"^].
 
 Se você precisar aumentar a CPU ou a RAM da sua VM de agente, siga as instruções fornecidas pelo seu provedor de nuvem ou pela sua plataforma de virtualização local para redimensionar a instância da VM. NetApp recomenda dobrar a alocação atual de CPU e RAM para garantir o desempenho ideal. A tabela a seguir mostra os níveis de dimensionamento recomendados, em que cada nível dobra a CPU e a RAM do nível anterior.
 
@@ -82,6 +82,8 @@ Se você precisar aumentar a CPU ou a RAM da sua VM de agente, siga as instruç�
 [[monitor-disk-space]]
 == Monitore o agente
 
+Mantenha-se informado sobre problemas de espaço de disco, RAM e CPU na sua máquina virtual do agente para que você possa resolvê-los.
+
 O Console notifica você quando a VM do agente não está íntegra, incluindo problemas de espaço em disco, RAM e CPU.  Monitore essas notificações no Centro de Notificações do Console ou configure notificações por e-mail.  Aumentos ocasionais no espaço em disco, na memória ou no uso da CPU são normais, mas se isso acontecer com frequência, você deve tomar medidas para resolver.
 
 Por exemplo, o Console notifica você quando um recurso do agente (CPU, RAM ou espaço em disco) excede 90% de sua capacidade total por 30 minutos consecutivos.  Depois, se o uso do recurso cair abaixo desse limite, a notificação será exibida como resolvida (verde) na Central de Notificações.
@@ -102,12 +104,12 @@ link:https://docs.netapp.com/us-en/console-setup-admin/task-monitor-cm-operation
  a| 
 O uso da CPU está muito alto
  a| 
-Aumente o tamanho da CPU da VM do agente no seu provedor de nuvem ou no local, dependendo de onde você a instalou.  Como alternativa, crie agentes adicionais e distribua a carga de trabalho entre vários agentes.  A utilização de RAM pode variar de acordo com seu ambiente, cargas de trabalho ONTAP , número de sistemas Cloud Volumes ONTAP e os serviços de dados que você está usando.
+Aumente o tamanho da CPU da VM do agente no seu provedor de nuvem ou no ambiente local, dependendo de onde você a instalou. Como alternativa, crie agentes adicionais e distribua a carga de trabalho entre vários agentes.
 
 * link:https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/change-instance-type-of-ebs-backed-instance.html["Aprenda como aumentar o tamanho da VM do agente na AWS"^].
 * link:https://learn.microsoft.com/en-us/azure/virtual-machines/sizes/resize-vm?tabs=portal["Aprenda como aumentar o tamanho da VM do agente no Azure"^].
 * link:https://docs.cloud.google.com/compute/docs/instances/changing-machine-type-of-stopped-instance["Aprenda como aumentar o tamanho de uma VM de agente no Google Cloud"^].
-* link:task-agent-vm-config.html#increase-the-cpu-or-ram-of-the-vm-instance["Aprenda como aumentar o tamanho de um agente local em execução no VCenter"].
+* link:task-agent-vm-config.html#increase-the-cpu-or-ram-of-the-vm-instance["Aprenda como aumentar o tamanho de um agente local em execução no vCenter"].
 
 
 
@@ -120,14 +122,16 @@ Aumente a RAM da VM do agente no seu provedor de nuvem ou no local, dependendo d
 * link:https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/change-instance-type-of-ebs-backed-instance.html["Aprenda como aumentar o tamanho da VM do agente na AWS"^].
 * link:https://learn.microsoft.com/en-us/azure/virtual-machines/sizes/resize-vm?tabs=portal["Aprenda como aumentar o tamanho da VM do agente no Azure"^].
 * link:https://docs.cloud.google.com/compute/docs/instances/changing-machine-type-of-stopped-instance["Aprenda como aumentar o tamanho de uma VM de agente no Google Cloud"^].
-* link:task-agent-vm-config.html#increase-the-cpu-or-ram-of-the-vm-instance["Aprenda como aumentar o tamanho de um agente local em execução no VCenter"].
+* link:task-agent-vm-config.html#increase-the-cpu-or-ram-of-the-vm-instance["Aprenda como aumentar o tamanho de um agente local em execução no vCenter"].
 
 
 |===
 
 
-[[stopping-and-starting-the-agent-vm]]
-== Parando e iniciando a VM do agente
+[[stop-and-start-the-agent-vm]]
+== Pare e inicie a máquina virtual do agente
+
+Limite o tempo de inatividade ao parar e iniciar a VM do agente, pois os serviços de gerenciamento e de dados dependem de o agente permanecer operacional.
 
 Se necessário, pare e inicie a VM do agente usando o console do seu provedor de nuvem ou procedimentos locais padrão.
 
@@ -138,6 +142,8 @@ link:concept-agents.html#agents-must-be-operational-at-all-times["Esteja ciente 
 [[connect-to-the-linux-vm]]
 [[connect-linux-host]]
 == Conectar à VM Linux
+
+Verifique o status do agente do Console em sua VM Linux para confirmar se ele está em execução.
 
 Se você precisar se conectar à VM Linux na qual o agente é executado, use as opções de conectividade do seu provedor de nuvem.
 

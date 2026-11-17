@@ -535,7 +535,28 @@ O Console prepara o agente em cerca de 10 minutos. Permaneça na página até qu
 .Resultado
 Após a conclusão do processo, o agente do Console estará disponível para uso no Console.
 
-
-NOTE: Se a implantação falhar, você poderá baixar um relatório e logs do Console para ajudar a corrigir os problemas.link:task-troubleshoot-agent.html#troubleshoot-installation["Aprenda a solucionar problemas de instalação."]
-
 Se você tiver o armazenamento de Blobs do Azure na mesma conta do Azure onde criou o agente do Console, verá o armazenamento de Blobs do Azure aparecer na página *Sistemas* automaticamente. https://docs.netapp.com/us-en/bluexp-blob-storage/index.html["Aprenda a gerenciar o armazenamento de Blobs do Azure no NetApp Console"^]
+
+
+
+[[troubleshoot-a-failed-console-agent-deployment]]
+[[troubleshoot-agent-deployment]]
+== Solucione problemas de uma implantação com falha do agente Console
+
+Use o relatório de implantação para descobrir o que bloqueou a implantação do agente do Console e tente novamente.
+
+O Console fornece um relatório somente se a caixa de seleção *Validate agent configuration* estiver marcada. Se a implantação for bem-sucedida, não haverá relatório.
+
+.Passos
+. Na caixa de diálogo *Falha na implantação do agente*, selecione *Baixar relatório*.
++
+O Console baixa um arquivo PDF que contém o relatório de validação.
+
+. Analise o relatório e corrija os problemas que ele lista.
+. Na caixa de diálogo, selecione *Start over* e, em seguida, conclua a implantação novamente.
++
+Você precisa reiniciar todo o processo para tentar novamente.
+
+
+
+link:task-troubleshoot-agent.html#troubleshoot-installation["Aprenda a solucionar problemas de instalação."]

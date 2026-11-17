@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: task-install-agent-aws-console.html 
-keywords: deploy agent, aws agent deployment, aws agent, deploy agent in aws, bluexp, create agent, NetApp Console 
-summary: Você pode implantar um agente do Console na AWS diretamente do NetApp Console. Antes de implantar um agente do Console na AWS a partir do Console, você precisa configurar sua rede e preparar as permissões da AWS. 
+keywords: deploy agent, aws agent deployment, aws agent, deploy agent in aws, bluexp, create agent, NetApp Console, Create role for me, CloudFormation Quick Create, IAM role, IAM policy, Assume role, AWS keys, deployment role, external ID 
+summary: 'Implante um agente do Console na AWS a partir do NetApp Console usando as opções "Criar função para mim", "Assumir função" ou "Chaves da AWS". Configure a rede e as permissões primeiro.' 
 ---
 = Implante um agente do Console na AWS a partir do NetApp Console
 :hardbreaks:
@@ -14,22 +14,22 @@ summary: Você pode implantar um agente do Console na AWS diretamente do NetApp 
 
 
 [role="lead"]
-Você pode implantar um agente do Console na AWS diretamente do NetApp Console. Antes de implantar um agente do Console na AWS a partir do Console, você precisa configurar sua rede e preparar as permissões da AWS.
+Implante um agente do Console na AWS sem sair do NetApp Console, para que você possa começar a gerenciar seus recursos e serviços de dados da AWS.
 
-Ao implantar um agente na AWS, é iniciada uma instância EC2 executando Linux e o software do agente Console em uma VPC de sua escolha.
+A implantação de um agente do Console na AWS inicia uma instância EC2 executando Linux e o software do agente do Console em uma VPC de sua escolha.
 
 .Antes de começar
 * link:concept-agent-install-options.html#agent-console-deploy["Saiba quando implantar a partir do Console"].
-* Você deve revisarlink:reference-limitations.html["Limitações do agente do console"] .
+* Análiselink:reference-limitations.html["Limitações do agente do console"] .
 
 
 
 
-[[step-1-set-up-networking-for-deploying-a-console-agent-in-aws]]
+[[step-1-set-up-networking-to-deploy-a-console-agent-in-aws]]
 [[networking-aws-agent]]
-== Etapa 1: configurar a rede para implantar um agente de console na AWS
+== Etapa 1: configure a rede para implantar um agente do Console na AWS
 
-Certifique-se de que o local de rede onde você planeja instalar o agente do Console suporte os seguintes requisitos.  Esses requisitos permitem que o agente do Console gerencie recursos e processos na sua nuvem híbrida.
+Certifique-se de que o local da rede onde você planeja implantar o agente do Console atenda aos seguintes requisitos. Esses requisitos permitem que o agente do Console gerencie recursos e processos em sua nuvem híbrida.
 
 VPC e sub-rede:: Ao criar o agente do Console, você precisa especificar a VPC e a sub-rede onde ele deve residir.
 
@@ -166,17 +166,95 @@ Você precisará implementar esse requisito de rede depois de criar o agente do 
 
 
 
-[[step-2-set-up-aws-permissions-for-the-console-agent]]
+[[step-2-set-up-aws-permissions-to-deploy-the-console-agent]]
 [[aws-permissions-agent]]
-== Etapa 2: configurar permissões da AWS para o agente do Console
+== Etapa 2: configure as permissões da AWS para implantar o agente do Console
 
-O Console precisa ser autenticado na AWS antes de poder implantar o agente do Console na sua VPC. Você pode escolher um destes métodos de autenticação:
+Conceda ao Console apenas as permissões da AWS necessárias para implantar o agente do Console em sua VPC, com base no método de autenticação que você escolher.
 
-* Deixe o Console assumir uma função do IAM que tenha as permissões necessárias
-* Forneça uma chave de acesso e uma chave secreta da AWS para um usuário do IAM que tenha as permissões necessárias
+Escolha um destes métodos de autenticação e configure apenas o que for necessário:
+
+[cols="1a,2a,2a"]
+|===
+| Método | O que faz | O que você configurou 
 
 
-Com qualquer uma das opções, o primeiro passo é criar uma política de IAM. Esta política contém apenas as permissões necessárias para iniciar o agente do Console na AWS a partir do Console.
+ a| 
+*Crie uma função para mim*
+ a| 
+O Console abre o AWS CloudFormation Quick Create, que cria a função de implantação que o Console assume.
+ a| 
+Permissões para a identidade da AWS que envia a pilha.
+
+
+
+ a| 
+*Assuma o papel*
+ a| 
+O Console assume uma função IAM existente na sua conta.
+ a| 
+Uma política e uma função do IAM.
+
+
+
+ a| 
+*Chaves AWS*
+ a| 
+O Console utiliza uma chave de acesso e uma chave secreta da AWS.
+ a| 
+Uma política e um usuário IAM.
+
+|===
+Com as opções *Criar função para mim* e *Assumir função*, o Console assume uma função do IAM, chamada *função de implantação*, para implantar o agente do Console. Após a implantação, o agente do Console usa uma função do IAM separada, associada à sua instância EC2, chamada *função de agente*. Por padrão, o Console cria a função de agente para você. link:#aws-agent-role["Aprenda a usar sua própria função de agente"].
+
+
+
+[[set-up-permissions-for-create-role-for-me-cloudformation-quick-create]]
+[[aws-permissions-quick-create]]
+=== Configure as permissões de Criar função para mim (CloudFormation Quick Create)
+
+Use uma identidade da AWS que possa criar a pilha do CloudFormation e a função de implantação, para que a pilha seja concluída sem erros de permissão.
+
+A identidade que envia a pilha do Quick Create do CloudFormation precisa de permissões de administrador ou das seguintes permissões mínimas. Essas permissões permitem que o CloudFormation crie a função de implantação. Elas não são as permissões da função do agente.
+
+[source, json]
+----
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "CloudFormationStack",
+      "Effect": "Allow",
+      "Action": [
+        "cloudformation:CreateStack",
+        "cloudformation:DeleteStack",
+        "cloudformation:DescribeStacks",
+        "cloudformation:DescribeStackEvents",
+        "cloudformation:GetTemplateSummary",
+        "iam:CreateRole",
+        "iam:DeleteRole",
+        "iam:GetRole",
+        "iam:PutRolePolicy",
+        "iam:DeleteRolePolicy",
+        "iam:GetRolePolicy",
+        "iam:PassRole",
+        "lambda:CreateFunction",
+        "lambda:DeleteFunction",
+        "lambda:GetFunction",
+        "lambda:InvokeFunction"
+      ],
+      "Resource": "*"
+    }
+  ]
+}
+----
+
+
+[[set-up-permissions-for-assume-role-or-aws-keys]]
+[[aws-permissions-assume-role-keys]]
+=== Configure as permissões para o Assume role ou as chaves da AWS
+
+Se você escolher *Assume role* ou *AWS keys*, crie uma política com apenas as permissões necessárias para implantar o agente do Console e associe-a à função ou ao usuário que o Console utiliza.
 
 Se necessário, você pode restringir a política do IAM usando o IAM `Condition` elemento. https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_condition.html["Documentação da AWS: Elemento Condition"^]
 
@@ -186,7 +264,7 @@ Se necessário, você pode restringir a política do IAM usando o IAM `Condition
 . Selecione *JSON*.
 . Copie e cole a seguinte política:
 +
-Esta política contém apenas as permissões necessárias para iniciar o agente do Console na AWS a partir do Console.  Quando o Console cria o agente do Console, ele aplica um novo conjunto de permissões ao agente do Console que permite que o agente do Console gerencie recursos da AWS. link:reference-permissions-aws.html["Exibir permissões necessárias para o próprio agente do Console"].
+Esta política contém apenas as permissões necessárias para iniciar o agente do Console na AWS a partir do Console. link:reference-permissions-aws.html["Veja as permissões da função de agente"].
 
 +
 [source, json]
@@ -269,7 +347,7 @@ Esta política contém apenas as permissões necessárias para iniciar o agente 
 . Selecione *Criar política*.
 . Anexe a política a uma função do IAM que o Console pode assumir ou a um usuário do IAM para que você possa fornecer chaves de acesso ao Console:
 +
-** (Opção 1) Configure uma função do IAM que o Console pode assumir:
+** *Assumir função*: configure uma função do IAM que o Console possa assumir:
 +
 ... Acesse o console do AWS IAM na conta de destino.
 ... Em Gerenciamento de acesso, selecione *Funções > Criar função* e siga as etapas para criar a função.
@@ -279,7 +357,7 @@ Esta política contém apenas as permissões necessárias para iniciar o agente 
 ... Depois de criar a função, copie o ARN da função para poder colá-lo no Console ao criar o agente do Console.
 
 
-** (Opção 2) Configure permissões para um usuário do IAM para que você possa fornecer chaves de acesso ao Console:
+** *Chaves AWS*: configure as permissões para um usuário do IAM para que você possa fornecer chaves de acesso ao Console:
 +
 ... No console do AWS IAM, selecione *Usuários* e, em seguida, selecione o nome do usuário.
 ... Selecione *Adicionar permissões > Anexar políticas existentes diretamente*.
@@ -293,56 +371,98 @@ Esta política contém apenas as permissões necessárias para iniciar o agente 
 
 
 .Resultado
-Agora você deve ter uma função do IAM que tenha as permissões necessárias ou um usuário do IAM que tenha as permissões necessárias.  Ao criar o agente do Console a partir do Console, você pode fornecer informações sobre a função ou as chaves de acesso.
+Agora você tem uma função de implantação ou um usuário do IAM com as permissões necessárias. Ao implantar o agente do Console, você fornece o ARN da função ou as chaves de acesso.
 
 
 
-[[step-3-create-the-console-agent]]
-== Etapa 3: Criar o agente do Console
+[[step-3-set-up-your-own-iam-role-for-the-console-agent-optional]]
+[[aws-agent-role]]
+== Etapa 3: configure sua própria função IAM para o agente do Console (opcional)
 
-Crie o agente do Console diretamente a partir do console baseado na Web do Console.
+Crie sua própria função de agente se desejar selecioná-la em vez da função criada pelo Console por padrão. Crie a função antes de implantar o agente do Console.
+
+.Passos
+. Faça login no console da AWS e navegue até o serviço IAM.
+. Crie uma política:
++
+.. Selecione *Políticas > Criar política*.
+.. Selecione *JSON* e copie e cole o conteúdo dolink:reference-permissions-aws.html["Política do IAM para o agente do Console"] .
+.. Conclua as etapas restantes para criar a política.
++
+Para regiões padrão, as permissões são distribuídas em duas políticas.  Duas políticas são necessárias devido ao limite máximo de tamanho de caracteres para políticas gerenciadas na AWS. link:reference-permissions-aws.html["Saiba mais sobre as políticas do IAM para o agente do Console"] .
+
+
+
+. Crie uma função do IAM:
++
+.. Selecione *Funções > Criar função*.
+.. Selecione *Serviço AWS > EC2*.
+.. Adicione permissões anexando a política que você acabou de criar.
+.. Conclua as etapas restantes para criar a função.
+
+
+
+
+.Resultado
+Agora você tem uma função de agente que você pode selecionar em *Detalhes de implantação do agente* ao implantar o agente do Console.
+
+
+
+[[step-4-deploy-the-console-agent]]
+== Etapa 4: implante o agente do Console
+
+Forneça os detalhes de autenticação, implantação, rede e grupo de segurança para que o Console inicie o agente do Console em sua VPC.
 
 .Sobre esta tarefa
 * A criação do agente do Console a partir do Console implanta uma instância do EC2 na AWS usando uma configuração padrão.  Não mude para uma instância EC2 menor com menos CPUs ou menos RAM depois de criar o agente do Console. link:reference-agent-default-config.html["Saiba mais sobre a configuração padrão do agente do Console"] .
-* Quando o Console cria o agente do Console, ele cria uma função do IAM e um perfil para o agente. Esta função inclui permissões que permitem ao agente do Console gerenciar recursos da AWS. Garanta que a função seja atualizada conforme novas permissões forem adicionadas em versões futuras. link:reference-permissions-aws.html["Saiba mais sobre a política do IAM para o agente do Console"].
+* Por padrão, o Console cria a função de agente e seu perfil. Se você fornecer sua própria função de agente, certifique-se de atualizá-la conforme novas permissões forem adicionadas em versões futuras. link:reference-permissions-aws.html["Saiba mais sobre a política do IAM para o agente do Console"].
 
 
 .Antes de começar
 Você deve ter o seguinte:
 
-* Um método de autenticação da AWS: uma função do IAM ou chaves de acesso para um usuário do IAM com as permissões necessárias.
+* Um método de autenticação da AWS: *Create role for me*, *Assume role* ou *AWS keys*.
 * Uma VPC e uma sub-rede que atendem aos requisitos de rede.
 * Um par de chaves para a instância EC2.
 * Detalhes sobre um servidor proxy, caso um proxy seja necessário para acesso à Internet a partir do agente do Console.
-* Configurarlink:#networking-aws-agent["requisitos de rede"] .
-* Configurarlink:#aws-permissions-agent["Permissões da AWS"] .
+* Concluído link:#networking-aws-agent["Etapa 1"].
+* Concluído link:#aws-permissions-agent["Etapa 2"].
 
 
 .Passos
 . Selecione *Administração > Agentes*.
 . Na página *Visão geral*, selecione *Implantar agente > AWS*.
-. Siga as etapas do assistente para criar o agente do Console:
-. Na página *Introdução*, revise a visão geral do processo.
-. Na página *Credenciais da AWS*, especifique sua região da AWS e, em seguida, escolha um método de autenticação, que pode ser uma função do IAM que o Console pode assumir ou uma chave de acesso e uma chave secreta da AWS.
+. Na seção *Credenciais da AWS para implantação do agente*, escolha um dos seguintes métodos de autenticação:
 +
+** *Crie uma função para mim*:
++
+... Selecione sua região da AWS e insira o ID da sua conta da AWS. Opcionalmente, insira um ID externo.
+... Selecione *Open CloudFormation Quick Create*.
+... Na AWS, aceite os termos e selecione *Criar pilha*.
+... Quando a AWS terminar de criar a função, volte ao Console e confirme a função.
 
-TIP: Se você escolher *Assumir função*, poderá criar o primeiro conjunto de credenciais no assistente de implantação do agente do Console.  Qualquer conjunto adicional de credenciais deve ser criado na página Credenciais.  Eles estarão disponíveis no assistente em uma lista suspensa. link:task-adding-aws-accounts.html["Aprenda como adicionar credenciais adicionais"] .
 
-. Na página *Detalhes*, forneça detalhes sobre o agente do Console.
+** *Assumir função*: insira o ARN da função IAM e selecione *Validar credenciais*.
+** *Chaves AWS*: insira a chave de acesso e a chave secreta e selecione *Validar credenciais*.
+
+
+. Na seção *Detalhes de implantação do agente*, forneça detalhes sobre o agente do Console.
 +
 ** Digite um nome.
 ** Adicione tags personalizadas (metadados).
-** Escolha se deseja que o Console crie uma nova função que tenha as permissões necessárias ou se deseja selecionar uma função existente que você configurou comlink:reference-permissions-aws.html["as permissões necessárias"] .
+** Escolha se deseja que o Console crie a função de agente ou selecione uma função de agente que você já tenha link:#aws-agent-role["configure por conta própria"].
 ** Escolha se deseja criptografar os discos EBS do agente do Console.  Você tem a opção de usar a chave de criptografia padrão ou usar uma chave personalizada.
 
 
-. Na página *Rede*, especifique uma VPC, sub-rede e par de chaves para o agente, escolha se deseja habilitar um endereço IP público e, opcionalmente, especifique uma configuração de proxy.
+. Na seção *Configuração de rede*, especifique uma VPC, uma sub-rede e um par de chaves para o agente do Console, escolha se deseja habilitar um endereço IP público e, opcionalmente, especifique uma configuração de proxy.
 +
 Certifique-se de ter o par de chaves correto para acessar a máquina virtual do agente do Console.  Sem um par de chaves, você não pode acessá-lo.
 
-. Na página *Grupo de segurança*, escolha se deseja criar um novo grupo de segurança ou se deseja selecionar um grupo de segurança existente que permita as regras de entrada e saída necessárias.
+. Na seção *Grupo de segurança*, escolha se deseja criar um novo grupo de segurança ou selecionar um grupo de segurança existente que permita as regras de entrada e saída necessárias.
 +
 link:reference-ports-aws.html["Exibir regras de grupo de segurança para AWS"] .
+
+
 
 . Revise suas seleções para verificar se sua configuração está correta.
 +
@@ -359,14 +479,35 @@ link:reference-ports-aws.html["Exibir regras de grupo de segurança para AWS"] .
 ====
 . Selecione *Adicionar*.
 +
-O Console implanta o agente em cerca de 10 minutos. Permaneça na página até que o processo seja concluído.
+O Console implanta o agente do Console em cerca de 10 minutos. Permaneça na página até que o processo seja concluído.
 
 
 
 .Resultado
 Após a conclusão do processo, o agente do Console estará disponível para uso no Console.
 
-
-NOTE: Se a implantação falhar, você poderá baixar um relatório e logs do Console para ajudar a corrigir os problemas.link:task-troubleshoot-agent.html#troubleshoot-installation["Aprenda a solucionar problemas de instalação."]
-
 Se você tiver buckets do Amazon S3 na mesma conta da AWS onde criou o agente do Console, verá um ambiente de trabalho do Amazon S3 aparecer automaticamente na página *Sistemas*. https://docs.netapp.com/us-en/storage-management-s3-storage/index.html["Aprenda a gerenciar buckets do S3 no NetApp Console"^]
+
+
+
+[[troubleshoot-a-failed-console-agent-deployment]]
+[[troubleshoot-agent-deployment]]
+== Solucione problemas de uma implantação com falha do agente Console
+
+Use o relatório de implantação para descobrir o que bloqueou a implantação do agente do Console e tente novamente.
+
+O Console fornece um relatório somente se a caixa de seleção *Validate agent configuration* estiver marcada. Se a implantação for bem-sucedida, não haverá relatório.
+
+.Passos
+. Na caixa de diálogo *Falha na implantação do agente*, selecione *Baixar relatório*.
++
+O Console baixa um arquivo PDF que contém o relatório de validação.
+
+. Analise o relatório e corrija os problemas que ele lista.
+. Na caixa de diálogo, selecione *Start over* e, em seguida, conclua a implantação novamente.
++
+Você precisa reiniciar todo o processo para tentar novamente.
+
+
+
+link:task-troubleshoot-agent.html#troubleshoot-installation["Aprenda a solucionar problemas de instalação."]
