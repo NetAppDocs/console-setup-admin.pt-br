@@ -90,7 +90,7 @@ Após você atualizar um agente do Console para a versão 4.9.0 ou posterior, o 
 
 .Passos
 . Identifique a organização, pasta ou projeto que contém cada Cloud Volumes ONTAP.
-. Analise a função do Cloud Volumes ONTAP atribuída a cada usuário e confirme se ela está atribuída no nível da organização, pasta ou projeto que contém o sistema. link:reference-iam-cvo-roles.html#seeding-mappings-for-existing-users["Saiba mais sobre as funções do Cloud Volumes ONTAP que são atribuídas automaticamente após a atualização"].
+. Analise a função do Cloud Volumes ONTAP atribuída a cada usuário e confirme se ela está atribuída no nível da organização, pasta ou projeto que contém o sistema. link:reference-iam-cvo-roles.html["Saiba mais sobre as funções do Cloud Volumes ONTAP que são atribuídas automaticamente após a atualização"].
 . Atribua ou altere a função do Cloud Volumes ONTAP quando a função predefinida não corresponder às responsabilidades do usuário. O processo de predefinição atribui a função de administrador ou visualizador do Cloud Volumes ONTAP com base na função existente do usuário na plataforma. Se um usuário precisar de permissões de nível de operador, atribua explicitamente a função de operador do Cloud Volumes ONTAP após a predefinição.
 . Aguarde até uma hora para que as atribuições de função novas ou atualizadas entrem em vigor. O Cloud Volumes ONTAP atualiza as atribuições de função a cada hora.
 . Peça ao usuário para acessar o Cloud Volumes ONTAP e confirmar que as operações disponíveis correspondem à função atribuída.
